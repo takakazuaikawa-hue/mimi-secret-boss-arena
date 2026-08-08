@@ -1,0 +1,262 @@
+{
+  "schemaVersion": 1,
+  "id": "minato.epilogue",
+  "kind": "character",
+  "title": "出発地点に丸をつけて",
+  "summary": "ミナトの新しい地図に、帰る場所とミミの印が加わる後日談",
+  "ownership": {
+    "arcId": "character.minato",
+    "characterId": "minato",
+    "stage": "epilogue"
+  },
+  "trigger": {
+    "actions": [
+      "rest"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 400,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "第三コロシアム前・朝のテラス",
+    "assets": [
+      {
+        "id": "minato.epilogue.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-casino-cafe-morning.png",
+        "alt": "商店街の背景"
+      },
+      {
+        "id": "minato.epilogue.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/events/minato-epilogue-departure-map-v1.png",
+        "alt": "新しい旅の地図に帰還印をつけ、視線を交わすミナトとミミ"
+      },
+      {
+        "id": "minato.epilogue.asset.still.002",
+        "kind": "still",
+        "path": "/assets/story/events/minato-epilogue-chosen-route-reward-v1.png",
+        "alt": "無数の神器を空へ返し、闘技場へ戻る一本の道だけを自分で地図へ引くミナト"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "line",
+      "id": "minato.epilogue.node.line.001",
+      "lineId": "minato.epilogue.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "最終大会が終わってから、ミナトと商店街で顔を合わせるのは今日が初めてだった。"
+    },
+    {
+      "type": "line",
+      "id": "minato.epilogue.node.line.002",
+      "lineId": "minato.epilogue.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "大会が終わってから、柄に小さな花が彫られた短剣を見るたび、あの人がいない日常の広さを測ってしまう。"
+    },
+    {
+      "type": "line",
+      "id": "minato.epilogue.node.line.003",
+      "lineId": "minato.epilogue.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "新しい地図には討伐対象も封印地点もなく、安い宿と食堂の印ばかりが増えていた。"
+    },
+    {
+      "type": "line",
+      "id": "minato.epilogue.node.line.004",
+      "lineId": "minato.epilogue.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ミナトは新しい地図を広げ、最初に闘技場へ丸を付けた。"
+    },
+    {
+      "type": "direction",
+      "id": "minato.epilogue.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "minato.epilogue.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "minato.epilogue.node.direction.002",
+      "command": {
+        "type": "effect",
+        "effectId": "pulse"
+      }
+    },
+    {
+      "type": "line",
+      "id": "minato.epilogue.node.line.005",
+      "lineId": "minato.epilogue.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "柄に小さな花が彫られた短剣を見て、入口へ目をやる。待っていると認めるのは落ち着かない。でも、来なくても責められない関係になれたことは、少し誇らしかった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "minato.epilogue.node.line.006",
+      "lineId": "minato.epilogue.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "会う約束はしていない。だから待っているわけではない、と自分へ言い聞かせる朝ほど、入口の音によく気づいた。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "minato.epilogue.node.line.007",
+      "lineId": "minato.epilogue.line.007",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "最初に闘技場へ丸をつけたのは、忘れ物ですか。"
+    },
+    {
+      "type": "line",
+      "id": "minato.epilogue.node.line.008",
+      "lineId": "minato.epilogue.line.008",
+      "speakerId": "legacy.speaker.1vz3er0",
+      "speakerName": "ミナト",
+      "mode": "dialogue",
+      "text": "出発地点です。"
+    },
+    {
+      "type": "line",
+      "id": "minato.epilogue.node.line.009",
+      "lineId": "minato.epilogue.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ミナトは以前と同じように現れ、以前ならしなかった小さな選択を自分から済ませていた。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "minato.epilogue.node.line.010",
+      "lineId": "minato.epilogue.line.010",
+      "speakerId": "legacy.speaker.1vz3er0",
+      "speakerName": "ミナト",
+      "mode": "dialogue",
+      "text": "帰る場所の印だ。旅に出るなら、一つくらいあった方がいい。"
+    },
+    {
+      "type": "line",
+      "id": "minato.epilogue.node.line.011",
+      "lineId": "minato.epilogue.line.011",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "目的地じゃないんですね。"
+    },
+    {
+      "type": "line",
+      "id": "minato.epilogue.node.line.012",
+      "lineId": "minato.epilogue.line.012",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "世界を変える話より先に、誰にも急かされず、昼食と次の旅先を自分で決めることについて報告される。それが、どんな勝利よりうれしかった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "minato.epilogue.node.line.013",
+      "lineId": "minato.epilogue.line.013",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "彼が自分で選んだ旅の最初に、戻ってくる予定まで書かれている。それが妙にうれしかった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "direction",
+      "id": "minato.epilogue.node.direction.003",
+      "command": {
+        "type": "still",
+        "assetId": "minato.epilogue.asset.still.001"
+      }
+    },
+    {
+      "type": "line",
+      "id": "minato.epilogue.node.line.014",
+      "lineId": "minato.epilogue.line.014",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "返却された神器が彼の迷いに反応し、倉庫一棟を戦場の空へ変えてしまう。自由になっても規模のおかしさは治らず、周囲だけが以前より慣れていた。",
+      "emotion": "comic"
+    },
+    {
+      "type": "direction",
+      "id": "minato.epilogue.node.direction.004",
+      "command": {
+        "type": "still",
+        "assetId": "minato.epilogue.asset.still.002",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "line",
+      "id": "minato.epilogue.node.line.015",
+      "lineId": "minato.epilogue.line.015",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "必要だったのは新しい使命ではなく、何もしない日を選んでも見捨てられない確信だった。今はそれを悲しい秘密ではなく、本人から教えてもらった大切なこととして覚えている。次に会う日は、二人の予定を見比べて決めた。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "minato.epilogue.node.line.016",
+      "lineId": "minato.epilogue.line.016",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "関係に名前をつける必要はない。相棒でも、家族でも、仕事仲間でも、今日ここへ来た理由を本人が選んだことだけは分かる。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "minato.epilogue.node.line.017",
+      "lineId": "minato.epilogue.line.017",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "契約の話をしなくていいだけで、同じ場所が少し違って見えた。"
+    },
+    {
+      "type": "line",
+      "id": "minato.epilogue.node.line.018",
+      "lineId": "minato.epilogue.line.018",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "柄に小さな花が彫られた短剣はもう契約の証拠ではない。二人が同じ出来事を覚えている、ただの大切な物になった。"
+    },
+    {
+      "type": "line",
+      "id": "minato.epilogue.node.line.019",
+      "lineId": "minato.epilogue.line.019",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "次の予定を聞くと、返事の中に私の名前があった。胸が少しだけ速くなる。私は業務用ではない笑い方で、予定表を開いた。",
+      "emotion": "tender"
+    },
+    {
+      "type": "end",
+      "id": "minato.epilogue.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "approved",
+    "sourceDocument": "native narrative block migration",
+    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "legacyGeneratedIds": false
+  }
+}

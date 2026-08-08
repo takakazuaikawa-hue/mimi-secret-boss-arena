@@ -1,0 +1,307 @@
+{
+  "schemaVersion": 1,
+  "id": "night-eater.bond",
+  "kind": "character",
+  "title": "チームの日常",
+  "summary": "夜の遊歩道で起きる「チームの日常」",
+  "ownership": {
+    "arcId": "character.night-eater",
+    "characterId": "night-eater",
+    "stage": "bond"
+  },
+  "trigger": {
+    "actions": [
+      "play",
+      "rest"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 400,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "夜の遊歩道",
+    "assets": [
+      {
+        "id": "night-eater.bond.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-casino-cafe-rain.png",
+        "alt": "夜の遊歩道の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "line",
+      "id": "night-eater.bond.node.line.001",
+      "lineId": "night-eater.bond.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "夜を食べるものが加入してから、閉店作業は速くなった。照明を消す工程だけが、物理的に消えたからだ。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.bond.node.line.002",
+      "lineId": "night-eater.bond.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "問題は食べる灯りを選び始めたことだ。昨夜は自動販売機の『売切』だけを全部食べ、買えない商品が希望に満ちて見えた。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.bond.node.line.003",
+      "lineId": "night-eater.bond.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "屋上の端で、影が自動販売機の灯りを少しずつ齧っていた。消すのではなく、甘い飴みたいに舐めている。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.bond.node.line.004",
+      "lineId": "night-eater.bond.line.004",
+      "speakerId": "legacy.speaker.ij983g",
+      "speakerName": "夜を食べるもの",
+      "mode": "dialogue",
+      "text": "閉店後の店は静かでいい。"
+    },
+    {
+      "type": "direction",
+      "id": "night-eater.bond.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "night-eater.bond.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "night-eater.bond.node.direction.002",
+      "command": {
+        "type": "effect",
+        "effectId": "pulse"
+      }
+    },
+    {
+      "type": "line",
+      "id": "night-eater.bond.node.line.005",
+      "lineId": "night-eater.bond.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "今日は新商品の光を味見する会である。字面は上品だが、やっていることは設備の試食だ。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.bond.node.line.006",
+      "lineId": "night-eater.bond.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "白、橙、青。夜は一口ずつ齧り、青だけ無言で吐き戻した。自動販売機が部分的に気まずい色になった。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.bond.node.line.007",
+      "lineId": "night-eater.bond.line.007",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "明るいの、嫌いなんですか。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.bond.node.line.008",
+      "lineId": "night-eater.bond.line.008",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "暗いと片付けられません。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.bond.node.line.009",
+      "lineId": "night-eater.bond.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "青色は味ではなく『眠れない会議室の記憶』がするらしい。光の食評が具体的すぎる。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.bond.node.line.010",
+      "lineId": "night-eater.bond.line.010",
+      "speakerId": "legacy.speaker.ij983g",
+      "speakerName": "夜を食べるもの",
+      "mode": "dialogue",
+      "text": "嫌いではない。長く触れると、私の輪郭が他人に決められる。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.bond.node.line.011",
+      "lineId": "night-eater.bond.line.011",
+      "speakerId": "legacy.speaker.ij983g",
+      "speakerName": "夜を食べるもの",
+      "mode": "dialogue",
+      "text": "では、お前の足元だけ残そう。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.bond.node.line.012",
+      "lineId": "night-eater.bond.line.012",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私たちは食べてよい照明へ丸い印をつけた。夜は印まで食べた。運用設計が開始三分で破綻した。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.bond.node.line.013",
+      "lineId": "night-eater.bond.line.013",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "結局、私が指差し、夜が一口だけ食べ、味を五段階で評価する方式になった。最高評価は屋台の赤提灯だった。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.bond.node.line.014",
+      "lineId": "night-eater.bond.line.014",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "褒めると照れ隠しに隣の街灯まで食べた。通行人が一斉にこちらを見たので、夜は私の影へ隠れた。規模と隠れ場所が合っていない。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.bond.node.line.015",
+      "lineId": "night-eater.bond.line.015",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私は『おいしいなら一個まで』と言った。直後、屋台通りの提灯が一個だけ完璧な歯形で欠けた。律儀さが怖い。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.bond.node.line.016",
+      "lineId": "night-eater.bond.line.016",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "食べ終えた夜は満足そうに私の足元へ伸びた。見えないのに、食後だけは誰より分かりやすい。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.bond.node.line.017",
+      "lineId": "night-eater.bond.line.017",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私は味見表へ『赤提灯、星五つ。夜明けへの影響、三分』と書いた。飲食レビューにしては被害欄が大きい。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.bond.node.line.018",
+      "lineId": "night-eater.bond.line.018",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "帰ろうとすると、私の足元だけ小さな常夜灯が残った。送ってくれる気らしい。照明を食べる側が照明係を始めた。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.bond.node.line.019",
+      "lineId": "night-eater.bond.line.019",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "翌朝、屋台の主人から『赤提灯を絶賛した暗いお客様へ』と無料券が届いた。夜は券の金箔だけ食べた。そこも食べるんだ。",
+      "emotion": "tender"
+    },
+    {
+      "type": "choice",
+      "id": "night-eater.bond.node.choice.001",
+      "choices": [
+        {
+          "id": "night-eater.bond.choice.001",
+          "label": "夜市の明かりを一つずつ味見してもらう",
+          "result": "提灯は甘く、看板は少し苦いらしい。最後に私の名札へ近づいたので、そこだけは全力で隠した。",
+          "intent": "相手の秘密の勝ち方を試す",
+          "promise": "読みにくい作戦になる代わりに、この人だけの成長を大きく進める。",
+          "memory": "任せた一戦の手応えが、次に力を見せる理由になる。",
+          "tone": "wild",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "night-eater"
+              },
+              "mode": "add",
+              "trust": 9,
+              "ownership": -2
+            },
+            {
+              "type": "fighterPoints",
+              "target": {
+                "type": "fighter",
+                "fighterId": "night-eater"
+              },
+              "amount": 3
+            }
+          ],
+          "goto": "night-eater.bond.node.effect.001"
+        },
+        {
+          "id": "night-eater.bond.choice.002",
+          "label": "味方の影をつないで、暗闇の退路を作る",
+          "result": "三人の足元が一本の道になった。昼間には見えないが、倒れた時に必ず控室へ戻れる道だという。",
+          "intent": "チームの新しい連携を試す",
+          "promise": "本人の流儀は崩すが、全員へ配れる成長ポイントを得る。",
+          "memory": "成功した作戦と短くなった会話の両方が、次の判断まで残る。",
+          "tone": "pragmatic",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "night-eater"
+              },
+              "mode": "add",
+              "trust": 1,
+              "ownership": 7
+            },
+            {
+              "type": "sharedPoints",
+              "amount": 3
+            }
+          ],
+          "goto": "night-eater.bond.node.effect.001"
+        }
+      ]
+    },
+    {
+      "type": "effect",
+      "id": "night-eater.bond.node.effect.001",
+      "effects": [
+        {
+          "type": "setStoryStage",
+          "fighterId": "night-eater",
+          "stage": 3
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "night-eater.bond.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "approved",
+    "sourceDocument": "native narrative block migration",
+    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "legacyGeneratedIds": false
+  }
+}

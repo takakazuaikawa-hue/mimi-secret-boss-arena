@@ -1,0 +1,305 @@
+{
+  "schemaVersion": 1,
+  "id": "room-seventeen.power",
+  "kind": "character",
+  "title": "取り戻す力",
+  "summary": "最下層らしき場所で起きる「取り戻す力」",
+  "ownership": {
+    "arcId": "character.room-seventeen",
+    "characterId": "room-seventeen",
+    "stage": "power"
+  },
+  "trigger": {
+    "actions": [
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 400,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "最下層らしき場所",
+    "assets": [
+      {
+        "id": "room-seventeen.power.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-observation-deck-night.png",
+        "alt": "最下層らしき場所の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "line",
+      "id": "room-seventeen.power.node.line.001",
+      "lineId": "room-seventeen.power.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "練習のあと、十七号室に呼ばれて最下層らしき場所まで来た。いつもの力では足りない理由を、見せたいらしい。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.power.node.line.002",
+      "lineId": "room-seventeen.power.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "警報より先に、相手の声が私の名を呼んだ。いつもと同じ呼び方なのに、その一音だけで足が止まる。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.power.node.line.003",
+      "lineId": "room-seventeen.power.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "扉が開くたび別の階が戦場へ重なり、敵の一歩が砂漠、海底、子ども部屋へ迷い込む。出口は一つも同じ場所にない。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.power.node.line.004",
+      "lineId": "room-seventeen.power.line.004",
+      "speakerId": "legacy.speaker.zzyjm6",
+      "speakerName": "十七号室",
+      "mode": "dialogue",
+      "text": "最下層を開ける。入る？"
+    },
+    {
+      "type": "direction",
+      "id": "room-seventeen.power.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "room-seventeen.power.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "room-seventeen.power.node.direction.002",
+      "command": {
+        "type": "effect",
+        "effectId": "flash"
+      }
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.power.node.line.005",
+      "lineId": "room-seventeen.power.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "少し寂しくなるだけで館内図が百一階まで増築され、非常口が昨日へつながる。そんな力が、目の前で息をしている。逃げる理由なら十分だった。それでも私は、力の大きさより十七号室が最初にどこを見るのかを確かめたかった。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.power.node.line.006",
+      "lineId": "room-seventeen.power.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "十七号室が私と危険の間へ立つ。触れてはいない。それでも、こちらへ届くはずだった圧力だけがきれいに二つへ割れた。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.power.node.line.007",
+      "lineId": "room-seventeen.power.line.007",
+      "speakerId": "legacy.speaker.zzyjm6",
+      "speakerName": "十七号室",
+      "mode": "dialogue",
+      "text": "本来、出口は無数にあります。契約が一つへ絞り、迷った者を同じ場所へ返している。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.power.node.line.008",
+      "lineId": "room-seventeen.power.line.008",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "戻れます？"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.power.node.line.009",
+      "lineId": "room-seventeen.power.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "入った者へ安全な部屋を与え、出口だけを隠す迷宮。けれど今見せている力は、勝つためではなく、私を怖がらせないために抑えられている。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.power.node.line.010",
+      "lineId": "room-seventeen.power.line.010",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "帰れる保証は助かりますけど、誰かが決めた出口しかないのは嫌ですね。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.power.node.line.011",
+      "lineId": "room-seventeen.power.line.011",
+      "speakerId": "legacy.speaker.zzyjm6",
+      "speakerName": "十七号室",
+      "mode": "dialogue",
+      "text": "出口を残す。契約より先に約束する。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.power.node.line.012",
+      "lineId": "room-seventeen.power.line.012",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "本気を見たいと思っていた。実際に目の前へ現れると、知りたかったのは強さではなく、その力を本人がどう恐れているかだった。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.power.node.line.013",
+      "lineId": "room-seventeen.power.line.013",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "廊下の先で何百ものドアノブが一斉に回った。迷宮が、初めて自分の可能性を思い出している。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.power.node.line.014",
+      "lineId": "room-seventeen.power.line.014",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "少し寂しくなるだけで館内図が百一階まで増築され、非常口が昨日へつながる。闘技場の安全基準は一瞬で役に立たなくなり、担当者は私の顔を見て計測を諦めた。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.power.node.line.015",
+      "lineId": "room-seventeen.power.line.015",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "世界を壊せることより、壊さないために何を選んだかが胸へ残った。安全を与えることと帰る権利を奪うことの違いを、部屋自身も怖がりながら学んでいた。その理解が正しいか、いつか本人の言葉で確かめたい。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.power.node.line.016",
+      "lineId": "room-seventeen.power.line.016",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "力の中心にあったのは、大切な客を失わないために、帰る道まで奪ってしまうこと。最強であることが、本人にとって一番古い傷なのだと分かる。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.power.node.line.017",
+      "lineId": "room-seventeen.power.line.017",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "怖さが消えたわけではない。だからこそ、使うかどうかを本人と決める必要がある。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.power.node.line.018",
+      "lineId": "room-seventeen.power.line.018",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "大丈夫とは言えない。怖いものは怖い。それでも、次に力を使う時は一人で決めなくていいと伝えた。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.power.node.line.019",
+      "lineId": "room-seventeen.power.line.019",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "外側から初めて掛けられた『また来ます』の札だけが元の大きさで残り、さっきまで世界の終わりがいた場所に、帰り道の灯りが戻った。"
+    },
+    {
+      "type": "choice",
+      "id": "room-seventeen.power.node.choice.001",
+      "choices": [
+        {
+          "id": "room-seventeen.power.choice.001",
+          "label": "閉ざされた最深階を、本人の内側から開く",
+          "result": "扉の向こうで迷宮が息をした。誰かを閉じ込める力ではなく、自分で出口を選ぶ力として階段が伸びた。",
+          "intent": "本来の力を一気に取り戻す",
+          "promise": "失敗時の危険を引き受け、この人専用の成長を最大まで進める。",
+          "memory": "力を恐れたまま任せたことを、相手は危機の場面で思い出す。",
+          "tone": "heroic",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "room-seventeen"
+              },
+              "mode": "add",
+              "trust": 10,
+              "ownership": -4
+            },
+            {
+              "type": "fighterPoints",
+              "target": {
+                "type": "fighter",
+                "fighterId": "room-seventeen"
+              },
+              "amount": 5
+            }
+          ],
+          "goto": "room-seventeen.power.node.effect.001"
+        },
+        {
+          "id": "room-seventeen.power.choice.002",
+          "label": "大会会場へ通じる三本の廊下だけを残す",
+          "result": "迷宮の大半は眠ったまま、使う道だけが安定した。観客が迷子になる確率も、ようやく一桁になった。",
+          "intent": "安全な段階解除で確実に進む",
+          "promise": "本来の力は一部に留め、チーム全体の成長へ成果を持ち帰る。",
+          "memory": "全員で帰ると決めた手順が、危機で使える安全策として残る。",
+          "tone": "pragmatic",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "room-seventeen"
+              },
+              "mode": "add",
+              "trust": 0,
+              "ownership": 9
+            },
+            {
+              "type": "sharedPoints",
+              "amount": 5
+            }
+          ],
+          "goto": "room-seventeen.power.node.effect.001"
+        }
+      ]
+    },
+    {
+      "type": "effect",
+      "id": "room-seventeen.power.node.effect.001",
+      "effects": [
+        {
+          "type": "setStoryStage",
+          "fighterId": "room-seventeen",
+          "stage": 4
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "room-seventeen.power.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "approved",
+    "sourceDocument": "native narrative block migration",
+    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "legacyGeneratedIds": false
+  }
+}

@@ -1,0 +1,262 @@
+{
+  "schemaVersion": 1,
+  "id": "room-seventeen.epilogue",
+  "kind": "character",
+  "title": "定時退室訓練・出口千本ノック",
+  "summary": "百階迷宮が休憩客を定時に帰そうとして、正しくない出口を千個開ける",
+  "ownership": {
+    "arcId": "character.room-seventeen",
+    "characterId": "room-seventeen",
+    "stage": "epilogue"
+  },
+  "trigger": {
+    "actions": [
+      "rest"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 400,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "本日の十七号室・雲上休憩階",
+    "assets": [
+      {
+        "id": "room-seventeen.epilogue.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-casino-cafe-morning.png",
+        "alt": "雲上に広がる十七号室の休憩階"
+      },
+      {
+        "id": "room-seventeen.epilogue.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/events/room-seventeen-epilogue-exit-drill-v1.png",
+        "alt": "無数の誤った出口が開く雲上休憩室で、利用者を定時退室させるミミと十七号室"
+      },
+      {
+        "id": "room-seventeen.epilogue.asset.still.002",
+        "kind": "still",
+        "path": "/assets/story/events/room-seventeen-epilogue-one-way-home-reward-v1.png",
+        "alt": "無数の異世界出口を閉じ、ミミが選んだ帰宅扉一枚と再訪の札だけを残す十七号室"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "line",
+      "id": "room-seventeen.epilogue.node.line.001",
+      "lineId": "room-seventeen.epilogue.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "最終大会の翌週、従業員通路に『本日の十七号室』が現れた。扉の向こうは雲の上の休憩室。椅子は百二十脚、窓は夕焼け、階下は百階以上ある。休憩にしては帰宅難度が高い。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.epilogue.node.line.002",
+      "lineId": "room-seventeen.epilogue.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "今日の催しは定時退室訓練。十七号室が休ませた客を、自分の意思で、正しい時刻に、正しい場所へ帰す練習である。私は避難誘導係と、迷宮への採点係を任された。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.epilogue.node.line.003",
+      "lineId": "room-seventeen.epilogue.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "終了の鐘が鳴る。壁一面に出口が開いた。右から食堂、王都の港、昨日の午後、会議開始五分前、海底、知らない人の実家。正しい従業員通路は一つもない。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.epilogue.node.line.004",
+      "lineId": "room-seventeen.epilogue.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "第一回訓練、退室成功者ゼロ。海底へ出た経理担当だけは真珠を拾って戻り、少し満足そうだった。採点には加えない。"
+    },
+    {
+      "type": "direction",
+      "id": "room-seventeen.epilogue.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "room-seventeen.epilogue.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "room-seventeen.epilogue.node.direction.002",
+      "command": {
+        "type": "effect",
+        "effectId": "pulse"
+      }
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.epilogue.node.line.005",
+      "lineId": "room-seventeen.epilogue.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私は扉を一つずつ閉め、行き先札を貼り直した。『昨日』は便利そうだが、昨日の私も仕事中なので戻りたくない。『会議開始前』は全員が目をそらした。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.epilogue.node.line.006",
+      "lineId": "room-seventeen.epilogue.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "二回目。十七号室は出口を三百個に増やした。数を増やせば正解率も上がるという迷宮らしい発想である。結果、廊下が三つ巴になり、非常口同士が道を譲らず渋滞した。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.epilogue.node.line.007",
+      "lineId": "room-seventeen.epilogue.line.007",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "出口は増やすほど親切、ではありません。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.epilogue.node.line.008",
+      "lineId": "room-seventeen.epilogue.line.008",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "あと昨日を三つも用意しないで。どの昨日も忙しいです。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.epilogue.node.line.009",
+      "lineId": "room-seventeen.epilogue.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "天井の照明が順番に暗くなった。十七号室が考えている時の癖だ。壁紙の模様がしょんぼり下を向き、ソファが利用者の上着を返し始めた。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.epilogue.node.line.010",
+      "lineId": "room-seventeen.epilogue.line.010",
+      "speakerId": "legacy.speaker.zzyjm6",
+      "speakerName": "十七号室",
+      "mode": "dialogue",
+      "text": "帰りたい場所は、人ごとに違う。全部用意した。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.epilogue.node.line.011",
+      "lineId": "room-seventeen.epilogue.line.011",
+      "speakerId": "legacy.speaker.zzyjm6",
+      "speakerName": "十七号室",
+      "mode": "dialogue",
+      "text": "違う。まだ休みたい人と、もう帰りたい人を、同じ出口へ押していた。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.epilogue.node.line.012",
+      "lineId": "room-seventeen.epilogue.line.012",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "十七号室は客を帰したくないのではない。快適な場所を全部見せてから選ばせたかったのだ。百階ぶんの善意は、受け取る側には百階ぶんの引き止めになる。その違いを、部屋自身がようやく言葉にした。",
+      "emotion": "tender"
+    },
+    {
+      "type": "direction",
+      "id": "room-seventeen.epilogue.node.direction.003",
+      "command": {
+        "type": "still",
+        "assetId": "room-seventeen.epilogue.asset.still.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.epilogue.node.line.013",
+      "lineId": "room-seventeen.epilogue.line.013",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "三回目。壁に開いたのは、人数と同じ数の小さな扉だった。食堂、寮、町の市場、家族の待つ家。客が一人通るたび、その扉は追いかけず静かに閉じた。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.epilogue.node.line.014",
+      "lineId": "room-seventeen.epilogue.line.014",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "最後の一人が退室すると、休憩室は急に広くなった。椅子百二十脚が一斉にこちらを向き、帰宅を促すように少し前へ出る。成功なのに、圧が強い。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.epilogue.node.line.015",
+      "lineId": "room-seventeen.epilogue.line.015",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私の前にも扉が一つ開いた。いつもの寮室へ続いている。散らかった机も、脱ぎっぱなしの片方の靴下も、そのまま見えた。迷宮に私生活を正確に再現されると、帰宅より先に片づけたくなる。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.epilogue.node.line.016",
+      "lineId": "room-seventeen.epilogue.line.016",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "扉の内側には、小さな札が掛かっていた。『また来ます』。十七号室が用意した言葉ではない。私が外側から掛けられるよう、紐だけがこちらへ渡されている。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.epilogue.node.line.017",
+      "lineId": "room-seventeen.epilogue.line.017",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私は札を外へ持ち出し、従業員通路側の取っ手へ掛け直した。帰ることと、もう来ないことは同じではない。百階迷宮には、その一文がいちばん難しい近道だった。"
+    },
+    {
+      "type": "direction",
+      "id": "room-seventeen.epilogue.node.direction.004",
+      "command": {
+        "type": "still",
+        "assetId": "room-seventeen.epilogue.asset.still.002",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.epilogue.node.line.018",
+      "lineId": "room-seventeen.epilogue.line.018",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "扉が閉じる寸前、向こう側の椅子が一脚だけ小さく跳ねた。手を振ったつもりらしい。私も振り返さず、札を二度軽く叩いた。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.epilogue.node.line.019",
+      "lineId": "room-seventeen.epilogue.line.019",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "翌朝、十七号室は予定どおり同じ場所へ現れた。本日の休憩室は一階建て、出口は一つ、滞在時間は十五分。完璧だと思ったら、室内だけが海の見える温泉図書館だった。改善には、まだ伸びしろが百階ある。",
+      "emotion": "tender"
+    },
+    {
+      "type": "end",
+      "id": "room-seventeen.epilogue.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "approved",
+    "sourceDocument": "native narrative block migration",
+    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "legacyGeneratedIds": false
+  }
+}

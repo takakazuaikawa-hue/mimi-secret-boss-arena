@@ -1,0 +1,327 @@
+{
+  "schemaVersion": 1,
+  "id": "shahar.power",
+  "kind": "character",
+  "title": "取り戻す力",
+  "summary": "闘技場上空で起きる「取り戻す力」",
+  "ownership": {
+    "arcId": "character.shahar",
+    "characterId": "shahar",
+    "stage": "power"
+  },
+  "trigger": {
+    "actions": [
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 400,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "闘技場上空",
+    "assets": [
+      {
+        "id": "shahar.power.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-observation-deck-night.png",
+        "alt": "闘技場上空の背景"
+      },
+      {
+        "id": "shahar.power.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/events/shahar-power.png",
+        "alt": "取り戻す力のイベント一枚絵"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "line",
+      "id": "shahar.power.node.line.001",
+      "lineId": "shahar.power.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "練習のあと、シャハルに呼ばれて闘技場上空まで来た。いつもの力では足りない理由を、見せたいらしい。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.power.node.line.002",
+      "lineId": "shahar.power.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "警報より先に、相手の声が私の名を呼んだ。いつもと同じ呼び方なのに、その一音だけで足が止まる。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "shahar.power.node.line.003",
+      "lineId": "shahar.power.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "鱗へ触れた瞬間、屋上が空の上へ裏返った。眼下の街は模型より小さく、竜の瞳は夜空より近い。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.power.node.line.004",
+      "lineId": "shahar.power.line.004",
+      "speakerId": "legacy.speaker.bkqdo1",
+      "speakerName": "シャハル",
+      "mode": "dialogue",
+      "text": "競技場の屋根を開けろ。壊したくはない。"
+    },
+    {
+      "type": "direction",
+      "id": "shahar.power.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "shahar.power.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "shahar.power.node.direction.002",
+      "command": {
+        "type": "effect",
+        "effectId": "flash"
+      }
+    },
+    {
+      "type": "line",
+      "id": "shahar.power.node.line.005",
+      "lineId": "shahar.power.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "機嫌を少し動かすだけで、三県の天気予報と日の出時刻が書き換わる。そんな力が、目の前で息をしている。逃げる理由なら十分だった。それでも私は、力の大きさよりシャハルが最初にどこを見るのかを確かめたかった。",
+      "emotion": "tension"
+    },
+    {
+      "type": "direction",
+      "id": "shahar.power.node.direction.003",
+      "command": {
+        "type": "still",
+        "assetId": "shahar.power.asset.still.001"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "shahar.power.node.direction.004",
+      "command": {
+        "type": "effect",
+        "effectId": "pulse"
+      }
+    },
+    {
+      "type": "line",
+      "id": "shahar.power.node.line.006",
+      "lineId": "shahar.power.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "シャハルが私と危険の間へ立つ。触れてはいない。それでも、こちらへ届くはずだった圧力だけがきれいに二つへ割れた。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.power.node.line.007",
+      "lineId": "shahar.power.line.007",
+      "speakerId": "legacy.speaker.bkqdo1",
+      "speakerName": "シャハル",
+      "mode": "dialogue",
+      "text": "私が身を起こせば、この街の朝は一週間遅れる。それでも力を望むか。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.power.node.line.008",
+      "lineId": "shahar.power.line.008",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "そこ、会社に確認してからで。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.power.node.line.009",
+      "lineId": "shahar.power.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "季節より長く生き、地上の都合へ動じない古竜。けれど今見せている力は、勝つためではなく、私を怖がらせないために抑えられている。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "shahar.power.node.line.010",
+      "lineId": "shahar.power.line.010",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "街を寝坊させない範囲でお願いします。試合開始時刻は変えられません。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.power.node.line.011",
+      "lineId": "shahar.power.line.011",
+      "speakerId": "legacy.speaker.bkqdo1",
+      "speakerName": "シャハル",
+      "mode": "dialogue",
+      "text": "確認は済んだ。返事だけがまだだ。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.power.node.line.012",
+      "lineId": "shahar.power.line.012",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "本気を見たいと思っていた。実際に目の前へ現れると、知りたかったのは強さではなく、その力を本人がどう恐れているかだった。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.power.node.line.013",
+      "lineId": "shahar.power.line.013",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "巨大な瞳が細くなる。笑ったのだと分かるまで、遠くの雷が三つ必要だった。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.power.node.line.014",
+      "lineId": "shahar.power.line.014",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "機嫌を少し動かすだけで、三県の天気予報と日の出時刻が書き換わる。闘技場の安全基準は一瞬で役に立たなくなり、担当者は私の顔を見て計測を諦めた。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "shahar.power.node.line.015",
+      "lineId": "shahar.power.line.015",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "世界を壊せることより、壊さないために何を選んだかが胸へ残った。遠ざかっていたのは無関心だからではなく、近づけば壊すと誰より知っていたからだった。その理解が正しいか、いつか本人の言葉で確かめたい。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "shahar.power.node.line.016",
+      "lineId": "shahar.power.line.016",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "力の中心にあったのは、近づくだけで、守りたい小さな暮らしを天候ごと壊してしまうこと。最強であることが、本人にとって一番古い傷なのだと分かる。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "shahar.power.node.line.017",
+      "lineId": "shahar.power.line.017",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "怖さが消えたわけではない。だからこそ、使うかどうかを本人と決める必要がある。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.power.node.line.018",
+      "lineId": "shahar.power.line.018",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "大丈夫とは言えない。怖いものは怖い。それでも、次に力を使う時は一人で決めなくていいと伝えた。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "shahar.power.node.line.019",
+      "lineId": "shahar.power.line.019",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "一人分の茶を保温する手のひらほどの雲だけが元の大きさで残り、さっきまで世界の終わりがいた場所に、帰り道の灯りが戻った。"
+    },
+    {
+      "type": "choice",
+      "id": "shahar.power.node.choice.001",
+      "choices": [
+        {
+          "id": "shahar.power.choice.001",
+          "label": "本体へ名前を呼び、雲の切れ間から降りてもらう",
+          "result": "空が一度だけ目を開けた。呼び戻す名前を忘れないよう、私は雷の中で何度も同じ音を繰り返した。",
+          "intent": "本来の力を一気に取り戻す",
+          "promise": "失敗時の危険を引き受け、この人専用の成長を最大まで進める。",
+          "memory": "力を恐れたまま任せたことを、相手は危機の場面で思い出す。",
+          "tone": "heroic",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "shahar"
+              },
+              "mode": "add",
+              "trust": 10,
+              "ownership": -4
+            },
+            {
+              "type": "fighterPoints",
+              "target": {
+                "type": "fighter",
+                "fighterId": "shahar"
+              },
+              "amount": 5
+            }
+          ],
+          "goto": "shahar.power.node.effect.001"
+        },
+        {
+          "id": "shahar.power.choice.002",
+          "label": "鱗一枚で起こせる風だけを測る",
+          "result": "街を壊さず敵陣だけを押し返す角度が見つかった。測定表の端は、風圧で全部めくれていた。",
+          "intent": "安全な段階解除で確実に進む",
+          "promise": "本来の力は一部に留め、チーム全体の成長へ成果を持ち帰る。",
+          "memory": "全員で帰ると決めた手順が、危機で使える安全策として残る。",
+          "tone": "pragmatic",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "shahar"
+              },
+              "mode": "add",
+              "trust": 0,
+              "ownership": 9
+            },
+            {
+              "type": "sharedPoints",
+              "amount": 5
+            }
+          ],
+          "goto": "shahar.power.node.effect.001"
+        }
+      ]
+    },
+    {
+      "type": "effect",
+      "id": "shahar.power.node.effect.001",
+      "effects": [
+        {
+          "type": "setStoryStage",
+          "fighterId": "shahar",
+          "stage": 4
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "shahar.power.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "approved",
+    "sourceDocument": "native narrative block migration",
+    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "legacyGeneratedIds": false
+  }
+}

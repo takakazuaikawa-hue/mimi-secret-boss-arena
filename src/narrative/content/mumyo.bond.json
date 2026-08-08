@@ -1,0 +1,307 @@
+{
+  "schemaVersion": 1,
+  "id": "mumyo.bond",
+  "kind": "character",
+  "title": "チームの日常",
+  "summary": "鏡張りの廊下で起きる「チームの日常」",
+  "ownership": {
+    "arcId": "character.mumyo",
+    "characterId": "mumyo",
+    "stage": "bond"
+  },
+  "trigger": {
+    "actions": [
+      "play",
+      "rest"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 400,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "鏡張りの廊下",
+    "assets": [
+      {
+        "id": "mumyo.bond.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-casino-cafe-rain.png",
+        "alt": "鏡張りの廊下の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "line",
+      "id": "mumyo.bond.node.line.001",
+      "lineId": "mumyo.bond.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "無銘がチームに加わってから、鏡張りの廊下で顔を合わせることが増えた。今日は試合の話ではなく、少しだけ時間が空いている。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.bond.node.line.002",
+      "lineId": "mumyo.bond.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "試合のない午後。窓を雨が細く叩き、業務連絡も歓声も今日は遠い。二人きりになる予定ではなかったのに、空いている席は向かいだけだった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.bond.node.line.003",
+      "lineId": "mumyo.bond.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "展示室の掃除中、鏡の中の無銘が私の雑巾の動きを真似していた。剣の姿では何もできず、暇らしい。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.bond.node.line.004",
+      "lineId": "mumyo.bond.line.004",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "磨くと痛いですか。"
+    },
+    {
+      "type": "direction",
+      "id": "mumyo.bond.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "mumyo.bond.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "mumyo.bond.node.direction.002",
+      "command": {
+        "type": "effect",
+        "effectId": "pulse"
+      }
+    },
+    {
+      "type": "line",
+      "id": "mumyo.bond.node.line.005",
+      "lineId": "mumyo.bond.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "試合も契約もない時間なら、もっと気楽に話せると思っていた。実際は、お茶を一口飲むたび沈黙の意味を考えてしまう。強さを見ている時より、無銘の小さな癖のほうがずっと気になった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.bond.node.line.006",
+      "lineId": "mumyo.bond.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "開いた展示ケース、割れた鏡、鞘から一寸だけ覗く刃。戦場では見落としていた小さな癖が、何も起きない時間ほどよく見える。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.bond.node.line.007",
+      "lineId": "mumyo.bond.line.007",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "剣って、眠ったり退屈したりするんですか。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.bond.node.line.008",
+      "lineId": "mumyo.bond.line.008",
+      "speakerId": "legacy.speaker.1whk6fw",
+      "speakerName": "無銘",
+      "mode": "dialogue",
+      "text": "痛くはない。覚えている。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.bond.node.line.009",
+      "lineId": "mumyo.bond.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "無銘は持ち主の望む姿と名を映し、最強の武器として完成する剣。そのはずなのに、私の休憩が終わる時刻を気にして、話題を一つずつ短くしている。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.bond.node.line.010",
+      "lineId": "mumyo.bond.line.010",
+      "speakerId": "legacy.speaker.1whk6fw",
+      "speakerName": "無銘",
+      "mode": "dialogue",
+      "text": "持たれている間はしない。置かれて初めて、時間があると知った。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.bond.node.line.011",
+      "lineId": "mumyo.bond.line.011",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "じゃあ、嫌なら言ってください。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.bond.node.line.012",
+      "lineId": "mumyo.bond.line.012",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "特別な話をしなくても、同じ音を聞いていられる。そんな時間が欲しかったのだと、失う前から気づいてしまった。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.bond.node.line.013",
+      "lineId": "mumyo.bond.line.013",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私はケースの前に椅子を置き、休憩を一緒に取った。鏡の中にも同じ椅子が現れた。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.bond.node.line.014",
+      "lineId": "mumyo.bond.line.014",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "一寸抜けるだけで歴代勇者の時代が同時に映り、展示室が最終決戦を十四回始める。甘い空気になりかけるたび、世界の方が先に耐えられなくなる。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.bond.node.line.015",
+      "lineId": "mumyo.bond.line.015",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "眠っていたのではなく、誰の願いでもない自分の声を選び分けるために黙っていた。そう気づくと、何も起きなかった午後が急に大事な出来事へ変わった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.bond.node.line.016",
+      "lineId": "mumyo.bond.line.016",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "笑いが収まったあと、持たれず、抜かれず、それでも誰かの隣を自分で選んで歩くことという、驚くほど普通の望みが語られた。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.bond.node.line.017",
+      "lineId": "mumyo.bond.line.017",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "試合の外で交わした言葉のほうが、次の指示より長く残ることがある。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.bond.node.line.018",
+      "lineId": "mumyo.bond.line.018",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "それは私が叶えるものではない。ただ、叶うまで隣にいることならできる。そう言いかけて、言葉にする勇気だけが遅れた。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.bond.node.line.019",
+      "lineId": "mumyo.bond.line.019",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "値札も所有者欄も外された空の展示ケースを間に置いたまま、私たちは雨が止んでもしばらく席を立たなかった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "choice",
+      "id": "mumyo.bond.node.choice.001",
+      "choices": [
+        {
+          "id": "mumyo.bond.choice.001",
+          "label": "剣を持たず、鏡の人物と廊下を歩く",
+          "result": "現実の剣はケースに残った。鏡の中だけで隣を歩く姿が、角を曲がるたび少し近くなった。",
+          "intent": "相手の秘密の勝ち方を試す",
+          "promise": "読みにくい作戦になる代わりに、この人だけの成長を大きく進める。",
+          "memory": "任せた一戦の手応えが、次に力を見せる理由になる。",
+          "tone": "wild",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "mumyo"
+              },
+              "mode": "add",
+              "trust": 9,
+              "ownership": -2
+            },
+            {
+              "type": "fighterPoints",
+              "target": {
+                "type": "fighter",
+                "fighterId": "mumyo"
+              },
+              "amount": 3
+            }
+          ],
+          "goto": "mumyo.bond.node.effect.001"
+        },
+        {
+          "id": "mumyo.bond.choice.002",
+          "label": "鞘のまま、三人の受け流し役を任せる",
+          "result": "一度も抜かずに敵の軌道を変えた。斬れない時間が、味方にはいちばん安全な隙になった。",
+          "intent": "チームの新しい連携を試す",
+          "promise": "本人の流儀は崩すが、全員へ配れる成長ポイントを得る。",
+          "memory": "成功した作戦と短くなった会話の両方が、次の判断まで残る。",
+          "tone": "pragmatic",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "mumyo"
+              },
+              "mode": "add",
+              "trust": 1,
+              "ownership": 7
+            },
+            {
+              "type": "sharedPoints",
+              "amount": 3
+            }
+          ],
+          "goto": "mumyo.bond.node.effect.001"
+        }
+      ]
+    },
+    {
+      "type": "effect",
+      "id": "mumyo.bond.node.effect.001",
+      "effects": [
+        {
+          "type": "setStoryStage",
+          "fighterId": "mumyo",
+          "stage": 3
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "mumyo.bond.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "approved",
+    "sourceDocument": "native narrative block migration",
+    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "legacyGeneratedIds": false
+  }
+}

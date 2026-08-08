@@ -1,0 +1,309 @@
+{
+  "schemaVersion": 1,
+  "id": "cassim-bell.meet",
+  "kind": "character",
+  "title": "最初の遭遇",
+  "summary": "遺失物窓口で起きる「最初の遭遇」",
+  "ownership": {
+    "arcId": "character.cassim-bell",
+    "characterId": "cassim-bell",
+    "stage": "meet"
+  },
+  "trigger": {
+    "actions": [
+      "work"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 500,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "遺失物窓口",
+    "assets": [
+      {
+        "id": "cassim-bell.meet.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-arena-reception.png",
+        "alt": "遺失物窓口の背景"
+      },
+      {
+        "id": "cassim-bell.meet.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/encounters/cassim-bell.png",
+        "alt": "最初の遭遇のイベント一枚絵"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "line",
+      "id": "cassim-bell.meet.node.line.001",
+      "lineId": "cassim-bell.meet.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "今週の用事で遺失物窓口へ立ち寄った。予定どおりなら、目の前の用事を済ませて帰るだけのはずだった。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.meet.node.line.002",
+      "lineId": "cassim-bell.meet.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "その日、最初に目へ入ったのは無数の扉、休止中にならない受付札、遠い世界から届く鈴だった。人より先に、その人の孤独だけが場所を取っていた。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.meet.node.line.003",
+      "lineId": "cassim-bell.meet.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "遺失物窓口の背後にある扉から、潮の匂い、雪、歓声が順番に漏れていた。札には『関係者以外立入禁止』とだけある。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.meet.node.line.004",
+      "lineId": "cassim-bell.meet.line.004",
+      "speakerId": "legacy.speaker.1wuvexi",
+      "speakerName": "カシム・ベル",
+      "mode": "dialogue",
+      "text": "こちら、あなたが前世で失くされた鍵です。"
+    },
+    {
+      "type": "direction",
+      "id": "cassim-bell.meet.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "cassim-bell.meet.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "cassim-bell.meet.node.direction.002",
+      "command": {
+        "type": "effect",
+        "effectId": "flash"
+      }
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.meet.node.line.005",
+      "lineId": "cassim-bell.meet.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ここへ来た理由は、ごく普通の用事だった。けれどカシム・ベルを見た瞬間、兎耳だけが先に危険を知らせる。私はとっさに、責任感が強すぎて窓口を離れられない人なのだと思いかけた。",
+      "emotion": "comic"
+    },
+    {
+      "type": "direction",
+      "id": "cassim-bell.meet.node.direction.003",
+      "command": {
+        "type": "still",
+        "assetId": "cassim-bell.meet.asset.still.001"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "cassim-bell.meet.node.direction.004",
+      "command": {
+        "type": "effect",
+        "effectId": "pulse"
+      }
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.meet.node.line.006",
+      "lineId": "cassim-bell.meet.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "声をかけるべきか迷っている間に、視線だけが一度重なる。胸が跳ねたのは見た目のせいではない。見つけてはいけない何かを、向こうも隠さなかったからだ。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.meet.node.line.007",
+      "lineId": "cassim-bell.meet.line.007",
+      "speakerId": "legacy.speaker.1wuvexi",
+      "speakerName": "カシム・ベル",
+      "mode": "dialogue",
+      "text": "どの世界で、何を失くされましたか。物でなくても、受付票は同じです。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.meet.node.line.008",
+      "lineId": "cassim-bell.meet.line.008",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "失くした記憶もないんですけど。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.meet.node.line.009",
+      "lineId": "cassim-bell.meet.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "カシム・ベルは、失くしたものを必ず保管し、持ち主が来るまで待ち続ける番人に見えた。だから私は、普通のお客様へするのと同じ声で話しかけることにした。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.meet.node.line.010",
+      "lineId": "cassim-bell.meet.line.010",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "失くした世界そのものを探している人も来るんですか。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.meet.node.line.011",
+      "lineId": "cassim-bell.meet.line.011",
+      "speakerId": "legacy.speaker.1wuvexi",
+      "speakerName": "カシム・ベル",
+      "mode": "dialogue",
+      "text": "記憶は当窓口の保管対象外です。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.meet.node.line.012",
+      "lineId": "cassim-bell.meet.line.012",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "たった一言の返事を待つ時間が、試合開始前より長い。背後ではいつもの業務放送が流れ、この場所だけが別の物語の入口みたいに静かだった。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.meet.node.line.013",
+      "lineId": "cassim-bell.meet.line.013",
+      "speakerId": "legacy.speaker.1wuvexi",
+      "speakerName": "カシム・ベル",
+      "mode": "dialogue",
+      "text": "ええ。待ち人数は少々多いですが、番号札は尽きません。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.meet.node.line.014",
+      "lineId": "cassim-bell.meet.line.014",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "合鍵を一本取り違えるだけで、月の裏や滅亡前日の王都が休憩室へ開く。それでも本人が気にしたのは、私が一歩引いたことの方だった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.meet.node.line.015",
+      "lineId": "cassim-bell.meet.line.015",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "まだ事情はほとんど分からない。ただ、最初の考えだけでは説明できない表情を見てしまった。私は曲がった名札を直し、次に会う口実をひとつ残した。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.meet.node.line.016",
+      "lineId": "cassim-bell.meet.line.016",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "怖くないと言えば嘘になる。でも、怖さの奥に自分が窓口を離れた十五分に、帰れない誰かが来てしまうことがある気がして、目をそらす方が失礼に思えた。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.meet.node.line.017",
+      "lineId": "cassim-bell.meet.line.017",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "事情はまだ分からない。でも、ここで立ち去れば、たぶん後悔する。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.meet.node.line.018",
+      "lineId": "cassim-bell.meet.line.018",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "名前を聞いただけ。約束も、契約も、まだ何もない。それなのに別れ際、次に会った時の言葉を考えている自分がいた。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.meet.node.line.019",
+      "lineId": "cassim-bell.meet.line.019",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "その場に残った何百年ぶりに表へ返した十五分休止の札を見て、私は今日の出来事を勤務報告の一行だけでは終わらせられないと知った。"
+    },
+    {
+      "type": "choice",
+      "id": "cassim-bell.meet.node.choice.001",
+      "choices": [
+        {
+          "id": "cassim-bell.meet.choice.001",
+          "label": "失くした世界の受付票を書く",
+          "result": "受付番号は発行された。待ち人数は億を少し超えていた。",
+          "intent": "登録の前に、目の前の相手を知る",
+          "promise": "目先の報酬は得ない代わりに、相手が何を望んでいるかを確かめる。",
+          "memory": "手続きより先に話を聞いたことを、相手は最初の印象として覚えている。",
+          "tone": "tender",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "cassim-bell"
+              },
+              "mode": "add",
+              "trust": 7,
+              "ownership": -2
+            }
+          ],
+          "goto": "cassim-bell.meet.node.effect.001"
+        },
+        {
+          "id": "cassim-bell.meet.choice.002",
+          "label": "今日はカシム・ベルを誘わず、用事へ戻る",
+          "result": "カシム・ベルの名前と出会った場所だけを覚え、今日は普段の仕事へ戻った。急いで所属を決めなかったことが、次に会う時の距離として残った。",
+          "intent": "今は勧誘せず、相手との距離を保つ",
+          "promise": "所属選手にはならないが、後の出来事で再会できる。",
+          "memory": "最初の出会いで急いで仲間にしなかったことが、次の再会へ残る。",
+          "tone": "pragmatic",
+          "effects": [],
+          "goto": "cassim-bell.meet.node.effect.001"
+        }
+      ]
+    },
+    {
+      "type": "effect",
+      "id": "cassim-bell.meet.node.effect.001",
+      "effects": [
+        {
+          "type": "markEncountered",
+          "fighterId": "cassim-bell",
+          "encountered": true
+        },
+        {
+          "type": "setStoryStage",
+          "fighterId": "cassim-bell",
+          "stage": 1
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "cassim-bell.meet.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "approved",
+    "sourceDocument": "native narrative block migration",
+    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "legacyGeneratedIds": false
+  }
+}

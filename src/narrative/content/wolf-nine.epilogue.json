@@ -1,0 +1,247 @@
+{
+  "schemaVersion": 1,
+  "id": "wolf-nine.epilogue",
+  "kind": "character",
+  "title": "第一回・休憩時間決闘祭",
+  "summary": "昼休みのあらゆる行動を正式種目にした決闘者が、九種目目だけを秘密にする",
+  "ownership": {
+    "arcId": "character.wolf-nine",
+    "characterId": "wolf-nine",
+    "stage": "epilogue"
+  },
+  "trigger": {
+    "actions": [
+      "rest"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 400,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "闘技場中庭",
+    "assets": [
+      {
+        "id": "wolf-nine.epilogue.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-casino-cafe-morning.png",
+        "alt": "昼の闘技場中庭"
+      },
+      {
+        "id": "wolf-nine.epilogue.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/events/wolf-nine-epilogue-break-duel-festival-v2.png",
+        "alt": "休憩時間の九種決闘祭で封蝋の招待状を同時に差し出すヴォルフ・ナインとミミ"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "line",
+      "id": "wolf-nine.epilogue.node.line.001",
+      "lineId": "wolf-nine.epilogue.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "最終大会の翌週、昼休みの中庭へ九本の旗が立った。『第一回・休憩時間決闘祭』。休むのか戦うのか、題名の時点で意見が割れている。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.epilogue.node.line.002",
+      "lineId": "wolf-nine.epilogue.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "主催はヴォルフ・ナイン。参加者は全職員。欠席届を出すには、彼との封蝋早割り勝負に勝たなければならない。欠席する方が体力を使う祭りだった。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.epilogue.node.line.003",
+      "lineId": "wolf-nine.epilogue.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "第一種目は便箋選び、第二種目は封蝋押し、第三種目は食堂の席取り。第四種目から急に岩運びが入り、第五星取りでは本物の流星が中庭を一周した。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.epilogue.node.line.004",
+      "lineId": "wolf-nine.epilogue.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私は審判兼、飛来物の苦情窓口兼、昼食を守る係になった。祭りの役職として最後だけ切実である。"
+    },
+    {
+      "type": "direction",
+      "id": "wolf-nine.epilogue.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "wolf-nine.epilogue.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "wolf-nine.epilogue.node.direction.002",
+      "command": {
+        "type": "effect",
+        "effectId": "pulse"
+      }
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.epilogue.node.line.005",
+      "lineId": "wolf-nine.epilogue.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ヴォルフは全種目へ本気だった。便箋の手触りを確かめる目が決勝戦より鋭く、封蝋の赤を三十六色から選ぶ。文具店の店主が感動して弟子入りを申し込んだ。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.epilogue.node.line.006",
+      "lineId": "wolf-nine.epilogue.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "第六種目、紅茶を冷まさず運ぶ。第七種目、落ちた書類を順番どおり拾う。第八種目、休憩終了の鐘が鳴る前に全員をきちんと休ませる。ここで主催者が初黒星を喫した。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.epilogue.node.line.007",
+      "lineId": "wolf-nine.epilogue.line.007",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "休ませる競技で、全員を疲れさせましたね。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.epilogue.node.line.008",
+      "lineId": "wolf-nine.epilogue.line.008",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "ところで、第九種目だけ札が伏せてありますけど。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.epilogue.node.line.009",
+      "lineId": "wolf-nine.epilogue.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ヴォルフは負けを認め、勝者欄へ『休憩した全員』と書いた。自分の名がない表彰状を、彼は初めて誇らしそうに掲げた。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.epilogue.node.line.010",
+      "lineId": "wolf-nine.epilogue.line.010",
+      "speakerId": "legacy.speaker.1vj9fme",
+      "speakerName": "ヴォルフ・ナイン",
+      "mode": "dialogue",
+      "text": "敗北だ。次回は全員を座らせたまま勝つ。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.epilogue.node.line.011",
+      "lineId": "wolf-nine.epilogue.line.011",
+      "speakerId": "legacy.speaker.1vj9fme",
+      "speakerName": "ヴォルフ・ナイン",
+      "mode": "dialogue",
+      "text": "九度目は、最後まで残った相手とだけ行う。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.epilogue.node.line.012",
+      "lineId": "wolf-nine.epilogue.line.012",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "中庭には、もう私とヴォルフしか残っていない。伏せられた札の前へ立つと、観客席へ戻った全員が弁当を持ったまま静かになった。休憩時間にしては注目が重い。",
+      "emotion": "tender"
+    },
+    {
+      "type": "direction",
+      "id": "wolf-nine.epilogue.node.direction.003",
+      "command": {
+        "type": "still",
+        "assetId": "wolf-nine.epilogue.asset.still.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.epilogue.node.line.013",
+      "lineId": "wolf-nine.epilogue.line.013",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "第九種目の札が開く。『次の休憩へ、先に相手を誘った方が勝ち』。剣も拳も使わないのに、今日いちばん逃げ場のないルールだった。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.epilogue.node.line.014",
+      "lineId": "wolf-nine.epilogue.line.014",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "開始の鐘。ヴォルフが懐へ手を入れる。私もエプロンのポケットへ手を突っ込む。二人とも取り出したのは、赤い封蝋の招待状だった。用意していた。どちらも。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.epilogue.node.line.015",
+      "lineId": "wolf-nine.epilogue.line.015",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "同時に差し出して止まる。ヴォルフの耳がぴんと立ち、私の兎耳も負けずに立った。観客が判定を求めて騒ぎ始める。本人は一歩も譲らない。私も、今日は譲りたくなかった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.epilogue.node.line.016",
+      "lineId": "wolf-nine.epilogue.line.016",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "審判は私なので、同着と判定した。ヴォルフは抗議のため口を開き、少し考え、『再戦できるなら悪くない』と閉じた。負けず嫌いにも便利な引き分けがある。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.epilogue.node.line.017",
+      "lineId": "wolf-nine.epilogue.line.017",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "二通の招待状には、同じ日時と同じ食堂の席が書かれていた。違うのは封蝋の色だけ。彼は深い赤、私は受付に余っていたいちご色。並べると妙におめでたい。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.epilogue.node.line.018",
+      "lineId": "wolf-nine.epilogue.line.018",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "第九種目の表彰状には、勝者名を書かなかった。代わりに次回開催日を記し、二人で封蝋を押した。印が少し重なったが、誰も直そうとは言わなかった。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.epilogue.node.line.019",
+      "lineId": "wolf-nine.epilogue.line.019",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "翌週、休憩室の入口に二通目の挑戦状が届いた。種目は『プリンを最後までゆっくり食べる』。私は受諾の封蝋を押した。今度こそ、仕事より本気で勝ちに行く。",
+      "emotion": "tender"
+    },
+    {
+      "type": "end",
+      "id": "wolf-nine.epilogue.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "approved",
+    "sourceDocument": "native narrative block migration",
+    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "legacyGeneratedIds": false
+  }
+}

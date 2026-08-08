@@ -1,0 +1,476 @@
+/* Character-forward battle presentation. Imported last so the battlefield's
+   hierarchy stays stable while legacy battle rules are retired gradually. */
+
+.battle-technique-showcase {
+  position: absolute;
+  z-index: 18;
+  top: clamp(74px, 9vh, 102px);
+  left: 50%;
+  width: min(1000px, calc(100% - 168px));
+  height: clamp(210px, 34vh, 330px);
+  margin: 0;
+  overflow: hidden;
+  border-top: 2px solid rgba(255, 240, 166, 0.92);
+  border-bottom: 4px solid #32c9b1;
+  color: #fff;
+  background: #0a293a;
+  box-shadow:
+    0 22px 54px rgba(7, 25, 37, 0.34),
+    0 0 0 1px rgba(255, 255, 255, 0.4);
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.battle-technique-showcase--enemy {
+  border-bottom-color: #ee5875;
+}
+
+.battle-technique-showcase::before,
+.battle-technique-showcase::after {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+}
+
+.battle-technique-showcase::before {
+  background:
+    linear-gradient(90deg, rgba(5, 22, 34, 0.94) 0 27%, rgba(5, 22, 34, 0.5) 47%, transparent 72%),
+    linear-gradient(0deg, rgba(5, 22, 34, 0.58), transparent 44%);
+}
+
+.battle-technique-showcase--enemy::before {
+  background:
+    linear-gradient(270deg, rgba(37, 10, 22, 0.94) 0 27%, rgba(37, 10, 22, 0.48) 47%, transparent 72%),
+    linear-gradient(0deg, rgba(26, 8, 18, 0.58), transparent 44%);
+}
+
+.battle-technique-showcase::after {
+  opacity: 0.55;
+  background: repeating-linear-gradient(
+    112deg,
+    transparent 0 30px,
+    rgba(255, 255, 255, 0.16) 31px 33px,
+    transparent 34px 66px
+  );
+  mix-blend-mode: screen;
+}
+
+.battle-technique-showcase__art {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  transform-origin: 50% 50%;
+}
+
+.battle-technique-showcase__art > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.battle-technique-showcase.has-live-art .battle-technique-showcase__art {
+  display: grid;
+  place-items: end 76%;
+  background:
+    radial-gradient(circle at 72% 44%, rgba(60, 231, 205, 0.4), transparent 34%),
+    linear-gradient(120deg, #0a2e41, #197568 72%, #f1d06b);
+}
+
+.battle-technique-showcase--enemy.has-live-art .battle-technique-showcase__art {
+  place-items: end 24%;
+  background:
+    radial-gradient(circle at 28% 44%, rgba(255, 107, 137, 0.4), transparent 34%),
+    linear-gradient(240deg, #30101f, #9d2949 72%, #f0c968);
+}
+
+.battle-technique-showcase.has-live-art .is-standing-art {
+  width: 50%;
+  height: 122%;
+  object-fit: contain;
+  object-position: center bottom;
+  filter: drop-shadow(0 18px 22px rgba(0, 0, 0, 0.34));
+}
+
+.battle-technique-showcase.has-live-art .fighter-chibi {
+  position: absolute;
+  right: 8%;
+  bottom: -18%;
+  width: min(360px, 38vw);
+  height: min(360px, 38vw);
+  filter: drop-shadow(0 20px 18px rgba(0, 0, 0, 0.3));
+}
+
+.battle-technique-showcase--enemy.has-live-art .fighter-chibi {
+  right: auto;
+  left: 8%;
+}
+
+.battle-technique-showcase__speedline {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  bottom: 0;
+  left: 31%;
+  width: 4px;
+  background: #f6d66d;
+  box-shadow: 12px 0 0 rgba(255, 255, 255, 0.45), 22px 0 0 rgba(255, 255, 255, 0.18);
+  transform: skewX(-12deg);
+}
+
+.battle-technique-showcase--enemy .battle-technique-showcase__speedline {
+  right: 31%;
+  left: auto;
+  transform: skewX(12deg);
+}
+
+.battle-technique-showcase__copy {
+  position: absolute;
+  z-index: 4;
+  top: 50%;
+  left: 34px;
+  display: grid;
+  width: min(42%, 390px);
+  gap: 4px;
+  transform: translateY(-50%);
+  text-align: left;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.58);
+}
+
+.battle-technique-showcase--enemy .battle-technique-showcase__copy {
+  right: 34px;
+  left: auto;
+  text-align: right;
+}
+
+.battle-technique-showcase__copy > span {
+  color: #f6d66d;
+  font-size: 11px;
+  font-weight: 950;
+}
+
+.battle-technique-showcase__copy strong {
+  font-family: "Noto Serif JP", "Yu Mincho", serif;
+  font-size: clamp(32px, 4vw, 58px);
+  line-height: 1.08;
+}
+
+.battle-technique-showcase__copy small {
+  color: rgba(238, 249, 250, 0.84);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* The parent handles meaningful motion (prepare, lunge, recoil). The artwork
+   only breathes very slightly, so a human portrait does not bob like a token. */
+.battle-character-art {
+  animation: battle-art-breathe 4.8s ease-in-out infinite;
+}
+
+.battle-character-art--gidonozeaas {
+  animation-name: battle-art-float;
+  animation-duration: 3.6s;
+}
+
+.battle-combatant.is-acting .battle-character-art,
+.battle-combatant.is-targeted .battle-character-art,
+.battle-combatant.is-defeated .battle-character-art {
+  animation-play-state: paused;
+}
+
+@keyframes battle-art-breathe {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 -3px; }
+}
+
+@keyframes battle-art-float {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 -7px; }
+}
+
+.battle-combatant__portrait {
+  transform-origin: 50% 88%;
+  will-change: transform;
+}
+
+.battle-combatant.is-acting .battle-combatant__ground {
+  animation: battle-ground-step 680ms ease-out both;
+}
+
+@keyframes battle-ground-step {
+  0%, 100% { opacity: 0.72; scale: 1 1; }
+  42% { opacity: 0.34; scale: 0.72 0.7; }
+  72% { opacity: 0.88; scale: 1.12 0.82; }
+}
+
+/* Winning now pays off the character art, not only the numbers. */
+.result-star-art-v3 {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 58%;
+  margin: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.result-star-art-v3::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #092a3c 0, rgba(9, 42, 60, 0.82) 18%, transparent 60%);
+  content: "";
+}
+
+.result-star-art-v3 > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(1.04) contrast(1.03);
+}
+
+.result-star-art-v3.has-standing-art > img {
+  padding-top: 12px;
+  object-fit: contain;
+  object-position: 80% bottom !important;
+  filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.32));
+}
+
+.result-star-art-v3 figcaption {
+  position: absolute;
+  z-index: 2;
+  right: 14px;
+  bottom: 14px;
+  display: grid;
+  justify-items: end;
+  padding: 6px 9px;
+  color: #fff;
+  background: rgba(7, 27, 40, 0.72);
+}
+
+.result-star-art-v3 figcaption span {
+  color: #ffe078;
+  font-size: 8px;
+  font-weight: 950;
+}
+
+.result-star-art-v3 figcaption strong {
+  font-size: 13px;
+}
+
+.result-hero-v2 > :not(.result-star-art-v3) {
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 980px) {
+  .battle-technique-showcase {
+    top: 80px;
+    width: calc(100% - 24px);
+    height: clamp(180px, 29vh, 250px);
+  }
+
+  .battle-technique-showcase__copy {
+    left: 18px;
+    width: 48%;
+  }
+
+  .battle-technique-showcase--enemy .battle-technique-showcase__copy {
+    right: 18px;
+    left: auto;
+  }
+
+  .battle-technique-showcase__copy strong {
+    font-size: clamp(26px, 7vw, 42px);
+  }
+
+  .result-star-art-v3 {
+    width: 70%;
+    opacity: 0.58;
+  }
+}
+
+@media (max-width: 600px) {
+  .battle-technique-showcase {
+    top: 64px;
+    width: calc(100% - 12px);
+    height: 188px;
+    clip-path: none !important;
+  }
+
+  .battle-technique-showcase::before {
+    background: linear-gradient(90deg, rgba(5, 22, 34, 0.95), rgba(5, 22, 34, 0.52) 58%, transparent);
+  }
+
+  .battle-technique-showcase--enemy::before {
+    background: linear-gradient(270deg, rgba(37, 10, 22, 0.95), rgba(37, 10, 22, 0.52) 58%, transparent);
+  }
+
+  .battle-technique-showcase__copy {
+    left: 14px;
+    width: 58%;
+  }
+
+  .battle-technique-showcase--enemy .battle-technique-showcase__copy {
+    right: 14px;
+    left: auto;
+  }
+
+  .battle-technique-showcase__copy > span { font-size: 8px; }
+  .battle-technique-showcase__copy strong { font-size: clamp(24px, 8vw, 34px); }
+  .battle-technique-showcase__copy small { font-size: 9px; }
+  .battle-technique-showcase__speedline { left: 34%; }
+  .battle-technique-showcase--enemy .battle-technique-showcase__speedline { right: 34%; left: auto; }
+
+  .result-star-art-v3 {
+    right: -18%;
+    width: 108%;
+    opacity: 0.44;
+  }
+
+  .result-star-art-v3 figcaption { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .battle-character-art,
+  .battle-combatant.is-acting .battle-combatant__ground {
+    animation: none;
+  }
+}
+
+/* The old numeric momentum bar is replaced with a qualitative read. Players
+   watch the match first and can still understand who currently has the air. */
+.battle-flow-state {
+  position: absolute;
+  z-index: 21;
+  top: 76px;
+  left: 18px;
+  display: grid;
+  grid-template-columns: auto auto 72px auto;
+  align-items: center;
+  min-height: 38px;
+  gap: 8px;
+  padding: 7px 11px;
+  color: #f7fbfc;
+  background: rgba(9, 28, 40, 0.86);
+  box-shadow: 0 9px 22px rgba(8, 25, 36, 0.16);
+  font-size: 12px;
+}
+
+.battle-flow-state > span {
+  color: rgba(240, 249, 250, 0.76);
+  font-weight: 850;
+}
+
+.battle-flow-state > div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+}
+
+.battle-flow-state > div i {
+  display: block;
+  width: 21px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.2);
+  transform: skewX(-18deg);
+}
+
+.battle-flow-state--behind > div i:first-child,
+.battle-flow-state--even > div i:nth-child(2),
+.battle-flow-state--ahead > div i:last-child {
+  background: #f4d367;
+  box-shadow: 0 0 10px rgba(244, 211, 103, 0.52);
+}
+
+.battle-flow-state strong {
+  min-width: 62px;
+  color: #f4d367;
+  text-align: right;
+}
+
+.command-panel.is-turning-point {
+  width: min(820px, calc(100% - 40px));
+  border: 1px solid rgba(255, 224, 120, 0.9);
+  background: rgba(250, 253, 252, 0.985);
+  box-shadow:
+    0 22px 60px rgba(8, 24, 36, 0.34),
+    0 0 0 5px rgba(255, 224, 120, 0.14);
+}
+
+.turning-point-callout {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 2px 14px;
+  margin: -18px -18px 15px;
+  padding: 15px 18px;
+  color: #fff;
+  background:
+    linear-gradient(110deg, rgba(7, 35, 50, 0.98), rgba(13, 88, 89, 0.94)),
+    #0a293a;
+  border-bottom: 4px solid #f3cf62;
+}
+
+.turning-point-callout > span {
+  grid-row: 1 / 3;
+  padding: 8px 10px;
+  color: #102c3b;
+  background: #f3cf62;
+  font-size: 10px;
+  font-weight: 950;
+}
+
+.turning-point-callout strong {
+  font-family: "Noto Serif JP", "Yu Mincho", serif;
+  font-size: 22px;
+}
+
+.turning-point-callout p {
+  margin: 0;
+  color: #d8e9ea;
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.battle-action-focus.is-spotlight-event {
+  border-color: #f3cf62;
+  box-shadow:
+    0 18px 44px rgba(6, 25, 37, 0.36),
+    0 0 0 3px rgba(243, 207, 98, 0.2);
+}
+
+@media (max-width: 600px) {
+  .battle-flow-state {
+    top: 64px;
+    left: 8px;
+    grid-template-columns: auto 60px auto;
+    min-height: 34px;
+    padding: 6px 8px;
+  }
+
+  .battle-flow-state > span { display: none; }
+  .battle-flow-state > div i { width: 17px; }
+
+  .command-panel.is-turning-point {
+    width: calc(100% - 16px);
+    max-height: calc(100dvh - 72px);
+  }
+
+  .turning-point-callout {
+    grid-template-columns: 1fr;
+    margin: -13px -13px 12px;
+    padding: 11px 13px;
+  }
+
+  .turning-point-callout > span {
+    grid-row: auto;
+    width: max-content;
+    padding: 4px 6px;
+  }
+
+  .turning-point-callout strong { font-size: 18px; }
+  .turning-point-callout p { font-size: 10px; }
+}

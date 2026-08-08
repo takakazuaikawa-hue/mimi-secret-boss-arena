@@ -1,0 +1,306 @@
+{
+  "schemaVersion": 1,
+  "id": "shahar.bond",
+  "kind": "character",
+  "title": "チームの日常",
+  "summary": "配送ヤードで起きる「チームの日常」",
+  "ownership": {
+    "arcId": "character.shahar",
+    "characterId": "shahar",
+    "stage": "bond"
+  },
+  "trigger": {
+    "actions": [
+      "work"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 400,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "配送ヤード",
+    "assets": [
+      {
+        "id": "shahar.bond.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-casino-cafe-rain.png",
+        "alt": "配送ヤードの背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "line",
+      "id": "shahar.bond.node.line.001",
+      "lineId": "shahar.bond.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "シャハルがチームに加わってから、配送ヤードで顔を合わせることが増えた。今日は試合の話ではなく、少しだけ時間が空いている。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.bond.node.line.002",
+      "lineId": "shahar.bond.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "試合のない午後。窓を雨が細く叩き、業務連絡も歓声も今日は遠い。二人きりになる予定ではなかったのに、空いている席は向かいだけだった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "shahar.bond.node.line.003",
+      "lineId": "shahar.bond.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "屋上へ昼食を持っていくと、鱗の上に小さな雲が一つ乗っていた。雲からは温かい雨がカップへだけ降っている。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.bond.node.line.004",
+      "lineId": "shahar.bond.line.004",
+      "speakerId": "legacy.speaker.bkqdo1",
+      "speakerName": "シャハル",
+      "mode": "dialogue",
+      "text": "人の街は、空が小さい。"
+    },
+    {
+      "type": "direction",
+      "id": "shahar.bond.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "shahar.bond.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "shahar.bond.node.direction.002",
+      "command": {
+        "type": "effect",
+        "effectId": "pulse"
+      }
+    },
+    {
+      "type": "line",
+      "id": "shahar.bond.node.line.005",
+      "lineId": "shahar.bond.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "試合も契約もない時間なら、もっと気楽に話せると思っていた。実際は、お茶を一口飲むたび沈黙の意味を考えてしまう。強さを見ている時より、シャハルの小さな癖のほうがずっと気になった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "shahar.bond.node.line.006",
+      "lineId": "shahar.bond.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "朝焼けを映す巨大な鱗と、雷で温められた小さなカップ。戦場では見落としていた小さな癖が、何も起きない時間ほどよく見える。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.bond.node.line.007",
+      "lineId": "shahar.bond.line.007",
+      "speakerId": "legacy.speaker.bkqdo1",
+      "speakerName": "シャハル",
+      "mode": "dialogue",
+      "text": "地上の茶は冷めるのが早い。空では、雷のそばへ置けばよい。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.bond.node.line.008",
+      "lineId": "shahar.bond.line.008",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "屋上から見ると広いですよ。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.bond.node.line.009",
+      "lineId": "shahar.bond.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "シャハルは季節より長く生き、地上の都合へ動じない古竜。そのはずなのに、私の休憩が終わる時刻を気にして、話題を一つずつ短くしている。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "shahar.bond.node.line.010",
+      "lineId": "shahar.bond.line.010",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "それは保温じゃなくて加熱です。カップが少し光ってます。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.bond.node.line.011",
+      "lineId": "shahar.bond.line.011",
+      "speakerId": "legacy.speaker.bkqdo1",
+      "speakerName": "シャハル",
+      "mode": "dialogue",
+      "text": "ならば今日は、ここを空と呼ぼう。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.bond.node.line.012",
+      "lineId": "shahar.bond.line.012",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "特別な話をしなくても、同じ音を聞いていられる。そんな時間が欲しかったのだと、失う前から気づいてしまった。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.bond.node.line.013",
+      "lineId": "shahar.bond.line.013",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "飲める温度になるまで二人で待った。巨大な竜との休憩が、やけに小さな湯気を中心に進んでいく。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.bond.node.line.014",
+      "lineId": "shahar.bond.line.014",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "機嫌を少し動かすだけで、三県の天気予報と日の出時刻が書き換わる。甘い空気になりかけるたび、世界の方が先に耐えられなくなる。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "shahar.bond.node.line.015",
+      "lineId": "shahar.bond.line.015",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "遠ざかっていたのは無関心だからではなく、近づけば壊すと誰より知っていたからだった。そう気づくと、何も起きなかった午後が急に大事な出来事へ変わった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "shahar.bond.node.line.016",
+      "lineId": "shahar.bond.line.016",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "笑いが収まったあと、呼ばれたからではなく、会いたい日に空を渡ることという、驚くほど普通の望みが語られた。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "shahar.bond.node.line.017",
+      "lineId": "shahar.bond.line.017",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "試合の外で交わした言葉のほうが、次の指示より長く残ることがある。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.bond.node.line.018",
+      "lineId": "shahar.bond.line.018",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "それは私が叶えるものではない。ただ、叶うまで隣にいることならできる。そう言いかけて、言葉にする勇気だけが遅れた。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "shahar.bond.node.line.019",
+      "lineId": "shahar.bond.line.019",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "一人分の茶を保温する手のひらほどの雲を間に置いたまま、私たちは雨が止んでもしばらく席を立たなかった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "choice",
+      "id": "shahar.bond.node.choice.001",
+      "choices": [
+        {
+          "id": "shahar.bond.choice.001",
+          "label": "雲の上まで弁当を届け、鱗の持ち主と昼休みを取る",
+          "result": "弁当は一人前、相手は空を覆う大きさだった。それでも卵焼きを半分に分ける相談だけは、普通の昼休みと変わらなかった。",
+          "intent": "相手の秘密の勝ち方を試す",
+          "promise": "読みにくい作戦になる代わりに、この人だけの成長を大きく進める。",
+          "memory": "任せた一戦の手応えが、次に力を見せる理由になる。",
+          "tone": "wild",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "shahar"
+              },
+              "mode": "add",
+              "trust": 9,
+              "ownership": -2
+            },
+            {
+              "type": "fighterPoints",
+              "target": {
+                "type": "fighter",
+                "fighterId": "shahar"
+              },
+              "amount": 3
+            }
+          ],
+          "goto": "shahar.bond.node.effect.001"
+        },
+        {
+          "id": "shahar.bond.choice.002",
+          "label": "鱗を盾にして、三人の陣形を試す",
+          "result": "一枚の鱗で三人と控室の壁まで守れた。シャハルは『本体なら街も入る』と言い、私は聞かなかったことにした。",
+          "intent": "チームの新しい連携を試す",
+          "promise": "本人の流儀は崩すが、全員へ配れる成長ポイントを得る。",
+          "memory": "成功した作戦と短くなった会話の両方が、次の判断まで残る。",
+          "tone": "pragmatic",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "shahar"
+              },
+              "mode": "add",
+              "trust": 1,
+              "ownership": 7
+            },
+            {
+              "type": "sharedPoints",
+              "amount": 3
+            }
+          ],
+          "goto": "shahar.bond.node.effect.001"
+        }
+      ]
+    },
+    {
+      "type": "effect",
+      "id": "shahar.bond.node.effect.001",
+      "effects": [
+        {
+          "type": "setStoryStage",
+          "fighterId": "shahar",
+          "stage": 3
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "shahar.bond.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "approved",
+    "sourceDocument": "native narrative block migration",
+    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "legacyGeneratedIds": false
+  }
+}

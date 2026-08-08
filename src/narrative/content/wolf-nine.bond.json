@@ -1,0 +1,306 @@
+{
+  "schemaVersion": 1,
+  "id": "wolf-nine.bond",
+  "kind": "character",
+  "title": "チームの日常",
+  "summary": "練習場で起きる「チームの日常」",
+  "ownership": {
+    "arcId": "character.wolf-nine",
+    "characterId": "wolf-nine",
+    "stage": "bond"
+  },
+  "trigger": {
+    "actions": [
+      "play"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 400,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "練習場",
+    "assets": [
+      {
+        "id": "wolf-nine.bond.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-casino-cafe-rain.png",
+        "alt": "練習場の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "line",
+      "id": "wolf-nine.bond.node.line.001",
+      "lineId": "wolf-nine.bond.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ヴォルフ・ナインがチームに加わってから、練習場で顔を合わせることが増えた。今日は試合の話ではなく、少しだけ時間が空いている。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.bond.node.line.002",
+      "lineId": "wolf-nine.bond.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "試合のない午後。窓を雨が細く叩き、業務連絡も歓声も今日は遠い。二人きりになる予定ではなかったのに、空いている席は向かいだけだった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.bond.node.line.003",
+      "lineId": "wolf-nine.bond.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "早朝の訓練場で、彼は自分の負け試合を繰り返し見ていた。勝った場面になると、映像を飛ばす。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.bond.node.line.004",
+      "lineId": "wolf-nine.bond.line.004",
+      "speakerId": "legacy.speaker.1vj9fme",
+      "speakerName": "ヴォルフ・ナイン",
+      "mode": "dialogue",
+      "text": "今日は決闘しない。"
+    },
+    {
+      "type": "direction",
+      "id": "wolf-nine.bond.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "wolf-nine.bond.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "wolf-nine.bond.node.direction.002",
+      "command": {
+        "type": "effect",
+        "effectId": "pulse"
+      }
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.bond.node.line.005",
+      "lineId": "wolf-nine.bond.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "試合も契約もない時間なら、もっと気楽に話せると思っていた。実際は、お茶を一口飲むたび沈黙の意味を考えてしまう。強さを見ている時より、ウルフ・ナインの小さな癖のほうがずっと気になった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.bond.node.line.006",
+      "lineId": "wolf-nine.bond.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "九つの決闘印、擦り切れた手袋、勝者の名がない表彰状。戦場では見落としていた小さな癖が、何も起きない時間ほどよく見える。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.bond.node.line.007",
+      "lineId": "wolf-nine.bond.line.007",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "勝ったところは見ないんですか。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.bond.node.line.008",
+      "lineId": "wolf-nine.bond.line.008",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "珍しい。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.bond.node.line.009",
+      "lineId": "wolf-nine.bond.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ウルフ・ナインは負けるたび強くなり、次の決闘だけを生きる九番目の狼。そのはずなのに、私の休憩が終わる時刻を気にして、話題を一つずつ短くしている。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.bond.node.line.010",
+      "lineId": "wolf-nine.bond.line.010",
+      "speakerId": "legacy.speaker.1vj9fme",
+      "speakerName": "ヴォルフ・ナイン",
+      "mode": "dialogue",
+      "text": "勝利は気分が良いだけだ。敗北は、次に変える場所を教える。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.bond.node.line.011",
+      "lineId": "wolf-nine.bond.line.011",
+      "speakerId": "legacy.speaker.1vj9fme",
+      "speakerName": "ヴォルフ・ナイン",
+      "mode": "dialogue",
+      "text": "手紙を書く。便箋を選ぶのに時間がかかる。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.bond.node.line.012",
+      "lineId": "wolf-nine.bond.line.012",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "特別な話をしなくても、同じ音を聞いていられる。そんな時間が欲しかったのだと、失う前から気づいてしまった。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.bond.node.line.013",
+      "lineId": "wolf-nine.bond.line.013",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "それでも八度目の映像だけは途中で止めた。変えたくても変えられなかった何かが、画面の外にある。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.bond.node.line.014",
+      "lineId": "wolf-nine.bond.line.014",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "再戦の印が増えるほど月が欠け、九戦目には空そのものが決闘場になる。甘い空気になりかけるたび、世界の方が先に耐えられなくなる。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.bond.node.line.015",
+      "lineId": "wolf-nine.bond.line.015",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "決着を急ぐのは、勝敗のない時間に何を話せばいいか知らなかったからだった。そう気づくと、何も起きなかった午後が急に大事な出来事へ変わった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.bond.node.line.016",
+      "lineId": "wolf-nine.bond.line.016",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "笑いが収まったあと、勝敗のつかない時間にも、同じ相手と食事を続けることという、驚くほど普通の望みが語られた。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.bond.node.line.017",
+      "lineId": "wolf-nine.bond.line.017",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "試合の外で交わした言葉のほうが、次の指示より長く残ることがある。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.bond.node.line.018",
+      "lineId": "wolf-nine.bond.line.018",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "それは私が叶えるものではない。ただ、叶うまで隣にいることならできる。そう言いかけて、言葉にする勇気だけが遅れた。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.bond.node.line.019",
+      "lineId": "wolf-nine.bond.line.019",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "勝敗を書かずに残した十枚目の対戦票を間に置いたまま、私たちは雨が止んでもしばらく席を立たなかった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "choice",
+      "id": "wolf-nine.bond.node.choice.001",
+      "choices": [
+        {
+          "id": "wolf-nine.bond.choice.001",
+          "label": "勝敗をつけず、朝食のパンだけ取り合う",
+          "result": "パンは半分に割れ、勝敗はつかなかった。ヴォルフは不満そうだったが、翌朝も同じ席へ来た。",
+          "intent": "相手の秘密の勝ち方を試す",
+          "promise": "読みにくい作戦になる代わりに、この人だけの成長を大きく進める。",
+          "memory": "任せた一戦の手応えが、次に力を見せる理由になる。",
+          "tone": "wild",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "wolf-nine"
+              },
+              "mode": "add",
+              "trust": 9,
+              "ownership": -2
+            },
+            {
+              "type": "fighterPoints",
+              "target": {
+                "type": "fighter",
+                "fighterId": "wolf-nine"
+              },
+              "amount": 3
+            }
+          ],
+          "goto": "wolf-nine.bond.node.effect.001"
+        },
+        {
+          "id": "wolf-nine.bond.choice.002",
+          "label": "過去八敗の映像から、三人分の対策を作る",
+          "result": "負け方は八つ、直せる癖はもっとあった。本人は過去を隠さず、九戦目へ使える部分だけを切り出した。",
+          "intent": "チームの新しい連携を試す",
+          "promise": "本人の流儀は崩すが、全員へ配れる成長ポイントを得る。",
+          "memory": "成功した作戦と短くなった会話の両方が、次の判断まで残る。",
+          "tone": "pragmatic",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "wolf-nine"
+              },
+              "mode": "add",
+              "trust": 1,
+              "ownership": 7
+            },
+            {
+              "type": "sharedPoints",
+              "amount": 3
+            }
+          ],
+          "goto": "wolf-nine.bond.node.effect.001"
+        }
+      ]
+    },
+    {
+      "type": "effect",
+      "id": "wolf-nine.bond.node.effect.001",
+      "effects": [
+        {
+          "type": "setStoryStage",
+          "fighterId": "wolf-nine",
+          "stage": 3
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "wolf-nine.bond.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "approved",
+    "sourceDocument": "native narrative block migration",
+    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "legacyGeneratedIds": false
+  }
+}

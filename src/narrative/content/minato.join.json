@@ -1,0 +1,321 @@
+{
+  "schemaVersion": 1,
+  "id": "minato.join",
+  "kind": "character",
+  "title": "スカウト",
+  "summary": "商店街で起きる「スカウト」",
+  "ownership": {
+    "arcId": "character.minato",
+    "characterId": "minato",
+    "stage": "join"
+  },
+  "trigger": {
+    "actions": [
+      "work"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 400,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "商店街",
+    "assets": [
+      {
+        "id": "minato.join.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-employee-entrance.png",
+        "alt": "商店街の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "line",
+      "id": "minato.join.node.line.001",
+      "lineId": "minato.join.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ミナトと初めて会ったあと、商店街でもう一度顔を合わせた。今日は、選手登録の条件を確かめることになっている。"
+    },
+    {
+      "type": "line",
+      "id": "minato.join.node.line.002",
+      "lineId": "minato.join.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "選手登録の面談室は狭い。机を挟めば仕事の距離を守れるはずなのに、同じ書類を覗き込むたび、沈黙だけが近くなる。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "minato.join.node.line.003",
+      "lineId": "minato.join.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "職歴欄へ書く地名が多すぎて、二枚目の用紙にも海が三つと滅びた王国が一つ収まらなかった。"
+    },
+    {
+      "type": "line",
+      "id": "minato.join.node.line.004",
+      "lineId": "minato.join.line.004",
+      "speakerId": "legacy.speaker.1vz3er0",
+      "speakerName": "ミナト",
+      "mode": "dialogue",
+      "text": "闘技場なら、しばらく仕事があると聞きました。"
+    },
+    {
+      "type": "direction",
+      "id": "minato.join.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "minato.join.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "minato.join.node.direction.002",
+      "command": {
+        "type": "effect",
+        "effectId": "pulse"
+      }
+    },
+    {
+      "type": "line",
+      "id": "minato.join.node.line.005",
+      "lineId": "minato.join.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "選手登録は一枚で済むのに、ミナトを知るための欄はどこにもない。次の使命を渡せば迷わず立ち上がる人なのだと決めれば簡単だ。でも、その決め方こそ契約書と同じに見えた。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "minato.join.node.line.006",
+      "lineId": "minato.join.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ミナトの経歴は、端末の入力欄へ収まらない。けれど本人が書けずにいるのは、過去の偉業ではなく「これから何をしたいか」の一行だった。"
+    },
+    {
+      "type": "line",
+      "id": "minato.join.node.line.007",
+      "lineId": "minato.join.line.007",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "希望職種は、何にします？　勇者は募集一覧にないです。"
+    },
+    {
+      "type": "line",
+      "id": "minato.join.node.line.008",
+      "lineId": "minato.join.line.008",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "世界を救った人の再就職先として大丈夫かな。"
+    },
+    {
+      "type": "line",
+      "id": "minato.join.node.line.009",
+      "lineId": "minato.join.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "誰かに必要な役目があれば、迷わず正しい方を選べる人。その横顔が、空欄の前でだけ少し頼りなく見える。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "minato.join.node.line.010",
+      "lineId": "minato.join.line.010",
+      "speakerId": "legacy.speaker.1vz3er0",
+      "speakerName": "ミナト",
+      "mode": "dialogue",
+      "text": "助かる。もう、その呼び名で呼ばれても振り向く自信がない。"
+    },
+    {
+      "type": "line",
+      "id": "minato.join.node.line.011",
+      "lineId": "minato.join.line.011",
+      "speakerId": "legacy.speaker.1vz3er0",
+      "speakerName": "ミナト",
+      "mode": "dialogue",
+      "text": "今度は、終わった後のことを考えてみます。"
+    },
+    {
+      "type": "line",
+      "id": "minato.join.node.line.012",
+      "lineId": "minato.join.line.012",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "採用する側らしい言葉を探した。でも必要なのは評価ではなく、ここにいてもいい理由を一緒に作ることなのだと思った。"
+    },
+    {
+      "type": "line",
+      "id": "minato.join.node.line.013",
+      "lineId": "minato.join.line.013",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "笑っているのに、ペン先は空欄の上で止まったままだ。役目を終えた人に、次の肩書きを急がせたくなかった。"
+    },
+    {
+      "type": "line",
+      "id": "minato.join.node.line.014",
+      "lineId": "minato.join.line.014",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "返却された神器が彼の迷いに反応し、倉庫一棟を戦場の空へ変えてしまうという注意事項まで契約書へ加わり、一般的な選手登録は完全に諦めることになった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "minato.join.node.line.015",
+      "lineId": "minato.join.line.015",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私のペンで未来まで埋めないよう、最後の空欄を机の中央へ戻した。待つ時間は気まずい。それでも、本人の言葉で始まるほうがいい。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "minato.join.node.line.016",
+      "lineId": "minato.join.line.016",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "最後に本人が確かめたのは報酬ではなく、誰にも急かされず、昼食と次の旅先を自分で決めることが規則違反にならないかどうかだった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "minato.join.node.line.017",
+      "lineId": "minato.join.line.017",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "登録を急ぐとしても、本人を置き去りにしたまま話を進めたくはなかった。"
+    },
+    {
+      "type": "line",
+      "id": "minato.join.node.line.018",
+      "lineId": "minato.join.line.018",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "登録完了の音が鳴る。これで仲間になった、と簡単に呼んでいいのか分からない。けれど退室する足音が、来た時より少しだけゆっくりだった。"
+    },
+    {
+      "type": "line",
+      "id": "minato.join.node.line.019",
+      "lineId": "minato.join.line.019",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "柄に小さな花が彫られた短剣が机に残る。返そうと呼び止めると、「次に会う理由として置いておく」とだけ返ってきた。",
+      "emotion": "tender"
+    },
+    {
+      "type": "choice",
+      "id": "minato.join.node.choice.001",
+      "choices": [
+        {
+          "id": "minato.join.choice.001",
+          "label": "返却窓口ごと、控室へ引っ越してもらう",
+          "result": "四十七本の返却箱が控室の壁を埋めた。ミナトは最後の一本を棚へ置き、「これで新しい仕事を始められる」と、空になった両手を見せた。",
+          "intent": "本人の得意な戦い方を知る",
+          "promise": "登録は少し遅れるが、この人専用の成長ポイントを得る。",
+          "memory": "自分で書いた最初の条件を、相手は次の大事な場面でも覚えている。",
+          "tone": "tender",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "minato"
+              },
+              "mode": "add",
+              "trust": 8,
+              "ownership": -3
+            },
+            {
+              "type": "fighterPoints",
+              "target": {
+                "type": "fighter",
+                "fighterId": "minato"
+              },
+              "amount": 2
+            },
+            {
+              "type": "recruitmentDecision",
+              "fighterId": "minato",
+              "decision": "join"
+            }
+          ],
+          "goto": "minato.join.node.end.001"
+        },
+        {
+          "id": "minato.join.choice.002",
+          "label": "公式戦を四十八件目の依頼として受けてもらう",
+          "result": "依頼票は一枚で済んだ。ただし職歴欄の添付資料が十四冊になり、受付から先に控室へ逃げた。",
+          "intent": "次の公式戦へ間に合わせる",
+          "promise": "本人の詳細は後回しになるが、誰にでも使える成長ポイントを得る。",
+          "memory": "先に席を確保した判断は、チームの始まり方として記録に残る。",
+          "tone": "pragmatic",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "minato"
+              },
+              "mode": "add",
+              "trust": 0,
+              "ownership": 8
+            },
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            },
+            {
+              "type": "recruitmentDecision",
+              "fighterId": "minato",
+              "decision": "join"
+            }
+          ],
+          "goto": "minato.join.node.end.001"
+        },
+        {
+          "id": "minato.join.choice.003",
+          "label": "今回はミナトを誘わず、別の機会を待つ",
+          "result": "ミナトの出場登録は行わなかった。相手は所属せず、それぞれの用事へ戻った。断る選択を残したことだけが、次に会う時まで静かに残った。",
+          "intent": "今回はチームへ誘わない",
+          "promise": "今回の所属は見送るが、人物の物語と再会の可能性は失わない。",
+          "memory": "勧誘しない選択も尊重されたことを、相手は覚えている。",
+          "tone": "pragmatic",
+          "effects": [
+            {
+              "type": "recruitmentDecision",
+              "fighterId": "minato",
+              "decision": "decline"
+            }
+          ],
+          "goto": "minato.join.node.end.001"
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "minato.join.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "approved",
+    "sourceDocument": "native narrative block migration",
+    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "legacyGeneratedIds": false
+  }
+}

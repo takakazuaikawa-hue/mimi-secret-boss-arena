@@ -1,0 +1,307 @@
+{
+  "schemaVersion": 1,
+  "id": "night-eater.power",
+  "kind": "character",
+  "title": "取り戻す力",
+  "summary": "無人の客席で起きる「取り戻す力」",
+  "ownership": {
+    "arcId": "character.night-eater",
+    "characterId": "night-eater",
+    "stage": "power"
+  },
+  "trigger": {
+    "actions": [
+      "search",
+      "rest"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 400,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "無人の客席",
+    "assets": [
+      {
+        "id": "night-eater.power.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-observation-deck-night.png",
+        "alt": "無人の客席の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "line",
+      "id": "night-eater.power.node.line.001",
+      "lineId": "night-eater.power.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "練習後、夜を食べるものが『本来の夜』を見せると言った。照明係十二名が無言で工具箱を抱えた。過去に学んでいる。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.power.node.line.002",
+      "lineId": "night-eater.power.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "最初に消えたのは客席灯。次が広告。三番目に得点板が消え、審判が『そこは残して』と試合前から抗議した。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.power.node.line.003",
+      "lineId": "night-eater.power.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "訓練場の夕暮れが止まり、窓の外だけ時間から切り離された。影の中で星が、音もなく一つずつ開く。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.power.node.line.004",
+      "lineId": "night-eater.power.line.004",
+      "speakerId": "legacy.speaker.ij983g",
+      "speakerName": "夜を食べるもの",
+      "mode": "dialogue",
+      "text": "客席の最後の灯りを消せば、本来の夜になれる。"
+    },
+    {
+      "type": "direction",
+      "id": "night-eater.power.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "night-eater.power.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "night-eater.power.node.direction.002",
+      "command": {
+        "type": "effect",
+        "effectId": "flash"
+      }
+    },
+    {
+      "type": "line",
+      "id": "night-eater.power.node.line.005",
+      "lineId": "night-eater.power.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "夜は本気を出すほど、何を食べてよいか分からなくなるらしい。力の問題というより、食べ放題で皿を持ったまま固まる客だった。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.power.node.line.006",
+      "lineId": "night-eater.power.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私は食べてよい範囲を指差した。敵陣、演出照明、相手の影。売店、得点板、避難灯、私の兎耳は対象外。最後の項目は念のためだ。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.power.node.line.007",
+      "lineId": "night-eater.power.line.007",
+      "speakerId": "legacy.speaker.ij983g",
+      "speakerName": "夜を食べるもの",
+      "mode": "dialogue",
+      "text": "本当の夜は、眠らせるために暗いのではない。隠していたものを、別の形で見せる。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.power.node.line.008",
+      "lineId": "night-eater.power.line.008",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "避難灯は消さないで。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.power.node.line.009",
+      "lineId": "night-eater.power.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "夜が一口飲み込むと、敵陣だけ夕暮れになった。二口目で相手の影が椅子の下へ逃げ、三口目で広告の美男子だけが眠そうになった。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.power.node.line.010",
+      "lineId": "night-eater.power.line.010",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "では私に、何が見えますか。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.power.node.line.011",
+      "lineId": "night-eater.power.line.011",
+      "speakerId": "legacy.speaker.ij983g",
+      "speakerName": "夜を食べるもの",
+      "mode": "dialogue",
+      "text": "条件を修正する。命を守る灯りは食べない。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.power.node.line.012",
+      "lineId": "night-eater.power.line.012",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "すごい。強い。絵面も最高だ。ところが味方席では、暗くなるたび照明係が条件反射で電球を交換していた。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.power.node.line.013",
+      "lineId": "night-eater.power.line.013",
+      "speakerId": "legacy.speaker.ij983g",
+      "speakerName": "夜を食べるもの",
+      "mode": "dialogue",
+      "text": "『私には何が見えますか』と聞くと、夜は少し考えた。『兎耳の予備を鞄へ三本入れている』。そこまで見なくていい。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.power.node.line.014",
+      "lineId": "night-eater.power.line.014",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "照れ隠しで会場上空の夕焼けまで一口欠けた。観客は大歓声、天文台は緊急電話。評価が両極端である。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.power.node.line.015",
+      "lineId": "night-eater.power.line.015",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "本来の夜は世界を覆える。それでも本人が誇らしげに見せたのは、避難灯だけをきれいに残した技術だった。派手さより掃除の上手さを褒めてほしい職人だ。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.power.node.line.016",
+      "lineId": "night-eater.power.line.016",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "照明係が恐る恐る客席灯を戻す。夜は一個だけ味見して返した。返却場所はまた三センチずれている。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.power.node.line.017",
+      "lineId": "night-eater.power.line.017",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "強さは分かった。次の課題は、食べてよい場所を試合中に三秒で伝える合図を作ることだ。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.power.node.line.018",
+      "lineId": "night-eater.power.line.018",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私は兎耳を右へ倒せば敵陣、左なら影、両方なら中止と決めた。夜は『耳が便利すぎる』と初めて感心した。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.power.node.line.019",
+      "lineId": "night-eater.power.line.019",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "帰り道、得点板だけが戻らなかった。夜は満腹らしい。試合結果は翌朝、審判の記憶から復元された。"
+    },
+    {
+      "type": "choice",
+      "id": "night-eater.power.node.choice.001",
+      "choices": [
+        {
+          "id": "night-eater.power.choice.001",
+          "label": "会場の夜を一口だけ食べてもらう",
+          "result": "夕暮れが欠け、相手の大技だけが暗闇へ落ちた。夜を全部奪わずに済んだことを、本人がいちばん喜んだ。",
+          "intent": "本来の力を一気に取り戻す",
+          "promise": "失敗時の危険を引き受け、この人専用の成長を最大まで進める。",
+          "memory": "力を恐れたまま任せたことを、相手は危機の場面で思い出す。",
+          "tone": "heroic",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "night-eater"
+              },
+              "mode": "add",
+              "trust": 10,
+              "ownership": -4
+            },
+            {
+              "type": "fighterPoints",
+              "target": {
+                "type": "fighter",
+                "fighterId": "night-eater"
+              },
+              "amount": 5
+            }
+          ],
+          "goto": "night-eater.power.node.effect.001"
+        },
+        {
+          "id": "night-eater.power.choice.002",
+          "label": "相手の影だけを食べる練習を重ねる",
+          "result": "時間はかかったが、照明も観客も無事だった。敵だけが足元を失う、安全で不気味な技になった。",
+          "intent": "安全な段階解除で確実に進む",
+          "promise": "本来の力は一部に留め、チーム全体の成長へ成果を持ち帰る。",
+          "memory": "全員で帰ると決めた手順が、危機で使える安全策として残る。",
+          "tone": "pragmatic",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "night-eater"
+              },
+              "mode": "add",
+              "trust": 0,
+              "ownership": 9
+            },
+            {
+              "type": "sharedPoints",
+              "amount": 5
+            }
+          ],
+          "goto": "night-eater.power.node.effect.001"
+        }
+      ]
+    },
+    {
+      "type": "effect",
+      "id": "night-eater.power.node.effect.001",
+      "effects": [
+        {
+          "type": "setStoryStage",
+          "fighterId": "night-eater",
+          "stage": 4
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "night-eater.power.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "approved",
+    "sourceDocument": "native narrative block migration",
+    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "legacyGeneratedIds": false
+  }
+}

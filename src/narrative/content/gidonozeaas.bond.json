@@ -1,0 +1,258 @@
+{
+  "schemaVersion": 1,
+  "id": "gidonozeaas.bond",
+  "kind": "character",
+  "title": "冷めなかったコーヒー",
+  "summary": "カジノカフェ・開店前で起きる「冷めなかったコーヒー」",
+  "ownership": {
+    "arcId": "character.gidonozeaas",
+    "characterId": "gidonozeaas",
+    "stage": "bond"
+  },
+  "trigger": {
+    "actions": [
+      "play",
+      "rest"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 400,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "カジノカフェ・開店前",
+    "assets": [
+      {
+        "id": "gidonozeaas.bond.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-casino-cafe-rain.png",
+        "alt": "カジノカフェ・開店前の背景"
+      },
+      {
+        "id": "gidonozeaas.bond.asset.sprite.001",
+        "kind": "sprite",
+        "path": "/assets/story/gidono-sealed-soft.png",
+        "alt": "わずかに表情を和らげた封印形態のギドノゼアース"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "gidonozeaas.bond.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "gidonozeaas.bond.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "gidonozeaas.bond.node.direction.002",
+      "command": {
+        "type": "show",
+        "assetId": "gidonozeaas.bond.asset.sprite.001",
+        "actorId": "gidonozeaas",
+        "slot": "right",
+        "scale": "compact"
+      }
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.bond.node.line.001",
+      "lineId": "gidonozeaas.bond.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "開店十五分前。窓は雨で白く、エスプレッソマシンだけが低く唸っている。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.bond.node.line.002",
+      "lineId": "gidonozeaas.bond.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "いつもの窓際に黒い星。その隣に、欠けたスタッフ用マグカップがあった。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.bond.node.line.003",
+      "lineId": "gidonozeaas.bond.line.003",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "それ、私のコーヒーですよね。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.bond.node.line.004",
+      "lineId": "gidonozeaas.bond.line.004",
+      "speakerId": "legacy.speaker.1jmq03z",
+      "speakerName": "ギドノゼアース",
+      "mode": "dialogue",
+      "text": "九時四十分に休憩へ入ると聞いた。二十三分過ぎた。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.bond.node.line.005",
+      "lineId": "gidonozeaas.bond.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "誰も覚えていないと思っていた。私自身も、さっきまで忘れていた。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.bond.node.line.006",
+      "lineId": "gidonozeaas.bond.line.006",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "忙しい日は、休憩なんてそんなものです。もう冷めてるでしょうし。"
+    },
+    {
+      "type": "direction",
+      "id": "gidonozeaas.bond.node.direction.003",
+      "command": {
+        "type": "show",
+        "assetId": "gidonozeaas.bond.asset.sprite.001",
+        "actorId": "gidonozeaas",
+        "slot": "right",
+        "scale": "compact"
+      }
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.bond.node.line.007",
+      "lineId": "gidonozeaas.bond.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "取っ手が熱い。淹れたてのままだ。彼は窓を向いたまま、ほんの少し平たくなった。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.bond.node.line.008",
+      "lineId": "gidonozeaas.bond.line.008",
+      "speakerId": "legacy.speaker.1jmq03z",
+      "speakerName": "ギドノゼアース",
+      "mode": "dialogue",
+      "text": "待つものが増えるのは、嫌いではない。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.bond.node.line.009",
+      "lineId": "gidonozeaas.bond.line.009",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "パフェと同じ数え方をされるの、複雑なんですけど。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.bond.node.line.010",
+      "lineId": "gidonozeaas.bond.line.010",
+      "speakerId": "legacy.speaker.1jmq03z",
+      "speakerName": "ギドノゼアース",
+      "mode": "dialogue",
+      "text": "パフェは再販日を守る。お前は休憩時間を守らない。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.bond.node.line.011",
+      "lineId": "gidonozeaas.bond.line.011",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "反論の代わりに、ひと口飲む。苦さのあとから、いつもより多い砂糖の甘さが来た。"
+    },
+    {
+      "type": "choice",
+      "id": "gidonozeaas.bond.node.choice.001",
+      "choices": [
+        {
+          "id": "gidonozeaas.bond.choice.001",
+          "label": "今だけは座って、温かいうちに飲む",
+          "result": "向かいへ座ると、黒い星の回転が止まった。話題はすぐ尽きたのに、雨の音が気まずくなくなるまで、私たちは席を立たなかった。",
+          "intent": "この人物の可能性を伸ばす",
+          "promise": "その人だけが持つ固有の成長を引き出す。",
+          "memory": "雨音の中で休憩を守った時間が、彼に鍵を預ける相手を選ばせた。",
+          "tone": "comic",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "gidonozeaas"
+              },
+              "mode": "add",
+              "trust": 10,
+              "ownership": -2
+            },
+            {
+              "type": "fighterPoints",
+              "target": {
+                "type": "fighter",
+                "fighterId": "gidonozeaas"
+              },
+              "amount": 3
+            }
+          ],
+          "goto": "gidonozeaas.bond.node.effect.001"
+        },
+        {
+          "id": "gidonozeaas.bond.choice.002",
+          "label": "ナプキンに次の試合手順を書く",
+          "result": "休憩は作戦会議になった。勝つ手順はまとまり、コーヒーも最後まで冷めなかった。ただ、砂糖を増やした理由だけは聞きそびれた。",
+          "intent": "チーム全体の準備を進める",
+          "promise": "誰にでも使える力をチームへ持ち帰る。",
+          "memory": "ナプキンに書いた作戦手順が、力を戻す境目を測る発想へつながった。",
+          "tone": "heroic",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "gidonozeaas"
+              },
+              "mode": "add",
+              "trust": 2,
+              "ownership": 7
+            },
+            {
+              "type": "sharedPoints",
+              "amount": 3
+            }
+          ],
+          "goto": "gidonozeaas.bond.node.effect.001"
+        }
+      ]
+    },
+    {
+      "type": "effect",
+      "id": "gidonozeaas.bond.node.effect.001",
+      "effects": [
+        {
+          "type": "setStoryStage",
+          "fighterId": "gidonozeaas",
+          "stage": 3
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "gidonozeaas.bond.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "approved",
+    "sourceDocument": "native narrative block migration",
+    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "legacyGeneratedIds": false
+  }
+}

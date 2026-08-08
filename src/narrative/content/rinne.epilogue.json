@@ -1,0 +1,262 @@
+{
+  "schemaVersion": 1,
+  "id": "rinne.epilogue",
+  "kind": "character",
+  "title": "元手ゼロ杯・持っていないもの選手権",
+  "summary": "無一文の参加者たちが、まだ持っていない物だけを賭ける一日限りの大会",
+  "ownership": {
+    "arcId": "character.rinne",
+    "characterId": "rinne",
+    "stage": "epilogue"
+  },
+  "trigger": {
+    "actions": [
+      "rest"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 400,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "閉店後のカジノホール",
+    "assets": [
+      {
+        "id": "rinne.epilogue.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-casino-cafe-morning.png",
+        "alt": "閉店後も明るいカジノホール"
+      },
+      {
+        "id": "rinne.epilogue.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/events/rinne-epilogue-zero-stakes-cup-v1.png",
+        "alt": "持っていないものを賭ける元手ゼロ杯で、未来を見ず空のコインを投げるリンネとミミ"
+      },
+      {
+        "id": "rinne.epilogue.asset.still.002",
+        "kind": "still",
+        "path": "/assets/story/events/rinne-epilogue-edge-standing-reward-v1.png",
+        "alt": "閉店後の静かな賭場で、縁立ちする空コインを挟み互いの賭け札を知るリンネとミミ"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "line",
+      "id": "rinne.epilogue.node.line.001",
+      "lineId": "rinne.epilogue.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "最終大会の翌週、閉店後のカジノに『元手ゼロ杯』の参加者が集まった。入場条件は無一文であること。普段なら警備員が最初に確認する状態が、今日は参加資格になった。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.epilogue.node.line.002",
+      "lineId": "rinne.epilogue.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "主催者はリンネ。賭けるのは金貨でも財産でもなく、『まだ持っていないもの』だけ。受付の私は、存在しない賞品へ番号札を付ける仕事を任された。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.epilogue.node.line.003",
+      "lineId": "rinne.epilogue.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "一番、来週の休日。二番、まだ言っていない謝罪。三番、古竜の次のしゃっくり。四番、海底王国の晴天。どれも今ここになく、四番は気象庁から抗議が来た。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.epilogue.node.line.004",
+      "lineId": "rinne.epilogue.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "勝負は空のコイン一枚で行う。表も裏も刻印がないため、落ちたあと全員でどちらが表だったか決める。賭博というより、勢いのある会議だった。"
+    },
+    {
+      "type": "direction",
+      "id": "rinne.epilogue.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "rinne.epilogue.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "rinne.epilogue.node.direction.002",
+      "command": {
+        "type": "effect",
+        "effectId": "pulse"
+      }
+    },
+    {
+      "type": "line",
+      "id": "rinne.epilogue.node.line.005",
+      "lineId": "rinne.epilogue.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "第一試合。事務員が来週の休日を賭け、料理長がまだ作っていないプリンを賭けた。コインは縁で立ち、遠い王国の建国記念日だけが一日増えた。関係者が一人も勝っていない。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "rinne.epilogue.node.line.006",
+      "lineId": "rinne.epilogue.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "第二試合では竜のしゃっくりが三つに増え、第三試合では未使用の謝罪が観客席へ飛んだ。受け取った二人が仲直りしたので、結果としては当たりらしい。採点基準が自由すぎる。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "rinne.epilogue.node.line.007",
+      "lineId": "rinne.epilogue.line.007",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "これ、胴元は何を得るんですか。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.epilogue.node.line.008",
+      "lineId": "rinne.epilogue.line.008",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "あと海底王国の天気を勝手に賭けないでください。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.epilogue.node.line.009",
+      "lineId": "rinne.epilogue.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "リンネは勝敗表を見ずに笑った。いつもなら胴元が得をする未来だけを外して歩く人が、今日は自分の取り分を最初から用意していない。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "rinne.epilogue.node.line.010",
+      "lineId": "rinne.epilogue.line.010",
+      "speakerId": "legacy.speaker.1vpt9ol",
+      "speakerName": "リンネ",
+      "mode": "dialogue",
+      "text": "全員が、負けた話を一つ持って帰る。私もそれを聞ける。十分だよ。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.epilogue.node.line.011",
+      "lineId": "rinne.epilogue.line.011",
+      "speakerId": "legacy.speaker.1vpt9ol",
+      "speakerName": "リンネ",
+      "mode": "dialogue",
+      "text": "元手がないなら、帰り道まで失くす人はいない。たぶん。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.epilogue.node.line.012",
+      "lineId": "rinne.epilogue.line.012",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "最後の試合で、リンネが私を対戦相手に指名した。観客が残っていた空の箱へ、一斉に存在しない賭け札を投げ込む。箱は空なのに、持ち上げると妙に重かった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "direction",
+      "id": "rinne.epilogue.node.direction.003",
+      "command": {
+        "type": "still",
+        "assetId": "rinne.epilogue.asset.still.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "line",
+      "id": "rinne.epilogue.node.line.013",
+      "lineId": "rinne.epilogue.line.013",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私は『次の休憩で食べるケーキの大きい半分』を賭けた。まだ買っていないので参加条件には合う。リンネは少し考え、『その休憩に呼ばれる権利』を出した。急に賭け札が胸の近くへ来た。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.epilogue.node.line.014",
+      "lineId": "rinne.epilogue.line.014",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "空のコインが指先で止まる。リンネの視線が十二通りの未来へ揺れ、そこで全部閉じた。『今日は見ない』。当たりを避けない人の顔は、賭場で初めて見るほど緊張していた。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "rinne.epilogue.node.line.015",
+      "lineId": "rinne.epilogue.line.015",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "コインが舞い上がる。観客席で古竜がしゃっくりをし、遠い海底王国の空が晴れ、食堂のプリンが一つだけ大きくなった。騒ぎの中心で、リンネだけが落ちてくる一枚から目をそらさない。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "rinne.epilogue.node.line.016",
+      "lineId": "rinne.epilogue.line.016",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "コインは私たちの間へ落ち、細い縁で立った。表も裏も見せないまま、金色の輪だけが揺れている。観客の声が遠のき、リンネが息を止めた音まで聞こえた。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "rinne.epilogue.node.line.017",
+      "lineId": "rinne.epilogue.line.017",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "判定不能なら、賭け札を交換して確かめる。私の札には『ケーキの大きい半分』。リンネの札には『その休憩へ呼ばれる権利』。別々に書いたはずなのに、二枚を並べると一つの予定になった。"
+    },
+    {
+      "type": "direction",
+      "id": "rinne.epilogue.node.direction.004",
+      "command": {
+        "type": "still",
+        "assetId": "rinne.epilogue.asset.still.002",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "line",
+      "id": "rinne.epilogue.node.line.018",
+      "lineId": "rinne.epilogue.line.018",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "リンネは未来を見なかった目で私を見た。勝敗を決めていないのに、頬だけが負けを認めたみたいに熱い。彼女が札を胸元へしまうまで、私も自分の札から手を離せなかった。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.epilogue.node.line.019",
+      "lineId": "rinne.epilogue.line.019",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "翌週、私はケーキをきれいに半分へ切った。リンネは未来を見ずに片方を選び、大きい方を当てた。少し悔しい。でも、その驚いた顔を見られたので、今回は私の勝ちということにした。",
+      "emotion": "tender"
+    },
+    {
+      "type": "end",
+      "id": "rinne.epilogue.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "approved",
+    "sourceDocument": "native narrative block migration",
+    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "legacyGeneratedIds": false
+  }
+}

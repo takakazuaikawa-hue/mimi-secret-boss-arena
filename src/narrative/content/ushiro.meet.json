@@ -1,0 +1,309 @@
+{
+  "schemaVersion": 1,
+  "id": "ushiro.meet",
+  "kind": "character",
+  "title": "最初の遭遇",
+  "summary": "記念撮影所で起きる「最初の遭遇」",
+  "ownership": {
+    "arcId": "character.ushiro",
+    "characterId": "ushiro",
+    "stage": "meet"
+  },
+  "trigger": {
+    "actions": [
+      "play",
+      "work"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 500,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "記念撮影所",
+    "assets": [
+      {
+        "id": "ushiro.meet.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-arena-reception.png",
+        "alt": "記念撮影所の背景"
+      },
+      {
+        "id": "ushiro.meet.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/encounters/ushiro.png",
+        "alt": "最初の遭遇のイベント一枚絵"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "line",
+      "id": "ushiro.meet.node.line.001",
+      "lineId": "ushiro.meet.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "今週の用事で記念撮影所へ立ち寄った。予定どおりなら、目の前の用事を済ませて帰るだけのはずだった。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.meet.node.line.002",
+      "lineId": "ushiro.meet.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "その日、最初に目へ入ったのは写真の最後列、肩越しの足音、二本買った飲み物だった。人より先に、その人の孤独だけが場所を取っていた。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.meet.node.line.003",
+      "lineId": "ushiro.meet.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "記念写真の最後列に、撮るたび一人分の影が増える。数え直そうと振り返ると、その席だけ空いていた。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.meet.node.line.004",
+      "lineId": "ushiro.meet.line.004",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "写真、人数が一人多い。"
+    },
+    {
+      "type": "direction",
+      "id": "ushiro.meet.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "ushiro.meet.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "ushiro.meet.node.direction.002",
+      "command": {
+        "type": "effect",
+        "effectId": "flash"
+      }
+    },
+    {
+      "type": "line",
+      "id": "ushiro.meet.node.line.005",
+      "lineId": "ushiro.meet.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ここへ来た理由は、ごく普通の用事だった。けれどうしろを見た瞬間、兎耳だけが先に危険を知らせる。私はとっさに、見つかりたくないから背後へ隠れているのだと思いかけた。",
+      "emotion": "comic"
+    },
+    {
+      "type": "direction",
+      "id": "ushiro.meet.node.direction.003",
+      "command": {
+        "type": "still",
+        "assetId": "ushiro.meet.asset.still.001"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "ushiro.meet.node.direction.004",
+      "command": {
+        "type": "effect",
+        "effectId": "pulse"
+      }
+    },
+    {
+      "type": "line",
+      "id": "ushiro.meet.node.line.006",
+      "lineId": "ushiro.meet.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "声をかけるべきか迷っている間に、視線だけが一度重なる。胸が跳ねたのは見た目のせいではない。見つけてはいけない何かを、向こうも隠さなかったからだ。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.meet.node.line.007",
+      "lineId": "ushiro.meet.line.007",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "さっきから、写真の人数が合わないんですけど。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.meet.node.line.008",
+      "lineId": "ushiro.meet.line.008",
+      "speakerId": "legacy.speaker.1ddw3j9",
+      "speakerName": "うしろ",
+      "mode": "dialogue",
+      "text": "数えないで。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.meet.node.line.009",
+      "lineId": "ushiro.meet.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "うしろは、正面を持たず、振り返られた瞬間に別の背後へ消える影に見えた。だから私は、普通のお客様へするのと同じ声で話しかけることにした。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.meet.node.line.010",
+      "lineId": "ushiro.meet.line.010",
+      "speakerId": "legacy.speaker.1ddw3j9",
+      "speakerName": "うしろ",
+      "mode": "dialogue",
+      "text": "数えないで。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.meet.node.line.011",
+      "lineId": "ushiro.meet.line.011",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "今、後ろから聞こえた？"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.meet.node.line.012",
+      "lineId": "ushiro.meet.line.012",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "たった一言の返事を待つ時間が、試合開始前より長い。背後ではいつもの業務放送が流れ、この場所だけが別の物語の入口みたいに静かだった。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.meet.node.line.013",
+      "lineId": "ushiro.meet.line.013",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "声は耳元ではなく、肩甲骨の間へ冷たい指で書かれたように届いた。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.meet.node.line.014",
+      "lineId": "ushiro.meet.line.014",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "一人で全員の背後へ立てるのに、記念写真では一席ぶんだけ遠慮する。それでも本人が気にしたのは、私が一歩引いたことの方だった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.meet.node.line.015",
+      "lineId": "ushiro.meet.line.015",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "まだ事情はほとんど分からない。ただ、最初の考えだけでは説明できない表情を見てしまった。私は曲がった名札を直し、次に会う口実をひとつ残した。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.meet.node.line.016",
+      "lineId": "ushiro.meet.line.016",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "怖くないと言えば嘘になる。でも、怖さの奥に見つけてもらうことと、形を決められることが同じになることがある気がして、目をそらす方が失礼に思えた。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.meet.node.line.017",
+      "lineId": "ushiro.meet.line.017",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "事情はまだ分からない。でも、ここで立ち去れば、たぶん後悔する。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.meet.node.line.018",
+      "lineId": "ushiro.meet.line.018",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "名前を聞いただけ。約束も、契約も、まだ何もない。それなのに別れ際、次に会った時の言葉を考えている自分がいた。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.meet.node.line.019",
+      "lineId": "ushiro.meet.line.019",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "その場に残ったいつの間にか軽くなっていた二本目の飲み物を見て、私は今日の出来事を勤務報告の一行だけでは終わらせられないと知った。"
+    },
+    {
+      "type": "choice",
+      "id": "ushiro.meet.node.choice.001",
+      "choices": [
+        {
+          "id": "ushiro.meet.choice.001",
+          "label": "最後列に空席を一つ残す",
+          "result": "誰も座っていない席だけ、写真の中で深く会釈した。",
+          "intent": "登録の前に、目の前の相手を知る",
+          "promise": "目先の報酬は得ない代わりに、相手が何を望んでいるかを確かめる。",
+          "memory": "手続きより先に話を聞いたことを、相手は最初の印象として覚えている。",
+          "tone": "tender",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "ushiro"
+              },
+              "mode": "add",
+              "trust": 7,
+              "ownership": -2
+            }
+          ],
+          "goto": "ushiro.meet.node.effect.001"
+        },
+        {
+          "id": "ushiro.meet.choice.002",
+          "label": "今日はうしろを誘わず、用事へ戻る",
+          "result": "うしろの名前と出会った場所だけを覚え、今日は普段の仕事へ戻った。急いで所属を決めなかったことが、次に会う時の距離として残った。",
+          "intent": "今は勧誘せず、相手との距離を保つ",
+          "promise": "所属選手にはならないが、後の出来事で再会できる。",
+          "memory": "最初の出会いで急いで仲間にしなかったことが、次の再会へ残る。",
+          "tone": "pragmatic",
+          "effects": [],
+          "goto": "ushiro.meet.node.effect.001"
+        }
+      ]
+    },
+    {
+      "type": "effect",
+      "id": "ushiro.meet.node.effect.001",
+      "effects": [
+        {
+          "type": "markEncountered",
+          "fighterId": "ushiro",
+          "encountered": true
+        },
+        {
+          "type": "setStoryStage",
+          "fighterId": "ushiro",
+          "stage": 1
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "ushiro.meet.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "approved",
+    "sourceDocument": "native narrative block migration",
+    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "legacyGeneratedIds": false
+  }
+}

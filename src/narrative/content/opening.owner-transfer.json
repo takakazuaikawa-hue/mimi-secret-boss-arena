@@ -1,0 +1,352 @@
+{
+  "schemaVersion": 1,
+  "id": "opening.owner-transfer",
+  "kind": "opening",
+  "title": "返却手続きは、返却だけでは終わらない",
+  "summary": "第三コロシアム別館・登録窓口で起きる「返却手続きは、返却だけでは終わらない」",
+  "ownership": {
+    "arcId": "opening.owner-transfer"
+  },
+  "trigger": {
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "第三コロシアム別館・登録窓口",
+    "assets": [
+      {
+        "id": "opening.owner-transfer.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-arena-reception.png",
+        "alt": "第三コロシアム別館・登録窓口の背景"
+      },
+      {
+        "id": "opening.owner-transfer.asset.sprite.001",
+        "kind": "sprite",
+        "path": "/assets/story/nono-apologetic.png",
+        "alt": "登録盤を確認する受付係ノノ"
+      },
+      {
+        "id": "opening.owner-transfer.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/events/owner-transfer-registration-v2.png",
+        "alt": "返却手続きは、返却だけでは終わらないのイベント一枚絵"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "opening.owner-transfer.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "opening.owner-transfer.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "opening.owner-transfer.node.direction.002",
+      "command": {
+        "type": "show",
+        "assetId": "opening.owner-transfer.asset.sprite.001",
+        "actorId": "legacy.actor.u43cq5",
+        "slot": "right",
+        "scale": "tall"
+      }
+    },
+    {
+      "type": "line",
+      "id": "opening.owner-transfer.node.line.001",
+      "lineId": "opening.owner-transfer.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "閉館前、私はマダムを登録窓口へ案内した。今日の仕事はよく働いたと思う。飲み物を運び、道を案内し、海を設備担当へ渡した。あとは勤務確認へ印をもらえば終わる。"
+    },
+    {
+      "type": "line",
+      "id": "opening.owner-transfer.node.line.002",
+      "lineId": "opening.owner-transfer.line.002",
+      "speakerId": "legacy.speaker.3fs2v8",
+      "speakerName": "受付係ノノ",
+      "mode": "dialogue",
+      "text": "権利返却ですね。では、返却審査中の現場代理人をお願いします。"
+    },
+    {
+      "type": "line",
+      "id": "opening.owner-transfer.node.line.003",
+      "lineId": "opening.owner-transfer.line.003",
+      "speakerId": "legacy.speaker.jsgxc9",
+      "speakerName": "マダム",
+      "mode": "dialogue",
+      "text": "今日、現場にいる責任者の方でよろしいの？"
+    },
+    {
+      "type": "line",
+      "id": "opening.owner-transfer.node.line.004",
+      "lineId": "opening.owner-transfer.line.004",
+      "speakerId": "legacy.speaker.3fs2v8",
+      "speakerName": "受付係ノノ",
+      "mode": "dialogue",
+      "text": "はい。現場を確認できる方です。"
+    },
+    {
+      "type": "line",
+      "id": "opening.owner-transfer.node.line.005",
+      "lineId": "opening.owner-transfer.line.005",
+      "speakerId": "legacy.speaker.jsgxc9",
+      "speakerName": "マダム",
+      "mode": "dialogue",
+      "text": "ではミミさん、お願いできる？"
+    },
+    {
+      "type": "line",
+      "id": "opening.owner-transfer.node.line.006",
+      "lineId": "opening.owner-transfer.line.006",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "勤務確認ですね。"
+    },
+    {
+      "type": "line",
+      "id": "opening.owner-transfer.node.line.007",
+      "lineId": "opening.owner-transfer.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "三人とも、同じ話をしている顔だった。魔法盤の欄には「現場代理人」。派遣票には「本日の現場責任者」。双子なら、せめて別々の服を着てほしいくらい似ている。"
+    },
+    {
+      "type": "line",
+      "id": "opening.owner-transfer.node.line.008",
+      "lineId": "opening.owner-transfer.line.008",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "今日ここで働いたことを確認すればいいんですね？"
+    },
+    {
+      "type": "line",
+      "id": "opening.owner-transfer.node.line.009",
+      "lineId": "opening.owner-transfer.line.009",
+      "speakerId": "legacy.speaker.3fs2v8",
+      "speakerName": "受付係ノノ",
+      "mode": "dialogue",
+      "text": "はい。こちらへ社員証を。"
+    },
+    {
+      "type": "direction",
+      "id": "opening.owner-transfer.node.direction.003",
+      "command": {
+        "type": "still",
+        "assetId": "opening.owner-transfer.asset.still.001"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "opening.owner-transfer.node.direction.004",
+      "command": {
+        "type": "effect",
+        "effectId": "flash"
+      }
+    },
+    {
+      "type": "line",
+      "id": "opening.owner-transfer.node.line.010",
+      "lineId": "opening.owner-transfer.line.010",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "社員証を置く。盤面が青く光り、「返却手続き」の文字が消えた。代わりに、私の名前が出た。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "opening.owner-transfer.node.line.011",
+      "lineId": "opening.owner-transfer.line.011",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "暫定オーナー　ミミ。"
+    },
+    {
+      "type": "line",
+      "id": "opening.owner-transfer.node.line.012",
+      "lineId": "opening.owner-transfer.line.012",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "私の勤務確認、ずいぶん偉くなっていませんか？"
+    },
+    {
+      "type": "line",
+      "id": "opening.owner-transfer.node.line.013",
+      "lineId": "opening.owner-transfer.line.013",
+      "speakerId": "legacy.speaker.jsgxc9",
+      "speakerName": "マダム",
+      "mode": "dialogue",
+      "text": "まあ。"
+    },
+    {
+      "type": "line",
+      "id": "opening.owner-transfer.node.line.014",
+      "lineId": "opening.owner-transfer.line.014",
+      "speakerId": "legacy.speaker.3fs2v8",
+      "speakerName": "受付係ノノ",
+      "mode": "dialogue",
+      "text": "少々お待ちください。返却審査中の代理人が、暫定オーナーとして登録されています。"
+    },
+    {
+      "type": "line",
+      "id": "opening.owner-transfer.node.line.015",
+      "lineId": "opening.owner-transfer.line.015",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ノノさんは魔法盤を見た。マダムは私を見た。私は社員証を見た。社員証は何も悪くない顔をしていた。"
+    },
+    {
+      "type": "line",
+      "id": "opening.owner-transfer.node.line.016",
+      "lineId": "opening.owner-transfer.line.016",
+      "speakerId": "legacy.speaker.jsgxc9",
+      "speakerName": "マダム",
+      "mode": "dialogue",
+      "text": "すぐ戻してちょうだい。この方は今日、働きに来ただけなのよ。"
+    },
+    {
+      "type": "line",
+      "id": "opening.owner-transfer.node.line.017",
+      "lineId": "opening.owner-transfer.line.017",
+      "speakerId": "legacy.speaker.3fs2v8",
+      "speakerName": "受付係ノノ",
+      "mode": "dialogue",
+      "text": "訂正申請を出します。ただ、今夜の締め処理が終わるまで権利盤へ触れません。"
+    },
+    {
+      "type": "line",
+      "id": "opening.owner-transfer.node.line.018",
+      "lineId": "opening.owner-transfer.line.018",
+      "speakerId": "legacy.speaker.jsgxc9",
+      "speakerName": "マダム",
+      "mode": "dialogue",
+      "text": "本当にごめんなさい。せめてお詫びに、お茶とコロシアム銘菓を届けさせて。"
+    },
+    {
+      "type": "line",
+      "id": "opening.owner-transfer.node.line.019",
+      "lineId": "opening.owner-transfer.line.019",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "手渡された箱には『八つ裂き大福』と書いてあった。割れ目から真っ赤ないちご蜜が垂れている。謝罪の品としては事件性が高い。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "opening.owner-transfer.node.line.020",
+      "lineId": "opening.owner-transfer.line.020",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "ありがとうございます。味は平和なんですね？"
+    },
+    {
+      "type": "line",
+      "id": "opening.owner-transfer.node.line.021",
+      "lineId": "opening.owner-transfer.line.021",
+      "speakerId": "legacy.speaker.jsgxc9",
+      "speakerName": "マダム",
+      "mode": "dialogue",
+      "text": "評判はとてもいいのよ。見た目以外は。"
+    },
+    {
+      "type": "line",
+      "id": "opening.owner-transfer.node.line.022",
+      "lineId": "opening.owner-transfer.line.022",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "派遣初日の帰り際に、三日分ほどの闘技場を持たされた。私とマダムとノノさんの勘違いが、きれいな三角形になっている。真ん中には、私の名前と、血のようないちご蜜があった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "choice",
+      "id": "opening.owner-transfer.node.choice.001",
+      "choices": [
+        {
+          "id": "opening.owner-transfer.choice.001",
+          "label": "今すぐ訂正できる方法をノノへ聞く",
+          "result": "訂正申請はすぐ作ってもらえた。ただし処理には数日かかる。その間に使える権利は、問題が起きるたび一つずつ確認することになった。",
+          "intent": "まず正規の訂正手続きを確認する",
+          "promise": "名義訂正を進めながら、必要な権利だけを一つずつ知る。",
+          "memory": "最初に制度へ確認を求めたことが、後の問い合わせ方へ残る。",
+          "tone": "pragmatic",
+          "effects": [],
+          "goto": "opening.owner-transfer.node.effect.001"
+        },
+        {
+          "id": "opening.owner-transfer.choice.002",
+          "label": "マダムが何を返そうとしたのか聞く",
+          "result": "マダムは饗会の宝くじで当てた権利を、会社へ返すだけのつもりだった。押しつける意図がなかったことを、本人の言葉で確かめた。",
+          "intent": "前オーナーの意図を確かめる",
+          "promise": "誰かを責める前に、三人の理解がどこでずれたかを知る。",
+          "memory": "マダムの善意を先に確かめたことが、翌日のお詫びへつながる。",
+          "tone": "tender",
+          "effects": [],
+          "goto": "opening.owner-transfer.node.effect.001"
+        },
+        {
+          "id": "opening.owner-transfer.choice.003",
+          "label": "三人で「現場代理人」の欄を読み直す",
+          "result": "三人がそれぞれ別の意味だと思っていたことだけは、完全に一致した。分かりやすい説明へ直すよう、訂正申請と一緒に要望を出した。",
+          "intent": "誤登録の原因を三人で確かめる",
+          "promise": "誰か一人の不注意にせず、紛らわしい手続きそのものを記録する。",
+          "memory": "三人で同じ欄を読み直した時間が、最初の共同作業として残る。",
+          "tone": "comic",
+          "effects": [],
+          "goto": "opening.owner-transfer.node.effect.001"
+        }
+      ]
+    },
+    {
+      "type": "effect",
+      "id": "opening.owner-transfer.node.effect.001",
+      "effects": [
+        {
+          "type": "setOwnershipStage",
+          "stage": "provisional"
+        },
+        {
+          "type": "setArenaRank",
+          "rank": "provisional"
+        },
+        {
+          "type": "setFlag",
+          "flagId": "opening.owner-transfer.completed",
+          "value": true
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "opening.owner-transfer.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "approved",
+    "sourceDocument": "native narrative block migration",
+    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "legacyGeneratedIds": false
+  }
+}

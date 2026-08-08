@@ -1,0 +1,246 @@
+{
+  "schemaVersion": 1,
+  "id": "shahar.epilogue",
+  "kind": "character",
+  "title": "古竜通過日",
+  "summary": "一日限りの傘の流行と、空から届いたシャハルの迎え",
+  "ownership": {
+    "arcId": "character.shahar",
+    "characterId": "shahar",
+    "stage": "epilogue"
+  },
+  "trigger": {
+    "actions": [
+      "rest"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 400,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "第三コロシアム上空",
+    "assets": [
+      {
+        "id": "shahar.epilogue.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-casino-cafe-morning.png",
+        "alt": "配送ヤードの背景"
+      },
+      {
+        "id": "shahar.epilogue.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/events/shahar-epilogue-sky-festival-v1.png",
+        "alt": "色とりどりの傘が開く街の上を、ミミを乗せた古竜シャハルが渡る"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "line",
+      "id": "shahar.epilogue.node.line.001",
+      "lineId": "shahar.epilogue.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "最終大会が終わってから、シャハルと配送ヤードで顔を合わせるのは今日が初めてだった。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.epilogue.node.line.002",
+      "lineId": "shahar.epilogue.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "大会が終わってから、一人分の茶を保温する手のひらほどの雲を見るたび、あの人がいない日常の広さを測ってしまう。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.epilogue.node.line.003",
+      "lineId": "shahar.epilogue.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "天気予報に『本日午後、古竜通過のため日陰』という新しい項目が増えた。市民はもう傘の種類で対応している。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.epilogue.node.line.004",
+      "lineId": "shahar.epilogue.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "新しい闘技場には、開閉式の屋根が付いた。"
+    },
+    {
+      "type": "direction",
+      "id": "shahar.epilogue.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "shahar.epilogue.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "shahar.epilogue.node.direction.002",
+      "command": {
+        "type": "effect",
+        "effectId": "pulse"
+      }
+    },
+    {
+      "type": "line",
+      "id": "shahar.epilogue.node.line.005",
+      "lineId": "shahar.epilogue.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "一人分の茶を保温する手のひらほどの雲を見て、入口へ目をやる。待っていると認めるのは落ち着かない。でも、来なくても責められない関係になれたことは、少し誇らしかった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "shahar.epilogue.node.line.006",
+      "lineId": "shahar.epilogue.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "会う約束はしていない。だから待っているわけではない、と自分へ言い聞かせる朝ほど、入口の音によく気づいた。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "shahar.epilogue.node.line.007",
+      "lineId": "shahar.epilogue.line.007",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "今日は来るって連絡してくれてもよかったんですよ。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.epilogue.node.line.008",
+      "lineId": "shahar.epilogue.line.008",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "予算、全部ここに使ってません？"
+    },
+    {
+      "type": "line",
+      "id": "shahar.epilogue.node.line.009",
+      "lineId": "shahar.epilogue.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "シャハルは以前と同じように現れ、以前ならしなかった小さな選択を自分から済ませていた。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "shahar.epilogue.node.line.010",
+      "lineId": "shahar.epilogue.line.010",
+      "speakerId": "legacy.speaker.bkqdo1",
+      "speakerName": "シャハル",
+      "mode": "dialogue",
+      "text": "した。朝焼けを三度、そなたの窓へ送った。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.epilogue.node.line.011",
+      "lineId": "shahar.epilogue.line.011",
+      "speakerId": "legacy.speaker.bkqdo1",
+      "speakerName": "シャハル",
+      "mode": "dialogue",
+      "text": "空を設備扱いしたのは、お前たちだ。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.epilogue.node.line.012",
+      "lineId": "shahar.epilogue.line.012",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "その日の天気予報には、降水確率の隣へ『午後二時ごろ、古竜通過による日陰あり』と書かれていた。市民は驚くより先に、限定色の傘を買った。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "shahar.epilogue.node.line.013",
+      "lineId": "shahar.epilogue.line.013",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "今年の流行は、光を透かす薄い傘だ。晴天で差す意味はない。でも古竜の影と重なる三分だけ、街じゅうが海の底みたいな色になるらしい。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.epilogue.node.line.014",
+      "lineId": "shahar.epilogue.line.014",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私は屋上で待ちながら、シャハル用に買った銀色の留め飾りを握っていた。『今季限定』の札に、永遠を生きる古竜が十五分も悩んで選んだ品だ。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "shahar.epilogue.node.line.015",
+      "lineId": "shahar.epilogue.line.015",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "雲の向こうで、空そのものがゆっくり身じろぎした。銀白の翼が光を返し、遅れて風が届く。角の根元には、鱗へ紛れそうなほど小さな留め飾りが光っていた。私の手の中の予備より、少しだけ曲がっている。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "shahar.epilogue.node.line.016",
+      "lineId": "shahar.epilogue.line.016",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "『自分で結べたんですね』と叫ぶと、雲が一つ、得意げな丸に膨らんだ。三県を曇らせる存在の喜び方が、買ったばかりの飾りを見せたい子どもと同じなのは、かなりずるい。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "shahar.epilogue.node.line.017",
+      "lineId": "shahar.epilogue.line.017",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "シャハルは屋上へ降りず、翼を一度だけ傾けた。その背の鱗の間に、私一人ぶんの革張りの席が見える。安全帯までついている。古竜、準備が細かい。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.epilogue.node.line.018",
+      "lineId": "shahar.epilogue.line.018",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "『流行はすぐ終わりますよ』。そう念を押す私へ、頭の中へ直接、静かな笑い声が落ちた。『終わるから、今日を逃さぬのだろう』。"
+    },
+    {
+      "type": "direction",
+      "id": "shahar.epilogue.node.direction.003",
+      "command": {
+        "type": "still",
+        "assetId": "shahar.epilogue.asset.still.001"
+      }
+    },
+    {
+      "type": "line",
+      "id": "shahar.epilogue.node.line.019",
+      "lineId": "shahar.epilogue.line.019",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "次の瞬間、私は雲より高い席で笑っていた。眼下では千本の傘がいっせいに開き、街が青や桃色へ染まる。シャハルの影がその上を渡る三分間だけ、世界一短い流行の中心に、私たちはいた。",
+      "emotion": "tender"
+    },
+    {
+      "type": "end",
+      "id": "shahar.epilogue.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "approved",
+    "sourceDocument": "native narrative block migration",
+    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "legacyGeneratedIds": false
+  }
+}

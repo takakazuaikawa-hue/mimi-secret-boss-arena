@@ -1,0 +1,297 @@
+{
+  "schemaVersion": 1,
+  "id": "gidonozeaas.power",
+  "kind": "character",
+  "title": "窓に映る六枚の翼",
+  "summary": "閉鎖された展望台で起きる「窓に映る六枚の翼」",
+  "ownership": {
+    "arcId": "character.gidonozeaas",
+    "characterId": "gidonozeaas",
+    "stage": "power"
+  },
+  "trigger": {
+    "actions": [
+      "search",
+      "play"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 400,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "閉鎖された展望台",
+    "assets": [
+      {
+        "id": "gidonozeaas.power.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-observation-deck-night.png",
+        "alt": "閉鎖された展望台の背景"
+      },
+      {
+        "id": "gidonozeaas.power.asset.sprite.001",
+        "kind": "sprite",
+        "path": "/assets/story/gidono-sealed-neutral.png",
+        "alt": "黒い星を抱いた封印形態のギドノゼアース"
+      },
+      {
+        "id": "gidonozeaas.power.asset.sprite.002",
+        "kind": "sprite",
+        "path": "/assets/story/gidono-unsealed-neutral.png",
+        "alt": "液状の人型をとったギドノゼアース"
+      },
+      {
+        "id": "gidonozeaas.power.asset.sprite.003",
+        "kind": "sprite",
+        "path": "/assets/story/gidono-unsealed-soft.png",
+        "alt": "表情を和らげた人型のギドノゼアース"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "gidonozeaas.power.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "gidonozeaas.power.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "gidonozeaas.power.node.direction.002",
+      "command": {
+        "type": "show",
+        "assetId": "gidonozeaas.power.asset.sprite.001",
+        "actorId": "gidonozeaas",
+        "slot": "right",
+        "scale": "compact"
+      }
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.power.node.line.001",
+      "lineId": "gidonozeaas.power.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "立入禁止の鎖が、風のたびに鳴る。試合後の展望台には、私たちしかいない。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.power.node.line.002",
+      "lineId": "gidonozeaas.power.line.002",
+      "speakerId": "legacy.speaker.1jmq03z",
+      "speakerName": "ギドノゼアース",
+      "mode": "dialogue",
+      "text": "空ではなく、窓を見ろ。"
+    },
+    {
+      "type": "direction",
+      "id": "gidonozeaas.power.node.direction.003",
+      "command": {
+        "type": "show",
+        "assetId": "gidonozeaas.power.asset.sprite.002",
+        "actorId": "gidonozeaas",
+        "slot": "right",
+        "scale": "tall"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "gidonozeaas.power.node.direction.004",
+      "command": {
+        "type": "effect",
+        "effectId": "flash"
+      }
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.power.node.line.003",
+      "lineId": "gidonozeaas.power.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ガラスの中で夜が立ち上がる。街を覆う六枚の翼と、星のない穴のような顔。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.power.node.line.004",
+      "lineId": "gidonozeaas.power.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "息を吸ったはずなのに、胸が動かない。指先だけが、勝手に震えている。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.power.node.line.005",
+      "lineId": "gidonozeaas.power.line.005",
+      "speakerId": "legacy.speaker.1jmq03z",
+      "speakerName": "ギドノゼアース",
+      "mode": "dialogue",
+      "text": "一滴でも、影は本体を忘れない。契約を使えば、あれをこちらへ近づけられる。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.power.node.line.006",
+      "lineId": "gidonozeaas.power.line.006",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "近づけたら、どうなりますか。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.power.node.line.007",
+      "lineId": "gidonozeaas.power.line.007",
+      "speakerId": "legacy.speaker.1jmq03z",
+      "speakerName": "ギドノゼアース",
+      "mode": "dialogue",
+      "text": "試合には勝つ。展望台と、その下の街が残るかは分からない。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.power.node.line.008",
+      "lineId": "gidonozeaas.power.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "冗談の声ではない。翼が閉じたあと、街の明かりが急に頼りなく見えた。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.power.node.line.009",
+      "lineId": "gidonozeaas.power.line.009",
+      "speakerId": "legacy.speaker.1jmq03z",
+      "speakerName": "ギドノゼアース",
+      "mode": "dialogue",
+      "text": "お前は、私が来ることより、私が来たせいで誰かが壊れることを恐れている。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.power.node.line.010",
+      "lineId": "gidonozeaas.power.line.010",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "どっちも怖いです。普通に。"
+    },
+    {
+      "type": "direction",
+      "id": "gidonozeaas.power.node.direction.005",
+      "command": {
+        "type": "show",
+        "assetId": "gidonozeaas.power.asset.sprite.003",
+        "actorId": "gidonozeaas",
+        "slot": "right",
+        "scale": "tall"
+      }
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.power.node.line.011",
+      "lineId": "gidonozeaas.power.line.011",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "口元がほんの少し上がる。笑われたのだと気づくまで、数秒かかった。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.power.node.line.012",
+      "lineId": "gidonozeaas.power.line.012",
+      "speakerId": "legacy.speaker.1jmq03z",
+      "speakerName": "ギドノゼアース",
+      "mode": "dialogue",
+      "text": "それでいい。恐れ方がまともな者なら、鍵を預けられる。"
+    },
+    {
+      "type": "choice",
+      "id": "gidonozeaas.power.node.choice.001",
+      "choices": [
+        {
+          "id": "gidonozeaas.power.choice.001",
+          "label": "呼び出す方法より、戻す方法を聞く",
+          "result": "翼を閉じる言葉は、命令ではなく彼の名を呼ぶだけだった。忘れないよう、帰りのエレベーターで何度も小さく繰り返した。",
+          "intent": "この人物の可能性を伸ばす",
+          "promise": "その人だけが持つ固有の成長を引き出す。",
+          "memory": "名前を呼べば戻れるという約束が、危機の場面で封印を閉じる基準になった。",
+          "tone": "tender",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "gidonozeaas"
+              },
+              "mode": "add",
+              "trust": 11,
+              "ownership": -4
+            },
+            {
+              "type": "fighterPoints",
+              "target": {
+                "type": "fighter",
+                "fighterId": "gidonozeaas"
+              },
+              "amount": 5
+            }
+          ],
+          "goto": "gidonozeaas.power.node.effect.001"
+        },
+        {
+          "id": "gidonozeaas.power.choice.002",
+          "label": "街を傷つけない出力まで測る",
+          "result": "窓の中の翼を一枚ずつ開き、安全に戻せる境目を記録した。数字は得られた。でも「測ったものは使いたくなる」という声が、帰っても残った。",
+          "intent": "チーム全体の準備を進める",
+          "promise": "誰にでも使える力をチームへ持ち帰る。",
+          "memory": "街を壊さない境目の記録が、契約の継ぎ目を探す手掛かりになった。",
+          "tone": "comic",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "gidonozeaas"
+              },
+              "mode": "add",
+              "trust": 0,
+              "ownership": 9
+            },
+            {
+              "type": "sharedPoints",
+              "amount": 5
+            }
+          ],
+          "goto": "gidonozeaas.power.node.effect.001"
+        }
+      ]
+    },
+    {
+      "type": "effect",
+      "id": "gidonozeaas.power.node.effect.001",
+      "effects": [
+        {
+          "type": "setStoryStage",
+          "fighterId": "gidonozeaas",
+          "stage": 4
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "gidonozeaas.power.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "approved",
+    "sourceDocument": "native narrative block migration",
+    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "legacyGeneratedIds": false
+  }
+}

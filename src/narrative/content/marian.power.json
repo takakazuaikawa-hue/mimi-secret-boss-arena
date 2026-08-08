@@ -1,0 +1,307 @@
+{
+  "schemaVersion": 1,
+  "id": "marian.power",
+  "kind": "character",
+  "title": "取り戻す力",
+  "summary": "使われない霊安室で起きる「取り戻す力」",
+  "ownership": {
+    "arcId": "character.marian",
+    "characterId": "marian",
+    "stage": "power"
+  },
+  "trigger": {
+    "actions": [
+      "search",
+      "rest"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 400,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "使われない霊安室",
+    "assets": [
+      {
+        "id": "marian.power.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-observation-deck-night.png",
+        "alt": "使われない霊安室の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "line",
+      "id": "marian.power.node.line.001",
+      "lineId": "marian.power.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "練習のあと、マリアンに呼ばれて使われない霊安室まで来た。いつもの力では足りない理由を、見せたいらしい。"
+    },
+    {
+      "type": "line",
+      "id": "marian.power.node.line.002",
+      "lineId": "marian.power.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "警報より先に、相手の声が私の名を呼んだ。いつもと同じ呼び方なのに、その一音だけで足が止まる。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "marian.power.node.line.003",
+      "lineId": "marian.power.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "救護室の灯りが裏返り、空のベッドへ古い影が起き上がった。亡くなった戦士たちが、自分の足で出口を探している。"
+    },
+    {
+      "type": "line",
+      "id": "marian.power.node.line.004",
+      "lineId": "marian.power.line.004",
+      "speakerId": "legacy.speaker.quc8xa",
+      "speakerName": "マリアン",
+      "mode": "dialogue",
+      "text": "本来の祈りは、死を終わらせるものです。"
+    },
+    {
+      "type": "direction",
+      "id": "marian.power.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "marian.power.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "marian.power.node.direction.002",
+      "command": {
+        "type": "effect",
+        "effectId": "flash"
+      }
+    },
+    {
+      "type": "line",
+      "id": "marian.power.node.line.005",
+      "lineId": "marian.power.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "菓子の割れ目まで蘇生してしまい、休憩のおやつが永遠に食べ終わらない。そんな力が、目の前で息をしている。逃げる理由なら十分だった。それでも私は、力の大きさよりマリアンが最初にどこを見るのかを確かめたかった。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "marian.power.node.line.006",
+      "lineId": "marian.power.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "マリアンが私と危険の間へ立つ。触れてはいない。それでも、こちらへ届くはずだった圧力だけがきれいに二つへ割れた。"
+    },
+    {
+      "type": "line",
+      "id": "marian.power.node.line.007",
+      "lineId": "marian.power.line.007",
+      "speakerId": "legacy.speaker.quc8xa",
+      "speakerName": "マリアン",
+      "mode": "dialogue",
+      "text": "私は死を消せるのではありません。生と死の境を、少しだけ読み替えられる。"
+    },
+    {
+      "type": "line",
+      "id": "marian.power.node.line.008",
+      "lineId": "marian.power.line.008",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "生き返らせる？"
+    },
+    {
+      "type": "line",
+      "id": "marian.power.node.line.009",
+      "lineId": "marian.power.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "救える命を一つも見捨てず、終わりさえ治療する聖女。けれど今見せている力は、勝つためではなく、私を怖がらせないために抑えられている。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "marian.power.node.line.010",
+      "lineId": "marian.power.line.010",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "読み替えたあと、本人は戻りたいと思うんでしょうか。"
+    },
+    {
+      "type": "line",
+      "id": "marian.power.node.line.011",
+      "lineId": "marian.power.line.011",
+      "speakerId": "legacy.speaker.quc8xa",
+      "speakerName": "マリアン",
+      "mode": "dialogue",
+      "text": "いいえ。死んだまま、困らなくします。"
+    },
+    {
+      "type": "line",
+      "id": "marian.power.node.line.012",
+      "lineId": "marian.power.line.012",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "本気を見たいと思っていた。実際に目の前へ現れると、知りたかったのは強さではなく、その力を本人がどう恐れているかだった。"
+    },
+    {
+      "type": "line",
+      "id": "marian.power.node.line.013",
+      "lineId": "marian.power.line.013",
+      "speakerId": "legacy.speaker.quc8xa",
+      "speakerName": "マリアン",
+      "mode": "dialogue",
+      "text": "だから先に聞くのです。治せることと、治してよいことは同じではありません。"
+    },
+    {
+      "type": "line",
+      "id": "marian.power.node.line.014",
+      "lineId": "marian.power.line.014",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "菓子の割れ目まで蘇生してしまい、休憩のおやつが永遠に食べ終わらない。闘技場の安全基準は一瞬で役に立たなくなり、担当者は私の顔を見て計測を諦めた。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "marian.power.node.line.015",
+      "lineId": "marian.power.line.015",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "世界を壊せることより、壊さないために何を選んだかが胸へ残った。救う力を止められないことが、本人にとっては優しさより重い恐怖になっていた。その理解が正しいか、いつか本人の言葉で確かめたい。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "marian.power.node.line.016",
+      "lineId": "marian.power.line.016",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "力の中心にあったのは、助ける力で、本人が終える権利や休む権利まで奪うこと。最強であることが、本人にとって一番古い傷なのだと分かる。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "marian.power.node.line.017",
+      "lineId": "marian.power.line.017",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "怖さが消えたわけではない。だからこそ、使うかどうかを本人と決める必要がある。"
+    },
+    {
+      "type": "line",
+      "id": "marian.power.node.line.018",
+      "lineId": "marian.power.line.018",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "大丈夫とは言えない。怖いものは怖い。それでも、次に力を使う時は一人で決めなくていいと伝えた。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "marian.power.node.line.019",
+      "lineId": "marian.power.line.019",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "治さずに残した契約印の薄い痕だけが元の大きさで残り、さっきまで世界の終わりがいた場所に、帰り道の灯りが戻った。"
+    },
+    {
+      "type": "choice",
+      "id": "marian.power.node.choice.001",
+      "choices": [
+        {
+          "id": "marian.power.choice.001",
+          "label": "死者へ届く祈りを、味方の名前で止める",
+          "result": "向こう側から何かが振り返った。マリアンは味方の名を呼び、戻す相手を間違えずに光を閉じた。",
+          "intent": "本来の力を一気に取り戻す",
+          "promise": "失敗時の危険を引き受け、この人専用の成長を最大まで進める。",
+          "memory": "力を恐れたまま任せたことを、相手は危機の場面で思い出す。",
+          "tone": "heroic",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "marian"
+              },
+              "mode": "add",
+              "trust": 10,
+              "ownership": -4
+            },
+            {
+              "type": "fighterPoints",
+              "target": {
+                "type": "fighter",
+                "fighterId": "marian"
+              },
+              "amount": 5
+            }
+          ],
+          "goto": "marian.power.node.effect.001"
+        },
+        {
+          "id": "marian.power.choice.002",
+          "label": "傷だけを巻き戻し、命には触れない練習をする",
+          "result": "奇跡は小さくなったが、誰も余分に生き返らなかった。試合で使える治療としては、その方がずっと偉かった。",
+          "intent": "安全な段階解除で確実に進む",
+          "promise": "本来の力は一部に留め、チーム全体の成長へ成果を持ち帰る。",
+          "memory": "全員で帰ると決めた手順が、危機で使える安全策として残る。",
+          "tone": "pragmatic",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "marian"
+              },
+              "mode": "add",
+              "trust": 0,
+              "ownership": 9
+            },
+            {
+              "type": "sharedPoints",
+              "amount": 5
+            }
+          ],
+          "goto": "marian.power.node.effect.001"
+        }
+      ]
+    },
+    {
+      "type": "effect",
+      "id": "marian.power.node.effect.001",
+      "effects": [
+        {
+          "type": "setStoryStage",
+          "fighterId": "marian",
+          "stage": 4
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "marian.power.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "approved",
+    "sourceDocument": "native narrative block migration",
+    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "legacyGeneratedIds": false
+  }
+}

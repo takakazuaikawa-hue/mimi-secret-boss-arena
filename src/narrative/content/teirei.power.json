@@ -1,0 +1,306 @@
+{
+  "schemaVersion": 1,
+  "id": "teirei.power",
+  "kind": "character",
+  "title": "取り戻す力",
+  "summary": "廃棄物保管区で起きる「取り戻す力」",
+  "ownership": {
+    "arcId": "character.teirei",
+    "characterId": "teirei",
+    "stage": "power"
+  },
+  "trigger": {
+    "actions": [
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 400,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "廃棄物保管区",
+    "assets": [
+      {
+        "id": "teirei.power.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-observation-deck-night.png",
+        "alt": "廃棄物保管区の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "line",
+      "id": "teirei.power.node.line.001",
+      "lineId": "teirei.power.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "練習のあと、丁零に呼ばれて廃棄物保管区まで来た。いつもの力では足りない理由を、見せたいらしい。"
+    },
+    {
+      "type": "line",
+      "id": "teirei.power.node.line.002",
+      "lineId": "teirei.power.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "警報より先に、相手の声が私の名を呼んだ。いつもと同じ呼び方なのに、その一音だけで足が止まる。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "teirei.power.node.line.003",
+      "lineId": "teirei.power.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "訓練場の標的がすべて赤く染まり、次の瞬間には敵味方の表示そのものが消えた。空気だけが薄く焼けている。"
+    },
+    {
+      "type": "line",
+      "id": "teirei.power.node.line.004",
+      "lineId": "teirei.power.line.004",
+      "speakerId": "legacy.speaker.qmf7da",
+      "speakerName": "丁零",
+      "mode": "dialogue",
+      "text": "旧命令表を発見。対象はすでに存在しません。"
+    },
+    {
+      "type": "direction",
+      "id": "teirei.power.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "teirei.power.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "teirei.power.node.direction.002",
+      "command": {
+        "type": "effect",
+        "effectId": "flash"
+      }
+    },
+    {
+      "type": "line",
+      "id": "teirei.power.node.line.005",
+      "lineId": "teirei.power.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "敵の定義を一行変えるだけで、都市防衛網の敵味方が丸ごと消える。そんな力が、目の前で息をしている。逃げる理由なら十分だった。それでも私は、力の大きさより丁零が最初にどこを見るのかを確かめたかった。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "teirei.power.node.line.006",
+      "lineId": "teirei.power.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "丁零が私と危険の間へ立つ。触れてはいない。それでも、こちらへ届くはずだった圧力だけがきれいに二つへ割れた。"
+    },
+    {
+      "type": "line",
+      "id": "teirei.power.node.line.007",
+      "lineId": "teirei.power.line.007",
+      "speakerId": "legacy.speaker.qmf7da",
+      "speakerName": "丁零",
+      "mode": "dialogue",
+      "text": "敵を定義しなければ、攻撃対象は存在しない。存在しなければ、私は最も安全な兵器になる。"
+    },
+    {
+      "type": "line",
+      "id": "teirei.power.node.line.008",
+      "lineId": "teirei.power.line.008",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "じゃあ捨てましょう。"
+    },
+    {
+      "type": "line",
+      "id": "teirei.power.node.line.009",
+      "lineId": "teirei.power.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "命令を正確に実行し、誤差を残さない兵器。けれど今見せている力は、勝つためではなく、私を怖がらせないために抑えられている。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "teirei.power.node.line.010",
+      "lineId": "teirei.power.line.010",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "戦わないことで完成する兵器って、会社は喜ばなさそうです。"
+    },
+    {
+      "type": "line",
+      "id": "teirei.power.node.line.011",
+      "lineId": "teirei.power.line.011",
+      "speakerId": "legacy.speaker.qmf7da",
+      "speakerName": "丁零",
+      "mode": "dialogue",
+      "text": "削除には所有者権限が必要です。要求しますか。"
+    },
+    {
+      "type": "line",
+      "id": "teirei.power.node.line.012",
+      "lineId": "teirei.power.line.012",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "本気を見たいと思っていた。実際に目の前へ現れると、知りたかったのは強さではなく、その力を本人がどう恐れているかだった。"
+    },
+    {
+      "type": "line",
+      "id": "teirei.power.node.line.013",
+      "lineId": "teirei.power.line.013",
+      "speakerId": "legacy.speaker.qmf7da",
+      "speakerName": "丁零",
+      "mode": "dialogue",
+      "text": "会社の満足は、現命令表に登録されていない。"
+    },
+    {
+      "type": "line",
+      "id": "teirei.power.node.line.014",
+      "lineId": "teirei.power.line.014",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "敵の定義を一行変えるだけで、都市防衛網の敵味方が丸ごと消える。闘技場の安全基準は一瞬で役に立たなくなり、担当者は私の顔を見て計測を諦めた。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "teirei.power.node.line.015",
+      "lineId": "teirei.power.line.015",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "世界を壊せることより、壊さないために何を選んだかが胸へ残った。空白の命令欄で止まる姿は故障ではなく、自分の理由を初めて探している途中だった。その理解が正しいか、いつか本人の言葉で確かめたい。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "teirei.power.node.line.016",
+      "lineId": "teirei.power.line.016",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "力の中心にあったのは、自分で選んだ行動まで、誰かの命令を模倣しただけかもしれないこと。最強であることが、本人にとって一番古い傷なのだと分かる。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "teirei.power.node.line.017",
+      "lineId": "teirei.power.line.017",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "怖さが消えたわけではない。だからこそ、使うかどうかを本人と決める必要がある。"
+    },
+    {
+      "type": "line",
+      "id": "teirei.power.node.line.018",
+      "lineId": "teirei.power.line.018",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "大丈夫とは言えない。怖いものは怖い。それでも、次に力を使う時は一人で決めなくていいと伝えた。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "teirei.power.node.line.019",
+      "lineId": "teirei.power.line.019",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "初めて自分で直した給湯器の温度記録だけが元の大きさで残り、さっきまで世界の終わりがいた場所に、帰り道の灯りが戻った。"
+    },
+    {
+      "type": "choice",
+      "id": "teirei.power.node.choice.001",
+      "choices": [
+        {
+          "id": "teirei.power.choice.001",
+          "label": "廃棄命令の記憶領域だけを切り離す",
+          "result": "火花の中から、戦う技術だけが残った。丁零は消えた命令を検索し、それから検索を自分で終了した。",
+          "intent": "本来の力を一気に取り戻す",
+          "promise": "失敗時の危険を引き受け、この人専用の成長を最大まで進める。",
+          "memory": "力を恐れたまま任せたことを、相手は危機の場面で思い出す。",
+          "tone": "heroic",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "teirei"
+              },
+              "mode": "add",
+              "trust": 10,
+              "ownership": -4
+            },
+            {
+              "type": "fighterPoints",
+              "target": {
+                "type": "fighter",
+                "fighterId": "teirei"
+              },
+              "amount": 5
+            }
+          ],
+          "goto": "teirei.power.node.effect.001"
+        },
+        {
+          "id": "teirei.power.choice.002",
+          "label": "敵性判定を残し、守る対象を三人に限定する",
+          "result": "判断は安定した。鋭さの代わりに迷いが減り、誰かが倒れた時の戻り方まで手順になった。",
+          "intent": "安全な段階解除で確実に進む",
+          "promise": "本来の力は一部に留め、チーム全体の成長へ成果を持ち帰る。",
+          "memory": "全員で帰ると決めた手順が、危機で使える安全策として残る。",
+          "tone": "pragmatic",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "teirei"
+              },
+              "mode": "add",
+              "trust": 0,
+              "ownership": 9
+            },
+            {
+              "type": "sharedPoints",
+              "amount": 5
+            }
+          ],
+          "goto": "teirei.power.node.effect.001"
+        }
+      ]
+    },
+    {
+      "type": "effect",
+      "id": "teirei.power.node.effect.001",
+      "effects": [
+        {
+          "type": "setStoryStage",
+          "fighterId": "teirei",
+          "stage": 4
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "teirei.power.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "approved",
+    "sourceDocument": "native narrative block migration",
+    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "legacyGeneratedIds": false
+  }
+}

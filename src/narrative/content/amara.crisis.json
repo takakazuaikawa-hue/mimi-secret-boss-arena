@@ -1,0 +1,335 @@
+{
+  "schemaVersion": 1,
+  "id": "amara.crisis",
+  "kind": "character",
+  "title": "最後の準備",
+  "summary": "契約保管庫で起きる「最後の準備」",
+  "ownership": {
+    "arcId": "character.amara",
+    "characterId": "amara",
+    "stage": "crisis"
+  },
+  "trigger": {
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 400,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "契約保管庫",
+    "assets": [
+      {
+        "id": "amara.crisis.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-contract-archive-v2.png",
+        "alt": "契約保管庫の背景"
+      },
+      {
+        "id": "amara.crisis.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/events/amara-crisis.png",
+        "alt": "最後の準備のイベント一枚絵"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "line",
+      "id": "amara.crisis.node.line.001",
+      "lineId": "amara.crisis.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "アルデバラン社から届いた契約確認書には、アマラの扱いを決める欄が残っていた。本人の意思を聞くため、契約保管庫へ向かった。"
+    },
+    {
+      "type": "line",
+      "id": "amara.crisis.node.line.002",
+      "lineId": "amara.crisis.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "その週、相手は私を避けた。廊下の向こうに姿を見つけても、業務用の言葉だけを残して先に曲がる。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "amara.crisis.node.line.003",
+      "lineId": "amara.crisis.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "利益相反確認書の当事者欄に、選手アマラ、担当者ミミ、被告アルデバラン社、そして原告にも私の名前がある。"
+    },
+    {
+      "type": "line",
+      "id": "amara.crisis.node.line.004",
+      "lineId": "amara.crisis.line.004",
+      "speakerId": "legacy.speaker.14shtqw",
+      "speakerName": "アマラ",
+      "mode": "dialogue",
+      "text": "あなたが所有者である限り、私の訴えは利益相反になる。"
+    },
+    {
+      "type": "direction",
+      "id": "amara.crisis.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "amara.crisis.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "amara.crisis.node.direction.002",
+      "command": {
+        "type": "effect",
+        "effectId": "shake"
+      }
+    },
+    {
+      "type": "line",
+      "id": "amara.crisis.node.line.005",
+      "lineId": "amara.crisis.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "アマラの返事が短い。怒っている、と決めれば私の不安には名前がつく。でも以前の私も「正しい規則さえ示せば納得する人なのだ」と決めつけた。また同じ読み違いをするところだった。",
+      "emotion": "tension"
+    },
+    {
+      "type": "direction",
+      "id": "amara.crisis.node.direction.003",
+      "command": {
+        "type": "still",
+        "assetId": "amara.crisis.asset.still.001"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "amara.crisis.node.direction.004",
+      "command": {
+        "type": "effect",
+        "effectId": "pulse"
+      }
+    },
+    {
+      "type": "line",
+      "id": "amara.crisis.node.line.006",
+      "lineId": "amara.crisis.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "嫌われたのなら理由を聞けばいい。そう思うのに、箸袋の裏へ書かれた最初の異議申立てを見るたび、聞いた答えで今までの時間が変わるのが怖かった。"
+    },
+    {
+      "type": "line",
+      "id": "amara.crisis.node.line.007",
+      "lineId": "amara.crisis.line.007",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "私、一人で何役やらされてるんでしょう。"
+    },
+    {
+      "type": "line",
+      "id": "amara.crisis.node.line.008",
+      "lineId": "amara.crisis.line.008",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "じゃあ、所有者をやめたら？"
+    },
+    {
+      "type": "line",
+      "id": "amara.crisis.node.line.009",
+      "lineId": "amara.crisis.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ようやく追いついた場所で、アマラはどんな相手にも判決と根拠を崩さない裁定者に戻っていた。近づく前の、何も期待していなかった顔だ。"
+    },
+    {
+      "type": "line",
+      "id": "amara.crisis.node.line.010",
+      "lineId": "amara.crisis.line.010",
+      "speakerId": "legacy.speaker.14shtqw",
+      "speakerName": "アマラ",
+      "mode": "dialogue",
+      "text": "所有されながら所有者代理を務めている。その矛盾自体が証拠だ。"
+    },
+    {
+      "type": "line",
+      "id": "amara.crisis.node.line.011",
+      "lineId": "amara.crisis.line.011",
+      "speakerId": "legacy.speaker.14shtqw",
+      "speakerName": "アマラ",
+      "mode": "dialogue",
+      "text": "その発言を証拠として採用します。"
+    },
+    {
+      "type": "line",
+      "id": "amara.crisis.node.line.012",
+      "lineId": "amara.crisis.line.012",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "原因は私への不信ではない。正しさを守るために、目の前の一人の痛みを証拠へ変えてしまうことから私を遠ざけようとしている。そのやさしさを、やさしいまま受け入れてはいけない気がした。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "amara.crisis.node.line.013",
+      "lineId": "amara.crisis.line.013",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "彼女の声は静かだった。怒りを大きく見せなくても、紙の上の嘘は一行ずつ逃げ場を失っていく。"
+    },
+    {
+      "type": "line",
+      "id": "amara.crisis.node.line.014",
+      "lineId": "amara.crisis.line.014",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "彼女が異議を唱えると、重力や昨日の判決まで被告席へ呼び出される。別れ話のように静かな場面なのに、施設全体は最終災害手順へ移行している。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "amara.crisis.node.line.015",
+      "lineId": "amara.crisis.line.015",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "正しい答えを当てることより、間違えたまま命令しないことを選ぶ。私は逃げ道をふさがない位置で止まり、聞きたかったことを短い言葉にした。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "amara.crisis.node.line.016",
+      "lineId": "amara.crisis.line.016",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "守るために離れるのは、残された側へ選択を渡さない。命令と同じだと告げると、初めて相手の表情が崩れた。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "amara.crisis.node.line.017",
+      "lineId": "amara.crisis.line.017",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "勝つための答えと、あとで自分を嫌いにならない答えは、同じとは限らない。"
+    },
+    {
+      "type": "line",
+      "id": "amara.crisis.node.line.018",
+      "lineId": "amara.crisis.line.018",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私は勝利を約束しない。安全も約束できない。ただ、裁く必要のない相談を聞き、結論を急がず同じ卓にいることを諦める判断だけは本人へ返すと決めた。"
+    },
+    {
+      "type": "line",
+      "id": "amara.crisis.node.line.019",
+      "lineId": "amara.crisis.line.019",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "並んで戻る廊下には、まだ一人分の距離がある。でも今度の沈黙は拒絶ではなく、同じ答えを考えるためのものだった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "choice",
+      "id": "amara.crisis.node.choice.001",
+      "choices": [
+        {
+          "id": "amara.crisis.choice.001",
+          "label": "選手契約そのものを公開法廷へ持ち込む",
+          "result": "公開法廷には観客まで証人として残った。アマラは勝敗より先に契約の矛盾を認めさせ、次戦へ使える判例を一つ作った。",
+          "intent": "この人だけの突破法へ賭ける",
+          "promise": "予測しにくい方法を試し、この人専用の成長を大きく進める。",
+          "memory": "危機で選んだ方法は、契約を解く場面でも二人の共通の記憶として戻る。",
+          "tone": "wild",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "amara"
+              },
+              "mode": "add",
+              "trust": 12,
+              "ownership": -10
+            },
+            {
+              "type": "fighterPoints",
+              "target": {
+                "type": "fighter",
+                "fighterId": "amara"
+              },
+              "amount": 6
+            }
+          ],
+          "goto": "amara.crisis.node.effect.001"
+        },
+        {
+          "id": "amara.crisis.choice.002",
+          "label": "大会規定の矛盾だけを先に監査する",
+          "result": "大会規定だけへ対象を絞ると、相手の違反技が三つ止まった。世界は変わらなくても、次の試合を公平にする手順は全員へ残った。",
+          "intent": "全員が使える安全な突破法を作る",
+          "promise": "本人だけの切り札は抑え、チーム全体へ使える成長を持ち帰る。",
+          "memory": "全員で組み直した手順は、契約を解く場面でも選んだ責任として戻る。",
+          "tone": "pragmatic",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "amara"
+              },
+              "mode": "add",
+              "trust": -2,
+              "ownership": 10
+            },
+            {
+              "type": "sharedPoints",
+              "amount": 6
+            }
+          ],
+          "goto": "amara.crisis.node.effect.001"
+        }
+      ]
+    },
+    {
+      "type": "effect",
+      "id": "amara.crisis.node.effect.001",
+      "effects": [
+        {
+          "type": "setStoryStage",
+          "fighterId": "amara",
+          "stage": 5
+        },
+        {
+          "type": "setLiberationEligible",
+          "fighterId": "amara",
+          "eligible": true
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "amara.crisis.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "approved",
+    "sourceDocument": "native narrative block migration",
+    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "legacyGeneratedIds": false
+  }
+}

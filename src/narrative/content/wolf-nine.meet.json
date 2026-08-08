@@ -1,0 +1,310 @@
+{
+  "schemaVersion": 1,
+  "id": "wolf-nine.meet",
+  "kind": "character",
+  "title": "最初の遭遇",
+  "summary": "郵便受取所で起きる「最初の遭遇」",
+  "ownership": {
+    "arcId": "character.wolf-nine",
+    "characterId": "wolf-nine",
+    "stage": "meet"
+  },
+  "trigger": {
+    "actions": [
+      "work",
+      "play"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 500,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "郵便受取所",
+    "assets": [
+      {
+        "id": "wolf-nine.meet.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-arena-reception.png",
+        "alt": "郵便受取所の背景"
+      },
+      {
+        "id": "wolf-nine.meet.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/encounters/wolf-nine.png",
+        "alt": "最初の遭遇のイベント一枚絵"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "line",
+      "id": "wolf-nine.meet.node.line.001",
+      "lineId": "wolf-nine.meet.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "今週の用事で郵便受取所へ立ち寄った。予定どおりなら、目の前の用事を済ませて帰るだけのはずだった。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.meet.node.line.002",
+      "lineId": "wolf-nine.meet.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "その日、最初に目へ入ったのは九つの決闘印、擦り切れた手袋、勝者の名がない表彰状だった。人より先に、その人の孤独だけが場所を取っていた。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.meet.node.line.003",
+      "lineId": "wolf-nine.meet.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "受付カウンターへ八通の挑戦状が扇のように並べられていた。どれも封蝋に深い歯形があり、宛名だけが私になっている。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.meet.node.line.004",
+      "lineId": "wolf-nine.meet.line.004",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "封蝋の手紙、私宛て？"
+    },
+    {
+      "type": "direction",
+      "id": "wolf-nine.meet.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "wolf-nine.meet.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "wolf-nine.meet.node.direction.002",
+      "command": {
+        "type": "effect",
+        "effectId": "flash"
+      }
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.meet.node.line.005",
+      "lineId": "wolf-nine.meet.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ここへ来た理由は、ごく普通の用事だった。けれどウルフ・ナインを見た瞬間、兎耳だけが先に危険を知らせる。私はとっさに、強い相手と戦い続けられれば満足する戦士なのだと思いかけた。",
+      "emotion": "comic"
+    },
+    {
+      "type": "direction",
+      "id": "wolf-nine.meet.node.direction.003",
+      "command": {
+        "type": "still",
+        "assetId": "wolf-nine.meet.asset.still.001"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "wolf-nine.meet.node.direction.004",
+      "command": {
+        "type": "effect",
+        "effectId": "pulse"
+      }
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.meet.node.line.006",
+      "lineId": "wolf-nine.meet.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "声をかけるべきか迷っている間に、視線だけが一度重なる。胸が跳ねたのは見た目のせいではない。見つけてはいけない何かを、向こうも隠さなかったからだ。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.meet.node.line.007",
+      "lineId": "wolf-nine.meet.line.007",
+      "speakerId": "legacy.speaker.1vj9fme",
+      "speakerName": "ヴォルフ・ナイン",
+      "mode": "dialogue",
+      "text": "八度負けた。だから八度、弱くなくなった。次の相手を探している。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.meet.node.line.008",
+      "lineId": "wolf-nine.meet.line.008",
+      "speakerId": "legacy.speaker.1vj9fme",
+      "speakerName": "ヴォルフ・ナイン",
+      "mode": "dialogue",
+      "text": "三日後、噴水前で待つ。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.meet.node.line.009",
+      "lineId": "wolf-nine.meet.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ウルフ・ナインは、負けるたび強くなり、次の決闘だけを生きる九番目の狼に見えた。だから私は、普通のお客様へするのと同じ声で話しかけることにした。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.meet.node.line.010",
+      "lineId": "wolf-nine.meet.line.010",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "私、戦えませんよ。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.meet.node.line.011",
+      "lineId": "wolf-nine.meet.line.011",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "待ち合わせじゃなくて決闘って書いてある。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.meet.node.line.012",
+      "lineId": "wolf-nine.meet.line.012",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "たった一言の返事を待つ時間が、試合開始前より長い。背後ではいつもの業務放送が流れ、この場所だけが別の物語の入口みたいに静かだった。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.meet.node.line.013",
+      "lineId": "wolf-nine.meet.line.013",
+      "speakerId": "legacy.speaker.1vj9fme",
+      "speakerName": "ヴォルフ・ナイン",
+      "mode": "dialogue",
+      "text": "知っている。戦う者を選ぶ目へ挑む。剣より鈍ければ、九度目には足りない。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.meet.node.line.014",
+      "lineId": "wolf-nine.meet.line.014",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "再戦の印が増えるほど月が欠け、九戦目には空そのものが決闘場になる。それでも本人が気にしたのは、私が一歩引いたことの方だった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.meet.node.line.015",
+      "lineId": "wolf-nine.meet.line.015",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "まだ事情はほとんど分からない。ただ、最初の考えだけでは説明できない表情を見てしまった。私は曲がった名札を直し、次に会う口実をひとつ残した。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.meet.node.line.016",
+      "lineId": "wolf-nine.meet.line.016",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "怖くないと言えば嘘になる。でも、怖さの奥に勝ってしまえば、再戦を約束してくれる相手も生きる理由もなくなることがある気がして、目をそらす方が失礼に思えた。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.meet.node.line.017",
+      "lineId": "wolf-nine.meet.line.017",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "事情はまだ分からない。でも、ここで立ち去れば、たぶん後悔する。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.meet.node.line.018",
+      "lineId": "wolf-nine.meet.line.018",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "名前を聞いただけ。約束も、契約も、まだ何もない。それなのに別れ際、次に会った時の言葉を考えている自分がいた。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.meet.node.line.019",
+      "lineId": "wolf-nine.meet.line.019",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "その場に残った勝敗を書かずに残した十枚目の対戦票を見て、私は今日の出来事を勤務報告の一行だけでは終わらせられないと知った。"
+    },
+    {
+      "type": "choice",
+      "id": "wolf-nine.meet.node.choice.001",
+      "choices": [
+        {
+          "id": "wolf-nine.meet.choice.001",
+          "label": "八通分の挑戦状へ返事を書く",
+          "result": "返事は一通で済んだ。翌朝、九通目だけが先に届いた。",
+          "intent": "登録の前に、目の前の相手を知る",
+          "promise": "目先の報酬は得ない代わりに、相手が何を望んでいるかを確かめる。",
+          "memory": "手続きより先に話を聞いたことを、相手は最初の印象として覚えている。",
+          "tone": "tender",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "wolf-nine"
+              },
+              "mode": "add",
+              "trust": 7,
+              "ownership": -2
+            }
+          ],
+          "goto": "wolf-nine.meet.node.effect.001"
+        },
+        {
+          "id": "wolf-nine.meet.choice.002",
+          "label": "今日はヴォルフ・ナインを誘わず、用事へ戻る",
+          "result": "ヴォルフ・ナインの名前と出会った場所だけを覚え、今日は普段の仕事へ戻った。急いで所属を決めなかったことが、次に会う時の距離として残った。",
+          "intent": "今は勧誘せず、相手との距離を保つ",
+          "promise": "所属選手にはならないが、後の出来事で再会できる。",
+          "memory": "最初の出会いで急いで仲間にしなかったことが、次の再会へ残る。",
+          "tone": "pragmatic",
+          "effects": [],
+          "goto": "wolf-nine.meet.node.effect.001"
+        }
+      ]
+    },
+    {
+      "type": "effect",
+      "id": "wolf-nine.meet.node.effect.001",
+      "effects": [
+        {
+          "type": "markEncountered",
+          "fighterId": "wolf-nine",
+          "encountered": true
+        },
+        {
+          "type": "setStoryStage",
+          "fighterId": "wolf-nine",
+          "stage": 1
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "wolf-nine.meet.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "approved",
+    "sourceDocument": "native narrative block migration",
+    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "legacyGeneratedIds": false
+  }
+}

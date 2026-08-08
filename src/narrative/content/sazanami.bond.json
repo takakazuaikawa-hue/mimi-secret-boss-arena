@@ -1,0 +1,306 @@
+{
+  "schemaVersion": 1,
+  "id": "sazanami.bond",
+  "kind": "character",
+  "title": "チームの日常",
+  "summary": "噴水広場で起きる「チームの日常」",
+  "ownership": {
+    "arcId": "character.sazanami",
+    "characterId": "sazanami",
+    "stage": "bond"
+  },
+  "trigger": {
+    "actions": [
+      "rest"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 400,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "噴水広場",
+    "assets": [
+      {
+        "id": "sazanami.bond.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-casino-cafe-rain.png",
+        "alt": "噴水広場の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "line",
+      "id": "sazanami.bond.node.line.001",
+      "lineId": "sazanami.bond.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "さざなみがチームに加わってから、噴水広場で顔を合わせることが増えた。今日は試合の話ではなく、少しだけ時間が空いている。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.bond.node.line.002",
+      "lineId": "sazanami.bond.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "試合のない午後。窓を雨が細く叩き、業務連絡も歓声も今日は遠い。二人きりになる予定ではなかったのに、空いている席は向かいだけだった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.bond.node.line.003",
+      "lineId": "sazanami.bond.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "水族館の閉館後、水槽の前へ弁当を二つ置いた。片方は当然食べられないのに、さざなみは海藻の形へ細かく感想を言う。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.bond.node.line.004",
+      "lineId": "sazanami.bond.line.004",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "今日は波が静かですね。"
+    },
+    {
+      "type": "direction",
+      "id": "sazanami.bond.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "sazanami.bond.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "sazanami.bond.node.direction.002",
+      "command": {
+        "type": "effect",
+        "effectId": "pulse"
+      }
+    },
+    {
+      "type": "line",
+      "id": "sazanami.bond.node.line.005",
+      "lineId": "sazanami.bond.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "試合も契約もない時間なら、もっと気楽に話せると思っていた。実際は、お茶を一口飲むたび沈黙の意味を考えてしまう。強さを見ている時より、さざなみの小さな癖のほうがずっと気になった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.bond.node.line.006",
+      "lineId": "sazanami.bond.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "水槽の向こうの巨大な瞼と、弁当の青のりが作る浅瀬。戦場では見落としていた小さな癖が、何も起きない時間ほどよく見える。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.bond.node.line.007",
+      "lineId": "sazanami.bond.line.007",
+      "speakerId": "legacy.speaker.we7zqt",
+      "speakerName": "さざなみ",
+      "mode": "dialogue",
+      "text": "その緑は浅瀬の味がする。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.bond.node.line.008",
+      "lineId": "sazanami.bond.line.008",
+      "speakerId": "legacy.speaker.we7zqt",
+      "speakerName": "さざなみ",
+      "mode": "dialogue",
+      "text": "眠い。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.bond.node.line.009",
+      "lineId": "sazanami.bond.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "さざなみは海溝より深い場所から、地上を小さな影として眺めるもの。そのはずなのに、私の休憩が終わる時刻を気にして、話題を一つずつ短くしている。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.bond.node.line.010",
+      "lineId": "sazanami.bond.line.010",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "コンビニの青のりです。海を見る目が厳しすぎませんか。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.bond.node.line.011",
+      "lineId": "sazanami.bond.line.011",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "返事が短いの、ちょっと安心します。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.bond.node.line.012",
+      "lineId": "sazanami.bond.line.012",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "特別な話をしなくても、同じ音を聞いていられる。そんな時間が欲しかったのだと、失う前から気づいてしまった。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.bond.node.line.013",
+      "lineId": "sazanami.bond.line.013",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "水面が小さく揺れた。笑ったのだと思うと、私の弁当まで少しおいしくなった。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.bond.node.line.014",
+      "lineId": "sazanami.bond.line.014",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "寝返り一つで沿岸三県の潮位が変わるのに、青のりの質には細かい。甘い空気になりかけるたび、世界の方が先に耐えられなくなる。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.bond.node.line.015",
+      "lineId": "sazanami.bond.line.015",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "距離を測り続けていたのは、こちらの暮らしを小さいものとして踏み越えたくなかったからだ。そう気づくと、何も起きなかった午後が急に大事な出来事へ変わった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.bond.node.line.016",
+      "lineId": "sazanami.bond.line.016",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "笑いが収まったあと、地図を変えない歩き方で、同じ窓辺へ会いに来ることという、驚くほど普通の望みが語られた。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.bond.node.line.017",
+      "lineId": "sazanami.bond.line.017",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "試合の外で交わした言葉のほうが、次の指示より長く残ることがある。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.bond.node.line.018",
+      "lineId": "sazanami.bond.line.018",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "それは私が叶えるものではない。ただ、叶うまで隣にいることならできる。そう言いかけて、言葉にする勇気だけが遅れた。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.bond.node.line.019",
+      "lineId": "sazanami.bond.line.019",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "浅瀬の味だと評された空の弁当箱を間に置いたまま、私たちは雨が止んでもしばらく席を立たなかった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "choice",
+      "id": "sazanami.bond.node.choice.001",
+      "choices": [
+        {
+          "id": "sazanami.bond.choice.001",
+          "label": "海が見える窓辺で、小さな水槽の散歩をする",
+          "result": "歩いたのは私で、水槽は台車、本人は海より大きい。散歩の定義は崩れたが、機嫌はよかった。",
+          "intent": "相手の秘密の勝ち方を試す",
+          "promise": "読みにくい作戦になる代わりに、この人だけの成長を大きく進める。",
+          "memory": "任せた一戦の手応えが、次に力を見せる理由になる。",
+          "tone": "wild",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "sazanami"
+              },
+              "mode": "add",
+              "trust": 9,
+              "ownership": -2
+            },
+            {
+              "type": "fighterPoints",
+              "target": {
+                "type": "fighter",
+                "fighterId": "sazanami"
+              },
+              "amount": 3
+            }
+          ],
+          "goto": "sazanami.bond.node.effect.001"
+        },
+        {
+          "id": "sazanami.bond.choice.002",
+          "label": "水槽の影へ三人の陣形を重ねる",
+          "result": "影の中では足音が波になり、三人の間合いが揃った。床清掃の担当だけが翌朝まで帰れなかった。",
+          "intent": "チームの新しい連携を試す",
+          "promise": "本人の流儀は崩すが、全員へ配れる成長ポイントを得る。",
+          "memory": "成功した作戦と短くなった会話の両方が、次の判断まで残る。",
+          "tone": "pragmatic",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "sazanami"
+              },
+              "mode": "add",
+              "trust": 1,
+              "ownership": 7
+            },
+            {
+              "type": "sharedPoints",
+              "amount": 3
+            }
+          ],
+          "goto": "sazanami.bond.node.effect.001"
+        }
+      ]
+    },
+    {
+      "type": "effect",
+      "id": "sazanami.bond.node.effect.001",
+      "effects": [
+        {
+          "type": "setStoryStage",
+          "fighterId": "sazanami",
+          "stage": 3
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "sazanami.bond.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "approved",
+    "sourceDocument": "native narrative block migration",
+    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "legacyGeneratedIds": false
+  }
+}

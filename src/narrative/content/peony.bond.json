@@ -1,0 +1,307 @@
+{
+  "schemaVersion": 1,
+  "id": "peony.bond",
+  "kind": "character",
+  "title": "チームの日常",
+  "summary": "従業員食堂で起きる「チームの日常」",
+  "ownership": {
+    "arcId": "character.peony",
+    "characterId": "peony",
+    "stage": "bond"
+  },
+  "trigger": {
+    "actions": [
+      "rest",
+      "play"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 400,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "従業員食堂",
+    "assets": [
+      {
+        "id": "peony.bond.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-casino-cafe-rain.png",
+        "alt": "従業員食堂の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "line",
+      "id": "peony.bond.node.line.001",
+      "lineId": "peony.bond.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ピオニーがチームに加わってから、従業員食堂で顔を合わせることが増えた。今日は試合の話ではなく、少しだけ時間が空いている。"
+    },
+    {
+      "type": "line",
+      "id": "peony.bond.node.line.002",
+      "lineId": "peony.bond.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "試合のない午後。窓を雨が細く叩き、業務連絡も歓声も今日は遠い。二人きりになる予定ではなかったのに、空いている席は向かいだけだった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "peony.bond.node.line.003",
+      "lineId": "peony.bond.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "託児室で積み木の城が崩れ、ピオニーが誰より先に謝った。壊したのは隣の幼児なのに、本人は胸を張っている。"
+    },
+    {
+      "type": "line",
+      "id": "peony.bond.node.line.004",
+      "lineId": "peony.bond.line.004",
+      "speakerId": "legacy.speaker.1e9iq7o",
+      "speakerName": "ピオニー",
+      "mode": "dialogue",
+      "text": "食堂の椅子、また壊した。"
+    },
+    {
+      "type": "direction",
+      "id": "peony.bond.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "peony.bond.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "peony.bond.node.direction.002",
+      "command": {
+        "type": "effect",
+        "effectId": "pulse"
+      }
+    },
+    {
+      "type": "line",
+      "id": "peony.bond.node.line.005",
+      "lineId": "peony.bond.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "試合も契約もない時間なら、もっと気楽に話せると思っていた。実際は、お茶を一口飲むたび沈黙の意味を考えてしまう。強さを見ている時より、ピオニーの小さな癖のほうがずっと気になった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "peony.bond.node.line.006",
+      "lineId": "peony.bond.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "大きな角、紙の冠、指先に乗るほど小さな積み木。戦場では見落としていた小さな癖が、何も起きない時間ほどよく見える。"
+    },
+    {
+      "type": "line",
+      "id": "peony.bond.node.line.007",
+      "lineId": "peony.bond.line.007",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "あなたが壊したことにすると、その子は失敗を覚えられませんよ。"
+    },
+    {
+      "type": "line",
+      "id": "peony.bond.node.line.008",
+      "lineId": "peony.bond.line.008",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "立って食べなくていいです。丈夫なのを頼みます。"
+    },
+    {
+      "type": "line",
+      "id": "peony.bond.node.line.009",
+      "lineId": "peony.bond.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ピオニーは壊れるものの前へ自分から立ち、全部の責任を引き受ける巨人。そのはずなのに、私の休憩が終わる時刻を気にして、話題を一つずつ短くしている。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "peony.bond.node.line.010",
+      "lineId": "peony.bond.line.010",
+      "speakerId": "legacy.speaker.1e9iq7o",
+      "speakerName": "ピオニー",
+      "mode": "dialogue",
+      "text": "失敗を覚えても、怖がられない大きさの者が引き受ければいいと思っていた。"
+    },
+    {
+      "type": "line",
+      "id": "peony.bond.node.line.011",
+      "lineId": "peony.bond.line.011",
+      "speakerId": "legacy.speaker.1e9iq7o",
+      "speakerName": "ピオニー",
+      "mode": "dialogue",
+      "text": "頼んでいいのか。そういうの。"
+    },
+    {
+      "type": "line",
+      "id": "peony.bond.node.line.012",
+      "lineId": "peony.bond.line.012",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "特別な話をしなくても、同じ音を聞いていられる。そんな時間が欲しかったのだと、失う前から気づいてしまった。"
+    },
+    {
+      "type": "line",
+      "id": "peony.bond.node.line.013",
+      "lineId": "peony.bond.line.013",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "幼児は自分で積み直した城を彼女の膝へ載せた。大きな手が、今度は支えるだけに使われた。"
+    },
+    {
+      "type": "line",
+      "id": "peony.bond.node.line.014",
+      "lineId": "peony.bond.line.014",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "くしゃみを我慢しただけで城壁が砂になり、本人だけが椅子の傷を気にしている。甘い空気になりかけるたび、世界の方が先に耐えられなくなる。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "peony.bond.node.line.015",
+      "lineId": "peony.bond.line.015",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "怖がっていたのは力そのものより、壊したあとも一緒に作り直してくれる人がいないことだった。そう気づくと、何も起きなかった午後が急に大事な出来事へ変わった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "peony.bond.node.line.016",
+      "lineId": "peony.bond.line.016",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "笑いが収まったあと、壊した責任ではなく、作り直す時間を誰かと分けることという、驚くほど普通の望みが語られた。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "peony.bond.node.line.017",
+      "lineId": "peony.bond.line.017",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "試合の外で交わした言葉のほうが、次の指示より長く残ることがある。"
+    },
+    {
+      "type": "line",
+      "id": "peony.bond.node.line.018",
+      "lineId": "peony.bond.line.018",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "それは私が叶えるものではない。ただ、叶うまで隣にいることならできる。そう言いかけて、言葉にする勇気だけが遅れた。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "peony.bond.node.line.019",
+      "lineId": "peony.bond.line.019",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "角の部分だけ立派に折られた紙の冠を間に置いたまま、私たちは雨が止んでもしばらく席を立たなかった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "choice",
+      "id": "peony.bond.node.choice.001",
+      "choices": [
+        {
+          "id": "peony.bond.choice.001",
+          "label": "子ども向けの紙芝居を、ピオニーと作る",
+          "result": "悪い竜役の声だけ迫力がありすぎて三人泣いた。終演後、本人が一人ずつ謝り、全員からもう一回を頼まれた。",
+          "intent": "相手の秘密の勝ち方を試す",
+          "promise": "読みにくい作戦になる代わりに、この人だけの成長を大きく進める。",
+          "memory": "任せた一戦の手応えが、次に力を見せる理由になる。",
+          "tone": "wild",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "peony"
+              },
+              "mode": "add",
+              "trust": 9,
+              "ownership": -2
+            },
+            {
+              "type": "fighterPoints",
+              "target": {
+                "type": "fighter",
+                "fighterId": "peony"
+              },
+              "amount": 3
+            }
+          ],
+          "goto": "peony.bond.node.effect.001"
+        },
+        {
+          "id": "peony.bond.choice.002",
+          "label": "味方を背に乗せ、城壁を越える連携を試す",
+          "result": "三人を乗せても平気だったが、降ろす場所を忘れた。次から着地点まで含めて作戦表へ書くことになった。",
+          "intent": "チームの新しい連携を試す",
+          "promise": "本人の流儀は崩すが、全員へ配れる成長ポイントを得る。",
+          "memory": "成功した作戦と短くなった会話の両方が、次の判断まで残る。",
+          "tone": "pragmatic",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "peony"
+              },
+              "mode": "add",
+              "trust": 1,
+              "ownership": 7
+            },
+            {
+              "type": "sharedPoints",
+              "amount": 3
+            }
+          ],
+          "goto": "peony.bond.node.effect.001"
+        }
+      ]
+    },
+    {
+      "type": "effect",
+      "id": "peony.bond.node.effect.001",
+      "effects": [
+        {
+          "type": "setStoryStage",
+          "fighterId": "peony",
+          "stage": 3
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "peony.bond.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "approved",
+    "sourceDocument": "native narrative block migration",
+    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "legacyGeneratedIds": false
+  }
+}

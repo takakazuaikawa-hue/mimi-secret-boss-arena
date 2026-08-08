@@ -1,0 +1,309 @@
+{
+  "schemaVersion": 1,
+  "id": "room-seventeen.meet",
+  "kind": "character",
+  "title": "最初の遭遇",
+  "summary": "従業員通路で起きる「最初の遭遇」",
+  "ownership": {
+    "arcId": "character.room-seventeen",
+    "characterId": "room-seventeen",
+    "stage": "meet"
+  },
+  "trigger": {
+    "actions": [
+      "work",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 500,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "従業員通路",
+    "assets": [
+      {
+        "id": "room-seventeen.meet.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-arena-reception.png",
+        "alt": "従業員通路の背景"
+      },
+      {
+        "id": "room-seventeen.meet.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/encounters/room-seventeen.png",
+        "alt": "最初の遭遇のイベント一枚絵"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "line",
+      "id": "room-seventeen.meet.node.line.001",
+      "lineId": "room-seventeen.meet.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "今週の用事で従業員通路へ立ち寄った。予定どおりなら、目の前の用事を済ませて帰るだけのはずだった。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.meet.node.line.002",
+      "lineId": "room-seventeen.meet.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "その日、最初に目へ入ったのはどこにもない廊下、戻る階段、室内に二つだけ置かれた椅子だった。人より先に、その人の孤独だけが場所を取っていた。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.meet.node.line.003",
+      "lineId": "room-seventeen.meet.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "従業員通路に昨日までなかった扉がある。『会議室17』の札は新しいのに、取っ手だけ何百年も使われた色をしていた。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.meet.node.line.004",
+      "lineId": "room-seventeen.meet.line.004",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "この通路、十六号室までしかなかったはず。"
+    },
+    {
+      "type": "direction",
+      "id": "room-seventeen.meet.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "room-seventeen.meet.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "room-seventeen.meet.node.direction.002",
+      "command": {
+        "type": "effect",
+        "effectId": "flash"
+      }
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.meet.node.line.005",
+      "lineId": "room-seventeen.meet.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ここへ来た理由は、ごく普通の用事だった。けれど十七号室を見た瞬間、兎耳だけが先に危険を知らせる。私はとっさに、客を守るため出口を隠す親切な部屋なのだと思いかけた。",
+      "emotion": "comic"
+    },
+    {
+      "type": "direction",
+      "id": "room-seventeen.meet.node.direction.003",
+      "command": {
+        "type": "still",
+        "assetId": "room-seventeen.meet.asset.still.001"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "room-seventeen.meet.node.direction.004",
+      "command": {
+        "type": "effect",
+        "effectId": "pulse"
+      }
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.meet.node.line.006",
+      "lineId": "room-seventeen.meet.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "声をかけるべきか迷っている間に、視線だけが一度重なる。胸が跳ねたのは見た目のせいではない。見つけてはいけない何かを、向こうも隠さなかったからだ。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.meet.node.line.007",
+      "lineId": "room-seventeen.meet.line.007",
+      "speakerId": "legacy.speaker.zzyjm6",
+      "speakerName": "十七号室",
+      "mode": "dialogue",
+      "text": "予約時間を三分過ぎています。内部では三十二年に相当します。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.meet.node.line.008",
+      "lineId": "room-seventeen.meet.line.008",
+      "speakerId": "legacy.speaker.zzyjm6",
+      "speakerName": "十七号室",
+      "mode": "dialogue",
+      "text": "予約は空いている。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.meet.node.line.009",
+      "lineId": "room-seventeen.meet.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "十七号室は、入った者へ安全な部屋を与え、出口だけを隠す迷宮に見えた。だから私は、普通のお客様へするのと同じ声で話しかけることにした。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.meet.node.line.010",
+      "lineId": "room-seventeen.meet.line.010",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "誰も予約していません。それと、中から声がする会議室は普通しゃべりません。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.meet.node.line.011",
+      "lineId": "room-seventeen.meet.line.011",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "部屋がしゃべった。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.meet.node.line.012",
+      "lineId": "room-seventeen.meet.line.012",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "たった一言の返事を待つ時間が、試合開始前より長い。背後ではいつもの業務放送が流れ、この場所だけが別の物語の入口みたいに静かだった。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.meet.node.line.013",
+      "lineId": "room-seventeen.meet.line.013",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "扉が少し開き、向こうに夕焼けの廊下が百本伸びた。冷房の風ではない季節が、足元へ触れた。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.meet.node.line.014",
+      "lineId": "room-seventeen.meet.line.014",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "少し寂しくなるだけで館内図が百一階まで増築され、非常口が昨日へつながる。それでも本人が気にしたのは、私が一歩引いたことの方だった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.meet.node.line.015",
+      "lineId": "room-seventeen.meet.line.015",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "まだ事情はほとんど分からない。ただ、最初の考えだけでは説明できない表情を見てしまった。私は曲がった名札を直し、次に会う口実をひとつ残した。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.meet.node.line.016",
+      "lineId": "room-seventeen.meet.line.016",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "怖くないと言えば嘘になる。でも、怖さの奥に大切な客を失わないために、帰る道まで奪ってしまうことがある気がして、目をそらす方が失礼に思えた。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.meet.node.line.017",
+      "lineId": "room-seventeen.meet.line.017",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "事情はまだ分からない。でも、ここで立ち去れば、たぶん後悔する。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.meet.node.line.018",
+      "lineId": "room-seventeen.meet.line.018",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "名前を聞いただけ。約束も、契約も、まだ何もない。それなのに別れ際、次に会った時の言葉を考えている自分がいた。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.meet.node.line.019",
+      "lineId": "room-seventeen.meet.line.019",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "その場に残った外側から初めて掛けられた『また来ます』の札を見て、私は今日の出来事を勤務報告の一行だけでは終わらせられないと知った。"
+    },
+    {
+      "type": "choice",
+      "id": "room-seventeen.meet.node.choice.001",
+      "choices": [
+        {
+          "id": "room-seventeen.meet.choice.001",
+          "label": "会議室として一時間予約する",
+          "result": "一時間で三十二階まで見学し、延長料金は世界一つ分だった。",
+          "intent": "登録の前に、目の前の相手を知る",
+          "promise": "目先の報酬は得ない代わりに、相手が何を望んでいるかを確かめる。",
+          "memory": "手続きより先に話を聞いたことを、相手は最初の印象として覚えている。",
+          "tone": "tender",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "room-seventeen"
+              },
+              "mode": "add",
+              "trust": 7,
+              "ownership": -2
+            }
+          ],
+          "goto": "room-seventeen.meet.node.effect.001"
+        },
+        {
+          "id": "room-seventeen.meet.choice.002",
+          "label": "今日は十七号室を誘わず、用事へ戻る",
+          "result": "十七号室の名前と出会った場所だけを覚え、今日は普段の仕事へ戻った。急いで所属を決めなかったことが、次に会う時の距離として残った。",
+          "intent": "今は勧誘せず、相手との距離を保つ",
+          "promise": "所属選手にはならないが、後の出来事で再会できる。",
+          "memory": "最初の出会いで急いで仲間にしなかったことが、次の再会へ残る。",
+          "tone": "pragmatic",
+          "effects": [],
+          "goto": "room-seventeen.meet.node.effect.001"
+        }
+      ]
+    },
+    {
+      "type": "effect",
+      "id": "room-seventeen.meet.node.effect.001",
+      "effects": [
+        {
+          "type": "markEncountered",
+          "fighterId": "room-seventeen",
+          "encountered": true
+        },
+        {
+          "type": "setStoryStage",
+          "fighterId": "room-seventeen",
+          "stage": 1
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "room-seventeen.meet.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "approved",
+    "sourceDocument": "native narrative block migration",
+    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "legacyGeneratedIds": false
+  }
+}

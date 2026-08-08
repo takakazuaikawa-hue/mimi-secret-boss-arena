@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "id": "amara.epilogue",
+  "kind": "character",
+  "title": "判決のない午後",
+  "summary": "相談窓口を閉めたアマラが、勝敗のないチョーク遊びへミミを誘う",
+  "ownership": {
+    "arcId": "character.amara",
+    "characterId": "amara",
+    "stage": "epilogue"
+  },
+  "trigger": {
+    "actions": [
+      "rest"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 400,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "第三コロシアム前・噴水広場",
+    "assets": [
+      {
+        "id": "amara.epilogue.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-casino-cafe-morning.png",
+        "alt": "噴水広場の背景"
+      },
+      {
+        "id": "amara.epilogue.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/events/amara-epilogue-no-verdict-v1.png",
+        "alt": "勝敗のない落書きの前で青いチョークを差し出し、笑うアマラ"
+      },
+      {
+        "id": "amara.epilogue.asset.still.002",
+        "kind": "still",
+        "path": "/assets/story/events/amara-epilogue-undecided-chalk-reward-v1.png",
+        "alt": "宇宙法廷の天秤を閉じ、勝敗を決めず、折れかけた青いチョークをミミへ差し出すアマラ"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "line",
+      "id": "amara.epilogue.node.line.001",
+      "lineId": "amara.epilogue.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "最終大会が終わってから、アマラと噴水広場で顔を合わせるのは今日が初めてだった。"
+    },
+    {
+      "type": "line",
+      "id": "amara.epilogue.node.line.002",
+      "lineId": "amara.epilogue.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "大会が終わってから、箸袋の裏へ書かれた最初の異議申立てを見るたび、あの人がいない日常の広さを測ってしまう。"
+    },
+    {
+      "type": "line",
+      "id": "amara.epilogue.node.line.003",
+      "lineId": "amara.epilogue.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "闘技場の入口に新しい相談窓口ができていた。看板には『規則への苦情も受け付けます』とある。"
+    },
+    {
+      "type": "line",
+      "id": "amara.epilogue.node.line.004",
+      "lineId": "amara.epilogue.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "再建された闘技場の第一条は、短い。"
+    },
+    {
+      "type": "direction",
+      "id": "amara.epilogue.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "amara.epilogue.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "amara.epilogue.node.direction.002",
+      "command": {
+        "type": "effect",
+        "effectId": "pulse"
+      }
+    },
+    {
+      "type": "line",
+      "id": "amara.epilogue.node.line.005",
+      "lineId": "amara.epilogue.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "箸袋の裏へ書かれた最初の異議申立てを見て、入口へ目をやる。待っていると認めるのは落ち着かない。でも、来なくても責められない関係になれたことは、少し誇らしかった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "amara.epilogue.node.line.006",
+      "lineId": "amara.epilogue.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "会う約束はしていない。だから待っているわけではない、と自分へ言い聞かせる朝ほど、入口の音によく気づいた。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "amara.epilogue.node.line.007",
+      "lineId": "amara.epilogue.line.007",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "窓口を作るだけで、本当に会社が許したんですか。"
+    },
+    {
+      "type": "line",
+      "id": "amara.epilogue.node.line.008",
+      "lineId": "amara.epilogue.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "『出場しない自由を妨げない』。"
+    },
+    {
+      "type": "line",
+      "id": "amara.epilogue.node.line.009",
+      "lineId": "amara.epilogue.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "アマラは以前と同じように現れ、以前ならしなかった小さな選択を自分から済ませていた。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "amara.epilogue.node.line.010",
+      "lineId": "amara.epilogue.line.010",
+      "speakerId": "legacy.speaker.14shtqw",
+      "speakerName": "アマラ",
+      "mode": "dialogue",
+      "text": "許可は取っていない。禁止する規則も、まだ見つかっていない。"
+    },
+    {
+      "type": "line",
+      "id": "amara.epilogue.node.line.011",
+      "lineId": "amara.epilogue.line.011",
+      "speakerId": "legacy.speaker.14shtqw",
+      "speakerName": "アマラ",
+      "mode": "dialogue",
+      "text": "二条は休憩時間です。こちらの方が長い。"
+    },
+    {
+      "type": "line",
+      "id": "amara.epilogue.node.line.012",
+      "lineId": "amara.epilogue.line.012",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "午後の相談窓口が閉まった。今日、アマラが出した結論は三件。出さずに一緒に考えると決めた相談は、その倍あった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "amara.epilogue.node.line.013",
+      "lineId": "amara.epilogue.line.013",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "広場の石畳には、子どもたちが描いた二匹の怪獣と、どちらにも届かない王冠が残っていた。『どっちの勝ち？』と聞かれ、アマラは白い手袋のまま固まった。"
+    },
+    {
+      "type": "line",
+      "id": "amara.epilogue.node.line.014",
+      "lineId": "amara.epilogue.line.014",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "重力へ判決を出せる人が、子どもの落書きの前で三分も黙っている。私は助け舟を出さず、噴水の縁から続きを待った。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "amara.epilogue.node.line.015",
+      "lineId": "amara.epilogue.line.015",
+      "speakerId": "legacy.speaker.14shtqw",
+      "speakerName": "アマラ",
+      "mode": "dialogue",
+      "text": "今日は判決を出さない。勝敗より、続きを見たい。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "amara.epilogue.node.line.016",
+      "lineId": "amara.epilogue.line.016",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "彼女は規則集を閉じ、石畳へ膝をついた。赤いチョークで、怪獣二匹の間に耳の長い何かを描き足す。円は少し歪み、右耳だけが妙に強かった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "amara.epilogue.node.line.017",
+      "lineId": "amara.epilogue.line.017",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "それ、私ですか？　ずいぶん判例の少ない生き物ですね。"
+    },
+    {
+      "type": "line",
+      "id": "amara.epilogue.node.line.018",
+      "lineId": "amara.epilogue.line.018",
+      "speakerId": "legacy.speaker.14shtqw",
+      "speakerName": "アマラ",
+      "mode": "dialogue",
+      "text": "被告ではない。たぶん兎だ。異議があるなら、隣へ描いて。"
+    },
+    {
+      "type": "direction",
+      "id": "amara.epilogue.node.direction.003",
+      "command": {
+        "type": "still",
+        "assetId": "amara.epilogue.asset.still.001"
+      }
+    },
+    {
+      "type": "line",
+      "id": "amara.epilogue.node.line.019",
+      "lineId": "amara.epilogue.line.019",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "振り向いたアマラが、折れかけた青いチョークを差し出して笑った。判決でも命令でもない誘いに、私の胸だけが先に賛成した。私は石畳へ降り、まだ空いている場所へ線を引いた。",
+      "emotion": "tender"
+    },
+    {
+      "type": "direction",
+      "id": "amara.epilogue.node.direction.004",
+      "command": {
+        "type": "still",
+        "assetId": "amara.epilogue.asset.still.002",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "end",
+      "id": "amara.epilogue.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "approved",
+    "sourceDocument": "native narrative block migration",
+    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "legacyGeneratedIds": false
+  }
+}

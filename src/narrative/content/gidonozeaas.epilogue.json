@@ -1,0 +1,203 @@
+{
+  "schemaVersion": 1,
+  "id": "gidonozeaas.epilogue",
+  "kind": "character",
+  "title": "再販日の朝",
+  "summary": "カジノカフェ・窓際で起きる「再販日の朝」",
+  "ownership": {
+    "arcId": "character.gidonozeaas",
+    "characterId": "gidonozeaas",
+    "stage": "epilogue"
+  },
+  "trigger": {
+    "actions": [
+      "rest"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 400,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "カジノカフェ・窓際",
+    "assets": [
+      {
+        "id": "gidonozeaas.epilogue.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-casino-cafe-morning.png",
+        "alt": "カジノカフェ・窓際の背景"
+      },
+      {
+        "id": "gidonozeaas.epilogue.asset.sprite.001",
+        "kind": "sprite",
+        "path": "/assets/story/gidono-unsealed-neutral.png",
+        "alt": "液状の人型をとったギドノゼアース"
+      },
+      {
+        "id": "gidonozeaas.epilogue.asset.sprite.002",
+        "kind": "sprite",
+        "path": "/assets/story/gidono-unsealed-soft.png",
+        "alt": "表情を和らげた人型のギドノゼアース"
+      },
+      {
+        "id": "gidonozeaas.epilogue.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/events/gidonozeaas-epilogue-window-invitation-reward-v1.png",
+        "alt": "宇宙の水平線と限定パフェを止めたギドノゼアースが、自分の意思でミミへ窓際の空席を差し出す"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "gidonozeaas.epilogue.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "gidonozeaas.epilogue.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "gidonozeaas.epilogue.node.direction.002",
+      "command": {
+        "type": "show",
+        "assetId": "gidonozeaas.epilogue.asset.sprite.001",
+        "actorId": "gidonozeaas",
+        "slot": "right",
+        "scale": "tall"
+      }
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.epilogue.node.line.001",
+      "lineId": "gidonozeaas.epilogue.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "最終大会から三日。カフェは、焼いたワッフルと床用ワックスの匂いがする。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.epilogue.node.line.002",
+      "lineId": "gidonozeaas.epilogue.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "窓際の予約札には、社員番号ではなく彼の名前だけ。黒い星も穏やかに回っている。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.epilogue.node.line.003",
+      "lineId": "gidonozeaas.epilogue.line.003",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "今日は同伴者欄、空白なんですね。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.epilogue.node.line.004",
+      "lineId": "gidonozeaas.epilogue.line.004",
+      "speakerId": "legacy.speaker.1jmq03z",
+      "speakerName": "ギドノゼアース",
+      "mode": "dialogue",
+      "text": "規則が変わった。ひとりでも限定メニューを注文できる。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.epilogue.node.line.005",
+      "lineId": "gidonozeaas.epilogue.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "望んでいた答えのはずなのに。空いた椅子を見ると、胸の奥まで少し広くなる。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.epilogue.node.line.006",
+      "lineId": "gidonozeaas.epilogue.line.006",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "じゃあ、私は仕事に戻ります。ごゆっくり。"
+    },
+    {
+      "type": "direction",
+      "id": "gidonozeaas.epilogue.node.direction.003",
+      "command": {
+        "type": "show",
+        "assetId": "gidonozeaas.epilogue.asset.sprite.002",
+        "actorId": "gidonozeaas",
+        "slot": "right",
+        "scale": "tall"
+      }
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.epilogue.node.line.007",
+      "lineId": "gidonozeaas.epilogue.line.007",
+      "speakerId": "legacy.speaker.1jmq03z",
+      "speakerName": "ギドノゼアース",
+      "mode": "dialogue",
+      "text": "待て。ひとりで来た者が、誰かを席へ呼んではならない規則もない。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.epilogue.node.line.008",
+      "lineId": "gidonozeaas.epilogue.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "パフェの向かいに、欠けたスタッフ用マグカップ。湯気が朝日にほどけている。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.epilogue.node.line.009",
+      "lineId": "gidonozeaas.epilogue.line.009",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "これ、注文してませんけど。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.epilogue.node.line.010",
+      "lineId": "gidonozeaas.epilogue.line.010",
+      "speakerId": "legacy.speaker.1jmq03z",
+      "speakerName": "ギドノゼアース",
+      "mode": "dialogue",
+      "text": "知っている。今度は、冷める前に座れ。"
+    },
+    {
+      "type": "direction",
+      "id": "gidonozeaas.epilogue.node.direction.004",
+      "command": {
+        "type": "still",
+        "assetId": "gidonozeaas.epilogue.asset.still.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.epilogue.node.line.011",
+      "lineId": "gidonozeaas.epilogue.line.011",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "タイムカードを裏返し、向かいの椅子を引く。今日の水平線は、一度も揺れなかった。"
+    },
+    {
+      "type": "end",
+      "id": "gidonozeaas.epilogue.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "approved",
+    "sourceDocument": "native narrative block migration",
+    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "legacyGeneratedIds": false
+  }
+}

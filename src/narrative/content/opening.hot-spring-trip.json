@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 1,
+  "id": "opening.hot-spring-trip",
+  "kind": "opening",
+  "title": "最上級チーム、湯けむりでは新人",
+  "summary": "アルデバラン湯けむり温泉・玄関で起きる「最上級チーム、湯けむりでは新人」",
+  "ownership": {
+    "arcId": "opening.hot-spring"
+  },
+  "trigger": {
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 850,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "アルデバラン湯けむり温泉・玄関",
+    "assets": [
+      {
+        "id": "opening.hot-spring-trip.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-hot-spring-ryokan.png",
+        "alt": "アルデバラン湯けむり温泉・玄関の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "opening.hot-spring-trip.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "opening.hot-spring-trip.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "opening.hot-spring-trip.node.direction.002",
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "line",
+      "id": "opening.hot-spring-trip.node.line.001",
+      "lineId": "opening.hot-spring-trip.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "新人向け大会で三連勝した翌週、私たちは温泉宿の玄関に立っていた。賞品の旅行券は本物だった。チームランクが最上級になったことより、朝食ビュッフェが本当に付いていることの方が、まだ信じやすい。"
+    },
+    {
+      "type": "line",
+      "id": "opening.hot-spring-trip.node.line.002",
+      "lineId": "opening.hot-spring-trip.line.002",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "今日は戦いません。封印も解きません。お風呂に入って、ごはんを食べて、普通に寝ます。"
+    },
+    {
+      "type": "line",
+      "id": "opening.hot-spring-trip.node.line.003",
+      "lineId": "opening.hot-spring-trip.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "仲間たちは静かにうなずいた。宿の屋根から、なぜか警報用の鳥が三羽飛び立った。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "opening.hot-spring-trip.node.line.004",
+      "lineId": "opening.hot-spring-trip.line.004",
+      "speakerId": "legacy.speaker.1102kql",
+      "speakerName": "宿の女将",
+      "mode": "dialogue",
+      "text": "最上級チームの皆さまですね。大浴場の結界は三重にしてございます。"
+    },
+    {
+      "type": "line",
+      "id": "opening.hot-spring-trip.node.line.005",
+      "lineId": "opening.hot-spring-trip.line.005",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "普通のお客様向けの案内からお願いします。"
+    },
+    {
+      "type": "line",
+      "id": "opening.hot-spring-trip.node.line.006",
+      "lineId": "opening.hot-spring-trip.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "女将は少し考え、それから浴衣の棚を示した。ようやく旅行らしい説明が始まる。私は胸をなで下ろした。棚のいちばん奥には『翼六枚用』と『霧状生命用』が並んでいた。"
+    },
+    {
+      "type": "choice",
+      "id": "opening.hot-spring-trip.node.choice.001",
+      "choices": [
+        {
+          "id": "opening.hot-spring-trip.choice.001",
+          "label": "まず全員の浴衣を選ぶ",
+          "result": "角、翼、触手、霧。それぞれの事情に合う浴衣を選ぶだけで一時間かかった。写真に収まった姿は妙に晴れやかで、旅行へ来た実感がやっと追いついた。",
+          "intent": "全員がくつろげる準備から始める",
+          "promise": "強さではなく、その人に合うものを一緒に選ぶ。",
+          "memory": "最上級チームが浴衣の寸法で悩んだ午後。",
+          "tone": "tender",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "available-roster"
+              },
+              "mode": "add",
+              "trust": 3,
+              "ownership": 0
+            }
+          ],
+          "goto": "opening.hot-spring-trip.node.end.001"
+        },
+        {
+          "id": "opening.hot-spring-trip.choice.002",
+          "label": "朝食ビュッフェの下見へ走る",
+          "result": "夕食前なのに会場まで確認し、焼き魚と温泉卵の配置を把握した。世界を滅ぼせる仲間たちが、翌朝の席順だけは真剣に相談している。",
+          "intent": "参加理由だった朝食を最優先する",
+          "promise": "楽しみにしていたものを、遠慮せず楽しむ。",
+          "memory": "戦術会議より白熱した、朝食ビュッフェ攻略会議。",
+          "tone": "comic",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "available-roster"
+              },
+              "mode": "add",
+              "trust": 2,
+              "ownership": 0
+            }
+          ],
+          "goto": "opening.hot-spring-trip.node.end.001"
+        },
+        {
+          "id": "opening.hot-spring-trip.choice.003",
+          "label": "誰も壊さない温泉の入り方を相談する",
+          "result": "入浴前の確認会は慎重だったが、最後には全員で笑った。壊さないための相談を本人たちとできることが、命令よりずっと頼もしく思えた。",
+          "intent": "宿と仲間の安全を一緒に考える",
+          "promise": "禁止する前に、どうすれば楽しめるかを話し合う。",
+          "memory": "湯けむりの前で交わした、最初の生活上の作戦会議。",
+          "tone": "pragmatic",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "available-roster"
+              },
+              "mode": "add",
+              "trust": 4,
+              "ownership": 0
+            }
+          ],
+          "goto": "opening.hot-spring-trip.node.end.001"
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "opening.hot-spring-trip.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "approved",
+    "sourceDocument": "native narrative block migration",
+    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "legacyGeneratedIds": false
+  }
+}

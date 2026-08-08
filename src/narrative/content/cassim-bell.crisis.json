@@ -1,0 +1,313 @@
+{
+  "schemaVersion": 1,
+  "id": "cassim-bell.crisis",
+  "kind": "character",
+  "title": "最後の準備",
+  "summary": "存在しない地下階で起きる「最後の準備」",
+  "ownership": {
+    "arcId": "character.cassim-bell",
+    "characterId": "cassim-bell",
+    "stage": "crisis"
+  },
+  "trigger": {
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 400,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "存在しない地下階",
+    "assets": [
+      {
+        "id": "cassim-bell.crisis.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-contract-archive-v2.png",
+        "alt": "存在しない地下階の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "line",
+      "id": "cassim-bell.crisis.node.line.001",
+      "lineId": "cassim-bell.crisis.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "アルデバラン社から届いた契約確認書には、カシム・ベルの扱いを決める欄が残っていた。本人の意思を聞くため、存在しない地下階へ向かった。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.crisis.node.line.002",
+      "lineId": "cassim-bell.crisis.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "その週、相手は私を避けた。廊下の向こうに姿を見つけても、業務用の言葉だけを残して先に曲がる。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.crisis.node.line.003",
+      "lineId": "cassim-bell.crisis.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "本社は倉庫の全保管物を『選手備品』へ変更する命令を出した。失くした誰かの希望まで、試合用の在庫になる。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.crisis.node.line.004",
+      "lineId": "cassim-bell.crisis.line.004",
+      "speakerId": "legacy.speaker.1wuvexi",
+      "speakerName": "カシム・ベル",
+      "mode": "dialogue",
+      "text": "契約上、私は倉庫の備品です。番人ではありません。"
+    },
+    {
+      "type": "direction",
+      "id": "cassim-bell.crisis.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "cassim-bell.crisis.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "cassim-bell.crisis.node.direction.002",
+      "command": {
+        "type": "effect",
+        "effectId": "shake"
+      }
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.crisis.node.line.005",
+      "lineId": "cassim-bell.crisis.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "カシム・ベルの返事が短い。怒っている、と決めれば私の不安には名前がつく。でも以前の私も「責任感が強すぎて窓口を離れられない人なのだ」と決めつけた。また同じ読み違いをするところだった。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.crisis.node.line.006",
+      "lineId": "cassim-bell.crisis.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "嫌われたのなら理由を聞けばいい。そう思うのに、何百年ぶりに表へ返した十五分休止の札を見るたび、聞いた答えで今までの時間が変わるのが怖かった。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.crisis.node.line.007",
+      "lineId": "cassim-bell.crisis.line.007",
+      "speakerId": "legacy.speaker.1wuvexi",
+      "speakerName": "カシム・ベル",
+      "mode": "dialogue",
+      "text": "私は番人です。命令されれば、扉を開けなければならない。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.crisis.node.line.008",
+      "lineId": "cassim-bell.crisis.line.008",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "備品が備品を管理してたんですか。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.crisis.node.line.009",
+      "lineId": "cassim-bell.crisis.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ようやく追いついた場所で、カシム・ベルは失くしたものを必ず保管し、持ち主が来るまで待ち続ける番人に戻っていた。近づく前の、何も期待していなかった顔だ。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.crisis.node.line.010",
+      "lineId": "cassim-bell.crisis.line.010",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "持ち主へ返すための扉を、勝つために勝手に開けたくありません。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.crisis.node.line.011",
+      "lineId": "cassim-bell.crisis.line.011",
+      "speakerId": "legacy.speaker.1wuvexi",
+      "speakerName": "カシム・ベル",
+      "mode": "dialogue",
+      "text": "おかしな話でしょう。やっと笑っていただけた。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.crisis.node.line.012",
+      "lineId": "cassim-bell.crisis.line.012",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "原因は私への不信ではない。自分が窓口を離れた十五分に、帰れない誰かが来てしまうことから私を遠ざけようとしている。そのやさしさを、やさしいまま受け入れてはいけない気がした。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.crisis.node.line.013",
+      "lineId": "cassim-bell.crisis.line.013",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "鈴が一斉に鳴り止んだ。彼は鍵束を握り、初めて窓口の内側から鍵をかけた。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.crisis.node.line.014",
+      "lineId": "cassim-bell.crisis.line.014",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "合鍵を一本取り違えるだけで、月の裏や滅亡前日の王都が休憩室へ開く。別れ話のように静かな場面なのに、施設全体は最終災害手順へ移行している。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.crisis.node.line.015",
+      "lineId": "cassim-bell.crisis.line.015",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "正しい答えを当てることより、間違えたまま命令しないことを選ぶ。私は逃げ道をふさがない位置で止まり、聞きたかったことを短い言葉にした。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.crisis.node.line.016",
+      "lineId": "cassim-bell.crisis.line.016",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "守るために離れるのは、残された側へ選択を渡さない。命令と同じだと告げると、初めて相手の表情が崩れた。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.crisis.node.line.017",
+      "lineId": "cassim-bell.crisis.line.017",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "勝つための答えと、あとで自分を嫌いにならない答えは、同じとは限らない。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.crisis.node.line.018",
+      "lineId": "cassim-bell.crisis.line.018",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私は勝利を約束しない。安全も約束できない。ただ、扉を閉め、温かい紅茶を最後まで飲んでから戻ることを諦める判断だけは本人へ返すと決めた。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.crisis.node.line.019",
+      "lineId": "cassim-bell.crisis.line.019",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "並んで戻る廊下には、まだ一人分の距離がある。でも今度の沈黙は拒絶ではなく、同じ答えを考えるためのものだった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "choice",
+      "id": "cassim-bell.crisis.node.choice.001",
+      "choices": [
+        {
+          "id": "cassim-bell.crisis.choice.001",
+          "label": "倉庫から失われた世界の出口を一つ開ける",
+          "result": "失われた世界の扉が一枚だけ開き、風と鐘の音が戻った。カシムだけが扱える出口が、次の勝ち筋にもつながった。",
+          "intent": "この人だけの突破法へ賭ける",
+          "promise": "予測しにくい方法を試し、この人専用の成長を大きく進める。",
+          "memory": "危機で選んだ方法は、契約を解く場面でも二人の共通の記憶として戻る。",
+          "tone": "wild",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "cassim-bell"
+              },
+              "mode": "add",
+              "trust": 12,
+              "ownership": -10
+            },
+            {
+              "type": "fighterPoints",
+              "target": {
+                "type": "fighter",
+                "fighterId": "cassim-bell"
+              },
+              "amount": 6
+            }
+          ],
+          "goto": "cassim-bell.crisis.node.effect.001"
+        },
+        {
+          "id": "cassim-bell.crisis.choice.002",
+          "label": "敵の大技だけを遺失物として預かる",
+          "result": "敵の大技は番号札になって倉庫へ消えた。返却の手順を全員で覚え、危険な力を安全に一度だけ使い直せるようになった。",
+          "intent": "全員が使える安全な突破法を作る",
+          "promise": "本人だけの切り札は抑え、チーム全体へ使える成長を持ち帰る。",
+          "memory": "全員で組み直した手順は、契約を解く場面でも選んだ責任として戻る。",
+          "tone": "pragmatic",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "cassim-bell"
+              },
+              "mode": "add",
+              "trust": -2,
+              "ownership": 10
+            },
+            {
+              "type": "sharedPoints",
+              "amount": 6
+            }
+          ],
+          "goto": "cassim-bell.crisis.node.effect.001"
+        }
+      ]
+    },
+    {
+      "type": "effect",
+      "id": "cassim-bell.crisis.node.effect.001",
+      "effects": [
+        {
+          "type": "setStoryStage",
+          "fighterId": "cassim-bell",
+          "stage": 5
+        },
+        {
+          "type": "setLiberationEligible",
+          "fighterId": "cassim-bell",
+          "eligible": true
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "cassim-bell.crisis.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "approved",
+    "sourceDocument": "native narrative block migration",
+    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "legacyGeneratedIds": false
+  }
+}

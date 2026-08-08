@@ -1,0 +1,285 @@
+{
+  "schemaVersion": 1,
+  "id": "gidonozeaas.crisis",
+  "kind": "character",
+  "title": "名前を書く手",
+  "summary": "アルデバラン社・契約記録室で起きる「名前を書く手」",
+  "ownership": {
+    "arcId": "character.gidonozeaas",
+    "characterId": "gidonozeaas",
+    "stage": "crisis"
+  },
+  "trigger": {
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 400,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "アルデバラン社・契約記録室",
+    "assets": [
+      {
+        "id": "gidonozeaas.crisis.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-contract-archive-v2.png",
+        "alt": "アルデバラン社・契約記録室の背景"
+      },
+      {
+        "id": "gidonozeaas.crisis.asset.sprite.001",
+        "kind": "sprite",
+        "path": "/assets/story/gidono-unsealed-neutral.png",
+        "alt": "液状の人型をとったギドノゼアース"
+      },
+      {
+        "id": "gidonozeaas.crisis.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/events/gidonozeaas-crisis-key-v2.png",
+        "alt": "黒い星の鍵を掌に受け、ギドノゼアースと判断を交わすミミ"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "gidonozeaas.crisis.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "gidonozeaas.crisis.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "gidonozeaas.crisis.node.direction.002",
+      "command": {
+        "type": "show",
+        "assetId": "gidonozeaas.crisis.asset.sprite.001",
+        "actorId": "gidonozeaas",
+        "slot": "right",
+        "scale": "tall"
+      }
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.crisis.node.line.001",
+      "lineId": "gidonozeaas.crisis.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "紙と熱い機械油の匂い。無人のプリンターが、三十枚目の追加条項を吐き出す。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.crisis.node.line.002",
+      "lineId": "gidonozeaas.crisis.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "どの紙にも「容器および内容物」。その所有者代理には、私の名前がある。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.crisis.node.line.003",
+      "lineId": "gidonozeaas.crisis.line.003",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "内容物って、黒い星のことですか。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.crisis.node.line.004",
+      "lineId": "gidonozeaas.crisis.line.004",
+      "speakerId": "legacy.speaker.1jmq03z",
+      "speakerName": "ギドノゼアース",
+      "mode": "dialogue",
+      "text": "世界の外にいる本体まで含む。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.crisis.node.line.005",
+      "lineId": "gidonozeaas.crisis.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "紙を握った親指が白い。手を放しても、一枚だけ汗で指に貼りついた。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.crisis.node.line.006",
+      "lineId": "gidonozeaas.crisis.line.006",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "もし本体を呼んだら、会社はあなたを全部、私を通して所有できる？"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.crisis.node.line.007",
+      "lineId": "gidonozeaas.crisis.line.007",
+      "speakerId": "legacy.speaker.1jmq03z",
+      "speakerName": "ギドノゼアース",
+      "mode": "dialogue",
+      "text": "できない。先に、お前の身体が入口として壊れる。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.crisis.node.line.008",
+      "lineId": "gidonozeaas.crisis.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "怖いより先に腹が立った。勝手に名前を使われたことにも、それを見落とした自分にも。"
+    },
+    {
+      "type": "direction",
+      "id": "gidonozeaas.crisis.node.direction.003",
+      "command": {
+        "type": "effect",
+        "effectId": "pulse"
+      }
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.crisis.node.line.009",
+      "lineId": "gidonozeaas.crisis.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "黒い星から、爪ほどの欠片が浮く。掌へ落ちた鍵は、氷みたいに冷たくて、火傷しそうに重い。"
+    },
+    {
+      "type": "direction",
+      "id": "gidonozeaas.crisis.node.direction.004",
+      "command": {
+        "type": "still",
+        "assetId": "gidonozeaas.crisis.asset.still.001"
+      }
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.crisis.node.line.010",
+      "lineId": "gidonozeaas.crisis.line.010",
+      "speakerId": "legacy.speaker.1jmq03z",
+      "speakerName": "ギドノゼアース",
+      "mode": "dialogue",
+      "text": "持つ者が決めろ。私へ返せば、この契約では二度と開かない。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.crisis.node.line.011",
+      "lineId": "gidonozeaas.crisis.line.011",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "大会は、まだ終わってません。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.crisis.node.line.012",
+      "lineId": "gidonozeaas.crisis.line.012",
+      "speakerId": "legacy.speaker.1jmq03z",
+      "speakerName": "ギドノゼアース",
+      "mode": "dialogue",
+      "text": "だから今決める。終わってからなら、誰でも正しいことを言える。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "choice",
+      "id": "gidonozeaas.crisis.node.choice.001",
+      "choices": [
+        {
+          "id": "gidonozeaas.crisis.choice.001",
+          "label": "黒い星を回し、二人で封印の継ぎ目を探す",
+          "result": "鍵を置くと、彼は黒い星をゆっくり回した。私が印を読み、彼が内側から力を止める。危うい作業の末、誰にも命じられず開けられる継ぎ目を一つ見つけた。",
+          "intent": "本来の力を二人で安全に引き出す",
+          "promise": "失敗の危険を引き受け、ギドノ専用の成長を大きく進める。",
+          "memory": "二人で見つけた継ぎ目は、契約を解いたあとも本人だけが使える切り札になる。",
+          "tone": "heroic",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "gidonozeaas"
+              },
+              "mode": "add",
+              "trust": 13,
+              "ownership": -10
+            },
+            {
+              "type": "fighterPoints",
+              "target": {
+                "type": "fighter",
+                "fighterId": "gidonozeaas"
+              },
+              "amount": 6
+            }
+          ],
+          "goto": "gidonozeaas.crisis.node.effect.001"
+        },
+        {
+          "id": "gidonozeaas.crisis.choice.002",
+          "label": "再販ベルの音を、封印を閉じる合図にする",
+          "result": "試しにカフェのベルを鳴らすと、黒い星がぴたりと止まった。世界滅亡級の封印が限定メニューの呼び鈴で閉じる事実に二人で黙ったが、全員が使える安全手順にはなった。",
+          "intent": "誰でも止められる安全装置を作る",
+          "promise": "最大出力は抑え、チーム全体で扱える成長と安全策を得る。",
+          "memory": "あのベルの音は、危険を止めた合図として最後までチームに残る。",
+          "tone": "comic",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "gidonozeaas"
+              },
+              "mode": "add",
+              "trust": 5,
+              "ownership": 0
+            },
+            {
+              "type": "sharedPoints",
+              "amount": 6
+            }
+          ],
+          "goto": "gidonozeaas.crisis.node.effect.001"
+        }
+      ]
+    },
+    {
+      "type": "effect",
+      "id": "gidonozeaas.crisis.node.effect.001",
+      "effects": [
+        {
+          "type": "setStoryStage",
+          "fighterId": "gidonozeaas",
+          "stage": 5
+        },
+        {
+          "type": "setLiberationEligible",
+          "fighterId": "gidonozeaas",
+          "eligible": true
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "gidonozeaas.crisis.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "approved",
+    "sourceDocument": "native narrative block migration",
+    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "legacyGeneratedIds": false
+  }
+}

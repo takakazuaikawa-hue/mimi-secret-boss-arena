@@ -1,0 +1,322 @@
+{
+  "schemaVersion": 1,
+  "id": "mumyo.join",
+  "kind": "character",
+  "title": "スカウト",
+  "summary": "鏡張りの廊下で起きる「スカウト」",
+  "ownership": {
+    "arcId": "character.mumyo",
+    "characterId": "mumyo",
+    "stage": "join"
+  },
+  "trigger": {
+    "actions": [
+      "work",
+      "play"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 400,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "鏡張りの廊下",
+    "assets": [
+      {
+        "id": "mumyo.join.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-employee-entrance.png",
+        "alt": "鏡張りの廊下の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "line",
+      "id": "mumyo.join.node.line.001",
+      "lineId": "mumyo.join.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "無銘と初めて会ったあと、鏡張りの廊下でもう一度顔を合わせた。今日は、選手登録の条件を確かめることになっている。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.join.node.line.002",
+      "lineId": "mumyo.join.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "選手登録の面談室は狭い。机を挟めば仕事の距離を守れるはずなのに、同じ書類を覗き込むたび、沈黙だけが近くなる。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.join.node.line.003",
+      "lineId": "mumyo.join.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "登録端末は剣を選手と認めたのに、所有者欄が空白のままでは先へ進まない。赤い点滅が私の名札と同じ速さで脈打つ。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.join.node.line.004",
+      "lineId": "mumyo.join.line.004",
+      "speakerId": "legacy.speaker.1whk6fw",
+      "speakerName": "無銘",
+      "mode": "dialogue",
+      "text": "所有者欄へ名を書けば抜ける。"
+    },
+    {
+      "type": "direction",
+      "id": "mumyo.join.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "mumyo.join.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "mumyo.join.node.direction.002",
+      "command": {
+        "type": "effect",
+        "effectId": "pulse"
+      }
+    },
+    {
+      "type": "line",
+      "id": "mumyo.join.node.line.005",
+      "lineId": "mumyo.join.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "選手登録は一枚で済むのに、無銘を知るための欄はどこにもない。強い所有者を待つ、まだ目覚めていない武器なのだと決めれば簡単だ。でも、その決め方こそ契約書と同じに見えた。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.join.node.line.006",
+      "lineId": "mumyo.join.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "無銘の経歴は、端末の入力欄へ収まらない。けれど本人が書けずにいるのは、過去の偉業ではなく「これから何をしたいか」の一行だった。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.join.node.line.007",
+      "lineId": "mumyo.join.line.007",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "ここへ私の名前を書けば、あなたを抜けるようになるんですか。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.join.node.line.008",
+      "lineId": "mumyo.join.line.008",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "私が持ち主になるってこと？"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.join.node.line.009",
+      "lineId": "mumyo.join.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "持ち主の望む姿と名を映し、最強の武器として完成する剣。その横顔が、空欄の前でだけ少し頼りなく見える。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.join.node.line.010",
+      "lineId": "mumyo.join.line.010",
+      "speakerId": "legacy.speaker.1whk6fw",
+      "speakerName": "無銘",
+      "mode": "dialogue",
+      "text": "抜ける。お前が望まなくても、命じられれば。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.join.node.line.011",
+      "lineId": "mumyo.join.line.011",
+      "speakerId": "legacy.speaker.1whk6fw",
+      "speakerName": "無銘",
+      "mode": "dialogue",
+      "text": "書かずに持ち出す方法を探してもいい。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.join.node.line.012",
+      "lineId": "mumyo.join.line.012",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "採用する側らしい言葉を探した。でも必要なのは評価ではなく、ここにいてもいい理由を一緒に作ることなのだと思った。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.join.node.line.013",
+      "lineId": "mumyo.join.line.013",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "便利さの説明なのに、鏡の人物は助けを求めるより静かな顔をしていた。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.join.node.line.014",
+      "lineId": "mumyo.join.line.014",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "一寸抜けるだけで歴代勇者の時代が同時に映り、展示室が最終決戦を十四回始めるという注意事項まで契約書へ加わり、一般的な選手登録は完全に諦めることになった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.join.node.line.015",
+      "lineId": "mumyo.join.line.015",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私のペンで未来まで埋めないよう、最後の空欄を机の中央へ戻した。待つ時間は気まずい。それでも、本人の言葉で始まるほうがいい。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.join.node.line.016",
+      "lineId": "mumyo.join.line.016",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "最後に本人が確かめたのは報酬ではなく、持たれず、抜かれず、それでも誰かの隣を自分で選んで歩くことが規則違反にならないかどうかだった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.join.node.line.017",
+      "lineId": "mumyo.join.line.017",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "登録を急ぐとしても、本人を置き去りにしたまま話を進めたくはなかった。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.join.node.line.018",
+      "lineId": "mumyo.join.line.018",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "登録完了の音が鳴る。これで仲間になった、と簡単に呼んでいいのか分からない。けれど退室する足音が、来た時より少しだけゆっくりだった。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.join.node.line.019",
+      "lineId": "mumyo.join.line.019",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "値札も所有者欄も外された空の展示ケースが机に残る。返そうと呼び止めると、「次に会う理由として置いておく」とだけ返ってきた。",
+      "emotion": "tender"
+    },
+    {
+      "type": "choice",
+      "id": "mumyo.join.node.choice.001",
+      "choices": [
+        {
+          "id": "mumyo.join.choice.001",
+          "label": "鏡の中の人物へ、先に新しい呼び名を聞く",
+          "result": "剣は無銘のままだった。鏡の人物だけが『今はそれでいい』と答え、私の名前も同じ順番で聞き返した。",
+          "intent": "本人の得意な戦い方を知る",
+          "promise": "登録は少し遅れるが、この人専用の成長ポイントを得る。",
+          "memory": "自分で書いた最初の条件を、相手は次の大事な場面でも覚えている。",
+          "tone": "tender",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "mumyo"
+              },
+              "mode": "add",
+              "trust": 8,
+              "ownership": -3
+            },
+            {
+              "type": "fighterPoints",
+              "target": {
+                "type": "fighter",
+                "fighterId": "mumyo"
+              },
+              "amount": 2
+            },
+            {
+              "type": "recruitmentDecision",
+              "fighterId": "mumyo",
+              "decision": "join"
+            }
+          ],
+          "goto": "mumyo.join.node.end.001"
+        },
+        {
+          "id": "mumyo.join.choice.002",
+          "label": "景品番号のまま、展示ケースごと登録する",
+          "result": "番号で選手証は出た。所有者欄だけが点滅し続け、ケースの鏡には少し呆れた顔が映った。",
+          "intent": "次の公式戦へ間に合わせる",
+          "promise": "本人の詳細は後回しになるが、誰にでも使える成長ポイントを得る。",
+          "memory": "先に席を確保した判断は、チームの始まり方として記録に残る。",
+          "tone": "pragmatic",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "mumyo"
+              },
+              "mode": "add",
+              "trust": 0,
+              "ownership": 8
+            },
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            },
+            {
+              "type": "recruitmentDecision",
+              "fighterId": "mumyo",
+              "decision": "join"
+            }
+          ],
+          "goto": "mumyo.join.node.end.001"
+        },
+        {
+          "id": "mumyo.join.choice.003",
+          "label": "今回は無銘を誘わず、別の機会を待つ",
+          "result": "無銘の出場登録は行わなかった。相手は所属せず、それぞれの用事へ戻った。断る選択を残したことだけが、次に会う時まで静かに残った。",
+          "intent": "今回はチームへ誘わない",
+          "promise": "今回の所属は見送るが、人物の物語と再会の可能性は失わない。",
+          "memory": "勧誘しない選択も尊重されたことを、相手は覚えている。",
+          "tone": "pragmatic",
+          "effects": [
+            {
+              "type": "recruitmentDecision",
+              "fighterId": "mumyo",
+              "decision": "decline"
+            }
+          ],
+          "goto": "mumyo.join.node.end.001"
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "mumyo.join.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "approved",
+    "sourceDocument": "native narrative block migration",
+    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "legacyGeneratedIds": false
+  }
+}

@@ -1,0 +1,323 @@
+{
+  "schemaVersion": 1,
+  "id": "rinne.join",
+  "kind": "character",
+  "title": "スカウト",
+  "summary": "賭場で起きる「スカウト」",
+  "ownership": {
+    "arcId": "character.rinne",
+    "characterId": "rinne",
+    "stage": "join"
+  },
+  "trigger": {
+    "actions": [
+      "play",
+      "work"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 400,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "賭場",
+    "assets": [
+      {
+        "id": "rinne.join.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-employee-entrance.png",
+        "alt": "賭場の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "line",
+      "id": "rinne.join.node.line.001",
+      "lineId": "rinne.join.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "リンネと初めて会ったあと、賭場でもう一度顔を合わせた。今日は、選手登録の条件を確かめることになっている。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.join.node.line.002",
+      "lineId": "rinne.join.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "選手登録の面談室は狭い。机を挟めば仕事の距離を守れるはずなのに、同じ書類を覗き込むたび、沈黙だけが近くなる。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "rinne.join.node.line.003",
+      "lineId": "rinne.join.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "契約金を机へ置いた瞬間、リンネの視線が十二通りに揺れた。どの未来でも札束の角だけ先に擦り切れている。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.join.node.line.004",
+      "lineId": "rinne.join.line.004",
+      "speakerId": "legacy.speaker.1vpt9ol",
+      "speakerName": "リンネ",
+      "mode": "dialogue",
+      "text": "賞金が出るなら戦う。賭け金にできる。"
+    },
+    {
+      "type": "direction",
+      "id": "rinne.join.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "rinne.join.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "rinne.join.node.direction.002",
+      "command": {
+        "type": "effect",
+        "effectId": "pulse"
+      }
+    },
+    {
+      "type": "line",
+      "id": "rinne.join.node.line.005",
+      "lineId": "rinne.join.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "選手登録は一枚で済むのに、リンネを知るための欄はどこにもない。危険な賭けほど喜ぶ、後悔しない勝負師なのだと決めれば簡単だ。でも、その決め方こそ契約書と同じに見えた。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "rinne.join.node.line.006",
+      "lineId": "rinne.join.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "リンネの経歴は、端末の入力欄へ収まらない。けれど本人が書けずにいるのは、過去の偉業ではなく「これから何をしたいか」の一行だった。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.join.node.line.007",
+      "lineId": "rinne.join.line.007",
+      "speakerId": "legacy.speaker.1vpt9ol",
+      "speakerName": "リンネ",
+      "mode": "dialogue",
+      "text": "このお金、今渡すと三割で倍、二割で消える。残りは店長が犬を飼う。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.join.node.line.008",
+      "lineId": "rinne.join.line.008",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "先に生活費へ回してください。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.join.node.line.009",
+      "lineId": "rinne.join.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "持っていないものまで賭け、負けを笑って次へ進む勝負師。その横顔が、空欄の前でだけ少し頼りなく見える。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "rinne.join.node.line.010",
+      "lineId": "rinne.join.line.010",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "最後の未来はどこから出たんですか。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.join.node.line.011",
+      "lineId": "rinne.join.line.011",
+      "speakerId": "legacy.speaker.1vpt9ol",
+      "speakerName": "リンネ",
+      "mode": "dialogue",
+      "text": "それも期待値は高いね。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.join.node.line.012",
+      "lineId": "rinne.join.line.012",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "採用する側らしい言葉を探した。でも必要なのは評価ではなく、ここにいてもいい理由を一緒に作ることなのだと思った。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.join.node.line.013",
+      "lineId": "rinne.join.line.013",
+      "speakerId": "legacy.speaker.1vpt9ol",
+      "speakerName": "リンネ",
+      "mode": "dialogue",
+      "text": "確率は数字だけじゃない。誰かが朝にペットショップを見ることも入ってる。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.join.node.line.014",
+      "lineId": "rinne.join.line.014",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "コインの裏表を外すたび別世界の確率が帳尻を合わせ、遠い王国が優勝するという注意事項まで契約書へ加わり、一般的な選手登録は完全に諦めることになった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "rinne.join.node.line.015",
+      "lineId": "rinne.join.line.015",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私のペンで未来まで埋めないよう、最後の空欄を机の中央へ戻した。待つ時間は気まずい。それでも、本人の言葉で始まるほうがいい。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "rinne.join.node.line.016",
+      "lineId": "rinne.join.line.016",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "最後に本人が確かめたのは報酬ではなく、当たり外れのない約束を、一度だけ信じて待つことが規則違反にならないかどうかだった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "rinne.join.node.line.017",
+      "lineId": "rinne.join.line.017",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "登録を急ぐとしても、本人を置き去りにしたまま話を進めたくはなかった。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.join.node.line.018",
+      "lineId": "rinne.join.line.018",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "登録完了の音が鳴る。これで仲間になった、と簡単に呼んでいいのか分からない。けれど退室する足音が、来た時より少しだけゆっくりだった。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.join.node.line.019",
+      "lineId": "rinne.join.line.019",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "使わずにポケットへ残した一枚の空コインが机に残る。返そうと呼び止めると、「次に会う理由として置いておく」とだけ返ってきた。",
+      "emotion": "tender"
+    },
+    {
+      "type": "choice",
+      "id": "rinne.join.node.choice.001",
+      "choices": [
+        {
+          "id": "rinne.join.choice.001",
+          "label": "一度も賭けず、未来の見え方だけを聞く",
+          "result": "リンネは勝ち筋を教えず、負け方を三つ消した。無料相談のはずなのに、私は得をした顔をされた。",
+          "intent": "本人の得意な戦い方を知る",
+          "promise": "登録は少し遅れるが、この人専用の成長ポイントを得る。",
+          "memory": "自分で書いた最初の条件を、相手は次の大事な場面でも覚えている。",
+          "tone": "tender",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "rinne"
+              },
+              "mode": "add",
+              "trust": 8,
+              "ownership": -3
+            },
+            {
+              "type": "fighterPoints",
+              "target": {
+                "type": "fighter",
+                "fighterId": "rinne"
+              },
+              "amount": 2
+            },
+            {
+              "type": "recruitmentDecision",
+              "fighterId": "rinne",
+              "decision": "join"
+            }
+          ],
+          "goto": "rinne.join.node.end.001"
+        },
+        {
+          "id": "rinne.join.choice.002",
+          "label": "契約金を最初の元手として渡す",
+          "result": "資金は一度消え、少し増えて戻った。領収書の日付は来週で、経理だけが未来を信じなかった。",
+          "intent": "次の公式戦へ間に合わせる",
+          "promise": "本人の詳細は後回しになるが、誰にでも使える成長ポイントを得る。",
+          "memory": "先に席を確保した判断は、チームの始まり方として記録に残る。",
+          "tone": "pragmatic",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "rinne"
+              },
+              "mode": "add",
+              "trust": 0,
+              "ownership": 8
+            },
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            },
+            {
+              "type": "recruitmentDecision",
+              "fighterId": "rinne",
+              "decision": "join"
+            }
+          ],
+          "goto": "rinne.join.node.end.001"
+        },
+        {
+          "id": "rinne.join.choice.003",
+          "label": "今回はリンネを誘わず、別の機会を待つ",
+          "result": "リンネの出場登録は行わなかった。相手は所属せず、それぞれの用事へ戻った。断る選択を残したことだけが、次に会う時まで静かに残った。",
+          "intent": "今回はチームへ誘わない",
+          "promise": "今回の所属は見送るが、人物の物語と再会の可能性は失わない。",
+          "memory": "勧誘しない選択も尊重されたことを、相手は覚えている。",
+          "tone": "pragmatic",
+          "effects": [
+            {
+              "type": "recruitmentDecision",
+              "fighterId": "rinne",
+              "decision": "decline"
+            }
+          ],
+          "goto": "rinne.join.node.end.001"
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "rinne.join.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "approved",
+    "sourceDocument": "native narrative block migration",
+    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "legacyGeneratedIds": false
+  }
+}

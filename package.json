@@ -1,0 +1,44 @@
+{
+  "name": "mimi-tokimeki-secret-boss-arena",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "ミミのときめき裏ボス闘技場 - 週刊育成と監督型3対3バトル",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --maxWorkers=1",
+    "test:watch": "vitest",
+    "qa:onboarding": "node scripts/onboarding-qa.mjs",
+    "qa:visual": "node scripts/visual-experience-qa.mjs",
+    "audit:content": "vitest run src/game/content.test.ts",
+    "audit:sim": "vitest run src/game/simulation.test.ts"
+  },
+  "dependencies": {
+    "@xstate/react": "^6.0.0",
+    "howler": "^2.2.4",
+    "lucide-react": "^0.468.0",
+    "motion": "^12.42.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "seedrandom": "^3.0.5",
+    "xstate": "^5.24.0",
+    "zod": "^4.0.0",
+    "zustand": "^5.0.2"
+  },
+  "devDependencies": {
+    "@types/howler": "^2.2.12",
+    "@types/node": "^22.10.5",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@types/seedrandom": "^3.0.8",
+    "@vitejs/plugin-react": "^4.3.4",
+    "fast-check": "^4.3.0",
+    "playwright": "^1.62.1",
+    "typescript": "~5.7.2",
+    "vite": "^6.0.7",
+    "vitest": "^4.1.10"
+  }
+}

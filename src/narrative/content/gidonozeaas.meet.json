@@ -1,0 +1,354 @@
+{
+  "schemaVersion": 1,
+  "id": "gidonozeaas.meet",
+  "kind": "character",
+  "title": "窓際、ひとつ空けて",
+  "summary": "カジノカフェ・閉店前で起きる「窓際、ひとつ空けて」",
+  "ownership": {
+    "arcId": "character.gidonozeaas",
+    "characterId": "gidonozeaas",
+    "stage": "meet"
+  },
+  "trigger": {
+    "actions": [
+      "work",
+      "play"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 500,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "カジノカフェ・閉店前",
+    "assets": [
+      {
+        "id": "gidonozeaas.meet.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-casino-cafe-closing.png",
+        "alt": "カジノカフェ・閉店前の背景"
+      },
+      {
+        "id": "gidonozeaas.meet.asset.sprite.001",
+        "kind": "sprite",
+        "path": "/assets/story/gidono-sealed-neutral.png",
+        "alt": "黒い星を抱いた封印形態のギドノゼアース"
+      },
+      {
+        "id": "gidonozeaas.meet.asset.sprite.002",
+        "kind": "sprite",
+        "path": "/assets/story/gidono-sealed-alert.png",
+        "alt": "黒い星を回転させた封印形態のギドノゼアース"
+      },
+      {
+        "id": "gidonozeaas.meet.asset.still.001",
+        "kind": "still",
+        "path": "/assets/event-casino-cafe.png",
+        "alt": "窓際、ひとつ空けてのイベント一枚絵"
+      },
+      {
+        "id": "gidonozeaas.meet.asset.sprite.003",
+        "kind": "sprite",
+        "path": "/assets/story/gidono-sealed-soft.png",
+        "alt": "わずかに表情を和らげた封印形態のギドノゼアース"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "gidonozeaas.meet.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "gidonozeaas.meet.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "gidonozeaas.meet.node.direction.002",
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.meet.node.line.001",
+      "lineId": "gidonozeaas.meet.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "派遣先での最初の仕事は、驚くほどいつもの接客と変わらなかった。違うのは、試合帰りのお客様が注文より先に勝敗を口にすることくらいだ。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.meet.node.line.002",
+      "lineId": "gidonozeaas.meet.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "午後四時五十七分。閉店前の最後の注文は、季節限定の「星降りベリーパフェ」だった。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.meet.node.line.003",
+      "lineId": "gidonozeaas.meet.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "窓際の予約席へ運ぶと、椅子には誰もいない。代わりに、白い皿の上で大きなスライムがゆっくり揺れていた。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.meet.node.line.004",
+      "lineId": "gidonozeaas.meet.line.004",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "お待たせしました。星降りベリーパフェです。……あの、ご予約のお客様は、まだいらしていませんか？"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.meet.node.line.005",
+      "lineId": "gidonozeaas.meet.line.005",
+      "speakerId": "legacy.speaker.1jmq03z",
+      "speakerName": "ギドノゼアース",
+      "mode": "dialogue",
+      "text": "ここにいる。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.meet.node.line.006",
+      "lineId": "gidonozeaas.meet.line.006",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "失礼しました。では、ご予約のお名前を確認してもよろしいでしょうか。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.meet.node.line.007",
+      "lineId": "gidonozeaas.meet.line.007",
+      "speakerId": "legacy.speaker.1jmq03z",
+      "speakerName": "ギドノゼアース",
+      "mode": "dialogue",
+      "text": "ギドノゼアース。一名。"
+    },
+    {
+      "type": "direction",
+      "id": "gidonozeaas.meet.node.direction.004",
+      "command": {
+        "type": "show",
+        "assetId": "gidonozeaas.meet.asset.sprite.002",
+        "actorId": "gidonozeaas",
+        "slot": "right",
+        "scale": "compact"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "gidonozeaas.meet.node.direction.005",
+      "command": {
+        "type": "still",
+        "assetId": "gidonozeaas.meet.asset.still.001"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "gidonozeaas.meet.node.direction.006",
+      "command": {
+        "type": "effect",
+        "effectId": "pulse"
+      }
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.meet.node.line.008",
+      "lineId": "gidonozeaas.meet.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "透明な身体の中心で黒い星が回った。次の瞬間、窓の向こうの海まで持ち上がり、水平線が一度だけ消えた。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.meet.node.line.009",
+      "lineId": "gidonozeaas.meet.line.009",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "……ギドノゼアース様ですね。確認できました。海については、あとで設備担当へ連絡します。"
+    },
+    {
+      "type": "direction",
+      "id": "gidonozeaas.meet.node.direction.007",
+      "command": {
+        "type": "show",
+        "assetId": "gidonozeaas.meet.asset.sprite.001",
+        "actorId": "gidonozeaas",
+        "slot": "right",
+        "scale": "compact"
+      }
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.meet.node.line.010",
+      "lineId": "gidonozeaas.meet.line.010",
+      "speakerId": "legacy.speaker.1jmq03z",
+      "speakerName": "ギドノゼアース",
+      "mode": "dialogue",
+      "text": "先にパフェを置け。再販まで三百年待った。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.meet.node.line.011",
+      "lineId": "gidonozeaas.meet.line.011",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "大変お待たせしました。三百年というのは、前回の販売からですか？"
+    },
+    {
+      "type": "direction",
+      "id": "gidonozeaas.meet.node.direction.008",
+      "command": {
+        "type": "show",
+        "assetId": "gidonozeaas.meet.asset.sprite.003",
+        "actorId": "gidonozeaas",
+        "slot": "right",
+        "scale": "compact"
+      }
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.meet.node.line.012",
+      "lineId": "gidonozeaas.meet.line.012",
+      "speakerId": "legacy.speaker.1jmq03z",
+      "speakerName": "ギドノゼアース",
+      "mode": "dialogue",
+      "text": "前の店は、私が目覚めた日に大陸ごとなくなった。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.meet.node.line.013",
+      "lineId": "gidonozeaas.meet.line.013",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "それでは、再販のお知らせも届きませんね。今日まで予約を覚えていてくださって、ありがとうございます。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.meet.node.line.014",
+      "lineId": "gidonozeaas.meet.line.014",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "接客用の返事を口にしてから、内容がおかしいことに気づいた。けれど本人は、パフェしか見ていない。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.meet.node.line.015",
+      "lineId": "gidonozeaas.meet.line.015",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "伝票には「二名様限定」、同伴者欄には私の社員番号。受付でもらったばかりの契約端末が、勝手に青く点滅していた。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.meet.node.line.016",
+      "lineId": "gidonozeaas.meet.line.016",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "申し訳ありません。このメニューは二名様限定で、同伴者のお名前が必要なんです。なぜか私の番号が入っていますが……。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.meet.node.line.017",
+      "lineId": "gidonozeaas.meet.line.017",
+      "speakerId": "legacy.speaker.1jmq03z",
+      "speakerName": "ギドノゼアース",
+      "mode": "dialogue",
+      "text": "なら、お前が座れば注文は成立する。閉店まで三分ある。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.meet.node.line.018",
+      "lineId": "gidonozeaas.meet.line.018",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "受付のノノさんは「空欄にしても何か起きる」と言っていた。まさか、初日にパフェの同伴者へ登録されるとは聞いていない。"
+    },
+    {
+      "type": "choice",
+      "id": "gidonozeaas.meet.node.choice.001",
+      "choices": [
+        {
+          "id": "gidonozeaas.meet.choice.001",
+          "label": "休憩扱いにして、向かいへ座る",
+          "result": "椅子に腰を下ろした瞬間、足の痛みがどっと戻った。彼はパフェの苺を一つよけて、「三百年のうち三分なら待てる」と、私が息をつくまでスプーンを持たなかった。",
+          "intent": "三分だけ同席し、相手の目的を確かめる",
+          "promise": "勤務報酬は増えないが、三百年待った注文と彼の事情を聞ける。",
+          "memory": "登録より先に一緒にパフェを待った三分間を、彼はあとまで覚えている。",
+          "tone": "tender",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "gidonozeaas"
+              },
+              "mode": "add",
+              "trust": 8,
+              "ownership": -2
+            }
+          ],
+          "goto": "gidonozeaas.meet.node.effect.001"
+        },
+        {
+          "id": "gidonozeaas.meet.choice.002",
+          "label": "今日はギドノゼアースを誘わず、用事へ戻る",
+          "result": "ギドノゼアースの名前と出会った場所だけを覚え、今日は普段の仕事へ戻った。急いで所属を決めなかったことが、次に会う時の距離として残った。",
+          "intent": "今は勧誘せず、相手との距離を保つ",
+          "promise": "所属選手にはならないが、後の出来事で再会できる。",
+          "memory": "最初の出会いで急いで仲間にしなかったことが、次の再会へ残る。",
+          "tone": "pragmatic",
+          "effects": [],
+          "goto": "gidonozeaas.meet.node.effect.001"
+        }
+      ]
+    },
+    {
+      "type": "effect",
+      "id": "gidonozeaas.meet.node.effect.001",
+      "effects": [
+        {
+          "type": "markEncountered",
+          "fighterId": "gidonozeaas",
+          "encountered": true
+        },
+        {
+          "type": "setStoryStage",
+          "fighterId": "gidonozeaas",
+          "stage": 1
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "gidonozeaas.meet.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "approved",
+    "sourceDocument": "native narrative block migration",
+    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "legacyGeneratedIds": false
+  }
+}

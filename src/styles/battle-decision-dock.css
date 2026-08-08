@@ -1,0 +1,430 @@
+.battle-screen.is-awaiting-command .battle-stage {
+  padding-bottom: clamp(176px, 22vh, 214px);
+  transition: padding 240ms ease;
+}
+
+.battle-screen.is-awaiting-command .battle-side {
+  transform: translateY(-28px);
+  transition: transform 240ms ease;
+}
+
+.battle-screen.is-awaiting-command .battle-action-lane {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.battle-screen.is-awaiting-command .battle-combatant__portrait {
+  filter: saturate(0.88) brightness(0.96);
+}
+
+.battle-screen.is-awaiting-command .battle-combatant--enemy .battle-combatant__portrait {
+  filter: saturate(1.08) brightness(1.04)
+    drop-shadow(0 0 22px rgba(242, 197, 82, 0.34));
+}
+
+.battle-enemy-tell-cinematic {
+  position: absolute;
+  z-index: 26;
+  top: clamp(112px, 18vh, 164px);
+  left: clamp(22px, 7vw, 112px);
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 11px;
+  width: min(390px, 34vw);
+  min-height: 74px;
+  padding: 13px 16px;
+  color: #f8fbfc;
+  background: rgba(7, 27, 39, 0.9);
+  border-left: 5px solid #f3cf62;
+  box-shadow: 0 14px 34px rgba(5, 23, 34, 0.28);
+  backdrop-filter: blur(10px);
+  pointer-events: none;
+}
+
+.battle-enemy-tell-cinematic::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -18px;
+  width: 36px;
+  height: 2px;
+  background: #f3cf62;
+}
+
+.battle-enemy-tell-cinematic > svg {
+  margin-top: 2px;
+  color: #f3cf62;
+}
+
+.battle-enemy-tell-cinematic div {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+}
+
+.battle-enemy-tell-cinematic span {
+  color: #f3cf62;
+  font-size: 11px;
+  font-weight: 850;
+}
+
+.battle-enemy-tell-cinematic strong {
+  font-family: "Noto Serif JP", "Yu Mincho", serif;
+  font-size: clamp(15px, 1.3vw, 19px);
+  line-height: 1.35;
+}
+
+.battle-enemy-tell-cinematic small {
+  color: rgba(235, 245, 247, 0.72);
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.battle-screen .command-panel,
+.battle-screen .command-panel.is-turning-point {
+  position: fixed;
+  z-index: 40;
+  top: auto;
+  right: auto;
+  bottom: 14px;
+  left: 50%;
+  display: grid;
+  width: min(1120px, calc(100% - 28px));
+  max-height: min(30vh, 250px);
+  padding: 12px 14px 14px;
+  overflow-y: auto;
+  color: #f5fafb;
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  border-top: 4px solid #f3cf62;
+  border-radius: 4px;
+  background: rgba(8, 29, 41, 0.94);
+  box-shadow: 0 18px 44px rgba(4, 20, 30, 0.34);
+  backdrop-filter: blur(14px);
+  translate: -50% 0;
+}
+
+.battle-screen .command-heading {
+  min-height: 28px;
+  margin-bottom: 8px;
+}
+
+.battle-screen .command-heading span {
+  color: #f3cf62;
+  font-size: 10px;
+}
+
+.battle-screen .command-heading h3 {
+  margin-top: 1px;
+  color: #fff;
+  font-family: "Noto Serif JP", "Yu Mincho", serif;
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+.battle-screen .command-heading .icon-button {
+  width: 34px;
+  height: 34px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.battle-screen .command-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 7px;
+}
+
+.battle-screen .command-grid > button {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-rows: auto auto;
+  align-items: center;
+  gap: 2px 8px;
+  min-width: 0;
+  min-height: 76px;
+  padding: 10px;
+  color: #f4f9fa;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.battle-screen .command-grid > button:hover {
+  color: #102b3b;
+  border-color: #f3cf62;
+  background: #f3cf62;
+}
+
+.battle-screen .command-grid > button:disabled {
+  opacity: 0.35;
+}
+
+.battle-screen .command-grid > button > svg {
+  grid-row: 1 / 3;
+  color: #f3cf62;
+}
+
+.battle-screen .command-grid > button:hover > svg,
+.battle-screen .command-grid > button:hover span,
+.battle-screen .command-grid > button:hover small {
+  color: #102b3b;
+}
+
+.battle-screen .command-grid > button strong {
+  align-self: end;
+  overflow: hidden;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.battle-screen .command-grid > button span {
+  align-self: start;
+  overflow: hidden;
+  color: rgba(232, 243, 245, 0.68);
+  font-size: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.battle-screen .command-grid > button small {
+  grid-column: 3;
+  grid-row: 1 / 3;
+  margin: 0;
+  color: #f3cf62;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.battle-screen .prediction-grid,
+.battle-screen .prediction-grid--orders {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.battle-screen .prediction-grid button,
+.battle-screen .prediction-grid--orders button {
+  min-height: 74px;
+  color: #f5fafb;
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.battle-screen .prediction-grid button:hover,
+.battle-screen .prediction-grid--orders button:hover {
+  color: #102b3b;
+  border-color: #f3cf62;
+  background: #f3cf62;
+}
+
+.battle-screen .prediction-grid span {
+  color: rgba(235, 245, 247, 0.7);
+}
+
+.battle-screen .prediction-grid button:hover span {
+  color: #274051;
+}
+
+.battle-screen .force-list {
+  max-height: 148px;
+  overflow-y: auto;
+  color: #fff;
+}
+
+@media (max-width: 760px) {
+  .battle-screen .battle-stage {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .battle-screen .battle-side {
+    min-width: 0;
+  }
+
+  .battle-screen .battle-side--count-1 .battle-squad,
+  .battle-screen .battle-side--count-2 .battle-squad,
+  .battle-screen .battle-side--count-3 .battle-squad {
+    min-width: 0;
+    gap: 2px;
+  }
+
+  .battle-screen .battle-side--count-1 .battle-squad {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .battle-screen .battle-side--count-2 .battle-squad {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .battle-screen .battle-side--count-3 .battle-squad {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .battle-screen .battle-combatant,
+  .battle-screen .battle-side--count-1 .battle-combatant,
+  .battle-screen .battle-side--count-2 .battle-combatant,
+  .battle-screen .battle-side--count-3 .battle-combatant {
+    grid-template-rows: minmax(170px, 1fr) auto;
+    width: 100%;
+    min-width: 0;
+    min-height: 260px;
+  }
+
+  .battle-screen .battle-combatant__portrait,
+  .battle-screen .battle-side--count-1 .battle-combatant__portrait,
+  .battle-screen .battle-side--count-2 .battle-combatant__portrait,
+  .battle-screen .battle-side--count-3 .battle-combatant__portrait {
+    width: 100%;
+    height: 210px;
+  }
+
+  .battle-screen .battle-side--count-1 .battle-combatant__portrait .fighter-chibi,
+  .battle-screen .battle-side--count-1 .battle-combatant__portrait .fighter-chibi__sprite {
+    width: min(44vw, 184px);
+    height: min(44vw, 184px);
+  }
+
+  .battle-screen .battle-side--count-2 .battle-combatant__portrait .fighter-chibi,
+  .battle-screen .battle-side--count-2 .battle-combatant__portrait .fighter-chibi__sprite {
+    width: min(27vw, 132px);
+    height: min(27vw, 132px);
+  }
+
+  .battle-screen .battle-side--count-3 .battle-combatant__portrait .fighter-chibi,
+  .battle-screen .battle-side--count-3 .battle-combatant__portrait .fighter-chibi__sprite {
+    width: min(20vw, 96px);
+    height: min(20vw, 96px);
+  }
+
+  .battle-screen .battle-side--count-1 .battle-character-art {
+    width: min(48vw, 190px);
+    height: 220px;
+  }
+
+  .battle-screen .battle-side--count-2 .battle-character-art {
+    width: min(28vw, 136px);
+    height: 205px;
+  }
+
+  .battle-screen .battle-side--count-3 .battle-character-art {
+    width: min(20vw, 98px);
+    height: 185px;
+  }
+
+  .battle-screen .battle-combatant__body,
+  .battle-screen .battle-combatant--player .battle-combatant__body {
+    width: 100%;
+    min-width: 0;
+    min-height: 60px;
+    padding: 5px;
+    border-top-width: 3px;
+  }
+
+  .battle-screen .battle-combatant__name {
+    min-width: 0;
+  }
+
+  .battle-screen .battle-combatant__name strong {
+    display: block;
+    overflow: hidden;
+    font-size: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .battle-screen .battle-resource {
+    height: 12px;
+  }
+
+  .battle-screen .battle-resource > b {
+    font-size: 8px;
+    line-height: 12px;
+  }
+
+  .battle-screen.is-awaiting-command .battle-stage {
+    padding-bottom: 252px;
+  }
+
+  .battle-screen.is-awaiting-command .battle-side {
+    transform: translateY(-18px);
+  }
+
+  .battle-enemy-tell-cinematic {
+    top: 80px;
+    left: 8px;
+    width: min(320px, calc(100% - 16px));
+    min-height: 58px;
+    padding: 9px 11px;
+  }
+
+  .battle-enemy-tell-cinematic strong {
+    font-size: 14px;
+  }
+
+  .battle-enemy-tell-cinematic small {
+    display: none;
+  }
+
+  .battle-screen .command-panel,
+  .battle-screen .command-panel.is-turning-point {
+    bottom: 8px;
+    width: calc(100% - 12px);
+    max-height: 238px;
+    padding: 9px;
+  }
+
+  .battle-screen .command-heading h3 {
+    max-width: calc(100vw - 92px);
+    overflow: hidden;
+    font-size: 13px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .battle-screen .command-grid {
+    grid-template-columns: repeat(5, minmax(58px, 1fr));
+    overflow-x: auto;
+  }
+
+  .battle-screen .command-grid > button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 82px;
+    gap: 4px;
+    padding: 7px 4px;
+    text-align: center;
+  }
+
+  .battle-screen .command-grid > button > svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .battle-screen .command-grid > button strong {
+    font-size: 11px;
+  }
+
+  .battle-screen .command-grid > button span {
+    display: none;
+  }
+
+  .battle-screen .command-grid > button small {
+    margin: 0;
+    font-size: 9px;
+  }
+
+  .battle-screen .prediction-grid button,
+  .battle-screen .prediction-grid--orders button {
+    min-height: 68px;
+    font-size: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .battle-screen.is-awaiting-command .battle-stage,
+  .battle-screen.is-awaiting-command .battle-side {
+    transition: none;
+  }
+}

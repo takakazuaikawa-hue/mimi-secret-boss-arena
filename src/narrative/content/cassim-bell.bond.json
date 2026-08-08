@@ -1,0 +1,308 @@
+{
+  "schemaVersion": 1,
+  "id": "cassim-bell.bond",
+  "kind": "character",
+  "title": "チームの日常",
+  "summary": "倉庫街で起きる「チームの日常」",
+  "ownership": {
+    "arcId": "character.cassim-bell",
+    "characterId": "cassim-bell",
+    "stage": "bond"
+  },
+  "trigger": {
+    "actions": [
+      "work",
+      "play"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 400,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "倉庫街",
+    "assets": [
+      {
+        "id": "cassim-bell.bond.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-casino-cafe-rain.png",
+        "alt": "倉庫街の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "line",
+      "id": "cassim-bell.bond.node.line.001",
+      "lineId": "cassim-bell.bond.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "カシム・ベルがチームに加わってから、倉庫街で顔を合わせることが増えた。今日は試合の話ではなく、少しだけ時間が空いている。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.bond.node.line.002",
+      "lineId": "cassim-bell.bond.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "試合のない午後。窓を雨が細く叩き、業務連絡も歓声も今日は遠い。二人きりになる予定ではなかったのに、空いている席は向かいだけだった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.bond.node.line.003",
+      "lineId": "cassim-bell.bond.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "倉庫の棚から、私が転生初日に失くした片方の靴が出てきた。泥まであの日のまま乾いている。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.bond.node.line.004",
+      "lineId": "cassim-bell.bond.line.004",
+      "speakerId": "legacy.speaker.1wuvexi",
+      "speakerName": "カシム・ベル",
+      "mode": "dialogue",
+      "text": "今日は何も失くしていませんね。"
+    },
+    {
+      "type": "direction",
+      "id": "cassim-bell.bond.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "cassim-bell.bond.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "cassim-bell.bond.node.direction.002",
+      "command": {
+        "type": "effect",
+        "effectId": "pulse"
+      }
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.bond.node.line.005",
+      "lineId": "cassim-bell.bond.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "試合も契約もない時間なら、もっと気楽に話せると思っていた。実際は、お茶を一口飲むたび沈黙の意味を考えてしまう。強さを見ている時より、カシム・ベルの小さな癖のほうがずっと気になった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.bond.node.line.006",
+      "lineId": "cassim-bell.bond.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "無数の扉、休止中にならない受付札、遠い世界から届く鈴。戦場では見落としていた小さな癖が、何も起きない時間ほどよく見える。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.bond.node.line.007",
+      "lineId": "cassim-bell.bond.line.007",
+      "speakerId": "legacy.speaker.1wuvexi",
+      "speakerName": "カシム・ベル",
+      "mode": "dialogue",
+      "text": "お返しします。受領印をお願いします。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.bond.node.line.008",
+      "lineId": "cassim-bell.bond.line.008",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "褒められてます？"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.bond.node.line.009",
+      "lineId": "cassim-bell.bond.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "カシム・ベルは失くしたものを必ず保管し、持ち主が来るまで待ち続ける番人。そのはずなのに、私の休憩が終わる時刻を気にして、話題を一つずつ短くしている。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.bond.node.line.010",
+      "lineId": "cassim-bell.bond.line.010",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "もう履かない靴でも、受け取らないとだめですか。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.bond.node.line.011",
+      "lineId": "cassim-bell.bond.line.011",
+      "speakerId": "legacy.speaker.1wuvexi",
+      "speakerName": "カシム・ベル",
+      "mode": "dialogue",
+      "text": "私にとっては、少し寂しい報告です。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.bond.node.line.012",
+      "lineId": "cassim-bell.bond.line.012",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "特別な話をしなくても、同じ音を聞いていられる。そんな時間が欲しかったのだと、失う前から気づいてしまった。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.bond.node.line.013",
+      "lineId": "cassim-bell.bond.line.013",
+      "speakerId": "legacy.speaker.1wuvexi",
+      "speakerName": "カシム・ベル",
+      "mode": "dialogue",
+      "text": "返されたあと手放すのは、持ち主の選択です。保管したままでは、選ぶこともできません。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.bond.node.line.014",
+      "lineId": "cassim-bell.bond.line.014",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "合鍵を一本取り違えるだけで、月の裏や滅亡前日の王都が休憩室へ開く。甘い空気になりかけるたび、世界の方が先に耐えられなくなる。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.bond.node.line.015",
+      "lineId": "cassim-bell.bond.line.015",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "責任という言葉の陰で、待たせた誰かに嫌われる怖さを何百年も抱えていた。そう気づくと、何も起きなかった午後が急に大事な出来事へ変わった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.bond.node.line.016",
+      "lineId": "cassim-bell.bond.line.016",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "笑いが収まったあと、扉を閉め、温かい紅茶を最後まで飲んでから戻ることという、驚くほど普通の望みが語られた。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.bond.node.line.017",
+      "lineId": "cassim-bell.bond.line.017",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "試合の外で交わした言葉のほうが、次の指示より長く残ることがある。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.bond.node.line.018",
+      "lineId": "cassim-bell.bond.line.018",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "それは私が叶えるものではない。ただ、叶うまで隣にいることならできる。そう言いかけて、言葉にする勇気だけが遅れた。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.bond.node.line.019",
+      "lineId": "cassim-bell.bond.line.019",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "何百年ぶりに表へ返した十五分休止の札を間に置いたまま、私たちは雨が止んでもしばらく席を立たなかった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "choice",
+      "id": "cassim-bell.bond.node.choice.001",
+      "choices": [
+        {
+          "id": "cassim-bell.bond.choice.001",
+          "label": "倉庫から持ち主不明の弁当箱を探す",
+          "result": "見つかったのは百年前の昼食だった。中身は温かく、持ち主は別世界でまだ昼休みを待っていた。",
+          "intent": "相手の秘密の勝ち方を試す",
+          "promise": "読みにくい作戦になる代わりに、この人だけの成長を大きく進める。",
+          "memory": "任せた一戦の手応えが、次に力を見せる理由になる。",
+          "tone": "wild",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "cassim-bell"
+              },
+              "mode": "add",
+              "trust": 9,
+              "ownership": -2
+            },
+            {
+              "type": "fighterPoints",
+              "target": {
+                "type": "fighter",
+                "fighterId": "cassim-bell"
+              },
+              "amount": 3
+            }
+          ],
+          "goto": "cassim-bell.bond.node.effect.001"
+        },
+        {
+          "id": "cassim-bell.bond.choice.002",
+          "label": "味方の大技を一度預かり、使う順番を変える",
+          "result": "技は倉庫へ入り、必要な瞬間に別の扉から戻った。返却印が増えるたび、連携の順番がきれいに整った。",
+          "intent": "チームの新しい連携を試す",
+          "promise": "本人の流儀は崩すが、全員へ配れる成長ポイントを得る。",
+          "memory": "成功した作戦と短くなった会話の両方が、次の判断まで残る。",
+          "tone": "pragmatic",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "cassim-bell"
+              },
+              "mode": "add",
+              "trust": 1,
+              "ownership": 7
+            },
+            {
+              "type": "sharedPoints",
+              "amount": 3
+            }
+          ],
+          "goto": "cassim-bell.bond.node.effect.001"
+        }
+      ]
+    },
+    {
+      "type": "effect",
+      "id": "cassim-bell.bond.node.effect.001",
+      "effects": [
+        {
+          "type": "setStoryStage",
+          "fighterId": "cassim-bell",
+          "stage": 3
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "cassim-bell.bond.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "approved",
+    "sourceDocument": "native narrative block migration",
+    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "legacyGeneratedIds": false
+  }
+}

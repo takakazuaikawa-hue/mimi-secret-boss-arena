@@ -1,0 +1,262 @@
+{
+  "schemaVersion": 1,
+  "id": "gidonozeaas.liberation",
+  "kind": "liberation",
+  "title": "予約のない席",
+  "summary": "カジノカフェ・閉店後で起きる「予約のない席」",
+  "ownership": {
+    "arcId": "character.gidonozeaas",
+    "characterId": "gidonozeaas",
+    "stage": "liberation"
+  },
+  "trigger": {
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 400,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "カジノカフェ・閉店後",
+    "assets": [
+      {
+        "id": "gidonozeaas.liberation.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-casino-cafe-night.png",
+        "alt": "カジノカフェ・閉店後の背景"
+      },
+      {
+        "id": "gidonozeaas.liberation.asset.sprite.001",
+        "kind": "sprite",
+        "path": "/assets/story/gidono-unsealed-soft.png",
+        "alt": "表情を和らげた人型のギドノゼアース"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "gidonozeaas.liberation.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "gidonozeaas.liberation.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "gidonozeaas.liberation.node.direction.002",
+      "command": {
+        "type": "show",
+        "assetId": "gidonozeaas.liberation.asset.sprite.001",
+        "actorId": "gidonozeaas",
+        "slot": "right",
+        "scale": "tall"
+      }
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.liberation.node.line.001",
+      "lineId": "gidonozeaas.liberation.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "閉店後。窓際の席だけが、海の月明かりを拾っている。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.liberation.node.line.002",
+      "lineId": "gidonozeaas.liberation.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "契約解除届を四つ折りにして、また開く。署名欄だけが、何度見ても白い。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.liberation.node.line.003",
+      "lineId": "gidonozeaas.liberation.line.003",
+      "speakerId": "legacy.speaker.1jmq03z",
+      "speakerName": "ギドノゼアース",
+      "mode": "dialogue",
+      "text": "朝から四度、同じ紙を折り直している。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.liberation.node.line.004",
+      "lineId": "gidonozeaas.liberation.line.004",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "これを出したら、私にはあなたを出場させる権利がなくなります。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.liberation.node.line.005",
+      "lineId": "gidonozeaas.liberation.line.005",
+      "speakerId": "legacy.speaker.1jmq03z",
+      "speakerName": "ギドノゼアース",
+      "mode": "dialogue",
+      "text": "出る権利は私に戻る。次の試合へ行くかは、そのあと私が決める。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.liberation.node.line.006",
+      "lineId": "gidonozeaas.liberation.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "勝ちたい。最後まで行きたい。その中へ、彼を「戦力」と数える癖が混じっていた。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.liberation.node.line.007",
+      "lineId": "gidonozeaas.liberation.line.007",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "自由になったあと、残ってほしいと言うのはずるいですか。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.liberation.node.line.008",
+      "lineId": "gidonozeaas.liberation.line.008",
+      "speakerId": "legacy.speaker.1jmq03z",
+      "speakerName": "ギドノゼアース",
+      "mode": "dialogue",
+      "text": "命令ではなく願いになる。願いは断れる。だから、命令より重いときもある。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.liberation.node.line.009",
+      "lineId": "gidonozeaas.liberation.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "解除届の端が、空調の風で揺れる。黒い星は動かず、私の手を待っている。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.liberation.node.line.010",
+      "lineId": "gidonozeaas.liberation.line.010",
+      "speakerId": "legacy.speaker.1jmq03z",
+      "speakerName": "ギドノゼアース",
+      "mode": "dialogue",
+      "text": "今度は、お前の名前ではなく、お前の言葉で決めろ。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "choice",
+      "id": "gidonozeaas.liberation.node.choice.001",
+      "choices": [
+        {
+          "id": "gidonozeaas.liberation.choice.001",
+          "label": "契約解除届と、次の試合予定を別々に渡す",
+          "result": "彼は解除届へ小さな星を書き、試合予定へは自分の名だけを書いた。「前者は自由。後者は僕の予定」。登録灯は所有者名を消し、出場者名を残した。",
+          "intent": "決められた手順とは別の道を作る",
+          "promise": "契約を終わらせたうえで、本人の意思による次の約束を交わす。",
+          "memory": "解除届と試合予定を分けた前例が、所有ではない在籍の最初の記録になった。",
+          "tone": "defiant",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "gidonozeaas"
+              },
+              "mode": "add",
+              "trust": 12,
+              "ownership": 0
+            },
+            {
+              "type": "liberationDecision",
+              "fighterId": "gidonozeaas",
+              "decision": "release"
+            }
+          ],
+          "goto": "gidonozeaas.liberation.node.effect.001"
+        },
+        {
+          "id": "gidonozeaas.liberation.choice.002",
+          "label": "解除したあと、限定パフェの席だけ予約する",
+          "result": "契約はそこで終わった。彼は予約票へ二名と書き、その下へ「試合のあと」と足した。戦う理由が会社の命令から限定メニューへ変わっても、本人が選んだなら十分だった。",
+          "intent": "チーム全体の準備を進める",
+          "promise": "契約を終わらせたうえで、本人の意思による次の約束を交わす。",
+          "memory": "二名席の予約票が、契約の後にも会う理由として残った。",
+          "tone": "defiant",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "gidonozeaas"
+              },
+              "mode": "add",
+              "trust": 7,
+              "ownership": 0
+            },
+            {
+              "type": "sharedPoints",
+              "amount": 4
+            },
+            {
+              "type": "liberationDecision",
+              "fighterId": "gidonozeaas",
+              "decision": "release"
+            }
+          ],
+          "goto": "gidonozeaas.liberation.node.effect.001"
+        }
+      ]
+    },
+    {
+      "type": "effect",
+      "id": "gidonozeaas.liberation.node.effect.001",
+      "effects": [
+        {
+          "type": "setStoryStage",
+          "fighterId": "gidonozeaas",
+          "stage": 6
+        },
+        {
+          "type": "setLiberationEligible",
+          "fighterId": "gidonozeaas",
+          "eligible": false
+        },
+        {
+          "type": "setLiberated",
+          "fighterId": "gidonozeaas",
+          "liberated": true
+        },
+        {
+          "type": "relationship",
+          "target": {
+            "type": "fighter",
+            "fighterId": "gidonozeaas"
+          },
+          "mode": "set",
+          "ownership": 0
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "gidonozeaas.liberation.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "approved",
+    "sourceDocument": "native narrative block migration",
+    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "legacyGeneratedIds": false
+  }
+}

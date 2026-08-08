@@ -1,0 +1,313 @@
+{
+  "schemaVersion": 1,
+  "id": "room-seventeen.crisis",
+  "kind": "character",
+  "title": "最後の準備",
+  "summary": "最下層らしき場所で起きる「最後の準備」",
+  "ownership": {
+    "arcId": "character.room-seventeen",
+    "characterId": "room-seventeen",
+    "stage": "crisis"
+  },
+  "trigger": {
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 400,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "最下層らしき場所",
+    "assets": [
+      {
+        "id": "room-seventeen.crisis.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-contract-archive-v2.png",
+        "alt": "最下層らしき場所の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "line",
+      "id": "room-seventeen.crisis.node.line.001",
+      "lineId": "room-seventeen.crisis.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "アルデバラン社から届いた契約確認書には、十七号室の扱いを決める欄が残っていた。本人の意思を聞くため、最下層らしき場所へ向かった。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.crisis.node.line.002",
+      "lineId": "room-seventeen.crisis.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "その週、相手は私を避けた。廊下の向こうに姿を見つけても、業務用の言葉だけを残して先に曲がる。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.crisis.node.line.003",
+      "lineId": "room-seventeen.crisis.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "会社は出口を最終大会の会場へ固定し、迷宮そのものを選手輸送路にしようとしている。行き先を選ぶ権利は条項から消えていた。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.crisis.node.line.004",
+      "lineId": "room-seventeen.crisis.line.004",
+      "speakerId": "legacy.speaker.zzyjm6",
+      "speakerName": "十七号室",
+      "mode": "dialogue",
+      "text": "所有者は出口を閉じられる。"
+    },
+    {
+      "type": "direction",
+      "id": "room-seventeen.crisis.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "room-seventeen.crisis.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "room-seventeen.crisis.node.direction.002",
+      "command": {
+        "type": "effect",
+        "effectId": "shake"
+      }
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.crisis.node.line.005",
+      "lineId": "room-seventeen.crisis.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "十七号室の返事が短い。怒っている、と決めれば私の不安には名前がつく。でも以前の私も「客を守るため出口を隠す親切な部屋なのだ」と決めつけた。また同じ読み違いをするところだった。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.crisis.node.line.006",
+      "lineId": "room-seventeen.crisis.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "嫌われたのなら理由を聞けばいい。そう思うのに、外側から初めて掛けられた『また来ます』の札を見るたび、聞いた答えで今までの時間が変わるのが怖かった。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.crisis.node.line.007",
+      "lineId": "room-seventeen.crisis.line.007",
+      "speakerId": "legacy.speaker.zzyjm6",
+      "speakerName": "十七号室",
+      "mode": "dialogue",
+      "text": "命じられれば、誰でもそこへ運ぶ。帰りたい者も、逃げたい者も。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.crisis.node.line.008",
+      "lineId": "room-seventeen.crisis.line.008",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "閉じません。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.crisis.node.line.009",
+      "lineId": "room-seventeen.crisis.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ようやく追いついた場所で、十七号室は入った者へ安全な部屋を与え、出口だけを隠す迷宮に戻っていた。近づく前の、何も期待していなかった顔だ。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.crisis.node.line.010",
+      "lineId": "room-seventeen.crisis.line.010",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "便利な近道のために、全部の出口を同じにしません。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.crisis.node.line.011",
+      "lineId": "room-seventeen.crisis.line.011",
+      "speakerId": "legacy.speaker.zzyjm6",
+      "speakerName": "十七号室",
+      "mode": "dialogue",
+      "text": "知っている。だから扉を開けた。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.crisis.node.line.012",
+      "lineId": "room-seventeen.crisis.line.012",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "原因は私への不信ではない。大切な客を失わないために、帰る道まで奪ってしまうことから私を遠ざけようとしている。そのやさしさを、やさしいまま受け入れてはいけない気がした。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.crisis.node.line.013",
+      "lineId": "room-seventeen.crisis.line.013",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "扉の隙間から、安堵したようにいくつもの風が吹いた。潮風と雪が同時に髪へ絡んだ。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.crisis.node.line.014",
+      "lineId": "room-seventeen.crisis.line.014",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "少し寂しくなるだけで館内図が百一階まで増築され、非常口が昨日へつながる。別れ話のように静かな場面なのに、施設全体は最終災害手順へ移行している。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.crisis.node.line.015",
+      "lineId": "room-seventeen.crisis.line.015",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "正しい答えを当てることより、間違えたまま命令しないことを選ぶ。私は逃げ道をふさがない位置で止まり、聞きたかったことを短い言葉にした。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.crisis.node.line.016",
+      "lineId": "room-seventeen.crisis.line.016",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "守るために離れるのは、残された側へ選択を渡さない。命令と同じだと告げると、初めて相手の表情が崩れた。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.crisis.node.line.017",
+      "lineId": "room-seventeen.crisis.line.017",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "勝つための答えと、あとで自分を嫌いにならない答えは、同じとは限らない。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.crisis.node.line.018",
+      "lineId": "room-seventeen.crisis.line.018",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私は勝利を約束しない。安全も約束できない。ただ、扉を開けたまま、戻ってくるかどうかを客自身へ任せることを諦める判断だけは本人へ返すと決めた。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.crisis.node.line.019",
+      "lineId": "room-seventeen.crisis.line.019",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "並んで戻る廊下には、まだ一人分の距離がある。でも今度の沈黙は拒絶ではなく、同じ答えを考えるためのものだった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "choice",
+      "id": "room-seventeen.crisis.node.choice.001",
+      "choices": [
+        {
+          "id": "room-seventeen.crisis.choice.001",
+          "label": "観客席へ避難用の出口を増やす",
+          "result": "観客席の壁へ避難用の扉が次々と開いた。十七号室は閉じ込める迷宮ではなく、誰かを帰すための出口を自分で選んだ。",
+          "intent": "この人だけの突破法へ賭ける",
+          "promise": "予測しにくい方法を試し、この人専用の成長を大きく進める。",
+          "memory": "危機で選んだ方法は、契約を解く場面でも二人の共通の記憶として戻る。",
+          "tone": "wild",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "room-seventeen"
+              },
+              "mode": "add",
+              "trust": 12,
+              "ownership": -10
+            },
+            {
+              "type": "fighterPoints",
+              "target": {
+                "type": "fighter",
+                "fighterId": "room-seventeen"
+              },
+              "amount": 6
+            }
+          ],
+          "goto": "room-seventeen.crisis.node.effect.001"
+        },
+        {
+          "id": "room-seventeen.crisis.choice.002",
+          "label": "敵陣だけを迷宮の十七階へつなぐ",
+          "result": "敵陣の床だけが十七階へつながった。味方が迷わない三本の目印を全員で置き、迷宮の力を試合用の経路へ絞った。",
+          "intent": "全員が使える安全な突破法を作る",
+          "promise": "本人だけの切り札は抑え、チーム全体へ使える成長を持ち帰る。",
+          "memory": "全員で組み直した手順は、契約を解く場面でも選んだ責任として戻る。",
+          "tone": "pragmatic",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "room-seventeen"
+              },
+              "mode": "add",
+              "trust": -2,
+              "ownership": 10
+            },
+            {
+              "type": "sharedPoints",
+              "amount": 6
+            }
+          ],
+          "goto": "room-seventeen.crisis.node.effect.001"
+        }
+      ]
+    },
+    {
+      "type": "effect",
+      "id": "room-seventeen.crisis.node.effect.001",
+      "effects": [
+        {
+          "type": "setStoryStage",
+          "fighterId": "room-seventeen",
+          "stage": 5
+        },
+        {
+          "type": "setLiberationEligible",
+          "fighterId": "room-seventeen",
+          "eligible": true
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "room-seventeen.crisis.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "approved",
+    "sourceDocument": "native narrative block migration",
+    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "legacyGeneratedIds": false
+  }
+}

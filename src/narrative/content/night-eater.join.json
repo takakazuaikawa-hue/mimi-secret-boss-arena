@@ -1,0 +1,322 @@
+{
+  "schemaVersion": 1,
+  "id": "night-eater.join",
+  "kind": "character",
+  "title": "スカウト",
+  "summary": "夜の遊歩道で起きる「スカウト」",
+  "ownership": {
+    "arcId": "character.night-eater",
+    "characterId": "night-eater",
+    "stage": "join"
+  },
+  "trigger": {
+    "actions": [
+      "work",
+      "rest"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 400,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "夜の遊歩道",
+    "assets": [
+      {
+        "id": "night-eater.join.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-employee-entrance.png",
+        "alt": "夜の遊歩道の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "line",
+      "id": "night-eater.join.node.line.001",
+      "lineId": "night-eater.join.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "夜を食べるものの選手登録は、顔写真の撮影だけで午前と午後を使った。夜の登録なのに、昼を丸ごと食べている。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.join.node.line.002",
+      "lineId": "night-eater.join.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "一枚目は真っ黒。二枚目はカメラの中だけ夕焼け。三枚目には、撮影係の背後霊みたいな私だけが写った。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.join.node.line.003",
+      "lineId": "night-eater.join.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "選手登録用の写真は真っ黒になった。露出を上げると、今度はカメラの中だけ日没した。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.join.node.line.004",
+      "lineId": "night-eater.join.line.004",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "夜勤枠なら空いてます。"
+    },
+    {
+      "type": "direction",
+      "id": "night-eater.join.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "night-eater.join.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "night-eater.join.node.direction.002",
+      "command": {
+        "type": "effect",
+        "effectId": "pulse"
+      }
+    },
+    {
+      "type": "line",
+      "id": "night-eater.join.node.line.005",
+      "lineId": "night-eater.join.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "端末は『顔を枠内へ入れてください』を繰り返した。枠内はすでに夜で満員なのだが、機械に詩は通じない。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.join.node.line.006",
+      "lineId": "night-eater.join.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "種族欄へ『夜』と入れると営業時間を聞かれ、営業時間を入れると労働契約へ進んだ。登録端末まで夜勤を募集し始めた。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.join.node.line.007",
+      "lineId": "night-eater.join.line.007",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "顔写真なしで通るでしょうか。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.join.node.line.008",
+      "lineId": "night-eater.join.line.008",
+      "speakerId": "legacy.speaker.ij983g",
+      "speakerName": "夜を食べるもの",
+      "mode": "dialogue",
+      "text": "勤務ではない。だが夜が始まる場所には興味がある。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.join.node.line.009",
+      "lineId": "night-eater.join.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "本人は勤務ではないと三回言った。そのたび端末が『勤務形態を選択してください』と返す。会話の相性が最悪である。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.join.node.line.010",
+      "lineId": "night-eater.join.line.010",
+      "speakerId": "legacy.speaker.ij983g",
+      "speakerName": "夜を食べるもの",
+      "mode": "dialogue",
+      "text": "顔を決めるほど、長く誰かに見られたことがない。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.join.node.line.011",
+      "lineId": "night-eater.join.line.011",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "選手欄に勤務時間を書いておきますね。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.join.node.line.012",
+      "lineId": "night-eater.join.line.012",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私は職員を呼び、職員は上司を呼び、上司は照明係を呼んだ。照明係は犯人を見て帰った。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.join.node.line.013",
+      "lineId": "night-eater.join.line.013",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "本人確認欄へ『閉店後に在席』と書くと、端末は日没まで審査を保留し、本当に日が沈んだ瞬間だけ受理した。融通はないが演出は満点だ。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.join.node.line.014",
+      "lineId": "night-eater.join.line.014",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "注意事項には『照れ隠しで夜明けが三分遅れます』と記入した。職員は冗談だと思って笑い、翌朝三分遅刻した。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.join.node.line.015",
+      "lineId": "night-eater.join.line.015",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "最後の空欄は本人へ渡した。影がペンを持つと、インクだけ先に暗くなる。文房具にも相性があるらしい。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.join.node.line.016",
+      "lineId": "night-eater.join.line.016",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "本人が確認した条件は報酬でも勝率でもなく、『試合後に会場をすぐ明るくするか』だった。私は清掃が終わるまで待つと約束した。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.join.node.line.017",
+      "lineId": "night-eater.join.line.017",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "その代わり冷蔵庫、避難灯、レジ画面は食べない。三項目だけ妙に具体的なチーム規約ができた。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.join.node.line.018",
+      "lineId": "night-eater.join.line.018",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "登録完了音が鳴った瞬間、その小さな光まで食べられた。端末は無音で合格を表示した。祝う気持ちはあるらしい。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.join.node.line.019",
+      "lineId": "night-eater.join.line.019",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "こうしてチームには夜が加入した。勤務時間は空欄、顔写真は黒一色、特記事項は冷蔵庫厳禁。前途は暗い。本人には褒め言葉だった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "choice",
+      "id": "night-eater.join.node.choice.001",
+      "choices": [
+        {
+          "id": "night-eater.join.choice.001",
+          "label": "照明を一列消し、影が話せる席を作る",
+          "result": "暗がりはそれ以上広がらなかった。苦情票ではない言葉が初めて届き、閉店後の一席が正式な控室になった。",
+          "intent": "本人の得意な戦い方を知る",
+          "promise": "登録は少し遅れるが、この人専用の成長ポイントを得る。",
+          "memory": "自分で書いた最初の条件を、相手は次の大事な場面でも覚えている。",
+          "tone": "tender",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "night-eater"
+              },
+              "mode": "add",
+              "trust": 8,
+              "ownership": -3
+            },
+            {
+              "type": "fighterPoints",
+              "target": {
+                "type": "fighter",
+                "fighterId": "night-eater"
+              },
+              "amount": 2
+            },
+            {
+              "type": "recruitmentDecision",
+              "fighterId": "night-eater",
+              "decision": "join"
+            }
+          ],
+          "goto": "night-eater.join.node.end.001"
+        },
+        {
+          "id": "night-eater.join.choice.002",
+          "label": "閉店作業の担当として、勤務表へ影を登録する",
+          "result": "名前欄には黒い線しか出なかった。それでも閉店は三分早まり、浮いた時間だけ会話ができた。",
+          "intent": "次の公式戦へ間に合わせる",
+          "promise": "本人の詳細は後回しになるが、誰にでも使える成長ポイントを得る。",
+          "memory": "先に席を確保した判断は、チームの始まり方として記録に残る。",
+          "tone": "pragmatic",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "night-eater"
+              },
+              "mode": "add",
+              "trust": 0,
+              "ownership": 8
+            },
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            },
+            {
+              "type": "recruitmentDecision",
+              "fighterId": "night-eater",
+              "decision": "join"
+            }
+          ],
+          "goto": "night-eater.join.node.end.001"
+        },
+        {
+          "id": "night-eater.join.choice.003",
+          "label": "今回は夜を食べるものを誘わず、別の機会を待つ",
+          "result": "夜を食べるものの出場登録は行わなかった。相手は所属せず、それぞれの用事へ戻った。断る選択を残したことだけが、次に会う時まで静かに残った。",
+          "intent": "今回はチームへ誘わない",
+          "promise": "今回の所属は見送るが、人物の物語と再会の可能性は失わない。",
+          "memory": "勧誘しない選択も尊重されたことを、相手は覚えている。",
+          "tone": "pragmatic",
+          "effects": [
+            {
+              "type": "recruitmentDecision",
+              "fighterId": "night-eater",
+              "decision": "decline"
+            }
+          ],
+          "goto": "night-eater.join.node.end.001"
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "night-eater.join.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "approved",
+    "sourceDocument": "native narrative block migration",
+    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "legacyGeneratedIds": false
+  }
+}

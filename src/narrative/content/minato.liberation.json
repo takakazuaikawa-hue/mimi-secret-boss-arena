@@ -1,0 +1,331 @@
+{
+  "schemaVersion": 1,
+  "id": "minato.liberation",
+  "kind": "liberation",
+  "title": "契約の外側",
+  "summary": "搬入口で起きる「契約の外側」",
+  "ownership": {
+    "arcId": "character.minato",
+    "characterId": "minato",
+    "stage": "liberation"
+  },
+  "trigger": {
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 400,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "搬入口",
+    "assets": [
+      {
+        "id": "minato.liberation.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-casino-cafe-night.png",
+        "alt": "搬入口の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "line",
+      "id": "minato.liberation.node.line.001",
+      "lineId": "minato.liberation.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "最終大会が近づくなか、ミナトの契約を終わらせられる条件がそろった。今日は勝敗より先に、本人の意思を確かめに来た。"
+    },
+    {
+      "type": "line",
+      "id": "minato.liberation.node.line.002",
+      "lineId": "minato.liberation.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "解除届を渡せば、この人を呼び止める権利はなくなる。最初から持つべきでなかった権利なのに、指が紙を離さない。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "minato.liberation.node.line.003",
+      "lineId": "minato.liberation.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "解除届の横に、求人誌が三冊置かれている。どのページにも『世界を救った経験者歓迎』とは書いていない。"
+    },
+    {
+      "type": "line",
+      "id": "minato.liberation.node.line.004",
+      "lineId": "minato.liberation.line.004",
+      "speakerId": "legacy.speaker.1vz3er0",
+      "speakerName": "ミナト",
+      "mode": "dialogue",
+      "text": "契約がなくても、次の試合へ出たいと思いました。"
+    },
+    {
+      "type": "direction",
+      "id": "minato.liberation.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "minato.liberation.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "minato.liberation.node.direction.002",
+      "command": {
+        "type": "effect",
+        "effectId": "flash"
+      }
+    },
+    {
+      "type": "line",
+      "id": "minato.liberation.node.line.005",
+      "lineId": "minato.liberation.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "解除届は薄く、柄に小さな花が彫られた短剣より軽い。こんな紙で自由を渡せると思うこと自体、最後の所有なのかもしれない。手汗で端が少し曲がった。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "minato.liberation.node.line.006",
+      "lineId": "minato.liberation.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ミナトは急かさない。誰かに必要な役目があれば、迷わず正しい方を選べる人でありながら、私の迷いが言葉になるまで待っている。"
+    },
+    {
+      "type": "line",
+      "id": "minato.liberation.node.line.007",
+      "lineId": "minato.liberation.line.007",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "契約がなくなったら、次はどこへ行きますか。"
+    },
+    {
+      "type": "line",
+      "id": "minato.liberation.node.line.008",
+      "lineId": "minato.liberation.line.008",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "理由は？"
+    },
+    {
+      "type": "line",
+      "id": "minato.liberation.node.line.009",
+      "lineId": "minato.liberation.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "勝つために必要だという理由なら、いくらでも並べられた。でも今伝えたいのは、誰にも急かされず、昼食と次の旅先を自分で決めることをこの先も見届けたいという、命令にできない願いだった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "minato.liberation.node.line.010",
+      "lineId": "minato.liberation.line.010",
+      "speakerId": "legacy.speaker.1vz3er0",
+      "speakerName": "ミナト",
+      "mode": "dialogue",
+      "text": "決めていない。決めていないまま出るのを、今度は失敗だと思わないことにする。"
+    },
+    {
+      "type": "line",
+      "id": "minato.liberation.node.line.011",
+      "lineId": "minato.liberation.line.011",
+      "speakerId": "legacy.speaker.1vz3er0",
+      "speakerName": "ミナト",
+      "mode": "dialogue",
+      "text": "勝った後に、みんなで帰る場所を作りたいからです。"
+    },
+    {
+      "type": "line",
+      "id": "minato.liberation.node.line.012",
+      "lineId": "minato.liberation.line.012",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "残ってほしいと言うことと、自由にすることは両立するのか。答えは書類にない。だから、本人へ聞くしかない。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "minato.liberation.node.line.013",
+      "lineId": "minato.liberation.line.013",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "返却を終えた両手は空いている。空っぽではなく、これから持つものを自分で選べる形に見えた。"
+    },
+    {
+      "type": "line",
+      "id": "minato.liberation.node.line.014",
+      "lineId": "minato.liberation.line.014",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "返却された神器が彼の迷いに反応し、倉庫一棟を戦場の空へ変えてしまうほどの力を持つ存在が、一枚の紙を前に私の返事だけを待っている。その不釣り合いさが、泣きそうな場面を少しだけ可笑しくした。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "minato.liberation.node.line.015",
+      "lineId": "minato.liberation.line.015",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "もう呼び止める権利はない。それでもミナトが振り返るなら、そこから先は契約ではなく本人の答えだ。私は追わず、その一歩を待った。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "minato.liberation.node.line.016",
+      "lineId": "minato.liberation.line.016",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "契約印が消える。関係まで消える音はしなかった。代わりに、これからは断られるかもしれないという自由な静けさが来た。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "minato.liberation.node.line.017",
+      "lineId": "minato.liberation.line.017",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "契約をなくしても関係はなくならない。次に同じ場所へ立つなら、互いに選び直した結果でありたい。"
+    },
+    {
+      "type": "line",
+      "id": "minato.liberation.node.line.018",
+      "lineId": "minato.liberation.line.018",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "柄に小さな花が彫られた短剣を返そうとすると、相手は受け取らなかった。「預けるのではない。次に会う場所の印だ」と言った。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "minato.liberation.node.line.019",
+      "lineId": "minato.liberation.line.019",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "別れの挨拶をした。それでも足音は同じ出口へ向かっている。契約ではなく、本人の歩幅で。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "choice",
+      "id": "minato.liberation.node.choice.001",
+      "choices": [
+        {
+          "id": "minato.liberation.choice.001",
+          "label": "返却済みの契約書と、未記入の依頼票を並べる",
+          "result": "契約書はそこで終わった。ミナトは依頼票の依頼人欄を空白のまま持ち帰り、翌朝、自分の名で『チームに同行する』と書いて戻ってきた。",
+          "intent": "契約と出場登録を完全に分ける",
+          "promise": "所有者名を消し、本人が自分の名で次の試合を選べるようにする。",
+          "memory": "自由になったあと、最初に自分で選んだ集合時刻が残る。",
+          "tone": "defiant",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "minato"
+              },
+              "mode": "add",
+              "trust": 10,
+              "ownership": 0
+            },
+            {
+              "type": "liberationDecision",
+              "fighterId": "minato",
+              "decision": "release"
+            }
+          ],
+          "goto": "minato.liberation.node.effect.001"
+        },
+        {
+          "id": "minato.liberation.choice.002",
+          "label": "契約を解いたあと、四十八件目を仲間として頼む",
+          "result": "報酬欄には『朝食つき』と書いた。ミナトは長い職歴書を閉じ、今度は仕事ではなく同僚として受けると言った。",
+          "intent": "自由な相手へ改めて協力を頼む",
+          "promise": "断る権利を返したうえで、決勝を一緒に戦う新しい約束を結ぶ。",
+          "memory": "頼まれたからではなく、頼みを聞いたから残った。その違いを二人が覚えている。",
+          "tone": "tender",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "minato"
+              },
+              "mode": "add",
+              "trust": 6,
+              "ownership": 0
+            },
+            {
+              "type": "sharedPoints",
+              "amount": 4
+            },
+            {
+              "type": "liberationDecision",
+              "fighterId": "minato",
+              "decision": "release"
+            }
+          ],
+          "goto": "minato.liberation.node.effect.001"
+        }
+      ]
+    },
+    {
+      "type": "effect",
+      "id": "minato.liberation.node.effect.001",
+      "effects": [
+        {
+          "type": "setStoryStage",
+          "fighterId": "minato",
+          "stage": 6
+        },
+        {
+          "type": "setLiberationEligible",
+          "fighterId": "minato",
+          "eligible": false
+        },
+        {
+          "type": "setLiberated",
+          "fighterId": "minato",
+          "liberated": true
+        },
+        {
+          "type": "relationship",
+          "target": {
+            "type": "fighter",
+            "fighterId": "minato"
+          },
+          "mode": "set",
+          "ownership": 0
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "minato.liberation.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "approved",
+    "sourceDocument": "native narrative block migration",
+    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "legacyGeneratedIds": false
+  }
+}

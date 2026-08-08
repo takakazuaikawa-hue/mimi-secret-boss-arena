@@ -1,0 +1,306 @@
+{
+  "schemaVersion": 1,
+  "id": "amara.bond",
+  "kind": "character",
+  "title": "チームの日常",
+  "summary": "噴水広場で起きる「チームの日常」",
+  "ownership": {
+    "arcId": "character.amara",
+    "characterId": "amara",
+    "stage": "bond"
+  },
+  "trigger": {
+    "actions": [
+      "play"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 400,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "噴水広場",
+    "assets": [
+      {
+        "id": "amara.bond.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-casino-cafe-rain.png",
+        "alt": "噴水広場の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "line",
+      "id": "amara.bond.node.line.001",
+      "lineId": "amara.bond.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "アマラがチームに加わってから、噴水広場で顔を合わせることが増えた。今日は試合の話ではなく、少しだけ時間が空いている。"
+    },
+    {
+      "type": "line",
+      "id": "amara.bond.node.line.002",
+      "lineId": "amara.bond.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "試合のない午後。窓を雨が細く叩き、業務連絡も歓声も今日は遠い。二人きりになる予定ではなかったのに、空いている席は向かいだけだった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "amara.bond.node.line.003",
+      "lineId": "amara.bond.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "昼休みの食堂で、彼女は箸袋の注意書きに異議を書いていた。『環境に配慮』の根拠資料がないらしい。"
+    },
+    {
+      "type": "line",
+      "id": "amara.bond.node.line.004",
+      "lineId": "amara.bond.line.004",
+      "speakerId": "legacy.speaker.14shtqw",
+      "speakerName": "アマラ",
+      "mode": "dialogue",
+      "text": "噴水の縁へ座る行為は禁止されていません。"
+    },
+    {
+      "type": "direction",
+      "id": "amara.bond.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "amara.bond.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "amara.bond.node.direction.002",
+      "command": {
+        "type": "effect",
+        "effectId": "pulse"
+      }
+    },
+    {
+      "type": "line",
+      "id": "amara.bond.node.line.005",
+      "lineId": "amara.bond.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "試合も契約もない時間なら、もっと気楽に話せると思っていた。実際は、お茶を一口飲むたび沈黙の意味を考えてしまう。強さを見ている時より、アマラの小さな癖のほうがずっと気になった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "amara.bond.node.line.006",
+      "lineId": "amara.bond.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "白い手袋、冷めかけた紅茶、余白まで赤字の規則集。戦場では見落としていた小さな癖が、何も起きない時間ほどよく見える。"
+    },
+    {
+      "type": "line",
+      "id": "amara.bond.node.line.007",
+      "lineId": "amara.bond.line.007",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "食べ終わってからでもいいんじゃないですか。麺が伸びますよ。"
+    },
+    {
+      "type": "line",
+      "id": "amara.bond.node.line.008",
+      "lineId": "amara.bond.line.008",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "座りたいなら座ればいいのに。"
+    },
+    {
+      "type": "line",
+      "id": "amara.bond.node.line.009",
+      "lineId": "amara.bond.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "アマラはどんな相手にも判決と根拠を崩さない裁定者。そのはずなのに、私の休憩が終わる時刻を気にして、話題を一つずつ短くしている。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "amara.bond.node.line.010",
+      "lineId": "amara.bond.line.010",
+      "speakerId": "legacy.speaker.14shtqw",
+      "speakerName": "アマラ",
+      "mode": "dialogue",
+      "text": "不当な表示を見ながら食事をすると、味覚まで同意したことになる。"
+    },
+    {
+      "type": "line",
+      "id": "amara.bond.node.line.011",
+      "lineId": "amara.bond.line.011",
+      "speakerId": "legacy.speaker.14shtqw",
+      "speakerName": "アマラ",
+      "mode": "dialogue",
+      "text": "……そうします。規則がないので。"
+    },
+    {
+      "type": "line",
+      "id": "amara.bond.node.line.012",
+      "lineId": "amara.bond.line.012",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "特別な話をしなくても、同じ音を聞いていられる。そんな時間が欲しかったのだと、失う前から気づいてしまった。"
+    },
+    {
+      "type": "line",
+      "id": "amara.bond.node.line.013",
+      "lineId": "amara.bond.line.013",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私がスープを一口飲む間に、彼女は異議申立書を書き終え、ようやく伸びた麺を満足そうにすすった。"
+    },
+    {
+      "type": "line",
+      "id": "amara.bond.node.line.014",
+      "lineId": "amara.bond.line.014",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "彼女が異議を唱えると、重力や昨日の判決まで被告席へ呼び出される。甘い空気になりかけるたび、世界の方が先に耐えられなくなる。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "amara.bond.node.line.015",
+      "lineId": "amara.bond.line.015",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "彼女が探していたのは正解ではなく、結論を出せない自分の隣に残る相手だった。そう気づくと、何も起きなかった午後が急に大事な出来事へ変わった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "amara.bond.node.line.016",
+      "lineId": "amara.bond.line.016",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "笑いが収まったあと、裁く必要のない相談を聞き、結論を急がず同じ卓にいることという、驚くほど普通の望みが語られた。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "amara.bond.node.line.017",
+      "lineId": "amara.bond.line.017",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "試合の外で交わした言葉のほうが、次の指示より長く残ることがある。"
+    },
+    {
+      "type": "line",
+      "id": "amara.bond.node.line.018",
+      "lineId": "amara.bond.line.018",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "それは私が叶えるものではない。ただ、叶うまで隣にいることならできる。そう言いかけて、言葉にする勇気だけが遅れた。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "amara.bond.node.line.019",
+      "lineId": "amara.bond.line.019",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "箸袋の裏へ書かれた最初の異議申立てを間に置いたまま、私たちは雨が止んでもしばらく席を立たなかった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "choice",
+      "id": "amara.bond.node.choice.001",
+      "choices": [
+        {
+          "id": "amara.bond.choice.001",
+          "label": "敗者控室で、判定に不服だった人の話を聞く",
+          "result": "アマラは全員の言い分を同じ長さだけ聞いた。最後に私の椅子も勧められ、気づけば自分が我慢していたことまで供述していた。",
+          "intent": "相手の秘密の勝ち方を試す",
+          "promise": "読みにくい作戦になる代わりに、この人だけの成長を大きく進める。",
+          "memory": "任せた一戦の手応えが、次に力を見せる理由になる。",
+          "tone": "wild",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "amara"
+              },
+              "mode": "add",
+              "trust": 9,
+              "ownership": -2
+            },
+            {
+              "type": "fighterPoints",
+              "target": {
+                "type": "fighter",
+                "fighterId": "amara"
+              },
+              "amount": 3
+            }
+          ],
+          "goto": "amara.bond.node.effect.001"
+        },
+        {
+          "id": "amara.bond.choice.002",
+          "label": "次戦の規則から、勝てる抜け道を一つ探す",
+          "result": "抜け道は見つかったが、アマラは赤線の横へ『合法でも感じが悪い』と書いた。使うかどうかまで含めて作戦になった。",
+          "intent": "チームの新しい連携を試す",
+          "promise": "本人の流儀は崩すが、全員へ配れる成長ポイントを得る。",
+          "memory": "成功した作戦と短くなった会話の両方が、次の判断まで残る。",
+          "tone": "pragmatic",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "amara"
+              },
+              "mode": "add",
+              "trust": 1,
+              "ownership": 7
+            },
+            {
+              "type": "sharedPoints",
+              "amount": 3
+            }
+          ],
+          "goto": "amara.bond.node.effect.001"
+        }
+      ]
+    },
+    {
+      "type": "effect",
+      "id": "amara.bond.node.effect.001",
+      "effects": [
+        {
+          "type": "setStoryStage",
+          "fighterId": "amara",
+          "stage": 3
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "amara.bond.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "approved",
+    "sourceDocument": "native narrative block migration",
+    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "legacyGeneratedIds": false
+  }
+}

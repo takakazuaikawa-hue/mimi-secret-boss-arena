@@ -1,0 +1,309 @@
+{
+  "schemaVersion": 1,
+  "id": "rinne.meet",
+  "kind": "character",
+  "title": "最初の遭遇",
+  "summary": "裏口のベンチで起きる「最初の遭遇」",
+  "ownership": {
+    "arcId": "character.rinne",
+    "characterId": "rinne",
+    "stage": "meet"
+  },
+  "trigger": {
+    "actions": [
+      "play",
+      "work"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 500,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "裏口のベンチ",
+    "assets": [
+      {
+        "id": "rinne.meet.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-arena-reception.png",
+        "alt": "裏口のベンチの背景"
+      },
+      {
+        "id": "rinne.meet.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/encounters/rinne.png",
+        "alt": "最初の遭遇のイベント一枚絵"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "line",
+      "id": "rinne.meet.node.line.001",
+      "lineId": "rinne.meet.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "今週の用事で裏口のベンチへ立ち寄った。予定どおりなら、目の前の用事を済ませて帰るだけのはずだった。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.meet.node.line.002",
+      "lineId": "rinne.meet.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "その日、最初に目へ入ったのは空のコイン、外れ続けるルーレット、温かい飲み物の最後の一口だった。人より先に、その人の孤独だけが場所を取っていた。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.meet.node.line.003",
+      "lineId": "rinne.meet.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "カジノの出口で、無一文の女性が警備員へ丁寧に頭を下げていた。追い出された人にしては、胴元の方が青い顔をしている。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.meet.node.line.004",
+      "lineId": "rinne.meet.line.004",
+      "speakerId": "legacy.speaker.1vpt9ol",
+      "speakerName": "リンネ",
+      "mode": "dialogue",
+      "text": "追い出された。今日はまだ一度も賭けてないのに。"
+    },
+    {
+      "type": "direction",
+      "id": "rinne.meet.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "rinne.meet.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "rinne.meet.node.direction.002",
+      "command": {
+        "type": "effect",
+        "effectId": "flash"
+      }
+    },
+    {
+      "type": "line",
+      "id": "rinne.meet.node.line.005",
+      "lineId": "rinne.meet.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ここへ来た理由は、ごく普通の用事だった。けれどリンネを見た瞬間、兎耳だけが先に危険を知らせる。私はとっさに、危険な賭けほど喜ぶ、後悔しない勝負師なのだと思いかけた。",
+      "emotion": "comic"
+    },
+    {
+      "type": "direction",
+      "id": "rinne.meet.node.direction.003",
+      "command": {
+        "type": "still",
+        "assetId": "rinne.meet.asset.still.001"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "rinne.meet.node.direction.004",
+      "command": {
+        "type": "effect",
+        "effectId": "pulse"
+      }
+    },
+    {
+      "type": "line",
+      "id": "rinne.meet.node.line.006",
+      "lineId": "rinne.meet.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "声をかけるべきか迷っている間に、視線だけが一度重なる。胸が跳ねたのは見た目のせいではない。見つけてはいけない何かを、向こうも隠さなかったからだ。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "rinne.meet.node.line.007",
+      "lineId": "rinne.meet.line.007",
+      "speakerId": "legacy.speaker.1vpt9ol",
+      "speakerName": "リンネ",
+      "mode": "dialogue",
+      "text": "勝ちすぎたんじゃないよ。店が勝つ未来を、ひとつずつ避けただけ。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.meet.node.line.008",
+      "lineId": "rinne.meet.line.008",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "何をしたんですか。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.meet.node.line.009",
+      "lineId": "rinne.meet.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "リンネは、持っていないものまで賭け、負けを笑って次へ進む勝負師に見えた。だから私は、普通のお客様へするのと同じ声で話しかけることにした。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.meet.node.line.010",
+      "lineId": "rinne.meet.line.010",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "それを普通は勝ちすぎたと言うんじゃないですか。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.meet.node.line.011",
+      "lineId": "rinne.meet.line.011",
+      "speakerId": "legacy.speaker.1vpt9ol",
+      "speakerName": "リンネ",
+      "mode": "dialogue",
+      "text": "店が勝つ台だけ避けて歩いた。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.meet.node.line.012",
+      "lineId": "rinne.meet.line.012",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "たった一言の返事を待つ時間が、試合開始前より長い。背後ではいつもの業務放送が流れ、この場所だけが別の物語の入口みたいに静かだった。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.meet.node.line.013",
+      "lineId": "rinne.meet.line.013",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "彼女が指で空の財布を弾くと、まだ投げていないコインの音がした。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.meet.node.line.014",
+      "lineId": "rinne.meet.line.014",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "コインの裏表を外すたび別世界の確率が帳尻を合わせ、遠い王国が優勝する。それでも本人が気にしたのは、私が一歩引いたことの方だった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "rinne.meet.node.line.015",
+      "lineId": "rinne.meet.line.015",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "まだ事情はほとんど分からない。ただ、最初の考えだけでは説明できない表情を見てしまった。私は曲がった名札を直し、次に会う口実をひとつ残した。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "rinne.meet.node.line.016",
+      "lineId": "rinne.meet.line.016",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "怖くないと言えば嘘になる。でも、怖さの奥に賭けなければ誰にも選ばれず、賭ければ大切なものを自分から失うことがある気がして、目をそらす方が失礼に思えた。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "rinne.meet.node.line.017",
+      "lineId": "rinne.meet.line.017",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "事情はまだ分からない。でも、ここで立ち去れば、たぶん後悔する。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.meet.node.line.018",
+      "lineId": "rinne.meet.line.018",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "名前を聞いただけ。約束も、契約も、まだ何もない。それなのに別れ際、次に会った時の言葉を考えている自分がいた。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "rinne.meet.node.line.019",
+      "lineId": "rinne.meet.line.019",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "その場に残った使わずにポケットへ残した一枚の空コインを見て、私は今日の出来事を勤務報告の一行だけでは終わらせられないと知った。"
+    },
+    {
+      "type": "choice",
+      "id": "rinne.meet.node.choice.001",
+      "choices": [
+        {
+          "id": "rinne.meet.choice.001",
+          "label": "賭けずに未来の見え方を聞く",
+          "result": "勝ち筋は教えてくれなかったが、負け方を三つ避けてくれた。",
+          "intent": "登録の前に、目の前の相手を知る",
+          "promise": "目先の報酬は得ない代わりに、相手が何を望んでいるかを確かめる。",
+          "memory": "手続きより先に話を聞いたことを、相手は最初の印象として覚えている。",
+          "tone": "tender",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "rinne"
+              },
+              "mode": "add",
+              "trust": 7,
+              "ownership": -2
+            }
+          ],
+          "goto": "rinne.meet.node.effect.001"
+        },
+        {
+          "id": "rinne.meet.choice.002",
+          "label": "今日はリンネを誘わず、用事へ戻る",
+          "result": "リンネの名前と出会った場所だけを覚え、今日は普段の仕事へ戻った。急いで所属を決めなかったことが、次に会う時の距離として残った。",
+          "intent": "今は勧誘せず、相手との距離を保つ",
+          "promise": "所属選手にはならないが、後の出来事で再会できる。",
+          "memory": "最初の出会いで急いで仲間にしなかったことが、次の再会へ残る。",
+          "tone": "pragmatic",
+          "effects": [],
+          "goto": "rinne.meet.node.effect.001"
+        }
+      ]
+    },
+    {
+      "type": "effect",
+      "id": "rinne.meet.node.effect.001",
+      "effects": [
+        {
+          "type": "markEncountered",
+          "fighterId": "rinne",
+          "encountered": true
+        },
+        {
+          "type": "setStoryStage",
+          "fighterId": "rinne",
+          "stage": 1
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "rinne.meet.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "approved",
+    "sourceDocument": "native narrative block migration",
+    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "legacyGeneratedIds": false
+  }
+}

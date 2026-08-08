@@ -1,0 +1,262 @@
+{
+  "schemaVersion": 1,
+  "id": "sazanami.epilogue",
+  "kind": "character",
+  "title": "第一回・浅瀬味青のり品評会",
+  "summary": "深海より大きな審査員が、市販弁当の青のりを一枚ずつ真剣に評する",
+  "ownership": {
+    "arcId": "character.sazanami",
+    "characterId": "sazanami",
+    "stage": "epilogue"
+  },
+  "trigger": {
+    "actions": [
+      "rest"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 400,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "噴水広場",
+    "assets": [
+      {
+        "id": "sazanami.epilogue.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-casino-cafe-morning.png",
+        "alt": "噴水広場の背景"
+      },
+      {
+        "id": "sazanami.epilogue.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/events/sazanami-epilogue-seaweed-awards-v1.png",
+        "alt": "巨大な単眼が見守る水浸しの青のり品評会で、弁当を頭上へ救うミミと参加者たち"
+      },
+      {
+        "id": "sazanami.epilogue.asset.still.002",
+        "kind": "still",
+        "path": "/assets/story/events/sazanami-epilogue-still-water-reward-v1.png",
+        "alt": "水位を一センチも変えず、巨大な海眼の前へミミの安い青のり弁当一箱だけを返すさざなみ"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "line",
+      "id": "sazanami.epilogue.node.line.001",
+      "lineId": "sazanami.epilogue.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "最終大会の翌週、館内水槽の前へ長机が二十本並んだ。第一回・浅瀬味青のり品評会。本日の審査員は一名、体積は沿岸三県以上。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.epilogue.node.line.002",
+      "lineId": "sazanami.epilogue.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "発端は、さざなみが私のコンビニ弁当を『浅瀬の味』と評したことだった。なぜか各店の仕入れ担当が勝負と受け取り、青のりを持って集結した。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.epilogue.node.line.003",
+      "lineId": "sazanami.epilogue.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私は受付係兼、弁当救助係として胴長を着た。審査員が一度まばたきすると、館内水位が膝まで上がるためである。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.epilogue.node.line.004",
+      "lineId": "sazanami.epilogue.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "開会時刻。小魚の向こうで海溝より大きな瞼が開き、水槽の奥行きが水平線まで伸びた。参加者全員が青のりを胸の高さへ掲げる。"
+    },
+    {
+      "type": "direction",
+      "id": "sazanami.epilogue.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "sazanami.epilogue.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "sazanami.epilogue.node.direction.002",
+      "command": {
+        "type": "effect",
+        "effectId": "pulse"
+      }
+    },
+    {
+      "type": "line",
+      "id": "sazanami.epilogue.node.line.005",
+      "lineId": "sazanami.epilogue.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "一番、老舗海苔問屋の特選品。黒々とした香りが水槽へ届くと、巨大な瞳が細くなった。会場が息をのむ。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.epilogue.node.line.006",
+      "lineId": "sazanami.epilogue.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "水面が盛り上がり、長机三本がゆっくり後退した。喜んだのかと思ったが、違った。彼は不満なときほど潮を押し返す。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.epilogue.node.line.007",
+      "lineId": "sazanami.epilogue.line.007",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "判定は。床が乾く前にお願いします。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.epilogue.node.line.008",
+      "lineId": "sazanami.epilogue.line.008",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "あと、弁当は流さないでください。出場者より救助が難しいんです。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.epilogue.node.line.009",
+      "lineId": "sazanami.epilogue.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "水槽の底から、低い声が床と私のおなかへ同時に響いた。後ろの仕入れ担当たちが、一斉に採点表へ鉛筆を構える。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.epilogue.node.line.010",
+      "lineId": "sazanami.epilogue.line.010",
+      "speakerId": "legacy.speaker.we7zqt",
+      "speakerName": "さざなみ",
+      "mode": "dialogue",
+      "text": "乾きが早い。潮を知らず、潮を名乗っている。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.epilogue.node.line.011",
+      "lineId": "sazanami.epilogue.line.011",
+      "speakerId": "legacy.speaker.we7zqt",
+      "speakerName": "さざなみ",
+      "mode": "dialogue",
+      "text": "四十二点。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.epilogue.node.line.012",
+      "lineId": "sazanami.epilogue.line.012",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "老舗の担当者が膝から崩れた。私は励まそうとしたが、『潮を知らない』を社訓にすると言って立ち上がった。たぶん励まさなくていい人だ。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.epilogue.node.line.013",
+      "lineId": "sazanami.epilogue.line.013",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "二番は魔界産、三番は月面養殖、四番は海藻に見せた緑色の紙だった。四番だけは私が受付で止めた。食べ物の大会で紙を出す勇気は評価しない。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.epilogue.node.line.014",
+      "lineId": "sazanami.epilogue.line.014",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "十二番で、さざなみが満足そうに一度まばたきした。天井まで波が立ち、参加者は青のりではなく弁当を頭上へ避難させた。私は二十七個を救った。新記録である。",
+      "emotion": "comic"
+    },
+    {
+      "type": "direction",
+      "id": "sazanami.epilogue.node.direction.003",
+      "command": {
+        "type": "still",
+        "assetId": "sazanami.epilogue.asset.still.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "line",
+      "id": "sazanami.epilogue.node.line.015",
+      "lineId": "sazanami.epilogue.line.015",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "水が引くと、最後の一箱だけが水槽前に残っていた。最初に私が持ってきたのと同じ、安い青のり弁当。高級品に混ぜた覚えはない。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.epilogue.node.line.016",
+      "lineId": "sazanami.epilogue.line.016",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "箱のふたには、海水でにじんだ私の名札の跡があった。さざなみが、あの日の空箱を海の底から返しに来たらしい。返却方法が大会なのは、ずいぶん遠回りだ。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.epilogue.node.line.017",
+      "lineId": "sazanami.epilogue.line.017",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "巨大な瞳が、今度は水位を一センチも変えずに近づいた。地図を変えない歩き方は、本当に上達している。"
+    },
+    {
+      "type": "direction",
+      "id": "sazanami.epilogue.node.direction.004",
+      "command": {
+        "type": "still",
+        "assetId": "sazanami.epilogue.asset.still.002",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "line",
+      "id": "sazanami.epilogue.node.line.018",
+      "lineId": "sazanami.epilogue.line.018",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "『同じ浅瀬の味がする』。その一言で安売り弁当が初代優勝を決め、老舗、魔界、月面の担当者が再戦を申し込んだ。私は第二回の胴長を予約した。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.epilogue.node.line.019",
+      "lineId": "sazanami.epilogue.line.019",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "閉会後、さざなみが小さく寝返りを打った。沿岸三県は無事だったが、会場の弁当だけが全部きれいに青のり面を上へ向けた。審査員には最後まで細かい。",
+      "emotion": "tender"
+    },
+    {
+      "type": "end",
+      "id": "sazanami.epilogue.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "approved",
+    "sourceDocument": "native narrative block migration",
+    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "legacyGeneratedIds": false
+  }
+}

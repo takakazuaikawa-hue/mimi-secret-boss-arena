@@ -1,0 +1,261 @@
+{
+  "schemaVersion": 1,
+  "id": "night-eater.epilogue",
+  "kind": "character",
+  "title": "閉店後だけ大繁盛",
+  "summary": "夜が照明を食べる限定営業に、帰りたくない客が集まりすぎる",
+  "ownership": {
+    "arcId": "character.night-eater",
+    "characterId": "night-eater",
+    "stage": "epilogue"
+  },
+  "trigger": {
+    "actions": [
+      "rest"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 400,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "閉店後のカフェ",
+    "assets": [
+      {
+        "id": "night-eater.epilogue.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-casino-cafe-night.png",
+        "alt": "閉店後のカフェ"
+      },
+      {
+        "id": "night-eater.epilogue.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/events/night-eater-epilogue-closing-chaos-v1.png",
+        "alt": "朝をつまみ食いする夜へ、脚立の上から閉店札を突きつけるミミ"
+      },
+      {
+        "id": "night-eater.epilogue.asset.still.002",
+        "kind": "still",
+        "path": "/assets/story/events/night-eater-epilogue-spared-light-reward-v1.png",
+        "alt": "食べた夜を星空の外套へ畳み、朝を返しながらミミの席の一灯だけを残す夜を食べるもの"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "line",
+      "id": "night-eater.epilogue.node.line.001",
+      "lineId": "night-eater.epilogue.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "最終大会の翌週、閉店後のカフェに行列ができた。閉店後なのに行列。日本語が入口から負けている。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.epilogue.node.line.002",
+      "lineId": "night-eater.epilogue.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "目当ては『夜が照明を一口ずつ食べる限定営業』。宣伝した覚えはない。苦情票の写真が勝手に宣伝になった。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.epilogue.node.line.003",
+      "lineId": "night-eater.epilogue.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "閉店後のカフェに、月明かりだけで営業する席が一つできた。メニューは温かいミルクと、何も話さない時間。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.epilogue.node.line.004",
+      "lineId": "night-eater.epilogue.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "閉店後の闘技場には、足元だけを照らす穏やかな夜が来る。"
+    },
+    {
+      "type": "direction",
+      "id": "night-eater.epilogue.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "night-eater.epilogue.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "night-eater.epilogue.node.direction.002",
+      "command": {
+        "type": "effect",
+        "effectId": "pulse"
+      }
+    },
+    {
+      "type": "line",
+      "id": "night-eater.epilogue.node.line.005",
+      "lineId": "night-eater.epilogue.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "メニューは温かいミルク一種類。照明は夜がその日の気分で食べる。注文より演出の方が不安定だ。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.epilogue.node.line.006",
+      "lineId": "night-eater.epilogue.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "開店時刻になると、夜は入口からではなく天井の隅から現れた。正規の出勤経路を使わないので、勤怠端末は今も欠勤扱いである。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.epilogue.node.line.007",
+      "lineId": "night-eater.epilogue.line.007",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "今日のお客様、ずいぶん静かですね。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.epilogue.node.line.008",
+      "lineId": "night-eater.epilogue.line.008",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "今日は食べすぎないでくださいね。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.epilogue.node.line.009",
+      "lineId": "night-eater.epilogue.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "夜は客席を一周し、読書席の灯りは残し、居眠り席は暗くし、いちゃついている二人の真上だけ妙に明るくした。判断に私情がある。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.epilogue.node.line.010",
+      "lineId": "night-eater.epilogue.line.010",
+      "speakerId": "legacy.speaker.ij983g",
+      "speakerName": "夜を食べるもの",
+      "mode": "dialogue",
+      "text": "静かな者は前からいた。明るい店では、席を見つけられなかっただけだ。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.epilogue.node.line.011",
+      "lineId": "night-eater.epilogue.line.011",
+      "speakerId": "legacy.speaker.ij983g",
+      "speakerName": "夜を食べるもの",
+      "mode": "dialogue",
+      "text": "週末なので、少しだけ長くする。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.epilogue.node.line.012",
+      "lineId": "night-eater.epilogue.line.012",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "閉店予定を十分過ぎても客が帰らない。夜はうれしそうに店内をさらに暗くした。帰りたくない気持ちへ設備で応えるのはやめてほしい。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.epilogue.node.line.013",
+      "lineId": "night-eater.epilogue.line.013",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私は『週末なので少しだけ』を許可した。少しだけ、の尺度を確認しなかった。これは私のミスである。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.epilogue.node.line.014",
+      "lineId": "night-eater.epilogue.line.014",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "午前零時、空の東側にまで歯形がついた。天文台から『朝を何時に返す予定ですか』と丁寧な問い合わせが来た。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.epilogue.node.line.015",
+      "lineId": "night-eater.epilogue.line.015",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私は脚立へ上がり、天井の夜へ閉店札を突きつけた。『楽しいのは分かります。でも朝は返す。今すぐ』。影がしょんぼり縮んだ。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.epilogue.node.line.016",
+      "lineId": "night-eater.epilogue.line.016",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "客席から延長を求める拍手が起きた。夜が一気に膨らむ。私は拍手した全員へ閉店作業を割り振った。共犯には労働してもらう。",
+      "emotion": "tender"
+    },
+    {
+      "type": "direction",
+      "id": "night-eater.epilogue.node.direction.003",
+      "command": {
+        "type": "still",
+        "assetId": "night-eater.epilogue.asset.still.001"
+      }
+    },
+    {
+      "type": "line",
+      "id": "night-eater.epilogue.node.line.017",
+      "lineId": "night-eater.epilogue.line.017",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "椅子を上げ、カップを洗い、最後の客を見送る。夜は私の足元だけ小さく照らし、床の食べこぼしを隠そうとした。そこは照らして。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.epilogue.node.line.018",
+      "lineId": "night-eater.epilogue.line.018",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "朝を返す前に、夜は看板の『また明日』だけ残して他の光を食べた。見えない身体で、そこだけはずいぶん分かりやすい。"
+    },
+    {
+      "type": "direction",
+      "id": "night-eater.epilogue.node.direction.004",
+      "command": {
+        "type": "still",
+        "assetId": "night-eater.epilogue.asset.still.002",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "line",
+      "id": "night-eater.epilogue.node.line.019",
+      "lineId": "night-eater.epilogue.line.019",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "翌朝は三分遅れで来た。行列はもう次の週末まで予約済み。私は新しい閉店規則の一行目へ太字で書いた。『朝は食べ放題に含みません』。",
+      "emotion": "tender"
+    },
+    {
+      "type": "end",
+      "id": "night-eater.epilogue.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "approved",
+    "sourceDocument": "native narrative block migration",
+    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "legacyGeneratedIds": false
+  }
+}

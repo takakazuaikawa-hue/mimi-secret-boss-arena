@@ -1,0 +1,2234 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:," />
+    <title>ミミのときめき裏ボス闘技場 テキスト編集ツール</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #25333c;
+        --muted: #66747d;
+        --line: #d6dfe3;
+        --line-strong: #b9c7cd;
+        --paper: #ffffff;
+        --soft: #f3f6f7;
+        --reference: #eef2f3;
+        --teal: #147b7f;
+        --teal-dark: #0f5f63;
+        --teal-soft: #dceff0;
+        --gold: #c9962d;
+        --gold-soft: #fff1be;
+        --blue-soft: #e7f3fa;
+        --danger: #b74c42;
+        --danger-soft: #fbe8e5;
+        --success: #2e7d4b;
+        --success-soft: #e1f3e6;
+        --hold: #926125;
+        --hold-soft: #f8ead7;
+        --shadow: 0 12px 34px rgba(37, 51, 60, 0.1);
+        --header-height: 72px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+      }
+
+      body {
+        background: var(--soft);
+        color: var(--ink);
+        font-family:
+          "Yu Gothic UI", "Yu Gothic", "Hiragino Kaku Gothic ProN", Meiryo,
+          sans-serif;
+        font-size: 14px;
+        letter-spacing: 0;
+      }
+
+      button,
+      input,
+      select,
+      textarea {
+        font: inherit;
+        letter-spacing: 0;
+      }
+
+      button {
+        color: inherit;
+      }
+
+      .app-header {
+        height: var(--header-height);
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        padding: 0 22px;
+        background: var(--paper);
+        border-bottom: 1px solid var(--line-strong);
+        position: relative;
+        z-index: 4;
+      }
+
+      .brand {
+        min-width: 310px;
+      }
+
+      .brand h1 {
+        margin: 0;
+        font-size: 18px;
+        line-height: 1.3;
+        font-weight: 800;
+      }
+
+      .brand p {
+        margin: 4px 0 0;
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .header-progress {
+        flex: 1;
+        min-width: 190px;
+        max-width: 460px;
+        display: grid;
+        grid-template-columns: minmax(90px, auto) 1fr minmax(82px, auto);
+        align-items: center;
+        gap: 10px;
+      }
+
+      .progress-label,
+      .save-state {
+        color: var(--muted);
+        font-size: 12px;
+        white-space: nowrap;
+      }
+
+      .progress-track {
+        height: 7px;
+        overflow: hidden;
+        background: #e4e9eb;
+        border-radius: 3px;
+      }
+
+      .progress-bar {
+        width: 0;
+        height: 100%;
+        background: linear-gradient(90deg, var(--teal), var(--gold));
+        transition: width 180ms ease;
+      }
+
+      .header-actions {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-left: auto;
+      }
+
+      .button {
+        min-height: 38px;
+        padding: 0 14px;
+        border: 1px solid var(--line-strong);
+        border-radius: 6px;
+        background: var(--paper);
+        cursor: pointer;
+        font-weight: 700;
+        transition:
+          border-color 120ms ease,
+          background 120ms ease,
+          color 120ms ease,
+          transform 120ms ease;
+      }
+
+      .button:hover {
+        border-color: var(--teal);
+        color: var(--teal-dark);
+      }
+
+      .button:active {
+        transform: translateY(1px);
+      }
+
+      .button.primary {
+        border-color: var(--teal);
+        background: var(--teal);
+        color: white;
+      }
+
+      .button.primary:hover {
+        border-color: var(--teal-dark);
+        background: var(--teal-dark);
+        color: white;
+      }
+
+      .button.danger {
+        border-color: #e2bab5;
+        color: var(--danger);
+      }
+
+      .button.small {
+        min-height: 30px;
+        padding: 0 10px;
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .workspace {
+        height: calc(100dvh - var(--header-height));
+        display: grid;
+        grid-template-columns: 178px minmax(310px, 360px) minmax(520px, 1fr);
+        background: var(--paper);
+        overflow: hidden;
+      }
+
+      .rail {
+        min-width: 0;
+        overflow-y: auto;
+        background: #26343d;
+        color: white;
+        border-right: 1px solid #18252c;
+        padding: 18px 10px;
+      }
+
+      .rail-title {
+        margin: 0 10px 10px;
+        color: #b9c7cd;
+        font-size: 11px;
+        font-weight: 700;
+      }
+
+      .tab-button {
+        width: 100%;
+        min-height: 50px;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        gap: 8px;
+        padding: 9px 10px;
+        border: 0;
+        border-left: 3px solid transparent;
+        border-radius: 4px;
+        background: transparent;
+        color: #dce5e8;
+        cursor: pointer;
+        text-align: left;
+      }
+
+      .tab-button + .tab-button {
+        margin-top: 4px;
+      }
+
+      .tab-button:hover {
+        background: rgba(255, 255, 255, 0.07);
+      }
+
+      .tab-button.active {
+        border-left-color: #f2c765;
+        background: rgba(255, 255, 255, 0.12);
+        color: white;
+      }
+
+      .tab-label {
+        min-width: 0;
+        font-weight: 800;
+      }
+
+      .tab-count {
+        min-width: 30px;
+        color: #b9c7cd;
+        font-size: 11px;
+        text-align: right;
+      }
+
+      .tab-modified {
+        grid-column: 1 / -1;
+        color: #f4d485;
+        font-size: 10px;
+        line-height: 1;
+      }
+
+      .list-panel {
+        min-width: 0;
+        min-height: 0;
+        display: flex;
+        flex-direction: column;
+        background: #f8fafb;
+        border-right: 1px solid var(--line-strong);
+      }
+
+      .list-tools {
+        flex: 0 0 auto;
+        padding: 14px;
+        background: var(--paper);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .search-field {
+        width: 100%;
+        height: 40px;
+        padding: 0 12px;
+        border: 1px solid var(--line-strong);
+        border-radius: 5px;
+        background: white;
+        outline: none;
+      }
+
+      .search-field:focus,
+      .filter-select:focus,
+      .revision-input:focus,
+      .note-input:focus {
+        border-color: var(--teal);
+        box-shadow: 0 0 0 3px rgba(20, 123, 127, 0.12);
+      }
+
+      .filters {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        margin-top: 9px;
+      }
+
+      .filter-select {
+        width: 100%;
+        height: 34px;
+        padding: 0 8px;
+        border: 1px solid var(--line);
+        border-radius: 5px;
+        background: white;
+        color: var(--ink);
+        outline: none;
+      }
+
+      .result-count {
+        margin: 9px 2px 0;
+        color: var(--muted);
+        font-size: 11px;
+      }
+
+      .item-list {
+        flex: 1;
+        min-height: 0;
+        overflow-y: auto;
+      }
+
+      .list-row {
+        width: 100%;
+        min-height: 74px;
+        display: block;
+        padding: 11px 13px 11px 15px;
+        border: 0;
+        border-bottom: 1px solid var(--line);
+        border-left: 4px solid transparent;
+        background: transparent;
+        cursor: pointer;
+        text-align: left;
+      }
+
+      .list-row:hover {
+        background: white;
+      }
+
+      .list-row.active {
+        border-left-color: var(--teal);
+        background: white;
+        box-shadow: inset 0 0 0 1px rgba(20, 123, 127, 0.12);
+      }
+
+      .list-row.modified:not(.active) {
+        border-left-color: var(--gold);
+      }
+
+      .row-kicker {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        color: var(--muted);
+        font-size: 10px;
+      }
+
+      .row-title {
+        display: -webkit-box;
+        margin-top: 5px;
+        overflow: hidden;
+        color: var(--ink);
+        font-size: 13px;
+        font-weight: 800;
+        line-height: 1.45;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+      }
+
+      .row-context {
+        display: block;
+        margin-top: 5px;
+        overflow: hidden;
+        color: var(--muted);
+        font-size: 10px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .status-mark {
+        padding: 2px 6px;
+        border-radius: 3px;
+        background: #e7ebed;
+        color: #5f6d75;
+        font-size: 9px;
+        font-weight: 800;
+        white-space: nowrap;
+      }
+
+      .status-mark[data-status="要修正"] {
+        background: var(--danger-soft);
+        color: var(--danger);
+      }
+
+      .status-mark[data-status="修正済"] {
+        background: var(--success-soft);
+        color: var(--success);
+      }
+
+      .status-mark[data-status="保留"] {
+        background: var(--hold-soft);
+        color: var(--hold);
+      }
+
+      .empty-list {
+        padding: 42px 24px;
+        color: var(--muted);
+        line-height: 1.8;
+        text-align: center;
+      }
+
+      .editor-panel {
+        min-width: 0;
+        min-height: 0;
+        display: flex;
+        flex-direction: column;
+        background: var(--paper);
+      }
+
+      .editor-toolbar {
+        flex: 0 0 auto;
+        min-height: 56px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 18px;
+        border-bottom: 1px solid var(--line);
+        background: white;
+      }
+
+      .editor-position {
+        min-width: 72px;
+        color: var(--muted);
+        font-size: 11px;
+        text-align: center;
+      }
+
+      .toolbar-spacer {
+        flex: 1;
+      }
+
+      .editor-scroll {
+        flex: 1;
+        min-height: 0;
+        overflow-y: auto;
+        padding: 26px clamp(24px, 4vw, 64px) 90px;
+        background:
+          linear-gradient(90deg, rgba(20, 123, 127, 0.025), transparent 22%),
+          white;
+      }
+
+      .editor-content {
+        width: min(1040px, 100%);
+        margin: 0 auto;
+      }
+
+      .editor-heading {
+        padding-bottom: 22px;
+        border-bottom: 2px solid var(--ink);
+      }
+
+      .editor-heading h2 {
+        margin: 0;
+        font-size: 23px;
+        line-height: 1.45;
+      }
+
+      .editor-heading p {
+        margin: 8px 0 0;
+        color: var(--muted);
+        line-height: 1.65;
+      }
+
+      .status-control {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-top: 18px;
+      }
+
+      .status-button {
+        min-height: 31px;
+        padding: 0 11px;
+        border: 1px solid var(--line);
+        border-radius: 4px;
+        background: white;
+        color: var(--muted);
+        cursor: pointer;
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .status-button.active {
+        border-color: var(--teal);
+        background: var(--teal-soft);
+        color: var(--teal-dark);
+      }
+
+      .field-block {
+        margin-top: 28px;
+      }
+
+      .field-head {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        min-height: 31px;
+        margin-bottom: 8px;
+      }
+
+      .field-head h3 {
+        margin: 0;
+        font-size: 14px;
+      }
+
+      .field-actions {
+        display: flex;
+        gap: 6px;
+        margin-left: auto;
+      }
+
+      .text-action {
+        min-height: 28px;
+        padding: 0 9px;
+        border: 0;
+        border-bottom: 1px solid var(--line-strong);
+        background: transparent;
+        color: var(--muted);
+        cursor: pointer;
+        font-size: 11px;
+      }
+
+      .text-action:hover {
+        border-color: var(--teal);
+        color: var(--teal-dark);
+      }
+
+      .text-action.delete:hover,
+      .text-action.delete.active {
+        border-color: var(--danger);
+        color: var(--danger);
+      }
+
+      .field-columns {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 12px;
+        align-items: stretch;
+      }
+
+      .field-side {
+        min-width: 0;
+      }
+
+      .side-label {
+        display: block;
+        margin: 0 0 5px 2px;
+        color: var(--muted);
+        font-size: 10px;
+        font-weight: 800;
+      }
+
+      .current-text,
+      .revision-input {
+        width: 100%;
+        min-height: 92px;
+        margin: 0;
+        padding: 13px 14px;
+        border: 1px solid var(--line);
+        border-radius: 5px;
+        color: var(--ink);
+        font-size: 14px;
+        line-height: 1.85;
+        white-space: pre-wrap;
+        overflow-wrap: anywhere;
+      }
+
+      .current-text {
+        background: var(--reference);
+      }
+
+      .revision-input {
+        display: block;
+        resize: vertical;
+        background: var(--gold-soft);
+        outline: none;
+      }
+
+      .field-block.deleted .revision-input {
+        border-color: #dfaaa4;
+        background:
+          repeating-linear-gradient(
+            -45deg,
+            #fbe8e5,
+            #fbe8e5 8px,
+            #f8deda 8px,
+            #f8deda 16px
+          );
+        color: var(--danger);
+      }
+
+      .deletion-label {
+        display: none;
+        min-height: 92px;
+        align-items: center;
+        justify-content: center;
+        padding: 16px;
+        border: 1px solid #dfaaa4;
+        border-radius: 5px;
+        background: var(--danger-soft);
+        color: var(--danger);
+        font-weight: 800;
+        text-align: center;
+      }
+
+      .field-block.deleted .revision-input {
+        display: none;
+      }
+
+      .field-block.deleted .deletion-label {
+        display: flex;
+      }
+
+      .note-block {
+        margin-top: 32px;
+        padding-top: 24px;
+        border-top: 1px solid var(--line-strong);
+      }
+
+      .note-block label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 800;
+      }
+
+      .note-input {
+        width: 100%;
+        min-height: 112px;
+        padding: 13px 14px;
+        border: 1px solid #b9d7e7;
+        border-radius: 5px;
+        background: var(--blue-soft);
+        color: var(--ink);
+        line-height: 1.75;
+        resize: vertical;
+        outline: none;
+      }
+
+      .meta-table {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        margin-top: 26px;
+        border-top: 1px solid var(--line);
+        border-left: 1px solid var(--line);
+      }
+
+      .meta-item {
+        min-width: 0;
+        padding: 10px 12px;
+        border-right: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .meta-item dt {
+        color: var(--muted);
+        font-size: 10px;
+      }
+
+      .meta-item dd {
+        margin: 4px 0 0;
+        overflow-wrap: anywhere;
+        font-size: 12px;
+      }
+
+      .toast {
+        position: fixed;
+        right: 18px;
+        bottom: 18px;
+        z-index: 10;
+        max-width: min(420px, calc(100vw - 36px));
+        padding: 12px 16px;
+        border-radius: 6px;
+        background: #26343d;
+        color: white;
+        box-shadow: var(--shadow);
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(12px);
+        transition:
+          opacity 160ms ease,
+          transform 160ms ease;
+      }
+
+      .toast.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      @media (max-width: 1180px) {
+        .app-header {
+          gap: 14px;
+          padding-inline: 14px;
+        }
+
+        .brand {
+          min-width: 250px;
+        }
+
+        .brand h1 {
+          font-size: 16px;
+        }
+
+        .workspace {
+          grid-template-columns: 154px minmax(280px, 320px) minmax(460px, 1fr);
+        }
+
+        .header-progress {
+          max-width: 280px;
+        }
+      }
+
+      @media (max-width: 900px) {
+        :root {
+          --header-height: 116px;
+        }
+
+        .app-header {
+          flex-wrap: wrap;
+          align-content: center;
+          padding-block: 10px;
+        }
+
+        .brand {
+          flex: 1;
+          min-width: 260px;
+        }
+
+        .header-progress {
+          order: 3;
+          width: 100%;
+          max-width: none;
+        }
+
+        .workspace {
+          grid-template-columns: 1fr;
+          grid-template-rows: auto 31dvh minmax(0, 1fr);
+        }
+
+        .rail {
+          display: flex;
+          gap: 5px;
+          overflow-x: auto;
+          padding: 7px 8px;
+          border-right: 0;
+          border-bottom: 1px solid #18252c;
+        }
+
+        .rail-title {
+          display: none;
+        }
+
+        .tab-button {
+          width: auto;
+          min-width: 112px;
+          min-height: 42px;
+          border-left: 0;
+          border-bottom: 3px solid transparent;
+        }
+
+        .tab-button + .tab-button {
+          margin-top: 0;
+        }
+
+        .tab-button.active {
+          border-bottom-color: #f2c765;
+        }
+
+        .tab-modified {
+          display: none;
+        }
+
+        .list-panel {
+          border-right: 0;
+          border-bottom: 1px solid var(--line-strong);
+        }
+
+        .filters {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .editor-toolbar {
+          min-height: 50px;
+        }
+      }
+
+      @media (max-width: 640px) {
+        :root {
+          --header-height: 148px;
+        }
+
+        .app-header {
+          gap: 8px;
+        }
+
+        .brand {
+          width: 100%;
+        }
+
+        .brand p {
+          display: none;
+        }
+
+        .header-actions {
+          margin-left: 0;
+        }
+
+        .header-actions .button {
+          min-height: 34px;
+          padding-inline: 10px;
+          font-size: 12px;
+        }
+
+        .header-progress {
+          grid-template-columns: auto 1fr;
+        }
+
+        .save-state {
+          grid-column: 1 / -1;
+        }
+
+        .workspace {
+          grid-template-rows: auto 42dvh minmax(0, 1fr);
+        }
+
+        .filters {
+          grid-template-columns: 1fr;
+        }
+
+        .editor-scroll {
+          padding: 20px 14px 72px;
+        }
+
+        .editor-heading h2 {
+          font-size: 19px;
+        }
+
+        .field-columns {
+          grid-template-columns: 1fr;
+        }
+
+        .meta-table {
+          grid-template-columns: 1fr;
+        }
+
+        .button.clear-label {
+          display: none;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          scroll-behavior: auto !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="brand">
+        <h1>ミミのときめき裏ボス闘技場</h1>
+        <p>テキスト編集ツール</p>
+      </div>
+
+      <div class="header-progress" aria-label="編集進捗">
+        <span class="progress-label" id="modifiedCount">修正 0件</span>
+        <div class="progress-track" aria-hidden="true">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+        <span class="save-state" id="saveState">保存済み</span>
+      </div>
+
+      <div class="header-actions">
+        <button class="button" id="importButton" type="button">修正JSONを読み込む</button>
+        <button class="button primary" id="exportButton" type="button">修正JSONを書き出す</button>
+      </div>
+    </header>
+
+    <main class="workspace">
+      <nav class="rail" aria-label="編集対象">
+        <p class="rail-title">編集対象</p>
+        <button class="tab-button active" data-tab="body" type="button">
+          <span class="tab-label">本文</span>
+          <span class="tab-count" data-count-for="body">0</span>
+          <span class="tab-modified" data-modified-for="body"></span>
+        </button>
+        <button class="tab-button" data-tab="choices" type="button">
+          <span class="tab-label">選択肢</span>
+          <span class="tab-count" data-count-for="choices">0</span>
+          <span class="tab-modified" data-modified-for="choices"></span>
+        </button>
+        <button class="tab-button" data-tab="scenes" type="button">
+          <span class="tab-label">場面構成</span>
+          <span class="tab-count" data-count-for="scenes">0</span>
+          <span class="tab-modified" data-modified-for="scenes"></span>
+        </button>
+        <button class="tab-button" data-tab="characters" type="button">
+          <span class="tab-label">キャラクター</span>
+          <span class="tab-count" data-count-for="characters">0</span>
+          <span class="tab-modified" data-modified-for="characters"></span>
+        </button>
+        <button class="tab-button" data-tab="events" type="button">
+          <span class="tab-label">大会・ルート</span>
+          <span class="tab-count" data-count-for="events">0</span>
+          <span class="tab-modified" data-modified-for="events"></span>
+        </button>
+      </nav>
+
+      <section class="list-panel" aria-label="項目一覧">
+        <div class="list-tools">
+          <label class="sr-only" for="searchInput">本文を検索</label>
+          <input
+            class="search-field"
+            id="searchInput"
+            type="search"
+            placeholder="文章・話者・場面名を検索"
+            autocomplete="off"
+          />
+          <div class="filters">
+            <label class="sr-only" for="targetFilter">対象で絞り込む</label>
+            <select class="filter-select" id="targetFilter"></select>
+            <label class="sr-only" for="statusFilter">状態で絞り込む</label>
+            <select class="filter-select" id="statusFilter">
+              <option value="all">すべての状態</option>
+              <option value="modified">修正あり</option>
+              <option value="未着手">未着手</option>
+              <option value="要修正">要修正</option>
+              <option value="修正済">修正済</option>
+              <option value="保留">保留</option>
+            </select>
+          </div>
+          <p class="result-count" id="resultCount"></p>
+        </div>
+        <div class="item-list" id="itemList"></div>
+      </section>
+
+      <section class="editor-panel" aria-label="編集欄">
+        <div class="editor-toolbar">
+          <button class="button small" id="previousButton" type="button">前へ</button>
+          <span class="editor-position" id="editorPosition">0 / 0</span>
+          <button class="button small" id="nextButton" type="button">次へ</button>
+          <div class="toolbar-spacer"></div>
+          <button class="button small danger clear-label" id="clearButton" type="button">
+            この項目の修正をクリア
+          </button>
+        </div>
+        <div class="editor-scroll" id="editorScroll">
+          <article class="editor-content" id="editorContent"></article>
+        </div>
+      </section>
+    </main>
+
+    <input class="sr-only" id="importInput" type="file" accept="application/json,.json" />
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script>
+      "use strict";
+
+      const SOURCE = __NARRATIVE_SOURCE_JSON__;
+      const STATUS_VALUES = ["未着手", "要修正", "修正済", "保留"];
+      const ACTION_LABELS = {
+        work: "働く",
+        play: "遊ぶ",
+        rest: "休む",
+        search: "探す",
+      };
+      const KIND_LABELS = {
+        thought: "ミミの心の声",
+        narration: "地の文",
+        dialogue: "会話",
+        setup: "週の導入",
+        "action-result": "行動結果",
+      };
+      const STORAGE_KEY = `mimi-narrative-editor-v2:${SOURCE.sourceVersion || SOURCE.exportedAt || "unknown"}`;
+
+      const tabs = {
+        body: { label: "本文", items: [] },
+        choices: { label: "選択肢", items: [] },
+        scenes: { label: "場面構成", items: [] },
+        characters: { label: "キャラクター", items: [] },
+        events: { label: "大会・ルート", items: [] },
+      };
+
+      const dom = {
+        modifiedCount: document.getElementById("modifiedCount"),
+        progressBar: document.getElementById("progressBar"),
+        saveState: document.getElementById("saveState"),
+        searchInput: document.getElementById("searchInput"),
+        targetFilter: document.getElementById("targetFilter"),
+        statusFilter: document.getElementById("statusFilter"),
+        resultCount: document.getElementById("resultCount"),
+        itemList: document.getElementById("itemList"),
+        editorContent: document.getElementById("editorContent"),
+        editorScroll: document.getElementById("editorScroll"),
+        editorPosition: document.getElementById("editorPosition"),
+        previousButton: document.getElementById("previousButton"),
+        nextButton: document.getElementById("nextButton"),
+        clearButton: document.getElementById("clearButton"),
+        exportButton: document.getElementById("exportButton"),
+        importButton: document.getElementById("importButton"),
+        importInput: document.getElementById("importInput"),
+        toast: document.getElementById("toast"),
+      };
+
+      const state = {
+        activeTab: "body",
+        selectedByTab: {},
+        query: "",
+        target: "all",
+        status: "all",
+        edits: {},
+        filteredItems: [],
+      };
+
+      const listNodes = new Map();
+      const allItemsById = new Map();
+      let saveTimer = 0;
+      let toastTimer = 0;
+
+      function asText(value) {
+        if (value === null || value === undefined) return "";
+        if (typeof value === "string") return value;
+        if (typeof value === "number" || typeof value === "boolean") return String(value);
+        return JSON.stringify(value);
+      }
+
+      function pad(value, width = 2) {
+        return String(value).padStart(width, "0");
+      }
+
+      function truncate(value, length = 42) {
+        const normalized = asText(value).replace(/\s+/g, " ").trim();
+        return normalized.length > length ? `${normalized.slice(0, length)}…` : normalized;
+      }
+
+      function compactObject(value) {
+        if (!value || typeof value !== "object") return asText(value);
+        return Object.entries(value)
+          .filter(([, entry]) => entry !== null && entry !== undefined && entry !== "")
+          .map(([key, entry]) => `${key}: ${asText(entry)}`)
+          .join(" / ");
+      }
+
+      function lineDirection(line) {
+        const parts = [];
+        if (line.beat) parts.push(`beat: ${line.beat}`);
+        if (line.cue) parts.push(`cue: ${line.cue}`);
+        if (line.direction) parts.push(compactObject(line.direction));
+        return parts.filter(Boolean).join(" / ");
+      }
+
+      function addItem(tabId, item) {
+        const complete = {
+          ...item,
+          tabId,
+          target: item.target || "共通",
+          stage: item.stage || "",
+          context: item.context || "",
+          meta: item.meta || {},
+        };
+        complete.indexText = [
+          complete.id,
+          complete.title,
+          complete.target,
+          complete.stage,
+          complete.context,
+          ...complete.fields.flatMap((field) => [field.label, field.current]),
+          ...Object.values(complete.meta),
+        ]
+          .join("\n")
+          .toLocaleLowerCase("ja");
+        tabs[tabId].items.push(complete);
+        allItemsById.set(complete.id, complete);
+      }
+
+      function addBodyLine({
+        id,
+        currentText,
+        speaker = "",
+        category,
+        target,
+        stage = "",
+        sceneTitle = "",
+        location = "",
+        lineNumber = "",
+        displayKind = "",
+        direction = "",
+      }) {
+        const displayLabel = KIND_LABELS[displayKind] || displayKind;
+        const titlePrefix = speaker || displayLabel || category;
+        const fields = [{ key: "text", label: "本文", current: asText(currentText) }];
+        if (speaker) fields.push({ key: "speaker", label: "話者", current: asText(speaker), short: true });
+        addItem("body", {
+          id,
+          title: `${titlePrefix}：${truncate(currentText)}`,
+          target,
+          stage,
+          context: [category, sceneTitle, location].filter(Boolean).join(" / "),
+          fields,
+          meta: {
+            区分: category,
+            場面名: sceneTitle,
+            場所: location,
+            行: lineNumber,
+            表示種別: displayLabel,
+            演出情報: direction,
+          },
+        });
+      }
+
+      const narrativeBlocks = SOURCE.narrativeBlocks || [];
+      const fighterNameById = new Map(
+        (SOURCE.fighters || []).map((fighter) => [fighter.id, fighter.name]),
+      );
+      const BLOCK_KIND_LABELS = {
+        opening: "共通導入",
+        common: "共通物語",
+        character: "キャラクター固有",
+        ambient: "ランダムイベント",
+        route: "ルートイベント",
+        match: "大会イベント",
+        liberation: "解放イベント",
+        ending: "エンディング",
+      };
+
+      function narrativeBlockContext(block) {
+        const characterId = block.ownership?.characterId;
+        return {
+          category: BLOCK_KIND_LABELS[block.kind] || block.kind,
+          target: characterId
+            ? fighterNameById.get(characterId) || characterId
+            : block.kind === "route"
+              ? (block.trigger?.routes || []).join("・") || "ルート共通"
+              : "ミミ",
+          stage: block.ownership?.stage || block.ownership?.arcId || "",
+        };
+      }
+
+      function addNarrativeBlockLines(block) {
+        const context = narrativeBlockContext(block);
+        let lineNumber = 0;
+        for (const node of block.nodes || []) {
+          if (node.type !== "line") continue;
+          lineNumber += 1;
+          addBodyLine({
+            id: node.lineId,
+            currentText: node.text,
+            speaker: node.speakerName,
+            category: context.category,
+            target: context.target,
+            stage: context.stage,
+            sceneTitle: block.title,
+            location: block.presentation?.location,
+            lineNumber,
+            displayKind: node.mode,
+            direction: node.emotion ? `感情・拍子: ${node.emotion}` : "",
+          });
+        }
+      }
+
+      function addNarrativeBlockChoices(block) {
+        const context = narrativeBlockContext(block);
+        for (const node of block.nodes || []) {
+          if (node.type !== "choice") continue;
+          for (const [index, choice] of (node.choices || []).entries()) {
+            const fields = [
+              { key: "label", label: "選択肢", current: asText(choice.label) },
+              { key: "result", label: "選択後の文章", current: asText(choice.result) },
+            ];
+            for (const [key, label] of [
+              ["intent", "選択肢の意図"],
+              ["promise", "約束として残る文章"],
+              ["memory", "記憶として残る文章"],
+            ]) {
+              if (choice[key]) fields.push({ key, label, current: asText(choice[key]) });
+            }
+            addItem("choices", {
+              id: choice.id,
+              title: `「${truncate(choice.label, 54)}」`,
+              target: context.target,
+              stage: context.stage,
+              context: [block.title, block.presentation?.location].filter(Boolean).join(" / "),
+              fields,
+              meta: {
+                場面ID: block.id,
+                ノードID: node.id,
+                選択肢番号: index + 1,
+                遷移先: choice.goto,
+                効果: JSON.stringify(choice.effects || []),
+                条件: choice.when ? JSON.stringify(choice.when) : "",
+                トーン: choice.tone || "",
+              },
+            });
+          }
+        }
+      }
+
+      function addNarrativeBlockScene(block) {
+        const context = narrativeBlockContext(block);
+        const lineCount = (block.nodes || []).filter((node) => node.type === "line").length;
+        const choiceCount = (block.nodes || []).reduce(
+          (sum, node) => sum + (node.type === "choice" ? (node.choices || []).length : 0),
+          0,
+        );
+        addItem("scenes", {
+          id: block.id,
+          title: block.title,
+          target: context.target,
+          stage: context.stage,
+          context: context.category,
+          fields: [
+            { key: "title", label: "場面名", current: asText(block.title), short: true },
+            {
+              key: "location",
+              label: "場所",
+              current: asText(block.presentation?.location),
+              short: true,
+            },
+            { key: "summary", label: "場面概要", current: asText(block.summary) },
+          ],
+          meta: {
+            区分: context.category,
+            アークID: block.ownership?.arcId || "",
+            本文数: lineCount,
+            選択肢数: choiceCount,
+            発生条件: JSON.stringify(block.trigger || {}),
+            画像・音声: JSON.stringify(block.presentation?.assets || []),
+            状態効果: JSON.stringify(
+              (block.nodes || [])
+                .filter((node) => node.type === "effect")
+                .flatMap((node) => node.effects || []),
+            ),
+          },
+        });
+      }
+
+      for (const version of ["full", "condensed"]) {
+        const versionLabel = version === "full" ? "通常版" : "短縮版";
+        for (const [index, entry] of (SOURCE.prologue?.[version] || []).entries()) {
+          const line = typeof entry === "string" ? { text: entry } : entry;
+          addBodyLine({
+            id: `prologue.${version}.line.${pad(index + 1, 3)}`,
+            currentText: line.text,
+            speaker: line.speaker,
+            category: `プロローグ（${versionLabel}）`,
+            target: "ミミ",
+            stage: versionLabel,
+            sceneTitle: line.sceneLabel || "プロローグ",
+            lineNumber: index + 1,
+            displayKind: line.kind || (line.speaker ? "dialogue" : "narration"),
+            direction: lineDirection(line),
+          });
+        }
+      }
+
+      function addSceneLines(scene, context) {
+        for (const [index, lineValue] of (scene.lines || []).entries()) {
+          const line = typeof lineValue === "string" ? { text: lineValue } : lineValue;
+          addBodyLine({
+            id: `${scene.id}.line.${pad(index + 1, 3)}`,
+            currentText: line.text,
+            speaker: line.speaker,
+            category: context.category,
+            target: context.target,
+            stage: context.stage,
+            sceneTitle: scene.title,
+            location: scene.location,
+            lineNumber: index + 1,
+            displayKind: line.kind || (line.speaker ? "dialogue" : "narration"),
+            direction: lineDirection(line),
+          });
+        }
+      }
+
+      if (narrativeBlocks.length) {
+        for (const block of narrativeBlocks) addNarrativeBlockLines(block);
+      } else {
+        for (const scene of SOURCE.openingScenes || []) {
+          addSceneLines(scene, { category: "共通導入", target: "ミミ", stage: "導入" });
+        }
+        for (const fighter of SOURCE.fighters || []) {
+          for (const scene of fighter.scenes || []) {
+            addSceneLines(scene, {
+              category: "キャラクター固有",
+              target: fighter.name,
+              stage: scene.stage,
+            });
+          }
+        }
+      }
+
+      for (const [weekIndex, week] of (SOURCE.weeklyNarratives || []).entries()) {
+        const weekLabel = `第${weekIndex + 1}週`;
+        for (const [lineIndex, setup] of (week.setup || []).entries()) {
+          addBodyLine({
+            id: `weekly.${pad(weekIndex + 1)}.setup.${pad(lineIndex + 1)}`,
+            currentText: setup,
+            category: "週進行（共通）",
+            target: weekLabel,
+            stage: "週の導入",
+            sceneTitle: week.title,
+            lineNumber: lineIndex + 1,
+            displayKind: "setup",
+          });
+        }
+        for (const [actionKey, actionText] of Object.entries(week.actions || {})) {
+          addBodyLine({
+            id: `weekly.${pad(weekIndex + 1)}.action.${actionKey}`,
+            currentText: actionText,
+            category: "週進行（行動結果）",
+            target: weekLabel,
+            stage: ACTION_LABELS[actionKey] || actionKey,
+            sceneTitle: week.title,
+            lineNumber: ACTION_LABELS[actionKey] || actionKey,
+            displayKind: "action-result",
+          });
+        }
+      }
+
+      function addChoices(scene, context) {
+        for (const [index, choice] of (scene.choices || []).entries()) {
+          const fields = [
+            { key: "label", label: "選択肢", current: asText(choice.label) },
+            { key: "result", label: "選択後の文章", current: asText(choice.result) },
+          ];
+          for (const [key, label] of [
+            ["intent", "選択肢の意図"],
+            ["promise", "約束として残る文章"],
+            ["memory", "記憶として残る文章"],
+          ]) {
+            if (choice[key]) fields.push({ key, label, current: asText(choice[key]) });
+          }
+          addItem("choices", {
+            id: `${scene.id}.choice.${pad(index + 1)}`,
+            title: `「${truncate(choice.label, 54)}」`,
+            target: context.target,
+            stage: context.stage,
+            context: [scene.title, scene.location].filter(Boolean).join(" / "),
+            fields,
+            meta: {
+              場面名: scene.title,
+              場所: scene.location,
+              選択肢番号: index + 1,
+              信頼変化: choice.trust ?? "",
+              所有変化: choice.ownership ?? "",
+              固有PT: choice.fighterPoints ?? "",
+              共有PT: choice.sharedPoints ?? "",
+              トーン: choice.tone ?? "",
+              加入判定: choice.recruitmentDecision ?? "",
+              解放判定: choice.liberationDecision ?? "",
+            },
+          });
+        }
+      }
+
+      if (narrativeBlocks.length) {
+        for (const block of narrativeBlocks) addNarrativeBlockChoices(block);
+      } else {
+        for (const scene of SOURCE.openingScenes || []) {
+          addChoices(scene, { target: "ミミ", stage: "導入" });
+        }
+        for (const fighter of SOURCE.fighters || []) {
+          for (const scene of fighter.scenes || []) {
+            addChoices(scene, { target: fighter.name, stage: scene.stage });
+          }
+        }
+      }
+
+      const groupedPrologue = new Map();
+      for (const version of ["full", "condensed"]) {
+        const versionLabel = version === "full" ? "通常版" : "短縮版";
+        for (const entry of SOURCE.prologue?.[version] || []) {
+          const line = typeof entry === "string" ? { text: entry } : entry;
+          const sceneLabel = line.sceneLabel || "プロローグ";
+          const key = `${version}::${sceneLabel}`;
+          if (!groupedPrologue.has(key)) {
+            groupedPrologue.set(key, {
+              version,
+              versionLabel,
+              sceneLabel,
+              count: 0,
+              direction: "",
+            });
+          }
+          const group = groupedPrologue.get(key);
+          group.count += 1;
+          if (!group.direction && line.direction) group.direction = compactObject(line.direction);
+        }
+      }
+
+      let prologueSceneIndex = 0;
+      for (const group of groupedPrologue.values()) {
+        prologueSceneIndex += 1;
+        addItem("scenes", {
+          id: `prologue.${group.version}.scene.${pad(prologueSceneIndex)}`,
+          title: group.sceneLabel,
+          target: "ミミ",
+          stage: group.versionLabel,
+          context: `プロローグ（${group.versionLabel}）`,
+          fields: [{ key: "title", label: "場面名", current: group.sceneLabel }],
+          meta: {
+            本文数: group.count,
+            背景・演出情報: group.direction,
+          },
+        });
+      }
+
+      function addSceneItem(scene, context) {
+        const fields = [
+          { key: "title", label: "場面名", current: asText(scene.title), short: true },
+          { key: "location", label: "場所", current: asText(scene.location), short: true },
+        ];
+        if ((scene.actions || []).length) {
+          fields.push({
+            key: "actions",
+            label: "場面設計",
+            current: scene.actions.map(asText).join("\n"),
+          });
+        }
+        addItem("scenes", {
+          id: scene.id,
+          title: scene.title,
+          target: context.target,
+          stage: context.stage,
+          context: context.category,
+          fields,
+          meta: {
+            区分: context.category,
+            本文数: scene.lines?.length || 0,
+            選択肢数: scene.choices?.length || 0,
+            背景情報: scene.background || "",
+            立ち絵情報: compactObject(scene.sprite),
+          },
+        });
+      }
+
+      if (narrativeBlocks.length) {
+        for (const block of narrativeBlocks) addNarrativeBlockScene(block);
+      } else {
+        for (const scene of SOURCE.openingScenes || []) {
+          addSceneItem(scene, { category: "共通導入", target: "ミミ", stage: "導入" });
+        }
+        for (const fighter of SOURCE.fighters || []) {
+          for (const scene of fighter.scenes || []) {
+            addSceneItem(scene, {
+              category: "キャラクター固有",
+              target: fighter.name,
+              stage: scene.stage,
+            });
+          }
+        }
+      }
+      for (const [weekIndex, week] of (SOURCE.weeklyNarratives || []).entries()) {
+        addItem("scenes", {
+          id: `weekly.${pad(weekIndex + 1)}`,
+          title: week.title,
+          target: `第${weekIndex + 1}週`,
+          stage: "共通",
+          context: "週進行",
+          fields: [
+            { key: "title", label: "週タイトル", current: asText(week.title), short: true },
+            {
+              key: "structure",
+              label: "週の構成",
+              current: [
+                ...(week.setup || []).map((_, index) => `共通導入 ${index + 1}`),
+                ...Object.keys(week.actions || {}).map(
+                  (key) => `行動結果：${ACTION_LABELS[key] || key}`,
+                ),
+              ].join("\n"),
+            },
+          ],
+          meta: {
+            本文数: (week.setup?.length || 0) + Object.keys(week.actions || {}).length,
+          },
+        });
+      }
+
+      for (const fighter of SOURCE.fighters || []) {
+        addItem("characters", {
+          id: fighter.id,
+          title: fighter.name,
+          target: fighter.name,
+          stage: fighter.kind,
+          context: fighter.role,
+          fields: [
+            { key: "name", label: "名前", current: asText(fighter.name), short: true },
+            { key: "kind", label: "種別", current: asText(fighter.kind), short: true },
+            { key: "role", label: "役割", current: asText(fighter.role), short: true },
+            { key: "summary", label: "キャラクター概要", current: asText(fighter.summary) },
+            {
+              key: "currentLimit",
+              label: "現在の制限・弱点",
+              current: asText(fighter.currentLimit),
+            },
+            { key: "traitName", label: "特性名", current: asText(fighter.traitName), short: true },
+            { key: "traitText", label: "特性説明", current: asText(fighter.traitText) },
+          ],
+          meta: {
+            固有場面数: fighter.scenes?.length || 0,
+          },
+        });
+      }
+
+      function addEventField({ id, category, entity, field, current, context = "" }) {
+        addItem("events", {
+          id,
+          title: `${entity} / ${field}`,
+          target: entity,
+          stage: category,
+          context,
+          fields: [{ key: "text", label: field, current: asText(current) }],
+          meta: { 区分: category, 対象: entity, 項目: field, ゲーム条件: context },
+        });
+      }
+
+      for (const [category, matches] of [
+        ["公式大会", SOURCE.officialMatches || []],
+        ["支配ルート大会", SOURCE.dominationMatches || []],
+      ]) {
+        for (const match of matches) {
+          const context = `第${match.week}週 / 難易度 ${match.difficulty} / 勝利追加試合 ${match.roundsOnWin}`;
+          for (const [field, label] of [
+            ["name", "大会名"],
+            ["opponentName", "対戦相手名"],
+            ["prize", "賞品・報酬"],
+            ["story", "大会の物語説明"],
+          ]) {
+            addEventField({
+              id: `${category === "公式大会" ? "official" : "domination"}.${match.id}.${field}`,
+              category,
+              entity: match.name,
+              field: label,
+              current: match[field],
+              context,
+            });
+          }
+        }
+      }
+
+      for (const route of SOURCE.routes || []) {
+        const context = `開始資金 ${route.startingMoney} / 共有PT ${route.startingSharedPoints} / 最大編成 ${route.maxRoster}`;
+        for (const [field, label] of [
+          ["name", "ルート名"],
+          ["kicker", "短い紹介文"],
+          ["description", "ルート説明"],
+        ]) {
+          addEventField({
+            id: `route.${route.id}.${field}`,
+            category: "周回ルート",
+            entity: route.name,
+            field: label,
+            current: route[field],
+            context,
+          });
+        }
+        for (const [index, rule] of (route.rules || []).entries()) {
+          addEventField({
+            id: `route.${route.id}.rule.${pad(index + 1)}`,
+            category: "周回ルート",
+            entity: route.name,
+            field: `ルール ${index + 1}`,
+            current: rule,
+            context,
+          });
+        }
+      }
+
+      function loadLocalState() {
+        try {
+          const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "null");
+          if (!saved || typeof saved !== "object") return;
+          if (saved.edits && typeof saved.edits === "object") state.edits = saved.edits;
+          if (saved.view && typeof saved.view === "object") {
+            if (tabs[saved.view.activeTab]) state.activeTab = saved.view.activeTab;
+            if (saved.view.selectedByTab) state.selectedByTab = saved.view.selectedByTab;
+          }
+        } catch (error) {
+          console.warn("Saved narrative edits could not be loaded.", error);
+        }
+      }
+
+      function meaningfulEdit(edit) {
+        if (!edit || typeof edit !== "object") return false;
+        const fields = Object.values(edit.fields || {}).some((value) => value !== "");
+        const deleted = Object.values(edit.deletedFields || {}).some(Boolean);
+        const note = Boolean((edit.note || "").trim());
+        const status = edit.status && edit.status !== "未着手";
+        return fields || deleted || note || status;
+      }
+
+      function cleanupEdit(id) {
+        if (!meaningfulEdit(state.edits[id])) delete state.edits[id];
+      }
+
+      function currentStatus(id) {
+        return state.edits[id]?.status || "未着手";
+      }
+
+      function getEdit(id, create = false) {
+        if (!state.edits[id] && create) {
+          state.edits[id] = {
+            status: "未着手",
+            fields: {},
+            deletedFields: {},
+            note: "",
+          };
+        }
+        return state.edits[id];
+      }
+
+      function saveLocalState() {
+        window.clearTimeout(saveTimer);
+        dom.saveState.textContent = "保存中";
+        saveTimer = window.setTimeout(() => {
+          try {
+            localStorage.setItem(
+              STORAGE_KEY,
+              JSON.stringify({
+                schemaVersion: 2,
+                sourceVersion: SOURCE.sourceVersion,
+                sourceExportedAt: SOURCE.exportedAt,
+                edits: state.edits,
+                view: {
+                  activeTab: state.activeTab,
+                  selectedByTab: state.selectedByTab,
+                },
+              }),
+            );
+            const now = new Date();
+            dom.saveState.textContent = `保存済み ${now.toLocaleTimeString("ja-JP", {
+              hour: "2-digit",
+              minute: "2-digit",
+            })}`;
+          } catch (error) {
+            console.error(error);
+            dom.saveState.textContent = "保存できません";
+            showToast("ブラウザへの保存に失敗しました。修正JSONを書き出してください。");
+          }
+        }, 140);
+      }
+
+      function showToast(message) {
+        window.clearTimeout(toastTimer);
+        dom.toast.textContent = message;
+        dom.toast.classList.add("visible");
+        toastTimer = window.setTimeout(() => dom.toast.classList.remove("visible"), 3200);
+      }
+
+      function getModifiedCounts() {
+        const result = {};
+        let total = 0;
+        for (const tabId of Object.keys(tabs)) {
+          const count = tabs[tabId].items.filter((item) => meaningfulEdit(state.edits[item.id])).length;
+          result[tabId] = count;
+          total += count;
+        }
+        return { byTab: result, total };
+      }
+
+      function updateProgress() {
+        const counts = getModifiedCounts();
+        const totalItems = Object.values(tabs).reduce((sum, tab) => sum + tab.items.length, 0);
+        dom.modifiedCount.textContent = `修正 ${counts.total.toLocaleString("ja-JP")}件`;
+        dom.progressBar.style.width = `${Math.min(100, (counts.total / totalItems) * 100)}%`;
+        for (const [tabId, tab] of Object.entries(tabs)) {
+          document.querySelector(`[data-count-for="${tabId}"]`).textContent =
+            tab.items.length.toLocaleString("ja-JP");
+          document.querySelector(`[data-modified-for="${tabId}"]`).textContent = counts.byTab[tabId]
+            ? `修正 ${counts.byTab[tabId]}件`
+            : "";
+        }
+      }
+
+      function updateTargetOptions() {
+        const previous = state.target;
+        const targets = [...new Set(tabs[state.activeTab].items.map((item) => item.target))].sort(
+          (left, right) => left.localeCompare(right, "ja"),
+        );
+        dom.targetFilter.replaceChildren();
+        dom.targetFilter.add(new Option("すべての対象", "all"));
+        for (const target of targets) dom.targetFilter.add(new Option(target, target));
+        state.target = targets.includes(previous) ? previous : "all";
+        dom.targetFilter.value = state.target;
+      }
+
+      function filterItems() {
+        const query = state.query.trim().toLocaleLowerCase("ja");
+        state.filteredItems = tabs[state.activeTab].items.filter((item) => {
+          if (state.target !== "all" && item.target !== state.target) return false;
+          if (state.status === "modified" && !meaningfulEdit(state.edits[item.id])) return false;
+          if (STATUS_VALUES.includes(state.status) && currentStatus(item.id) !== state.status) return false;
+          if (query && !item.indexText.includes(query)) {
+            const edit = state.edits[item.id];
+            const editText = edit
+              ? [
+                  ...Object.values(edit.fields || {}),
+                  edit.note || "",
+                ]
+                  .join("\n")
+                  .toLocaleLowerCase("ja")
+              : "";
+            if (!editText.includes(query)) return false;
+          }
+          return true;
+        });
+      }
+
+      function revealListNode(id) {
+        const node = listNodes.get(id);
+        if (!node) return;
+        const nodeRect = node.getBoundingClientRect();
+        const listRect = dom.itemList.getBoundingClientRect();
+        if (nodeRect.top < listRect.top) {
+          dom.itemList.scrollTop -= listRect.top - nodeRect.top;
+        } else if (nodeRect.bottom > listRect.bottom) {
+          dom.itemList.scrollTop += nodeRect.bottom - listRect.bottom;
+        }
+      }
+
+      function renderList() {
+        filterItems();
+        listNodes.clear();
+        dom.itemList.replaceChildren();
+        dom.resultCount.textContent = `${state.filteredItems.length.toLocaleString("ja-JP")}件`;
+
+        if (!state.filteredItems.length) {
+          const empty = document.createElement("div");
+          empty.className = "empty-list";
+          empty.textContent = "条件に一致する項目はありません。";
+          dom.itemList.append(empty);
+          state.selectedByTab[state.activeTab] = "";
+          renderEditor();
+          return;
+        }
+
+        const selectedId = state.selectedByTab[state.activeTab];
+        if (!state.filteredItems.some((item) => item.id === selectedId)) {
+          state.selectedByTab[state.activeTab] = state.filteredItems[0].id;
+        }
+
+        const fragment = document.createDocumentFragment();
+        for (const item of state.filteredItems) {
+          const edit = state.edits[item.id];
+          const button = document.createElement("button");
+          button.type = "button";
+          button.className = "list-row";
+          button.dataset.id = item.id;
+          if (item.id === state.selectedByTab[state.activeTab]) button.classList.add("active");
+          if (meaningfulEdit(edit)) button.classList.add("modified");
+
+          const kicker = document.createElement("span");
+          kicker.className = "row-kicker";
+          const target = document.createElement("span");
+          target.textContent = [item.target, item.stage].filter(Boolean).join(" / ");
+          const status = document.createElement("span");
+          status.className = "status-mark";
+          status.dataset.status = currentStatus(item.id);
+          status.textContent = currentStatus(item.id);
+          kicker.append(target, status);
+
+          const title = document.createElement("span");
+          title.className = "row-title";
+          title.textContent = item.title || item.id;
+
+          const context = document.createElement("span");
+          context.className = "row-context";
+          context.textContent = item.context || item.id;
+
+          button.append(kicker, title, context);
+          button.addEventListener("click", () => selectItem(item.id));
+          fragment.append(button);
+          listNodes.set(item.id, button);
+        }
+        dom.itemList.append(fragment);
+        requestAnimationFrame(() => {
+          revealListNode(state.selectedByTab[state.activeTab]);
+        });
+        renderEditor();
+      }
+
+      function selectItem(id) {
+        const previous = state.selectedByTab[state.activeTab];
+        state.selectedByTab[state.activeTab] = id;
+        if (previous && listNodes.has(previous)) listNodes.get(previous).classList.remove("active");
+        if (listNodes.has(id)) listNodes.get(id).classList.add("active");
+        renderEditor();
+        dom.editorScroll.scrollTop = 0;
+        saveLocalState();
+      }
+
+      function selectedItem() {
+        return allItemsById.get(state.selectedByTab[state.activeTab]) || null;
+      }
+
+      function createMetaTable(item) {
+        const entries = [
+          ["不変ID", item.id],
+          ...Object.entries(item.meta).filter(([, value]) => value !== "" && value !== null),
+        ];
+        if (!entries.length) return null;
+        const dl = document.createElement("dl");
+        dl.className = "meta-table";
+        for (const [label, value] of entries) {
+          const wrapper = document.createElement("div");
+          wrapper.className = "meta-item";
+          const dt = document.createElement("dt");
+          dt.textContent = label;
+          const dd = document.createElement("dd");
+          dd.textContent = asText(value);
+          wrapper.append(dt, dd);
+          dl.append(wrapper);
+        }
+        return dl;
+      }
+
+      function fitTextarea(textarea, short = false) {
+        textarea.style.height = "auto";
+        const minimum = short ? 58 : 92;
+        textarea.style.height = `${Math.min(420, Math.max(minimum, textarea.scrollHeight + 2))}px`;
+      }
+
+      function updateListNode(id) {
+        const node = listNodes.get(id);
+        if (!node) return;
+        const edit = state.edits[id];
+        node.classList.toggle("modified", meaningfulEdit(edit));
+        const mark = node.querySelector(".status-mark");
+        if (mark) {
+          mark.dataset.status = currentStatus(id);
+          mark.textContent = currentStatus(id);
+        }
+      }
+
+      function persistField(item, field, value) {
+        const edit = getEdit(item.id, true);
+        edit.fields ||= {};
+        edit.deletedFields ||= {};
+        if (value === "") delete edit.fields[field.key];
+        else edit.fields[field.key] = value;
+        delete edit.deletedFields[field.key];
+        cleanupEdit(item.id);
+        saveLocalState();
+        updateListNode(item.id);
+        updateProgress();
+      }
+
+      function toggleDeletion(item, field, block, button) {
+        const edit = getEdit(item.id, true);
+        edit.fields ||= {};
+        edit.deletedFields ||= {};
+        const next = !edit.deletedFields[field.key];
+        if (next) {
+          edit.deletedFields[field.key] = true;
+          delete edit.fields[field.key];
+        } else {
+          delete edit.deletedFields[field.key];
+        }
+        block.classList.toggle("deleted", next);
+        button.classList.toggle("active", next);
+        button.textContent = next ? "削除指定を戻す" : "この欄を削除";
+        cleanupEdit(item.id);
+        saveLocalState();
+        updateListNode(item.id);
+        updateProgress();
+      }
+
+      function createFieldBlock(item, field) {
+        const edit = state.edits[item.id] || {};
+        const isDeleted = Boolean(edit.deletedFields?.[field.key]);
+        const block = document.createElement("section");
+        block.className = "field-block";
+        if (isDeleted) block.classList.add("deleted");
+
+        const head = document.createElement("div");
+        head.className = "field-head";
+        const heading = document.createElement("h3");
+        heading.textContent = field.label;
+        const actions = document.createElement("div");
+        actions.className = "field-actions";
+        const copyButton = document.createElement("button");
+        copyButton.type = "button";
+        copyButton.className = "text-action";
+        copyButton.textContent = "原文から書き始める";
+        const deleteButton = document.createElement("button");
+        deleteButton.type = "button";
+        deleteButton.className = "text-action delete";
+        deleteButton.classList.toggle("active", isDeleted);
+        deleteButton.textContent = isDeleted ? "削除指定を戻す" : "この欄を削除";
+        actions.append(copyButton, deleteButton);
+        head.append(heading, actions);
+
+        const columns = document.createElement("div");
+        columns.className = "field-columns";
+        const currentSide = document.createElement("div");
+        currentSide.className = "field-side";
+        const currentLabel = document.createElement("span");
+        currentLabel.className = "side-label";
+        currentLabel.textContent = "現在";
+        const current = document.createElement("div");
+        current.className = "current-text";
+        current.textContent = field.current || "（空欄）";
+        if (field.short) current.style.minHeight = "58px";
+        currentSide.append(currentLabel, current);
+
+        const revisionSide = document.createElement("div");
+        revisionSide.className = "field-side";
+        const revisionLabel = document.createElement("label");
+        revisionLabel.className = "side-label";
+        revisionLabel.textContent = "修正";
+        const textarea = document.createElement("textarea");
+        textarea.className = "revision-input";
+        textarea.placeholder = "変更しない場合は空欄";
+        textarea.value = edit.fields?.[field.key] || "";
+        if (field.short) textarea.style.minHeight = "58px";
+        revisionLabel.htmlFor = `edit-${item.id}-${field.key}`;
+        textarea.id = `edit-${item.id}-${field.key}`;
+        const deletionLabel = document.createElement("div");
+        deletionLabel.className = "deletion-label";
+        deletionLabel.textContent = "この欄は削除として書き出されます";
+        revisionSide.append(revisionLabel, textarea, deletionLabel);
+
+        columns.append(currentSide, revisionSide);
+        block.append(head, columns);
+
+        textarea.addEventListener("input", () => {
+          fitTextarea(textarea, field.short);
+          persistField(item, field, textarea.value);
+        });
+        copyButton.addEventListener("click", () => {
+          block.classList.remove("deleted");
+          deleteButton.classList.remove("active");
+          deleteButton.textContent = "この欄を削除";
+          textarea.value = field.current;
+          fitTextarea(textarea, field.short);
+          persistField(item, field, textarea.value);
+          textarea.focus();
+        });
+        deleteButton.addEventListener("click", () =>
+          toggleDeletion(item, field, block, deleteButton),
+        );
+        requestAnimationFrame(() => fitTextarea(textarea, field.short));
+        return block;
+      }
+
+      function renderEditor() {
+        dom.editorContent.replaceChildren();
+        const item = selectedItem();
+        const position = item
+          ? state.filteredItems.findIndex((candidate) => candidate.id === item.id)
+          : -1;
+        dom.editorPosition.textContent =
+          position >= 0 ? `${position + 1} / ${state.filteredItems.length}` : "0 / 0";
+        dom.previousButton.disabled = position <= 0;
+        dom.nextButton.disabled = position < 0 || position >= state.filteredItems.length - 1;
+        dom.clearButton.disabled = !item || !meaningfulEdit(state.edits[item.id]);
+
+        if (!item) {
+          const empty = document.createElement("div");
+          empty.className = "empty-list";
+          empty.textContent = "左の一覧から編集する項目を選んでください。";
+          dom.editorContent.append(empty);
+          return;
+        }
+
+        const heading = document.createElement("header");
+        heading.className = "editor-heading";
+        const title = document.createElement("h2");
+        title.textContent = item.title || item.id;
+        const context = document.createElement("p");
+        context.textContent = [item.target, item.stage, item.context].filter(Boolean).join(" / ");
+
+        const statusControl = document.createElement("div");
+        statusControl.className = "status-control";
+        statusControl.setAttribute("role", "group");
+        statusControl.setAttribute("aria-label", "編集状態");
+        for (const status of STATUS_VALUES) {
+          const button = document.createElement("button");
+          button.type = "button";
+          button.className = "status-button";
+          button.textContent = status;
+          button.classList.toggle("active", currentStatus(item.id) === status);
+          button.addEventListener("click", () => {
+            const edit = getEdit(item.id, true);
+            edit.status = status;
+            cleanupEdit(item.id);
+            saveLocalState();
+            updateListNode(item.id);
+            updateProgress();
+            renderEditor();
+          });
+          statusControl.append(button);
+        }
+        heading.append(title, context, statusControl);
+        dom.editorContent.append(heading);
+
+        for (const field of item.fields) {
+          dom.editorContent.append(createFieldBlock(item, field));
+        }
+
+        const noteBlock = document.createElement("section");
+        noteBlock.className = "note-block";
+        const noteLabel = document.createElement("label");
+        noteLabel.htmlFor = `note-${item.id}`;
+        noteLabel.textContent = "編集メモ";
+        const note = document.createElement("textarea");
+        note.id = `note-${item.id}`;
+        note.className = "note-input";
+        note.placeholder = "狙い、違和感、前後関係、絵が必要な箇所など";
+        note.value = state.edits[item.id]?.note || "";
+        note.addEventListener("input", () => {
+          const edit = getEdit(item.id, true);
+          edit.note = note.value;
+          cleanupEdit(item.id);
+          saveLocalState();
+          updateListNode(item.id);
+          updateProgress();
+        });
+        noteBlock.append(noteLabel, note);
+        dom.editorContent.append(noteBlock);
+
+        const meta = createMetaTable(item);
+        if (meta) dom.editorContent.append(meta);
+      }
+
+      function changeTab(tabId) {
+        if (!tabs[tabId] || state.activeTab === tabId) return;
+        state.activeTab = tabId;
+        state.target = "all";
+        document.querySelectorAll(".tab-button").forEach((button) => {
+          button.classList.toggle("active", button.dataset.tab === tabId);
+        });
+        updateTargetOptions();
+        renderList();
+        saveLocalState();
+      }
+
+      function moveSelection(delta) {
+        const item = selectedItem();
+        if (!item) return;
+        const index = state.filteredItems.findIndex((candidate) => candidate.id === item.id);
+        const next = state.filteredItems[index + delta];
+        if (!next) return;
+        selectItem(next.id);
+        revealListNode(next.id);
+      }
+
+      function clearCurrentItem() {
+        const item = selectedItem();
+        if (!item || !meaningfulEdit(state.edits[item.id])) return;
+        if (!window.confirm("この項目に入力した修正文・削除指定・メモ・状態をクリアしますか？")) {
+          return;
+        }
+        delete state.edits[item.id];
+        saveLocalState();
+        updateListNode(item.id);
+        updateProgress();
+        renderEditor();
+        showToast("この項目の修正をクリアしました。");
+      }
+
+      function buildExportPayload() {
+        const edits = [];
+        for (const [id, edit] of Object.entries(state.edits)) {
+          if (!meaningfulEdit(edit)) continue;
+          const item = allItemsById.get(id);
+          if (!item) continue;
+          edits.push({
+            id,
+            tab: item.tabId,
+            status: edit.status || "未着手",
+            fields: edit.fields || {},
+            deletedFields: edit.deletedFields || {},
+            note: edit.note || "",
+          });
+        }
+        return {
+          schemaVersion: 2,
+          projectTitle: SOURCE.projectTitle,
+          sourceVersion: SOURCE.sourceVersion,
+          sourceExportedAt: SOURCE.exportedAt,
+          exportedAt: new Date().toISOString(),
+          editCount: edits.length,
+          edits,
+        };
+      }
+
+      function exportChanges() {
+        const payload = buildExportPayload();
+        if (!payload.editCount) {
+          showToast("まだ修正はありません。");
+          return;
+        }
+        const blob = new Blob([JSON.stringify(payload, null, 2)], {
+          type: "application/json;charset=utf-8",
+        });
+        const link = document.createElement("a");
+        const date = new Date().toISOString().slice(0, 10);
+        link.href = URL.createObjectURL(blob);
+        link.download = `ミミのときめき裏ボス闘技場_修正データ_${date}.json`;
+        document.body.append(link);
+        link.click();
+        link.remove();
+        URL.revokeObjectURL(link.href);
+        showToast(`${payload.editCount}件の修正を書き出しました。`);
+      }
+
+      function normalizeImportedEdits(payload) {
+        if (Array.isArray(payload.edits)) {
+          return Object.fromEntries(
+            payload.edits
+              .filter((edit) => edit && typeof edit.id === "string")
+              .map((edit) => [
+                edit.id,
+                {
+                  status: STATUS_VALUES.includes(edit.status) ? edit.status : "未着手",
+                  fields: edit.fields && typeof edit.fields === "object" ? edit.fields : {},
+                  deletedFields:
+                    edit.deletedFields && typeof edit.deletedFields === "object"
+                      ? edit.deletedFields
+                      : {},
+                  note: asText(edit.note),
+                },
+              ]),
+          );
+        }
+        if (payload.edits && typeof payload.edits === "object") return payload.edits;
+        return null;
+      }
+
+      async function importChanges(file) {
+        try {
+          const payload = JSON.parse(await file.text());
+          const imported = normalizeImportedEdits(payload);
+          if (!imported) throw new Error("修正データが見つかりません。");
+          if (
+            ((payload.sourceVersion &&
+              SOURCE.sourceVersion &&
+              payload.sourceVersion !== SOURCE.sourceVersion) ||
+              (!payload.sourceVersion &&
+                payload.sourceExportedAt &&
+                SOURCE.exportedAt &&
+                payload.sourceExportedAt !== SOURCE.exportedAt)) &&
+            !window.confirm(
+              "元テキストの版が異なります。IDが一致する修正だけを読み込みますか？",
+            )
+          ) {
+            return;
+          }
+          let accepted = 0;
+          let skipped = 0;
+          for (const [id, edit] of Object.entries(imported)) {
+            if (!allItemsById.has(id)) {
+              skipped += 1;
+              continue;
+            }
+            state.edits[id] = edit;
+            cleanupEdit(id);
+            accepted += 1;
+          }
+          saveLocalState();
+          updateProgress();
+          renderList();
+          showToast(
+            skipped
+              ? `${accepted}件を読み込み、ID不一致の${skipped}件を除外しました。`
+              : `${accepted}件の修正を読み込みました。`,
+          );
+        } catch (error) {
+          console.error(error);
+          showToast(`読み込みに失敗しました：${error.message}`);
+        } finally {
+          dom.importInput.value = "";
+        }
+      }
+
+      document.querySelectorAll(".tab-button").forEach((button) => {
+        button.addEventListener("click", () => changeTab(button.dataset.tab));
+      });
+      dom.searchInput.addEventListener("input", () => {
+        state.query = dom.searchInput.value;
+        renderList();
+      });
+      dom.targetFilter.addEventListener("change", () => {
+        state.target = dom.targetFilter.value;
+        renderList();
+      });
+      dom.statusFilter.addEventListener("change", () => {
+        state.status = dom.statusFilter.value;
+        renderList();
+      });
+      dom.previousButton.addEventListener("click", () => moveSelection(-1));
+      dom.nextButton.addEventListener("click", () => moveSelection(1));
+      dom.clearButton.addEventListener("click", clearCurrentItem);
+      dom.exportButton.addEventListener("click", exportChanges);
+      dom.importButton.addEventListener("click", () => dom.importInput.click());
+      dom.importInput.addEventListener("change", () => {
+        const file = dom.importInput.files?.[0];
+        if (file) importChanges(file);
+      });
+
+      loadLocalState();
+      document.querySelectorAll(".tab-button").forEach((button) => {
+        button.classList.toggle("active", button.dataset.tab === state.activeTab);
+      });
+      updateTargetOptions();
+      updateProgress();
+      renderList();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,262 @@
+{
+  "schemaVersion": 1,
+  "id": "cassim-bell.epilogue",
+  "kind": "character",
+  "title": "十五分休止、残り一分",
+  "summary": "窓口を閉めた途端、異世界の紛失物が休憩室へ殺到する",
+  "ownership": {
+    "arcId": "character.cassim-bell",
+    "characterId": "cassim-bell",
+    "stage": "epilogue"
+  },
+  "trigger": {
+    "actions": [
+      "rest"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 400,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "倉庫街",
+    "assets": [
+      {
+        "id": "cassim-bell.epilogue.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-casino-cafe-morning.png",
+        "alt": "倉庫街の背景"
+      },
+      {
+        "id": "cassim-bell.epilogue.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/events/cassim-bell-epilogue-breakroom-overflow-v1.png",
+        "alt": "異世界の落とし物で埋まった休憩室で、それでも紅茶を飲み切ろうとするカシムとミミ"
+      },
+      {
+        "id": "cassim-bell.epilogue.asset.still.002",
+        "kind": "still",
+        "path": "/assets/story/events/cassim-bell-epilogue-last-minute-reward-v1.png",
+        "alt": "七世界の受付扉を閉じ、残り一分の砂時計と二杯の紅茶だけを守るカシムとミミ"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "line",
+      "id": "cassim-bell.epilogue.node.line.001",
+      "lineId": "cassim-bell.epilogue.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "最終大会の翌週、遺失物窓口で歴史的実験が行われた。カシム・ベルが十五分、休む。以上である。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.epilogue.node.line.002",
+      "lineId": "cassim-bell.epilogue.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "札を『休止』へ返した瞬間、待合室から拍手が起きた。常連客は何世代もこの日を待っていたらしい。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.epilogue.node.line.003",
+      "lineId": "cassim-bell.epilogue.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私たちは窓口裏の休憩室へ入り、紅茶を注いだ。扉を閉め、鍵をかけ、鈴を布で包む。対策は完璧だった。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.epilogue.node.line.004",
+      "lineId": "cassim-bell.epilogue.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "一口目の直前、天井から片方だけの長靴が落ちた。異世界側の返却口が休憩室へ自動迂回したらしい。"
+    },
+    {
+      "type": "direction",
+      "id": "cassim-bell.epilogue.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "cassim-bell.epilogue.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "cassim-bell.epilogue.node.direction.002",
+      "command": {
+        "type": "effect",
+        "effectId": "pulse"
+      }
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.epilogue.node.line.005",
+      "lineId": "cassim-bell.epilogue.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "続いて月面用の日傘、海底王の冠、誰かの宿題、巨大竜の左靴が降った。最後だけ片方でも十分大きい。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.epilogue.node.line.006",
+      "lineId": "cassim-bell.epilogue.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "カシムは反射的に立ち上がった。私は反射的に座らせた。同業者同士、働こうとする動きだけは手に取るように分かる。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.epilogue.node.line.007",
+      "lineId": "cassim-bell.epilogue.line.007",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "今の、窓口へ戻ろうとしましたね。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.epilogue.node.line.008",
+      "lineId": "cassim-bell.epilogue.line.008",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "残り十二分です。長靴は十二分待てます。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.epilogue.node.line.009",
+      "lineId": "cassim-bell.epilogue.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "彼は長靴へ毛布をかけた。物へ毛布が必要かは分からないが、休憩を守る工夫としては前進である。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.epilogue.node.line.010",
+      "lineId": "cassim-bell.epilogue.line.010",
+      "speakerId": "legacy.speaker.1wuvexi",
+      "speakerName": "カシム・ベル",
+      "mode": "dialogue",
+      "text": "失礼。身体が勝手に受付をしました。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.epilogue.node.line.011",
+      "lineId": "cassim-bell.epilogue.line.011",
+      "speakerId": "legacy.speaker.1wuvexi",
+      "speakerName": "カシム・ベル",
+      "mode": "dialogue",
+      "text": "私も身体が勝手にお盆を持ちました。今日は似た者同士ですね。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.epilogue.node.line.012",
+      "lineId": "cassim-bell.epilogue.line.012",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "二口目で砂糖壺から小国の騎士団が出てきた。彼らは聖剣を探していたが、紅茶の時間だと説明すると整列して待った。長靴より聞き分けがいい。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.epilogue.node.line.013",
+      "lineId": "cassim-bell.epilogue.line.013",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "三口目。壁から雪山の遭難者が顔を出し、暖かい部屋だと分かると、そのまま扉の隙間で昼寝を始めた。休憩室が世界規模で混んできた。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.epilogue.node.line.014",
+      "lineId": "cassim-bell.epilogue.line.014",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "残り五分。カシムの膝には迷子の流星、私の兎耳には王家の鍵束、テーブル下には『昨日』を失くした時計が三台。紅茶はまだ半分ある。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.epilogue.node.line.015",
+      "lineId": "cassim-bell.epilogue.line.015",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私は全部片づけたくて仕方がなかった。カシムも同じ顔をしていた。だから二人で同時にカップを持ち、仕事ではなく紅茶を口へ運んだ。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.epilogue.node.line.016",
+      "lineId": "cassim-bell.epilogue.line.016",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "その一口だけは誰にも邪魔されなかった。正確には、巨大竜の靴が机を半分押していたが、慣れれば家具である。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.epilogue.node.line.017",
+      "lineId": "cassim-bell.epilogue.line.017",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "残り一分で休憩室の扉が七つに増えた。カシムは鍵束を握り、私を見る。私は首を横へ振った。あと一分は休む。"
+    },
+    {
+      "type": "direction",
+      "id": "cassim-bell.epilogue.node.direction.003",
+      "command": {
+        "type": "still",
+        "assetId": "cassim-bell.epilogue.asset.still.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "cassim-bell.epilogue.node.direction.004",
+      "command": {
+        "type": "still",
+        "assetId": "cassim-bell.epilogue.asset.still.002",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.epilogue.node.line.018",
+      "lineId": "cassim-bell.epilogue.line.018",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "十五分の鐘が鳴る。カシムは立ち上がり、世界七つ、長靴二足未満、宿題一冊を手際よく窓口へ案内した。顔が少し楽しそうだ。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.epilogue.node.line.019",
+      "lineId": "cassim-bell.epilogue.line.019",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "翌日、休止札の下へ新しい注意書きが増えた。『休憩中の紛失物は、休憩終了後に受け付けます』。その横で巨大竜が右靴を失くして待っていた。",
+      "emotion": "tender"
+    },
+    {
+      "type": "end",
+      "id": "cassim-bell.epilogue.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "approved",
+    "sourceDocument": "native narrative block migration",
+    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "legacyGeneratedIds": false
+  }
+}

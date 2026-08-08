@@ -1,0 +1,262 @@
+{
+  "schemaVersion": 1,
+  "id": "ushiro.epilogue",
+  "kind": "character",
+  "title": "全館合同記念写真・人数確認不能",
+  "summary": "全員の背後へ同時に写った一人の影が、記念写真の人数集計を壊す",
+  "ownership": {
+    "arcId": "character.ushiro",
+    "characterId": "ushiro",
+    "stage": "epilogue"
+  },
+  "trigger": {
+    "actions": [
+      "rest"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 400,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "中央アトリウム撮影所",
+    "assets": [
+      {
+        "id": "ushiro.epilogue.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-casino-cafe-morning.png",
+        "alt": "朝の中央アトリウム撮影所"
+      },
+      {
+        "id": "ushiro.epilogue.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/events/ushiro-epilogue-photo-count-chaos-v2.png",
+        "alt": "全員の背後へ同時に写る影で大混乱する記念撮影と、カメラを構えるうしろを振り返らず探すミミ"
+      },
+      {
+        "id": "ushiro.epilogue.asset.still.002",
+        "kind": "still",
+        "path": "/assets/story/events/ushiro-epilogue-one-chosen-shadow-reward-v1.png",
+        "alt": "百二十七の影を一人分へ収束させ、ミミの写真の一か所だけを自分で選んだうしろ"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "line",
+      "id": "ushiro.epilogue.node.line.001",
+      "lineId": "ushiro.epilogue.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "最終大会の翌週、中央アトリウムへ全館の職員と選手が集められた。優勝記念の集合写真。参加者百二十七名、椅子四十脚、撮影予定時間は十分だった。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.epilogue.node.line.002",
+      "lineId": "ushiro.epilogue.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "一枚目を撮る。現像端末が数えた顔は二百五十四。二枚目は三百八十一。三枚目で端末は『増員中』とだけ表示し、人数を数える仕事から静かに降りた。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.epilogue.node.line.003",
+      "lineId": "ushiro.epilogue.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "原因は、うしろだった。一人なのに全員の背後へ同時に写っている。肩越し、椅子の下、天井の梁、なぜか集合写真を確認する私の背後にも、細長い影がいた。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.epilogue.node.line.004",
+      "lineId": "ushiro.epilogue.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "撮影係は影を一名として数えるべきか百二十七名として数えるべきか本部へ問い合わせた。本部からは『本人へ聞いてください』という、いちばん難しい回答が来た。"
+    },
+    {
+      "type": "direction",
+      "id": "ushiro.epilogue.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "ushiro.epilogue.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "ushiro.epilogue.node.direction.002",
+      "command": {
+        "type": "effect",
+        "effectId": "pulse"
+      }
+    },
+    {
+      "type": "line",
+      "id": "ushiro.epilogue.node.line.005",
+      "lineId": "ushiro.epilogue.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私は最後列へ向かい、振り返らないまま声をかけた。右後ろ、返事なし。左後ろ、撮影係が悲鳴。真上、帽子が落ちた。場所当てだけで閉会時刻を越えそうだ。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.epilogue.node.line.006",
+      "lineId": "ushiro.epilogue.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "全員が一斉に振り返るたび、影は別の背後へ移る。最終的に百二十七人が円陣を組み、全員が外側を見るという、記念写真としてかなり仲の悪そうな隊形になった。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.epilogue.node.line.007",
+      "lineId": "ushiro.epilogue.line.007",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "うしろ。今、何人ぶん写っています？"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.epilogue.node.line.008",
+      "lineId": "ushiro.epilogue.line.008",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "一人なら指を一本、百二十七人なら……指は増やさないでください。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.epilogue.node.line.009",
+      "lineId": "ushiro.epilogue.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "写真の端で、影が一本だけ手を上げた。全員の背後へ立てるのに、本人の数え方はずっと一人らしい。端末へ伝えると、今度は『位置が百二十七か所あります』と抵抗された。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.epilogue.node.line.010",
+      "lineId": "ushiro.epilogue.line.010",
+      "speakerId": "legacy.speaker.1ddw3j9",
+      "speakerName": "うしろ",
+      "mode": "dialogue",
+      "text": "みんな、前しか見ないから。空いていた。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.epilogue.node.line.011",
+      "lineId": "ushiro.epilogue.line.011",
+      "speakerId": "legacy.speaker.1ddw3j9",
+      "speakerName": "うしろ",
+      "mode": "dialogue",
+      "text": "一人でいい。名前で呼ぶなら。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.epilogue.node.line.012",
+      "lineId": "ushiro.epilogue.line.012",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私は撮影名簿の最後へ『うしろ、一名、立ち位置は多数』と書いた。誰も納得しなかったが、本人だけが写真の中で少し姿勢を正した。",
+      "emotion": "tender"
+    },
+    {
+      "type": "direction",
+      "id": "ushiro.epilogue.node.direction.003",
+      "command": {
+        "type": "still",
+        "assetId": "ushiro.epilogue.asset.still.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "line",
+      "id": "ushiro.epilogue.node.line.013",
+      "lineId": "ushiro.epilogue.line.013",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "撮影が終わるころ、カメラが三脚から消えた。代わりに私の手へ二本目の飲み物が押しつけられ、背後から『そこに立って』と声がする。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.epilogue.node.line.014",
+      "lineId": "ushiro.epilogue.line.014",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "まさかの追加撮影である。いつも勝手に人を見つけ、事情を聞き、仲間へ誘う側だった私が、今日はどこから見られているのか分からない。兎耳だけが全方向へ忙しく動いた。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.epilogue.node.line.015",
+      "lineId": "ushiro.epilogue.line.015",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "『右後ろですか』『左』『今は？』『前』。反射的に振り返りかけて止まる。カメラの向こうにいるうしろは、見つからないことを楽しんでいる。たぶん、私が落ち着かない顔をすることも。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.epilogue.node.line.016",
+      "lineId": "ushiro.epilogue.line.016",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私は正面を向いたまま、二本の飲み物を胸の高さへ掲げた。片方のストローが、見えない口に合わせて少し傾く。シャッターが切れた。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.epilogue.node.line.017",
+      "lineId": "ushiro.epilogue.line.017",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "写真には私が一人だけ写っていた。けれど右肩の少し上で、二本目のストローが宙へ伸び、床には私とは違う細長い影が落ちている。"
+    },
+    {
+      "type": "direction",
+      "id": "ushiro.epilogue.node.direction.004",
+      "command": {
+        "type": "still",
+        "assetId": "ushiro.epilogue.asset.still.002",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "line",
+      "id": "ushiro.epilogue.node.line.018",
+      "lineId": "ushiro.epilogue.line.018",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "裏へ日付を書こうとすると、先に小さな字が増えた。『ミミのうしろから』。見られていた時間が形になると、照れくさい。私は写真を伏せ、すぐもう一度見た。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.epilogue.node.line.019",
+      "lineId": "ushiro.epilogue.line.019",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "全館集合写真は人数不明のまま殿堂へ飾られた。その横へ、私一人と飲み物二本の写真も並んだ。来館者は後者を失敗写真だと言う。私は訂正せず、二本目が少し軽くなるのを待った。",
+      "emotion": "tender"
+    },
+    {
+      "type": "end",
+      "id": "ushiro.epilogue.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "approved",
+    "sourceDocument": "native narrative block migration",
+    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "legacyGeneratedIds": false
+  }
+}

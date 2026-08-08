@@ -1,0 +1,306 @@
+{
+  "schemaVersion": 1,
+  "id": "marian.bond",
+  "kind": "character",
+  "title": "チームの日常",
+  "summary": "礼拝スペースで起きる「チームの日常」",
+  "ownership": {
+    "arcId": "character.marian",
+    "characterId": "marian",
+    "stage": "bond"
+  },
+  "trigger": {
+    "actions": [
+      "rest"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 400,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "礼拝スペース",
+    "assets": [
+      {
+        "id": "marian.bond.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-casino-cafe-rain.png",
+        "alt": "礼拝スペースの背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "line",
+      "id": "marian.bond.node.line.001",
+      "lineId": "marian.bond.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "マリアンがチームに加わってから、礼拝スペースで顔を合わせることが増えた。今日は試合の話ではなく、少しだけ時間が空いている。"
+    },
+    {
+      "type": "line",
+      "id": "marian.bond.node.line.002",
+      "lineId": "marian.bond.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "試合のない午後。窓を雨が細く叩き、業務連絡も歓声も今日は遠い。二人きりになる予定ではなかったのに、空いている席は向かいだけだった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "marian.bond.node.line.003",
+      "lineId": "marian.bond.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "休憩室で彼女がクッキーを半分に割ると、割れた方が元へ戻ろうとして皿の上を這った。治療の力が菓子にまで漏れている。"
+    },
+    {
+      "type": "line",
+      "id": "marian.bond.node.line.004",
+      "lineId": "marian.bond.line.004",
+      "speakerId": "legacy.speaker.quc8xa",
+      "speakerName": "マリアン",
+      "mode": "dialogue",
+      "text": "包帯を畳むの、手伝います。"
+    },
+    {
+      "type": "direction",
+      "id": "marian.bond.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "marian.bond.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "marian.bond.node.direction.002",
+      "command": {
+        "type": "effect",
+        "effectId": "pulse"
+      }
+    },
+    {
+      "type": "line",
+      "id": "marian.bond.node.line.005",
+      "lineId": "marian.bond.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "試合も契約もない時間なら、もっと気楽に話せると思っていた。実際は、お茶を一口飲むたび沈黙の意味を考えてしまう。強さを見ている時より、マリアンの小さな癖のほうがずっと気になった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "marian.bond.node.line.006",
+      "lineId": "marian.bond.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "白い包帯、二つに割ったクッキー、自分の脈を測る指。戦場では見落としていた小さな癖が、何も起きない時間ほどよく見える。"
+    },
+    {
+      "type": "line",
+      "id": "marian.bond.node.line.007",
+      "lineId": "marian.bond.line.007",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "食べ物が治ると、いつまでも食べ終わりませんね。"
+    },
+    {
+      "type": "line",
+      "id": "marian.bond.node.line.008",
+      "lineId": "marian.bond.line.008",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "死者は包帯を急ぎません。ゆっくりで大丈夫。"
+    },
+    {
+      "type": "line",
+      "id": "marian.bond.node.line.009",
+      "lineId": "marian.bond.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "マリアンは救える命を一つも見捨てず、終わりさえ治療する聖女。そのはずなのに、私の休憩が終わる時刻を気にして、話題を一つずつ短くしている。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "marian.bond.node.line.010",
+      "lineId": "marian.bond.line.010",
+      "speakerId": "legacy.speaker.quc8xa",
+      "speakerName": "マリアン",
+      "mode": "dialogue",
+      "text": "良いことばかりではありません。終わることも、生きる形の一つです。"
+    },
+    {
+      "type": "line",
+      "id": "marian.bond.node.line.011",
+      "lineId": "marian.bond.line.011",
+      "speakerId": "legacy.speaker.quc8xa",
+      "speakerName": "マリアン",
+      "mode": "dialogue",
+      "text": "生者の勤務時間は急ぐんです。"
+    },
+    {
+      "type": "line",
+      "id": "marian.bond.node.line.012",
+      "lineId": "marian.bond.line.012",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "特別な話をしなくても、同じ音を聞いていられる。そんな時間が欲しかったのだと、失う前から気づいてしまった。"
+    },
+    {
+      "type": "line",
+      "id": "marian.bond.node.line.013",
+      "lineId": "marian.bond.line.013",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "彼女は力を抑え、今度は普通に割れた半分を私へ渡した。"
+    },
+    {
+      "type": "line",
+      "id": "marian.bond.node.line.014",
+      "lineId": "marian.bond.line.014",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "菓子の割れ目まで蘇生してしまい、休憩のおやつが永遠に食べ終わらない。甘い空気になりかけるたび、世界の方が先に耐えられなくなる。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "marian.bond.node.line.015",
+      "lineId": "marian.bond.line.015",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "救う力を止められないことが、本人にとっては優しさより重い恐怖になっていた。そう気づくと、何も起きなかった午後が急に大事な出来事へ変わった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "marian.bond.node.line.016",
+      "lineId": "marian.bond.line.016",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "笑いが収まったあと、治さない選択を怖がりながら、本人の返事を待てることという、驚くほど普通の望みが語られた。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "marian.bond.node.line.017",
+      "lineId": "marian.bond.line.017",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "試合の外で交わした言葉のほうが、次の指示より長く残ることがある。"
+    },
+    {
+      "type": "line",
+      "id": "marian.bond.node.line.018",
+      "lineId": "marian.bond.line.018",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "それは私が叶えるものではない。ただ、叶うまで隣にいることならできる。そう言いかけて、言葉にする勇気だけが遅れた。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "marian.bond.node.line.019",
+      "lineId": "marian.bond.line.019",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "治さずに残した契約印の薄い痕を間に置いたまま、私たちは雨が止んでもしばらく席を立たなかった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "choice",
+      "id": "marian.bond.node.choice.001",
+      "choices": [
+        {
+          "id": "marian.bond.choice.001",
+          "label": "治さなくていい擦り傷を見せ、相談だけする",
+          "result": "マリアンは薬を出さず、痛かったですねと言った。それだけで済んだことに、本人の方が驚いていた。",
+          "intent": "相手の秘密の勝ち方を試す",
+          "promise": "読みにくい作戦になる代わりに、この人だけの成長を大きく進める。",
+          "memory": "任せた一戦の手応えが、次に力を見せる理由になる。",
+          "tone": "wild",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "marian"
+              },
+              "mode": "add",
+              "trust": 9,
+              "ownership": -2
+            },
+            {
+              "type": "fighterPoints",
+              "target": {
+                "type": "fighter",
+                "fighterId": "marian"
+              },
+              "amount": 3
+            }
+          ],
+          "goto": "marian.bond.node.effect.001"
+        },
+        {
+          "id": "marian.bond.choice.002",
+          "label": "倒れた味方を一度だけ戻す手順を作る",
+          "result": "回数と対象を決めるほど、祈りは安定した。禁止事項が増えた紙を、彼女は安心した顔で折り畳んだ。",
+          "intent": "チームの新しい連携を試す",
+          "promise": "本人の流儀は崩すが、全員へ配れる成長ポイントを得る。",
+          "memory": "成功した作戦と短くなった会話の両方が、次の判断まで残る。",
+          "tone": "pragmatic",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "marian"
+              },
+              "mode": "add",
+              "trust": 1,
+              "ownership": 7
+            },
+            {
+              "type": "sharedPoints",
+              "amount": 3
+            }
+          ],
+          "goto": "marian.bond.node.effect.001"
+        }
+      ]
+    },
+    {
+      "type": "effect",
+      "id": "marian.bond.node.effect.001",
+      "effects": [
+        {
+          "type": "setStoryStage",
+          "fighterId": "marian",
+          "stage": 3
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "marian.bond.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "approved",
+    "sourceDocument": "native narrative block migration",
+    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "legacyGeneratedIds": false
+  }
+}

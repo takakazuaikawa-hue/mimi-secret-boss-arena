@@ -1,0 +1,313 @@
+{
+  "schemaVersion": 1,
+  "id": "sazanami.crisis",
+  "kind": "character",
+  "title": "最後の準備",
+  "summary": "地下貯水槽で起きる「最後の準備」",
+  "ownership": {
+    "arcId": "character.sazanami",
+    "characterId": "sazanami",
+    "stage": "crisis"
+  },
+  "trigger": {
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 400,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "地下貯水槽",
+    "assets": [
+      {
+        "id": "sazanami.crisis.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-contract-archive-v2.png",
+        "alt": "地下貯水槽の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "line",
+      "id": "sazanami.crisis.node.line.001",
+      "lineId": "sazanami.crisis.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "アルデバラン社から届いた契約確認書には、さざなみの扱いを決める欄が残っていた。本人の意思を聞くため、地下貯水槽へ向かった。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.crisis.node.line.002",
+      "lineId": "sazanami.crisis.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "その週、相手は私を避けた。廊下の向こうに姿を見つけても、業務用の言葉だけを残して先に曲がる。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.crisis.node.line.003",
+      "lineId": "sazanami.crisis.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "会社は水槽の影を固定し、本体を地上へ引き上げる契約を用意した。紙から潮が滲み、机の脚が錆び始めている。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.crisis.node.line.004",
+      "lineId": "sazanami.crisis.line.004",
+      "speakerId": "legacy.speaker.we7zqt",
+      "speakerName": "さざなみ",
+      "mode": "dialogue",
+      "text": "契約は水槽を所有し、水槽が影を所有する。"
+    },
+    {
+      "type": "direction",
+      "id": "sazanami.crisis.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "sazanami.crisis.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "sazanami.crisis.node.direction.002",
+      "command": {
+        "type": "effect",
+        "effectId": "shake"
+      }
+    },
+    {
+      "type": "line",
+      "id": "sazanami.crisis.node.line.005",
+      "lineId": "sazanami.crisis.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "さざなみの返事が短い。怒っている、と決めれば私の不安には名前がつく。でも以前の私も「人間の距離感が分からない巨大生物なのだ」と決めつけた。また同じ読み違いをするところだった。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.crisis.node.line.006",
+      "lineId": "sazanami.crisis.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "嫌われたのなら理由を聞けばいい。そう思うのに、浅瀬の味だと評された空の弁当箱を見るたび、聞いた答えで今までの時間が変わるのが怖かった。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.crisis.node.line.007",
+      "lineId": "sazanami.crisis.line.007",
+      "speakerId": "legacy.speaker.we7zqt",
+      "speakerName": "さざなみ",
+      "mode": "dialogue",
+      "text": "引かれれば上がる。上がれば、この街は海の底になる。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.crisis.node.line.008",
+      "lineId": "sazanami.crisis.line.008",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "本体のあなたは？"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.crisis.node.line.009",
+      "lineId": "sazanami.crisis.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ようやく追いついた場所で、さざなみは海溝より深い場所から、地上を小さな影として眺めるものに戻っていた。近づく前の、何も期待していなかった顔だ。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.crisis.node.line.010",
+      "lineId": "sazanami.crisis.line.010",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "勝つ場所を残すために、住む場所を沈めるのは違います。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.crisis.node.line.011",
+      "lineId": "sazanami.crisis.line.011",
+      "speakerId": "legacy.speaker.we7zqt",
+      "speakerName": "さざなみ",
+      "mode": "dialogue",
+      "text": "どこにも属さない。だから影だけが苦しい。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.crisis.node.line.012",
+      "lineId": "sazanami.crisis.line.012",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "原因は私への不信ではない。誰かへ近づくための一歩が、その人の暮らす海岸線を変えてしまうことから私を遠ざけようとしている。そのやさしさを、やさしいまま受け入れてはいけない気がした。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.crisis.node.line.013",
+      "lineId": "sazanami.crisis.line.013",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "水槽の水位がゆっくり下がった。怒りではなく、安堵で大きな波が引くこともあるらしい。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.crisis.node.line.014",
+      "lineId": "sazanami.crisis.line.014",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "寝返り一つで沿岸三県の潮位が変わるのに、青のりの質には細かい。別れ話のように静かな場面なのに、施設全体は最終災害手順へ移行している。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.crisis.node.line.015",
+      "lineId": "sazanami.crisis.line.015",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "正しい答えを当てることより、間違えたまま命令しないことを選ぶ。私は逃げ道をふさがない位置で止まり、聞きたかったことを短い言葉にした。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.crisis.node.line.016",
+      "lineId": "sazanami.crisis.line.016",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "守るために離れるのは、残された側へ選択を渡さない。命令と同じだと告げると、初めて相手の表情が崩れた。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.crisis.node.line.017",
+      "lineId": "sazanami.crisis.line.017",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "勝つための答えと、あとで自分を嫌いにならない答えは、同じとは限らない。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.crisis.node.line.018",
+      "lineId": "sazanami.crisis.line.018",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私は勝利を約束しない。安全も約束できない。ただ、地図を変えない歩き方で、同じ窓辺へ会いに来ることを諦める判断だけは本人へ返すと決めた。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.crisis.node.line.019",
+      "lineId": "sazanami.crisis.line.019",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "並んで戻る廊下には、まだ一人分の距離がある。でも今度の沈黙は拒絶ではなく、同じ答えを考えるためのものだった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "choice",
+      "id": "sazanami.crisis.node.choice.001",
+      "choices": [
+        {
+          "id": "sazanami.crisis.choice.001",
+          "label": "水槽のまま、会場へ潮流を呼び込む",
+          "result": "水槽の中で尾が動き、会場へ一本の潮が通った。海そのものを呼ばず、さざなみにしか選べない流れで敵陣を崩した。",
+          "intent": "この人だけの突破法へ賭ける",
+          "promise": "予測しにくい方法を試し、この人専用の成長を大きく進める。",
+          "memory": "危機で選んだ方法は、契約を解く場面でも二人の共通の記憶として戻る。",
+          "tone": "wild",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "sazanami"
+              },
+              "mode": "add",
+              "trust": 12,
+              "ownership": -10
+            },
+            {
+              "type": "fighterPoints",
+              "target": {
+                "type": "fighter",
+                "fighterId": "sazanami"
+              },
+              "amount": 6
+            }
+          ],
+          "goto": "sazanami.crisis.node.effect.001"
+        },
+        {
+          "id": "sazanami.crisis.choice.002",
+          "label": "影を会場一面へ広げ、本体の一部を浮上させる",
+          "result": "広がった影から本体の一部が浮上した。深さを三人で測り続け、誰も飲み込まない範囲を共通の作戦にできた。",
+          "intent": "全員が使える安全な突破法を作る",
+          "promise": "本人だけの切り札は抑え、チーム全体へ使える成長を持ち帰る。",
+          "memory": "全員で組み直した手順は、契約を解く場面でも選んだ責任として戻る。",
+          "tone": "pragmatic",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "sazanami"
+              },
+              "mode": "add",
+              "trust": -2,
+              "ownership": 10
+            },
+            {
+              "type": "sharedPoints",
+              "amount": 6
+            }
+          ],
+          "goto": "sazanami.crisis.node.effect.001"
+        }
+      ]
+    },
+    {
+      "type": "effect",
+      "id": "sazanami.crisis.node.effect.001",
+      "effects": [
+        {
+          "type": "setStoryStage",
+          "fighterId": "sazanami",
+          "stage": 5
+        },
+        {
+          "type": "setLiberationEligible",
+          "fighterId": "sazanami",
+          "eligible": true
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "sazanami.crisis.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "approved",
+    "sourceDocument": "native narrative block migration",
+    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "legacyGeneratedIds": false
+  }
+}

@@ -1,0 +1,305 @@
+{
+  "schemaVersion": 1,
+  "id": "mumyo.power",
+  "kind": "character",
+  "title": "取り戻す力",
+  "summary": "所有者名簿室で起きる「取り戻す力」",
+  "ownership": {
+    "arcId": "character.mumyo",
+    "characterId": "mumyo",
+    "stage": "power"
+  },
+  "trigger": {
+    "actions": [
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 400,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "所有者名簿室",
+    "assets": [
+      {
+        "id": "mumyo.power.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-observation-deck-night.png",
+        "alt": "所有者名簿室の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "line",
+      "id": "mumyo.power.node.line.001",
+      "lineId": "mumyo.power.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "練習のあと、無銘に呼ばれて所有者名簿室まで来た。いつもの力では足りない理由を、見せたいらしい。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.power.node.line.002",
+      "lineId": "mumyo.power.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "警報より先に、相手の声が私の名を呼んだ。いつもと同じ呼び方なのに、その一音だけで足が止まる。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.power.node.line.003",
+      "lineId": "mumyo.power.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "鞘から一寸だけ刃が出ると、展示室の鏡がすべて割れた。欠片の一つ一つに、違う時代の所有者が映っている。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.power.node.line.004",
+      "lineId": "mumyo.power.line.004",
+      "speakerId": "legacy.speaker.1whk6fw",
+      "speakerName": "無銘",
+      "mode": "dialogue",
+      "text": "歴代の持ち主は、私を最強の剣と呼んだ。"
+    },
+    {
+      "type": "direction",
+      "id": "mumyo.power.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "mumyo.power.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "mumyo.power.node.direction.002",
+      "command": {
+        "type": "effect",
+        "effectId": "flash"
+      }
+    },
+    {
+      "type": "line",
+      "id": "mumyo.power.node.line.005",
+      "lineId": "mumyo.power.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "一寸抜けるだけで歴代勇者の時代が同時に映り、展示室が最終決戦を十四回始める。そんな力が、目の前で息をしている。逃げる理由なら十分だった。それでも私は、力の大きさより無銘が最初にどこを見るのかを確かめたかった。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.power.node.line.006",
+      "lineId": "mumyo.power.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "無銘が私と危険の間へ立つ。触れてはいない。それでも、こちらへ届くはずだった圧力だけがきれいに二つへ割れた。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.power.node.line.007",
+      "lineId": "mumyo.power.line.007",
+      "speakerId": "legacy.speaker.1whk6fw",
+      "speakerName": "無銘",
+      "mode": "dialogue",
+      "text": "私は彼ら全員より強い。だから全員が、私を自分の名で呼んだ。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.power.node.line.008",
+      "lineId": "mumyo.power.line.008",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "あなた自身の呼び方は？"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.power.node.line.009",
+      "lineId": "mumyo.power.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "持ち主の望む姿と名を映し、最強の武器として完成する剣。けれど今見せている力は、勝つためではなく、私を怖がらせないために抑えられている。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.power.node.line.010",
+      "lineId": "mumyo.power.line.010",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "強さを借りた人の名前じゃなく、あなた自身の呼ばれ方が必要ですね。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.power.node.line.011",
+      "lineId": "mumyo.power.line.011",
+      "speakerId": "legacy.speaker.1whk6fw",
+      "speakerName": "無銘",
+      "mode": "dialogue",
+      "text": "まだ決めていない。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.power.node.line.012",
+      "lineId": "mumyo.power.line.012",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "本気を見たいと思っていた。実際に目の前へ現れると、知りたかったのは強さではなく、その力を本人がどう恐れているかだった。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.power.node.line.013",
+      "lineId": "mumyo.power.line.013",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "刃はそれ以上出なかった。でも、無銘という仮の名を鏡の人物が初めて自分から口にした。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.power.node.line.014",
+      "lineId": "mumyo.power.line.014",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "一寸抜けるだけで歴代勇者の時代が同時に映り、展示室が最終決戦を十四回始める。闘技場の安全基準は一瞬で役に立たなくなり、担当者は私の顔を見て計測を諦めた。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.power.node.line.015",
+      "lineId": "mumyo.power.line.015",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "世界を壊せることより、壊さないために何を選んだかが胸へ残った。眠っていたのではなく、誰の願いでもない自分の声を選び分けるために黙っていた。その理解が正しいか、いつか本人の言葉で確かめたい。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.power.node.line.016",
+      "lineId": "mumyo.power.line.016",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "力の中心にあったのは、自分の声だと思ったものまで、歴代所有者の願いの残響であること。最強であることが、本人にとって一番古い傷なのだと分かる。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.power.node.line.017",
+      "lineId": "mumyo.power.line.017",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "怖さが消えたわけではない。だからこそ、使うかどうかを本人と決める必要がある。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.power.node.line.018",
+      "lineId": "mumyo.power.line.018",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "大丈夫とは言えない。怖いものは怖い。それでも、次に力を使う時は一人で決めなくていいと伝えた。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.power.node.line.019",
+      "lineId": "mumyo.power.line.019",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "値札も所有者欄も外された空の展示ケースだけが元の大きさで残り、さっきまで世界の終わりがいた場所に、帰り道の灯りが戻った。"
+    },
+    {
+      "type": "choice",
+      "id": "mumyo.power.node.choice.001",
+      "choices": [
+        {
+          "id": "mumyo.power.choice.001",
+          "label": "鏡の本人に、抜く瞬間を選んでもらう",
+          "result": "私が命じる前に、刃が一度だけ光った。斬ったのは敵ではなく、ケースへ続く古い所有者名簿だった。",
+          "intent": "本来の力を一気に取り戻す",
+          "promise": "失敗時の危険を引き受け、この人専用の成長を最大まで進める。",
+          "memory": "力を恐れたまま任せたことを、相手は危機の場面で思い出す。",
+          "tone": "heroic",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "mumyo"
+              },
+              "mode": "add",
+              "trust": 10,
+              "ownership": -4
+            },
+            {
+              "type": "fighterPoints",
+              "target": {
+                "type": "fighter",
+                "fighterId": "mumyo"
+              },
+              "amount": 5
+            }
+          ],
+          "goto": "mumyo.power.node.effect.001"
+        },
+        {
+          "id": "mumyo.power.choice.002",
+          "label": "鞘を開かず、剣圧だけを安全に取り出す",
+          "result": "本来の一撃は眠ったまま、三人が扱える風だけが残った。無銘は地味な成功を、少し誇らしそうに見ていた。",
+          "intent": "安全な段階解除で確実に進む",
+          "promise": "本来の力は一部に留め、チーム全体の成長へ成果を持ち帰る。",
+          "memory": "全員で帰ると決めた手順が、危機で使える安全策として残る。",
+          "tone": "pragmatic",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "mumyo"
+              },
+              "mode": "add",
+              "trust": 0,
+              "ownership": 9
+            },
+            {
+              "type": "sharedPoints",
+              "amount": 5
+            }
+          ],
+          "goto": "mumyo.power.node.effect.001"
+        }
+      ]
+    },
+    {
+      "type": "effect",
+      "id": "mumyo.power.node.effect.001",
+      "effects": [
+        {
+          "type": "setStoryStage",
+          "fighterId": "mumyo",
+          "stage": 4
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "mumyo.power.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "approved",
+    "sourceDocument": "native narrative block migration",
+    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "legacyGeneratedIds": false
+  }
+}

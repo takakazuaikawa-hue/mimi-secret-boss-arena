@@ -1,0 +1,353 @@
+{
+  "schemaVersion": 1,
+  "id": "cassim-bell.liberation",
+  "kind": "liberation",
+  "title": "契約の外側",
+  "summary": "存在しない地下階で起きる「契約の外側」",
+  "ownership": {
+    "arcId": "character.cassim-bell",
+    "characterId": "cassim-bell",
+    "stage": "liberation"
+  },
+  "trigger": {
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 400,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "存在しない地下階",
+    "assets": [
+      {
+        "id": "cassim-bell.liberation.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-casino-cafe-night.png",
+        "alt": "存在しない地下階の背景"
+      },
+      {
+        "id": "cassim-bell.liberation.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/events/cassim-bell-liberation.png",
+        "alt": "契約の外側のイベント一枚絵"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "line",
+      "id": "cassim-bell.liberation.node.line.001",
+      "lineId": "cassim-bell.liberation.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "最終大会が近づくなか、カシム・ベルの契約を終わらせられる条件がそろった。今日は勝敗より先に、本人の意思を確かめに来た。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.liberation.node.line.002",
+      "lineId": "cassim-bell.liberation.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "解除届を渡せば、この人を呼び止める権利はなくなる。最初から持つべきでなかった権利なのに、指が紙を離さない。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.liberation.node.line.003",
+      "lineId": "cassim-bell.liberation.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "契約解除と同時に、背後の扉は彼の所有物になる。誰かの失くし物を守る役目を、今度は自分で続けるか選べる。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.liberation.node.line.004",
+      "lineId": "cassim-bell.liberation.line.004",
+      "speakerId": "legacy.speaker.1wuvexi",
+      "speakerName": "カシム・ベル",
+      "mode": "dialogue",
+      "text": "所有者欄を閉じました。扉はまだ開きます。"
+    },
+    {
+      "type": "direction",
+      "id": "cassim-bell.liberation.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "cassim-bell.liberation.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "cassim-bell.liberation.node.direction.002",
+      "command": {
+        "type": "effect",
+        "effectId": "flash"
+      }
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.liberation.node.line.005",
+      "lineId": "cassim-bell.liberation.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "解除届は薄く、何百年ぶりに表へ返した十五分休止の札より軽い。こんな紙で自由を渡せると思うこと自体、最後の所有なのかもしれない。手汗で端が少し曲がった。",
+      "emotion": "tension"
+    },
+    {
+      "type": "direction",
+      "id": "cassim-bell.liberation.node.direction.003",
+      "command": {
+        "type": "still",
+        "assetId": "cassim-bell.liberation.asset.still.001"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "cassim-bell.liberation.node.direction.004",
+      "command": {
+        "type": "effect",
+        "effectId": "pulse"
+      }
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.liberation.node.line.006",
+      "lineId": "cassim-bell.liberation.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "カシム・ベルは急かさない。失くしたものを必ず保管し、持ち主が来るまで待ち続ける番人でありながら、私の迷いが言葉になるまで待っている。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.liberation.node.line.007",
+      "lineId": "cassim-bell.liberation.line.007",
+      "speakerId": "legacy.speaker.1wuvexi",
+      "speakerName": "カシム・ベル",
+      "mode": "dialogue",
+      "text": "窓口を閉めたら、待っている方々を裏切るでしょうか。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.liberation.node.line.008",
+      "lineId": "cassim-bell.liberation.line.008",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "これから何を保管します？"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.liberation.node.line.009",
+      "lineId": "cassim-bell.liberation.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "勝つために必要だという理由なら、いくらでも並べられた。でも今伝えたいのは、扉を閉め、温かい紅茶を最後まで飲んでから戻ることをこの先も見届けたいという、命令にできない願いだった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.liberation.node.line.010",
+      "lineId": "cassim-bell.liberation.line.010",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "休憩の札を出すだけなら、待つ人も待てると思います。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.liberation.node.line.011",
+      "lineId": "cassim-bell.liberation.line.011",
+      "speakerId": "legacy.speaker.1wuvexi",
+      "speakerName": "カシム・ベル",
+      "mode": "dialogue",
+      "text": "返したくない思い出だけは、預からないことにします。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.liberation.node.line.012",
+      "lineId": "cassim-bell.liberation.line.012",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "残ってほしいと言うことと、自由にすることは両立するのか。答えは書類にない。だから、本人へ聞くしかない。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.liberation.node.line.013",
+      "lineId": "cassim-bell.liberation.line.013",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "彼は何世紀ぶりかに『十五分休止』の札を表へ返し、温かい紅茶を両手で持った。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.liberation.node.line.014",
+      "lineId": "cassim-bell.liberation.line.014",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "合鍵を一本取り違えるだけで、月の裏や滅亡前日の王都が休憩室へ開くほどの力を持つ存在が、一枚の紙を前に私の返事だけを待っている。その不釣り合いさが、泣きそうな場面を少しだけ可笑しくした。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.liberation.node.line.015",
+      "lineId": "cassim-bell.liberation.line.015",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "もう呼び止める権利はない。それでもカシム・ベルが振り返るなら、そこから先は契約ではなく本人の答えだ。私は追わず、その一歩を待った。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.liberation.node.line.016",
+      "lineId": "cassim-bell.liberation.line.016",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "契約印が消える。関係まで消える音はしなかった。代わりに、これからは断られるかもしれないという自由な静けさが来た。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.liberation.node.line.017",
+      "lineId": "cassim-bell.liberation.line.017",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "契約をなくしても関係はなくならない。次に同じ場所へ立つなら、互いに選び直した結果でありたい。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.liberation.node.line.018",
+      "lineId": "cassim-bell.liberation.line.018",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "何百年ぶりに表へ返した十五分休止の札を返そうとすると、相手は受け取らなかった。「預けるのではない。次に会う場所の印だ」と言った。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.liberation.node.line.019",
+      "lineId": "cassim-bell.liberation.line.019",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "別れの挨拶をした。それでも足音は同じ出口へ向かっている。契約ではなく、本人の歩幅で。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "choice",
+      "id": "cassim-bell.liberation.node.choice.001",
+      "choices": [
+        {
+          "id": "cassim-bell.liberation.choice.001",
+          "label": "所有者用の鍵を返し、倉庫の出口を本人へ渡す",
+          "result": "鍵は倉庫の奥へ消えた。カシムは自由になった最初の仕事として、私が失くした安いペンを返してくれた。",
+          "intent": "契約と出場登録を完全に分ける",
+          "promise": "所有者名を消し、本人が自分の名で次の試合を選べるようにする。",
+          "memory": "自由になったあと、最初に自分で選んだ集合時刻が残る。",
+          "tone": "defiant",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "cassim-bell"
+              },
+              "mode": "add",
+              "trust": 10,
+              "ownership": 0
+            },
+            {
+              "type": "liberationDecision",
+              "fighterId": "cassim-bell",
+              "decision": "release"
+            }
+          ],
+          "goto": "cassim-bell.liberation.node.effect.001"
+        },
+        {
+          "id": "cassim-bell.liberation.choice.002",
+          "label": "契約を解き、チームの遺失物係を改めて頼む",
+          "result": "依頼は断れる形で出した。カシムは受付番号一番を取り、次戦の大技を預かる準備から始めた。",
+          "intent": "自由な相手へ改めて協力を頼む",
+          "promise": "断る権利を返したうえで、決勝を一緒に戦う新しい約束を結ぶ。",
+          "memory": "頼まれたからではなく、頼みを聞いたから残った。その違いを二人が覚えている。",
+          "tone": "tender",
+          "effects": [
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "cassim-bell"
+              },
+              "mode": "add",
+              "trust": 6,
+              "ownership": 0
+            },
+            {
+              "type": "sharedPoints",
+              "amount": 4
+            },
+            {
+              "type": "liberationDecision",
+              "fighterId": "cassim-bell",
+              "decision": "release"
+            }
+          ],
+          "goto": "cassim-bell.liberation.node.effect.001"
+        }
+      ]
+    },
+    {
+      "type": "effect",
+      "id": "cassim-bell.liberation.node.effect.001",
+      "effects": [
+        {
+          "type": "setStoryStage",
+          "fighterId": "cassim-bell",
+          "stage": 6
+        },
+        {
+          "type": "setLiberationEligible",
+          "fighterId": "cassim-bell",
+          "eligible": false
+        },
+        {
+          "type": "setLiberated",
+          "fighterId": "cassim-bell",
+          "liberated": true
+        },
+        {
+          "type": "relationship",
+          "target": {
+            "type": "fighter",
+            "fighterId": "cassim-bell"
+          },
+          "mode": "set",
+          "ownership": 0
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "cassim-bell.liberation.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "approved",
+    "sourceDocument": "native narrative block migration",
+    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "legacyGeneratedIds": false
+  }
+}
