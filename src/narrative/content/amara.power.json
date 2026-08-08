@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "id": "amara.power",
   "kind": "character",
-  "title": "本日の被告、私の本気",
-  "summary": "力量測定の場で、アマラが自分の本気を開廷する",
+  "title": "星の法廷へようこそ",
+  "summary": "夜の展望デッキから、アマラの本当の法廷——星の海へ",
   "ownership": {
     "arcId": "character.amara",
     "characterId": "amara",
@@ -26,13 +26,13 @@
     "weight": 1
   },
   "presentation": {
-    "location": "契約保管庫",
+    "location": "夜の展望デッキ",
     "assets": [
       {
         "id": "amara.power.asset.background.001",
         "kind": "background",
         "path": "/assets/story/bg-observation-deck-night.png",
-        "alt": "契約保管庫の背景"
+        "alt": "夜の展望デッキの背景"
       }
     ]
   },
@@ -43,43 +43,25 @@
       "lineId": "amara.power.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "大会前の力量測定。場所は契約保管庫の奥にある旧訓練室。持ち物は記録板と、さっきから震えが止まらない計測担当の新人くん。"
+      "text": "「見せたいものがあります」。アマラに呼び出されたのは、夜の展望デッキだった。夜景の見える場所に、二人。……これは、あれだろうか。世間で言う、その。"
     },
     {
       "type": "line",
       "id": "amara.power.node.line.002",
       "lineId": "amara.power.line.002",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "扉を開けたら、天井から白い線が何百本も降りていた。線の内側では、埃まで落ちるのをやめて浮いている。重力が、証言の順番を待っていた。",
-      "emotion": "tension"
+      "speakerId": "legacy.speaker.14shtqw",
+      "speakerName": "アマラ",
+      "mode": "dialogue",
+      "text": "力量測定です。"
     },
     {
       "type": "line",
       "id": "amara.power.node.line.003",
       "lineId": "amara.power.line.003",
-      "speakerId": "legacy.speaker.14shtqw",
-      "speakerName": "アマラ",
-      "mode": "dialogue",
-      "text": "来ましたね。開廷します。本日の被告——「私の本気」。"
-    },
-    {
-      "type": "line",
-      "id": "amara.power.node.line.004",
-      "lineId": "amara.power.line.004",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "自分を裁くんですか！？"
-    },
-    {
-      "type": "line",
-      "id": "amara.power.node.line.005",
-      "lineId": "amara.power.line.005",
-      "speakerId": "legacy.speaker.14shtqw",
-      "speakerName": "アマラ",
-      "mode": "dialogue",
-      "text": "計測とは、そういうものでしょう。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ですよね。浮かれた三秒を返してほしい。ただし隣では、計測担当の新人くんがなぜか私の袖をつかんで震えている。分かる。この空気は、何かが起きる空気だ。",
+      "emotion": "comic"
     },
     {
       "type": "direction",
@@ -91,6 +73,15 @@
       }
     },
     {
+      "type": "line",
+      "id": "amara.power.node.line.004",
+      "lineId": "amara.power.line.004",
+      "speakerId": "legacy.speaker.14shtqw",
+      "speakerName": "アマラ",
+      "mode": "dialogue",
+      "text": "ここからは、私の法廷で行います。——開廷。"
+    },
+    {
       "type": "direction",
       "id": "amara.power.node.direction.002",
       "command": {
@@ -100,12 +91,21 @@
     },
     {
       "type": "line",
-      "id": "amara.power.node.line.006",
-      "lineId": "amara.power.line.006",
+      "id": "amara.power.node.line.005",
+      "lineId": "amara.power.line.005",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "新人くんが計測器を向ける。表示は三秒で「規格外」になり、五秒で煙を吹いた。彼は計測を諦め、記録板に「でかい」とだけ書いた。私も見た。でかかった。",
-      "emotion": "comic"
+      "text": "夜景が、めくれた。手すりの向こうが星の海に変わる。星でできた傍聴席。光の天秤。足元は、宇宙に引かれた白い一本線だけ。——ここが、この人の本当の法廷。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "amara.power.node.line.006",
+      "lineId": "amara.power.line.006",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "お、落ちる落ちる落ちます——！"
     },
     {
       "type": "line",
@@ -114,12 +114,39 @@
       "speakerId": "legacy.speaker.14shtqw",
       "speakerName": "アマラ",
       "mode": "dialogue",
-      "text": "神罰は、規則違反へ下すものではない。規則が人を害した時に、規則へ下すものです。"
+      "text": "落ちません。法廷内では、私から離れないでください。"
     },
     {
       "type": "line",
       "id": "amara.power.node.line.008",
       "lineId": "amara.power.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "白い手袋が私の手を取って、隣へ引き寄せた。手をつないだまま、宇宙に立っている。心臓の音が傍聴席まで聞こえそうで、私は星より先にそっちの心配をした。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "amara.power.node.line.009",
+      "lineId": "amara.power.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "新人くんが震えながら計測器を向けた。表示は三秒で「規格外」になり、五秒で煙を吹いた。彼は計測を諦め、記録板に「でかい」とだけ書いた。私も見た。でかかった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "amara.power.node.line.010",
+      "lineId": "amara.power.line.010",
+      "speakerId": "legacy.speaker.14shtqw",
+      "speakerName": "アマラ",
+      "mode": "dialogue",
+      "text": "神罰は、規則違反へ下すものではない。規則が人を害した時に、規則へ下すものです。"
+    },
+    {
+      "type": "line",
+      "id": "amara.power.node.line.011",
+      "lineId": "amara.power.line.011",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -127,8 +154,8 @@
     },
     {
       "type": "line",
-      "id": "amara.power.node.line.009",
-      "lineId": "amara.power.line.009",
+      "id": "amara.power.node.line.012",
+      "lineId": "amara.power.line.012",
       "speakerId": "legacy.speaker.14shtqw",
       "speakerName": "アマラ",
       "mode": "dialogue",
@@ -136,80 +163,61 @@
     },
     {
       "type": "line",
-      "id": "amara.power.node.line.010",
-      "lineId": "amara.power.line.010",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "白い線が一斉に震えた。空中に古い天秤が浮かび、皿の上へ、光でできた「昨日の判決」が一枚ずつ載っていく。世界の終わりを、こんなに整頓された形で見るのは初めてだった。",
-      "emotion": "tension"
-    },
-    {
-      "type": "line",
-      "id": "amara.power.node.line.011",
-      "lineId": "amara.power.line.011",
-      "speakerId": "legacy.speaker.14shtqw",
-      "speakerName": "アマラ",
-      "mode": "dialogue",
-      "text": "私が本来裁くのは、違反者ではない。正しさを名乗って、疑われることを拒んだ仕組みです。"
-    },
-    {
-      "type": "line",
-      "id": "amara.power.node.line.012",
-      "lineId": "amara.power.line.012",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "力は怖い。それは変わらない。でも、こちらへ届くはずの圧力は、私の手前できれいに二つへ割れていた。怖がらせない形に、ずっと抑えてくれている。",
-      "emotion": "revelation"
-    },
-    {
-      "type": "line",
       "id": "amara.power.node.line.013",
       "lineId": "amara.power.line.013",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "……アマラさんの本気って、今までどこで出してたんですか。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "光の天秤の皿へ、星が一つずつ降りてくる。あれは全部、彼女が一人で下してきた判決だ。この星空の数だけ、一人だったのだ。"
     },
     {
       "type": "line",
       "id": "amara.power.node.line.014",
       "lineId": "amara.power.line.014",
-      "speakerId": "legacy.speaker.14shtqw",
-      "speakerName": "アマラ",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "出していません。最後まで見届ける者がいない場所で、出すべきではないので。"
+      "text": "……この景色、今まで誰に見せてたんですか。"
     },
     {
       "type": "line",
       "id": "amara.power.node.line.015",
       "lineId": "amara.power.line.015",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "答えるまでに、一秒の間があった。この人は世界を裁けるのに、その瞬間を見ていてくれる人が、今まで一人もいなかったのだ。",
-      "emotion": "tension"
+      "speakerId": "legacy.speaker.14shtqw",
+      "speakerName": "アマラ",
+      "mode": "dialogue",
+      "text": "誰にも。最後まで見届ける者がいない場所で、本気を出すべきではないので。"
     },
     {
       "type": "line",
       "id": "amara.power.node.line.016",
       "lineId": "amara.power.line.016",
-      "speakerId": "legacy.speaker.14shtqw",
-      "speakerName": "アマラ",
-      "mode": "dialogue",
-      "text": "安心してください。傍聴席は残します。あなたには、最後まで見届けてもらう。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "つないだ手に、少しだけ力がこもった。世界を裁ける人に、その瞬間を見ている人が、今まで一人もいなかった。",
+      "emotion": "revelation"
     },
     {
       "type": "line",
       "id": "amara.power.node.line.017",
       "lineId": "amara.power.line.017",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
+      "speakerId": "legacy.speaker.14shtqw",
+      "speakerName": "アマラ",
       "mode": "dialogue",
-      "text": "……はい。ただし、条件つきです。次に本気を出すかどうかは、一人で決めないでください。"
+      "text": "安心してください。傍聴席は、残します。あなたには、最後まで見届けてもらう。"
     },
     {
       "type": "line",
       "id": "amara.power.node.line.018",
       "lineId": "amara.power.line.018",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "はい。ただし、条件つきです。次に本気を出すかどうかは、一人で決めないでください。"
+    },
+    {
+      "type": "line",
+      "id": "amara.power.node.line.019",
+      "lineId": "amara.power.line.019",
       "speakerId": "legacy.speaker.14shtqw",
       "speakerName": "アマラ",
       "mode": "dialogue",
@@ -217,11 +225,11 @@
     },
     {
       "type": "line",
-      "id": "amara.power.node.line.019",
-      "lineId": "amara.power.line.019",
+      "id": "amara.power.node.line.020",
+      "lineId": "amara.power.line.020",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "帰り際、新人くんの記録板をのぞいたら「でかい。やさしい。」に増えていた。箸袋の異議申立て(第四号)は、私のポケットの中。「本日の傍聴人は、被告に条件を付けた。前例のない越権である。——受理する」。",
+      "text": "気づけば、展望デッキはいつもの夜景に戻っていた。手は、戻ってからも三十秒くらい、つながれたままだった。どちらも、指摘しなかった。箸袋の第四号がポケットに増えていた。「本日の傍聴人は、被告に条件を付けた。前例のない越権である。——受理する」。",
       "emotion": "tender"
     },
     {
@@ -230,11 +238,11 @@
       "choices": [
         {
           "id": "amara.power.choice.001",
-          "label": "古い天秤へ、アルデバラン社の契約原本を載せる",
-          "result": "天秤は会社側へ傾き、そのまま机を突き抜けた。重かったのは紙ではなく、紙に従わせてきた年月だった。アマラは傾いた天秤を長く見て、「判決は、まだ出しません」と言った。傍聴席の私がいる間は、急がないらしい。",
+          "label": "星の法廷の天秤へ、アルデバラン社の契約原本を載せる",
+          "result": "光の天秤は会社側へ大きく傾き、星の傍聴席がざわめいた。重かったのは紙ではなく、紙に従わせてきた年月だった。アマラは傾いた天秤を長く見て、「判決は、まだ出しません」と言った。傍聴席に私がいる間は、急がないらしい。",
           "intent": "本来の力を一気に取り戻す",
           "promise": "失敗時の危険を引き受け、この人専用の成長を最大まで進める。",
-          "memory": "怖いまま隣で見届けたことを、アマラは危機の場面で思い出す。",
+          "memory": "星の法廷で怖いまま隣に立ったことを、アマラは危機の場面で思い出す。",
           "tone": "heroic",
           "effects": [
             {
@@ -260,8 +268,8 @@
         },
         {
           "id": "amara.power.choice.002",
-          "label": "大会規則だけを量り、違反技を封じる",
-          "result": "会場全体を裁く力は使わず、次の相手が隠していた一手だけを止めた。小さな判決ほど、チームには扱いやすかった。新人くんの報告書には「制御良好。たぶん世界一やさしい規格外」と書かれ、上長に三回突き返されていた。",
+          "label": "今夜は大会規則だけを量り、違反技を封じる",
+          "result": "星の海を全部は使わず、次の相手が隠していた一手だけを止めた。小さな判決ほど、チームには扱いやすかった。新人くんの報告書には「制御良好。たぶん世界一やさしい規格外」と書かれ、上長に三回突き返されていた。",
           "intent": "安全な段階解除で確実に進む",
           "promise": "本来の力は一部に留め、チーム全体の成長へ成果を持ち帰る。",
           "memory": "全員で帰ると決めた手順が、危機で使える安全策として残る。",
@@ -306,7 +314,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md",
-    "authorNote": "v2改稿: 自分の本気を開廷する力量測定。核心=見届け人の不在。合議制の導入。箸袋第四号。",
+    "authorNote": "v3改稿: 夜の展望デッキ→星の法廷へ場面転換。手をつないだまま宇宙に立つドキドキ。核心=見届け人の不在。箸袋第四号。",
     "legacyGeneratedIds": false
   }
 }

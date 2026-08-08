@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "id": "amara.bond",
   "kind": "character",
-  "title": "雨天休廷、しりとり法制定",
-  "summary": "雨の午後、アマラが「休憩の正しい過ごし方」を開廷してしまう",
+  "title": "温泉審理、初の無罪判決",
+  "summary": "賞品の温泉旅行。浴衣のアマラと卓球と、「両者勝訴」の誕生",
   "ownership": {
     "arcId": "character.amara",
     "characterId": "amara",
@@ -26,13 +26,13 @@
     "weight": 1
   },
   "presentation": {
-    "location": "カフェの窓際",
+    "location": "温泉旅館・鏡見の湯",
     "assets": [
       {
         "id": "amara.bond.asset.background.001",
         "kind": "background",
-        "path": "/assets/story/bg-casino-cafe-rain.png",
-        "alt": "雨のカジノカフェの背景"
+        "path": "/assets/story/bg-hot-spring-ryokan.png",
+        "alt": "温泉旅館の背景"
       }
     ]
   },
@@ -43,52 +43,7 @@
       "lineId": "amara.bond.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "雨の午後。試合はなし。お客もまばら。カフェの窓際で、私は三十分の休憩を勝ち取った。今日こそ、ただのお茶の時間にする。"
-    },
-    {
-      "type": "line",
-      "id": "amara.bond.node.line.002",
-      "lineId": "amara.bond.line.002",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "向かいの席では、アマラが箸袋に異議を書いていた。「環境に配慮」の根拠資料がないらしい。被告が地球規模になってきた。",
-      "emotion": "comic"
-    },
-    {
-      "type": "line",
-      "id": "amara.bond.node.line.003",
-      "lineId": "amara.bond.line.003",
-      "speakerId": "legacy.speaker.14shtqw",
-      "speakerName": "アマラ",
-      "mode": "dialogue",
-      "text": "議題を追加します。「休憩の正しい過ごし方」について。"
-    },
-    {
-      "type": "line",
-      "id": "amara.bond.node.line.004",
-      "lineId": "amara.bond.line.004",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "休憩を議題にしたら、それはもう休憩じゃないです。"
-    },
-    {
-      "type": "line",
-      "id": "amara.bond.node.line.005",
-      "lineId": "amara.bond.line.005",
-      "speakerId": "legacy.speaker.14shtqw",
-      "speakerName": "アマラ",
-      "mode": "dialogue",
-      "text": "では、正しい休憩の判例を示してください。"
-    },
-    {
-      "type": "line",
-      "id": "amara.bond.node.line.006",
-      "lineId": "amara.bond.line.006",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "判例。休憩の判例って何。接客歴半年にして、私は休み方の証拠を求められた初めてのバニーになった。",
-      "emotion": "comic"
+      "text": "先週の大会の賞品は、温泉旅行だった。ペア一組、一泊二日。チーム内のくじ引きの結果——私と、アマラである。神様、話が急です。"
     },
     {
       "type": "direction",
@@ -100,6 +55,69 @@
       }
     },
     {
+      "type": "line",
+      "id": "amara.bond.node.line.002",
+      "lineId": "amara.bond.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "旅館に着いて三十秒で、アマラは効能書きの前に立った。「すべての疲れに効く」。……嫌な予感しかしない。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "amara.bond.node.line.003",
+      "lineId": "amara.bond.line.003",
+      "speakerId": "legacy.speaker.14shtqw",
+      "speakerName": "アマラ",
+      "mode": "dialogue",
+      "text": "開廷します。本日の被告——「すべての疲れに効く」。誇大表示の疑い。"
+    },
+    {
+      "type": "line",
+      "id": "amara.bond.node.line.004",
+      "lineId": "amara.bond.line.004",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "温泉を裁かないでください！！"
+    },
+    {
+      "type": "line",
+      "id": "amara.bond.node.line.005",
+      "lineId": "amara.bond.line.005",
+      "speakerId": "legacy.speaker.14shtqw",
+      "speakerName": "アマラ",
+      "mode": "dialogue",
+      "text": "実証します。証人ミミ。あなたは今、疲れていますか。"
+    },
+    {
+      "type": "line",
+      "id": "amara.bond.node.line.006",
+      "lineId": "amara.bond.line.006",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "え、まあ、書類仕事で肩が……"
+    },
+    {
+      "type": "line",
+      "id": "amara.bond.node.line.007",
+      "lineId": "amara.bond.line.007",
+      "speakerId": "legacy.speaker.14shtqw",
+      "speakerName": "アマラ",
+      "mode": "dialogue",
+      "text": "では、入浴後に再尋問します。回答の変化を、証拠として採用します。"
+    },
+    {
+      "type": "line",
+      "id": "amara.bond.node.line.008",
+      "lineId": "amara.bond.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "かくして私は、人生で初めて「証拠」として温泉に入った。いいお湯だった。証拠として、最高だった。",
+      "emotion": "comic"
+    },
+    {
       "type": "direction",
       "id": "amara.bond.node.direction.002",
       "command": {
@@ -109,30 +127,12 @@
     },
     {
       "type": "line",
-      "id": "amara.bond.node.line.007",
-      "lineId": "amara.bond.line.007",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "……しりとり、やります？"
-    },
-    {
-      "type": "line",
-      "id": "amara.bond.node.line.008",
-      "lineId": "amara.bond.line.008",
-      "speakerId": "legacy.speaker.14shtqw",
-      "speakerName": "アマラ",
-      "mode": "dialogue",
-      "text": "規則の条文を要求します。"
-    },
-    {
-      "type": "line",
       "id": "amara.bond.node.line.009",
       "lineId": "amara.bond.line.009",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "ないです。「ん」で終わったら負け。以上です。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "湯上がり、縁側。浴衣のアマラが、髪を下ろしていた。いつも法廷の人が、今日は夜風の人だった。見てはいけないものを見た気がして、私は麦茶を一気飲みした。",
+      "emotion": "tension"
     },
     {
       "type": "line",
@@ -141,16 +141,16 @@
       "speakerId": "legacy.speaker.14shtqw",
       "speakerName": "アマラ",
       "mode": "dialogue",
-      "text": "条文が一行。……美しい法です。"
+      "text": "再尋問します。——肩は。"
     },
     {
       "type": "line",
       "id": "amara.bond.node.line.011",
       "lineId": "amara.bond.line.011",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "始まってみると、アマラは強かった。ただし一手ごとに「今の単語の定義は」と確認が入るので、一周に十分かかった。",
-      "emotion": "comic"
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "……治りました。完全に。"
     },
     {
       "type": "line",
@@ -159,56 +159,83 @@
       "speakerId": "legacy.speaker.14shtqw",
       "speakerName": "アマラ",
       "mode": "dialogue",
-      "text": "「りんご」。——品種の特定を求めます。"
+      "text": "被告「すべての疲れに効く」は——無罪。……初めて、無罪を出しました。"
     },
     {
       "type": "line",
       "id": "amara.bond.node.line.013",
       "lineId": "amara.bond.line.013",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "しりとりに品種はいらないんですよ！？"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "世界を裁く人の記念すべき初無罪が、温泉の効能書きだった。アマラは判決文を書く手を止めて、少しだけ困っていた。うれしい時の顔を、まだ持っていないのだ。",
+      "emotion": "tender"
     },
     {
       "type": "line",
       "id": "amara.bond.node.line.014",
       "lineId": "amara.bond.line.014",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "雨音。湯気。定義済みのりんご。何も起きないはずの午後が、なんだか忙しい。悪くない忙しさだった。"
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "記念に、卓球やりましょう。温泉といえば卓球です。"
     },
     {
       "type": "line",
       "id": "amara.bond.node.line.015",
       "lineId": "amara.bond.line.015",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
+      "speakerId": "legacy.speaker.14shtqw",
+      "speakerName": "アマラ",
       "mode": "dialogue",
-      "text": "じゃあ次はじゃんけんで——"
+      "text": "規則の条文を要求します。"
     },
     {
       "type": "line",
       "id": "amara.bond.node.line.016",
       "lineId": "amara.bond.line.016",
-      "speakerId": "legacy.speaker.14shtqw",
-      "speakerName": "アマラ",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "待ってください。今の勝負、引き分けです。判決が……出せません。"
+      "text": "先に11点。以上です。"
     },
     {
       "type": "line",
       "id": "amara.bond.node.line.017",
       "lineId": "amara.bond.line.017",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "あいこ。ただのあいこだ。でもアマラは本気で困っていた。この人の世界には、勝ちと負けの二つしか項目がないのだ。",
-      "emotion": "tension"
+      "speakerId": "legacy.speaker.14shtqw",
+      "speakerName": "アマラ",
+      "mode": "dialogue",
+      "text": "条文が一行。……美しい法です。"
     },
     {
       "type": "line",
       "id": "amara.bond.node.line.018",
       "lineId": "amara.bond.line.018",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "アマラは強かった。ただし一打ごとに「今の回転の定義は」と確認が入るので、ラリー一本に三分かかった。浴衣の袖をたすき掛けにして、髪を結び直して、この人は卓球にも全力だった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "amara.bond.node.line.019",
+      "lineId": "amara.bond.line.019",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "10対10。最終ラリーの途中で、館内の消灯時間が来た。真っ暗な卓球室に、球の音だけが三回跳ねて、止まった。——引き分け。"
+    },
+    {
+      "type": "line",
+      "id": "amara.bond.node.line.020",
+      "lineId": "amara.bond.line.020",
+      "speakerId": "legacy.speaker.14shtqw",
+      "speakerName": "アマラ",
+      "mode": "dialogue",
+      "text": "……判決が、出せません。私の世界には、勝ちと負けの項目しか、ないので。"
+    },
+    {
+      "type": "line",
+      "id": "amara.bond.node.line.021",
+      "lineId": "amara.bond.line.021",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -216,8 +243,8 @@
     },
     {
       "type": "line",
-      "id": "amara.bond.node.line.019",
-      "lineId": "amara.bond.line.019",
+      "id": "amara.bond.node.line.022",
+      "lineId": "amara.bond.line.022",
       "speakerId": "legacy.speaker.14shtqw",
       "speakerName": "アマラ",
       "mode": "dialogue",
@@ -225,20 +252,11 @@
     },
     {
       "type": "line",
-      "id": "amara.bond.node.line.020",
-      "lineId": "amara.bond.line.020",
+      "id": "amara.bond.node.line.023",
+      "lineId": "amara.bond.line.023",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "両者勝訴。世界を裁ける人が、あいこ一つに三十秒かけて、新しい判決を発明した。窓の外は、雨が上がりかけていた。",
-      "emotion": "revelation"
-    },
-    {
-      "type": "line",
-      "id": "amara.bond.node.line.021",
-      "lineId": "amara.bond.line.021",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "箸袋の異議申立て(第三号)が増えていた。「本日の休憩は、規定より三分長かった。——延長を、提案する」。私は読まなかったふりをして、お茶を淹れ直した。",
+      "text": "暗闇で、月明かりだけがアマラの横顔を照らしていた。世界を裁ける人が、あいこ一つに三十秒かけて、新しい判決を発明した瞬間だった。縁側の卓には箸袋の第三号。「本日の温泉に、異議なし。——次回期日の継続を求める」。次も二人で、という意味に読めたのは、湯あたりのせいにしておく。",
       "emotion": "tender"
     },
     {
@@ -247,11 +265,11 @@
       "choices": [
         {
           "id": "amara.bond.choice.001",
-          "label": "「両者勝訴」の練習に、もう一勝負つきあう",
-          "result": "「両者勝訴」を三回続けたところで、アマラが宣言した。「この勝負形式を、正式に採用します」。以後、うちのチームの作戦会議は、なぜかしりとりで始まることになった。定義済みのりんごは、たぶんもう仲間だ。",
+          "label": "消灯後だけど、「両者勝訴」の練習にもう一本つきあう",
+          "result": "月明かりの卓球室で、こっそり三本。全部「両者勝訴」になった。仲居さんに見つかり、世界を裁ける人と接客のプロが、廊下に並んで正座で「ごめんなさい」をした。帰り道、アマラが小さく言った。「正座も、悪くない判決でした」。以後、うちの作戦会議は、なぜか卓球のラリーで始まる。",
           "intent": "勝敗のない時間を、この人の辞書に増やす",
           "promise": "読みにくい作戦になる代わりに、この人だけの成長を大きく進める。",
-          "memory": "「両者勝訴」を発明した雨の日を、二人とも判例として引用する。",
+          "memory": "「両者勝訴」を発明した温泉の夜を、二人とも判例として引用する。",
           "tone": "wild",
           "effects": [
             {
@@ -277,11 +295,11 @@
         },
         {
           "id": "amara.bond.choice.002",
-          "label": "そろそろ次戦の作戦会議へ切り替える",
-          "result": "作戦会議に切り替えると、アマラの背筋が三センチ伸びた。次戦の規則書はすでに赤字だらけで、「合法でも感じが悪い」抜け道には自主的にバツがついていた。有能な弁護人を、私は今日も休ませ損ねた。",
+          "label": "旅の締めに、次戦の作戦会議を軽くやる",
+          "result": "縁側で三十分だけ、次戦の話をした。アマラの背筋が三センチ伸び、規則書はすでに赤字だらけで、「合法でも感じが悪い」抜け道には自主的にバツがついていた。翌朝、宿の主人が効能書きの隣に「無罪判決文」を額装して飾っていた。チームの評判が、また変な方向に良くなった。",
           "intent": "チームの勝ち筋を先に固める",
           "promise": "本人の休憩は短くなるが、全員へ配れる成長ポイントを得る。",
-          "memory": "遊びを切り上げた分だけ、次の試合の赤字が増えたことを二人とも知っている。",
+          "memory": "温泉の夜に決めた作戦と、額装された無罪判決を二人とも覚えている。",
           "tone": "pragmatic",
           "effects": [
             {
@@ -323,7 +341,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md",
-    "authorNote": "v2改稿: しりとり法廷と「両者勝訴」の発明。遊び不得手の核心を事件で見せる。箸袋第三号。",
+    "authorNote": "v3改稿: 温泉旅行へ舞台移動。浴衣・髪下ろし・月明かりのドキドキ。初の無罪判決と「両者勝訴」誕生。箸袋第三号。",
     "legacyGeneratedIds": false
   }
 }

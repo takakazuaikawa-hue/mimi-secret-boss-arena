@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "id": "amara.crisis",
   "kind": "character",
-  "title": "利益相反、判決不能",
-  "summary": "ミミを避けていたアマラの一人法廷。被告席には、ミミの名札",
+  "title": "回収通告と、雨の判例",
+  "summary": "アルデバラン社の回収期限。雨の中へ消えようとするアマラの手を、初めてつかむ",
   "ownership": {
     "arcId": "character.amara",
     "characterId": "amara",
@@ -40,7 +40,7 @@
         "id": "amara.crisis.asset.still.001",
         "kind": "still",
         "path": "/assets/story/events/amara-crisis.png",
-        "alt": "最後の準備のイベント一枚絵"
+        "alt": "公開法廷に立つアマラとミミの一枚絵"
       }
     ]
   },
@@ -51,7 +51,7 @@
       "lineId": "amara.crisis.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "アマラに避けられて、六日目。廊下で見かけて手を振ったら、業務用の会釈だけが返ってきた。開廷すらされない。それが一番おかしい。"
+      "text": "アマラに避けられて、六日目。廊下で手を振ったら、業務用の会釈だけが返ってきた。開廷すら、されない。それが一番おかしい。"
     },
     {
       "type": "line",
@@ -59,7 +59,7 @@
       "lineId": "amara.crisis.line.002",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "七日目。アルデバラン社から書類が届いた。「契約確認書——選手アマラの扱いについて、所有者の決定を求める」。決定欄は空白のまま、私を見上げていた。",
+      "text": "七日目。アルデバラン社から書類が届いた。「契約確認書——選手アマラの本社回収について。期限、次の公式戦まで」。回収。人を、荷物みたいに。決定欄は空白のまま、私を見上げていた。",
       "emotion": "tension"
     },
     {
@@ -68,7 +68,7 @@
       "lineId": "amara.crisis.line.003",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "契約保管庫の扉の前で、中から声がした。アマラの声で、アマラじゃないみたいな声。"
+      "text": "契約保管庫の扉の中から、声がした。アマラの声で、アマラじゃないみたいな声。"
     },
     {
       "type": "line",
@@ -85,7 +85,7 @@
       "lineId": "amara.crisis.line.005",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "扉の隙間からのぞくと、一人の法廷だった。原告席にアマラの契約書。被告席に——私の名札。彼女は百枚目くらいの下書きを丸めて、椅子に深く沈んだ。",
+      "text": "扉の隙間からのぞくと、一人の法廷だった。原告席にアマラの契約書。被告席に——私の名札。床には丸めた下書きが、雪みたいに積もっていた。",
       "emotion": "tension"
     },
     {
@@ -136,10 +136,73 @@
       "type": "line",
       "id": "amara.crisis.node.line.009",
       "lineId": "amara.crisis.line.009",
+      "speakerId": "legacy.speaker.14shtqw",
+      "speakerName": "アマラ",
+      "mode": "dialogue",
+      "text": "……アルデバラン社が、私の回収期限を切りました。私は、会社を訴えます。だが、あなたが所有者である限り、私の訴えはあなたへの訴えになる。利益相反です。"
+    },
+    {
+      "type": "line",
+      "id": "amara.crisis.node.line.010",
+      "lineId": "amara.crisis.line.010",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "それで一週間、私を訴える練習を？"
+    },
+    {
+      "type": "line",
+      "id": "amara.crisis.node.line.011",
+      "lineId": "amara.crisis.line.011",
+      "speakerId": "legacy.speaker.14shtqw",
+      "speakerName": "アマラ",
+      "mode": "dialogue",
+      "text": "傷つけない言い方を、検討していました。現在、百二件目です。"
+    },
+    {
+      "type": "line",
+      "id": "amara.crisis.node.line.012",
+      "lineId": "amara.crisis.line.012",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "我ながら意味不明の入廷だった。でも六日ぶりに、アマラがちゃんと私を見た。",
+      "text": "百二件。怒ればいいのか笑えばいいのか分からない。この人は真面目を、いちばん不器用な使い方で使う。",
       "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "amara.crisis.node.line.013",
+      "lineId": "amara.crisis.line.013",
+      "speakerId": "legacy.speaker.14shtqw",
+      "speakerName": "アマラ",
+      "mode": "dialogue",
+      "text": "結論は、出ています。回収される前に、私は契約ごと、あなたの前から消えるのが正しい。"
+    },
+    {
+      "type": "line",
+      "id": "amara.crisis.node.line.014",
+      "lineId": "amara.crisis.line.014",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "アマラは規則集を置いて、扉へ歩き出した。外は、土砂降りだった。傘もささずに、雨の中へ。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "amara.crisis.node.line.015",
+      "lineId": "amara.crisis.line.015",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "待ちなさい！！"
+    },
+    {
+      "type": "line",
+      "id": "amara.crisis.node.line.016",
+      "lineId": "amara.crisis.line.016",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "気づいたら、走っていた。雨の中庭で追いついて、白い手袋を——つかんだ。初めて、私から触れた。雨に濡れた手袋越しでも、体温は分かった。",
+      "emotion": "tension"
     },
     {
       "type": "direction",
@@ -159,75 +222,12 @@
     },
     {
       "type": "line",
-      "id": "amara.crisis.node.line.010",
-      "lineId": "amara.crisis.line.010",
-      "speakerId": "legacy.speaker.14shtqw",
-      "speakerName": "アマラ",
-      "mode": "dialogue",
-      "text": "……アルデバラン社を訴えます。私の契約は、正しくない。ただし、あなたが所有者である限り、私の訴えはあなたへの訴えになる。利益相反です。"
-    },
-    {
-      "type": "line",
-      "id": "amara.crisis.node.line.011",
-      "lineId": "amara.crisis.line.011",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "それで一週間、私を訴える練習を？"
-    },
-    {
-      "type": "line",
-      "id": "amara.crisis.node.line.012",
-      "lineId": "amara.crisis.line.012",
-      "speakerId": "legacy.speaker.14shtqw",
-      "speakerName": "アマラ",
-      "mode": "dialogue",
-      "text": "傷つけない言い方を、検討していました。現在、百二件目です。"
-    },
-    {
-      "type": "line",
-      "id": "amara.crisis.node.line.013",
-      "lineId": "amara.crisis.line.013",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "百二件。怒ればいいのか笑えばいいのか分からない。この人は真面目を、真面目のいちばん不器用な使い方で使う。",
-      "emotion": "tension"
-    },
-    {
-      "type": "line",
-      "id": "amara.crisis.node.line.014",
-      "lineId": "amara.crisis.line.014",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "私、一人で何役やらされてるんでしょう。担当者で、被告で、たぶん証人で。"
-    },
-    {
-      "type": "line",
-      "id": "amara.crisis.node.line.015",
-      "lineId": "amara.crisis.line.015",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "……じゃあ、所有者をやめたら？"
-    },
-    {
-      "type": "line",
-      "id": "amara.crisis.node.line.016",
-      "lineId": "amara.crisis.line.016",
-      "speakerId": "legacy.speaker.14shtqw",
-      "speakerName": "アマラ",
-      "mode": "dialogue",
-      "text": "それでは、あなたを守る判決が出せない。……守るためには、離れるのが正しい。"
-    },
-    {
-      "type": "line",
       "id": "amara.crisis.node.line.017",
       "lineId": "amara.crisis.line.017",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "判決が出せない——二度目だ。でも今日は、あいこの時のようには笑えない。",
-      "emotion": "revelation"
+      "speakerId": "legacy.speaker.14shtqw",
+      "speakerName": "アマラ",
+      "mode": "dialogue",
+      "text": "……離してください。判決は、出ました。"
     },
     {
       "type": "line",
@@ -236,7 +236,7 @@
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "守るために黙って離れるのは、残された側から選ぶ権利を取り上げるってことです。それ、あなたがいちばん嫌いな規則と、同じ形してますよ。"
+      "text": "その判決、合議制違反です。本気の判断は、一人で決めない。——あなたが記録した法ですよ。"
     },
     {
       "type": "line",
@@ -244,7 +244,7 @@
       "lineId": "amara.crisis.line.019",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "アマラの表情が、初めて崩れた。裁定者の顔の下から、間違えるのが怖いだけの人の顔が見えた。"
+      "text": "アマラの目が、揺れた。雨が、二人の間で音を立てていた。"
     },
     {
       "type": "line",
@@ -253,7 +253,7 @@
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "判例を出します。「両者勝訴」。私も降りない、あなたも降りない道を探す。——審理継続、です。"
+      "text": "判例もあります。「両者勝訴」。私も降りない、あなたも降りない道を探す。——審理継続、です。"
     },
     {
       "type": "line",
@@ -262,7 +262,7 @@
       "speakerId": "legacy.speaker.14shtqw",
       "speakerName": "アマラ",
       "mode": "dialogue",
-      "text": "……被告からの提案を、受理します。前例は、あります。雨の日の、この法廷に。"
+      "text": "……被告からの提案を、受理します。前例は……あります。温泉の、卓球台に。"
     },
     {
       "type": "line",
@@ -270,7 +270,7 @@
       "lineId": "amara.crisis.line.022",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "帰り道、箸袋が一枚増えた。第五号。「本件、判決不能。よって審理を継続する。——傍聴人の、同席を求める」。別れ話みたいに静かな夜だったのに、施設の警報だけは最終災害手順へ移行していたらしい。明日、始末書だ。",
+      "text": "裁定者の顔が、初めて崩れた。間違えるのが怖いだけの人が、雨の中で、私の手をつかみ返していた。その夜の箸袋、第五号。「本件、判決不能。よって審理を継続する。——傍聴人の、同席を求める」。ずぶ濡れ二人分の始末書は、明日書く。",
       "emotion": "tender"
     },
     {
@@ -279,11 +279,11 @@
       "choices": [
         {
           "id": "amara.crisis.choice.001",
-          "label": "選手契約そのものを公開法廷へ持ち込む",
-          "result": "公開法廷には観客まで証人として残った。アマラは勝敗より先に契約の矛盾を認めさせ、次戦へ使える判例を一つ作った。閉廷の宣言は初めての合議制——彼女が読み上げ、私がうなずいてから、木槌が鳴った。",
+          "label": "回収通告ごと、選手契約を公開法廷へ持ち込む",
+          "result": "次の興行日、アリーナ中央に星の法廷が降りた。観客まで証人として残り、アマラは勝敗より先に回収通告の矛盾を認めさせ、期限を「無効」にする判例を一つ作った。閉廷は初めての合議制——彼女が判決文を読み、私がうなずいてから、木槌が鳴った。",
           "intent": "この人だけの突破法へ賭ける",
           "promise": "予測しにくい方法を試し、この人専用の成長を大きく進める。",
-          "memory": "危機で選んだ公開法廷は、契約を解く場面でも二人の共通の判例として戻る。",
+          "memory": "満員のアリーナに降りた星の法廷を、二人とも一番の判例として覚えている。",
           "tone": "wild",
           "effects": [
             {
@@ -309,8 +309,8 @@
         },
         {
           "id": "amara.crisis.choice.002",
-          "label": "大会規定の矛盾だけを先に監査する",
-          "result": "大会規定だけへ対象を絞ると、相手の違反技が三つ止まった。世界は変わらなくても、次の試合を公平にする手順は全員へ残った。アマラは監査報告書の最後へ「審理は継続中」と書き添えた。私宛ての一行だった。",
+          "label": "大会規定の矛盾から、回収期限の根拠を崩す",
+          "result": "回収通告の根拠条文を一つずつ監査すると、期限そのものが大会規定と矛盾していた。相手の違反技も三つ止まり、次の試合を公平にする手順が全員へ残った。アマラは監査報告書の最後へ「審理は継続中」と書き添えた。私宛ての、一行だった。",
           "intent": "全員が使える安全な突破法を作る",
           "promise": "本人だけの切り札は抑え、チーム全体へ使える成長を持ち帰る。",
           "memory": "全員で組み直した手順は、契約を解く場面でも選んだ責任として戻る。",
@@ -360,7 +360,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md",
-    "authorNote": "v2改稿: 一人法廷と利益相反。誤った信念の破裂。「両者勝訴」判例のコールバック。箸袋第五号。",
+    "authorNote": "v3改稿: 回収期限で物語を大きく動かす。雨の中の追走と、ミミから初めて触れる手。「両者勝訴」「合議制」の二重コールバック。箸袋第五号。",
     "legacyGeneratedIds": false
   }
 }
