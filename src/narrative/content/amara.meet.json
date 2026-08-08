@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "id": "amara.meet",
   "kind": "character",
-  "title": "最初の遭遇",
-  "summary": "従業員相談室で起きる「最初の遭遇」",
+  "title": "第一回公判、被告・休憩規定",
+  "summary": "名札の再発行に行った従業員相談室が、宇宙規模の法廷になっていた",
   "ownership": {
     "arcId": "character.amara",
     "characterId": "amara",
@@ -49,7 +49,7 @@
       "lineId": "amara.meet.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "今週の用事で従業員相談室へ立ち寄った。予定どおりなら、目の前の用事を済ませて帰るだけのはずだった。"
+      "text": "名札の再発行申請。記入時間、推定九十秒。今週いちばん簡単な用事のはずだった。従業員相談室の扉を開けるまでは。"
     },
     {
       "type": "line",
@@ -57,24 +57,16 @@
       "lineId": "amara.meet.line.002",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "その日、最初に目へ入ったのは白い手袋、冷めかけた紅茶、余白まで赤字の規則集だった。人より先に、その人の孤独だけが場所を取っていた。"
+      "text": "長机が三つ、法壇の形に積み上がっている。窓際の観葉植物には「傍聴席」の札。私の申請書を受け取るはずの窓口は、「被告席」になっていた。"
     },
     {
       "type": "line",
       "id": "amara.meet.node.line.003",
       "lineId": "amara.meet.line.003",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "白い手袋の指先が、休憩規定の一行をなぞるたび、紙の文字が小さく身を縮めているように見えた。"
-    },
-    {
-      "type": "line",
-      "id": "amara.meet.node.line.004",
-      "lineId": "amara.meet.line.004",
       "speakerId": "legacy.speaker.14shtqw",
       "speakerName": "アマラ",
       "mode": "dialogue",
-      "text": "この休憩規定は、休ませないために書かれています。"
+      "text": "開廷します。本日の被告、従業員休憩規定・第八条。"
     },
     {
       "type": "direction",
@@ -86,21 +78,66 @@
       }
     },
     {
+      "type": "line",
+      "id": "amara.meet.node.line.004",
+      "lineId": "amara.meet.line.004",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "あの、名札の再発行をお願いしに来たんですけど。"
+    },
+    {
+      "type": "line",
+      "id": "amara.meet.node.line.005",
+      "lineId": "amara.meet.line.005",
+      "speakerId": "legacy.speaker.14shtqw",
+      "speakerName": "アマラ",
+      "mode": "dialogue",
+      "text": "静粛に。……いえ、訂正します。あなたは今、証人席に立っています。"
+    },
+    {
+      "type": "line",
+      "id": "amara.meet.node.line.006",
+      "lineId": "amara.meet.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "見ると、私の足元に白いチョークで丁寧に「証人席」と書いてあった。入口が証人席を兼ねる法廷を、私は初めて見た。九十秒で帰る予定は、開廷と同時に却下された。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "amara.meet.node.line.007",
+      "lineId": "amara.meet.line.007",
+      "speakerId": "legacy.speaker.14shtqw",
+      "speakerName": "アマラ",
+      "mode": "dialogue",
+      "text": "証人ミミ。あなたは先週の火曜、休憩十五分のうち十一分を、泣いているお客様の付き添いに使った。相違ありませんか。"
+    },
+    {
+      "type": "line",
+      "id": "amara.meet.node.line.008",
+      "lineId": "amara.meet.line.008",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "な、なんで知って……相違ないです。"
+    },
+    {
+      "type": "line",
+      "id": "amara.meet.node.line.009",
+      "lineId": "amara.meet.line.009",
+      "speakerId": "legacy.speaker.14shtqw",
+      "speakerName": "アマラ",
+      "mode": "dialogue",
+      "text": "規定第八条は、その十一分の返還を定めていない。つまりこの休憩規定は、休ませないために書かれています。"
+    },
+    {
       "type": "direction",
       "id": "amara.meet.node.direction.002",
       "command": {
         "type": "effect",
         "effectId": "flash"
       }
-    },
-    {
-      "type": "line",
-      "id": "amara.meet.node.line.005",
-      "lineId": "amara.meet.line.005",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "ここへ来た理由は、ごく普通の用事だった。けれどアマラを見た瞬間、兎耳だけが先に危険を知らせる。私はとっさに、正しい規則さえ示せば納得する人なのだと思いかけた。",
-      "emotion": "comic"
     },
     {
       "type": "direction",
@@ -120,82 +157,48 @@
     },
     {
       "type": "line",
-      "id": "amara.meet.node.line.006",
-      "lineId": "amara.meet.line.006",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "声をかけるべきか迷っている間に、視線だけが一度重なる。胸が跳ねたのは見た目のせいではない。見つけてはいけない何かを、向こうも隠さなかったからだ。",
-      "emotion": "tension"
-    },
-    {
-      "type": "line",
-      "id": "amara.meet.node.line.007",
-      "lineId": "amara.meet.line.007",
-      "speakerId": "legacy.speaker.14shtqw",
-      "speakerName": "アマラ",
-      "mode": "dialogue",
-      "text": "この規則は労働者を守るためにあると言いながら、守られなかった者へ罰を与えている。被告席へ。"
-    },
-    {
-      "type": "line",
-      "id": "amara.meet.node.line.008",
-      "lineId": "amara.meet.line.008",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "いきなり監査の人が来た。"
-    },
-    {
-      "type": "line",
-      "id": "amara.meet.node.line.009",
-      "lineId": "amara.meet.line.009",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "アマラは、どんな相手にも判決と根拠を崩さない裁定者に見えた。だから私は、普通のお客様へするのと同じ声で話しかけることにした。"
-    },
-    {
-      "type": "line",
       "id": "amara.meet.node.line.010",
       "lineId": "amara.meet.line.010",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "誰がですか。店長？　会社？"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "白い手袋が規則集の余白を指す。赤字がびっしり。全部、誰かの取り戻せなかった数分の記録だった。怖い人だ、と思った。思ったのに、先に出たのは接客の言葉だった。",
+      "emotion": "tension"
     },
     {
       "type": "line",
       "id": "amara.meet.node.line.011",
       "lineId": "amara.meet.line.011",
-      "speakerId": "legacy.speaker.14shtqw",
-      "speakerName": "アマラ",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "監査ではありません。判決前の確認です。"
+      "text": "……お茶、淹れ直しましょうか。それ、完全に冷めてますよね。"
     },
     {
       "type": "line",
       "id": "amara.meet.node.line.012",
       "lineId": "amara.meet.line.012",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "たった一言の返事を待つ時間が、試合開始前より長い。背後ではいつもの業務放送が流れ、この場所だけが別の物語の入口みたいに静かだった。"
+      "speakerId": "legacy.speaker.14shtqw",
+      "speakerName": "アマラ",
+      "mode": "dialogue",
+      "text": "今は審理中——"
     },
     {
       "type": "line",
       "id": "amara.meet.node.line.013",
       "lineId": "amara.meet.line.013",
-      "speakerId": "legacy.speaker.14shtqw",
-      "speakerName": "アマラ",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "規則そのものだ。作った者が隠れても、文章はここに残っている。"
+      "text": "証人からの差し入れです。却下、できます？"
     },
     {
       "type": "line",
       "id": "amara.meet.node.line.014",
       "lineId": "amara.meet.line.014",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "彼女が異議を唱えると、重力や昨日の判決まで被告席へ呼び出される。それでも本人が気にしたのは、私が一歩引いたことの方だった。",
-      "emotion": "comic"
+      "speakerId": "legacy.speaker.14shtqw",
+      "speakerName": "アマラ",
+      "mode": "dialogue",
+      "text": "…………記録に残します。「審理は三分間、良い香りのために中断された」と。"
     },
     {
       "type": "line",
@@ -203,25 +206,26 @@
       "lineId": "amara.meet.line.015",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "まだ事情はほとんど分からない。ただ、最初の考えだけでは説明できない表情を見てしまった。私は曲がった名札を直し、次に会う口実をひとつ残した。",
-      "emotion": "tender"
+      "text": "判決文みたいな言い方で、湯気を三分待つ人だった。マグを持つ手袋の指が、規則集からほんの少し離れる。それで気づいた。この法廷、裁判長も検事も書記も、全部この人が一人でやっている。",
+      "emotion": "comic"
     },
     {
       "type": "line",
       "id": "amara.meet.node.line.016",
       "lineId": "amara.meet.line.016",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "怖くないと言えば嘘になる。でも、怖さの奥に正しさを守るために、目の前の一人の痛みを証拠へ変えてしまうことがある気がして、目をそらす方が失礼に思えた。",
-      "emotion": "revelation"
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "……弁護人は、いないんですか。"
     },
     {
       "type": "line",
       "id": "amara.meet.node.line.017",
       "lineId": "amara.meet.line.017",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "事情はまだ分からない。でも、ここで立ち去れば、たぶん後悔する。"
+      "speakerId": "legacy.speaker.14shtqw",
+      "speakerName": "アマラ",
+      "mode": "dialogue",
+      "text": "この闘技場に、規則へ負けた側に立つ者はいません。私を含めて。"
     },
     {
       "type": "line",
@@ -229,8 +233,8 @@
       "lineId": "amara.meet.line.018",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "名前を聞いただけ。約束も、契約も、まだ何もない。それなのに別れ際、次に会った時の言葉を考えている自分がいた。",
-      "emotion": "tender"
+      "text": "「私を含めて」。その五文字だけ、判決の声じゃなかった。",
+      "emotion": "revelation"
     },
     {
       "type": "line",
@@ -238,7 +242,8 @@
       "lineId": "amara.meet.line.019",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "その場に残った箸袋の裏へ書かれた最初の異議申立てを見て、私は今日の出来事を勤務報告の一行だけでは終わらせられないと知った。"
+      "text": "事情はまだ何も知らない。でも、ここで「お大事に」と帰ったら、たぶん今夜の私が今日の私を開廷する。",
+      "emotion": "tender"
     },
     {
       "type": "choice",
@@ -246,11 +251,11 @@
       "choices": [
         {
           "id": "amara.meet.choice.001",
-          "label": "休憩規定への異議を聞く",
-          "result": "相談は始まった。途中から闘技場そのものが被告になった。",
-          "intent": "登録の前に、目の前の相手を知る",
-          "promise": "目先の報酬は得ない代わりに、相手が何を望んでいるかを確かめる。",
-          "memory": "手続きより先に話を聞いたことを、相手は最初の印象として覚えている。",
+          "label": "この裁判、傍聴していく",
+          "result": "私は傍聴席(観葉植物の隣)へ着席した。論告は三時間に及び、途中から闘技場そのものが被告に追加され、閉廷は業務放送の蛍の光に強制された。帰り際、アマラは初めて「また来ますか」と聞いた。判決ではなく、質問だった。扉の下から箸袋が一枚滑ってくる。裏に几帳面な字で「異議申立て(第一号)——本日の証人は、審理を三分余計に楽しくした」。",
+          "intent": "用事より先に、目の前の裁判の行方を見届ける",
+          "promise": "目先の報酬は得ない代わりに、この人が何と戦っているかを知る。",
+          "memory": "初対面で最後まで傍聴した唯一の相手として、アマラは私を覚えている。",
           "tone": "tender",
           "effects": [
             {
@@ -262,17 +267,22 @@
               "mode": "add",
               "trust": 7,
               "ownership": -2
+            },
+            {
+              "type": "setFlag",
+              "flagId": "amara.court.observer",
+              "value": true
             }
           ],
           "goto": "amara.meet.node.effect.001"
         },
         {
           "id": "amara.meet.choice.002",
-          "label": "今日はアマラを誘わず、用事へ戻る",
-          "result": "アマラの名前と出会った場所だけを覚え、今日は普段の仕事へ戻った。急いで所属を決めなかったことが、次に会う時の距離として残った。",
-          "intent": "今は勧誘せず、相手との距離を保つ",
+          "label": "名札の再発行だけ頼んで帰る",
+          "result": "申請書は「証拠物件ホ」として受理された。名札は三日後、「本法廷は、あなたの名前が正しく表示される権利を認める」という判決文つきで届いた。同封の箸袋の裏に、几帳面な字で「異議申立て(第一号)——本日の証人は、審理を三分余計に楽しくした」。判決文の隅には、とても小さな手書きの「またどうぞ」。",
+          "intent": "今日は仕事へ戻り、距離を保つ",
           "promise": "所属選手にはならないが、後の出来事で再会できる。",
-          "memory": "最初の出会いで急いで仲間にしなかったことが、次の再会へ残る。",
+          "memory": "急いで仲間にしなかった距離感を、アマラは礼儀として覚えている。",
           "tone": "pragmatic",
           "effects": [],
           "goto": "amara.meet.node.effect.001"
@@ -302,9 +312,9 @@
     }
   ],
   "debug": {
-    "status": "approved",
-    "sourceDocument": "native narrative block migration",
-    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "status": "review",
+    "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md",
+    "authorNote": "v2改稿: 事件型コメディ(法廷占拠×名札再発行)。会話比率58%。箸袋モチーフ第一号。",
     "legacyGeneratedIds": false
   }
 }

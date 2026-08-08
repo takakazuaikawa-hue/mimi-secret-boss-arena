@@ -42,6 +42,14 @@ export const flagDefinitions: FlagDefinition[] = [
     owner: "arena",
     legacyAliases: ["rank:highest"],
   },
+  {
+    id: flagIdSchema.parse("amara.court.observer"),
+    scope: "run",
+    type: "boolean",
+    defaultValue: false,
+    description: "アマラとの遭遇で、第一回公判を最後まで傍聴した",
+    owner: "character.amara",
+  },
 ];
 
 export const flagDefinitionById = new Map(

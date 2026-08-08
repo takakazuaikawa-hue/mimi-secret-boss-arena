@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "id": "amara.bond",
   "kind": "character",
-  "title": "チームの日常",
-  "summary": "噴水広場で起きる「チームの日常」",
+  "title": "雨天休廷、しりとり法制定",
+  "summary": "雨の午後、アマラが「休憩の正しい過ごし方」を開廷してしまう",
   "ownership": {
     "arcId": "character.amara",
     "characterId": "amara",
@@ -11,7 +11,8 @@
   },
   "trigger": {
     "actions": [
-      "play"
+      "work",
+      "rest"
     ],
     "when": {
       "all": [],
@@ -25,13 +26,13 @@
     "weight": 1
   },
   "presentation": {
-    "location": "噴水広場",
+    "location": "カフェの窓際",
     "assets": [
       {
         "id": "amara.bond.asset.background.001",
         "kind": "background",
         "path": "/assets/story/bg-casino-cafe-rain.png",
-        "alt": "噴水広場の背景"
+        "alt": "雨のカジノカフェの背景"
       }
     ]
   },
@@ -42,7 +43,7 @@
       "lineId": "amara.bond.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "アマラがチームに加わってから、噴水広場で顔を合わせることが増えた。今日は試合の話ではなく、少しだけ時間が空いている。"
+      "text": "雨の午後。試合はなし。お客もまばら。カフェの窓際で、私は三十分の休憩を勝ち取った。今日こそ、ただのお茶の時間にする。"
     },
     {
       "type": "line",
@@ -50,25 +51,44 @@
       "lineId": "amara.bond.line.002",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "試合のない午後。窓を雨が細く叩き、業務連絡も歓声も今日は遠い。二人きりになる予定ではなかったのに、空いている席は向かいだけだった。",
-      "emotion": "tender"
+      "text": "向かいの席では、アマラが箸袋に異議を書いていた。「環境に配慮」の根拠資料がないらしい。被告が地球規模になってきた。",
+      "emotion": "comic"
     },
     {
       "type": "line",
       "id": "amara.bond.node.line.003",
       "lineId": "amara.bond.line.003",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "昼休みの食堂で、彼女は箸袋の注意書きに異議を書いていた。『環境に配慮』の根拠資料がないらしい。"
+      "speakerId": "legacy.speaker.14shtqw",
+      "speakerName": "アマラ",
+      "mode": "dialogue",
+      "text": "議題を追加します。「休憩の正しい過ごし方」について。"
     },
     {
       "type": "line",
       "id": "amara.bond.node.line.004",
       "lineId": "amara.bond.line.004",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "休憩を議題にしたら、それはもう休憩じゃないです。"
+    },
+    {
+      "type": "line",
+      "id": "amara.bond.node.line.005",
+      "lineId": "amara.bond.line.005",
       "speakerId": "legacy.speaker.14shtqw",
       "speakerName": "アマラ",
       "mode": "dialogue",
-      "text": "噴水の縁へ座る行為は禁止されていません。"
+      "text": "では、正しい休憩の判例を示してください。"
+    },
+    {
+      "type": "line",
+      "id": "amara.bond.node.line.006",
+      "lineId": "amara.bond.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "判例。休憩の判例って何。接客歴半年にして、私は休み方の証拠を求められた初めてのバニーになった。",
+      "emotion": "comic"
     },
     {
       "type": "direction",
@@ -89,47 +109,30 @@
     },
     {
       "type": "line",
-      "id": "amara.bond.node.line.005",
-      "lineId": "amara.bond.line.005",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "試合も契約もない時間なら、もっと気楽に話せると思っていた。実際は、お茶を一口飲むたび沈黙の意味を考えてしまう。強さを見ている時より、アマラの小さな癖のほうがずっと気になった。",
-      "emotion": "comic"
-    },
-    {
-      "type": "line",
-      "id": "amara.bond.node.line.006",
-      "lineId": "amara.bond.line.006",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "白い手袋、冷めかけた紅茶、余白まで赤字の規則集。戦場では見落としていた小さな癖が、何も起きない時間ほどよく見える。"
-    },
-    {
-      "type": "line",
       "id": "amara.bond.node.line.007",
       "lineId": "amara.bond.line.007",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "食べ終わってからでもいいんじゃないですか。麺が伸びますよ。"
+      "text": "……しりとり、やります？"
     },
     {
       "type": "line",
       "id": "amara.bond.node.line.008",
       "lineId": "amara.bond.line.008",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
+      "speakerId": "legacy.speaker.14shtqw",
+      "speakerName": "アマラ",
       "mode": "dialogue",
-      "text": "座りたいなら座ればいいのに。"
+      "text": "規則の条文を要求します。"
     },
     {
       "type": "line",
       "id": "amara.bond.node.line.009",
       "lineId": "amara.bond.line.009",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "アマラはどんな相手にも判決と根拠を崩さない裁定者。そのはずなのに、私の休憩が終わる時刻を気にして、話題を一つずつ短くしている。",
-      "emotion": "revelation"
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "ないです。「ん」で終わったら負け。以上です。"
     },
     {
       "type": "line",
@@ -138,32 +141,34 @@
       "speakerId": "legacy.speaker.14shtqw",
       "speakerName": "アマラ",
       "mode": "dialogue",
-      "text": "不当な表示を見ながら食事をすると、味覚まで同意したことになる。"
+      "text": "条文が一行。……美しい法です。"
     },
     {
       "type": "line",
       "id": "amara.bond.node.line.011",
       "lineId": "amara.bond.line.011",
-      "speakerId": "legacy.speaker.14shtqw",
-      "speakerName": "アマラ",
-      "mode": "dialogue",
-      "text": "……そうします。規則がないので。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "始まってみると、アマラは強かった。ただし一手ごとに「今の単語の定義は」と確認が入るので、一周に十分かかった。",
+      "emotion": "comic"
     },
     {
       "type": "line",
       "id": "amara.bond.node.line.012",
       "lineId": "amara.bond.line.012",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "特別な話をしなくても、同じ音を聞いていられる。そんな時間が欲しかったのだと、失う前から気づいてしまった。"
+      "speakerId": "legacy.speaker.14shtqw",
+      "speakerName": "アマラ",
+      "mode": "dialogue",
+      "text": "「りんご」。——品種の特定を求めます。"
     },
     {
       "type": "line",
       "id": "amara.bond.node.line.013",
       "lineId": "amara.bond.line.013",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "私がスープを一口飲む間に、彼女は異議申立書を書き終え、ようやく伸びた麺を満足そうにすすった。"
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "しりとりに品種はいらないんですよ！？"
     },
     {
       "type": "line",
@@ -171,26 +176,25 @@
       "lineId": "amara.bond.line.014",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "彼女が異議を唱えると、重力や昨日の判決まで被告席へ呼び出される。甘い空気になりかけるたび、世界の方が先に耐えられなくなる。",
-      "emotion": "comic"
+      "text": "雨音。湯気。定義済みのりんご。何も起きないはずの午後が、なんだか忙しい。悪くない忙しさだった。"
     },
     {
       "type": "line",
       "id": "amara.bond.node.line.015",
       "lineId": "amara.bond.line.015",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "彼女が探していたのは正解ではなく、結論を出せない自分の隣に残る相手だった。そう気づくと、何も起きなかった午後が急に大事な出来事へ変わった。",
-      "emotion": "tender"
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "じゃあ次はじゃんけんで——"
     },
     {
       "type": "line",
       "id": "amara.bond.node.line.016",
       "lineId": "amara.bond.line.016",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "笑いが収まったあと、裁く必要のない相談を聞き、結論を急がず同じ卓にいることという、驚くほど普通の望みが語られた。",
-      "emotion": "tender"
+      "speakerId": "legacy.speaker.14shtqw",
+      "speakerName": "アマラ",
+      "mode": "dialogue",
+      "text": "待ってください。今の勝負、引き分けです。判決が……出せません。"
     },
     {
       "type": "line",
@@ -198,24 +202,43 @@
       "lineId": "amara.bond.line.017",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "試合の外で交わした言葉のほうが、次の指示より長く残ることがある。"
+      "text": "あいこ。ただのあいこだ。でもアマラは本気で困っていた。この人の世界には、勝ちと負けの二つしか項目がないのだ。",
+      "emotion": "tension"
     },
     {
       "type": "line",
       "id": "amara.bond.node.line.018",
       "lineId": "amara.bond.line.018",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "それは私が叶えるものではない。ただ、叶うまで隣にいることならできる。そう言いかけて、言葉にする勇気だけが遅れた。",
-      "emotion": "tension"
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "引き分けは、両方勝ちってことでいいんですよ。うちのカジノでは、そうです。"
     },
     {
       "type": "line",
       "id": "amara.bond.node.line.019",
       "lineId": "amara.bond.line.019",
+      "speakerId": "legacy.speaker.14shtqw",
+      "speakerName": "アマラ",
+      "mode": "dialogue",
+      "text": "……控訴します。……いえ。記録に残します。「本日の勝負、両者勝訴」と。"
+    },
+    {
+      "type": "line",
+      "id": "amara.bond.node.line.020",
+      "lineId": "amara.bond.line.020",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "箸袋の裏へ書かれた最初の異議申立てを間に置いたまま、私たちは雨が止んでもしばらく席を立たなかった。",
+      "text": "両者勝訴。世界を裁ける人が、あいこ一つに三十秒かけて、新しい判決を発明した。窓の外は、雨が上がりかけていた。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "amara.bond.node.line.021",
+      "lineId": "amara.bond.line.021",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "箸袋の異議申立て(第三号)が増えていた。「本日の休憩は、規定より三分長かった。——延長を、提案する」。私は読まなかったふりをして、お茶を淹れ直した。",
       "emotion": "tender"
     },
     {
@@ -224,11 +247,11 @@
       "choices": [
         {
           "id": "amara.bond.choice.001",
-          "label": "敗者控室で、判定に不服だった人の話を聞く",
-          "result": "アマラは全員の言い分を同じ長さだけ聞いた。最後に私の椅子も勧められ、気づけば自分が我慢していたことまで供述していた。",
-          "intent": "相手の秘密の勝ち方を試す",
+          "label": "「両者勝訴」の練習に、もう一勝負つきあう",
+          "result": "「両者勝訴」を三回続けたところで、アマラが宣言した。「この勝負形式を、正式に採用します」。以後、うちのチームの作戦会議は、なぜかしりとりで始まることになった。定義済みのりんごは、たぶんもう仲間だ。",
+          "intent": "勝敗のない時間を、この人の辞書に増やす",
           "promise": "読みにくい作戦になる代わりに、この人だけの成長を大きく進める。",
-          "memory": "任せた一戦の手応えが、次に力を見せる理由になる。",
+          "memory": "「両者勝訴」を発明した雨の日を、二人とも判例として引用する。",
           "tone": "wild",
           "effects": [
             {
@@ -254,11 +277,11 @@
         },
         {
           "id": "amara.bond.choice.002",
-          "label": "次戦の規則から、勝てる抜け道を一つ探す",
-          "result": "抜け道は見つかったが、アマラは赤線の横へ『合法でも感じが悪い』と書いた。使うかどうかまで含めて作戦になった。",
-          "intent": "チームの新しい連携を試す",
-          "promise": "本人の流儀は崩すが、全員へ配れる成長ポイントを得る。",
-          "memory": "成功した作戦と短くなった会話の両方が、次の判断まで残る。",
+          "label": "そろそろ次戦の作戦会議へ切り替える",
+          "result": "作戦会議に切り替えると、アマラの背筋が三センチ伸びた。次戦の規則書はすでに赤字だらけで、「合法でも感じが悪い」抜け道には自主的にバツがついていた。有能な弁護人を、私は今日も休ませ損ねた。",
+          "intent": "チームの勝ち筋を先に固める",
+          "promise": "本人の休憩は短くなるが、全員へ配れる成長ポイントを得る。",
+          "memory": "遊びを切り上げた分だけ、次の試合の赤字が増えたことを二人とも知っている。",
           "tone": "pragmatic",
           "effects": [
             {
@@ -298,9 +321,9 @@
     }
   ],
   "debug": {
-    "status": "approved",
-    "sourceDocument": "native narrative block migration",
-    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "status": "review",
+    "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md",
+    "authorNote": "v2改稿: しりとり法廷と「両者勝訴」の発明。遊び不得手の核心を事件で見せる。箸袋第三号。",
     "legacyGeneratedIds": false
   }
 }

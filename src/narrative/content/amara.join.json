@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "id": "amara.join",
   "kind": "character",
-  "title": "スカウト",
-  "summary": "噴水広場で起きる「スカウト」",
+  "title": "出張法廷、参考人・ミミ",
+  "summary": "選手登録の面談のはずが、ミミの雇用契約が審理される",
   "ownership": {
     "arcId": "character.amara",
     "characterId": "amara",
@@ -43,33 +43,34 @@
       "lineId": "amara.join.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "アマラと初めて会ったあと、噴水広場でもう一度顔を合わせた。今日は、選手登録の条件を確かめることになっている。"
+      "text": "選手登録の面談、十時から、噴水広場で。書類一式と、念のための茶葉を持って行く。前回で学習はしている。"
     },
     {
       "type": "line",
       "id": "amara.join.node.line.002",
       "lineId": "amara.join.line.002",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "選手登録の面談室は狭い。机を挟めば仕事の距離を守れるはずなのに、同じ書類を覗き込むたび、沈黙だけが近くなる。",
-      "emotion": "tension"
+      "speakerId": "legacy.speaker.14shtqw",
+      "speakerName": "アマラ",
+      "mode": "dialogue",
+      "text": "時間どおりですね。着席してください。本日の議題、被告・所有者制度。参考人、ミミ。"
     },
     {
       "type": "line",
       "id": "amara.join.node.line.003",
       "lineId": "amara.join.line.003",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "選手登録の面談なのに、彼女は私の契約書を机の中央へ置いた。面接する側とされる側が、完全に逆になっている。"
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "面接するのは私の側ですよね！？"
     },
     {
       "type": "line",
       "id": "amara.join.node.line.004",
       "lineId": "amara.join.line.004",
-      "speakerId": "legacy.speaker.14shtqw",
-      "speakerName": "アマラ",
-      "mode": "dialogue",
-      "text": "内部から規則を見る必要があります。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "噴水の縁に、白いチョークで丁寧に「参考人席」。私の椅子だけ、もう用意されていた。この人の法廷は、出張する。",
+      "emotion": "comic"
     },
     {
       "type": "direction",
@@ -92,18 +93,19 @@
       "type": "line",
       "id": "amara.join.node.line.005",
       "lineId": "amara.join.line.005",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "選手登録は一枚で済むのに、アマラを知るための欄はどこにもない。正しい規則さえ示せば納得する人なのだと決めれば簡単だ。でも、その決め方こそ契約書と同じに見えた。",
-      "emotion": "comic"
+      "speakerId": "legacy.speaker.14shtqw",
+      "speakerName": "アマラ",
+      "mode": "dialogue",
+      "text": "始めます。あなたの雇用契約書、第三条。「休憩は業務の状況により短縮できる」。"
     },
     {
       "type": "line",
       "id": "amara.join.node.line.006",
       "lineId": "amara.join.line.006",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "アマラの経歴は、端末の入力欄へ収まらない。けれど本人が書けずにいるのは、過去の偉業ではなく「これから何をしたいか」の一行だった。"
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "なんで私の契約書を持ってるんですか。"
     },
     {
       "type": "line",
@@ -112,51 +114,52 @@
       "speakerId": "legacy.speaker.14shtqw",
       "speakerName": "アマラ",
       "mode": "dialogue",
-      "text": "あなたは、この所有者欄を有効だと思っている？"
+      "text": "証拠開示請求をしました。窓口のノノさんは親切ですね。"
     },
     {
       "type": "line",
       "id": "amara.join.node.line.008",
       "lineId": "amara.join.line.008",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "選手登録すると見られる範囲は増えます。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "個人情報が、いちばん正式な手続きで流出していた。近いうちにノノさんも開廷される気がする。",
+      "emotion": "comic"
     },
     {
       "type": "line",
       "id": "amara.join.node.line.009",
       "lineId": "amara.join.line.009",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "どんな相手にも判決と根拠を崩さない裁定者。その横顔が、空欄の前でだけ少し頼りなく見える。",
-      "emotion": "revelation"
+      "speakerId": "legacy.speaker.14shtqw",
+      "speakerName": "アマラ",
+      "mode": "dialogue",
+      "text": "第三条、赤字。第七条、赤字。兎耳手当、不存在。……この契約は、あなたを守っていない。"
     },
     {
       "type": "line",
       "id": "amara.join.node.line.010",
       "lineId": "amara.join.line.010",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "思っていません。でも無効にする方法が分からないから、今ここにいます。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "赤ペンが止まらない。私の契約書が、みるみる誰かの採点済み答案みたいになっていく。……この人、怒ってくれているのだ。遅れて気づいて、参考人席が少しだけ座り心地よくなった。",
+      "emotion": "tension"
     },
     {
       "type": "line",
       "id": "amara.join.node.line.011",
       "lineId": "amara.join.line.011",
-      "speakerId": "legacy.speaker.14shtqw",
-      "speakerName": "アマラ",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "では登録します。あなたも被告席へ来てください。"
+      "text": "それで、あの、今日は選手登録の面談で……"
     },
     {
       "type": "line",
       "id": "amara.join.node.line.012",
       "lineId": "amara.join.line.012",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "採用する側らしい言葉を探した。でも必要なのは評価ではなく、ここにいてもいい理由を一緒に作ることなのだと思った。"
+      "speakerId": "legacy.speaker.14shtqw",
+      "speakerName": "アマラ",
+      "mode": "dialogue",
+      "text": "その件です。結論から述べます。内部から規則を見る必要があります。——私を、登録してください。"
     },
     {
       "type": "line",
@@ -164,16 +167,17 @@
       "lineId": "amara.join.line.013",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "彼女は初めて書類から目を上げた。採用の返事ではなく、証言を聞く裁判官の顔だった。"
+      "text": "スカウトしに来て、志願された。面談の攻守は、開始四分で入れ替わった。",
+      "emotion": "comic"
     },
     {
       "type": "line",
       "id": "amara.join.node.line.014",
       "lineId": "amara.join.line.014",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "彼女が異議を唱えると、重力や昨日の判決まで被告席へ呼び出されるという注意事項まで契約書へ加わり、一般的な選手登録は完全に諦めることになった。",
-      "emotion": "comic"
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "じゃ、じゃあこの端末に入力を。……最後、「これから何をしたいか」の欄です。"
     },
     {
       "type": "line",
@@ -181,17 +185,16 @@
       "lineId": "amara.join.line.015",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私のペンで未来まで埋めないよう、最後の空欄を机の中央へ戻した。待つ時間は気まずい。それでも、本人の言葉で始まるほうがいい。",
-      "emotion": "resolve"
+      "text": "アマラの指が、初めて止まった。重力さえ被告席へ呼べる人が、十五文字の空欄の前で動かない。"
     },
     {
       "type": "line",
       "id": "amara.join.node.line.016",
       "lineId": "amara.join.line.016",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "最後に本人が確かめたのは報酬ではなく、裁く必要のない相談を聞き、結論を急がず同じ卓にいることが規則違反にならないかどうかだった。",
-      "emotion": "tender"
+      "speakerId": "legacy.speaker.14shtqw",
+      "speakerName": "アマラ",
+      "mode": "dialogue",
+      "text": "……過去の欄は、すべて埋まるのに。"
     },
     {
       "type": "line",
@@ -199,15 +202,17 @@
       "lineId": "amara.join.line.017",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "登録を急ぐとしても、本人を置き去りにしたまま話を進めたくはなかった。"
+      "text": "ペンを貸して私が埋めれば、面談は五分で終わる。でもそれは、彼女が私の契約書にしたことと逆向きの同じ失礼だ。私は空欄を端末ごと机の中央へ戻し、お茶を淹れた。今度は、審理が始まる前に。",
+      "emotion": "tender"
     },
     {
       "type": "line",
       "id": "amara.join.node.line.018",
       "lineId": "amara.join.line.018",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "登録完了の音が鳴る。これで仲間になった、と簡単に呼んでいいのか分からない。けれど退室する足音が、来た時より少しだけゆっくりだった。"
+      "speakerId": "legacy.speaker.14shtqw",
+      "speakerName": "アマラ",
+      "mode": "dialogue",
+      "text": "……記録に残します。「参考人は、答えを急がせなかった」と。"
     },
     {
       "type": "line",
@@ -215,8 +220,8 @@
       "lineId": "amara.join.line.019",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "箸袋の裏へ書かれた最初の異議申立てが机に残る。返そうと呼び止めると、「次に会う理由として置いておく」とだけ返ってきた。",
-      "emotion": "tender"
+      "text": "判決ではない言葉が、これで二つ目。志望動機はまだ空欄のまま。でもマグの隣に、箸袋の異議申立て(第二号)が増えていた。「本参考人の茶は、開廷前に出た。異例である」。",
+      "emotion": "revelation"
     },
     {
       "type": "choice",
@@ -224,11 +229,11 @@
       "choices": [
         {
           "id": "amara.join.choice.001",
-          "label": "選手契約の前に、休憩規定への異議申立てを受ける",
-          "result": "面談は二十分の予定だった。三時間後、闘技場そのものが被告席へ座り、アマラだけが予定どおり休憩へ入った。",
-          "intent": "本人の得意な戦い方を知る",
+          "label": "登録の前に、契約書への異議を最後まで聞く",
+          "result": "論告は二時間に及び、私の雇用契約書は付箋で三倍の厚さになった。最後の一枚にアマラは「弁護人署名」の欄を勝手に作り、自分の名前を書いた。「あなたの契約の弁護人は、私が務めます」。志望動機の欄は、まだ空欄のまま。「決まったら、法廷で述べます」とのことだった。",
+          "intent": "本人の戦い方と、怒ってくれた理由を知る",
           "promise": "登録は少し遅れるが、この人専用の成長ポイントを得る。",
-          "memory": "自分で書いた最初の条件を、相手は次の大事な場面でも覚えている。",
+          "memory": "契約の弁護人を引き受け合った面談として、アマラは今日を覚えている。",
           "tone": "tender",
           "effects": [
             {
@@ -260,10 +265,10 @@
         {
           "id": "amara.join.choice.002",
           "label": "監査権限つきの選手証を先に発行する",
-          "result": "選手証はすぐ出た。翌朝、私の机には契約担当者としての出頭通知も届いた。権限には、だいたい説明書より先に責任が来る。",
+          "result": "選手証は九十秒で出た。今週、予定どおりに終わった最初の業務だった。翌朝、私の机には出頭通知。「第二回公判、被告・所有者ミミ。ただし被告には、茶の差し入れを許可する」。権限には、だいたい説明書より先に責任が来る。",
           "intent": "次の公式戦へ間に合わせる",
           "promise": "本人の詳細は後回しになるが、誰にでも使える成長ポイントを得る。",
-          "memory": "先に席を確保した判断は、チームの始まり方として記録に残る。",
+          "memory": "先に席を確保した判断を、アマラは「審理未了のまま執行された」と記録している。",
           "tone": "pragmatic",
           "effects": [
             {
@@ -291,10 +296,10 @@
         {
           "id": "amara.join.choice.003",
           "label": "今回はアマラを誘わず、別の機会を待つ",
-          "result": "アマラの出場登録は行わなかった。相手は所属せず、それぞれの用事へ戻った。断る選択を残したことだけが、次に会う時まで静かに残った。",
+          "result": "「本日の面談は、審理未了で閉廷します」。アマラは書類を几帳面に揃えて返してくれた。私の契約書の赤字だけは、そのまま残して。「異議は、取り下げていません」。それが、再会の予約に聞こえた。",
           "intent": "今回はチームへ誘わない",
           "promise": "今回の所属は見送るが、人物の物語と再会の可能性は失わない。",
-          "memory": "勧誘しない選択も尊重されたことを、相手は覚えている。",
+          "memory": "誘わなかった日の赤字を、二人とも取り下げていない。",
           "tone": "pragmatic",
           "effects": [
             {
@@ -314,9 +319,9 @@
     }
   ],
   "debug": {
-    "status": "approved",
-    "sourceDocument": "native narrative block migration",
-    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "status": "review",
+    "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md",
+    "authorNote": "v2改稿: 逆転面接(スカウトに来て志願される)。空欄の前で止まる指=遊び不得手の種。箸袋第二号。",
     "legacyGeneratedIds": false
   }
 }

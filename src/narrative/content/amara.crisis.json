@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "id": "amara.crisis",
   "kind": "character",
-  "title": "最後の準備",
-  "summary": "契約保管庫で起きる「最後の準備」",
+  "title": "利益相反、判決不能",
+  "summary": "ミミを避けていたアマラの一人法廷。被告席には、ミミの名札",
   "ownership": {
     "arcId": "character.amara",
     "characterId": "amara",
@@ -51,7 +51,7 @@
       "lineId": "amara.crisis.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "アルデバラン社から届いた契約確認書には、アマラの扱いを決める欄が残っていた。本人の意思を聞くため、契約保管庫へ向かった。"
+      "text": "アマラに避けられて、六日目。廊下で見かけて手を振ったら、業務用の会釈だけが返ってきた。開廷すらされない。それが一番おかしい。"
     },
     {
       "type": "line",
@@ -59,7 +59,7 @@
       "lineId": "amara.crisis.line.002",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "その週、相手は私を避けた。廊下の向こうに姿を見つけても、業務用の言葉だけを残して先に曲がる。",
+      "text": "七日目。アルデバラン社から書類が届いた。「契約確認書——選手アマラの扱いについて、所有者の決定を求める」。決定欄は空白のまま、私を見上げていた。",
       "emotion": "tension"
     },
     {
@@ -68,7 +68,7 @@
       "lineId": "amara.crisis.line.003",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "利益相反確認書の当事者欄に、選手アマラ、担当者ミミ、被告アルデバラン社、そして原告にも私の名前がある。"
+      "text": "契約保管庫の扉の前で、中から声がした。アマラの声で、アマラじゃないみたいな声。"
     },
     {
       "type": "line",
@@ -77,7 +77,25 @@
       "speakerId": "legacy.speaker.14shtqw",
       "speakerName": "アマラ",
       "mode": "dialogue",
-      "text": "あなたが所有者である限り、私の訴えは利益相反になる。"
+      "text": "——以上の理由により、原告アマラは、所有者ミミを……。……違う。この言い方も、違う。"
+    },
+    {
+      "type": "line",
+      "id": "amara.crisis.node.line.005",
+      "lineId": "amara.crisis.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "扉の隙間からのぞくと、一人の法廷だった。原告席にアマラの契約書。被告席に——私の名札。彼女は百枚目くらいの下書きを丸めて、椅子に深く沈んだ。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "amara.crisis.node.line.006",
+      "lineId": "amara.crisis.line.006",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "……入って、いいですか。"
     },
     {
       "type": "direction",
@@ -98,12 +116,30 @@
     },
     {
       "type": "line",
-      "id": "amara.crisis.node.line.005",
-      "lineId": "amara.crisis.line.005",
+      "id": "amara.crisis.node.line.007",
+      "lineId": "amara.crisis.line.007",
+      "speakerId": "legacy.speaker.14shtqw",
+      "speakerName": "アマラ",
+      "mode": "dialogue",
+      "text": "！　……傍聴は、認めていません。"
+    },
+    {
+      "type": "line",
+      "id": "amara.crisis.node.line.008",
+      "lineId": "amara.crisis.line.008",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "じゃあ被告として入ります。席、あるみたいですし。"
+    },
+    {
+      "type": "line",
+      "id": "amara.crisis.node.line.009",
+      "lineId": "amara.crisis.line.009",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "アマラの返事が短い。怒っている、と決めれば私の不安には名前がつく。でも以前の私も「正しい規則さえ示せば納得する人なのだ」と決めつけた。また同じ読み違いをするところだった。",
-      "emotion": "tension"
+      "text": "我ながら意味不明の入廷だった。でも六日ぶりに、アマラがちゃんと私を見た。",
+      "emotion": "comic"
     },
     {
       "type": "direction",
@@ -123,64 +159,30 @@
     },
     {
       "type": "line",
-      "id": "amara.crisis.node.line.006",
-      "lineId": "amara.crisis.line.006",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "嫌われたのなら理由を聞けばいい。そう思うのに、箸袋の裏へ書かれた最初の異議申立てを見るたび、聞いた答えで今までの時間が変わるのが怖かった。"
-    },
-    {
-      "type": "line",
-      "id": "amara.crisis.node.line.007",
-      "lineId": "amara.crisis.line.007",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "私、一人で何役やらされてるんでしょう。"
-    },
-    {
-      "type": "line",
-      "id": "amara.crisis.node.line.008",
-      "lineId": "amara.crisis.line.008",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "じゃあ、所有者をやめたら？"
-    },
-    {
-      "type": "line",
-      "id": "amara.crisis.node.line.009",
-      "lineId": "amara.crisis.line.009",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "ようやく追いついた場所で、アマラはどんな相手にも判決と根拠を崩さない裁定者に戻っていた。近づく前の、何も期待していなかった顔だ。"
-    },
-    {
-      "type": "line",
       "id": "amara.crisis.node.line.010",
       "lineId": "amara.crisis.line.010",
       "speakerId": "legacy.speaker.14shtqw",
       "speakerName": "アマラ",
       "mode": "dialogue",
-      "text": "所有されながら所有者代理を務めている。その矛盾自体が証拠だ。"
+      "text": "……アルデバラン社を訴えます。私の契約は、正しくない。ただし、あなたが所有者である限り、私の訴えはあなたへの訴えになる。利益相反です。"
     },
     {
       "type": "line",
       "id": "amara.crisis.node.line.011",
       "lineId": "amara.crisis.line.011",
-      "speakerId": "legacy.speaker.14shtqw",
-      "speakerName": "アマラ",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "その発言を証拠として採用します。"
+      "text": "それで一週間、私を訴える練習を？"
     },
     {
       "type": "line",
       "id": "amara.crisis.node.line.012",
       "lineId": "amara.crisis.line.012",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "原因は私への不信ではない。正しさを守るために、目の前の一人の痛みを証拠へ変えてしまうことから私を遠ざけようとしている。そのやさしさを、やさしいまま受け入れてはいけない気がした。",
-      "emotion": "revelation"
+      "speakerId": "legacy.speaker.14shtqw",
+      "speakerName": "アマラ",
+      "mode": "dialogue",
+      "text": "傷つけない言い方を、検討していました。現在、百二件目です。"
     },
     {
       "type": "line",
@@ -188,34 +190,35 @@
       "lineId": "amara.crisis.line.013",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "彼女の声は静かだった。怒りを大きく見せなくても、紙の上の嘘は一行ずつ逃げ場を失っていく。"
+      "text": "百二件。怒ればいいのか笑えばいいのか分からない。この人は真面目を、真面目のいちばん不器用な使い方で使う。",
+      "emotion": "tension"
     },
     {
       "type": "line",
       "id": "amara.crisis.node.line.014",
       "lineId": "amara.crisis.line.014",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "彼女が異議を唱えると、重力や昨日の判決まで被告席へ呼び出される。別れ話のように静かな場面なのに、施設全体は最終災害手順へ移行している。",
-      "emotion": "comic"
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "私、一人で何役やらされてるんでしょう。担当者で、被告で、たぶん証人で。"
     },
     {
       "type": "line",
       "id": "amara.crisis.node.line.015",
       "lineId": "amara.crisis.line.015",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "正しい答えを当てることより、間違えたまま命令しないことを選ぶ。私は逃げ道をふさがない位置で止まり、聞きたかったことを短い言葉にした。",
-      "emotion": "resolve"
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "……じゃあ、所有者をやめたら？"
     },
     {
       "type": "line",
       "id": "amara.crisis.node.line.016",
       "lineId": "amara.crisis.line.016",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "守るために離れるのは、残された側へ選択を渡さない。命令と同じだと告げると、初めて相手の表情が崩れた。",
-      "emotion": "resolve"
+      "speakerId": "legacy.speaker.14shtqw",
+      "speakerName": "アマラ",
+      "mode": "dialogue",
+      "text": "それでは、あなたを守る判決が出せない。……守るためには、離れるのが正しい。"
     },
     {
       "type": "line",
@@ -223,15 +226,17 @@
       "lineId": "amara.crisis.line.017",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "勝つための答えと、あとで自分を嫌いにならない答えは、同じとは限らない。"
+      "text": "判決が出せない——二度目だ。でも今日は、あいこの時のようには笑えない。",
+      "emotion": "revelation"
     },
     {
       "type": "line",
       "id": "amara.crisis.node.line.018",
       "lineId": "amara.crisis.line.018",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "私は勝利を約束しない。安全も約束できない。ただ、裁く必要のない相談を聞き、結論を急がず同じ卓にいることを諦める判断だけは本人へ返すと決めた。"
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "守るために黙って離れるのは、残された側から選ぶ権利を取り上げるってことです。それ、あなたがいちばん嫌いな規則と、同じ形してますよ。"
     },
     {
       "type": "line",
@@ -239,7 +244,33 @@
       "lineId": "amara.crisis.line.019",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "並んで戻る廊下には、まだ一人分の距離がある。でも今度の沈黙は拒絶ではなく、同じ答えを考えるためのものだった。",
+      "text": "アマラの表情が、初めて崩れた。裁定者の顔の下から、間違えるのが怖いだけの人の顔が見えた。"
+    },
+    {
+      "type": "line",
+      "id": "amara.crisis.node.line.020",
+      "lineId": "amara.crisis.line.020",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "判例を出します。「両者勝訴」。私も降りない、あなたも降りない道を探す。——審理継続、です。"
+    },
+    {
+      "type": "line",
+      "id": "amara.crisis.node.line.021",
+      "lineId": "amara.crisis.line.021",
+      "speakerId": "legacy.speaker.14shtqw",
+      "speakerName": "アマラ",
+      "mode": "dialogue",
+      "text": "……被告からの提案を、受理します。前例は、あります。雨の日の、この法廷に。"
+    },
+    {
+      "type": "line",
+      "id": "amara.crisis.node.line.022",
+      "lineId": "amara.crisis.line.022",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "帰り道、箸袋が一枚増えた。第五号。「本件、判決不能。よって審理を継続する。——傍聴人の、同席を求める」。別れ話みたいに静かな夜だったのに、施設の警報だけは最終災害手順へ移行していたらしい。明日、始末書だ。",
       "emotion": "tender"
     },
     {
@@ -249,10 +280,10 @@
         {
           "id": "amara.crisis.choice.001",
           "label": "選手契約そのものを公開法廷へ持ち込む",
-          "result": "公開法廷には観客まで証人として残った。アマラは勝敗より先に契約の矛盾を認めさせ、次戦へ使える判例を一つ作った。",
+          "result": "公開法廷には観客まで証人として残った。アマラは勝敗より先に契約の矛盾を認めさせ、次戦へ使える判例を一つ作った。閉廷の宣言は初めての合議制——彼女が読み上げ、私がうなずいてから、木槌が鳴った。",
           "intent": "この人だけの突破法へ賭ける",
           "promise": "予測しにくい方法を試し、この人専用の成長を大きく進める。",
-          "memory": "危機で選んだ方法は、契約を解く場面でも二人の共通の記憶として戻る。",
+          "memory": "危機で選んだ公開法廷は、契約を解く場面でも二人の共通の判例として戻る。",
           "tone": "wild",
           "effects": [
             {
@@ -279,7 +310,7 @@
         {
           "id": "amara.crisis.choice.002",
           "label": "大会規定の矛盾だけを先に監査する",
-          "result": "大会規定だけへ対象を絞ると、相手の違反技が三つ止まった。世界は変わらなくても、次の試合を公平にする手順は全員へ残った。",
+          "result": "大会規定だけへ対象を絞ると、相手の違反技が三つ止まった。世界は変わらなくても、次の試合を公平にする手順は全員へ残った。アマラは監査報告書の最後へ「審理は継続中」と書き添えた。私宛ての一行だった。",
           "intent": "全員が使える安全な突破法を作る",
           "promise": "本人だけの切り札は抑え、チーム全体へ使える成長を持ち帰る。",
           "memory": "全員で組み直した手順は、契約を解く場面でも選んだ責任として戻る。",
@@ -327,9 +358,9 @@
     }
   ],
   "debug": {
-    "status": "approved",
-    "sourceDocument": "native narrative block migration",
-    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "status": "review",
+    "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md",
+    "authorNote": "v2改稿: 一人法廷と利益相反。誤った信念の破裂。「両者勝訴」判例のコールバック。箸袋第五号。",
     "legacyGeneratedIds": false
   }
 }
