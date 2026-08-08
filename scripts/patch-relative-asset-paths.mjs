@@ -25,12 +25,20 @@ for (const file of walk(distDir)) {
   const source = readFileSync(file, "utf8");
   let next = source;
   if (ext === ".css") {
-    next = next.replaceAll("url(/assets/", "url(../assets/");
+    next = next
+      .replaceAll("url(/assets/", "url(../assets/")
+      .replaceAll('url("/assets/', 'url("../assets/')
+      .replaceAll("url('/assets/", "url('../assets/");
   } else {
     next = next
       .replaceAll('"/assets/', '"assets/')
       .replaceAll("'/assets/", "'assets/")
-      .replaceAll("`/assets/", "`assets/");
+      .replaceAll("`/assets/", "`assets/")
+      // Zodのアセットパス検証 /^\/assets\// を相対化後の値も通す形に緩める。
+      .replaceAll(
+        String.raw`/^\/assets\//`,
+        String.raw`/^\/?assets\//`,
+      );
   }
   if (next !== source) {
     const count =
