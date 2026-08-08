@@ -90,6 +90,11 @@ const initialFighterState = (id: string): FighterRunState => ({
 export const createRun = (
   route: RunState["route"],
   seed = `${Date.now()}-${Math.random().toString(36).slice(2)}`,
+  options: {
+    // 周回をまたいだ解放済み人物。遭遇候補の後方へ回し、
+    // 未解放の人物へ先に会える周回誘導を行う(真エンディング条件の到達支援)。
+    deprioritizedEncounters?: readonly string[];
+  } = {},
 ): RunState => {
   const random = randomForCursor(seed, 0);
   const routeDefinition = getRouteDefinition(route);
@@ -97,6 +102,7 @@ export const createRun = (
   const fighters = Object.fromEntries(
     ids.map((id) => [id, initialFighterState(id)]),
   );
+  const deprioritized = new Set(options.deprioritizedEncounters ?? []);
 
   return {
     id: `run-${Date.now()}`,
@@ -113,9 +119,17 @@ export const createRun = (
     fighters,
     roster: [],
     activeTeam: [],
-    encounterDeck: random.shuffle(
-      ids.filter((id) => id !== "gidonozeaas"),
-    ),
+    encounterDeck: (() => {
+      const shuffled = random.shuffle(
+        ids.filter((id) => id !== "gidonozeaas"),
+      );
+      if (deprioritized.size === 0) return shuffled;
+      // シャッフル順を保ったまま、未解放を前へ、解放済みを後ろへ。
+      return [
+        ...shuffled.filter((id) => !deprioritized.has(id)),
+        ...shuffled.filter((id) => deprioritized.has(id)),
+      ];
+    })(),
     eventHistory: [],
     flags: [],
     liberationWindowsUsed: [],

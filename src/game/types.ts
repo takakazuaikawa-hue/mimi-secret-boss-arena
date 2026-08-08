@@ -439,7 +439,7 @@ export interface RunState {
   lastMatchSummary?: string;
   inventory: Record<string, number>;
   ended: boolean;
-  endingType?: "rebuild" | "company" | "retired";
+  endingType?: "rebuild" | "company" | "retired" | "grand";
 }
 
 export interface PlayerProfile {

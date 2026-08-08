@@ -32,6 +32,7 @@ import {
   HeartHandshake,
   Home,
   Images,
+  ScrollText,
   Info,
   LockKeyhole,
   Maximize2,
@@ -60,6 +61,11 @@ import {
 } from "lucide-react";
 import { fighterById, fighterDefinitions } from "./data/characters";
 import { characterVisuals } from "./data/characterVisuals";
+import {
+  arenaCharter,
+  grandFinaleLines,
+  unlockedCharterArticles,
+} from "./data/arenaCharter";
 import { opponentVisuals } from "./data/opponentVisuals";
 import {
   battleOpponentById,
@@ -6438,7 +6444,13 @@ function EndingScreen({ onTitle, onArchive }: { onTitle: () => void; onArchive: 
         ? routeNames.chaos
         : undefined;
   const copy =
-    run.endingType === "rebuild"
+    run.endingType === "grand"
+      ? {
+          kicker: "THE GRAND REOPENING",
+          title: "十五人の開廷日",
+          text: "再建した闘技場の柿落とし。歴代の周回で自由になった全員が、今日は自分の意思で集まった。掲示板には、みんなが一条ずつ残した条文が、一枚の紙に清書されている。物語資産管理部の席は、用意していない。",
+        }
+      : run.endingType === "rebuild"
       ? {
           kicker: "ARENA REBUILT",
           title: "闘技場は、誰かの持ち物ではなくなった",
@@ -6463,6 +6475,35 @@ function EndingScreen({ onTitle, onArchive }: { onTitle: () => void; onArchive: 
         <p className="eyebrow">{copy.kicker}</p>
         <h1>{copy.title}</h1>
         <p>{copy.text}</p>
+        {run.endingType === "grand" && (
+          <section className="grand-finale">
+            <div className="grand-finale__charter">
+              <span>ARENA CHARTER</span>
+              <h2>再建闘技場・全十六条</h2>
+              <ol>
+                {arenaCharter.map((entry) => (
+                  <li key={entry.article}>
+                    <b>第{entry.article}条</b>
+                    <span>{entry.text}</span>
+                  </li>
+                ))}
+              </ol>
+            </div>
+            <div className="grand-finale__cast">
+              <span>ROLL CALL</span>
+              <h2>開場前の点呼</h2>
+              {fighterDefinitions.map((fighter) => (
+                <article key={fighter.id}>
+                  <FighterMark id={fighter.id} />
+                  <div>
+                    <strong>{fighter.name}</strong>
+                    <p>{grandFinaleLines[fighter.id]}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+        )}
         <dl className="ending-score">
           <div>
             <dt>戦績</dt>
@@ -6628,7 +6669,7 @@ const memoryGalleryEntries: MemoryGalleryEntry[] = [
 function ArchiveScreen({ onClose }: { onClose: () => void }) {
   const profile = useGameStore((state) => state.profile);
   const run = useGameStore((state) => state.run);
-  const [tab, setTab] = useState<"hall" | "collection" | "gallery">("hall");
+  const [tab, setTab] = useState<"hall" | "collection" | "charter" | "gallery">("hall");
   const [selectedTeamId, setSelectedTeamId] = useState(
     profile.hallOfFame[0]?.id,
   );
@@ -6702,6 +6743,12 @@ function ArchiveScreen({ onClose }: { onClose: () => void }) {
           onClick={() => setTab("collection")}
         >
           <HeartHandshake size={18} /> 解放済み
+        </button>
+        <button
+          className={tab === "charter" ? "is-selected" : ""}
+          onClick={() => setTab("charter")}
+        >
+          <ScrollText size={18} /> 条文集
         </button>
         <button
           className={tab === "gallery" ? "is-selected" : ""}
@@ -6856,6 +6903,53 @@ function ArchiveScreen({ onClose }: { onClose: () => void }) {
             </section>
           )}
         </>
+      ) : tab === "charter" ? (
+        <section className="charter-list">
+          <header className="charter-list__head">
+            <p className="eyebrow">ARENA CHARTER</p>
+            <h3>再建闘技場・新条文集</h3>
+            <p>
+              自由になった人が、一条ずつ条文を残していく。
+              {(() => {
+                const unlocked = unlockedCharterArticles(
+                  profile.liberatedCollection,
+                );
+                return `現在 ${unlocked.length} / ${arenaCharter.length} 条。全条がそろった周回のクリアで、特別な柿落としが待っている。`;
+              })()}
+            </p>
+          </header>
+          <ol>
+            {arenaCharter.map((entry) => {
+              const unlocked = profile.liberatedCollection.includes(
+                entry.fighterId,
+              );
+              const fighter = fighterById.get(entry.fighterId);
+              return (
+                <li
+                  key={entry.article}
+                  className={unlocked ? "is-unlocked" : "is-locked"}
+                >
+                  <b>第{entry.article}条</b>
+                  {unlocked ? (
+                    <>
+                      <span>{entry.text}</span>
+                      <small>{fighter?.name ?? entry.fighterId}</small>
+                    </>
+                  ) : (
+                    <>
+                      <span className="charter-locked-text">
+                        ——まだ、書かれていない
+                      </span>
+                      <small>
+                        <LockKeyhole size={13} /> 解放で開示
+                      </small>
+                    </>
+                  )}
+                </li>
+              );
+            })}
+          </ol>
+        </section>
       ) : tab === "collection" ? (
         <>
           <section className="collection-grid">

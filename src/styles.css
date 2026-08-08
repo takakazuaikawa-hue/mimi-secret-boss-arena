@@ -15073,3 +15073,131 @@ h3 {
     grid-template-rows: repeat(4, 82px);
   }
 }
+
+/* ===== 真エンディング「十五人の開廷日」 ===== */
+.grand-finale {
+  display: grid;
+  gap: 22px;
+  margin: 18px 0 6px;
+  padding: 20px;
+  border-radius: 18px;
+  background:
+    linear-gradient(160deg, rgba(255, 247, 230, 0.96), rgba(255, 235, 244, 0.94));
+  border: 1px solid rgba(214, 158, 46, 0.35);
+}
+.grand-finale > div > span {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  color: #b0741a;
+  font-weight: 700;
+}
+.grand-finale h2 {
+  margin: 2px 0 12px;
+  font-size: 20px;
+}
+.grand-finale__charter ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 7px;
+}
+.grand-finale__charter li {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.grand-finale__charter li b {
+  flex: 0 0 auto;
+  color: #a8641b;
+  font-size: 13px;
+}
+.grand-finale__cast {
+  display: grid;
+  gap: 10px;
+}
+.grand-finale__cast article {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 8px 10px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.72);
+}
+.grand-finale__cast article strong {
+  display: block;
+  font-size: 13.5px;
+  margin-bottom: 2px;
+}
+.grand-finale__cast article p {
+  margin: 0;
+  font-size: 14.5px;
+  line-height: 1.55;
+}
+
+/* ===== 記録室・条文集タブ ===== */
+.charter-list {
+  display: grid;
+  gap: 16px;
+  padding: 18px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.82);
+}
+.charter-list__head h3 {
+  margin: 4px 0 8px;
+  font-size: 19px;
+}
+.charter-list__head p {
+  margin: 0;
+  font-size: 14.5px;
+  line-height: 1.7;
+}
+.charter-list ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 9px;
+}
+.charter-list li {
+  display: grid;
+  grid-template-columns: 64px 1fr auto;
+  gap: 10px;
+  align-items: baseline;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(255, 251, 240, 0.9);
+  border: 1px solid rgba(214, 158, 46, 0.22);
+  font-size: 15px;
+  line-height: 1.6;
+}
+.charter-list li b {
+  font-size: 13px;
+  color: #a8641b;
+}
+.charter-list li small {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: #8a7a63;
+}
+.charter-list li.is-locked {
+  opacity: 0.62;
+  background: rgba(240, 238, 234, 0.85);
+  border-style: dashed;
+}
+.charter-locked-text {
+  letter-spacing: 0.06em;
+  color: #8a8378;
+}
+@media (max-width: 640px) {
+  .charter-list li {
+    grid-template-columns: 52px 1fr;
+  }
+  .charter-list li small {
+    grid-column: 2;
+  }
+}

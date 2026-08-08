@@ -24,6 +24,7 @@ import { getMatchDefinition, parseBonusMatchId } from "../data/matches";
 import { itemById } from "../data/items";
 import { getRouteDefinition } from "../data/routes";
 import { fighterDefinitions } from "../data/characters";
+import { isCharterComplete } from "../data/arenaCharter";
 import { randomForCursor } from "./rng";
 import { migrateNarrativeRunState } from "../narrative/saveMigration";
 import type {
@@ -92,9 +93,21 @@ const finishRun = (
   profile: PlayerProfile,
   endingType: NonNullable<RunState["endingType"]>,
 ): { run: RunState; profile: PlayerProfile } => {
-  const endedRun: RunState = { ...run, ended: true, endingType };
+  const liberatedCollection = [
+    ...new Set([
+      ...profile.liberatedCollection,
+      ...run.roster.filter((id) => run.fighters[id].liberated),
+    ]),
+  ];
+  // 周回をまたいで全人物の解放(=条文集の完成)へ到達した再建クリアは、
+  // 真エンディング「十五人の開廷日」へ昇格する。
+  const resolvedEnding: NonNullable<RunState["endingType"]> =
+    endingType === "rebuild" && isCharterComplete(liberatedCollection)
+      ? "grand"
+      : endingType;
+  const endedRun: RunState = { ...run, ended: true, endingType: resolvedEnding };
   const hallEntry = createHallOfFameEntry(endedRun);
-  const cleared = endingType !== "retired";
+  const cleared = resolvedEnding !== "retired";
   const unlocked = new Set(profile.unlockedRoutes);
   if (cleared && run.route === "normal") unlocked.add("domination");
   if (cleared && run.route === "domination") unlocked.add("chaos");
@@ -105,12 +118,7 @@ const finishRun = (
       hasFinishedRun: true,
       clears: profile.clears + (cleared ? 1 : 0),
       unlockedRoutes: [...unlocked],
-      liberatedCollection: [
-        ...new Set([
-          ...profile.liberatedCollection,
-          ...run.roster.filter((id) => run.fighters[id].liberated),
-        ]),
-      ],
+      liberatedCollection,
       hallOfFame: [hallEntry, ...profile.hallOfFame].slice(0, 30),
     },
   };
@@ -121,7 +129,11 @@ export const useGameStore = create<GameStore>()(
     (set, get) => ({
       profile: createInitialProfile(),
       startRun: (route, seed) =>
-        set({ run: createRun(route, seed ?? undefined) }),
+        set((state) => ({
+          run: createRun(route, seed ?? undefined, {
+            deprioritizedEncounters: state.profile.liberatedCollection,
+          }),
+        })),
       clearRun: () => set({ run: undefined }),
       chooseAction: (action) =>
         set((state) =>
