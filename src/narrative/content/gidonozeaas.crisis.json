@@ -3,7 +3,7 @@
   "id": "gidonozeaas.crisis",
   "kind": "character",
   "title": "名前を書く手",
-  "summary": "アルデバラン社・契約記録室で起きる「名前を書く手」",
+  "summary": "黒い角封筒。会社が「終焉竜」の名を興行に登録し、彼は三百年ぶりに待つのをやめる",
   "ownership": {
     "arcId": "character.gidonozeaas",
     "characterId": "gidonozeaas",
@@ -34,23 +34,40 @@
         "id": "gidonozeaas.crisis.asset.background.001",
         "kind": "background",
         "path": "/assets/story/bg-contract-archive-v2.png",
-        "alt": "アルデバラン社・契約記録室の背景"
+        "alt": "契約記録室の背景"
       },
       {
         "id": "gidonozeaas.crisis.asset.sprite.001",
         "kind": "sprite",
         "path": "/assets/story/gidono-unsealed-neutral.png",
-        "alt": "液状の人型をとったギドノゼアース"
+        "alt": "封印を解いたギドノゼアース"
       },
       {
         "id": "gidonozeaas.crisis.asset.still.001",
         "kind": "still",
         "path": "/assets/story/events/gidonozeaas-crisis-key-v2.png",
-        "alt": "黒い星の鍵を掌に受け、ギドノゼアースと判断を交わすミミ"
+        "alt": "鍵を挟んで向き合う二人の一枚絵"
       }
     ]
   },
   "nodes": [
+    {
+      "type": "line",
+      "id": "gidonozeaas.crisis.node.line.001",
+      "lineId": "gidonozeaas.crisis.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "黒い角封筒が、二通届いた。一通は私宛て。一通はギドノゼアース宛て。差出人、アルデバラン社・物語資産管理部。赤い社印の下に、期限の欄がある。会社の封筒は、いつも期限から先に読ませようとする。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.crisis.node.line.002",
+      "lineId": "gidonozeaas.crisis.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "中身は、興行の告知だった。「最終興行・世界滅亡ショー(仮)。主演・終焉竜ギドノゼアース」。——彼の勇名が、本人に一言もなく、商品として登録されていた。"
+    },
     {
       "type": "direction",
       "id": "gidonozeaas.crisis.node.direction.001",
@@ -73,28 +90,12 @@
     },
     {
       "type": "line",
-      "id": "gidonozeaas.crisis.node.line.001",
-      "lineId": "gidonozeaas.crisis.line.001",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "紙と熱い機械油の匂い。無人のプリンターが、三十枚目の追加条項を吐き出す。"
-    },
-    {
-      "type": "line",
-      "id": "gidonozeaas.crisis.node.line.002",
-      "lineId": "gidonozeaas.crisis.line.002",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "どの紙にも「容器および内容物」。その所有者代理には、私の名前がある。"
-    },
-    {
-      "type": "line",
       "id": "gidonozeaas.crisis.node.line.003",
       "lineId": "gidonozeaas.crisis.line.003",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "内容物って、黒い星のことですか。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "契約記録室で追いついた時、ギドノゼアースは封印を解いた姿で、自分の名前の登録簿を静かに見下ろしていた。登録区分の欄に、印字が一行。——「物語資産」。",
+      "emotion": "tension"
     },
     {
       "type": "line",
@@ -103,45 +104,73 @@
       "speakerId": "legacy.speaker.1jmq03z",
       "speakerName": "ギドノゼアース",
       "mode": "dialogue",
-      "text": "世界の外にいる本体まで含む。"
+      "text": "……私の名前は、私が終わらせ損ねた物語の、最後の持ち物なんです。それを、ショーの看板に。"
     },
     {
       "type": "line",
       "id": "gidonozeaas.crisis.node.line.005",
       "lineId": "gidonozeaas.crisis.line.005",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "紙を握った親指が白い。手を放しても、一枚だけ汗で指に貼りついた。"
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "異議、申し立てましょう。窓口、知ってます。書式も知ってます。"
     },
     {
       "type": "line",
       "id": "gidonozeaas.crisis.node.line.006",
       "lineId": "gidonozeaas.crisis.line.006",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
+      "speakerId": "legacy.speaker.1jmq03z",
+      "speakerName": "ギドノゼアース",
       "mode": "dialogue",
-      "text": "もし本体を呼んだら、会社はあなたを全部、私を通して所有できる？"
+      "text": "いえ。——待ちます。三百年、そうしてきました。会社も、いつか飽きるでしょう。"
     },
     {
       "type": "line",
       "id": "gidonozeaas.crisis.node.line.007",
       "lineId": "gidonozeaas.crisis.line.007",
-      "speakerId": "legacy.speaker.1jmq03z",
-      "speakerName": "ギドノゼアース",
-      "mode": "dialogue",
-      "text": "できない。先に、お前の身体が入口として壊れる。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "出た。この人の必殺技、「待つ」。売り切れも、三百年も、名前の盗用まで、全部それで飲み込むつもりだ。",
+      "emotion": "tension"
     },
     {
       "type": "line",
       "id": "gidonozeaas.crisis.node.line.008",
       "lineId": "gidonozeaas.crisis.line.008",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "ギドノさん。パフェは、待てば再販されます。でも名前は、待ってても返ってきません。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.crisis.node.line.009",
+      "lineId": "gidonozeaas.crisis.line.009",
+      "speakerId": "legacy.speaker.1jmq03z",
+      "speakerName": "ギドノゼアース",
+      "mode": "dialogue",
+      "text": "……待たずに動いて、もし私が本気で怒れば。この街の物語ごと、終わらせてしまうかもしれない。それが怖くて、三百年、列に並んでいるんです。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.crisis.node.line.010",
+      "lineId": "gidonozeaas.crisis.line.010",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "怖いより先に腹が立った。勝手に名前を使われたことにも、それを見落とした自分にも。"
+      "text": "三百年の行列の、本当の理由を聞いてしまった。並ぶのが好きなんじゃない。並んでいる間は、誰も傷つけずに済むからだ。",
+      "emotion": "revelation"
     },
     {
       "type": "direction",
       "id": "gidonozeaas.crisis.node.direction.003",
+      "command": {
+        "type": "still",
+        "assetId": "gidonozeaas.crisis.asset.still.001"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "gidonozeaas.crisis.node.direction.004",
       "command": {
         "type": "effect",
         "effectId": "pulse"
@@ -149,47 +178,74 @@
     },
     {
       "type": "line",
-      "id": "gidonozeaas.crisis.node.line.009",
-      "lineId": "gidonozeaas.crisis.line.009",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "黒い星から、爪ほどの欠片が浮く。掌へ落ちた鍵は、氷みたいに冷たくて、火傷しそうに重い。"
-    },
-    {
-      "type": "direction",
-      "id": "gidonozeaas.crisis.node.direction.004",
-      "command": {
-        "type": "still",
-        "assetId": "gidonozeaas.crisis.asset.still.001"
-      }
-    },
-    {
-      "type": "line",
-      "id": "gidonozeaas.crisis.node.line.010",
-      "lineId": "gidonozeaas.crisis.line.010",
-      "speakerId": "legacy.speaker.1jmq03z",
-      "speakerName": "ギドノゼアース",
-      "mode": "dialogue",
-      "text": "持つ者が決めろ。私へ返せば、この契約では二度と開かない。",
-      "emotion": "tension"
-    },
-    {
-      "type": "line",
       "id": "gidonozeaas.crisis.node.line.011",
       "lineId": "gidonozeaas.crisis.line.011",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "大会は、まだ終わってません。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私は預かっていた鍵を取り出して、二人の間の机に置いた。封印を閉じる鍵。あなたの暴走なら、私が止められる。そういう意味で、彼がくれた鍵だ。",
+      "emotion": "tension"
     },
     {
       "type": "line",
       "id": "gidonozeaas.crisis.node.line.012",
       "lineId": "gidonozeaas.crisis.line.012",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "怒っていいですよ。止める係は、もういます。あなたが雇ったんです。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.crisis.node.line.013",
+      "lineId": "gidonozeaas.crisis.line.013",
       "speakerId": "legacy.speaker.1jmq03z",
       "speakerName": "ギドノゼアース",
       "mode": "dialogue",
-      "text": "だから今決める。終わってからなら、誰でも正しいことを言える。",
+      "text": "…………雇った覚えは、ないのですが。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.crisis.node.line.014",
+      "lineId": "gidonozeaas.crisis.line.014",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "鍵が給料です。もう受け取っちゃったので、契約成立です。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.crisis.node.line.015",
+      "lineId": "gidonozeaas.crisis.line.015",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "長い、長い沈黙。それから、ギドノゼアースは異議申立ての用紙を引き寄せた。銀色の指がペンを取る。申立人の欄に、三百年ぶりに「待たない」選択をした手が、自分の名前を書いた。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.crisis.node.line.016",
+      "lineId": "gidonozeaas.crisis.line.016",
+      "speakerId": "legacy.speaker.1jmq03z",
+      "speakerName": "ギドノゼアース",
+      "mode": "dialogue",
+      "text": "ギドノゼアース。——この名前の持ち主は、列を抜けます。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.crisis.node.line.017",
+      "lineId": "gidonozeaas.crisis.line.017",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "書き終えた手が、少しだけ震えていた。私はその手の隣に、担当者欄の自分の名前を並べて書いた。震えは、二人ぶんに分けると半分になる。接客で覚えた計算じゃないけれど、たぶん合っている。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.crisis.node.line.018",
+      "lineId": "gidonozeaas.crisis.line.018",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "あとは、会社への出し方だ。世界を終わらせずに、名前だけ取り返す方法を。",
       "emotion": "resolve"
     },
     {
@@ -199,10 +255,10 @@
         {
           "id": "gidonozeaas.crisis.choice.001",
           "label": "黒い星を回し、二人で封印の継ぎ目を探す",
-          "result": "鍵を置くと、彼は黒い星をゆっくり回した。私が印を読み、彼が内側から力を止める。危うい作業の末、誰にも命じられず開けられる継ぎ目を一つ見つけた。",
-          "intent": "本来の力を二人で安全に引き出す",
-          "promise": "失敗の危険を引き受け、ギドノ専用の成長を大きく進める。",
-          "memory": "二人で見つけた継ぎ目は、契約を解いたあとも本人だけが使える切り札になる。",
+          "result": "翼二枚ぶんの力で、彼は登録簿の「物語資産」の印字だけを、紙を破らずに世界から抜き取った。震えた分の力が漏れて、記録室の時計が三分若返った。会社は「原因不明の印字消失」として調査を始めたが、申立人欄の名前は、誰にも消せない筆圧で残っている。",
+          "intent": "この人の力で、名前を取り返す",
+          "promise": "危険を分け合い、この人専用の成長を最大まで進める。",
+          "memory": "名前を取り返した夜、震えを二人で半分にしたことを、どちらも覚えている。",
           "tone": "heroic",
           "effects": [
             {
@@ -229,10 +285,10 @@
         {
           "id": "gidonozeaas.crisis.choice.002",
           "label": "再販ベルの音を、封印を閉じる合図にする",
-          "result": "試しにカフェのベルを鳴らすと、黒い星がぴたりと止まった。世界滅亡級の封印が限定メニューの呼び鈴で閉じる事実に二人で黙ったが、全員が使える安全手順にはなった。",
-          "intent": "誰でも止められる安全装置を作る",
-          "promise": "最大出力は抑え、チーム全体で扱える成長と安全策を得る。",
-          "memory": "あのベルの音は、危険を止めた合図として最後までチームに残る。",
+          "result": "異議は正規の窓口へ、正規の書式で提出した。ただし護身用の取り決めを一つ。もし審査の場で彼の怒りが膨らんだら、私がカフェの再販ベルを鳴らす。あの音を聞くと、彼は反射的に「並び直す」からだ。世界で一番平和な安全装置に、部長は最後までベルの意味が分からなかったという。",
+          "intent": "怒りに、平和な帰り道を用意する",
+          "promise": "本人の切り札は温存し、チーム全体へ使える成長を持ち帰る。",
+          "memory": "再販ベルが安全装置になった経緯を、チームの全員が知っている。",
           "tone": "comic",
           "effects": [
             {
@@ -277,9 +333,9 @@
     }
   ],
   "debug": {
-    "status": "approved",
-    "sourceDocument": "native narrative block migration",
-    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "status": "review",
+    "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
+    "authorNote": "v2改稿: 黒い角封筒(物語資産管理部)の初出パターン適用。勇名の商用登録。三百年の行列の真の理由と「待たない」選択。Q2手掛かり=登録区分「物語資産」。",
     "legacyGeneratedIds": false
   }
 }

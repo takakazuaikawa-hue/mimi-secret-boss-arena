@@ -3,7 +3,7 @@
   "id": "gidonozeaas.liberation",
   "kind": "liberation",
   "title": "予約のない席",
-  "summary": "カジノカフェ・閉店後で起きる「予約のない席」",
+  "summary": "閉店後のカフェ。契約を解いて、三百年の行列から本当に抜ける",
   "ownership": {
     "arcId": "character.gidonozeaas",
     "characterId": "gidonozeaas",
@@ -34,13 +34,13 @@
         "id": "gidonozeaas.liberation.asset.background.001",
         "kind": "background",
         "path": "/assets/story/bg-casino-cafe-night.png",
-        "alt": "カジノカフェ・閉店後の背景"
+        "alt": "閉店後のカジノカフェの背景"
       },
       {
         "id": "gidonozeaas.liberation.asset.sprite.001",
         "kind": "sprite",
         "path": "/assets/story/gidono-unsealed-soft.png",
-        "alt": "表情を和らげた人型のギドノゼアース"
+        "alt": "やわらいだ表情の解封ギドノゼアース"
       }
     ]
   },
@@ -55,6 +55,14 @@
       }
     },
     {
+      "type": "line",
+      "id": "gidonozeaas.liberation.node.line.001",
+      "lineId": "gidonozeaas.liberation.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "閉店後のカフェ。椅子は全部机の上。灯りは窓際だけ。契約を終わらせる条件がそろった夜に、彼が指定した場所は、やっぱりここだった。"
+    },
+    {
       "type": "direction",
       "id": "gidonozeaas.liberation.node.direction.002",
       "command": {
@@ -67,37 +75,30 @@
     },
     {
       "type": "line",
-      "id": "gidonozeaas.liberation.node.line.001",
-      "lineId": "gidonozeaas.liberation.line.001",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "閉店後。窓際の席だけが、海の月明かりを拾っている。"
-    },
-    {
-      "type": "line",
       "id": "gidonozeaas.liberation.node.line.002",
       "lineId": "gidonozeaas.liberation.line.002",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "契約解除届を四つ折りにして、また開く。署名欄だけが、何度見ても白い。"
+      "speakerId": "legacy.speaker.1jmq03z",
+      "speakerName": "ギドノゼアース",
+      "mode": "dialogue",
+      "text": "三日間の契約は、ずいぶん延長しましたね。"
     },
     {
       "type": "line",
       "id": "gidonozeaas.liberation.node.line.003",
       "lineId": "gidonozeaas.liberation.line.003",
-      "speakerId": "legacy.speaker.1jmq03z",
-      "speakerName": "ギドノゼアース",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "朝から四度、同じ紙を折り直している。"
+      "text": "第四条があってよかったです。「延長を相談できる」。"
     },
     {
       "type": "line",
       "id": "gidonozeaas.liberation.node.line.004",
       "lineId": "gidonozeaas.liberation.line.004",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "これを出したら、私にはあなたを出場させる権利がなくなります。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "机の上に、解除届。三百年待った人の契約を終わらせる紙が、注文伝票と同じ薄さで置いてある。私はそれが、少しだけ憎かった。",
+      "emotion": "tension"
     },
     {
       "type": "line",
@@ -106,34 +107,34 @@
       "speakerId": "legacy.speaker.1jmq03z",
       "speakerName": "ギドノゼアース",
       "mode": "dialogue",
-      "text": "出る権利は私に戻る。次の試合へ行くかは、そのあと私が決める。"
+      "text": "解除の前に、一つ確認を。——この店の、窓際の席。契約が終わったら、私は何の資格で座ればいい。"
     },
     {
       "type": "line",
       "id": "gidonozeaas.liberation.node.line.006",
       "lineId": "gidonozeaas.liberation.line.006",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "勝ちたい。最後まで行きたい。その中へ、彼を「戦力」と数える癖が混じっていた。"
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "資格なんて要りません。お客様は、いつでもただのお客様です。"
     },
     {
       "type": "line",
       "id": "gidonozeaas.liberation.node.line.007",
       "lineId": "gidonozeaas.liberation.line.007",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
+      "speakerId": "legacy.speaker.1jmq03z",
+      "speakerName": "ギドノゼアース",
       "mode": "dialogue",
-      "text": "自由になったあと、残ってほしいと言うのはずるいですか。"
+      "text": "……三百年前は、違いました。私が座ると、店が空になった。整理券だけが、私に平等だったんです。"
     },
     {
       "type": "line",
       "id": "gidonozeaas.liberation.node.line.008",
       "lineId": "gidonozeaas.liberation.line.008",
-      "speakerId": "legacy.speaker.1jmq03z",
-      "speakerName": "ギドノゼアース",
-      "mode": "dialogue",
-      "text": "命令ではなく願いになる。願いは断れる。だから、命令より重いときもある。",
-      "emotion": "tender"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "だからこの人は、行列が好きだったのだ。列の中でだけ、災害ではなく「順番待ちの一人」でいられたから。",
+      "emotion": "revelation"
     },
     {
       "type": "line",
@@ -141,7 +142,8 @@
       "lineId": "gidonozeaas.liberation.line.009",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "解除届の端が、空調の風で揺れる。黒い星は動かず、私の手を待っている。"
+      "text": "私は解除届に判を押した。契約の光が、静かにほどける。それから彼は、驚くことをした。窓際の「予約席」の札を、自分の手で裏返したのだ。——ただの、空席へ。",
+      "emotion": "tension"
     },
     {
       "type": "line",
@@ -150,7 +152,42 @@
       "speakerId": "legacy.speaker.1jmq03z",
       "speakerName": "ギドノゼアース",
       "mode": "dialogue",
-      "text": "今度は、お前の名前ではなく、お前の言葉で決めろ。",
+      "text": "予約は、もうしません。ふらりと来て、空いていたら座る。……それが、できる者になりたいので。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.liberation.node.line.011",
+      "lineId": "gidonozeaas.liberation.line.011",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "三百年の整理券より、予約のない席。この人の選んだ自由は、とても小さくて、とても大きい。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.liberation.node.line.012",
+      "lineId": "gidonozeaas.liberation.line.012",
+      "speakerId": "legacy.speaker.1jmq03z",
+      "speakerName": "ギドノゼアース",
+      "mode": "dialogue",
+      "text": "それと——鍵は、返さなくていい。あれは契約の道具ではなく、私の「おかえりなさい」の預け先なので。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.liberation.node.line.013",
+      "lineId": "gidonozeaas.liberation.line.013",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ポケットの中の小さな鍵が、急に重くなった気がした。重いのに、嫌じゃない。こういう重さの単位を、私はまだ知らない。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.liberation.node.line.014",
+      "lineId": "gidonozeaas.liberation.line.014",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "残るのは、これからの話だ。契約のない明日から、どう並ぶか。",
       "emotion": "resolve"
     },
     {
@@ -160,10 +197,10 @@
         {
           "id": "gidonozeaas.liberation.choice.001",
           "label": "契約解除届と、次の試合予定を別々に渡す",
-          "result": "彼は解除届へ小さな星を書き、試合予定へは自分の名だけを書いた。「前者は自由。後者は僕の予定」。登録灯は所有者名を消し、出場者名を残した。",
-          "intent": "決められた手順とは別の道を作る",
-          "promise": "契約を終わらせたうえで、本人の意思による次の約束を交わす。",
-          "memory": "解除届と試合予定を分けた前例が、所有ではない在籍の最初の記録になった。",
+          "result": "「契約は終わり。こっちは、ただのお誘いです」。二枚の紙を分けて渡すと、彼は試合予定だけを二回折って胸元へ仕舞った。解除届の控えは、その場で読み終えて返してきた。「保管は任せます。私が取っておきたいのは、誘われた方なので」。",
+          "intent": "契約と、一緒に戦う理由を分ける",
+          "promise": "所有者名を消し、本人が自分の名で次の試合を選べるようにする。",
+          "memory": "解除と誘いを別の紙にしたことを、ギドノゼアースは作法として覚えている。",
           "tone": "defiant",
           "effects": [
             {
@@ -187,10 +224,10 @@
         {
           "id": "gidonozeaas.liberation.choice.002",
           "label": "解除したあと、限定パフェの席だけ予約する",
-          "result": "契約はそこで終わった。彼は予約票へ二名と書き、その下へ「試合のあと」と足した。戦う理由が会社の命令から限定メニューへ変わっても、本人が選んだなら十分だった。",
-          "intent": "チーム全体の準備を進める",
-          "promise": "契約を終わらせたうえで、本人の意思による次の約束を交わす。",
-          "memory": "二名席の予約票が、契約の後にも会う理由として残った。",
+          "result": "「予約はもうしないんじゃ？」と聞くと、彼は真顔で答えた。「例外規定です。二人席は、一人では取れないので」。かくして契約台帳の最後のページに、契約ではない予約が一件だけ残った。再販日の火曜、窓際、二名。",
+          "intent": "自由になった人と、次の約束をする",
+          "promise": "断る権利を返したうえで、再販日の約束を一つ結ぶ。",
+          "memory": "契約台帳の最後が、パフェの予約で終わっていることを二人だけが知っている。",
           "tone": "defiant",
           "effects": [
             {
@@ -254,9 +291,9 @@
     }
   ],
   "debug": {
-    "status": "approved",
-    "sourceDocument": "native narrative block migration",
-    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "status": "review",
+    "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
+    "authorNote": "v2改稿: 予約席の札を自分で裏返す解放。行列の意味の種明かし。鍵=「おかえりなさい」の預け先。",
     "legacyGeneratedIds": false
   }
 }

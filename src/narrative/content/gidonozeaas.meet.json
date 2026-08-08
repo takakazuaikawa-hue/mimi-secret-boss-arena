@@ -3,7 +3,7 @@
   "id": "gidonozeaas.meet",
   "kind": "character",
   "title": "窓際、ひとつ空けて",
-  "summary": "カジノカフェ・閉店前で起きる「窓際、ひとつ空けて」",
+  "summary": "閉店五分前、パフェ売り切れの報が、世界滅亡級の客に届く",
   "ownership": {
     "arcId": "character.gidonozeaas",
     "characterId": "gidonozeaas",
@@ -32,31 +32,31 @@
         "id": "gidonozeaas.meet.asset.background.001",
         "kind": "background",
         "path": "/assets/story/bg-casino-cafe-closing.png",
-        "alt": "カジノカフェ・閉店前の背景"
+        "alt": "閉店前のカジノカフェの背景"
       },
       {
         "id": "gidonozeaas.meet.asset.sprite.001",
         "kind": "sprite",
         "path": "/assets/story/gidono-sealed-neutral.png",
-        "alt": "黒い星を抱いた封印形態のギドノゼアース"
+        "alt": "封印形態のギドノゼアース"
       },
       {
         "id": "gidonozeaas.meet.asset.sprite.002",
         "kind": "sprite",
         "path": "/assets/story/gidono-sealed-alert.png",
-        "alt": "黒い星を回転させた封印形態のギドノゼアース"
+        "alt": "身構える封印形態のギドノゼアース"
       },
       {
         "id": "gidonozeaas.meet.asset.still.001",
         "kind": "still",
         "path": "/assets/event-casino-cafe.png",
-        "alt": "窓際、ひとつ空けてのイベント一枚絵"
+        "alt": "夕暮れのカジノカフェの一枚絵"
       },
       {
         "id": "gidonozeaas.meet.asset.sprite.003",
         "kind": "sprite",
         "path": "/assets/story/gidono-sealed-soft.png",
-        "alt": "わずかに表情を和らげた封印形態のギドノゼアース"
+        "alt": "やわらいだ封印形態のギドノゼアース"
       }
     ]
   },
@@ -83,7 +83,7 @@
       "lineId": "gidonozeaas.meet.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "派遣先での最初の仕事は、驚くほどいつもの接客と変わらなかった。違うのは、試合帰りのお客様が注文より先に勝敗を口にすることくらいだ。"
+      "text": "閉店五分前。レジ締め、床掃き、看板の回収。派遣バニーの一日は、あと五分で無事に終わる。——はずだった。"
     },
     {
       "type": "line",
@@ -91,34 +91,34 @@
       "lineId": "gidonozeaas.meet.line.002",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "午後四時五十七分。閉店前の最後の注文は、季節限定の「星降りベリーパフェ」だった。"
+      "text": "窓際の席に、お客様が一人残っていた。黒い星を抱いた、つやつやのスライム。テーブルの上には、几帳面に畳まれた整理券。番号は「一番」。"
     },
     {
       "type": "line",
       "id": "gidonozeaas.meet.node.line.003",
       "lineId": "gidonozeaas.meet.line.003",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "窓際の予約席へ運ぶと、椅子には誰もいない。代わりに、白い皿の上で大きなスライムがゆっくり揺れていた。"
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "お客様、まもなく閉店で……ご注文は、お済みですか？"
     },
     {
       "type": "line",
       "id": "gidonozeaas.meet.node.line.004",
       "lineId": "gidonozeaas.meet.line.004",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
+      "speakerId": "legacy.speaker.1jmq03z",
+      "speakerName": "ギドノゼアース",
       "mode": "dialogue",
-      "text": "お待たせしました。星降りベリーパフェです。……あの、ご予約のお客様は、まだいらしていませんか？"
+      "text": "限定パフェを。……三百年、待ちました。"
     },
     {
       "type": "line",
       "id": "gidonozeaas.meet.node.line.005",
       "lineId": "gidonozeaas.meet.line.005",
-      "speakerId": "legacy.speaker.1jmq03z",
-      "speakerName": "ギドノゼアース",
-      "mode": "dialogue",
-      "text": "ここにいる。",
-      "emotion": "revelation"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "三百年。待ち時間の単位がおかしい。そして私は、厨房から来た伝票の文字に、血の気が引いた。——本日の限定パフェ、たった今、売り切れ。",
+      "emotion": "tension"
     },
     {
       "type": "line",
@@ -127,20 +127,11 @@
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "失礼しました。では、ご予約のお名前を確認してもよろしいでしょうか。"
-    },
-    {
-      "type": "line",
-      "id": "gidonozeaas.meet.node.line.007",
-      "lineId": "gidonozeaas.meet.line.007",
-      "speakerId": "legacy.speaker.1jmq03z",
-      "speakerName": "ギドノゼアース",
-      "mode": "dialogue",
-      "text": "ギドノゼアース。一名。"
+      "text": "大変申し訳ございません。限定パフェ、本日……売り切れでして……"
     },
     {
       "type": "direction",
-      "id": "gidonozeaas.meet.node.direction.004",
+      "id": "gidonozeaas.meet.node.direction.003",
       "command": {
         "type": "show",
         "assetId": "gidonozeaas.meet.asset.sprite.002",
@@ -148,6 +139,50 @@
         "slot": "right",
         "scale": "compact"
       }
+    },
+    {
+      "type": "direction",
+      "id": "gidonozeaas.meet.node.direction.004",
+      "command": {
+        "type": "effect",
+        "effectId": "shake"
+      }
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.meet.node.line.007",
+      "lineId": "gidonozeaas.meet.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "黒い星が、ぐらりと揺れた。窓の外の夕焼けが、一段濃くなる。店内の砂糖壺が全部、蓋を閉めた。世界の終わりの気配は、意外と食器から始まるらしい。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.meet.node.line.008",
+      "lineId": "gidonozeaas.meet.line.008",
+      "speakerId": "legacy.speaker.1jmq03z",
+      "speakerName": "ギドノゼアース",
+      "mode": "dialogue",
+      "text": "……大丈夫。慣れています。私が並ぶと、だいたい世界の方が先に終わろうとするので。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.meet.node.line.009",
+      "lineId": "gidonozeaas.meet.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "全然大丈夫じゃない発言だった。でも聞き逃さなかった。この人は今、怒りより先に「慣れ」を出した。三百年ぶんの売り切れに、慣れているのだ。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.meet.node.line.010",
+      "lineId": "gidonozeaas.meet.line.010",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "——お客様。再販日、来週の火曜です。私、取り置き票を書きます。名前もらっていいですか。"
     },
     {
       "type": "direction",
@@ -167,21 +202,30 @@
     },
     {
       "type": "line",
-      "id": "gidonozeaas.meet.node.line.008",
-      "lineId": "gidonozeaas.meet.line.008",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "透明な身体の中心で黒い星が回った。次の瞬間、窓の向こうの海まで持ち上がり、水平線が一度だけ消えた。",
-      "emotion": "tension"
+      "id": "gidonozeaas.meet.node.line.011",
+      "lineId": "gidonozeaas.meet.line.011",
+      "speakerId": "legacy.speaker.1jmq03z",
+      "speakerName": "ギドノゼアース",
+      "mode": "dialogue",
+      "text": "……取り置き。並ばなくても、いいのですか。"
     },
     {
       "type": "line",
-      "id": "gidonozeaas.meet.node.line.009",
-      "lineId": "gidonozeaas.meet.line.009",
+      "id": "gidonozeaas.meet.node.line.012",
+      "lineId": "gidonozeaas.meet.line.012",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "……ギドノゼアース様ですね。確認できました。海については、あとで設備担当へ連絡します。"
+      "text": "三百年並んだお客様を、これ以上並ばせたら、うちの店の名折れです。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.meet.node.line.013",
+      "lineId": "gidonozeaas.meet.line.013",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "そのとき、窓ガラスに映る影が揺れた。スライムの輪郭が一瞬ほどけて——銀の髪の、きれいな男の人が座っていた。まばたきの間に、影はスライムに戻った。今の、何。",
+      "emotion": "tension"
     },
     {
       "type": "direction",
@@ -196,22 +240,39 @@
     },
     {
       "type": "line",
-      "id": "gidonozeaas.meet.node.line.010",
-      "lineId": "gidonozeaas.meet.line.010",
+      "id": "gidonozeaas.meet.node.line.014",
+      "lineId": "gidonozeaas.meet.line.014",
       "speakerId": "legacy.speaker.1jmq03z",
       "speakerName": "ギドノゼアース",
       "mode": "dialogue",
-      "text": "先にパフェを置け。再販まで三百年待った。",
+      "text": "見ましたね。……今のは、封印の継ぎ目です。安いガラスには、映ってしまう。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.meet.node.line.015",
+      "lineId": "gidonozeaas.meet.line.015",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "うち、ガラスだけは高級なんですけど……"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.meet.node.line.016",
+      "lineId": "gidonozeaas.meet.line.016",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "心臓がうるさい。きれいな人を見たからか、世界の終わりを見かけたからか、判定がつかない。とりあえず私は、取り置き票の名前欄を差し出した。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "gidonozeaas.meet.node.line.011",
-      "lineId": "gidonozeaas.meet.line.011",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
+      "id": "gidonozeaas.meet.node.line.017",
+      "lineId": "gidonozeaas.meet.line.017",
+      "speakerId": "legacy.speaker.1jmq03z",
+      "speakerName": "ギドノゼアース",
       "mode": "dialogue",
-      "text": "大変お待たせしました。三百年というのは、前回の販売からですか？"
+      "text": "ギドノゼアース。——滅ぼす予定だった世界が、先に平和になってしまった者です。以来、待つのが仕事のようなもので。"
     },
     {
       "type": "direction",
@@ -226,63 +287,12 @@
     },
     {
       "type": "line",
-      "id": "gidonozeaas.meet.node.line.012",
-      "lineId": "gidonozeaas.meet.line.012",
-      "speakerId": "legacy.speaker.1jmq03z",
-      "speakerName": "ギドノゼアース",
-      "mode": "dialogue",
-      "text": "前の店は、私が目覚めた日に大陸ごとなくなった。"
-    },
-    {
-      "type": "line",
-      "id": "gidonozeaas.meet.node.line.013",
-      "lineId": "gidonozeaas.meet.line.013",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "それでは、再販のお知らせも届きませんね。今日まで予約を覚えていてくださって、ありがとうございます。"
-    },
-    {
-      "type": "line",
-      "id": "gidonozeaas.meet.node.line.014",
-      "lineId": "gidonozeaas.meet.line.014",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "接客用の返事を口にしてから、内容がおかしいことに気づいた。けれど本人は、パフェしか見ていない。"
-    },
-    {
-      "type": "line",
-      "id": "gidonozeaas.meet.node.line.015",
-      "lineId": "gidonozeaas.meet.line.015",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "伝票には「二名様限定」、同伴者欄には私の社員番号。受付でもらったばかりの契約端末が、勝手に青く点滅していた。"
-    },
-    {
-      "type": "line",
-      "id": "gidonozeaas.meet.node.line.016",
-      "lineId": "gidonozeaas.meet.line.016",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "申し訳ありません。このメニューは二名様限定で、同伴者のお名前が必要なんです。なぜか私の番号が入っていますが……。"
-    },
-    {
-      "type": "line",
-      "id": "gidonozeaas.meet.node.line.017",
-      "lineId": "gidonozeaas.meet.line.017",
-      "speakerId": "legacy.speaker.1jmq03z",
-      "speakerName": "ギドノゼアース",
-      "mode": "dialogue",
-      "text": "なら、お前が座れば注文は成立する。閉店まで三分ある。"
-    },
-    {
-      "type": "line",
       "id": "gidonozeaas.meet.node.line.018",
       "lineId": "gidonozeaas.meet.line.018",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "受付のノノさんは「空欄にしても何か起きる」と言っていた。まさか、初日にパフェの同伴者へ登録されるとは聞いていない。"
+      "text": "物語が終わったあとの人の顔を、私は初めて正面から見た気がした。窓際の席がひとつ、夕陽の中で空いている。閉店五分前の店で、帰り支度より先にやることができた。",
+      "emotion": "tender"
     },
     {
       "type": "choice",
@@ -291,10 +301,10 @@
         {
           "id": "gidonozeaas.meet.choice.001",
           "label": "休憩扱いにして、向かいへ座る",
-          "result": "椅子に腰を下ろした瞬間、足の痛みがどっと戻った。彼はパフェの苺を一つよけて、「三百年のうち三分なら待てる」と、私が息をつくまでスプーンを持たなかった。",
-          "intent": "三分だけ同席し、相手の目的を確かめる",
-          "promise": "勤務報酬は増えないが、三百年待った注文と彼の事情を聞ける。",
-          "memory": "登録より先に一緒にパフェを待った三分間を、彼はあとまで覚えている。",
+          "result": "私は「休憩中」の札を立てて、向かいに座った。三百年の待ち時間の、暇つぶしの話を聞いた。星の数え方、行列の礼儀、売り切れの飲み込み方。閉店時間は過ぎたけれど、業務放送の蛍の光が三回流れるまで、誰も立たなかった。帰り際、取り置き票の控えを、彼は宝物みたいに二回折って仕舞った。",
+          "intent": "登録の前に、目の前の相手と席を分ける",
+          "promise": "目先の報酬は得ない代わりに、相手が何を待っているかを知る。",
+          "memory": "三百年で初めて「取り置き」を提案した店員として、ギドノゼアースは私を覚えている。",
           "tone": "tender",
           "effects": [
             {
@@ -313,10 +323,10 @@
         {
           "id": "gidonozeaas.meet.choice.002",
           "label": "今日はギドノゼアースを誘わず、用事へ戻る",
-          "result": "ギドノゼアースの名前と出会った場所だけを覚え、今日は普段の仕事へ戻った。急いで所属を決めなかったことが、次に会う時の距離として残った。",
-          "intent": "今は勧誘せず、相手との距離を保つ",
+          "result": "取り置き票だけを渡して、私は閉店作業へ戻った。翌朝、窓際の席に整理券が一枚残っていた。番号は「二番」。裏に小さな字で「一番は、あなたの休憩に譲ります」。誰が置いたかは、考えるまでもなかった。",
+          "intent": "今日は仕事へ戻り、距離を保つ",
           "promise": "所属選手にはならないが、後の出来事で再会できる。",
-          "memory": "最初の出会いで急いで仲間にしなかったことが、次の再会へ残る。",
+          "memory": "取り置き票を書いた店員のことを、ギドノゼアースは整理券と一緒に覚えている。",
           "tone": "pragmatic",
           "effects": [],
           "goto": "gidonozeaas.meet.node.effect.001"
@@ -346,9 +356,9 @@
     }
   ],
   "debug": {
-    "status": "approved",
-    "sourceDocument": "native narrative block migration",
-    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "status": "review",
+    "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
+    "authorNote": "v2改稿: パフェ売り切れ事件。封印の継ぎ目が窓に映るドキドキ。Q1手掛かり=滅ぼす予定だった世界が先に平和になった。",
     "legacyGeneratedIds": false
   }
 }

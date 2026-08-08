@@ -3,7 +3,7 @@
   "id": "gidonozeaas.bond",
   "kind": "character",
   "title": "冷めなかったコーヒー",
-  "summary": "カジノカフェ・開店前で起きる「冷めなかったコーヒー」",
+  "summary": "開店前の人手不足。世界滅亡級の臨時ウェイターと、遅く流れる十五分",
   "ownership": {
     "arcId": "character.gidonozeaas",
     "characterId": "gidonozeaas",
@@ -32,13 +32,13 @@
         "id": "gidonozeaas.bond.asset.background.001",
         "kind": "background",
         "path": "/assets/story/bg-casino-cafe-rain.png",
-        "alt": "カジノカフェ・開店前の背景"
+        "alt": "雨のカジノカフェの背景"
       },
       {
         "id": "gidonozeaas.bond.asset.sprite.001",
         "kind": "sprite",
         "path": "/assets/story/gidono-sealed-soft.png",
-        "alt": "わずかに表情を和らげた封印形態のギドノゼアース"
+        "alt": "やわらいだ封印形態のギドノゼアース"
       }
     ]
   },
@@ -53,6 +53,14 @@
       }
     },
     {
+      "type": "line",
+      "id": "gidonozeaas.bond.node.line.001",
+      "lineId": "gidonozeaas.bond.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "雨の朝は、カフェが混む。そして今日に限って、ホール担当が二人休んだ。開店十分前、私は覚悟を決めてエプロンを締めた。"
+    },
+    {
       "type": "direction",
       "id": "gidonozeaas.bond.node.direction.002",
       "command": {
@@ -65,19 +73,12 @@
     },
     {
       "type": "line",
-      "id": "gidonozeaas.bond.node.line.001",
-      "lineId": "gidonozeaas.bond.line.001",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "開店十五分前。窓は雨で白く、エスプレッソマシンだけが低く唸っている。"
-    },
-    {
-      "type": "line",
       "id": "gidonozeaas.bond.node.line.002",
       "lineId": "gidonozeaas.bond.line.002",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "いつもの窓際に黒い星。その隣に、欠けたスタッフ用マグカップがあった。"
+      "speakerId": "legacy.speaker.1jmq03z",
+      "speakerName": "ギドノゼアース",
+      "mode": "dialogue",
+      "text": "手が足りないなら、私が出ます。三百年、店を見てきました。作法は履修済みです。"
     },
     {
       "type": "line",
@@ -86,17 +87,16 @@
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "それ、私のコーヒーですよね。"
+      "text": "履修って、ずっと客席側からですよね！？"
     },
     {
       "type": "line",
       "id": "gidonozeaas.bond.node.line.004",
       "lineId": "gidonozeaas.bond.line.004",
-      "speakerId": "legacy.speaker.1jmq03z",
-      "speakerName": "ギドノゼアース",
-      "mode": "dialogue",
-      "text": "九時四十分に休憩へ入ると聞いた。二十三分過ぎた。",
-      "emotion": "tender"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "止める間もなく開店。結論から言うと、世界滅亡級の臨時ウェイターは、有能だった。スライムの体で五枚のトレイを同時に運び、こぼれた水は着地前に体で受け止める。",
+      "emotion": "comic"
     },
     {
       "type": "line",
@@ -104,7 +104,8 @@
       "lineId": "gidonozeaas.bond.line.005",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "誰も覚えていないと思っていた。私自身も、さっきまで忘れていた。"
+      "text": "そして気づいた。彼が運んだコーヒーは、どの席でも、最後の一口まで湯気が立っている。お客様が新聞を三十分読んでも、冷めない。",
+      "emotion": "tension"
     },
     {
       "type": "line",
@@ -113,45 +114,41 @@
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "忙しい日は、休憩なんてそんなものです。もう冷めてるでしょうし。"
-    },
-    {
-      "type": "direction",
-      "id": "gidonozeaas.bond.node.direction.003",
-      "command": {
-        "type": "show",
-        "assetId": "gidonozeaas.bond.asset.sprite.001",
-        "actorId": "gidonozeaas",
-        "slot": "right",
-        "scale": "compact"
-      }
+      "text": "ギドノさん、あれ、何してるんですか。"
     },
     {
       "type": "line",
       "id": "gidonozeaas.bond.node.line.007",
       "lineId": "gidonozeaas.bond.line.007",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "取っ手が熱い。淹れたてのままだ。彼は窓を向いたまま、ほんの少し平たくなった。"
+      "speakerId": "legacy.speaker.1jmq03z",
+      "speakerName": "ギドノゼアース",
+      "mode": "dialogue",
+      "text": "カップの半径五センチだけ、時間を遅くしています。世界を止める力の、いちばん平和な使い方です。"
     },
     {
       "type": "line",
       "id": "gidonozeaas.bond.node.line.008",
       "lineId": "gidonozeaas.bond.line.008",
-      "speakerId": "legacy.speaker.1jmq03z",
-      "speakerName": "ギドノゼアース",
-      "mode": "dialogue",
-      "text": "待つものが増えるのは、嫌いではない。",
-      "emotion": "tender"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "本来は星を止めるための力が、モーニングセットに全力投球されていた。お客様の間で「冷めない店」の噂が立ち、行列が伸びる。臨時ウェイターの罪は重い。",
+      "emotion": "comic"
     },
     {
       "type": "line",
       "id": "gidonozeaas.bond.node.line.009",
       "lineId": "gidonozeaas.bond.line.009",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "パフェと同じ数え方をされるの、複雑なんですけど。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "昼過ぎ、嵐のような混雑が引いた。私が床にへたり込みかけた、その瞬間だった。店の音が、ふっと遠くなった。"
+    },
+    {
+      "type": "direction",
+      "id": "gidonozeaas.bond.node.direction.003",
+      "command": {
+        "type": "effect",
+        "effectId": "flash"
+      }
     },
     {
       "type": "line",
@@ -160,7 +157,7 @@
       "speakerId": "legacy.speaker.1jmq03z",
       "speakerName": "ギドノゼアース",
       "mode": "dialogue",
-      "text": "パフェは再販日を守る。お前は休憩時間を守らない。"
+      "text": "休憩十五分。——ここから先、あなたの周りだけ、時間をゆっくりにしました。"
     },
     {
       "type": "line",
@@ -168,7 +165,71 @@
       "lineId": "gidonozeaas.bond.line.011",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "反論の代わりに、ひと口飲む。苦さのあとから、いつもより多い砂糖の甘さが来た。"
+      "text": "窓の外の雨が、ゆっくり落ちていた。一滴ずつ、数えられる速さで。店の喧騒は水の底みたいに遠くて、窓際の席だけが、世界から丁寧に切り取られていた。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.bond.node.line.012",
+      "lineId": "gidonozeaas.bond.line.012",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "これ、私の十五分が、外の一分くらいってことですか。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.bond.node.line.013",
+      "lineId": "gidonozeaas.bond.line.013",
+      "speakerId": "legacy.speaker.1jmq03z",
+      "speakerName": "ギドノゼアース",
+      "mode": "dialogue",
+      "text": "はい。あなたの休憩は、どの規則にも削らせません。……ここの淹れたては、あなたの分です。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.bond.node.line.014",
+      "lineId": "gidonozeaas.bond.line.014",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "差し出されたカップから、ゆっくりの世界で湯気がまっすぐ立っていた。向かいの席で、スライムがひとつ、満足そうに揺れる。雨の一滴が、まだ窓の途中にいる。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.bond.node.line.015",
+      "lineId": "gidonozeaas.bond.line.015",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "……三百年待つのって、こういう感じですか。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.bond.node.line.016",
+      "lineId": "gidonozeaas.bond.line.016",
+      "speakerId": "legacy.speaker.1jmq03z",
+      "speakerName": "ギドノゼアース",
+      "mode": "dialogue",
+      "text": "いいえ。三百年は、もっと静かでした。……今日のほうが、ずっといい。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.bond.node.line.017",
+      "lineId": "gidonozeaas.bond.line.017",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "遅くした時間の中でも、心臓の速さだけは、いつも通りに動くらしい。知らなかった。この力の説明書に、書いておいてほしい。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.bond.node.line.018",
+      "lineId": "gidonozeaas.bond.line.018",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ゆっくりの十五分は、それでも終わる。残った時間の使い方を、私が決める番だった。",
+      "emotion": "resolve"
     },
     {
       "type": "choice",
@@ -177,10 +238,10 @@
         {
           "id": "gidonozeaas.bond.choice.001",
           "label": "今だけは座って、温かいうちに飲む",
-          "result": "向かいへ座ると、黒い星の回転が止まった。話題はすぐ尽きたのに、雨の音が気まずくなくなるまで、私たちは席を立たなかった。",
-          "intent": "この人物の可能性を伸ばす",
-          "promise": "その人だけが持つ固有の成長を引き出す。",
-          "memory": "雨音の中で休憩を守った時間が、彼に鍵を預ける相手を選ばせた。",
+          "result": "私は仕事の話を一つもせず、ゆっくりの雨を二人で眺めてコーヒーを飲み切った。カップの底に、砂糖で小さな星が描いてあった。「サービスです」とギドノゼアースは言ったが、彼は他のどの席にも星を描いていない。私は指摘しない優しさと、覚えておく強欲を、両方選んだ。",
+          "intent": "守られた休憩を、遠慮せず受け取る",
+          "promise": "読みにくい作戦になる代わりに、この人だけの成長を大きく進める。",
+          "memory": "時間の遅い窓際で一緒に飲んだ一杯を、二人とも「三百年より良い方」と呼んでいる。",
           "tone": "comic",
           "effects": [
             {
@@ -207,10 +268,10 @@
         {
           "id": "gidonozeaas.bond.choice.002",
           "label": "ナプキンに次の試合手順を書く",
-          "result": "休憩は作戦会議になった。勝つ手順はまとまり、コーヒーも最後まで冷めなかった。ただ、砂糖を増やした理由だけは聞きそびれた。",
-          "intent": "チーム全体の準備を進める",
-          "promise": "誰にでも使える力をチームへ持ち帰る。",
-          "memory": "ナプキンに書いた作戦手順が、力を戻す境目を測る発想へつながった。",
+          "result": "ゆっくりの時間は、作戦会議にも最強だった。外の一分で、私たちは十五分ぶん話せる。ナプキン三枚に書いた連携手順を、ギドノゼアースは「歴代で一番ぜいたくな時間の使い方です」と評した。褒めているのか怒っているのかは、スライムの揺れ方から判断できなかった。",
+          "intent": "守られた時間を、チームの勝ち筋に使う",
+          "promise": "本人の流儀は崩すが、全員へ配れる成長ポイントを得る。",
+          "memory": "時間の遅い窓際で立てた作戦を、チームは「窓際作戦」と呼んでいる。",
           "tone": "heroic",
           "effects": [
             {
@@ -250,9 +311,9 @@
     }
   ],
   "debug": {
-    "status": "approved",
-    "sourceDocument": "native narrative block migration",
-    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "status": "review",
+    "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
+    "authorNote": "v2改稿: 臨時ウェイター事件と時間遅延の窓際。冷めないコーヒーの種明かし。二人だけ遅い時間のドキドキ。",
     "legacyGeneratedIds": false
   }
 }

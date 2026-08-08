@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "id": "night-eater.join",
   "kind": "character",
-  "title": "スカウト",
-  "summary": "夜の遊歩道で起きる「スカウト」",
+  "title": "顔写真は真っ黒",
+  "summary": "登録端末との格闘と、星の見える遊歩道",
   "ownership": {
     "arcId": "character.night-eater",
     "characterId": "night-eater",
@@ -38,40 +38,6 @@
   },
   "nodes": [
     {
-      "type": "line",
-      "id": "night-eater.join.node.line.001",
-      "lineId": "night-eater.join.line.001",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "夜を食べるものの選手登録は、顔写真の撮影だけで午前と午後を使った。夜の登録なのに、昼を丸ごと食べている。"
-    },
-    {
-      "type": "line",
-      "id": "night-eater.join.node.line.002",
-      "lineId": "night-eater.join.line.002",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "一枚目は真っ黒。二枚目はカメラの中だけ夕焼け。三枚目には、撮影係の背後霊みたいな私だけが写った。",
-      "emotion": "tension"
-    },
-    {
-      "type": "line",
-      "id": "night-eater.join.node.line.003",
-      "lineId": "night-eater.join.line.003",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "選手登録用の写真は真っ黒になった。露出を上げると、今度はカメラの中だけ日没した。"
-    },
-    {
-      "type": "line",
-      "id": "night-eater.join.node.line.004",
-      "lineId": "night-eater.join.line.004",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "夜勤枠なら空いてます。"
-    },
-    {
       "type": "direction",
       "id": "night-eater.join.node.direction.001",
       "command": {
@@ -81,12 +47,39 @@
       }
     },
     {
-      "type": "direction",
-      "id": "night-eater.join.node.direction.002",
-      "command": {
-        "type": "effect",
-        "effectId": "pulse"
-      }
+      "type": "line",
+      "id": "night-eater.join.node.line.001",
+      "lineId": "night-eater.join.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "選手登録の夜。持ち物は携帯端末と、事情を分かってくれる心の広さ。相手はあの、夜を食べるものである。手続きが平和に終わる予感は、最初からなかった。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.join.node.line.002",
+      "lineId": "night-eater.join.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "まず、顔写真で詰まった。何度撮っても、画面は美しい真っ黒。フラッシュを焚いたら、フラッシュが食べられた。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.join.node.line.003",
+      "lineId": "night-eater.join.line.003",
+      "speakerId": "legacy.speaker.ij983g",
+      "speakerName": "夜を食べるもの",
+      "mode": "dialogue",
+      "text": "……ごちそうさま。強い光だった。五つ星。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.join.node.line.004",
+      "lineId": "night-eater.join.line.004",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "証明写真を食べないでください！！"
     },
     {
       "type": "line",
@@ -94,16 +87,17 @@
       "lineId": "night-eater.join.line.005",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "端末は『顔を枠内へ入れてください』を繰り返した。枠内はすでに夜で満員なのだが、機械に詩は通じない。",
+      "text": "端末も限界だった。種族欄に「夜」と入力したら、システムは彼女を従業員の夜勤枠として登録しようとした。夜が夜勤。間違ってはいない。間違ってはいないが。",
       "emotion": "comic"
     },
     {
       "type": "line",
       "id": "night-eater.join.node.line.006",
       "lineId": "night-eater.join.line.006",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "種族欄へ『夜』と入れると営業時間を聞かれ、営業時間を入れると労働契約へ進んだ。登録端末まで夜勤を募集し始めた。"
+      "speakerId": "legacy.speaker.ij983g",
+      "speakerName": "夜を食べるもの",
+      "mode": "dialogue",
+      "text": "夜勤。……悪くない響き。夜は、私の勤務地なので。"
     },
     {
       "type": "line",
@@ -112,25 +106,25 @@
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "顔写真なしで通るでしょうか。"
+      "text": "本人が乗り気にならないでください。選手登録です、選手！"
     },
     {
       "type": "line",
       "id": "night-eater.join.node.line.008",
       "lineId": "night-eater.join.line.008",
-      "speakerId": "legacy.speaker.ij983g",
-      "speakerName": "夜を食べるもの",
-      "mode": "dialogue",
-      "text": "勤務ではない。だが夜が始まる場所には興味がある。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "手続きに行き詰まった私たちは、気分転換に遊歩道を歩いた。彼女は歩きながら、街灯を名残惜しそうに見上げる。お腹が空いているのだ。でも、営業中の光は食べない約束を、律儀に守っている。",
+      "emotion": "tender"
     },
     {
       "type": "line",
       "id": "night-eater.join.node.line.009",
       "lineId": "night-eater.join.line.009",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "本人は勤務ではないと三回言った。そのたび端末が『勤務形態を選択してください』と返す。会話の相性が最悪である。",
-      "emotion": "revelation"
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "……この遊歩道、閉園時間過ぎてますね。街灯、もう営業時間外です。"
     },
     {
       "type": "line",
@@ -139,16 +133,24 @@
       "speakerId": "legacy.speaker.ij983g",
       "speakerName": "夜を食べるもの",
       "mode": "dialogue",
-      "text": "顔を決めるほど、長く誰かに見られたことがない。"
+      "text": "………………いいの？"
+    },
+    {
+      "type": "direction",
+      "id": "night-eater.join.node.direction.002",
+      "command": {
+        "type": "effect",
+        "effectId": "flash"
+      }
     },
     {
       "type": "line",
       "id": "night-eater.join.node.line.011",
       "lineId": "night-eater.join.line.011",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "選手欄に勤務時間を書いておきますね。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "彼女は遊歩道の街灯を、端から一口ずつ、上品に味わっていった。ひとつ消えるたび、頭上に星が増える。全部食べ終わった時、遊歩道は満天の星の下にあった。——都会で、天の川が見えた。",
+      "emotion": "revelation"
     },
     {
       "type": "line",
@@ -156,7 +158,8 @@
       "lineId": "night-eater.join.line.012",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私は職員を呼び、職員は上司を呼び、上司は照明係を呼んだ。照明係は犯人を見て帰った。"
+      "text": "帰り道のカップルが、立ち止まって空を見上げた。「すごい」「初めて見た」。誰かの迷惑だったはずの食事が、誰かの記念日を作っていた。",
+      "emotion": "tender"
     },
     {
       "type": "line",
@@ -164,16 +167,17 @@
       "lineId": "night-eater.join.line.013",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "本人確認欄へ『閉店後に在席』と書くと、端末は日没まで審査を保留し、本当に日が沈んだ瞬間だけ受理した。融通はないが演出は満点だ。"
+      "text": "夜風が吹いて、私が小さくくしゃみをした。次の瞬間、肩にふわりと重みが乗った。星空の外套。内側は、真夏の夜みたいに暖かかった。",
+      "emotion": "tension"
     },
     {
       "type": "line",
       "id": "night-eater.join.node.line.014",
       "lineId": "night-eater.join.line.014",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "注意事項には『照れ隠しで夜明けが三分遅れます』と記入した。職員は冗談だと思って笑い、翌朝三分遅刻した。",
-      "emotion": "comic"
+      "speakerId": "legacy.speaker.ij983g",
+      "speakerName": "夜を食べるもの",
+      "mode": "dialogue",
+      "text": "夜は冷える。……私の夜は、冷やさない。"
     },
     {
       "type": "line",
@@ -181,8 +185,8 @@
       "lineId": "night-eater.join.line.015",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "最後の空欄は本人へ渡した。影がペンを持つと、インクだけ先に暗くなる。文房具にも相性があるらしい。",
-      "emotion": "resolve"
+      "text": "外套の内側で、心臓が二拍ぶん飛んだ。この人の夜は、確かに冷たくない。それどころか、ちょっと心臓に悪い。",
+      "emotion": "comic"
     },
     {
       "type": "line",
@@ -190,33 +194,8 @@
       "lineId": "night-eater.join.line.016",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "本人が確認した条件は報酬でも勝率でもなく、『試合後に会場をすぐ明るくするか』だった。私は清掃が終わるまで待つと約束した。",
-      "emotion": "tender"
-    },
-    {
-      "type": "line",
-      "id": "night-eater.join.node.line.017",
-      "lineId": "night-eater.join.line.017",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "その代わり冷蔵庫、避難灯、レジ画面は食べない。三項目だけ妙に具体的なチーム規約ができた。"
-    },
-    {
-      "type": "line",
-      "id": "night-eater.join.node.line.018",
-      "lineId": "night-eater.join.line.018",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "登録完了音が鳴った瞬間、その小さな光まで食べられた。端末は無音で合格を表示した。祝う気持ちはあるらしい。"
-    },
-    {
-      "type": "line",
-      "id": "night-eater.join.node.line.019",
-      "lineId": "night-eater.join.line.019",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "こうしてチームには夜が加入した。勤務時間は空欄、顔写真は黒一色、特記事項は冷蔵庫厳禁。前途は暗い。本人には褒め言葉だった。",
-      "emotion": "tender"
+      "text": "星空の下で、私は登録画面をもう一度開いた。顔写真の欄には、さっき撮れた一枚を入れる。真っ黒な画面に、星がふたつ写っている写真だ。本人確認、これ以上なく本人である。",
+      "emotion": "resolve"
     },
     {
       "type": "choice",
@@ -225,10 +204,10 @@
         {
           "id": "night-eater.join.choice.001",
           "label": "照明を一列消し、影が話せる席を作る",
-          "result": "暗がりはそれ以上広がらなかった。苦情票ではない言葉が初めて届き、閉店後の一席が正式な控室になった。",
-          "intent": "本人の得意な戦い方を知る",
+          "result": "登録の残りは、星明かりの下のベンチで済ませた。得意技の欄に、彼女は自分で「閉店」と書いた。「どんな相手の試合も、私が閉店させるので」。プロフィールとして満点だった。帰り際、外套を返そうとしたら「次の夜まで貸しておく」と言われた。次の夜の約束が、こうして一つできた。",
+          "intent": "本人のままで登録できる形を作る",
           "promise": "登録は少し遅れるが、この人専用の成長ポイントを得る。",
-          "memory": "自分で書いた最初の条件を、相手は次の大事な場面でも覚えている。",
+          "memory": "星ふたつの証明写真を、二人ともお気に入りだと思っている。",
           "tone": "tender",
           "effects": [
             {
@@ -260,10 +239,10 @@
         {
           "id": "night-eater.join.choice.002",
           "label": "閉店作業の担当として、勤務表へ影を登録する",
-          "result": "名前欄には黒い線しか出なかった。それでも閉店は三分早まり、浮いた時間だけ会話ができた。",
-          "intent": "次の公式戦へ間に合わせる",
+          "result": "選手登録と同時に、彼女は本当に夜勤の閉店担当にもなった(本人の強い希望)。以来、うちの閉店作業は三十分早く終わる。彼女が最後の照明を「いただきます」で消すと、フロアが一瞬で星空になり、お客様が自主的に帰り支度を始めるからだ。世界一美しい蛍の光である。",
+          "intent": "本人の望む夜勤も、正式な仕事にする",
           "promise": "本人の詳細は後回しになるが、誰にでも使える成長ポイントを得る。",
-          "memory": "先に席を確保した判断は、チームの始まり方として記録に残る。",
+          "memory": "閉店担当の辞令を、彼女は額に入れて夜空に飾っている。",
           "tone": "pragmatic",
           "effects": [
             {
@@ -291,10 +270,10 @@
         {
           "id": "night-eater.join.choice.003",
           "label": "今回は夜を食べるものを誘わず、別の機会を待つ",
-          "result": "夜を食べるものの出場登録は行わなかった。相手は所属せず、それぞれの用事へ戻った。断る選択を残したことだけが、次に会う時まで静かに残った。",
+          "result": "「登録は、またの機会にしましょう」。彼女は星空を見上げて、静かにうなずいた。「急がない。夜は、長いので」。別れ際、外套だけは肩に残された。「冷えるといけないから」。優しさの押し売りが、夜の色をしていた。",
           "intent": "今回はチームへ誘わない",
           "promise": "今回の所属は見送るが、人物の物語と再会の可能性は失わない。",
-          "memory": "勧誘しない選択も尊重されたことを、相手は覚えている。",
+          "memory": "貸したままの外套を、二人とも返却期限なしだと思っている。",
           "tone": "pragmatic",
           "effects": [
             {
@@ -314,9 +293,9 @@
     }
   ],
   "debug": {
-    "status": "approved",
-    "sourceDocument": "native narrative block migration",
-    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "status": "review",
+    "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
+    "authorNote": "v2改稿: 真っ黒な顔写真と夜勤登録の暴走。街灯を食べて天の川を出す見せ場。星空の外套のドキドキ。",
     "legacyGeneratedIds": false
   }
 }

@@ -3,7 +3,7 @@
   "id": "minato.bond",
   "kind": "character",
   "title": "世界より難しい昼定食",
-  "summary": "世界を救えるミナトが、自分の昼食を選ぶため券売機と向き合う",
+  "summary": "従業員食堂で「選ぶ練習」。誰も困らない選択を、初めて自分の手で",
   "ownership": {
     "arcId": "character.minato",
     "characterId": "minato",
@@ -32,59 +32,17 @@
         "id": "minato.bond.asset.background.001",
         "kind": "background",
         "path": "/assets/story/bg-casino-cafe-rain.png",
-        "alt": "商店街の背景"
+        "alt": "雨の従業員食堂の背景"
       },
       {
         "id": "minato.bond.asset.still.001",
         "kind": "still",
         "path": "/assets/story/events/minato-bond-lunch-choice-v1.png",
-        "alt": "食事の選択盤を前に真剣に迷うミナトと、明るく待つミミ"
+        "alt": "食堂で昼食を選ぶミナトの一枚絵"
       }
     ]
   },
   "nodes": [
-    {
-      "type": "line",
-      "id": "minato.bond.node.line.001",
-      "lineId": "minato.bond.line.001",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "ミナトがチームに加わってから、商店街で顔を合わせることが増えた。今日は試合の話ではなく、少しだけ時間が空いている。"
-    },
-    {
-      "type": "line",
-      "id": "minato.bond.node.line.002",
-      "lineId": "minato.bond.line.002",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "試合のない午後。窓を雨が細く叩き、業務連絡も歓声も今日は遠い。二人きりになる予定ではなかったのに、空いている席は向かいだけだった。",
-      "emotion": "tender"
-    },
-    {
-      "type": "line",
-      "id": "minato.bond.node.line.003",
-      "lineId": "minato.bond.line.003",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "食堂の券売機の前で、彼は魔王城の門より長く立ち尽くしていた。後ろの列が二周しても、まだ決まらない。"
-    },
-    {
-      "type": "direction",
-      "id": "minato.bond.node.direction.003",
-      "command": {
-        "type": "still",
-        "assetId": "minato.bond.asset.still.001"
-      }
-    },
-    {
-      "type": "line",
-      "id": "minato.bond.node.line.004",
-      "lineId": "minato.bond.line.004",
-      "speakerId": "legacy.speaker.1vz3er0",
-      "speakerName": "ミナト",
-      "mode": "dialogue",
-      "text": "今日は地図を見ずに歩きたいんです。"
-    },
     {
       "type": "direction",
       "id": "minato.bond.node.direction.001",
@@ -95,21 +53,48 @@
       }
     },
     {
-      "type": "direction",
-      "id": "minato.bond.node.direction.002",
-      "command": {
-        "type": "effect",
-        "effectId": "pulse"
-      }
+      "type": "line",
+      "id": "minato.bond.node.line.001",
+      "lineId": "minato.bond.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "雨の昼、従業員食堂。今日はチームの昼食会——という名目の、特訓の日である。特訓内容、「ミナトが自分の昼を自分で選ぶ」。"
+    },
+    {
+      "type": "line",
+      "id": "minato.bond.node.line.002",
+      "lineId": "minato.bond.line.002",
+      "speakerId": "legacy.speaker.1vz3er0",
+      "speakerName": "ミナト",
+      "mode": "dialogue",
+      "text": "作戦を確認したい。今日のメニューは、五種類ある。"
+    },
+    {
+      "type": "line",
+      "id": "minato.bond.node.line.003",
+      "lineId": "minato.bond.line.003",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "作戦じゃないです。昼ごはんです。"
+    },
+    {
+      "type": "line",
+      "id": "minato.bond.node.line.004",
+      "lineId": "minato.bond.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私は秘密兵器を出した。トーナメント表である。カレー対ラーメン、定食対うどん、シードで本日のパスタ。五種類の総当たりは長いので、勝ち抜き戦にした。選択を、試合にしてしまえばいい。",
+      "emotion": "comic"
     },
     {
       "type": "line",
       "id": "minato.bond.node.line.005",
       "lineId": "minato.bond.line.005",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "試合も契約もない時間なら、もっと気楽に話せると思っていた。実際は、お茶を一口飲むたび沈黙の意味を考えてしまう。強さを見ている時より、ミナトの小さな癖のほうがずっと気になった。",
-      "emotion": "comic"
+      "speakerId": "legacy.speaker.1vz3er0",
+      "speakerName": "ミナト",
+      "mode": "dialogue",
+      "text": "トーナメント。……これなら、戦える。"
     },
     {
       "type": "line",
@@ -117,16 +102,33 @@
       "lineId": "minato.bond.line.006",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "雨粒の残る返却票と、使い込まれた革の鞘。戦場では見落としていた小さな癖が、何も起きない時間ほどよく見える。"
+      "text": "第一試合、カレー対ラーメン。ミナトの背中の花柄の短剣が、そわそわと鞘の中で揺れた。応援らしい。返却しなかった唯一の一本は、彼の昼にまで付き合う気だ。",
+      "emotion": "comic"
+    },
+    {
+      "type": "direction",
+      "id": "minato.bond.node.direction.002",
+      "command": {
+        "type": "still",
+        "assetId": "minato.bond.asset.still.001"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "minato.bond.node.direction.003",
+      "command": {
+        "type": "effect",
+        "effectId": "pulse"
+      }
     },
     {
       "type": "line",
       "id": "minato.bond.node.line.007",
       "lineId": "minato.bond.line.007",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
+      "speakerId": "legacy.speaker.1vz3er0",
+      "speakerName": "ミナト",
       "mode": "dialogue",
-      "text": "世界の命運は決められたのに、昼ごはんは決められないんですね。"
+      "text": "カレーの勝ち。理由は……匂いが、こっちに来たから。"
     },
     {
       "type": "line",
@@ -135,7 +137,7 @@
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "迷子になりますよ。"
+      "text": "いいですよ、その理由！　根拠なんて匂いで十分です！"
     },
     {
       "type": "line",
@@ -143,17 +145,16 @@
       "lineId": "minato.bond.line.009",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ミナトは誰かに必要な役目があれば、迷わず正しい方を選べる人。そのはずなのに、私の休憩が終わる時刻を気にして、話題を一つずつ短くしている。",
-      "emotion": "revelation"
+      "text": "準決勝、決勝と、勝負は白熱した。気づけば食堂の職人さんたちが厨房から身を乗り出し、周りの席が勝敗予想を始めていた。決勝カード、カレー対本日のパスタ。会場(食堂)の空気が張り詰める。",
+      "emotion": "comic"
     },
     {
       "type": "line",
       "id": "minato.bond.node.line.010",
       "lineId": "minato.bond.line.010",
-      "speakerId": "legacy.speaker.1vz3er0",
-      "speakerName": "ミナト",
-      "mode": "dialogue",
-      "text": "あれは選ばないと全員が困った。これは、どれを選んでも俺しか困らない。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ミナトは長考した。三分。五分。それから、静かに顔を上げた。魔王と対峙した時も、きっとこの目だったのだろう、という目で。"
     },
     {
       "type": "line",
@@ -162,7 +163,7 @@
       "speakerId": "legacy.speaker.1vz3er0",
       "speakerName": "ミナト",
       "mode": "dialogue",
-      "text": "目的地がなければ、迷子にもなれません。"
+      "text": "——カレーで行く。今日の俺は、カレーの気分だ。誰の命運も、懸かっていないが。"
     },
     {
       "type": "line",
@@ -170,24 +171,26 @@
       "lineId": "minato.bond.line.012",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "特別な話をしなくても、同じ音を聞いていられる。そんな時間が欲しかったのだと、失う前から気づいてしまった。"
+      "text": "食堂が、拍手に包まれた。厨房から「大盛りサービス！」の声。彼の初めての「気分」に、知らない人たちまで祝福を送っている。この街は、終わった物語の続きに、やさしい。",
+      "emotion": "tender"
     },
     {
       "type": "line",
       "id": "minato.bond.node.line.013",
       "lineId": "minato.bond.line.013",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "結局、私と同じ日替わり定食を押した。自分のための小さな選択ほど、練習が必要らしい。"
+      "speakerId": "legacy.speaker.1vz3er0",
+      "speakerName": "ミナト",
+      "mode": "dialogue",
+      "text": "……不思議だ。世界を救った時より、緊張した。"
     },
     {
       "type": "line",
       "id": "minato.bond.node.line.014",
       "lineId": "minato.bond.line.014",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "返却された神器が彼の迷いに反応し、倉庫一棟を戦場の空へ変えてしまう。甘い空気になりかけるたび、世界の方が先に耐えられなくなる。",
-      "emotion": "comic"
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "それ、伝票に書いておきますね。「本日の勝者、カレーの気分」。"
     },
     {
       "type": "line",
@@ -195,7 +198,7 @@
       "lineId": "minato.bond.line.015",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "必要だったのは新しい使命ではなく、何もしない日を選んでも見捨てられない確信だった。そう気づくと、何も起きなかった午後が急に大事な出来事へ変わった。",
+      "text": "スプーンを持つ手が、少しだけ震えていた。使命の震えじゃない。ただの、うれしい震えだ。一口目を食べた彼が「……うまい」と言った時、食堂の雨音が急に優しくなった。",
       "emotion": "tender"
     },
     {
@@ -204,34 +207,8 @@
       "lineId": "minato.bond.line.016",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "笑いが収まったあと、誰にも急かされず、昼食と次の旅先を自分で決めることという、驚くほど普通の望みが語られた。",
-      "emotion": "tender"
-    },
-    {
-      "type": "line",
-      "id": "minato.bond.node.line.017",
-      "lineId": "minato.bond.line.017",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "試合の外で交わした言葉のほうが、次の指示より長く残ることがある。"
-    },
-    {
-      "type": "line",
-      "id": "minato.bond.node.line.018",
-      "lineId": "minato.bond.line.018",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "それは私が叶えるものではない。ただ、叶うまで隣にいることならできる。そう言いかけて、言葉にする勇気だけが遅れた。",
-      "emotion": "tension"
-    },
-    {
-      "type": "line",
-      "id": "minato.bond.node.line.019",
-      "lineId": "minato.bond.line.019",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "柄に小さな花が彫られた短剣を間に置いたまま、私たちは雨が止んでもしばらく席を立たなかった。",
-      "emotion": "tender"
+      "text": "午後の予定を、決める番だった。特訓の続きにするか、チームの仕事にするか。",
+      "emotion": "resolve"
     },
     {
       "type": "choice",
@@ -240,10 +217,10 @@
         {
           "id": "minato.bond.choice.001",
           "label": "剣を一本も持たず、日用品の買い出しへ行く",
-          "result": "ミナトは包丁売り場で三度立ち止まったが、最後まで何も救わなかった。普通の買い物袋を持つ姿が、本人にはいちばん珍しかった。",
-          "intent": "相手の秘密の勝ち方を試す",
-          "promise": "読みにくい作戦になる代わりに、この人だけの成長を大きく進める。",
-          "memory": "任せた一戦の手応えが、次に力を見せる理由になる。",
+          "result": "午後は丸腰で商店街へ出た。ミナトは歯ブラシの色を八分、タオルの厚さを十二分悩んで、全部自分で選んだ。帰り道、両手の袋を見て彼が言った。「今日選んだものは、全部、俺しか使わない」。その顔が誇らしげだったので、レシートは記念に取っておくことにした。",
+          "intent": "誰も救わない選択を、午後いっぱい練習する",
+          "promise": "読みにくい成長になる代わりに、この人だけの成長を大きく進める。",
+          "memory": "丸腰の買い出しで選んだ歯ブラシの色を、ミナトは大事に使っている。",
           "tone": "wild",
           "effects": [
             {
@@ -270,10 +247,10 @@
         {
           "id": "minato.bond.choice.002",
           "label": "返却済みの剣を、全員で一晩だけ手入れする",
-          "result": "手入れが終わる頃には、剣の来歴がチーム全員の作戦案へ変わっていた。寝不足と引き換えに、扱える型が増えた。",
-          "intent": "チームの新しい連携を試す",
-          "promise": "本人の流儀は崩すが、全員へ配れる成長ポイントを得る。",
-          "memory": "成功した作戦と短くなった会話の両方が、次の判断まで残る。",
+          "result": "夜、控室で剣の手入れ会をした。四十七本は大喜びで、順番待ちの列を自主的に作った(並べるんだ……)。ミナトは一本ずつ布をかけ、遠征の思い出を一つずつ話した。チームのみんなが聞き役になり、夜食のおにぎりが三回追加された。良い夜だった。",
+          "intent": "終わった物語を、チームで見送る",
+          "promise": "本人の特訓は休みになるが、全員へ配れる成長ポイントを得る。",
+          "memory": "剣の手入れ会の夜を、チームは「四十七夜」と呼んでいる。",
           "tone": "pragmatic",
           "effects": [
             {
@@ -313,9 +290,9 @@
     }
   ],
   "debug": {
-    "status": "approved",
-    "sourceDocument": "native narrative block migration",
-    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "status": "review",
+    "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
+    "authorNote": "v2改稿: 昼食トーナメント事件。「カレーの気分」=初めて自分のために選ぶ。食堂全体が見守る群像コメディ。",
     "legacyGeneratedIds": false
   }
 }

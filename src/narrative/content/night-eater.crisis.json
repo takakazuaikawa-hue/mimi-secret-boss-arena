@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "id": "night-eater.crisis",
   "kind": "character",
-  "title": "最後の準備",
-  "summary": "無人の客席で起きる「最後の準備」",
+  "title": "完全消灯命令",
+  "summary": "黒い角封筒。会社が「夜」を在庫として一括徴収しようとする",
   "ownership": {
     "arcId": "character.night-eater",
     "characterId": "night-eater",
@@ -34,45 +34,11 @@
         "id": "night-eater.crisis.asset.background.001",
         "kind": "background",
         "path": "/assets/story/bg-contract-archive-v2.png",
-        "alt": "無人の客席の背景"
+        "alt": "契約保管庫の背景"
       }
     ]
   },
   "nodes": [
-    {
-      "type": "line",
-      "id": "night-eater.crisis.node.line.001",
-      "lineId": "night-eater.crisis.line.001",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "アルデバラン社から届いた契約確認書には、夜を食べるものの扱いを決める欄が残っていた。本人の意思を聞くため、無人の客席へ向かった。"
-    },
-    {
-      "type": "line",
-      "id": "night-eater.crisis.node.line.002",
-      "lineId": "night-eater.crisis.line.002",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "その週、相手は私を避けた。廊下の向こうに姿を見つけても、業務用の言葉だけを残して先に曲がる。",
-      "emotion": "tension"
-    },
-    {
-      "type": "line",
-      "id": "night-eater.crisis.node.line.003",
-      "lineId": "night-eater.crisis.line.003",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "会社は完全消灯の命令書を用意した。試合会場だけでなく、周辺一帯を三分間『存在しない夜』へ沈める内容だ。"
-    },
-    {
-      "type": "line",
-      "id": "night-eater.crisis.node.line.004",
-      "lineId": "night-eater.crisis.line.004",
-      "speakerId": "legacy.speaker.ij983g",
-      "speakerName": "夜を食べるもの",
-      "mode": "dialogue",
-      "text": "契約は私を照明設備として所有している。"
-    },
     {
       "type": "direction",
       "id": "night-eater.crisis.node.direction.001",
@@ -81,6 +47,41 @@
         "assetId": "night-eater.crisis.asset.background.001",
         "transition": "dissolve"
       }
+    },
+    {
+      "type": "line",
+      "id": "night-eater.crisis.node.line.001",
+      "lineId": "night-eater.crisis.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "黒い角封筒。差出人、アルデバラン社・物語資産管理部。件名——「完全消灯命令」。本文はこうだ。「資産『夜』の在庫過多につき、施設全灯の消去による闇の一括徴収を実施します。当該資産は徴収後、興行用暗闇として保管されます」。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.crisis.node.line.002",
+      "lineId": "night-eater.crisis.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "つまり会社は、彼女の夜を「暗闇の在庫」として缶詰にする気だ。星も、蛍も、外套の暖かさも、味の違いも、全部まとめて「闇」一種類として。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.crisis.node.line.003",
+      "lineId": "night-eater.crisis.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "予行日の夜、会社の作業員が施設の照明を、区画ごとに落とし始めた。安全灯まで、落とし始めた。私は現場責任者として、走った。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.crisis.node.line.004",
+      "lineId": "night-eater.crisis.line.004",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "待ってください！　安全灯は消しちゃだめです、規則です！　……それに、この暗闇、あなたたちのじゃない！"
     },
     {
       "type": "direction",
@@ -96,7 +97,7 @@
       "lineId": "night-eater.crisis.line.005",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "夜を食べるものの返事が短い。怒っている、と決めれば私の不安には名前がつく。でも以前の私も「姿を見せないのは誰とも関わりたくないからだ」と決めつけた。また同じ読み違いをするところだった。",
+      "text": "区画の明かりが落ち、本物の真っ暗が来た。誰かの子どもが、売店の前で泣き出す声がした。会社の作った闇は、冷たくて、何の味もしない。——その時だった。",
       "emotion": "tension"
     },
     {
@@ -105,7 +106,8 @@
       "lineId": "night-eater.crisis.line.006",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "嫌われたのなら理由を聞けばいい。そう思うのに、月明かりだけで読める閉店後のメニューを見るたび、聞いた答えで今までの時間が変わるのが怖かった。"
+      "text": "冷たい闇が、端から、静かに食べられていく。代わりに広がったのは、星のある夜だった。泣いていた子の頭上に、小さな星座がひとつ灯る。あの人の夜は、泣いている子を暗いままにしない。",
+      "emotion": "revelation"
     },
     {
       "type": "line",
@@ -114,24 +116,25 @@
       "speakerId": "legacy.speaker.ij983g",
       "speakerName": "夜を食べるもの",
       "mode": "dialogue",
-      "text": "命じられれば食べる。朝が戻る保証はしない。"
+      "text": "……まずい闇。星もなし、風もなし、誰の思い出も入っていない。星ゼロ。作り直しなさい。"
     },
     {
       "type": "line",
       "id": "night-eater.crisis.node.line.008",
       "lineId": "night-eater.crisis.line.008",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "そんな分類、直します。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "会社の闇に、史上最低評価が下った。でも彼女の声は、いつもより硬い。作業員が去り際に置いていった通告書の控えには、次の予行日と、太字の一文。「資産の抵抗は、資産価値の毀損とみなす」。",
+      "emotion": "tension"
     },
     {
       "type": "line",
       "id": "night-eater.crisis.node.line.009",
       "lineId": "night-eater.crisis.line.009",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "ようやく追いついた場所で、夜を食べるものは姿も名前も定めず、誰の視線からも逃げる夜に戻っていた。近づく前の、何も期待していなかった顔だ。"
+      "speakerId": "legacy.speaker.ij983g",
+      "speakerName": "夜を食べるもの",
+      "mode": "dialogue",
+      "text": "ミミ。……私、缶詰は嫌。でも、抵抗すればあなたの職場に迷惑が掛かる。だから今夜は、たくさん食べて、どこか遠くの夜になろうかと——"
     },
     {
       "type": "line",
@@ -140,33 +143,34 @@
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "勝つために、知らない人の朝まで賭けられません。"
+      "text": "だめです。"
     },
     {
       "type": "line",
       "id": "night-eater.crisis.node.line.011",
       "lineId": "night-eater.crisis.line.011",
-      "speakerId": "legacy.speaker.ij983g",
-      "speakerName": "夜を食べるもの",
-      "mode": "dialogue",
-      "text": "分類ではない。所有の欄を消せ。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "自分でも驚くくらい、はっきり出た。暗闇の中で、私は彼女の外套の端を、ぎゅっとつかんでいた。",
+      "emotion": "tension"
     },
     {
       "type": "line",
       "id": "night-eater.crisis.node.line.012",
       "lineId": "night-eater.crisis.line.012",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "原因は私への不信ではない。見つめられた瞬間に、相手の望む輪郭へ固定されることから私を遠ざけようとしている。そのやさしさを、やさしいまま受け入れてはいけない気がした。",
-      "emotion": "revelation"
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "あなたの夜は、在庫じゃないです。行灯の看取りの予約も、来年の品評会も、貸しっぱなしの外套の返却も、ぜんぶ、まだです。予定のある夜を、勝手に缶詰にはさせません。"
     },
     {
       "type": "line",
       "id": "night-eater.crisis.node.line.013",
       "lineId": "night-eater.crisis.line.013",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "影が私の足元から離れた。拒まれたのではなく、踏まないよう距離を取ってくれたのだと後で気づいた。"
+      "speakerId": "legacy.speaker.ij983g",
+      "speakerName": "夜を食べるもの",
+      "mode": "dialogue",
+      "text": "…………予定の、ある夜。"
     },
     {
       "type": "line",
@@ -174,17 +178,17 @@
       "lineId": "night-eater.crisis.line.014",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "照れ隠しに灯りを一つ食べるだけで、周辺一帯の夜明けが三分遅れる。別れ話のように静かな場面なのに、施設全体は最終災害手順へ移行している。",
-      "emotion": "comic"
+      "text": "暗闇の中、外套の内側に、そっと引き込まれた。真夏の夜の温度。耳元の声は、少しだけ震えていて、それでもいつものソムリエの口調に戻ろうとしていた。",
+      "emotion": "tender"
     },
     {
       "type": "line",
       "id": "night-eater.crisis.node.line.015",
       "lineId": "night-eater.crisis.line.015",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "正しい答えを当てることより、間違えたまま命令しないことを選ぶ。私は逃げ道をふさがない位置で止まり、聞きたかったことを短い言葉にした。",
-      "emotion": "resolve"
+      "speakerId": "legacy.speaker.ij983g",
+      "speakerName": "夜を食べるもの",
+      "mode": "dialogue",
+      "text": "……あなたの言葉、今夜いちばんの味だった。星五つ。……戦い方を、一緒に考えて。"
     },
     {
       "type": "line",
@@ -192,33 +196,8 @@
       "lineId": "night-eater.crisis.line.016",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "守るために離れるのは、残された側へ選択を渡さない。命令と同じだと告げると、初めて相手の表情が崩れた。",
+      "text": "予行日は、次の試合の日と同じ。つまり答えは、試合で見せるしかない。彼女の夜が「在庫」じゃないことを、満員の会場で。",
       "emotion": "resolve"
-    },
-    {
-      "type": "line",
-      "id": "night-eater.crisis.node.line.017",
-      "lineId": "night-eater.crisis.line.017",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "勝つための答えと、あとで自分を嫌いにならない答えは、同じとは限らない。"
-    },
-    {
-      "type": "line",
-      "id": "night-eater.crisis.node.line.018",
-      "lineId": "night-eater.crisis.line.018",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "私は勝利を約束しない。安全も約束できない。ただ、見えないままでも隣にいられる、静かな席を持つことを諦める判断だけは本人へ返すと決めた。"
-    },
-    {
-      "type": "line",
-      "id": "night-eater.crisis.node.line.019",
-      "lineId": "night-eater.crisis.line.019",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "並んで戻る廊下には、まだ一人分の距離がある。でも今度の沈黙は拒絶ではなく、同じ答えを考えるためのものだった。",
-      "emotion": "tender"
     },
     {
       "type": "choice",
@@ -227,10 +206,10 @@
         {
           "id": "night-eater.crisis.choice.001",
           "label": "照明を一列ずつ食べ、影の進路を作る",
-          "result": "照明が一列ずつ消え、味方の足元にだけ夜の道が伸びた。夜を全部奪わずに使う方法を、本人が初めて楽しんだ。",
-          "intent": "この人だけの突破法へ賭ける",
-          "promise": "予測しにくい方法を試し、この人専用の成長を大きく進める。",
-          "memory": "危機で選んだ方法は、契約を解く場面でも二人の共通の記憶として戻る。",
+          "result": "試合当日、彼女は満員の会場で「本来の夜」を初めて公開した。観客の頭上に星座、通路には蛍の道標、泣きそうな子の席にだけ小さな月。会場は総立ちになった。翌日の新聞の見出しは「闘技場に、夜の名所誕生」。名所を缶詰にする稟議は、さすがの会社でも通らなかった。",
+          "intent": "夜の価値を、隠さず全員に見せる",
+          "promise": "危険を引き受け、この人専用の成長を最大まで進める。",
+          "memory": "満員の会場が彼女の夜に拍手した日を、二人とも忘れない。",
           "tone": "wild",
           "effects": [
             {
@@ -257,10 +236,10 @@
         {
           "id": "night-eater.crisis.choice.002",
           "label": "正午の試合で、相手の影だけを奪う",
-          "result": "正午の光の中で、敵の影だけが一口ぶん欠けた。派手さはないが、誰でも合図を出せる安全な妨害手順になった。",
-          "intent": "全員が使える安全な突破法を作る",
-          "promise": "本人だけの切り札は抑え、チーム全体へ使える成長を持ち帰る。",
-          "memory": "全員で組み直した手順は、契約を解く場面でも選んだ責任として戻る。",
+          "result": "徴収の根拠は「夜の在庫過多」。ならばと、彼女は正午の試合に出て、真昼の太陽の下で相手の影だけを行儀よくいただき、完勝した。「夜が無くても強い」が証明され、在庫徴収の根拠は書類ごと崩れた。会社は「正午の闇」の分類に三週間悩んだ末、通告を取り下げた。",
+          "intent": "会社の理屈を、会社の書式で崩す",
+          "promise": "本人の切り札は隠したまま、チーム全体へ使える成長を持ち帰る。",
+          "memory": "真昼の完勝で通告を取り下げさせた一戦を、チームは「正午の夜」と呼ぶ。",
           "tone": "pragmatic",
           "effects": [
             {
@@ -305,9 +284,9 @@
     }
   ],
   "debug": {
-    "status": "approved",
-    "sourceDocument": "native narrative block migration",
-    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "status": "review",
+    "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
+    "authorNote": "v2改稿: 黒い角封筒(物語資産管理部)=Q2手掛かり「資産『夜』」。冷たい闇と星のある夜の対比。「予定のある夜」の反撃。",
     "legacyGeneratedIds": false
   }
 }

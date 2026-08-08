@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "id": "minato.crisis",
   "kind": "character",
-  "title": "最後の準備",
-  "summary": "搬入口で起きる「最後の準備」",
+  "title": "勇者機能、再開のお知らせ",
+  "summary": "黒い角封筒。会社がミナトの物語の「第二部」を勝手に企画する",
   "ownership": {
     "arcId": "character.minato",
     "characterId": "minato",
@@ -34,45 +34,11 @@
         "id": "minato.crisis.asset.background.001",
         "kind": "background",
         "path": "/assets/story/bg-contract-archive-v2.png",
-        "alt": "搬入口の背景"
+        "alt": "契約保管庫の背景"
       }
     ]
   },
   "nodes": [
-    {
-      "type": "line",
-      "id": "minato.crisis.node.line.001",
-      "lineId": "minato.crisis.line.001",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "アルデバラン社から届いた契約確認書には、ミナトの扱いを決める欄が残っていた。本人の意思を聞くため、搬入口へ向かった。"
-    },
-    {
-      "type": "line",
-      "id": "minato.crisis.node.line.002",
-      "lineId": "minato.crisis.line.002",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "その週、相手は私を避けた。廊下の向こうに姿を見つけても、業務用の言葉だけを残して先に曲がる。",
-      "emotion": "tension"
-    },
-    {
-      "type": "line",
-      "id": "minato.crisis.node.line.003",
-      "lineId": "minato.crisis.line.003",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "会社の命令書には『勇者機能の再開』とある。人を家電みたいに書く文字は、読んでいるだけで指が冷えた。"
-    },
-    {
-      "type": "line",
-      "id": "minato.crisis.node.line.004",
-      "lineId": "minato.crisis.line.004",
-      "speakerId": "legacy.speaker.1vz3er0",
-      "speakerName": "ミナト",
-      "mode": "dialogue",
-      "text": "命令があれば戦えます。命令がなくても戦えるかは、まだ分からない。"
-    },
     {
       "type": "direction",
       "id": "minato.crisis.node.direction.001",
@@ -81,6 +47,76 @@
         "assetId": "minato.crisis.asset.background.001",
         "transition": "dissolve"
       }
+    },
+    {
+      "type": "line",
+      "id": "minato.crisis.node.line.001",
+      "lineId": "minato.crisis.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "黒い角封筒。差出人、アルデバラン社・物語資産管理部。もう見慣れてしまった書式が、今度はミナト宛てに届いた。件名——「勇者機能 再開のお知らせ」。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "minato.crisis.node.line.002",
+      "lineId": "minato.crisis.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "本文が、ひどかった。「資産『勇者ミナト』の物語を、第二部として再演します。つきましては神器の再装備を命じます。魔王役、手配済み」。——魔王を、手配。物語を、在庫から出すみたいに。"
+    },
+    {
+      "type": "line",
+      "id": "minato.crisis.node.line.003",
+      "lineId": "minato.crisis.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "搬入口でミナトを見つけた時、彼はもう、旅装だった。あの日返したはずの外套を着て、空の鞘を四本、背負い直していた。"
+    },
+    {
+      "type": "line",
+      "id": "minato.crisis.node.line.004",
+      "lineId": "minato.crisis.line.004",
+      "speakerId": "legacy.speaker.1vz3er0",
+      "speakerName": "ミナト",
+      "mode": "dialogue",
+      "text": "……ミミさん。行ってきます。魔王が出るなら、勇者が行く。それが、俺の機能だ。"
+    },
+    {
+      "type": "line",
+      "id": "minato.crisis.node.line.005",
+      "lineId": "minato.crisis.line.005",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "待った待った待った！　その魔王、会社の「手配」ですよ！？　演目です！"
+    },
+    {
+      "type": "line",
+      "id": "minato.crisis.node.line.006",
+      "lineId": "minato.crisis.line.006",
+      "speakerId": "legacy.speaker.1vz3er0",
+      "speakerName": "ミナト",
+      "mode": "dialogue",
+      "text": "分かってる。偽物の魔王だ。……でも体が、もう歩き出してるんだ。呼ばれたら行く。四十七回、そうやって生きてきた。"
+    },
+    {
+      "type": "line",
+      "id": "minato.crisis.node.line.007",
+      "lineId": "minato.crisis.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "怖いのは、彼が嫌がっていないことだった。むしろ、ほっとしている。選ばなくていい日々に、帰ろうとしている。カレーを選べた人が、選ばなくていい台本に。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "minato.crisis.node.line.008",
+      "lineId": "minato.crisis.line.008",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "ミナトさん。それ、あなたの物語の続きじゃないです。会社の——再放送です。"
     },
     {
       "type": "direction",
@@ -92,55 +128,21 @@
     },
     {
       "type": "line",
-      "id": "minato.crisis.node.line.005",
-      "lineId": "minato.crisis.line.005",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "ミナトの返事が短い。怒っている、と決めれば私の不安には名前がつく。でも以前の私も「次の使命を渡せば迷わず立ち上がる人なのだ」と決めつけた。また同じ読み違いをするところだった。",
-      "emotion": "tension"
-    },
-    {
-      "type": "line",
-      "id": "minato.crisis.node.line.006",
-      "lineId": "minato.crisis.line.006",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "嫌われたのなら理由を聞けばいい。そう思うのに、柄に小さな花が彫られた短剣を見るたび、聞いた答えで今までの時間が変わるのが怖かった。"
-    },
-    {
-      "type": "line",
-      "id": "minato.crisis.node.line.007",
-      "lineId": "minato.crisis.line.007",
-      "speakerId": "legacy.speaker.1vz3er0",
-      "speakerName": "ミナト",
-      "mode": "dialogue",
-      "text": "命じられれば抜ける。命じられた方が、理由を考えずに済む。"
-    },
-    {
-      "type": "line",
-      "id": "minato.crisis.node.line.008",
-      "lineId": "minato.crisis.line.008",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "それを試すための試合じゃない。"
-    },
-    {
-      "type": "line",
       "id": "minato.crisis.node.line.009",
       "lineId": "minato.crisis.line.009",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ようやく追いついた場所で、ミナトは誰かに必要な役目があれば、迷わず正しい方を選べる人に戻っていた。近づく前の、何も期待していなかった顔だ。"
+      "text": "ミナトの足が、止まった。搬入口の風だけが通り過ぎていく。長い沈黙のあと、彼は空の鞘に手を置いた。",
+      "emotion": "tension"
     },
     {
       "type": "line",
       "id": "minato.crisis.node.line.010",
       "lineId": "minato.crisis.line.010",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
+      "speakerId": "legacy.speaker.1vz3er0",
+      "speakerName": "ミナト",
       "mode": "dialogue",
-      "text": "楽だからって、あなたの理由を会社へ預けないでください。私も預かりたくありません。"
+      "text": "……再放送。……そうか。台本のある魔王討伐は、討伐じゃなくて、興行か。"
     },
     {
       "type": "line",
@@ -149,24 +151,25 @@
       "speakerId": "legacy.speaker.1vz3er0",
       "speakerName": "ミナト",
       "mode": "dialogue",
-      "text": "では、試合の外で答えを探します。"
+      "text": "だが、断り方が分からない。世界を救えという依頼を、俺は一度も断ったことがない。断る技を、習得していない。"
     },
     {
       "type": "line",
       "id": "minato.crisis.node.line.012",
       "lineId": "minato.crisis.line.012",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "原因は私への不信ではない。勇者でなくなった自分には、帰る場所も選ぶ理由もないことから私を遠ざけようとしている。そのやさしさを、やさしいまま受け入れてはいけない気がした。",
-      "emotion": "revelation"
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "なら、練習しましょう。トーナメントの時みたいに。はい、私が会社役です。「勇者様、魔王が出ました。行ってください」。"
     },
     {
       "type": "line",
       "id": "minato.crisis.node.line.013",
       "lineId": "minato.crisis.line.013",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "返事の代わりに、彼は鞘を机へ横たえた。剣を置く音が、初めて戦いを拒む音に聞こえた。"
+      "speakerId": "legacy.speaker.1vz3er0",
+      "speakerName": "ミナト",
+      "mode": "dialogue",
+      "text": "「……い」…………「行かない」。——ぐ、これは、魔王より手強い……！"
     },
     {
       "type": "line",
@@ -174,17 +177,17 @@
       "lineId": "minato.crisis.line.014",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "返却された神器が彼の迷いに反応し、倉庫一棟を戦場の空へ変えてしまう。別れ話のように静かな場面なのに、施設全体は最終災害手順へ移行している。",
+      "text": "搬入口の隅で、勇者が「行かない」の発声練習をしている。十二回目でようやく、語尾が震えなくなった。十五回目で、彼は自分の言葉を継ぎ足した。",
       "emotion": "comic"
     },
     {
       "type": "line",
       "id": "minato.crisis.node.line.015",
       "lineId": "minato.crisis.line.015",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "正しい答えを当てることより、間違えたまま命令しないことを選ぶ。私は逃げ道をふさがない位置で止まり、聞きたかったことを短い言葉にした。",
-      "emotion": "resolve"
+      "speakerId": "legacy.speaker.1vz3er0",
+      "speakerName": "ミナト",
+      "mode": "dialogue",
+      "text": "行かない。今日の俺は——カレーの気分だ。"
     },
     {
       "type": "line",
@@ -192,16 +195,17 @@
       "lineId": "minato.crisis.line.016",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "守るために離れるのは、残された側へ選択を渡さない。命令と同じだと告げると、初めて相手の表情が崩れた。",
-      "emotion": "resolve"
+      "text": "完璧な断り文句だった(たぶん)。彼は封筒の返信欄に、初めての「辞退」を書いた。書き終えた手に、花柄の短剣がそっと寄り添うように鞘を鳴らした。旅装の外套は、その場で畳まれた。",
+      "emotion": "revelation"
     },
     {
       "type": "line",
       "id": "minato.crisis.node.line.017",
       "lineId": "minato.crisis.line.017",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "勝つための答えと、あとで自分を嫌いにならない答えは、同じとは限らない。"
+      "speakerId": "legacy.speaker.1vz3er0",
+      "speakerName": "ミナト",
+      "mode": "dialogue",
+      "text": "ミミさん。これを、預かっていてほしい。"
     },
     {
       "type": "line",
@@ -209,7 +213,8 @@
       "lineId": "minato.crisis.line.018",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私は勝利を約束しない。安全も約束できない。ただ、誰にも急かされず、昼食と次の旅先を自分で決めることを諦める判断だけは本人へ返すと決めた。"
+      "text": "差し出されたのは、花柄の短剣だった。彼の、たった一本の自分の選択。「もし俺がまた勇者の顔で歩き出したら、これで昼飯に呼び戻してくれ」。短剣を受け取る指が触れて、二人ぶんの体温が、一瞬だけ同じになった。",
+      "emotion": "tender"
     },
     {
       "type": "line",
@@ -217,8 +222,8 @@
       "lineId": "minato.crisis.line.019",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "並んで戻る廊下には、まだ一人分の距離がある。でも今度の沈黙は拒絶ではなく、同じ答えを考えるためのものだった。",
-      "emotion": "tender"
+      "text": "残る問題は、会社の「第二部」をどう潰すかだ。舞台に穴を開けるわけにはいかない。次の試合で、答えを見せる必要がある。",
+      "emotion": "resolve"
     },
     {
       "type": "choice",
@@ -227,10 +232,10 @@
         {
           "id": "minato.crisis.choice.001",
           "label": "返却済みの四十七本から一振りだけ借り直す",
-          "result": "借り直した一振りは、かつて返した時より軽かった。ミナトは救うためではなく、今いる仲間と勝つための一本として構え直した。",
-          "intent": "この人だけの突破法へ賭ける",
-          "promise": "予測しにくい方法を試し、この人専用の成長を大きく進める。",
-          "memory": "危機で選んだ方法は、契約を解く場面でも二人の共通の記憶として戻る。",
+          "result": "夜空へ手を上げると、一本だけ流星が降りてきた。最初の旅の、最初の剣だ。「第二部はやらない。だが最終興行の舞台で、本物の引退試合を一度だけやる」。借りるのは一戦だけ、という契約書を、剣は嬉しそうに三回光って承認した。会社の企画書は、本物の前に色あせることになる。",
+          "intent": "偽の再演ではなく、本物の締めくくりを見せる",
+          "promise": "危険を引き受け、この人専用の成長を最大まで進める。",
+          "memory": "一戦だけ帰ってきた最初の剣のことを、空の全部の神器が知っている。",
           "tone": "wild",
           "effects": [
             {
@@ -257,10 +262,10 @@
         {
           "id": "minato.crisis.choice.002",
           "label": "剣を抜かず、鞘と足運びだけで勝つ",
-          "result": "剣を抜かずに鞘で受け、足運びで敵の大技を外した。四十七本がなくても残った技を、三人の型へ分けられた。",
-          "intent": "全員が使える安全な突破法を作る",
-          "promise": "本人だけの切り札は抑え、チーム全体へ使える成長を持ち帰る。",
-          "memory": "全員で組み直した手順は、契約を解く場面でも選んだ責任として戻る。",
+          "result": "「勇者機能の再開」への回答は、次の公式戦で示した。ミナトは一度も刃を見せず、鞘と足運びだけで完勝した。観客席の物語資産管理部の担当者が、企画書を静かに鞄へ仕舞うのが見えた。刃のない勇者は、再演の演目にならない。それが答えだった。",
+          "intent": "会社の台本に乗らない勝ち方を見せる",
+          "promise": "本人の切り札は使わず、チーム全体へ使える成長を持ち帰る。",
+          "memory": "刃を見せずに勝った一戦を、チームは「不抜の試合」と呼んでいる。",
           "tone": "pragmatic",
           "effects": [
             {
@@ -305,9 +310,9 @@
     }
   ],
   "debug": {
-    "status": "approved",
-    "sourceDocument": "native narrative block migration",
-    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "status": "review",
+    "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
+    "authorNote": "v2改稿: 黒い角封筒(物語資産管理部)。第二部の再演命令=Q2手掛かり。「行かない」の練習と花柄の短剣の預託。",
     "legacyGeneratedIds": false
   }
 }

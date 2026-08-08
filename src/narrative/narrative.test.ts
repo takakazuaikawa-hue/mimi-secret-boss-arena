@@ -229,7 +229,7 @@ describe("narrative block migration", () => {
     expect(run.currentEvent?.scene.id).toBe("gidonozeaas.crisis");
     expect(
       run.currentEvent?.scene.lines.find((line) =>
-        line.text.startsWith("持つ者が決めろ"),
+        line.text.startsWith("私は預かっていた鍵"),
       )?.direction?.still,
     ).toBe("/assets/story/events/gidonozeaas-crisis-key-v2.png");
   });

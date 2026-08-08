@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "id": "night-eater.liberation",
   "kind": "liberation",
-  "title": "契約の外側",
-  "summary": "無人の客席で起きる「契約の外側」",
+  "title": "安全灯はのこす",
+  "summary": "所有欄から夜へ名前を返す。閉店後の一席は、契約なしで",
   "ownership": {
     "arcId": "character.night-eater",
     "characterId": "night-eater",
@@ -28,57 +28,23 @@
     "weight": 1
   },
   "presentation": {
-    "location": "無人の客席",
+    "location": "閉店後のカフェ",
     "assets": [
       {
         "id": "night-eater.liberation.asset.background.001",
         "kind": "background",
         "path": "/assets/story/bg-casino-cafe-night.png",
-        "alt": "無人の客席の背景"
+        "alt": "閉店後のカジノカフェの背景"
       },
       {
         "id": "night-eater.liberation.asset.still.001",
         "kind": "still",
         "path": "/assets/story/events/night-eater-liberation.png",
-        "alt": "契約の外側のイベント一枚絵"
+        "alt": "星空の下で向き合う二人の一枚絵"
       }
     ]
   },
   "nodes": [
-    {
-      "type": "line",
-      "id": "night-eater.liberation.node.line.001",
-      "lineId": "night-eater.liberation.line.001",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "最終大会が近づくなか、夜を食べるものの契約を終わらせられる条件がそろった。今日は勝敗より先に、本人の意思を確かめに来た。"
-    },
-    {
-      "type": "line",
-      "id": "night-eater.liberation.node.line.002",
-      "lineId": "night-eater.liberation.line.002",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "解除届を渡せば、この人を呼び止める権利はなくなる。最初から持つべきでなかった権利なのに、指が紙を離さない。",
-      "emotion": "tension"
-    },
-    {
-      "type": "line",
-      "id": "night-eater.liberation.node.line.003",
-      "lineId": "night-eater.liberation.line.003",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "解除届を読み上げる間、部屋の照明は一度も消えなかった。影は窓際で、朝の青さをじっと見ている。"
-    },
-    {
-      "type": "line",
-      "id": "night-eater.liberation.node.line.004",
-      "lineId": "night-eater.liberation.line.004",
-      "speakerId": "legacy.speaker.ij983g",
-      "speakerName": "夜を食べるもの",
-      "mode": "dialogue",
-      "text": "暗くなった。それでもお前はいる。"
-    },
     {
       "type": "direction",
       "id": "night-eater.liberation.node.direction.001",
@@ -89,25 +55,43 @@
       }
     },
     {
-      "type": "direction",
-      "id": "night-eater.liberation.node.direction.002",
-      "command": {
-        "type": "effect",
-        "effectId": "flash"
-      }
+      "type": "line",
+      "id": "night-eater.liberation.node.line.001",
+      "lineId": "night-eater.liberation.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "閉店後のカフェ。契約を終わらせる夜に、彼女が指定した席は、いつもの隅の暗がりだった。机の上には解除届と、彼女がなぜか持参した小さな安全灯。"
     },
     {
       "type": "line",
-      "id": "night-eater.liberation.node.line.005",
-      "lineId": "night-eater.liberation.line.005",
+      "id": "night-eater.liberation.node.line.002",
+      "lineId": "night-eater.liberation.line.002",
+      "speakerId": "legacy.speaker.ij983g",
+      "speakerName": "夜を食べるもの",
+      "mode": "dialogue",
+      "text": "契約書の、ここ。「照明設備の管理権は所有者に帰属する」。……つまり今、私の夜は、書類の上ではあなたの持ち物なの。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.liberation.node.line.003",
+      "lineId": "night-eater.liberation.line.003",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "夜の所有って、書類にすると急に、とんでもないことしてますね私。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.liberation.node.line.004",
+      "lineId": "night-eater.liberation.line.004",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "解除届は薄く、月明かりだけで読める閉店後のメニューより軽い。こんな紙で自由を渡せると思うこと自体、最後の所有なのかもしれない。手汗で端が少し曲がった。",
+      "text": "解除届に、二人で判を押した。所有欄の彼女の名前が、すっと薄れて消える。その瞬間、店の窓の外で、夜が少しだけ濃くなった気がした。名前が、夜へ帰ったのだ。",
       "emotion": "tension"
     },
     {
       "type": "direction",
-      "id": "night-eater.liberation.node.direction.003",
+      "id": "night-eater.liberation.node.direction.002",
       "command": {
         "type": "still",
         "assetId": "night-eater.liberation.asset.still.001"
@@ -115,7 +99,7 @@
     },
     {
       "type": "direction",
-      "id": "night-eater.liberation.node.direction.004",
+      "id": "night-eater.liberation.node.direction.003",
       "command": {
         "type": "effect",
         "effectId": "pulse"
@@ -123,29 +107,39 @@
     },
     {
       "type": "line",
+      "id": "night-eater.liberation.node.line.005",
+      "lineId": "night-eater.liberation.line.005",
+      "speakerId": "legacy.speaker.ij983g",
+      "speakerName": "夜を食べるもの",
+      "mode": "dialogue",
+      "text": "……ひとつ、聞いても。契約が終わっても、私はまだ、ここで食べていい？"
+    },
+    {
+      "type": "line",
       "id": "night-eater.liberation.node.line.006",
       "lineId": "night-eater.liberation.line.006",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "夜を食べるものは急かさない。姿も名前も定めず、誰の視線からも逃げる夜でありながら、私の迷いが言葉になるまで待っている。"
+      "text": "声が、少しだけ小さかった。夜そのものみたいな人が、閉店後の一席の心配をしている。私は笑いそうになって、やめて、店員の顔で答えた。",
+      "emotion": "tender"
     },
     {
       "type": "line",
       "id": "night-eater.liberation.node.line.007",
       "lineId": "night-eater.liberation.line.007",
-      "speakerId": "legacy.speaker.ij983g",
-      "speakerName": "夜を食べるもの",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "契約が消えれば、ここへ夜を運ぶ義務もなくなる。"
+      "text": "当店、閉店後の常連様がお一人いらっしゃいます。契約書はなくても、指定席はなくなりません。"
     },
     {
       "type": "line",
       "id": "night-eater.liberation.node.line.008",
       "lineId": "night-eater.liberation.line.008",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
+      "speakerId": "legacy.speaker.ij983g",
+      "speakerName": "夜を食べるもの",
       "mode": "dialogue",
-      "text": "避難灯、点いてますから。"
+      "text": "……常連。……いい言葉。所有より、ずっと上等。"
     },
     {
       "type": "line",
@@ -153,35 +147,35 @@
       "lineId": "night-eater.liberation.line.009",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "勝つために必要だという理由なら、いくらでも並べられた。でも今伝えたいのは、見えないままでも隣にいられる、静かな席を持つことをこの先も見届けたいという、命令にできない願いだった。",
-      "emotion": "tender"
+      "text": "それから彼女は、持参した安全灯を机の真ん中に置いた。小さな緑の灯り。彼女の世界で、唯一おいしそうに見えない光。",
+      "emotion": "tension"
     },
     {
       "type": "line",
       "id": "night-eater.liberation.node.line.010",
       "lineId": "night-eater.liberation.line.010",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
+      "speakerId": "legacy.speaker.ij983g",
+      "speakerName": "夜を食べるもの",
       "mode": "dialogue",
-      "text": "来たい夜だけ、来てください。閉店時間は守ってもらいますけど。"
+      "text": "これは、食べ残す灯り。私がどんなにお腹を空かせても、あなたの帰り道の分は、残す。……自由になった私の、最初の校則。"
     },
     {
       "type": "line",
       "id": "night-eater.liberation.node.line.011",
       "lineId": "night-eater.liberation.line.011",
-      "speakerId": "legacy.speaker.ij983g",
-      "speakerName": "夜を食べるもの",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "ああ。残してよかった。"
+      "text": "校則……規則、じゃなくてですか。"
     },
     {
       "type": "line",
       "id": "night-eater.liberation.node.line.012",
       "lineId": "night-eater.liberation.line.012",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "残ってほしいと言うことと、自由にすることは両立するのか。答えは書類にない。だから、本人へ聞くしかない。",
-      "emotion": "resolve"
+      "speakerId": "legacy.speaker.ij983g",
+      "speakerName": "夜を食べるもの",
+      "mode": "dialogue",
+      "text": "規則は、破りたくなる味がする。校則は……守ると、ちょっと誇らしい味がするの。"
     },
     {
       "type": "line",
@@ -189,7 +183,8 @@
       "lineId": "night-eater.liberation.line.013",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "カーテンの端が揺れ、私の足元へ小さな夜が戻った。返事の代わりに、今日はそこだけ涼しい。"
+      "text": "食レポの人の語彙は、最後まで食レポだった。緑の小さな灯りを挟んで、契約のなくなった夜と、閉店後の店員が座っている。この距離に名前はまだ無いけれど、常連と店員よりは、たぶんちょっと近い。",
+      "emotion": "tender"
     },
     {
       "type": "line",
@@ -197,51 +192,7 @@
       "lineId": "night-eater.liberation.line.014",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "照れ隠しに灯りを一つ食べるだけで、周辺一帯の夜明けが三分遅れるほどの力を持つ存在が、一枚の紙を前に私の返事だけを待っている。その不釣り合いさが、泣きそうな場面を少しだけ可笑しくした。",
-      "emotion": "comic"
-    },
-    {
-      "type": "line",
-      "id": "night-eater.liberation.node.line.015",
-      "lineId": "night-eater.liberation.line.015",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "もう呼び止める権利はない。それでも夜を食べるものが振り返るなら、そこから先は契約ではなく本人の答えだ。私は追わず、その一歩を待った。",
-      "emotion": "resolve"
-    },
-    {
-      "type": "line",
-      "id": "night-eater.liberation.node.line.016",
-      "lineId": "night-eater.liberation.line.016",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "契約印が消える。関係まで消える音はしなかった。代わりに、これからは断られるかもしれないという自由な静けさが来た。",
-      "emotion": "revelation"
-    },
-    {
-      "type": "line",
-      "id": "night-eater.liberation.node.line.017",
-      "lineId": "night-eater.liberation.line.017",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "契約をなくしても関係はなくならない。次に同じ場所へ立つなら、互いに選び直した結果でありたい。"
-    },
-    {
-      "type": "line",
-      "id": "night-eater.liberation.node.line.018",
-      "lineId": "night-eater.liberation.line.018",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "月明かりだけで読める閉店後のメニューを返そうとすると、相手は受け取らなかった。「預けるのではない。次に会う場所の印だ」と言った。",
-      "emotion": "tender"
-    },
-    {
-      "type": "line",
-      "id": "night-eater.liberation.node.line.019",
-      "lineId": "night-eater.liberation.line.019",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "別れの挨拶をした。それでも足音は同じ出口へ向かっている。契約ではなく、本人の歩幅で。",
+      "text": "帰り支度の前に、決めることが一つ。この夜の締め方だ。",
       "emotion": "resolve"
     },
     {
@@ -251,10 +202,10 @@
         {
           "id": "night-eater.liberation.choice.001",
           "label": "照明設備の所有欄を消し、夜へ名前を返す",
-          "result": "契約灯が消えても夜は広がらなかった。閉店時刻になると、いつもの席へ自分から影が伸びてきた。",
-          "intent": "契約と出場登録を完全に分ける",
+          "result": "解除届の控えと一緒に、私は施設の照明台帳も書き換えた。管理権の欄に「夜間はカフェ常連様の裁量に委ねる」。総務には怒られたが、撤回はしなかった。彼女はその一行を三回読んで、「この台帳、今まで読んだ書類でいちばおいしい」と評した。書類の食レポは初めて聞いた。",
+          "intent": "書類の上でも、夜を本人へ返す",
           "promise": "所有者名を消し、本人が自分の名で次の試合を選べるようにする。",
-          "memory": "自由になったあと、最初に自分で選んだ集合時刻が残る。",
+          "memory": "照明台帳の一行を、彼女は宝物の判例だと思っている。",
           "tone": "defiant",
           "effects": [
             {
@@ -278,10 +229,10 @@
         {
           "id": "night-eater.liberation.choice.002",
           "label": "契約を解いたあと、閉店作業だけ改めて頼む",
-          "result": "勤務表には本人が黒い線を引いた。雇用印はないのに、閉店は三分早まり、その三分で次の試合の話をした。",
-          "intent": "自由な相手へ改めて協力を頼む",
-          "promise": "断る権利を返したうえで、決勝を一緒に戦う新しい約束を結ぶ。",
-          "memory": "頼まれたからではなく、頼みを聞いたから残った。その違いを二人が覚えている。",
+          "result": "「契約じゃなくて、アルバイトとしてどうですか。閉店作業、時給は星空でお支払いします」。彼女は真剣に検討し(三十秒)、「前払いで」と答えた。その夜の閉店作業は、天の川の下で行われた。時給の相場としては、たぶん史上最高である。",
+          "intent": "自由になった人へ、改めて仕事を頼む",
+          "promise": "断る権利を返したうえで、閉店作業の新しい約束を結ぶ。",
+          "memory": "時給が星空のアルバイト契約を、二人とも気に入っている。",
           "tone": "tender",
           "effects": [
             {
@@ -345,9 +296,9 @@
     }
   ],
   "debug": {
-    "status": "approved",
-    "sourceDocument": "native narrative block migration",
-    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "status": "review",
+    "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
+    "authorNote": "v2改稿: 所有欄から夜へ名前を返す。「常連」と「食べ残す灯り(最初の校則)」。シリアス対比は保ちつつ会話比率を確保。",
     "legacyGeneratedIds": false
   }
 }

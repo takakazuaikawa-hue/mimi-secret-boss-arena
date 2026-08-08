@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "id": "night-eater.meet",
   "kind": "character",
-  "title": "最初の遭遇",
-  "summary": "照明管理室で起きる「最初の遭遇」",
+  "title": "電球が怯える夜",
+  "summary": "照明管理室で、光をワイン のように味わう影と出会う",
   "ownership": {
     "arcId": "character.night-eater",
     "characterId": "night-eater",
@@ -38,44 +38,11 @@
         "id": "night-eater.meet.asset.still.001",
         "kind": "still",
         "path": "/assets/story/encounters/night-eater.png",
-        "alt": "最初の遭遇のイベント一枚絵"
+        "alt": "スプーンで照明を味わう夜を食べるものの一枚絵"
       }
     ]
   },
   "nodes": [
-    {
-      "type": "line",
-      "id": "night-eater.meet.node.line.001",
-      "lineId": "night-eater.meet.line.001",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "閉店五分前。私は照明管理室へ『電球が一斉に怯えている』という、修理伝票としてかなり詩的な苦情を届けに行った。"
-    },
-    {
-      "type": "line",
-      "id": "night-eater.meet.node.line.002",
-      "lineId": "night-eater.meet.line.002",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "廊下の灯りが、手前から順にぱく、ぱく、ぱく、と消えた。停電にしては行儀がよく、食事にしては設備が高い。"
-    },
-    {
-      "type": "line",
-      "id": "night-eater.meet.node.line.003",
-      "lineId": "night-eater.meet.line.003",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "閉店五分前、照明が一つずつ暗くなった。故障なら不規則に消えるはずなのに、闇は席の間を選んで歩いてくる。"
-    },
-    {
-      "type": "line",
-      "id": "night-eater.meet.node.line.004",
-      "lineId": "night-eater.meet.line.004",
-      "speakerId": "legacy.speaker.ij983g",
-      "speakerName": "夜を食べるもの",
-      "mode": "dialogue",
-      "text": "灯りが多すぎる。"
-    },
     {
       "type": "direction",
       "id": "night-eater.meet.node.direction.001",
@@ -86,25 +53,24 @@
       }
     },
     {
-      "type": "direction",
-      "id": "night-eater.meet.node.direction.002",
-      "command": {
-        "type": "effect",
-        "effectId": "flash"
-      }
+      "type": "line",
+      "id": "night-eater.meet.node.line.001",
+      "lineId": "night-eater.meet.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "閉店五分前。私は照明管理室へ、『電球が一斉に怯えている』という、修理伝票としてかなり詩的な苦情を届けに行った。"
     },
     {
       "type": "line",
-      "id": "night-eater.meet.node.line.005",
-      "lineId": "night-eater.meet.line.005",
+      "id": "night-eater.meet.node.line.002",
+      "lineId": "night-eater.meet.line.002",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "兎耳が危険を知らせるより先に、館内放送が『照明故障により本日の閉店を四分繰り上げます』と告げた。犯人、仕事が速い。",
-      "emotion": "comic"
+      "text": "管理室の扉を開けると、中は真っ暗だった。おかしい。ここは照明の、いわば本丸である。その暗闇の奥で、上品な影が、スプーンを持って座っていた。"
     },
     {
       "type": "direction",
-      "id": "night-eater.meet.node.direction.003",
+      "id": "night-eater.meet.node.direction.002",
       "command": {
         "type": "still",
         "assetId": "night-eater.meet.asset.still.001"
@@ -112,7 +78,7 @@
     },
     {
       "type": "direction",
-      "id": "night-eater.meet.node.direction.004",
+      "id": "night-eater.meet.node.direction.003",
       "command": {
         "type": "effect",
         "effectId": "pulse"
@@ -120,38 +86,74 @@
     },
     {
       "type": "line",
+      "id": "night-eater.meet.node.line.003",
+      "lineId": "night-eater.meet.line.003",
+      "speakerId": "legacy.speaker.ij983g",
+      "speakerName": "夜を食べるもの",
+      "mode": "dialogue",
+      "text": "……この蛍光灯は、渋みが強い。事務仕事の苦労の味がする。——三つ星。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.meet.node.line.004",
+      "lineId": "night-eater.meet.line.004",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "食レポしてる場合ですか！　うちの電球が怯えてるんですけど！？"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.meet.node.line.005",
+      "lineId": "night-eater.meet.line.005",
+      "speakerId": "legacy.speaker.ij983g",
+      "speakerName": "夜を食べるもの",
+      "mode": "dialogue",
+      "text": "怯えさせてはいない。順番を、待たせているだけ。……熟成中の光を先に食べるのは、無作法なので。"
+    },
+    {
+      "type": "line",
       "id": "night-eater.meet.node.line.006",
       "lineId": "night-eater.meet.line.006",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "暗がりの中央に、夜より黒い誰かがいた。乙女ゲームなら運命の出会いだ。派遣業務なら、始末書の出会いである。",
-      "emotion": "tension"
+      "text": "光を食べる。つまりこの影が、最近フロアの照明が二割暗い原因だ。犯人は自首するどころか、ソムリエの顔で在庫を格付けしていた。",
+      "emotion": "comic"
     },
     {
       "type": "line",
       "id": "night-eater.meet.node.line.007",
       "lineId": "night-eater.meet.line.007",
-      "speakerId": "legacy.speaker.ij983g",
-      "speakerName": "夜を食べるもの",
-      "mode": "dialogue",
-      "text": "まだ明るい。夜が入る場所がない。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私が名乗ろうとした、その時。影の手元が滑って、スプーンが大シャンデリアの制御盤に触れた。——フロア全体の音が、消えた。",
+      "emotion": "tension"
+    },
+    {
+      "type": "direction",
+      "id": "night-eater.meet.node.direction.004",
+      "command": {
+        "type": "effect",
+        "effectId": "flash"
+      }
     },
     {
       "type": "line",
       "id": "night-eater.meet.node.line.008",
       "lineId": "night-eater.meet.line.008",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "また照明故障の苦情……誰？"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "真っ暗。完全な、真っ暗だった。カジノの喧騒が遠くでざわめきに変わる。パニックになりかけた私の耳元で、声だけが、静かに近かった。",
+      "emotion": "tension"
     },
     {
       "type": "line",
       "id": "night-eater.meet.node.line.009",
       "lineId": "night-eater.meet.line.009",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "とりあえず普通のお客様へする角度で頭を下げた。相手も闇を十五度ほど傾けた。礼儀だけは通じたらしい。"
+      "speakerId": "legacy.speaker.ij983g",
+      "speakerName": "夜を食べるもの",
+      "mode": "dialogue",
+      "text": "……こわい？"
     },
     {
       "type": "line",
@@ -160,24 +162,25 @@
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "閉店作業を手伝ってくれるなら助かりますけど、お客様ごと消すのはやめてください。"
+      "text": "び、びっくりしただけです。それより早く戻してください、お客様が転びます！"
     },
     {
       "type": "line",
       "id": "night-eater.meet.node.line.011",
       "lineId": "night-eater.meet.line.011",
-      "speakerId": "legacy.speaker.ij983g",
-      "speakerName": "夜を食べるもの",
-      "mode": "dialogue",
-      "text": "夜だ。名前が必要なら、そう呼べ。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "短い沈黙のあと、信じられないことが起きた。影が、口元に手を当てて、食べた光を一口ぶん、そっと戻したのだ。シャンデリアが灯り直る。フロアの喧騒が帰ってくる。",
+      "emotion": "revelation"
     },
     {
       "type": "line",
       "id": "night-eater.meet.node.line.012",
       "lineId": "night-eater.meet.line.012",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "名前を聞いた直後、厨房から『冷蔵庫の明かりまで消えた』と悲鳴が上がった。夜は気まずそうに、冷蔵庫の中だけ返した。"
+      "speakerId": "legacy.speaker.ij983g",
+      "speakerName": "夜を食べるもの",
+      "mode": "dialogue",
+      "text": "……戻したのは、初めて。味見済みの光は、少し優しい味になっているけれど。"
     },
     {
       "type": "line",
@@ -185,16 +188,17 @@
       "lineId": "night-eater.meet.line.013",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "闇の奥で何かが肩をすくめた。ずいぶん若い仕草だが、今月の照明苦情票は年輪のように厚い。"
+      "text": "言われてみれば、灯り直ったシャンデリアは、前より少しだけ暖色だった。お客様たちが「今夜は明かりがきれいだ」と口々に言っている。営業妨害と営業貢献を同時にする存在を、私は初めて見た。",
+      "emotion": "comic"
     },
     {
       "type": "line",
       "id": "night-eater.meet.node.line.014",
       "lineId": "night-eater.meet.line.014",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "照れ隠しに非常口の矢印を半分だけ食べた。矢印が迷い始めたので、私はすぐ吐き出してもらった。",
-      "emotion": "comic"
+      "speakerId": "legacy.speaker.ij983g",
+      "speakerName": "夜を食べるもの",
+      "mode": "dialogue",
+      "text": "私の夜は、長すぎるの。誰の朝にも、もう邪魔されない、終わった夜。……だから味のある光が、恋しくて。"
     },
     {
       "type": "line",
@@ -202,17 +206,17 @@
       "lineId": "night-eater.meet.line.015",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "事情は分からない。ただ、照明を食べる夜が注意されると素直に戻すことと、戻す場所が毎回三センチずれることは分かった。",
+      "text": "終わった夜。その言い方が、少しだけ寂しくて、私は接客の頭で考えた。怯える電球と、お腹を空かせた夜と、閉店五分前。全部まとめて解決する方法を。",
       "emotion": "tender"
     },
     {
       "type": "line",
       "id": "night-eater.meet.node.line.016",
       "lineId": "night-eater.meet.line.016",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "怖くないと言えば嘘になる。でも今は恐怖より、閉店処理をどの時刻で打刻すべきかが私を追い詰めていた。",
-      "emotion": "revelation"
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "お客様。当店、賞味期限切れ間近の電球在庫が、倉庫に二百個ほどございます。——お味見、なさいますか。"
     },
     {
       "type": "line",
@@ -220,24 +224,8 @@
       "lineId": "night-eater.meet.line.017",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "事情はまだ分からない。でも、ここで立ち去れば、たぶん後悔する。"
-    },
-    {
-      "type": "line",
-      "id": "night-eater.meet.node.line.018",
-      "lineId": "night-eater.meet.line.018",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "名前を聞いただけ。約束も、契約も、まだ何もない。それなのに別れ際、次に会った時の言葉を考えている自分がいた。",
-      "emotion": "tender"
-    },
-    {
-      "type": "line",
-      "id": "night-eater.meet.node.line.019",
-      "lineId": "night-eater.meet.line.019",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "その場に残った月明かりだけで読める閉店後のメニューを見て、私は今日の出来事を勤務報告の一行だけでは終わらせられないと知った。"
+      "text": "影が、ぴたりと止まった。暗闇の中で、初めて表情が分かった。あれは絶対に、目を輝かせている顔だ。光ってないのに、分かる。",
+      "emotion": "comic"
     },
     {
       "type": "choice",
@@ -246,10 +234,10 @@
         {
           "id": "night-eater.meet.choice.001",
           "label": "照明を一列だけ消して話す",
-          "result": "暗がりは広がらず、初めて苦情ではない返事が届いた。",
-          "intent": "登録の前に、目の前の相手を知る",
-          "promise": "目先の報酬は得ない代わりに、相手が何を望んでいるかを確かめる。",
-          "memory": "手続きより先に話を聞いたことを、相手は最初の印象として覚えている。",
+          "result": "在庫の電球を並べて、閉店後の試食会を開いた。彼女は二百個を「若い」「熟しすぎ」「これは当たり年」と丁寧に格付けし、最後に管理室の怯えていた電球たちへ「あなたたちは食べない。安心なさい」と宣言した。翌朝、電球の怯え苦情はゼロになった。代わりに私の机へ、星五つの評価票が置いてあった。評価対象、「閉店五分前の機転」。",
+          "intent": "追い出すより先に、腹を満たす段取りをする",
+          "promise": "目先の報酬は得ない代わりに、この人が何に飢えているかを知る。",
+          "memory": "在庫処分と夜食を両立させた店員として、夜を食べるものは私を覚えている。",
           "tone": "tender",
           "effects": [
             {
@@ -268,10 +256,10 @@
         {
           "id": "night-eater.meet.choice.002",
           "label": "今日は夜を食べるものを誘わず、用事へ戻る",
-          "result": "夜を食べるものの名前と出会った場所だけを覚え、今日は普段の仕事へ戻った。急いで所属を決めなかったことが、次に会う時の距離として残った。",
-          "intent": "今は勧誘せず、相手との距離を保つ",
+          "result": "修理伝票の原因欄に、私は正直に書いた。「原因: 美食家。対処: 在庫案内済み」。上長は首をかしげていたが、以後、電球の怯え苦情は来なくなった。倉庫の期限切れ電球だけが、なぜか毎週きれいに減っていく。伝票の隅に、たまに小さな星の落書きが増えている。",
+          "intent": "今日は修理伝票の処理に徹する",
           "promise": "所属選手にはならないが、後の出来事で再会できる。",
-          "memory": "最初の出会いで急いで仲間にしなかったことが、次の再会へ残る。",
+          "memory": "倉庫の在庫案内をした店員のことを、夜を食べるものは覚えている。",
           "tone": "pragmatic",
           "effects": [],
           "goto": "night-eater.meet.node.effect.001"
@@ -301,9 +289,9 @@
     }
   ],
   "debug": {
-    "status": "approved",
-    "sourceDocument": "native narrative block migration",
-    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "status": "review",
+    "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
+    "authorNote": "v2改稿: 大シャンデリア消灯事件と初めての「戻す」。暗闇で声だけ近いドキドキ。Q1手掛かり=誰の朝にも邪魔されない終わった夜。",
     "legacyGeneratedIds": false
   }
 }

@@ -3,7 +3,7 @@
   "id": "gidonozeaas.join",
   "kind": "character",
   "title": "三日間だけの同伴客",
-  "summary": "従業員控室で起きる「三日間だけの同伴客」",
+  "summary": "登録端末が出場カテゴリ「災害」を印字し、本人が条件を自分で書く",
   "ownership": {
     "arcId": "character.gidonozeaas",
     "characterId": "gidonozeaas",
@@ -32,19 +32,19 @@
         "id": "gidonozeaas.join.asset.background.001",
         "kind": "background",
         "path": "/assets/story/bg-staff-room-rain.png",
-        "alt": "従業員控室の背景"
+        "alt": "雨の従業員控室の背景"
       },
       {
         "id": "gidonozeaas.join.asset.sprite.001",
         "kind": "sprite",
         "path": "/assets/story/gidono-sealed-neutral.png",
-        "alt": "黒い星を抱いた封印形態のギドノゼアース"
+        "alt": "封印形態のギドノゼアース"
       },
       {
         "id": "gidonozeaas.join.asset.sprite.002",
         "kind": "sprite",
         "path": "/assets/story/gidono-sealed-soft.png",
-        "alt": "わずかに表情を和らげた封印形態のギドノゼアース"
+        "alt": "やわらいだ封印形態のギドノゼアース"
       }
     ]
   },
@@ -75,32 +75,34 @@
       "lineId": "gidonozeaas.join.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "濡れた制服と、煮詰まったコーヒーの匂い。雨の朝は控室まで重い。"
+      "text": "雨の従業員控室。大会の登録受付、本日締切。私は初心者大会の事情を正直に話し、ギドノゼアースに協力をお願いしていた。目当ては優勝賞品の温泉旅行である。下心は隠さない主義だ。"
     },
     {
       "type": "line",
       "id": "gidonozeaas.join.node.line.002",
       "lineId": "gidonozeaas.join.line.002",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "私のロッカーに契約書。署名は私の字なのに、書いた日の記憶がない。"
+      "speakerId": "legacy.speaker.1jmq03z",
+      "speakerName": "ギドノゼアース",
+      "mode": "dialogue",
+      "text": "つまり、あなたは温泉に行きたい。私は試合に出る。……取引の形が、きれいですね。"
     },
     {
       "type": "line",
       "id": "gidonozeaas.join.node.line.003",
       "lineId": "gidonozeaas.join.line.003",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "紙を外すと、裏から昨日のスライムが落ちて、コーヒーの受け皿に収まった。"
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "きれいと言われると、急に恥ずかしいんですけど。じゃあ登録しますね。端末に触れてください。"
     },
     {
       "type": "line",
       "id": "gidonozeaas.join.node.line.004",
       "lineId": "gidonozeaas.join.line.004",
-      "speakerId": "legacy.speaker.1jmq03z",
-      "speakerName": "ギドノゼアース",
-      "mode": "dialogue",
-      "text": "遅い。選手登録は受理された。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "スライムの先端がちょんと端末に触れた瞬間、印字が走った。出場カテゴリ——「災害」。続けて但し書き。「本項目は選手登録には使用できません」。",
+      "emotion": "comic"
     },
     {
       "type": "line",
@@ -109,7 +111,7 @@
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "私は同伴者として三分座っただけです。どうして契約まで？"
+      "text": "災害！？　人を台風みたいに！"
     },
     {
       "type": "line",
@@ -118,7 +120,7 @@
       "speakerId": "legacy.speaker.1jmq03z",
       "speakerName": "ギドノゼアース",
       "mode": "dialogue",
-      "text": "限定メニューの同伴者欄へ社員番号が入り、接客担当者と予約客の名が並んだ。ここの端末は、それを指揮関係と判断した。"
+      "text": "端末は正直です。前回の測定で、避難計画の対象になったので。"
     },
     {
       "type": "line",
@@ -126,7 +128,8 @@
       "lineId": "gidonozeaas.join.line.007",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "書類の隅に「所有者代理」。乾いた赤い字をこすると、胸の奥だけが冷たくなる。"
+      "text": "選手ではなく災害として扱われてきた人に、私は今、温泉のために試合を頼んでいる。伝票の向こうで、黒い星が所在なさそうに瞬いた。",
+      "emotion": "tension"
     },
     {
       "type": "line",
@@ -135,7 +138,52 @@
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "あなたは、それでいいんですか。知らない人の持ち物みたいに書かれて。"
+      "text": "……カテゴリ、手書きで直しましょう。「同伴客」って書きます。私の同伴のお客様なら、災害じゃないです。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.join.node.line.009",
+      "lineId": "gidonozeaas.join.line.009",
+      "speakerId": "legacy.speaker.1jmq03z",
+      "speakerName": "ギドノゼアース",
+      "mode": "dialogue",
+      "text": "……同伴客。……いい響きです。では、条件を書きます。私の側の、契約条件を。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.join.node.line.010",
+      "lineId": "gidonozeaas.join.line.010",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "スライムの体から、すらりと細い腕が伸びた。銀色の指がペンを取る。封印の内側の手だ。書かれた条件は、三つ。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.join.node.line.011",
+      "lineId": "gidonozeaas.join.line.011",
+      "speakerId": "legacy.speaker.1jmq03z",
+      "speakerName": "ギドノゼアース",
+      "mode": "dialogue",
+      "text": "一、期間は三日間。まず、お試しです。二、窓際の席をひとつ。三、再販日の火曜は、試合を入れない。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.join.node.line.012",
+      "lineId": "gidonozeaas.join.line.012",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "世界滅亡級の契約条件が、ぜんぶ喫茶店なんですけど。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.join.node.line.013",
+      "lineId": "gidonozeaas.join.line.013",
+      "speakerId": "legacy.speaker.1jmq03z",
+      "speakerName": "ギドノゼアース",
+      "mode": "dialogue",
+      "text": "大事なものから書くのが、契約の作法でしょう。"
     },
     {
       "type": "direction",
@@ -149,50 +197,48 @@
       }
     },
     {
-      "type": "line",
-      "id": "gidonozeaas.join.node.line.009",
-      "lineId": "gidonozeaas.join.line.009",
-      "speakerId": "legacy.speaker.1jmq03z",
-      "speakerName": "ギドノゼアース",
-      "mode": "dialogue",
-      "text": "よくはない。だが登録選手には、限定メニューの優先予約権がある。"
-    },
-    {
-      "type": "line",
-      "id": "gidonozeaas.join.node.line.010",
-      "lineId": "gidonozeaas.join.line.010",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "そこを先に言います？"
-    },
-    {
       "type": "direction",
       "id": "gidonozeaas.join.node.direction.004",
       "command": {
-        "type": "show",
-        "assetId": "gidonozeaas.join.asset.sprite.001",
-        "actorId": "gidonozeaas",
-        "slot": "right",
-        "scale": "compact"
+        "type": "effect",
+        "effectId": "pulse"
       }
     },
     {
       "type": "line",
-      "id": "gidonozeaas.join.node.line.011",
-      "lineId": "gidonozeaas.join.line.011",
-      "speakerId": "legacy.speaker.1jmq03z",
-      "speakerName": "ギドノゼアース",
-      "mode": "dialogue",
-      "text": "三日だけ出る。三日で足りなければ、そのとき考える。"
+      "id": "gidonozeaas.join.node.line.014",
+      "lineId": "gidonozeaas.join.line.014",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "署名の段になって、黒い星がふわりと浮いた。契約書の「所有」の一文字の上で止まり、その角だけを、焦がさない火で静かに炙る。文字が、蒸発した。",
+      "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "gidonozeaas.join.node.line.012",
-      "lineId": "gidonozeaas.join.line.012",
+      "id": "gidonozeaas.join.node.line.015",
+      "lineId": "gidonozeaas.join.line.015",
+      "speakerId": "legacy.speaker.1jmq03z",
+      "speakerName": "ギドノゼアース",
+      "mode": "dialogue",
+      "text": "所有は、契約に不要です。私は、あなたの隣を三日間、予約するだけなので。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.join.node.line.016",
+      "lineId": "gidonozeaas.join.line.016",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "始業ベルが鳴る。赤い文字より、その素っ気ない三日間のほうを信じてみたい。"
+      "text": "隣を予約。その言い方は反則だと思う。心臓が、控室の雨音より大きくなった。私は顔に出さない訓練を接客で積んでいる。積んでいるったら、積んでいる。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.join.node.line.017",
+      "lineId": "gidonozeaas.join.line.017",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "登録欄は、あと一つ。締め方を、決める番だった。",
+      "emotion": "resolve"
     },
     {
       "type": "choice",
@@ -201,10 +247,10 @@
         {
           "id": "gidonozeaas.join.choice.001",
           "label": "三日間の条件を、本人に書いてもらう",
-          "result": "彼に「命令は三度まで」「休憩を削らない」「終了日は延ばさない」と書いてもらった。最後の一行だけは、私の昨日の休憩記録を見てから足された。",
-          "intent": "この人物の可能性を伸ばす",
-          "promise": "その人だけが持つ固有の成長を引き出す。",
-          "memory": "彼が自分で書いた三日間の条件は、あとで契約書を読み直す基準になった。",
+          "result": "契約書は本人の手書き条項で埋まった。四つ目の条件が、いちばん小さい字で増えていた。「四、三日で終わらない場合は、延長を相談できる」。相談できる、の五文字を、彼は三回書き直していた。控室を出る時、雨はまだ降っていたのに、傘を忘れるところだった。",
+          "intent": "本人の望む形で、試合への同行を頼む",
+          "promise": "登録は少し遅れるが、この人専用の成長ポイントを得る。",
+          "memory": "条件を自分で書かせてくれた登録として、ギドノゼアースは今日を覚えている。",
           "tone": "comic",
           "effects": [
             {
@@ -236,10 +282,10 @@
         {
           "id": "gidonozeaas.join.choice.002",
           "label": "会社の短期登録で、すぐ枠を取る",
-          "result": "出場枠は一分で取れた。赤い文字が一段濃くなるのを、彼は黙って見ていた。それから、再販日の欄だけを指先で確かめた。",
-          "intent": "チーム全体の準備を進める",
-          "promise": "誰にでも使える力をチームへ持ち帰る。",
-          "memory": "赤い登録灯を急いで点けたことを、ミミもギドノも忘れなかった。",
+          "result": "締切五分前、会社の標準書式で登録は通った。出場カテゴリは自動で「特別枠」になり、備考欄に機械印字で「取扱注意」。ギドノゼアースはそれを長く眺めて、「注意、されるのは慣れています」と笑った。笑い方が上手じゃないところが、胸に残った。",
+          "intent": "次の公式戦へ間に合わせる",
+          "promise": "本人の条件は後回しになるが、誰にでも使える成長ポイントを得る。",
+          "memory": "締切を守った登録と、後回しになった三つの条件を、二人とも覚えている。",
           "tone": "comic",
           "effects": [
             {
@@ -267,10 +313,10 @@
         {
           "id": "gidonozeaas.join.choice.003",
           "label": "今回はギドノゼアースを誘わず、別の機会を待つ",
-          "result": "ギドノゼアースの出場登録は行わなかった。相手は所属せず、それぞれの用事へ戻った。断る選択を残したことだけが、次に会う時まで静かに残った。",
+          "result": "「今回は、見送ります」。ギドノゼアースは条件の紙を几帳面に畳んで、胸元へ仕舞った。「三日間の予約は、キャンセル待ちにしておきます」。キャンセル待ち。三百年待った人の言う「待つ」は、重さが違った。",
           "intent": "今回はチームへ誘わない",
           "promise": "今回の所属は見送るが、人物の物語と再会の可能性は失わない。",
-          "memory": "勧誘しない選択も尊重されたことを、相手は覚えている。",
+          "memory": "断っても条件の紙を捨てなかったことを、二人とも知っている。",
           "tone": "pragmatic",
           "effects": [
             {
@@ -290,9 +336,9 @@
     }
   ],
   "debug": {
-    "status": "approved",
-    "sourceDocument": "native narrative block migration",
-    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "status": "review",
+    "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
+    "authorNote": "v2改稿: 出場カテゴリ「災害」事件と同伴客への訂正。所有の一文字を黒い星が炙る。封印の内側の腕。",
     "legacyGeneratedIds": false
   }
 }
