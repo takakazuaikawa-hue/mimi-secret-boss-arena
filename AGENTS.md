@@ -48,6 +48,24 @@ npm run qa:visual       # Playwright による画面QA
 
 対象を絞る場合は `npm run audit:content` / `npm run audit:sim`。
 
+## 公開（GitHub Pages）
+
+公開URL: https://takakazuaikawa-hue.github.io/mimi-secret-boss-arena/
+
+ゲームはアセットを `/assets/...` の絶対パスで参照するため、サブパス配信では
+`npm run build:pages` を使う（`--base=./` + `scripts/patch-relative-asset-paths.mjs`
+で配信物のみ相対化。ソースの絶対パス規約は変更しない）。
+
+再デプロイ手順:
+
+```powershell
+npm run build:pages
+```
+
+その後、dist の内容を `gh-pages` ブランチへコミットして push する
+（LFSフィルタを避けるため、.gitattributes を含めない別ディレクトリで行う）。
+push すると Pages が自動で再ビルドする。
+
 ## 所有境界（変更時の原則）
 
 [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) の所有境界に従う。特に:
