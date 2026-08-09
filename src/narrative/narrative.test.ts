@@ -36,8 +36,8 @@ const publicAssetExists = (path: string) =>
 describe("narrative block migration", () => {
   it("adapts every existing CharacterScene exactly once", () => {
     const expectedCount =
-      // opening: 所有権移譲・温泉旅行・メイン第1〜2話
-      4 +
+      // opening: 所有権移譲・温泉旅行・メイン第1〜5話
+      7 +
       fighterDefinitions.length * 7 +
       Object.values(ambientEvents).flat().length +
       Object.values(routeEvents).flatMap((scenes) => scenes ?? []).length;

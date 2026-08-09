@@ -15,7 +15,10 @@ import { weeklyNarrativeLines } from "../data/weeklyNarratives";
 import { legacyCharacterNarrativeBlockById } from "../narrative/characterBlocks";
 import {
   legacyOpeningNarrativeBlockById,
+  mainStageOneEpisodeFiveBlock,
+  mainStageOneEpisodeFourBlock,
   mainStageOneEpisodeOneBlock,
+  mainStageOneEpisodeThreeBlock,
   mainStageOneEpisodeTwoBlock,
   openingHotSpringBlock,
   openingOwnershipBlock,
@@ -1004,6 +1007,24 @@ const stageOneMainEpisodes: ReadonlyArray<{
     week: 2,
     block: mainStageOneEpisodeTwoBlock,
     fighterId: "minato",
+  },
+  {
+    week: 3,
+    block: mainStageOneEpisodeThreeBlock,
+    fighterId: "teirei",
+    leadLineText: "伝票を持って、私は搬入口の奥へ向かった。",
+  },
+  {
+    // 週4は初心者大会、週5は温泉旅行followupのため空ける
+    week: 6,
+    block: mainStageOneEpisodeFourBlock,
+    fighterId: "peony",
+  },
+  {
+    week: 7,
+    block: mainStageOneEpisodeFiveBlock,
+    fighterId: "ushiro",
+    leadLineText: "受付さんに手渡された苦情票を持って、私は現像室へ入った。",
   },
 ];
 

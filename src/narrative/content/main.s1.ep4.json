@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s1.ep4",
+  "kind": "opening",
+  "title": "祝勝セールと、迷子の放送",
+  "summary": "優勝翌週の大混雑。迷子案内所がパンクし、館内放送が大変なことになる",
+  "ownership": {
+    "arcId": "main.stage1"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "噴水広場",
+    "assets": [
+      {
+        "id": "main.s1.ep4.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-fountain-plaza-day-v1.png",
+        "alt": "噴水広場の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s1.ep4.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "main.s1.ep4.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.ep4.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s1.ep4.node.line.001",
+      "lineId": "main.s1.ep4.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "大会の熱が冷めない街は、勝手に祝勝セールを始めていた。噴水広場は大混雑。売店は行列、屋台は二重の行列、賭け札売り場は三重の行列。そして混雑の街で増えるものといえば——迷子である。本日の私の任務は、迷子案内所の応援だった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.ep4.node.line.002",
+      "lineId": "main.s1.ep4.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "着任三分で理解した。この街の迷子は、規模が違う。「魔王城からお越しの、影の軍勢ご一行様(七百名)。はぐれた三百名様が、お連れ様をお待ちです」。館内放送のお姉さんの声は今日も涼やかだが、読み上げる内容が軍記物である。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.ep4.node.line.003",
+      "lineId": "main.s1.ep4.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "迷子のご主人を捜す幽霊の奥様(逆ではない)、迷子の飼い竜を捜す少女(竜の方が案内所で泣いていた)、自分が迷子だと気づいていない方角音痴の騎士団。私は札を配り、手を引き、涙を拭き、一件ずつ引き合わせた。再会のたび、広場のどこかで拍手が起きる。……この街、迷子の再会にもオッズが出ているらしい。全部「再会する」に賭けられていた。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.ep4.node.line.004",
+      "lineId": "main.s1.ep4.line.004",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "全員が「再会する」に賭けたら、賭けの意味がないのでは……?"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.ep4.node.line.005",
+      "lineId": "main.s1.ep4.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「意味ならありますよ」と、札売りのおじさんは言った。「当たったら、みんなで飲むんです」。……そうか。この街の賭けは、祈りの形をしているのか。配当一杯ぶんの祈りが、今日だけで三百枚も積まれていた。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.ep4.node.line.006",
+      "lineId": "main.s1.ep4.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "日が傾いた頃、最後のお迎え要請が入った。「迷子のお子様、男の子。案内所でお待ちです」。走って向かった案内所の扉を開けると——泣き声の代わりに、滝みたいな汗の気配がした。天井につっかえそうな、大きな大きな背中が、何かと格闘している。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "end",
+      "id": "main.s1.ep4.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_STAGE1_PLAN.md",
+    "authorNote": "第4話: 軍記物の迷子放送・逆迷子の竜・方角音痴の騎士団。賭け=祈りの形、が美しさの一滴。末尾はピオニーmeet(案内所で折り紙と格闘する巨躯)へ無改変接続。",
+    "legacyGeneratedIds": false
+  }
+}

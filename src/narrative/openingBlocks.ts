@@ -1,5 +1,8 @@
-import mainStageOneEpisodeOneSource from "./content/main.s1.ep1.json";
+﻿import mainStageOneEpisodeOneSource from "./content/main.s1.ep1.json";
 import mainStageOneEpisodeTwoSource from "./content/main.s1.ep2.json";
+import mainStageOneEpisodeThreeSource from "./content/main.s1.ep3.json";
+import mainStageOneEpisodeFourSource from "./content/main.s1.ep4.json";
+import mainStageOneEpisodeFiveSource from "./content/main.s1.ep5.json";
 import openingHotSpringSource from "./content/opening.hot-spring-trip.json";
 import openingOwnershipSource from "./content/opening.owner-transfer.json";
 import {
@@ -15,6 +18,18 @@ export const mainStageOneEpisodeTwoBlock = narrativeEventBlockSchema.parse(
   mainStageOneEpisodeTwoSource,
 );
 
+export const mainStageOneEpisodeThreeBlock = narrativeEventBlockSchema.parse(
+  mainStageOneEpisodeThreeSource,
+);
+
+export const mainStageOneEpisodeFourBlock = narrativeEventBlockSchema.parse(
+  mainStageOneEpisodeFourSource,
+);
+
+export const mainStageOneEpisodeFiveBlock = narrativeEventBlockSchema.parse(
+  mainStageOneEpisodeFiveSource,
+);
+
 export const openingOwnershipBlock = narrativeEventBlockSchema.parse(
   openingOwnershipSource,
 );
@@ -28,8 +43,12 @@ export const legacyOpeningNarrativeBlocks: NarrativeEventBlock[] = [
   openingHotSpringBlock,
   mainStageOneEpisodeOneBlock,
   mainStageOneEpisodeTwoBlock,
+  mainStageOneEpisodeThreeBlock,
+  mainStageOneEpisodeFourBlock,
+  mainStageOneEpisodeFiveBlock,
 ];
 
 export const legacyOpeningNarrativeBlockById = new Map(
   legacyOpeningNarrativeBlocks.map((block) => [block.id, block]),
 );
+

@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s1.ep3",
+  "kind": "opening",
+  "title": "大会前日、代表者不在",
+  "summary": "備品の納品ラッシュ。受取人欄「闘技場代表」を巡り、押し付け合いが大会になる",
+  "ownership": {
+    "arcId": "main.stage1"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "搬入口前",
+    "assets": [
+      {
+        "id": "main.s1.ep3.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-employee-entrance.png",
+        "alt": "搬入口前の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s1.ep3.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "main.s1.ep3.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.ep3.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s1.ep3.node.line.001",
+      "lineId": "main.s1.ep3.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "三週目。来週の新人向け大会へ向けて、館内は納品ラッシュだった。私の本日の任務は備品の検品。応援用の銅鑼、百枚(多い)。紙吹雪、三トン(多い)。優勝カップ、一基——これが門より大きくて、搬入口で完全に詰まっていた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.ep3.node.line.002",
+      "lineId": "main.s1.ep3.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「引けば通る」「押せば通る」「溶かして中で鋳直そう」。集まった各部署が三十秒で口論になり、例の銅鑼が鳴り、綱引きで決着した(カップは引く派が勝って、門ごと少し広がった)。問題はその後だった。配達人が差し出した伝票の受取人欄——「闘技場代表」。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.ep3.node.line.003",
+      "lineId": "main.s1.ep3.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "誰もサインしない。代表のサインは「responsibility」と書いて「めんどう」と読むからである。経理課は警備を指名し、警備は食堂を指名し、食堂は「うちは揚げ物中」と鉄壁の防御を見せた。押し付け合いは当然のように大会化し、トーナメント表が刷られ、賭け札まで出た。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.ep3.node.line.004",
+      "lineId": "main.s1.ep3.line.004",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "あの、普通に私がサインしては……新人ですけど、いちおう従業員なので。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.ep3.node.line.005",
+      "lineId": "main.s1.ep3.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ホールが静まり返った。それから万雷の拍手が来た。「新人さんが名乗り出た!」「漢気!」「オッズが!」。私はその日、書類上だけ「闘技場代表(仮)」になり、銅鑼百枚と紙吹雪三トンの責任者になった。トーナメント表は「開催中止(感動のため)」と書かれて掲示板に貼られた。納得がいかない。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.ep3.node.line.006",
+      "lineId": "main.s1.ep3.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "夕方、最後の一台が着いた。精密機器・取扱注意。ところが配達人は伝票を見て首をかしげた。「これは代表さんのサインじゃ受け取れません。『搬入口の担当者』のサインが要ります」。搬入口の、担当者。……そういえば、搬入口には、雨の日も晴れの日も直立不動で立っている人がいると、従業員の噂で聞いた。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.ep3.node.line.007",
+      "lineId": "main.s1.ep3.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "皆が「彫像さん」と呼ぶ、その人のところへ。私は伝票を持って、搬入口の奥へ歩き出した。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "end",
+      "id": "main.s1.ep3.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_STAGE1_PLAN.md",
+    "authorNote": "第3話: 巨大カップ綱引き→代表サイン押し付け合いの大会化→ミミの常識が漢気として誤読される。末尾は丁零meet(彫像さんへサインを頼む)へ無改変接続。",
+    "legacyGeneratedIds": false
+  }
+}

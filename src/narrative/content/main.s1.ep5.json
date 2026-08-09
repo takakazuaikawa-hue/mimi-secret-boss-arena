@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s1.ep5",
+  "kind": "opening",
+  "title": "全部署、記念撮影の日",
+  "summary": "祝勝記念の団体写真ラッシュ。撮影所が戦場になり、夕方に妙な苦情が届く",
+  "ownership": {
+    "arcId": "main.stage1"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "記念撮影所",
+    "assets": [
+      {
+        "id": "main.s1.ep5.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-arena-reception.png",
+        "alt": "記念撮影所前の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s1.ep5.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "main.s1.ep5.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.ep5.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s1.ep5.node.line.001",
+      "lineId": "main.s1.ep5.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "祝勝ムードの締めくくりに、全部署が記念写真を撮ると言い出した。本日の任務は撮影所の整理係。朝から、経理課(そろばん持参)、警備(隊列が完璧すぎて怖い)、食堂(なぜか全員おたま)、両替所(竜の紳士が入りきらず、顔だけ参加)が次々に並ぶ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.ep5.node.line.002",
+      "lineId": "main.s1.ep5.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "現場は戦場だった。「はい笑ってー」で笑わない警備。フラッシュのたびにくしゃみする竜(火が出る)。仕上がりを確認して「私の写りが固い」と撮り直しを要求する幽霊の奥様(そもそも半透明である)。カメラマンさんは三回魂が抜けかけ、そのたびお茶で復活した。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.ep5.node.line.003",
+      "lineId": "main.s1.ep5.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "昼過ぎ、経理課に袖を引かれた。「ミミさんも入って! 荷物持ちの恩人だから!」。断る間もなく法被を着せられ、そろばんを持たされ、私は経理課の集合写真の真ん中で笑った。派遣三週目にして、所属部署が一つ増えた気がする(書類上は増えていない)。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.ep5.node.line.004",
+      "lineId": "main.s1.ep5.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "行列が捌けた夕方、私は今日撮った全部署の写真をアルバムに整理した。どの写真も、笑っていたり、固かったり、火が出ていたり、半透明だったりした。良い街だと思う。三週間でずいぶん、顔と名前が一致するようになった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.ep5.node.line.005",
+      "lineId": "main.s1.ep5.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "片付けを終えかけたその時、撮影所の受付が困り顔で私を呼んだ。「応援をお願いします。苦情が一件……内容が、その、変でして」。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "end",
+      "id": "main.s1.ep5.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_STAGE1_PLAN.md",
+    "authorNote": "第5話: 団体写真ラッシュ(笑わない警備・くしゃみで火・半透明の写り要求)。経理課の法被=愛着の回収。末尾はうしろmeet(127枚の苦情)へ無改変接続。",
+    "legacyGeneratedIds": false
+  }
+}
