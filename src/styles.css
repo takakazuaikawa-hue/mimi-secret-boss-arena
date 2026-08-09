@@ -15239,3 +15239,11 @@ h3 {
   font-size: 12.5px;
   color: #8a7a63;
 }
+
+.charter-note {
+  display: block;
+  font-style: normal;
+  font-size: 12.5px;
+  color: #8a7a63;
+  margin-top: 2px;
+}

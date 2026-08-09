@@ -24,7 +24,7 @@ import { getMatchDefinition, parseBonusMatchId } from "../data/matches";
 import { itemById } from "../data/items";
 import { getRouteDefinition } from "../data/routes";
 import { fighterDefinitions } from "../data/characters";
-import { isCharterComplete } from "../data/arenaCharter";
+import { isProgramComplete } from "../data/openingProgram";
 import { randomForCursor } from "./rng";
 import { migrateNarrativeRunState } from "../narrative/saveMigration";
 import type {
@@ -99,10 +99,10 @@ const finishRun = (
       ...run.roster.filter((id) => run.fighters[id].liberated),
     ]),
   ];
-  // 周回をまたいで全人物の解放(=条文集の完成)へ到達した再建クリアは、
-  // 真エンディング「十五人の開廷日」へ昇格する。
+  // 周回をまたいで全人物の解放(=演目表の完成)へ到達した再建クリアは、
+  // 真エンディング「柿落とし、十五幕」へ昇格する。
   const resolvedEnding: NonNullable<RunState["endingType"]> =
-    endingType === "rebuild" && isCharterComplete(liberatedCollection)
+    endingType === "rebuild" && isProgramComplete(liberatedCollection)
       ? "grand"
       : endingType;
   const endedRun: RunState = { ...run, ended: true, endingType: resolvedEnding };

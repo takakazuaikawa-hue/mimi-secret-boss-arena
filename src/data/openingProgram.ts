@@ -1,0 +1,159 @@
+// 柿落とし・演目表(正本)
+//
+// 再建闘技場の柿落とし興行に、自由になった人物が一幕ずつ演目を出す
+// (docs/WORLD_CONTINUITY.md §6)。会社(物語資産管理部)が終わった物語を
+// 勝手に再演する「世界滅亡ショー」への、本人たちの返答が「新作の舞台」。
+//
+// status "final" は改稿済みの後日談本文と一致していることを示す。
+// status "draft" は当該人物の改稿波で本文と突き合わせて確定させる。
+// 全幕そろった周回のクリアで、真エンディング「柿落とし、十五幕」に到達する。
+
+export interface ProgramAct {
+  act: number;
+  title: string;
+  note?: string;
+  fighterId: string;
+  status: "final" | "draft";
+}
+
+export const openingProgram: ProgramAct[] = [
+  {
+    act: 1,
+    title: "開幕宣言と、勝敗のない落書き裁判",
+    note: "判決は出ません。続きが見たいので",
+    fighterId: "amara",
+    status: "final",
+  },
+  {
+    act: 2,
+    title: "冷めないコーヒーの実演",
+    note: "窓際の二人席は、当日も予約なしで待てます",
+    fighterId: "gidonozeaas",
+    status: "final",
+  },
+  {
+    act: 3,
+    title: "刃のない剣舞・四十七の物語",
+    note: "上演後の昼食は、誰も救わずに選びます",
+    fighterId: "minato",
+    status: "final",
+  },
+  {
+    act: 4,
+    title: "天の川、点灯",
+    note: "客席の照明はおいしくいただきます。安全灯は残します",
+    fighterId: "night-eater",
+    status: "final",
+  },
+  {
+    act: 5,
+    title: "水晶竜の飛行、屋上庭園より入場",
+    fighterId: "shahar",
+    status: "draft",
+  },
+  {
+    act: 6,
+    title: "巨大荷物の、丁寧すぎる搬入実演",
+    fighterId: "teirei",
+    status: "draft",
+  },
+  {
+    act: 7,
+    title: "迷子案内の早業(迷子役、当日募集)",
+    fighterId: "peony",
+    status: "draft",
+  },
+  {
+    act: 8,
+    title: "七世界同時受付ショー(一分間の休止つき)",
+    fighterId: "cassim-bell",
+    status: "draft",
+  },
+  {
+    act: 9,
+    title: "大水芸『海の思い出、一つだけ』",
+    fighterId: "sazanami",
+    status: "draft",
+  },
+  {
+    act: 10,
+    title: "救護席は舞台袖に(出番がないことが、演目です)",
+    fighterId: "marian",
+    status: "draft",
+  },
+  {
+    act: 11,
+    title: "影絵百二十七人、一人ずつ",
+    fighterId: "ushiro",
+    status: "draft",
+  },
+  {
+    act: 12,
+    title: "一匹から始める大合唱",
+    fighterId: "wolf-nine",
+    status: "draft",
+  },
+  {
+    act: 13,
+    title: "お化け屋敷ではありません(出口は全部正解)",
+    fighterId: "room-seventeen",
+    status: "draft",
+  },
+  {
+    act: 14,
+    title: "結果を見ないビンゴ大会",
+    fighterId: "rinne",
+    status: "draft",
+  },
+  {
+    act: 15,
+    title: "抜かない居合、十四連続",
+    fighterId: "mumyo",
+    status: "draft",
+  },
+];
+
+// 大取り。openingProgram には含めない(完成判定は十五幕で行う)。
+// 真エンディングの場で、十五人に頼まれてミミが書き入れる最後の一幕。
+// 記録室では到達前は「予告」、到達後に本文を開示する。
+export const finalAct = {
+  act: 16,
+  title: "カーテンコール——出演、全員",
+  author: "ミミ(と、十五人の指名)",
+} as const;
+
+// 真エンディング「柿落とし、十五幕」での前口上。各人物、一行だけ。
+// 開場前、舞台袖から順に声が上がる。
+export const grandFinaleLines: Record<string, string> = {
+  amara: "開廷——いえ。開幕します。本日の議題は、この闘技場のこれから。",
+  gidonozeaas: "本日の窓際は、全席自由です。……もう、並ばなくていい。",
+  minato: "本日の予定は、俺が決めた。四十九件目——柿落としの警備だ。",
+  "night-eater": "開場の明かり、全部で星五つ。……今夜は、食べずに眺めるわ。",
+  shahar: "屋上の花、満開です。竜の水やり当番、本日も出勤しています。",
+  teirei: "搬入、全件完了。壊れものは、ひとつもありません。",
+  peony: "迷子案内所より。本日、迷子ゼロ。……全員、帰る場所を覚えたので。",
+  "cassim-bell": "受付は一分間の休止中です。——この拍手が、終わるまで。",
+  sazanami: "海より祝電。持ち帰りたい思い出が、また一つ増えた。",
+  marian: "本日の救護予定、なし。……それが、いちばんの診断結果。",
+  ushiro: "記念撮影、承ります。写りたい影だけ、どうぞ前へ。",
+  "wolf-nine": "群れの点呼、十五。……一匹から数えて、十五。",
+  "room-seventeen": "本日の出口は、全部正解です。またのお越しを。",
+  rinne: "賭けてもいい。今日の続きは、誰にも見えないくらい、良い。",
+  mumyo: "本日、有給休暇。……最高の使い道が、見つかったので。",
+};
+
+export const programActsByFighter = (fighterId: string): ProgramAct[] =>
+  openingProgram.filter((entry) => entry.fighterId === fighterId);
+
+// 解放済み人物の集合から、埋まった幕を幕番号順で返す。
+export const unlockedProgramActs = (
+  liberatedIds: readonly string[],
+): ProgramAct[] => {
+  const liberated = new Set(liberatedIds);
+  return openingProgram.filter((entry) => liberated.has(entry.fighterId));
+};
+
+export const isProgramComplete = (liberatedIds: readonly string[]): boolean => {
+  const liberated = new Set(liberatedIds);
+  return openingProgram.every((entry) => liberated.has(entry.fighterId));
+};

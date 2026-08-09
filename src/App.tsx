@@ -62,11 +62,11 @@ import {
 import { fighterById, fighterDefinitions } from "./data/characters";
 import { characterVisuals } from "./data/characterVisuals";
 import {
-  arenaCharter,
-  finalCharterArticle,
+  finalAct,
   grandFinaleLines,
-  unlockedCharterArticles,
-} from "./data/arenaCharter";
+  openingProgram,
+  unlockedProgramActs,
+} from "./data/openingProgram";
 import { opponentVisuals } from "./data/opponentVisuals";
 import {
   battleOpponentById,
@@ -6448,8 +6448,8 @@ function EndingScreen({ onTitle, onArchive }: { onTitle: () => void; onArchive: 
     run.endingType === "grand"
       ? {
           kicker: "THE GRAND REOPENING",
-          title: "十五人の開廷日",
-          text: "再建した闘技場の柿落とし。歴代の周回で自由になった全員が、今日は自分の意思で集まった。掲示板には、みんなが一条ずつ残した条文が、一枚の紙に清書されている。物語資産管理部の席は、用意していない。",
+          title: "柿落とし、十五幕",
+          text: "再建した闘技場の柿落とし。歴代の周回で自由になった全員が、今日は自分の新作を一幕ずつ持って集まった。会社が企画した再演は、一幕もない。物語資産管理部の席も、用意していない。",
         }
       : run.endingType === "rebuild"
       ? {
@@ -6479,13 +6479,13 @@ function EndingScreen({ onTitle, onArchive }: { onTitle: () => void; onArchive: 
         {run.endingType === "grand" && (
           <section className="grand-finale">
             <div className="grand-finale__charter">
-              <span>ARENA CHARTER</span>
-              <h2>再建闘技場・全十六条</h2>
+              <span>OPENING PROGRAM</span>
+              <h2>柿落とし・演目表</h2>
               <ol>
-                {arenaCharter.map((entry) => (
-                  <li key={entry.article}>
-                    <b>第{entry.article}条</b>
-                    <span>{entry.text}</span>
+                {openingProgram.map((entry) => (
+                  <li key={entry.act}>
+                    <b>第{entry.act}幕</b>
+                    <span>{entry.title}</span>
                   </li>
                 ))}
               </ol>
@@ -6504,14 +6504,14 @@ function EndingScreen({ onTitle, onArchive }: { onTitle: () => void; onArchive: 
               ))}
             </div>
             <div className="grand-finale__final-article">
-              <span>THE LAST ARTICLE</span>
+              <span>THE FINAL ACT</span>
               <p>
-                点呼が終わると、十五人が同時にこちらを見た。アマラが白いチョークを差し出す。「最終条は、起草者ではなく——あなたが」。
+                前口上が終わると、十五人が同時にこちらを見た。演目表の大取りだけが、まだ空欄で残っている。差し出されたペンは、一本。「最後の一幕は、興行主が書くものです」。
               </p>
               <blockquote>
-                <b>第{finalCharterArticle.article}条</b>
-                <strong>{finalCharterArticle.text}</strong>
-                <small>{finalCharterArticle.author}</small>
+                <b>大取り・第{finalAct.act}幕</b>
+                <strong>{finalAct.title}</strong>
+                <small>{finalAct.author}</small>
               </blockquote>
             </div>
           </section>
@@ -6760,7 +6760,7 @@ function ArchiveScreen({ onClose }: { onClose: () => void }) {
           className={tab === "charter" ? "is-selected" : ""}
           onClick={() => setTab("charter")}
         >
-          <ScrollText size={18} /> 条文集
+          <ScrollText size={18} /> 演目表
         </button>
         <button
           className={tab === "gallery" ? "is-selected" : ""}
@@ -6918,45 +6918,47 @@ function ArchiveScreen({ onClose }: { onClose: () => void }) {
       ) : tab === "charter" ? (
         <section className="charter-list">
           <header className="charter-list__head">
-            <p className="eyebrow">ARENA CHARTER</p>
-            <h3>再建闘技場・新条文集</h3>
+            <p className="eyebrow">OPENING PROGRAM</p>
+            <h3>柿落とし・演目表</h3>
             <p>
-              自由になった人が、一条ずつ条文を残していく。
+              自由になった人から、一幕ずつ演目が埋まっていく。
               {(() => {
-                const unlocked = unlockedCharterArticles(
+                const unlocked = unlockedProgramActs(
                   profile.liberatedCollection,
                 );
-                return `現在 ${unlocked.length} / ${arenaCharter.length} 条。全条がそろった周回のクリアで、特別な柿落としが待っている。`;
+                return `現在 ${unlocked.length} / ${openingProgram.length} 幕。全幕そろった周回のクリアで、本物の柿落としが上がる。`;
               })()}
             </p>
           </header>
           <ol>
-            {arenaCharter.map((entry) => {
+            {openingProgram.map((entry) => {
               const unlocked = profile.liberatedCollection.includes(
                 entry.fighterId,
               );
               const fighter = fighterById.get(entry.fighterId);
               return (
                 <li
-                  key={entry.article}
+                  key={entry.act}
                   className={unlocked ? "is-unlocked" : "is-locked"}
                 >
-                  <b>第{entry.article}条</b>
+                  <b>第{entry.act}幕</b>
                   {unlocked ? (
                     <>
-                      <span>{entry.text}</span>
-                      <small>
-                        {fighter?.name ?? entry.fighterId}
-                        {entry.article === 2 && "(起草者の強い意向により、第一条より長い)"}
-                      </small>
+                      <span>
+                        {entry.title}
+                        {entry.note && (
+                          <em className="charter-note">※{entry.note}</em>
+                        )}
+                      </span>
+                      <small>{fighter?.name ?? entry.fighterId}</small>
                     </>
                   ) : (
                     <>
                       <span className="charter-locked-text">
-                        ——まだ、書かれていない
+                        ——この幕は、まだ空いている
                       </span>
                       <small>
-                        <LockKeyhole size={13} /> 解放で開示
+                        <LockKeyhole size={13} /> 出演者募集中
                       </small>
                     </>
                   )}
@@ -6966,19 +6968,19 @@ function ArchiveScreen({ onClose }: { onClose: () => void }) {
             <li
               className={profile.grandCleared ? "is-unlocked" : "is-locked"}
             >
-              <b>第{finalCharterArticle.article}条</b>
+              <b>大取り</b>
               {profile.grandCleared ? (
                 <>
-                  <span>{finalCharterArticle.text}</span>
-                  <small>{finalCharterArticle.author}</small>
+                  <span>{finalAct.title}</span>
+                  <small>{finalAct.author}</small>
                 </>
               ) : (
                 <>
                   <span className="charter-locked-text">
-                    ——最後の一条は、十五人がそろった開廷日に書かれる
+                    ——大取りは、十五幕がそろった夜に決まる
                   </span>
                   <small>
-                    <LockKeyhole size={13} /> 真の柿落としで開示
+                    <LockKeyhole size={13} /> 本物の柿落としで開示
                   </small>
                 </>
               )}
