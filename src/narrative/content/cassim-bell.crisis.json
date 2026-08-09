@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "id": "cassim-bell.crisis",
   "kind": "character",
-  "title": "最後の準備",
-  "summary": "存在しない地下階で起きる「最後の準備」",
+  "title": "自動応答機、設置のお知らせ",
+  "summary": "黒い角封筒。受付の全自動化と、休止札の廃止通告",
   "ownership": {
     "arcId": "character.cassim-bell",
     "characterId": "cassim-bell",
@@ -34,45 +34,11 @@
         "id": "cassim-bell.crisis.asset.background.001",
         "kind": "background",
         "path": "/assets/story/bg-contract-archive-v2.png",
-        "alt": "存在しない地下階の背景"
+        "alt": "契約保管庫の背景"
       }
     ]
   },
   "nodes": [
-    {
-      "type": "line",
-      "id": "cassim-bell.crisis.node.line.001",
-      "lineId": "cassim-bell.crisis.line.001",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "アルデバラン社から届いた契約確認書には、カシム・ベルの扱いを決める欄が残っていた。本人の意思を聞くため、存在しない地下階へ向かった。"
-    },
-    {
-      "type": "line",
-      "id": "cassim-bell.crisis.node.line.002",
-      "lineId": "cassim-bell.crisis.line.002",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "その週、相手は私を避けた。廊下の向こうに姿を見つけても、業務用の言葉だけを残して先に曲がる。",
-      "emotion": "tension"
-    },
-    {
-      "type": "line",
-      "id": "cassim-bell.crisis.node.line.003",
-      "lineId": "cassim-bell.crisis.line.003",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "本社は倉庫の全保管物を『選手備品』へ変更する命令を出した。失くした誰かの希望まで、試合用の在庫になる。"
-    },
-    {
-      "type": "line",
-      "id": "cassim-bell.crisis.node.line.004",
-      "lineId": "cassim-bell.crisis.line.004",
-      "speakerId": "legacy.speaker.1wuvexi",
-      "speakerName": "カシム・ベル",
-      "mode": "dialogue",
-      "text": "契約上、私は倉庫の備品です。番人ではありません。"
-    },
     {
       "type": "direction",
       "id": "cassim-bell.crisis.node.direction.001",
@@ -81,6 +47,77 @@
         "assetId": "cassim-bell.crisis.asset.background.001",
         "transition": "dissolve"
       }
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.crisis.node.line.001",
+      "lineId": "cassim-bell.crisis.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "黒い角封筒。差出人、アルデバラン社・物語資産管理部。件名——「資産『窓口』の全自動化について」。本文はこうだ。「無限遺失物保管庫の受付を自動応答機へ切り替えます。人的受付は廃止。休止札その他の備品も、併せて廃棄します」。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.crisis.node.line.002",
+      "lineId": "cassim-bell.crisis.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "会社にとって、カシムの受付は「資産」で、彼の丁寧さは「非効率」らしい。翌週、保管庫の受付に、ぴかぴかの自動応答機が設置された。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.crisis.node.line.003",
+      "lineId": "cassim-bell.crisis.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "結果は、三日で大惨事になった。応答機は竜の靴の「左右」を理解できず月へ誤配送し、しゃべる冠の苦情を「雑音」として切り、世界(一式)の紛失届に「型番をご入力ください」を三百回繰り返した。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.crisis.node.line.004",
+      "lineId": "cassim-bell.crisis.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "そしてカシム・ベルは——夜中にこっそり、無給で窓口に立っていた。応答機の後始末を、誰にも言わずに。見つけた時、彼の連続勤務は、また五十時間を超えていた。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.crisis.node.line.005",
+      "lineId": "cassim-bell.crisis.line.005",
+      "speakerId": "legacy.speaker.1wuvexi",
+      "speakerName": "カシム・ベル",
+      "mode": "dialogue",
+      "text": "……言えば、止められると思ったので。ですが、月へ誤配送された靴が、泣くのです。私が受付した子です。私が、直さなければ。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.crisis.node.line.006",
+      "lineId": "cassim-bell.crisis.line.006",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "求人票、第一条。「受付は、してはいけません」。——違反です。罰として、十五分の休止を命じます。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.crisis.node.line.007",
+      "lineId": "cassim-bell.crisis.line.007",
+      "speakerId": "legacy.speaker.1wuvexi",
+      "speakerName": "カシム・ベル",
+      "mode": "dialogue",
+      "text": "い、今ですか。窓口が、この状態で。……私が止まれば、七世界が——"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.crisis.node.line.008",
+      "lineId": "cassim-bell.crisis.line.008",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "困りません。それを今から、証明します。"
     },
     {
       "type": "direction",
@@ -92,81 +129,48 @@
     },
     {
       "type": "line",
-      "id": "cassim-bell.crisis.node.line.005",
-      "lineId": "cassim-bell.crisis.line.005",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "カシム・ベルの返事が短い。怒っている、と決めれば私の不安には名前がつく。でも以前の私も「責任感が強すぎて窓口を離れられない人なのだ」と決めつけた。また同じ読み違いをするところだった。",
-      "emotion": "tension"
-    },
-    {
-      "type": "line",
-      "id": "cassim-bell.crisis.node.line.006",
-      "lineId": "cassim-bell.crisis.line.006",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "嫌われたのなら理由を聞けばいい。そう思うのに、何百年ぶりに表へ返した十五分休止の札を見るたび、聞いた答えで今までの時間が変わるのが怖かった。"
-    },
-    {
-      "type": "line",
-      "id": "cassim-bell.crisis.node.line.007",
-      "lineId": "cassim-bell.crisis.line.007",
-      "speakerId": "legacy.speaker.1wuvexi",
-      "speakerName": "カシム・ベル",
-      "mode": "dialogue",
-      "text": "私は番人です。命令されれば、扉を開けなければならない。"
-    },
-    {
-      "type": "line",
-      "id": "cassim-bell.crisis.node.line.008",
-      "lineId": "cassim-bell.crisis.line.008",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "備品が備品を管理してたんですか。"
-    },
-    {
-      "type": "line",
       "id": "cassim-bell.crisis.node.line.009",
       "lineId": "cassim-bell.crisis.line.009",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ようやく追いついた場所で、カシム・ベルは失くしたものを必ず保管し、持ち主が来るまで待ち続ける番人に戻っていた。近づく前の、何も期待していなかった顔だ。"
+      "text": "私は受付台に、あの埃をかぶった休止札を立てた。「休止中。受付係は、十五分後に戻ります」。そして手書きで一行足した。「お急ぎでない方は、そのままお待ちください。この窓口の係は、待つ価値があります」。",
+      "emotion": "resolve"
     },
     {
       "type": "line",
       "id": "cassim-bell.crisis.node.line.010",
       "lineId": "cassim-bell.crisis.line.010",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "持ち主へ返すための扉を、勝つために勝手に開けたくありません。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "棚の陰。砂時計を三回ひっくり返すぶんの、十五分。カシムは最初の五分を「列が」「誤配送が」とそわそわ費やし、次の五分で紅茶を一口飲み、最後の五分で——初めて、座ったまま静かに窓口の方を見た。",
+      "emotion": "tender"
     },
     {
       "type": "line",
       "id": "cassim-bell.crisis.node.line.011",
       "lineId": "cassim-bell.crisis.line.011",
-      "speakerId": "legacy.speaker.1wuvexi",
-      "speakerName": "カシム・ベル",
-      "mode": "dialogue",
-      "text": "おかしな話でしょう。やっと笑っていただけた。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "列は、崩れていなかった。七世界のお客様たちは、休止札を読み、静かに並び直していた。竜の騎士は床に座って冠と談笑し、月のお姫様は自前の本を読み始めた。誰も、怒っていなかった。",
+      "emotion": "revelation"
     },
     {
       "type": "line",
       "id": "cassim-bell.crisis.node.line.012",
       "lineId": "cassim-bell.crisis.line.012",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "原因は私への不信ではない。自分が窓口を離れた十五分に、帰れない誰かが来てしまうことから私を遠ざけようとしている。そのやさしさを、やさしいまま受け入れてはいけない気がした。",
-      "emotion": "revelation"
+      "speakerId": "legacy.speaker.1wuvexi",
+      "speakerName": "カシム・ベル",
+      "mode": "dialogue",
+      "text": "……待って、くれるのですね。……私が休んでも、世界は、終わらない。"
     },
     {
       "type": "line",
       "id": "cassim-bell.crisis.node.line.013",
       "lineId": "cassim-bell.crisis.line.013",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "鈴が一斉に鳴り止んだ。彼は鍵束を握り、初めて窓口の内側から鍵をかけた。"
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "終わりません。だって、あの列の全員——あなたのファンですよ。機械じゃなくて、あなたに受付してほしくて並んでるんです。"
     },
     {
       "type": "line",
@@ -174,7 +178,7 @@
       "lineId": "cassim-bell.crisis.line.014",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "合鍵を一本取り違えるだけで、月の裏や滅亡前日の王都が休憩室へ開く。別れ話のように静かな場面なのに、施設全体は最終災害手順へ移行している。",
+      "text": "十五分後、窓口へ戻った彼を、列全体が小さな拍手で迎えた。自動応答機は、その日のうちに「両替専用機」へ降格になった。両替は、得意らしい。適材適所である。",
       "emotion": "comic"
     },
     {
@@ -183,42 +187,8 @@
       "lineId": "cassim-bell.crisis.line.015",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "正しい答えを当てることより、間違えたまま命令しないことを選ぶ。私は逃げ道をふさがない位置で止まり、聞きたかったことを短い言葉にした。",
+      "text": "残る相手は、会社だ。「人的受付の廃止」を、書類ごとひっくり返す方法を決める。",
       "emotion": "resolve"
-    },
-    {
-      "type": "line",
-      "id": "cassim-bell.crisis.node.line.016",
-      "lineId": "cassim-bell.crisis.line.016",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "守るために離れるのは、残された側へ選択を渡さない。命令と同じだと告げると、初めて相手の表情が崩れた。",
-      "emotion": "resolve"
-    },
-    {
-      "type": "line",
-      "id": "cassim-bell.crisis.node.line.017",
-      "lineId": "cassim-bell.crisis.line.017",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "勝つための答えと、あとで自分を嫌いにならない答えは、同じとは限らない。"
-    },
-    {
-      "type": "line",
-      "id": "cassim-bell.crisis.node.line.018",
-      "lineId": "cassim-bell.crisis.line.018",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "私は勝利を約束しない。安全も約束できない。ただ、扉を閉め、温かい紅茶を最後まで飲んでから戻ることを諦める判断だけは本人へ返すと決めた。"
-    },
-    {
-      "type": "line",
-      "id": "cassim-bell.crisis.node.line.019",
-      "lineId": "cassim-bell.crisis.line.019",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "並んで戻る廊下には、まだ一人分の距離がある。でも今度の沈黙は拒絶ではなく、同じ答えを考えるためのものだった。",
-      "emotion": "tender"
     },
     {
       "type": "choice",
@@ -227,10 +197,10 @@
         {
           "id": "cassim-bell.crisis.choice.001",
           "label": "倉庫から失われた世界の出口を一つ開ける",
-          "result": "失われた世界の扉が一枚だけ開き、風と鐘の音が戻った。カシムだけが扱える出口が、次の勝ち筋にもつながった。",
-          "intent": "この人だけの突破法へ賭ける",
-          "promise": "予測しにくい方法を試し、この人専用の成長を大きく進める。",
-          "memory": "危機で選んだ方法は、契約を解く場面でも二人の共通の記憶として戻る。",
+          "result": "会社の監査が「自動化の進捗確認」に来た日、カシムは静かに扉を一枚開けた。あの、風の吹く野原へ。「この世界の受付は、型番では、できません」。監査員は野原の風に三分打たれて帰り、報告書に「当該窓口の自動化は、不可能(理由: 世界)」と書いた。理由: 世界。会社の書式が、初めて正直になった瞬間だった。",
+          "intent": "受付という仕事の本当の中身を見せる",
+          "promise": "危険を引き受け、この人専用の成長を最大まで進める。",
+          "memory": "「理由: 世界」の報告書を、チームは殿堂入りさせたがっている。",
           "tone": "wild",
           "effects": [
             {
@@ -257,10 +227,10 @@
         {
           "id": "cassim-bell.crisis.choice.002",
           "label": "敵の大技だけを遺失物として預かる",
-          "result": "敵の大技は番号札になって倉庫へ消えた。返却の手順を全員で覚え、危険な力を安全に一度だけ使い直せるようになった。",
-          "intent": "全員が使える安全な突破法を作る",
-          "promise": "本人だけの切り札は抑え、チーム全体へ使える成長を持ち帰る。",
-          "memory": "全員で組み直した手順は、契約を解く場面でも選んだ責任として戻る。",
+          "result": "答えは次の公式戦で示した。型「お預かり」で敵の大技を三連続受付し、完勝。試合後のインタビューでカシムは一言、「これは、自動化できますか」。中継を見ていた物語資産管理部は、翌朝、全自動化の通告を静かに取り下げた。番組の視聴率が、会社の書式に勝った。",
+          "intent": "受付の腕前を、全世界へ中継する",
+          "promise": "本人の切り札を最小限に、チーム全体へ使える成長を持ち帰る。",
+          "memory": "「これは、自動化できますか」の一言を、実況が三回リピートした。",
           "tone": "pragmatic",
           "effects": [
             {
@@ -305,9 +275,9 @@
     }
   ],
   "debug": {
-    "status": "approved",
-    "sourceDocument": "native narrative block migration",
-    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "status": "review",
+    "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
+    "authorNote": "v2改稿: 黒い角封筒=受付の全自動化(Q2)。無給の夜勤発覚→十五分の証明→列は待ってくれた。誤った信念の破裂。",
     "legacyGeneratedIds": false
   }
 }

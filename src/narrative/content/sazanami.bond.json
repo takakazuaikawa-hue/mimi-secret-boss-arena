@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "id": "sazanami.bond",
   "kind": "character",
-  "title": "チームの日常",
-  "summary": "噴水広場で起きる「チームの日常」",
+  "title": "小さな水槽の散歩",
+  "summary": "雨の日、携帯水槽で海と街を歩く。金魚すくい対決つき",
   "ownership": {
     "arcId": "character.sazanami",
     "characterId": "sazanami",
@@ -25,51 +25,17 @@
     "weight": 1
   },
   "presentation": {
-    "location": "噴水広場",
+    "location": "雨の商店街",
     "assets": [
       {
         "id": "sazanami.bond.asset.background.001",
         "kind": "background",
         "path": "/assets/story/bg-casino-cafe-rain.png",
-        "alt": "噴水広場の背景"
+        "alt": "雨の商店街の背景"
       }
     ]
   },
   "nodes": [
-    {
-      "type": "line",
-      "id": "sazanami.bond.node.line.001",
-      "lineId": "sazanami.bond.line.001",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "さざなみがチームに加わってから、噴水広場で顔を合わせることが増えた。今日は試合の話ではなく、少しだけ時間が空いている。"
-    },
-    {
-      "type": "line",
-      "id": "sazanami.bond.node.line.002",
-      "lineId": "sazanami.bond.line.002",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "試合のない午後。窓を雨が細く叩き、業務連絡も歓声も今日は遠い。二人きりになる予定ではなかったのに、空いている席は向かいだけだった。",
-      "emotion": "tender"
-    },
-    {
-      "type": "line",
-      "id": "sazanami.bond.node.line.003",
-      "lineId": "sazanami.bond.line.003",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "水族館の閉館後、水槽の前へ弁当を二つ置いた。片方は当然食べられないのに、さざなみは海藻の形へ細かく感想を言う。"
-    },
-    {
-      "type": "line",
-      "id": "sazanami.bond.node.line.004",
-      "lineId": "sazanami.bond.line.004",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "今日は波が静かですね。"
-    },
     {
       "type": "direction",
       "id": "sazanami.bond.node.direction.001",
@@ -78,6 +44,86 @@
         "assetId": "sazanami.bond.asset.background.001",
         "transition": "dissolve"
       }
+    },
+    {
+      "type": "line",
+      "id": "sazanami.bond.node.line.001",
+      "lineId": "sazanami.bond.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "休日、雨。私は金魚鉢サイズの携帯水槽を抱えて、商店街を歩いていた。中身は、さざなみの影のさらに一部。「街の散歩がしてみたい」という本人の希望による、初めての外出である。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.bond.node.line.002",
+      "lineId": "sazanami.bond.line.002",
+      "speakerId": "legacy.speaker.we7zqt",
+      "speakerName": "さざなみ",
+      "mode": "dialogue",
+      "text": "……雨の日を、選んでくれた。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.bond.node.line.003",
+      "lineId": "sazanami.bond.line.003",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "はい。雨なら、街じゅうがちょっとだけ海ですから。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.bond.node.line.004",
+      "lineId": "sazanami.bond.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "水槽の中の影が、うれしそうに渦を巻いた。彼女いわく、雨の日は「海が街へ迎えに来ている日」らしい。水たまりの一つずつに挨拶しながら歩くので、進みは遅い。散歩とは、そういうものだ。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.bond.node.line.005",
+      "lineId": "sazanami.bond.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "事件は、商店街の奥で起きた。雨天でもやっている屋台の金魚すくい。その水槽を見た瞬間、携帯水槽の影が、ぴたりと止まった。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.bond.node.line.006",
+      "lineId": "sazanami.bond.line.006",
+      "speakerId": "legacy.speaker.we7zqt",
+      "speakerName": "さざなみ",
+      "mode": "dialogue",
+      "text": "……あの水は、狭い。金魚が、二十七匹。水量に対して、九匹、多い。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.bond.node.line.007",
+      "lineId": "sazanami.bond.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "海の採点が、始まってしまった。屋台のおやじさんが「なんだお客さん、文句あるのか」と身を乗り出す。まずい。相手は水槽越しでも、寝返りで三県を揺らす海である。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.bond.node.line.008",
+      "lineId": "sazanami.bond.line.008",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "文句じゃないです！　勝負です！　私がすくった金魚のぶんだけ、水槽を広くしてあげてください！"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.bond.node.line.009",
+      "lineId": "sazanami.bond.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "勢いで宣言してしまった。接客業の悪い癖だ。落とし所を先に作ってしまう。かくして雨の商店街で、バニーガール対金魚すくい屋台の、九匹救出作戦が始まった。",
+      "emotion": "comic"
     },
     {
       "type": "direction",
@@ -89,65 +135,21 @@
     },
     {
       "type": "line",
-      "id": "sazanami.bond.node.line.005",
-      "lineId": "sazanami.bond.line.005",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "試合も契約もない時間なら、もっと気楽に話せると思っていた。実際は、お茶を一口飲むたび沈黙の意味を考えてしまう。強さを見ている時より、さざなみの小さな癖のほうがずっと気になった。",
-      "emotion": "comic"
-    },
-    {
-      "type": "line",
-      "id": "sazanami.bond.node.line.006",
-      "lineId": "sazanami.bond.line.006",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "水槽の向こうの巨大な瞼と、弁当の青のりが作る浅瀬。戦場では見落としていた小さな癖が、何も起きない時間ほどよく見える。"
-    },
-    {
-      "type": "line",
-      "id": "sazanami.bond.node.line.007",
-      "lineId": "sazanami.bond.line.007",
-      "speakerId": "legacy.speaker.we7zqt",
-      "speakerName": "さざなみ",
-      "mode": "dialogue",
-      "text": "その緑は浅瀬の味がする。"
-    },
-    {
-      "type": "line",
-      "id": "sazanami.bond.node.line.008",
-      "lineId": "sazanami.bond.line.008",
-      "speakerId": "legacy.speaker.we7zqt",
-      "speakerName": "さざなみ",
-      "mode": "dialogue",
-      "text": "眠い。"
-    },
-    {
-      "type": "line",
-      "id": "sazanami.bond.node.line.009",
-      "lineId": "sazanami.bond.line.009",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "さざなみは海溝より深い場所から、地上を小さな影として眺めるもの。そのはずなのに、私の休憩が終わる時刻を気にして、話題を一つずつ短くしている。",
-      "emotion": "revelation"
-    },
-    {
-      "type": "line",
       "id": "sazanami.bond.node.line.010",
       "lineId": "sazanami.bond.line.010",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
+      "speakerId": "legacy.speaker.we7zqt",
+      "speakerName": "さざなみ",
       "mode": "dialogue",
-      "text": "コンビニの青のりです。海を見る目が厳しすぎませんか。"
+      "text": "ミミ。ポイは、水と平行に。……金魚は、追わない。潮目を読んで、待つ。"
     },
     {
       "type": "line",
       "id": "sazanami.bond.node.line.011",
       "lineId": "sazanami.bond.line.011",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "返事が短いの、ちょっと安心します。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "肩の上の携帯水槽から、海溝より大きい存在の、金魚すくい実況コーチが飛ぶ。屋台の水面のどこに流れが生まれるか、彼女には全部見えるらしい。私は言われた場所にポイを置くだけでよかった。",
+      "emotion": "comic"
     },
     {
       "type": "line",
@@ -155,33 +157,35 @@
       "lineId": "sazanami.bond.line.012",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "特別な話をしなくても、同じ音を聞いていられる。そんな時間が欲しかったのだと、失う前から気づいてしまった。"
+      "text": "結果、九匹。ポイは最後まで破れなかった。おやじさんは負けを認めて、大きい水槽を出してきた。ついでに「あんたの相棒、何者だい」と聞かれたので、「海です」と正直に答えたら、笑って金魚を一匹おまけしてくれた。",
+      "emotion": "comic"
     },
     {
       "type": "line",
       "id": "sazanami.bond.node.line.013",
       "lineId": "sazanami.bond.line.013",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "水面が小さく揺れた。笑ったのだと思うと、私の弁当まで少しおいしくなった。"
+      "speakerId": "legacy.speaker.we7zqt",
+      "speakerName": "さざなみ",
+      "mode": "dialogue",
+      "text": "……広い水で泳ぐ金魚は、いい。九十九点。"
     },
     {
       "type": "line",
       "id": "sazanami.bond.node.line.014",
       "lineId": "sazanami.bond.line.014",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "寝返り一つで沿岸三県の潮位が変わるのに、青のりの質には細かい。甘い空気になりかけるたび、世界の方が先に耐えられなくなる。",
-      "emotion": "comic"
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "最後の一点は、何ですか。"
     },
     {
       "type": "line",
       "id": "sazanami.bond.node.line.015",
       "lineId": "sazanami.bond.line.015",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "距離を測り続けていたのは、こちらの暮らしを小さいものとして踏み越えたくなかったからだ。そう気づくと、何も起きなかった午後が急に大事な出来事へ変わった。",
-      "emotion": "tender"
+      "speakerId": "legacy.speaker.we7zqt",
+      "speakerName": "さざなみ",
+      "mode": "dialogue",
+      "text": "満点を出すと、終わってしまう。……この散歩に、まだ続きがほしいから、一点は取っておく。"
     },
     {
       "type": "line",
@@ -189,7 +193,7 @@
       "lineId": "sazanami.bond.line.016",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "笑いが収まったあと、地図を変えない歩き方で、同じ窓辺へ会いに来ることという、驚くほど普通の望みが語られた。",
+      "text": "雨音の中で、心臓がひとつ跳ねた。採点の人の一点は、そういう使い方もできるのか。私は傘を少し傾けて、携帯水槽に雨粒が届くようにした。海が、雨と再会して、小さく波立った。",
       "emotion": "tender"
     },
     {
@@ -198,25 +202,8 @@
       "lineId": "sazanami.bond.line.017",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "試合の外で交わした言葉のほうが、次の指示より長く残ることがある。"
-    },
-    {
-      "type": "line",
-      "id": "sazanami.bond.node.line.018",
-      "lineId": "sazanami.bond.line.018",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "それは私が叶えるものではない。ただ、叶うまで隣にいることならできる。そう言いかけて、言葉にする勇気だけが遅れた。",
-      "emotion": "tension"
-    },
-    {
-      "type": "line",
-      "id": "sazanami.bond.node.line.019",
-      "lineId": "sazanami.bond.line.019",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "浅瀬の味だと評された空の弁当箱を間に置いたまま、私たちは雨が止んでもしばらく席を立たなかった。",
-      "emotion": "tender"
+      "text": "帰り道は、まだ長い。散歩の続きの使い方を、決められる。",
+      "emotion": "resolve"
     },
     {
       "type": "choice",
@@ -225,10 +212,10 @@
         {
           "id": "sazanami.bond.choice.001",
           "label": "海が見える窓辺で、小さな水槽の散歩をする",
-          "result": "歩いたのは私で、水槽は台車、本人は海より大きい。散歩の定義は崩れたが、機嫌はよかった。",
-          "intent": "相手の秘密の勝ち方を試す",
+          "result": "帰りに、海の見える高台へ寄り道した。携帯水槽を窓辺に置くと、水槽の中の影と、水平線の本体が、しばらく静かに向き合っていた。「自分を、外から見るのは、初めて」と彼女は言った。大きすぎて全体を見たことがなかった人が、金魚鉢の中から、初めて自分の広さを眺めた夕方だった。",
+          "intent": "海に、海を見せる",
           "promise": "読みにくい作戦になる代わりに、この人だけの成長を大きく進める。",
-          "memory": "任せた一戦の手応えが、次に力を見せる理由になる。",
+          "memory": "海が初めて自分を外から見た夕方を、二人とも覚えている。",
           "tone": "wild",
           "effects": [
             {
@@ -255,10 +242,10 @@
         {
           "id": "sazanami.bond.choice.002",
           "label": "水槽の影へ三人の陣形を重ねる",
-          "result": "影の中では足音が波になり、三人の間合いが揃った。床清掃の担当だけが翌朝まで帰れなかった。",
-          "intent": "チームの新しい連携を試す",
-          "promise": "本人の流儀は崩すが、全員へ配れる成長ポイントを得る。",
-          "memory": "成功した作戦と短くなった会話の両方が、次の判断まで残る。",
+          "result": "帰り道、雨宿りのついでに作戦会議をした。携帯水槽の水面に、彼女が三人の陣形を波紋で描いてくれる。前衛の波、中衛の渦、後衛の凪。「陣形は、潮と同じ。形より、流れ」。波紋の戦術図は、ホワイトボードより分かりやすかった。うちの作戦会議は、また一つ変な道具を覚えた。",
+          "intent": "海の視点で、チームの流れを整える",
+          "promise": "散歩の続きは短くなるが、全員へ配れる成長ポイントを得る。",
+          "memory": "波紋の戦術図を、チームは「さざなみボード」と呼んでいる。",
           "tone": "pragmatic",
           "effects": [
             {
@@ -298,9 +285,9 @@
     }
   ],
   "debug": {
-    "status": "approved",
-    "sourceDocument": "native narrative block migration",
-    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "status": "review",
+    "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
+    "authorNote": "v2改稿: 携帯水槽の散歩と金魚すくい九匹救出作戦。「満点を出すと終わってしまう」の一点。海に海を見せる夕方。",
     "legacyGeneratedIds": false
   }
 }

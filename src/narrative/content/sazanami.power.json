@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "id": "sazanami.power",
   "kind": "character",
-  "title": "取り戻す力",
-  "summary": "地下貯水槽で起きる「取り戻す力」",
+  "title": "胴長と、水中三分間",
+  "summary": "地下貯水槽で海の本気を見る。黄色い胴長と、泡の声",
   "ownership": {
     "arcId": "character.sazanami",
     "characterId": "sazanami",
@@ -37,29 +37,39 @@
   },
   "nodes": [
     {
+      "type": "direction",
+      "id": "sazanami.power.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "sazanami.power.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
       "type": "line",
       "id": "sazanami.power.node.line.001",
       "lineId": "sazanami.power.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "練習のあと、さざなみに呼ばれて地下貯水槽まで来た。いつもの力では足りない理由を、見せたいらしい。"
+      "text": "次の相手は水中戦を仕掛けてくるらしい。対策会議の結論——さざなみの本気を、一度ちゃんと見ておく。場所は閉鎖中の地下貯水槽。私の装備は、彼女が指定した黄色い胴長である。"
     },
     {
       "type": "line",
       "id": "sazanami.power.node.line.002",
       "lineId": "sazanami.power.line.002",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "警報より先に、相手の声が私の名を呼んだ。いつもと同じ呼び方なのに、その一音だけで足が止まる。",
-      "emotion": "tension"
+      "speakerId": "legacy.speaker.we7zqt",
+      "speakerName": "さざなみ",
+      "mode": "dialogue",
+      "text": "……似合う。黄色い胴長——百点。"
     },
     {
       "type": "line",
       "id": "sazanami.power.node.line.003",
       "lineId": "sazanami.power.line.003",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "水槽の影が壁を越え、闘技場全体を海底へ沈めた。息はできるのに、耳の奥で何千メートルもの水圧が鳴る。"
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "散歩には一点残したのに、胴長は満点なんですか。"
     },
     {
       "type": "line",
@@ -68,16 +78,16 @@
       "speakerId": "legacy.speaker.we7zqt",
       "speakerName": "さざなみ",
       "mode": "dialogue",
-      "text": "水槽の底を開けば、目だけは出せる。"
+      "text": "胴長は、完成している。あれ以上の装備を、海は知らない。"
     },
     {
-      "type": "direction",
-      "id": "sazanami.power.node.direction.001",
-      "command": {
-        "type": "background",
-        "assetId": "sazanami.power.asset.background.001",
-        "transition": "dissolve"
-      }
+      "type": "line",
+      "id": "sazanami.power.node.line.005",
+      "lineId": "sazanami.power.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "海の価値観は、時々よく分からない。貯水槽に影が満ちていく。水位が上がる。照明が水面に揺れて、地下なのに、どこか遠い海の底みたいになった。",
+      "emotion": "tension"
     },
     {
       "type": "direction",
@@ -89,38 +99,30 @@
     },
     {
       "type": "line",
-      "id": "sazanami.power.node.line.005",
-      "lineId": "sazanami.power.line.005",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "寝返り一つで沿岸三県の潮位が変わるのに、青のりの質には細かい。そんな力が、目の前で息をしている。逃げる理由なら十分だった。それでも私は、力の大きさよりさざなみが最初にどこを見るのかを確かめたかった。",
-      "emotion": "tension"
-    },
-    {
-      "type": "line",
       "id": "sazanami.power.node.line.006",
       "lineId": "sazanami.power.line.006",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "さざなみが私と危険の間へ立つ。触れてはいない。それでも、こちらへ届くはずだった圧力だけがきれいに二つへ割れた。"
+      "text": "本気のデモが始まった。水が、生き物になる。渦が柱になり、柱が壁になり、壁が音もなく崩れて凪へ戻る。水面が、彼女の呼吸に合わせて上下する。貯水槽全体が、一つの肺だった。",
+      "emotion": "tension"
     },
     {
       "type": "line",
       "id": "sazanami.power.node.line.007",
       "lineId": "sazanami.power.line.007",
-      "speakerId": "legacy.speaker.we7zqt",
-      "speakerName": "さざなみ",
-      "mode": "dialogue",
-      "text": "これは私の指先にすぎない。本体が動けば、岸の形が変わる。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "計測係の新人くんの計測器は、今夜は水没で終わった。彼は防水の記録板に「うみ。ここに、うみ。」と書いた。もう完全に俳人である。",
+      "emotion": "comic"
     },
     {
       "type": "line",
       "id": "sazanami.power.node.line.008",
       "lineId": "sazanami.power.line.008",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
+      "speakerId": "legacy.speaker.we7zqt",
+      "speakerName": "さざなみ",
       "mode": "dialogue",
-      "text": "館内が水没しません？"
+      "text": "ミミ。……水の中を、見てみるか。三分だけ、私の中へ。"
     },
     {
       "type": "line",
@@ -128,17 +130,17 @@
       "lineId": "sazanami.power.line.009",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "海溝より深い場所から、地上を小さな影として眺めるもの。けれど今見せている力は、勝つためではなく、私を怖がらせないために抑えられている。",
-      "emotion": "revelation"
+      "text": "差し出されたのは、水でできた球のドームだった。中は空気。歩いて入れる、小さな部屋。私は胴長のまま、海の中へ一歩、踏み込んだ。",
+      "emotion": "tension"
     },
     {
       "type": "line",
       "id": "sazanami.power.node.line.010",
       "lineId": "sazanami.power.line.010",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "試合のたびに地図を刷り直す予算はありません。指先の範囲でお願いします。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "水中は、静かだった。光の柱が何本も差し込んで、影の粒子がゆっくり舞う。泡の声が、耳のすぐ横で聞こえた。壁越しじゃない、初めての距離。",
+      "emotion": "tender"
     },
     {
       "type": "line",
@@ -147,7 +149,7 @@
       "speakerId": "legacy.speaker.we7zqt",
       "speakerName": "さざなみ",
       "mode": "dialogue",
-      "text": "目は乾く。水は出さない。"
+      "text": "息は、私が持つ。……あなたは今、海の中で、一番安全な場所にいる。"
     },
     {
       "type": "line",
@@ -155,15 +157,17 @@
       "lineId": "sazanami.power.line.012",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "本気を見たいと思っていた。実際に目の前へ現れると、知りたかったのは強さではなく、その力を本人がどう恐れているかだった。"
+      "text": "海溝より大きい人の、真ん中の小部屋。心臓の音が水に響いて、隠しようがない。「……速い」と泡の声が言うので、「気のせいです」と答えた。海に嘘は通じなかったと思う。",
+      "emotion": "comic"
     },
     {
       "type": "line",
       "id": "sazanami.power.node.line.013",
       "lineId": "sazanami.power.line.013",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "巨大な瞳が閉じ、波が一度だけ足首へ触れた。加減を約束する握手のようだった。"
+      "speakerId": "legacy.speaker.we7zqt",
+      "speakerName": "さざなみ",
+      "mode": "dialogue",
+      "text": "本気の私は、これ。会場では、ここまで、しない。……でも、あなたには、全部を見ていてほしかった。"
     },
     {
       "type": "line",
@@ -171,8 +175,8 @@
       "lineId": "sazanami.power.line.014",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "寝返り一つで沿岸三県の潮位が変わるのに、青のりの質には細かい。闘技場の安全基準は一瞬で役に立たなくなり、担当者は私の顔を見て計測を諦めた。",
-      "emotion": "comic"
+      "text": "三分間の海底から戻ると、地下貯水槽はただの貯水槽に戻っていた。胴長のまま、私はしばらく動けなかった。見せてもらった側の責任というものが、世の中にはある。",
+      "emotion": "revelation"
     },
     {
       "type": "line",
@@ -180,42 +184,8 @@
       "lineId": "sazanami.power.line.015",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "世界を壊せることより、壊さないために何を選んだかが胸へ残った。距離を測り続けていたのは、こちらの暮らしを小さいものとして踏み越えたくなかったからだ。その理解が正しいか、いつか本人の言葉で確かめたい。",
-      "emotion": "revelation"
-    },
-    {
-      "type": "line",
-      "id": "sazanami.power.node.line.016",
-      "lineId": "sazanami.power.line.016",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "力の中心にあったのは、誰かへ近づくための一歩が、その人の暮らす海岸線を変えてしまうこと。最強であることが、本人にとって一番古い傷なのだと分かる。",
-      "emotion": "revelation"
-    },
-    {
-      "type": "line",
-      "id": "sazanami.power.node.line.017",
-      "lineId": "sazanami.power.line.017",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "怖さが消えたわけではない。だからこそ、使うかどうかを本人と決める必要がある。"
-    },
-    {
-      "type": "line",
-      "id": "sazanami.power.node.line.018",
-      "lineId": "sazanami.power.line.018",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "大丈夫とは言えない。怖いものは怖い。それでも、次に力を使う時は一人で決めなくていいと伝えた。",
+      "text": "この力を、試合でどう使うか。決めるのは、今夜のうちだ。",
       "emotion": "resolve"
-    },
-    {
-      "type": "line",
-      "id": "sazanami.power.node.line.019",
-      "lineId": "sazanami.power.line.019",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "浅瀬の味だと評された空の弁当箱だけが元の大きさで残り、さっきまで世界の終わりがいた場所に、帰り道の灯りが戻った。"
     },
     {
       "type": "choice",
@@ -224,10 +194,10 @@
         {
           "id": "sazanami.power.choice.001",
           "label": "本体を呼ばず、潮の向きだけ変えてもらう",
-          "result": "会場に海は来なかった。それでも敵の足元だけが満ち、味方の退路だけが干いた。",
-          "intent": "本来の力を一気に取り戻す",
+          "result": "決めた型は「潮目」。会場の水気——湿度、汗、飲み物、雨——の流れを、彼女がほんの少しだけ変える。相手は理由の分からない違和感に足を取られ、うちの三人だけが、いつも追い風の中にいる。審判には何も見えない。海は、見えない所で働くのが、一番大きい。",
+          "intent": "海の大きさを、見えない優しさとして使う",
           "promise": "失敗時の危険を引き受け、この人専用の成長を最大まで進める。",
-          "memory": "力を恐れたまま任せたことを、相手は危機の場面で思い出す。",
+          "memory": "「潮目」の型が生まれた夜を、二人とも覚えている。",
           "tone": "heroic",
           "effects": [
             {
@@ -254,10 +224,10 @@
         {
           "id": "sazanami.power.choice.002",
           "label": "水槽の影を広げ、安全な深さを測る",
-          "result": "深海の力は浅く薄く広がった。決定力は減ったが、三人全員が同じ潮へ乗れるようになった。",
-          "intent": "安全な段階解除で確実に進む",
+          "result": "水槽の影をどこまで広げても会場が沈まない上限を、深夜まで計測した。結論、コート半面ぶんの「浅瀬」までなら安全。以後、彼女の試合は足首までの浅瀬で行われる。相手は水に警戒して大技を出せず、こちらは浅瀬の主。新人くんの報告書いわく「あさせ。されど、うみ。」——五・七・五が完成しつつある。",
+          "intent": "会場を沈めない上限を先に決める",
           "promise": "本来の力は一部に留め、チーム全体の成長へ成果を持ち帰る。",
-          "memory": "全員で帰ると決めた手順が、危機で使える安全策として残る。",
+          "memory": "「浅瀬されど海」の上限値を、チームの全員が守っている。",
           "tone": "pragmatic",
           "effects": [
             {
@@ -297,9 +267,9 @@
     }
   ],
   "debug": {
-    "status": "approved",
-    "sourceDocument": "native narrative block migration",
-    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "status": "review",
+    "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
+    "authorNote": "v2改稿: 黄色い胴長(canon)と水中三分間のドキドキ。「息は、私が持つ」。貯水槽が一つの肺になるスペクタクル。",
     "legacyGeneratedIds": false
   }
 }

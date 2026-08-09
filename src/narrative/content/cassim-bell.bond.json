@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "id": "cassim-bell.bond",
   "kind": "character",
-  "title": "チームの日常",
-  "summary": "倉庫街で起きる「チームの日常」",
+  "title": "持ち主不明の、お茶会",
+  "summary": "七世界の落とし物の谷で、巨大竜の靴に座ってピクニック",
   "ownership": {
     "arcId": "character.cassim-bell",
     "characterId": "cassim-bell",
@@ -32,45 +32,11 @@
         "id": "cassim-bell.bond.asset.background.001",
         "kind": "background",
         "path": "/assets/story/bg-casino-cafe-rain.png",
-        "alt": "倉庫街の背景"
+        "alt": "雨の倉庫街の背景"
       }
     ]
   },
   "nodes": [
-    {
-      "type": "line",
-      "id": "cassim-bell.bond.node.line.001",
-      "lineId": "cassim-bell.bond.line.001",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "カシム・ベルがチームに加わってから、倉庫街で顔を合わせることが増えた。今日は試合の話ではなく、少しだけ時間が空いている。"
-    },
-    {
-      "type": "line",
-      "id": "cassim-bell.bond.node.line.002",
-      "lineId": "cassim-bell.bond.line.002",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "試合のない午後。窓を雨が細く叩き、業務連絡も歓声も今日は遠い。二人きりになる予定ではなかったのに、空いている席は向かいだけだった。",
-      "emotion": "tender"
-    },
-    {
-      "type": "line",
-      "id": "cassim-bell.bond.node.line.003",
-      "lineId": "cassim-bell.bond.line.003",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "倉庫の棚から、私が転生初日に失くした片方の靴が出てきた。泥まであの日のまま乾いている。"
-    },
-    {
-      "type": "line",
-      "id": "cassim-bell.bond.node.line.004",
-      "lineId": "cassim-bell.bond.line.004",
-      "speakerId": "legacy.speaker.1wuvexi",
-      "speakerName": "カシム・ベル",
-      "mode": "dialogue",
-      "text": "今日は何も失くしていませんね。"
-    },
     {
       "type": "direction",
       "id": "cassim-bell.bond.node.direction.001",
@@ -79,6 +45,59 @@
         "assetId": "cassim-bell.bond.asset.background.001",
         "transition": "dissolve"
       }
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.bond.node.line.001",
+      "lineId": "cassim-bell.bond.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "雨の休日。カシム・ベルが「見せたい場所があります」と言うので、保管庫の奥へついて行った。第七十七棚区画。通称、持ち主不明の谷。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.bond.node.line.002",
+      "lineId": "cassim-bell.bond.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "そこは、七世界の落とし物の山だった。巨大竜の長靴、海底王の冠、小国騎士の盾、月の傘が三本。全部、百年以上も持ち主が現れない品々らしい。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.bond.node.line.003",
+      "lineId": "cassim-bell.bond.line.003",
+      "speakerId": "legacy.speaker.1wuvexi",
+      "speakerName": "カシム・ベル",
+      "mode": "dialogue",
+      "text": "規則では、ここは立入禁止です。ただし——受付係が同伴する茶会は、規則に書かれていません。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.bond.node.line.004",
+      "lineId": "cassim-bell.bond.line.004",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "カシムさんが規則の隙間を使うの、初めて見ました。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.bond.node.line.005",
+      "lineId": "cassim-bell.bond.line.005",
+      "speakerId": "legacy.speaker.1wuvexi",
+      "speakerName": "カシム・ベル",
+      "mode": "dialogue",
+      "text": "求人票第二条。「休憩は業務」。……業務は、真面目にやる主義です。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.bond.node.line.006",
+      "lineId": "cassim-bell.bond.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "屁理屈の使い方が、いい方向に壊れてきた。私たちは巨大竜の長靴(毛布つき)を椅子にして、月の傘を屋根にして、雨音の中でお茶会を始めた。世界で一番ぜいたくな雨宿りだと思う。",
+      "emotion": "tender"
     },
     {
       "type": "direction",
@@ -90,29 +109,12 @@
     },
     {
       "type": "line",
-      "id": "cassim-bell.bond.node.line.005",
-      "lineId": "cassim-bell.bond.line.005",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "試合も契約もない時間なら、もっと気楽に話せると思っていた。実際は、お茶を一口飲むたび沈黙の意味を考えてしまう。強さを見ている時より、カシム・ベルの小さな癖のほうがずっと気になった。",
-      "emotion": "comic"
-    },
-    {
-      "type": "line",
-      "id": "cassim-bell.bond.node.line.006",
-      "lineId": "cassim-bell.bond.line.006",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "無数の扉、休止中にならない受付札、遠い世界から届く鈴。戦場では見落としていた小さな癖が、何も起きない時間ほどよく見える。"
-    },
-    {
-      "type": "line",
       "id": "cassim-bell.bond.node.line.007",
       "lineId": "cassim-bell.bond.line.007",
-      "speakerId": "legacy.speaker.1wuvexi",
-      "speakerName": "カシム・ベル",
-      "mode": "dialogue",
-      "text": "お返しします。受領印をお願いします。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "カシムの淹れる紅茶は、受付仕込みの正確さだった。砂時計で蒸らし時間を計り、黒手袋で注ぎ、カップの取っ手を必ずこちらへ向けて出す。所作の一つずつが、七十二時間働く手と同じ手とは思えないほど、静かだ。",
+      "emotion": "tender"
     },
     {
       "type": "line",
@@ -121,25 +123,25 @@
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "褒められてます？"
+      "text": "……接客中じゃないあなたの顔、初めて見た気がします。"
     },
     {
       "type": "line",
       "id": "cassim-bell.bond.node.line.009",
       "lineId": "cassim-bell.bond.line.009",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "カシム・ベルは失くしたものを必ず保管し、持ち主が来るまで待ち続ける番人。そのはずなのに、私の休憩が終わる時刻を気にして、話題を一つずつ短くしている。",
-      "emotion": "revelation"
+      "speakerId": "legacy.speaker.1wuvexi",
+      "speakerName": "カシム・ベル",
+      "mode": "dialogue",
+      "text": "……お互い様です。あなたも今、兎耳が、完全に休んでいる。"
     },
     {
       "type": "line",
       "id": "cassim-bell.bond.node.line.010",
       "lineId": "cassim-bell.bond.line.010",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "もう履かない靴でも、受け取らないとだめですか。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "言われて気づいた。接客中の私の耳は、いつも音を拾って立っている。今は、雨音の方へ、くたっと倒れていた。接客者同士にしか見えない休みの形が、お互いの頭の上にあった。",
+      "emotion": "revelation"
     },
     {
       "type": "line",
@@ -148,7 +150,7 @@
       "speakerId": "legacy.speaker.1wuvexi",
       "speakerName": "カシム・ベル",
       "mode": "dialogue",
-      "text": "私にとっては、少し寂しい報告です。"
+      "text": "この谷の品は、私が受付した子たちです。持ち主は、もう現れないかもしれない。それでも、埃を払って、雨漏りから守って——待つのが、私の仕事でした。"
     },
     {
       "type": "line",
@@ -156,69 +158,17 @@
       "lineId": "cassim-bell.bond.line.012",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "特別な話をしなくても、同じ音を聞いていられる。そんな時間が欲しかったのだと、失う前から気づいてしまった。"
+      "text": "七世界の落とし物の谷は、つまり、この人が誰にも頼まれずに守ってきた、待合室だった。終わった物語の持ち物たちの。",
+      "emotion": "revelation"
     },
     {
       "type": "line",
       "id": "cassim-bell.bond.node.line.013",
       "lineId": "cassim-bell.bond.line.013",
-      "speakerId": "legacy.speaker.1wuvexi",
-      "speakerName": "カシム・ベル",
-      "mode": "dialogue",
-      "text": "返されたあと手放すのは、持ち主の選択です。保管したままでは、選ぶこともできません。"
-    },
-    {
-      "type": "line",
-      "id": "cassim-bell.bond.node.line.014",
-      "lineId": "cassim-bell.bond.line.014",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "合鍵を一本取り違えるだけで、月の裏や滅亡前日の王都が休憩室へ開く。甘い空気になりかけるたび、世界の方が先に耐えられなくなる。",
-      "emotion": "comic"
-    },
-    {
-      "type": "line",
-      "id": "cassim-bell.bond.node.line.015",
-      "lineId": "cassim-bell.bond.line.015",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "責任という言葉の陰で、待たせた誰かに嫌われる怖さを何百年も抱えていた。そう気づくと、何も起きなかった午後が急に大事な出来事へ変わった。",
-      "emotion": "tender"
-    },
-    {
-      "type": "line",
-      "id": "cassim-bell.bond.node.line.016",
-      "lineId": "cassim-bell.bond.line.016",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "笑いが収まったあと、扉を閉め、温かい紅茶を最後まで飲んでから戻ることという、驚くほど普通の望みが語られた。",
-      "emotion": "tender"
-    },
-    {
-      "type": "line",
-      "id": "cassim-bell.bond.node.line.017",
-      "lineId": "cassim-bell.bond.line.017",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "試合の外で交わした言葉のほうが、次の指示より長く残ることがある。"
-    },
-    {
-      "type": "line",
-      "id": "cassim-bell.bond.node.line.018",
-      "lineId": "cassim-bell.bond.line.018",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "それは私が叶えるものではない。ただ、叶うまで隣にいることならできる。そう言いかけて、言葉にする勇気だけが遅れた。",
-      "emotion": "tension"
-    },
-    {
-      "type": "line",
-      "id": "cassim-bell.bond.node.line.019",
-      "lineId": "cassim-bell.bond.line.019",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "何百年ぶりに表へ返した十五分休止の札を間に置いたまま、私たちは雨が止んでもしばらく席を立たなかった。",
-      "emotion": "tender"
+      "text": "お茶のおかわりの前に、午後の過ごし方を決めることにした。",
+      "emotion": "resolve"
     },
     {
       "type": "choice",
@@ -227,10 +177,10 @@
         {
           "id": "cassim-bell.bond.choice.001",
           "label": "倉庫から持ち主不明の弁当箱を探す",
-          "result": "見つかったのは百年前の昼食だった。中身は温かく、持ち主は別世界でまだ昼休みを待っていた。",
-          "intent": "相手の秘密の勝ち方を試す",
+          "result": "「そういえば、持ち主不明の弁当箱が三百年もの含めて六個あります」。午後は二人で弁当箱の捜索になった。見つけた六個は、洗って、干して、「本日の茶会用」の札をつけた。持ち主が現れたら返す。現れないうちは、茶会で現役。「保管より、使われる方が、道具は幸せです」とカシムは言った。受付係の哲学が、少し変わった午後だった。",
+          "intent": "待つだけの品に、今日の出番を作る",
           "promise": "読みにくい作戦になる代わりに、この人だけの成長を大きく進める。",
-          "memory": "任せた一戦の手応えが、次に力を見せる理由になる。",
+          "memory": "茶会用の六個の弁当箱を、二人は「現役組」と呼んでいる。",
           "tone": "wild",
           "effects": [
             {
@@ -257,10 +207,10 @@
         {
           "id": "cassim-bell.bond.choice.002",
           "label": "味方の大技を一度預かり、使う順番を変える",
-          "result": "技は倉庫へ入り、必要な瞬間に別の扉から戻った。返却印が増えるたび、連携の順番がきれいに整った。",
-          "intent": "チームの新しい連携を試す",
-          "promise": "本人の流儀は崩すが、全員へ配れる成長ポイントを得る。",
-          "memory": "成功した作戦と短くなった会話の両方が、次の判断まで残る。",
+          "result": "午後は作戦会議になった。カシムの受付能力は、実は戦術に使える。「味方の大技を、一時的に私が『お預かり』できます。お返しする瞬間を、私が選べる」。技の発動タイミングを受付係が管理するチームが、ここに誕生した。整理券方式の連携技は、リハーサルで新人くんの計測器を今週も煙にした。",
+          "intent": "受付の力を、チームの新戦術にする",
+          "promise": "茶会は短くなるが、全員へ配れる成長ポイントを得る。",
+          "memory": "整理券方式の連携技を、チームは「番号札」と呼んでいる。",
           "tone": "pragmatic",
           "effects": [
             {
@@ -300,9 +250,9 @@
     }
   ],
   "debug": {
-    "status": "approved",
-    "sourceDocument": "native narrative block migration",
-    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "status": "review",
+    "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
+    "authorNote": "v2改稿: 持ち主不明の谷のお茶会(報酬CGの小道具を先行配置)。兎耳が休んでいる指摘の相互ドキドキ。Q1=終わった物語の持ち物の待合室。",
     "legacyGeneratedIds": false
   }
 }

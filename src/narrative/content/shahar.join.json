@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "id": "shahar.join",
   "kind": "character",
-  "title": "スカウト",
-  "summary": "配送ヤードで起きる「スカウト」",
+  "title": "配送区分・古竜(一頭)",
+  "summary": "選手登録のはずが、配送ヤードの伝票と戦うことになる",
   "ownership": {
     "arcId": "character.shahar",
     "characterId": "shahar",
@@ -38,40 +38,6 @@
   },
   "nodes": [
     {
-      "type": "line",
-      "id": "shahar.join.node.line.001",
-      "lineId": "shahar.join.line.001",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "シャハルと初めて会ったあと、配送ヤードでもう一度顔を合わせた。今日は、選手登録の条件を確かめることになっている。"
-    },
-    {
-      "type": "line",
-      "id": "shahar.join.node.line.002",
-      "lineId": "shahar.join.line.002",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "選手登録の面談室は狭い。机を挟めば仕事の距離を守れるはずなのに、同じ書類を覗き込むたび、沈黙だけが近くなる。",
-      "emotion": "tension"
-    },
-    {
-      "type": "line",
-      "id": "shahar.join.node.line.003",
-      "lineId": "shahar.join.line.003",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "登録端末の身長欄は三桁までしか入らない。ノノさんが静かに予備の用紙を四十枚持ってきた。"
-    },
-    {
-      "type": "line",
-      "id": "shahar.join.node.line.004",
-      "lineId": "shahar.join.line.004",
-      "speakerId": "legacy.speaker.bkqdo1",
-      "speakerName": "シャハル",
-      "mode": "dialogue",
-      "text": "この鱗だけなら出場枠へ収まる。"
-    },
-    {
       "type": "direction",
       "id": "shahar.join.node.direction.001",
       "command": {
@@ -81,12 +47,39 @@
       }
     },
     {
-      "type": "direction",
-      "id": "shahar.join.node.direction.002",
-      "command": {
-        "type": "effect",
-        "effectId": "pulse"
-      }
+      "type": "line",
+      "id": "shahar.join.node.line.001",
+      "lineId": "shahar.join.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "シャハルの選手登録の日。問題は一つ。ご本人が、街に入らない。受付までの来場が物理的に不可能なお客様は、接客歴半年でも初めてだった。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.join.node.line.002",
+      "lineId": "shahar.join.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "解決策として、鱗を一枚、配送ヤードへ届けてもらうことになった。午前十時、空から降ってきたのは、畳一枚の鱗と、几帳面な送り状。品名欄「私」。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "shahar.join.node.line.003",
+      "lineId": "shahar.join.line.003",
+      "speakerId": "legacy.speaker.bkqdo1",
+      "speakerName": "シャハル",
+      "mode": "dialogue",
+      "text": "この鱗が、当面の私です。取り扱いは丁寧に——いえ、あなたなら、雑でも構いません。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.join.node.line.004",
+      "lineId": "shahar.join.line.004",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "雑にはしません！　でも登録端末が、その、鱗さんを……"
     },
     {
       "type": "line",
@@ -94,16 +87,25 @@
       "lineId": "shahar.join.line.005",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "選手登録は一枚で済むのに、シャハルを知るための欄はどこにもない。地上の小さな都合には関心がない古竜なのだと決めれば簡単だ。でも、その決め方こそ契約書と同じに見えた。",
+      "text": "端末は鱗を読み取り、体重欄で三回再起動して、出場カテゴリ「建材」を印字した。建材。世界最古クラスの竜が、建材。",
       "emotion": "comic"
+    },
+    {
+      "type": "direction",
+      "id": "shahar.join.node.direction.002",
+      "command": {
+        "type": "effect",
+        "effectId": "shake"
+      }
     },
     {
       "type": "line",
       "id": "shahar.join.node.line.006",
       "lineId": "shahar.join.line.006",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "シャハルの経歴は、端末の入力欄へ収まらない。けれど本人が書けずにいるのは、過去の偉業ではなく「これから何をしたいか」の一行だった。"
+      "speakerId": "legacy.speaker.bkqdo1",
+      "speakerName": "シャハル",
+      "mode": "dialogue",
+      "text": "建材。……悪くない。長持ちしそうな区分です。"
     },
     {
       "type": "line",
@@ -112,51 +114,52 @@
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "本体の大きさは、だいたいで構いません。"
+      "text": "受け入れないでください！　長持ちで自己評価しない！"
     },
     {
       "type": "line",
       "id": "shahar.join.node.line.008",
       "lineId": "shahar.join.line.008",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "選手一名で申請して大丈夫なのかな。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "書き直しの間、シャハルは配送ヤードの見学を始めた。正確には、鱗越しに。今日届いた荷物を一つずつ眺めて、そのたび空の声が弾む。",
+      "emotion": "tender"
     },
     {
       "type": "line",
       "id": "shahar.join.node.line.009",
       "lineId": "shahar.join.line.009",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "季節より長く生き、地上の都合へ動じない古竜。その横顔が、空欄の前でだけ少し頼りなく見える。",
-      "emotion": "revelation"
+      "speakerId": "legacy.speaker.bkqdo1",
+      "speakerName": "シャハル",
+      "mode": "dialogue",
+      "text": "あれは、今月の新作の菓子箱。あちらは、来週発売の玩具。……ここは、いい場所ですね。終わる前のものばかりが、通る。"
     },
     {
       "type": "line",
       "id": "shahar.join.node.line.010",
       "lineId": "shahar.join.line.010",
-      "speakerId": "legacy.speaker.bkqdo1",
-      "speakerName": "シャハル",
-      "mode": "dialogue",
-      "text": "では、翼の端から端まで夕方が三つ。尾は次の季節に届く。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "終わる前のものばかりが、通る。長い人は、配送ヤードをそんなふうに見るのか。私には段ボールの山が、彼には「今」の川に見えている。",
+      "emotion": "revelation"
     },
     {
       "type": "line",
       "id": "shahar.join.node.line.011",
       "lineId": "shahar.join.line.011",
-      "speakerId": "legacy.speaker.bkqdo1",
-      "speakerName": "シャハル",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "不足なら、爪も一つ置いていく。"
+      "text": "シャハルさん。試合、なんで出てくれる気になったんですか。賞金は、たぶん興味ないですよね。"
     },
     {
       "type": "line",
       "id": "shahar.join.node.line.012",
       "lineId": "shahar.join.line.012",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "採用する側らしい言葉を探した。でも必要なのは評価ではなく、ここにいてもいい理由を一緒に作ることなのだと思った。"
+      "speakerId": "legacy.speaker.bkqdo1",
+      "speakerName": "シャハル",
+      "mode": "dialogue",
+      "text": "試合は、終わるので。始まって、三十分で終わる。……あなたの言う「今、見ないと」を、練習しようと思いまして。"
     },
     {
       "type": "line",
@@ -164,7 +167,8 @@
       "lineId": "shahar.join.line.013",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "単位の欄へ『天気予報参照』と書くと、端末は一度ためらってから受理した。"
+      "text": "限定傘の一言が、雲の上でちゃんと生きていた。うれしさで顔がゆるむのを、送り状で隠した。品名欄「私」が目に入って、余計ゆるんだ。",
+      "emotion": "tender"
     },
     {
       "type": "line",
@@ -172,51 +176,8 @@
       "lineId": "shahar.join.line.014",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "機嫌を少し動かすだけで、三県の天気予報と日の出時刻が書き換わるという注意事項まで契約書へ加わり、一般的な選手登録は完全に諦めることになった。",
-      "emotion": "comic"
-    },
-    {
-      "type": "line",
-      "id": "shahar.join.node.line.015",
-      "lineId": "shahar.join.line.015",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "私のペンで未来まで埋めないよう、最後の空欄を机の中央へ戻した。待つ時間は気まずい。それでも、本人の言葉で始まるほうがいい。",
+      "text": "あとは登録の形だ。伝票の品名はもう決まっている。書き方だけ、私が選ぶ。",
       "emotion": "resolve"
-    },
-    {
-      "type": "line",
-      "id": "shahar.join.node.line.016",
-      "lineId": "shahar.join.line.016",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "最後に本人が確かめたのは報酬ではなく、呼ばれたからではなく、会いたい日に空を渡ることが規則違反にならないかどうかだった。",
-      "emotion": "tender"
-    },
-    {
-      "type": "line",
-      "id": "shahar.join.node.line.017",
-      "lineId": "shahar.join.line.017",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "登録を急ぐとしても、本人を置き去りにしたまま話を進めたくはなかった。"
-    },
-    {
-      "type": "line",
-      "id": "shahar.join.node.line.018",
-      "lineId": "shahar.join.line.018",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "登録完了の音が鳴る。これで仲間になった、と簡単に呼んでいいのか分からない。けれど退室する足音が、来た時より少しだけゆっくりだった。"
-    },
-    {
-      "type": "line",
-      "id": "shahar.join.node.line.019",
-      "lineId": "shahar.join.line.019",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "一人分の茶を保温する手のひらほどの雲が机に残る。返そうと呼び止めると、「次に会う理由として置いておく」とだけ返ってきた。",
-      "emotion": "tender"
     },
     {
       "type": "choice",
@@ -225,10 +186,10 @@
         {
           "id": "shahar.join.choice.001",
           "label": "屋上の一席を、古竜一頭分として予約する",
-          "result": "椅子は一脚だけ置いた。雲の上から伸びた爪が律儀に整理券を取り、受付だけが寸法欄で泣いた。",
-          "intent": "本人の得意な戦い方を知る",
+          "result": "登録欄の所属席に、私は堂々と書いた。「屋上庭園・特等席(一頭分)」。端末は三回警告を出したが、最後は諦めて受理した。シャハルは送り状の控えを空へ持ち帰り、「席の予約票は、初めてです」と、雲を三つ、お礼に降らせた。屋上の花壇が、ちょうどいい湿り気になった。",
+          "intent": "体の大きさごと、まるごと迎える",
           "promise": "登録は少し遅れるが、この人専用の成長ポイントを得る。",
-          "memory": "自分で書いた最初の条件を、相手は次の大事な場面でも覚えている。",
+          "memory": "一頭分の席を予約した登録として、シャハルは今日を覚えている。",
           "tone": "tender",
           "effects": [
             {
@@ -260,10 +221,10 @@
         {
           "id": "shahar.join.choice.002",
           "label": "鱗一枚を選手、本体を応援席として登録する",
-          "result": "規約は通った。試合当日の天気予報に『応援による局地的な雷』が追加され、観客席だけ先に屋根を閉じた。",
-          "intent": "次の公式戦へ間に合わせる",
-          "promise": "本人の詳細は後回しになるが、誰にでも使える成長ポイントを得る。",
-          "memory": "先に席を確保した判断は、チームの始まり方として記録に残る。",
+          "result": "出場は鱗一枚、本体は「応援席(上空)」として届け出た。大会運営から「応援の声量にご配慮ください」という通達が来たのは、三日後である。前例のない通達だが、まあ、前例のない応援席である。",
+          "intent": "規定に収まる形で、確実に登録する",
+          "promise": "本人の全力は温存し、誰にでも使える成長ポイントを得る。",
+          "memory": "声量注意の通達を、シャハルは記念に額装したがっている。",
           "tone": "pragmatic",
           "effects": [
             {
@@ -291,10 +252,10 @@
         {
           "id": "shahar.join.choice.003",
           "label": "今回はシャハルを誘わず、別の機会を待つ",
-          "result": "シャハルの出場登録は行わなかった。相手は所属せず、それぞれの用事へ戻った。断る選択を残したことだけが、次に会う時まで静かに残った。",
+          "result": "「今回は、見送ります」。空は静かにうなずいて、鱗を回収した。代わりに送り状だけが残った。品名欄「また」。日付欄は、空白だった。長い人の空白は、気長という意味だ。たぶん。",
           "intent": "今回はチームへ誘わない",
           "promise": "今回の所属は見送るが、人物の物語と再会の可能性は失わない。",
-          "memory": "勧誘しない選択も尊重されたことを、相手は覚えている。",
+          "memory": "品名欄「また」の送り状を、私は捨てられずにいる。",
           "tone": "pragmatic",
           "effects": [
             {
@@ -314,9 +275,9 @@
     }
   ],
   "debug": {
-    "status": "approved",
-    "sourceDocument": "native narrative block migration",
-    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "status": "review",
+    "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
+    "authorNote": "v2改稿: 品名欄「私」の配送登録。出場カテゴリ「建材」。配送ヤード=終わる前のものの川というQ1補助線。",
     "legacyGeneratedIds": false
   }
 }

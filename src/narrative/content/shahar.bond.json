@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "id": "shahar.bond",
   "kind": "character",
-  "title": "チームの日常",
-  "summary": "配送ヤードで起きる「チームの日常」",
+  "title": "雲の上へ、出前一丁",
+  "summary": "雨の日、鱗のエレベーターで雲の上へ弁当を届ける昼休み",
   "ownership": {
     "arcId": "character.shahar",
     "characterId": "shahar",
@@ -25,51 +25,17 @@
     "weight": 1
   },
   "presentation": {
-    "location": "配送ヤード",
+    "location": "配送ヤード発・雲の上",
     "assets": [
       {
         "id": "shahar.bond.asset.background.001",
         "kind": "background",
         "path": "/assets/story/bg-casino-cafe-rain.png",
-        "alt": "配送ヤードの背景"
+        "alt": "雨の配送ヤードの背景"
       }
     ]
   },
   "nodes": [
-    {
-      "type": "line",
-      "id": "shahar.bond.node.line.001",
-      "lineId": "shahar.bond.line.001",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "シャハルがチームに加わってから、配送ヤードで顔を合わせることが増えた。今日は試合の話ではなく、少しだけ時間が空いている。"
-    },
-    {
-      "type": "line",
-      "id": "shahar.bond.node.line.002",
-      "lineId": "shahar.bond.line.002",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "試合のない午後。窓を雨が細く叩き、業務連絡も歓声も今日は遠い。二人きりになる予定ではなかったのに、空いている席は向かいだけだった。",
-      "emotion": "tender"
-    },
-    {
-      "type": "line",
-      "id": "shahar.bond.node.line.003",
-      "lineId": "shahar.bond.line.003",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "屋上へ昼食を持っていくと、鱗の上に小さな雲が一つ乗っていた。雲からは温かい雨がカップへだけ降っている。"
-    },
-    {
-      "type": "line",
-      "id": "shahar.bond.node.line.004",
-      "lineId": "shahar.bond.line.004",
-      "speakerId": "legacy.speaker.bkqdo1",
-      "speakerName": "シャハル",
-      "mode": "dialogue",
-      "text": "人の街は、空が小さい。"
-    },
     {
       "type": "direction",
       "id": "shahar.bond.node.direction.001",
@@ -80,12 +46,39 @@
       }
     },
     {
-      "type": "direction",
-      "id": "shahar.bond.node.direction.002",
-      "command": {
-        "type": "effect",
-        "effectId": "pulse"
-      }
+      "type": "line",
+      "id": "shahar.bond.node.line.001",
+      "lineId": "shahar.bond.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "雨の日、チームの昼食会にシャハルだけが来られない。当然だ。体が街に入らないのだから。でも、雨の日の欠席連絡は、少しだけ声が沈んでいた。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.bond.node.line.002",
+      "lineId": "shahar.bond.line.002",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "……出前、しましょうか。雲の上まで。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.bond.node.line.003",
+      "lineId": "shahar.bond.line.003",
+      "speakerId": "legacy.speaker.bkqdo1",
+      "speakerName": "シャハル",
+      "mode": "dialogue",
+      "text": "……配達地域外では。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.bond.node.line.004",
+      "lineId": "shahar.bond.line.004",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "配達員のやる気次第で、地域は広がります。"
     },
     {
       "type": "line",
@@ -93,8 +86,16 @@
       "lineId": "shahar.bond.line.005",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "試合も契約もない時間なら、もっと気楽に話せると思っていた。実際は、お茶を一口飲むたび沈黙の意味を考えてしまう。強さを見ている時より、シャハルの小さな癖のほうがずっと気になった。",
-      "emotion": "comic"
+      "text": "十分後、配送ヤードに鱗が一枚降りてきた。今日のは大きい。畳四枚ぶん。縁が手すりみたいに反っている。——エレベーターだ。竜の鱗の、昇降機。",
+      "emotion": "tension"
+    },
+    {
+      "type": "direction",
+      "id": "shahar.bond.node.direction.002",
+      "command": {
+        "type": "effect",
+        "effectId": "flash"
+      }
     },
     {
       "type": "line",
@@ -102,25 +103,26 @@
       "lineId": "shahar.bond.line.006",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "朝焼けを映す巨大な鱗と、雷で温められた小さなカップ。戦場では見落としていた小さな癖が、何も起きない時間ほどよく見える。"
+      "text": "弁当四人前を抱えて乗り込むと、鱗はゆっくり上昇した。雨の層を抜ける瞬間、世界が銀色に光って——雲の上に出た。雲海。夕方みたいな金色の光。そして、水平線まで続く銀白の背中。",
+      "emotion": "tension"
     },
     {
       "type": "line",
       "id": "shahar.bond.node.line.007",
       "lineId": "shahar.bond.line.007",
-      "speakerId": "legacy.speaker.bkqdo1",
-      "speakerName": "シャハル",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "地上の茶は冷めるのが早い。空では、雷のそばへ置けばよい。"
+      "text": "こ、これ全部、シャハルさん……？"
     },
     {
       "type": "line",
       "id": "shahar.bond.node.line.008",
       "lineId": "shahar.bond.line.008",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
+      "speakerId": "legacy.speaker.bkqdo1",
+      "speakerName": "シャハル",
       "mode": "dialogue",
-      "text": "屋上から見ると広いですよ。"
+      "text": "尻尾は、隣の県です。……ようこそ。お客様は、四百年ぶりです。"
     },
     {
       "type": "line",
@@ -128,26 +130,26 @@
       "lineId": "shahar.bond.line.009",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "シャハルは季節より長く生き、地上の都合へ動じない古竜。そのはずなのに、私の休憩が終わる時刻を気にして、話題を一つずつ短くしている。",
-      "emotion": "revelation"
+      "text": "四百年ぶりの客は、雲海のテラス(背中)で弁当を広げた。から揚げが一個、雲の谷間に転がり落ちて、下の街に小雨を三秒降らせた。ごめんなさい、下の街。",
+      "emotion": "comic"
     },
     {
       "type": "line",
       "id": "shahar.bond.node.line.010",
       "lineId": "shahar.bond.line.010",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
+      "speakerId": "legacy.speaker.bkqdo1",
+      "speakerName": "シャハル",
       "mode": "dialogue",
-      "text": "それは保温じゃなくて加熱です。カップが少し光ってます。"
+      "text": "この弁当は、何年もちますか。"
     },
     {
       "type": "line",
       "id": "shahar.bond.node.line.011",
       "lineId": "shahar.bond.line.011",
-      "speakerId": "legacy.speaker.bkqdo1",
-      "speakerName": "シャハル",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "ならば今日は、ここを空と呼ぼう。"
+      "text": "今日の夕方までです。だから今、食べるんです。"
     },
     {
       "type": "line",
@@ -155,15 +157,17 @@
       "lineId": "shahar.bond.line.012",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "特別な話をしなくても、同じ音を聞いていられる。そんな時間が欲しかったのだと、失う前から気づいてしまった。"
+      "text": "シャハルは人の形の分身を鱗の上に降ろして、箸の持ち方から練習した。四百年ぶりの食事は、たまご焼きから始まった。一口食べて、長い長い沈黙。",
+      "emotion": "tender"
     },
     {
       "type": "line",
       "id": "shahar.bond.node.line.013",
       "lineId": "shahar.bond.line.013",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "飲める温度になるまで二人で待った。巨大な竜との休憩が、やけに小さな湯気を中心に進んでいく。"
+      "speakerId": "legacy.speaker.bkqdo1",
+      "speakerName": "シャハル",
+      "mode": "dialogue",
+      "text": "……夕方までしか、もたない味だ。……だから、こんなに、いいのか。"
     },
     {
       "type": "line",
@@ -171,7 +175,7 @@
       "lineId": "shahar.bond.line.014",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "機嫌を少し動かすだけで、三県の天気予報と日の出時刻が書き換わる。甘い空気になりかけるたび、世界の方が先に耐えられなくなる。",
+      "text": "長命の人が、たまご焼きで真理に到達していた。私は笑いをこらえて、麦茶を注いだ。雲の上の昼休みは、下界より時間が濃い。",
       "emotion": "comic"
     },
     {
@@ -180,7 +184,7 @@
       "lineId": "shahar.bond.line.015",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "遠ざかっていたのは無関心だからではなく、近づけば壊すと誰より知っていたからだった。そう気づくと、何も起きなかった午後が急に大事な出来事へ変わった。",
+      "text": "帰り際、シャハルは私の手のひらに、また小さな雲をくれた。「三日で消えます」と言うので、「消えるから、いいんですね」と返したら、雲海がほんの少し、金色を増した。",
       "emotion": "tender"
     },
     {
@@ -189,34 +193,8 @@
       "lineId": "shahar.bond.line.016",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "笑いが収まったあと、呼ばれたからではなく、会いたい日に空を渡ることという、驚くほど普通の望みが語られた。",
-      "emotion": "tender"
-    },
-    {
-      "type": "line",
-      "id": "shahar.bond.node.line.017",
-      "lineId": "shahar.bond.line.017",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "試合の外で交わした言葉のほうが、次の指示より長く残ることがある。"
-    },
-    {
-      "type": "line",
-      "id": "shahar.bond.node.line.018",
-      "lineId": "shahar.bond.line.018",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "それは私が叶えるものではない。ただ、叶うまで隣にいることならできる。そう言いかけて、言葉にする勇気だけが遅れた。",
-      "emotion": "tension"
-    },
-    {
-      "type": "line",
-      "id": "shahar.bond.node.line.019",
-      "lineId": "shahar.bond.line.019",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "一人分の茶を保温する手のひらほどの雲を間に置いたまま、私たちは雨が止んでもしばらく席を立たなかった。",
-      "emotion": "tender"
+      "text": "降下前に、午後の予定をひとつ決められる。この高さでしか、できないことを。",
+      "emotion": "resolve"
     },
     {
       "type": "choice",
@@ -225,10 +203,10 @@
         {
           "id": "shahar.bond.choice.001",
           "label": "雲の上まで弁当を届け、鱗の持ち主と昼休みを取る",
-          "result": "弁当は一人前、相手は空を覆う大きさだった。それでも卵焼きを半分に分ける相談だけは、普通の昼休みと変わらなかった。",
-          "intent": "相手の秘密の勝ち方を試す",
+          "result": "午後は雲海の散歩になった。シャハルの背中の上には、四百年ぶんの「見送った流行」が落ちている。昔の凧、色あせた旗、誰かの風船。彼はその一つずつに、年代と思い出を添えられる。「次からは、見送らずに拾いに行きます」と言った時、背中の凧が一つ、風もないのに揺れた。",
+          "intent": "四百年ぶんの見送りの話を、最後まで聞く",
           "promise": "読みにくい作戦になる代わりに、この人だけの成長を大きく進める。",
-          "memory": "任せた一戦の手応えが、次に力を見せる理由になる。",
+          "memory": "雲の上の昼休みを、二人とも「時間の濃い方の昼」と呼んでいる。",
           "tone": "wild",
           "effects": [
             {
@@ -255,10 +233,10 @@
         {
           "id": "shahar.bond.choice.002",
           "label": "鱗を盾にして、三人の陣形を試す",
-          "result": "一枚の鱗で三人と控室の壁まで守れた。シャハルは『本体なら街も入る』と言い、私は聞かなかったことにした。",
-          "intent": "チームの新しい連携を試す",
-          "promise": "本人の流儀は崩すが、全員へ配れる成長ポイントを得る。",
-          "memory": "成功した作戦と短くなった会話の両方が、次の判断まで残る。",
+          "result": "午後は雲の上で作戦会議になった。畳四枚の鱗は、立てれば城壁、寝かせれば足場になる。「鱗の後ろに二人、上に一人」の新陣形を、雲をコマにして検討した。名前は「屋根つき」。シャハルは「私が屋根になる日が来るとは」と、まんざらでもない声だった。",
+          "intent": "この高さでしか組めない作戦を作る",
+          "promise": "本人の思い出話は後回しになるが、全員へ配れる成長ポイントを得る。",
+          "memory": "陣形「屋根つき」の初案が雲の上で生まれたことを、チームは知っている。",
           "tone": "pragmatic",
           "effects": [
             {
@@ -298,9 +276,9 @@
     }
   ],
   "debug": {
-    "status": "approved",
-    "sourceDocument": "native narrative block migration",
-    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "status": "review",
+    "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
+    "authorNote": "v2改稿: 雲の上への出前。特別な場所=雲海の背中。たまご焼きの真理。手のひらの雲の反復。",
     "legacyGeneratedIds": false
   }
 }

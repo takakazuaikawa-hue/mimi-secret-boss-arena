@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "id": "cassim-bell.power",
   "kind": "character",
-  "title": "取り戻す力",
-  "summary": "存在しない地下階で起きる「取り戻す力」",
+  "title": "存在しない地下階",
+  "summary": "七つの扉の廊下。失われた世界の一枚を、二人で開ける",
   "ownership": {
     "arcId": "character.cassim-bell",
     "characterId": "cassim-bell",
@@ -37,40 +37,6 @@
   },
   "nodes": [
     {
-      "type": "line",
-      "id": "cassim-bell.power.node.line.001",
-      "lineId": "cassim-bell.power.line.001",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "練習のあと、カシム・ベルに呼ばれて存在しない地下階まで来た。いつもの力では足りない理由を、見せたいらしい。"
-    },
-    {
-      "type": "line",
-      "id": "cassim-bell.power.node.line.002",
-      "lineId": "cassim-bell.power.line.002",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "警報より先に、相手の声が私の名を呼んだ。いつもと同じ呼び方なのに、その一音だけで足が止まる。",
-      "emotion": "tension"
-    },
-    {
-      "type": "line",
-      "id": "cassim-bell.power.node.line.003",
-      "lineId": "cassim-bell.power.line.003",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "彼が合鍵を回すと、闘技場の壁へ無数の扉が開いた。海底、月の裏、滅びる直前の王宮まで一歩の距離にある。"
-    },
-    {
-      "type": "line",
-      "id": "cassim-bell.power.node.line.004",
-      "lineId": "cassim-bell.power.line.004",
-      "speakerId": "legacy.speaker.1wuvexi",
-      "speakerName": "カシム・ベル",
-      "mode": "dialogue",
-      "text": "扉の向こうに、未返却の最終兵器が三つあります。"
-    },
-    {
       "type": "direction",
       "id": "cassim-bell.power.node.direction.001",
       "command": {
@@ -78,6 +44,77 @@
         "assetId": "cassim-bell.power.asset.background.001",
         "transition": "dissolve"
       }
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.power.node.line.001",
+      "lineId": "cassim-bell.power.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "エレベーターに、無い階のボタンがあった。カシム・ベルが鍵飾りをかざすと、盤面に「B∞」が浮かぶ。「今から行くのは、存在しない地下階です。台帳にも、設計図にも、載っていません」。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.power.node.line.002",
+      "lineId": "cassim-bell.power.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "降りた先は、長い長い廊下だった。左右に扉が七枚。どれも意匠が違う。竜の鱗の扉、月光の扉、海藻の絡んだ扉——七世界の、扉。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.power.node.line.003",
+      "lineId": "cassim-bell.power.line.003",
+      "speakerId": "legacy.speaker.1wuvexi",
+      "speakerName": "カシム・ベル",
+      "mode": "dialogue",
+      "text": "落とし物は、物だけではありません。……道も、落ちるのです。持ち主の世界が終わった時に。ここは、行き場のなくなった扉の保管庫。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.power.node.line.004",
+      "lineId": "cassim-bell.power.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "終わった物語の、玄関だけが並ぶ廊下。ノブの一つずつが、まだ磨かれている。誰も来ないのに、彼が磨いてきたのだ。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.power.node.line.005",
+      "lineId": "cassim-bell.power.line.005",
+      "speakerId": "legacy.speaker.1wuvexi",
+      "speakerName": "カシム・ベル",
+      "mode": "dialogue",
+      "text": "この廊下では、私から離れないでください。……手を離すと、昨日の廊下に出ます。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.power.node.line.006",
+      "lineId": "cassim-bell.power.line.006",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "き、昨日!?"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.power.node.line.007",
+      "lineId": "cassim-bell.power.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "黒手袋の手が、私の手を取った。丁寧で、迷いのない、受付のプロの手の取り方。それはそれとして、心拍は事務処理してくれない。廊下の照明が、二人の歩幅に合わせて順番に灯っていく。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.power.node.line.008",
+      "lineId": "cassim-bell.power.line.008",
+      "speakerId": "legacy.speaker.1wuvexi",
+      "speakerName": "カシム・ベル",
+      "mode": "dialogue",
+      "text": "次の相手は、退路を断つ戦法を使うそうですね。……ならば、こちらは退路を「作る」側に回ります。見ていてください。"
     },
     {
       "type": "direction",
@@ -89,56 +126,21 @@
     },
     {
       "type": "line",
-      "id": "cassim-bell.power.node.line.005",
-      "lineId": "cassim-bell.power.line.005",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "合鍵を一本取り違えるだけで、月の裏や滅亡前日の王都が休憩室へ開く。そんな力が、目の前で息をしている。逃げる理由なら十分だった。それでも私は、力の大きさよりカシム・ベルが最初にどこを見るのかを確かめたかった。",
-      "emotion": "tension"
-    },
-    {
-      "type": "line",
-      "id": "cassim-bell.power.node.line.006",
-      "lineId": "cassim-bell.power.line.006",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "カシム・ベルが私と危険の間へ立つ。触れてはいない。それでも、こちらへ届くはずだった圧力だけがきれいに二つへ割れた。"
-    },
-    {
-      "type": "line",
-      "id": "cassim-bell.power.node.line.007",
-      "lineId": "cassim-bell.power.line.007",
-      "speakerId": "legacy.speaker.1wuvexi",
-      "speakerName": "カシム・ベル",
-      "mode": "dialogue",
-      "text": "保管物を持ち出す許可があれば、失われた兵器も英雄も呼べます。"
-    },
-    {
-      "type": "line",
-      "id": "cassim-bell.power.node.line.008",
-      "lineId": "cassim-bell.power.line.008",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "返却先は？"
-    },
-    {
-      "type": "line",
       "id": "cassim-bell.power.node.line.009",
       "lineId": "cassim-bell.power.line.009",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "失くしたものを必ず保管し、持ち主が来るまで待ち続ける番人。けれど今見せている力は、勝つためではなく、私を怖がらせないために抑えられている。",
-      "emotion": "revelation"
+      "text": "彼が鍵を回すと、廊下の空間そのものが、めくれた。扉が、どこにでも「受付」される。壁に、床に、空中に。出口が咲いていく。閉じた空間という概念が、この人の前では、ただの未処理案件だった。",
+      "emotion": "tension"
     },
     {
       "type": "line",
       "id": "cassim-bell.power.node.line.010",
       "lineId": "cassim-bell.power.line.010",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "呼べるものより、戻せるものを先に確認しましょう。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "今夜も同行していた計測係の新人くんは、扉の一枚から「三分前の廊下」に出てしまい、三分後の自分と鉢合わせて、記録板に「ふたり、いた。」と書いた。彼の報告書は、もはや怪談である。",
+      "emotion": "comic"
     },
     {
       "type": "line",
@@ -147,7 +149,7 @@
       "speakerId": "legacy.speaker.1wuvexi",
       "speakerName": "カシム・ベル",
       "mode": "dialogue",
-      "text": "すべて滅びています。ですから、用途を決め直せます。"
+      "text": "そして、これが本題です。——七枚のうち、一枚だけ。今夜、開けようと思っている扉があります。"
     },
     {
       "type": "line",
@@ -155,15 +157,17 @@
       "lineId": "cassim-bell.power.line.012",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "本気を見たいと思っていた。実際に目の前へ現れると、知りたかったのは強さではなく、その力を本人がどう恐れているかだった。"
+      "text": "彼が立ち止まったのは、一番古い、小さな木の扉の前だった。「私が最初に受付した、失われた世界の扉です。……開けるのが、ずっと、怖かった。中の世界が本当に終わっているのを、確かめてしまうから」。",
+      "emotion": "tension"
     },
     {
       "type": "line",
       "id": "cassim-bell.power.node.line.013",
       "lineId": "cassim-bell.power.line.013",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "彼は少し驚き、それから鍵束の中でいちばん小さな帰還用の鍵を私へ見せた。"
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "……手、つないだままでいいなら。一緒に確かめます。"
     },
     {
       "type": "line",
@@ -171,17 +175,17 @@
       "lineId": "cassim-bell.power.line.014",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "合鍵を一本取り違えるだけで、月の裏や滅亡前日の王都が休憩室へ開く。闘技場の安全基準は一瞬で役に立たなくなり、担当者は私の顔を見て計測を諦めた。",
-      "emotion": "comic"
+      "text": "扉の向こうは、夕暮れの野原だった。誰もいない。でも、風は吹いていて、遠くで洗濯物が揺れていた。終わった世界は、空っぽではなかった。ただ、静かなだけだった。",
+      "emotion": "revelation"
     },
     {
       "type": "line",
       "id": "cassim-bell.power.node.line.015",
       "lineId": "cassim-bell.power.line.015",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "世界を壊せることより、壊さないために何を選んだかが胸へ残った。責任という言葉の陰で、待たせた誰かに嫌われる怖さを何百年も抱えていた。その理解が正しいか、いつか本人の言葉で確かめたい。",
-      "emotion": "revelation"
+      "speakerId": "legacy.speaker.1wuvexi",
+      "speakerName": "カシム・ベル",
+      "mode": "dialogue",
+      "text": "……終わっても、風は吹くのですね。……受付票に、追記します。「当該世界、風あり。継続保管の価値、大いにあり」。"
     },
     {
       "type": "line",
@@ -189,33 +193,8 @@
       "lineId": "cassim-bell.power.line.016",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "力の中心にあったのは、自分が窓口を離れた十五分に、帰れない誰かが来てしまうこと。最強であることが、本人にとって一番古い傷なのだと分かる。",
-      "emotion": "revelation"
-    },
-    {
-      "type": "line",
-      "id": "cassim-bell.power.node.line.017",
-      "lineId": "cassim-bell.power.line.017",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "怖さが消えたわけではない。だからこそ、使うかどうかを本人と決める必要がある。"
-    },
-    {
-      "type": "line",
-      "id": "cassim-bell.power.node.line.018",
-      "lineId": "cassim-bell.power.line.018",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "大丈夫とは言えない。怖いものは怖い。それでも、次に力を使う時は一人で決めなくていいと伝えた。",
+      "text": "扉を閉めて、鍵をかけて、彼は長い息を吐いた。次の試合の型は、もう決まったようなものだった。あとは、どちらの形で仕上げるか。",
       "emotion": "resolve"
-    },
-    {
-      "type": "line",
-      "id": "cassim-bell.power.node.line.019",
-      "lineId": "cassim-bell.power.line.019",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "何百年ぶりに表へ返した十五分休止の札だけが元の大きさで残り、さっきまで世界の終わりがいた場所に、帰り道の灯りが戻った。"
     },
     {
       "type": "choice",
@@ -224,10 +203,10 @@
         {
           "id": "cassim-bell.power.choice.001",
           "label": "失われた世界へ続く扉を、一枚だけ開ける",
-          "result": "扉の向こうから風と鐘の音が戻った。全部は救えなくても、場所が消えていないと確かめられた。",
-          "intent": "本来の力を一気に取り戻す",
+          "result": "試合の型は「非常口」になった。味方が追い詰められた瞬間、カシムの扉が空間に咲いて、退路と再配置を同時に作る。初披露の試合で、実況が叫んだ。「出口が！　出口が増えていく！」。相手チームは退路を断つ戦法を捨て、うちのチームは袋小路という言葉を辞書から消した。",
+          "intent": "退路を作る側の強さを形にする",
           "promise": "失敗時の危険を引き受け、この人専用の成長を最大まで進める。",
-          "memory": "力を恐れたまま任せたことを、相手は危機の場面で思い出す。",
+          "memory": "型「非常口」の初披露を、実況席まで覚えている。",
           "tone": "heroic",
           "effects": [
             {
@@ -254,10 +233,10 @@
         {
           "id": "cassim-bell.power.choice.002",
           "label": "敵の大技だけを遺失物として保管する",
-          "result": "世界へ触れる扉は閉じたまま、危険な一撃だけが番号札になった。小さな奇跡ほど試合では使いやすい。",
-          "intent": "安全な段階解除で確実に進む",
+          "result": "もう一つの型は「お預かり」。飛んでくる敵の大技を、扉一枚で受付し、遺失物として一時保管する。返却は、規定により試合終了後。相手は自分の必殺技に「保管番号」を発行されて、戦意を半分落とした。書式の暴力である。新人くんの記録板には「わざ、あずかった。」——簡潔にして、事件の全てだった。",
+          "intent": "受付の書式で、戦場を管理する",
           "promise": "本来の力は一部に留め、チーム全体の成長へ成果を持ち帰る。",
-          "memory": "全員で帰ると決めた手順が、危機で使える安全策として残る。",
+          "memory": "保管番号を発行された相手の顔を、チームは忘れられない。",
           "tone": "pragmatic",
           "effects": [
             {
@@ -297,9 +276,9 @@
     }
   ],
   "debug": {
-    "status": "approved",
-    "sourceDocument": "native narrative block migration",
-    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "status": "review",
+    "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
+    "authorNote": "v2改稿: 存在しない地下階と七つの扉。「手を離すと昨日に出ます」。Q1核心=終わっても風は吹く。",
     "legacyGeneratedIds": false
   }
 }

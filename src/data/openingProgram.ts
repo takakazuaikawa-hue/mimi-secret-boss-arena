@@ -47,9 +47,10 @@ export const openingProgram: ProgramAct[] = [
   },
   {
     act: 5,
-    title: "水晶竜の飛行、屋上庭園より入場",
+    title: "古竜通過日——空の祭り、三分間限定",
+    note: "振替便は、ありません",
     fighterId: "shahar",
-    status: "draft",
+    status: "final",
   },
   {
     act: 6,
@@ -65,15 +66,17 @@ export const openingProgram: ProgramAct[] = [
   },
   {
     act: 8,
-    title: "七世界同時受付ショー(一分間の休止つき)",
+    title: "公開・十五分休止(七世界のお客様、立ち会い歓迎)",
+    note: "残り一分は、非公開です",
     fighterId: "cassim-bell",
-    status: "draft",
+    status: "final",
   },
   {
     act: 9,
-    title: "大水芸『海の思い出、一つだけ』",
+    title: "第二回・浅瀬味青のり品評会",
+    note: "胴長、貸し出します",
     fighterId: "sazanami",
-    status: "draft",
+    status: "final",
   },
   {
     act: 10,
@@ -129,7 +132,7 @@ export const grandFinaleLines: Record<string, string> = {
   gidonozeaas: "本日の窓際は、全席自由です。……もう、並ばなくていい。",
   minato: "本日の予定は、俺が決めた。四十九件目——柿落としの警備だ。",
   "night-eater": "開場の明かり、全部で星五つ。……今夜は、食べずに眺めるわ。",
-  shahar: "屋上の花、満開です。竜の水やり当番、本日も出勤しています。",
+  shahar: "本日の空は、一回きりの限定色です。……お見逃しなく。",
   teirei: "搬入、全件完了。壊れものは、ひとつもありません。",
   peony: "迷子案内所より。本日、迷子ゼロ。……全員、帰る場所を覚えたので。",
   "cassim-bell": "受付は一分間の休止中です。——この拍手が、終わるまで。",

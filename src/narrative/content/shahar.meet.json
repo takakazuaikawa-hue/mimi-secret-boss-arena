@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "id": "shahar.meet",
   "kind": "character",
-  "title": "最初の遭遇",
-  "summary": "屋上庭園で起きる「最初の遭遇」",
+  "title": "屋上に、鱗が一枚",
+  "summary": "屋上庭園で日光浴していた銀白の鱗と、三県の天気を変える身じろぎ",
   "ownership": {
     "arcId": "character.shahar",
     "characterId": "shahar",
@@ -44,39 +44,6 @@
   },
   "nodes": [
     {
-      "type": "line",
-      "id": "shahar.meet.node.line.001",
-      "lineId": "shahar.meet.line.001",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "今週の用事で屋上庭園へ立ち寄った。予定どおりなら、目の前の用事を済ませて帰るだけのはずだった。"
-    },
-    {
-      "type": "line",
-      "id": "shahar.meet.node.line.002",
-      "lineId": "shahar.meet.line.002",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "その日、最初に目へ入ったのは朝焼けを映す巨大な鱗と、雷で温められた小さなカップだった。人より先に、その人の孤独だけが場所を取っていた。"
-    },
-    {
-      "type": "line",
-      "id": "shahar.meet.node.line.003",
-      "lineId": "shahar.meet.line.003",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "屋上の中央に、私の上半身ほどある鱗が一枚落ちていた。雲はそこだけ避け、洗濯物は全部同じ方向へなびいている。"
-    },
-    {
-      "type": "line",
-      "id": "shahar.meet.node.line.004",
-      "lineId": "shahar.meet.line.004",
-      "speakerId": "legacy.speaker.bkqdo1",
-      "speakerName": "シャハル",
-      "mode": "dialogue",
-      "text": "その鱗を踏むな。私はそこから話している。"
-    },
-    {
       "type": "direction",
       "id": "shahar.meet.node.direction.001",
       "command": {
@@ -86,12 +53,38 @@
       }
     },
     {
-      "type": "direction",
-      "id": "shahar.meet.node.direction.002",
-      "command": {
-        "type": "effect",
-        "effectId": "flash"
-      }
+      "type": "line",
+      "id": "shahar.meet.node.line.001",
+      "lineId": "shahar.meet.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "昼休み。屋上庭園は私の避難所だ。今日の戦利品は、売店の限定傘。今週だけの限定色で、行列に二十分並んだ。後悔はない。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.meet.node.line.002",
+      "lineId": "shahar.meet.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ベンチの隣に、見慣れない銀白の板が立てかけてあった。畳一枚ぶんはある。日光を浴びて、きらきらしている。誰かの忘れ物にしては、置き方が丁寧すぎた。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.meet.node.line.003",
+      "lineId": "shahar.meet.line.003",
+      "speakerId": "legacy.speaker.bkqdo1",
+      "speakerName": "シャハル",
+      "mode": "dialogue",
+      "text": "それは板ではなく、私の鱗です。日光浴の途中なので、お手を触れずに——いえ。触れても、構いませんが。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.meet.node.line.004",
+      "lineId": "shahar.meet.line.004",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "声が空から降ってくるんですけど！？"
     },
     {
       "type": "line",
@@ -99,12 +92,12 @@
       "lineId": "shahar.meet.line.005",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ここへ来た理由は、ごく普通の用事だった。けれどシャハルを見た瞬間、兎耳だけが先に危険を知らせる。私はとっさに、地上の小さな都合には関心がない古竜なのだと思いかけた。",
-      "emotion": "comic"
+      "text": "見上げて、理解した。今日の雲、雲じゃない。屋上の空を覆っているあの銀白の霞は、ぜんぶ一頭ぶんだ。都市より大きい何かが、雲の高さで寝そべっている。",
+      "emotion": "tension"
     },
     {
       "type": "direction",
-      "id": "shahar.meet.node.direction.003",
+      "id": "shahar.meet.node.direction.002",
       "command": {
         "type": "still",
         "assetId": "shahar.meet.asset.still.001"
@@ -112,7 +105,7 @@
     },
     {
       "type": "direction",
-      "id": "shahar.meet.node.direction.004",
+      "id": "shahar.meet.node.direction.003",
       "command": {
         "type": "effect",
         "effectId": "pulse"
@@ -122,45 +115,46 @@
       "type": "line",
       "id": "shahar.meet.node.line.006",
       "lineId": "shahar.meet.line.006",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "声をかけるべきか迷っている間に、視線だけが一度重なる。胸が跳ねたのは見た目のせいではない。見つけてはいけない何かを、向こうも隠さなかったからだ。",
-      "emotion": "tension"
+      "speakerId": "legacy.speaker.bkqdo1",
+      "speakerName": "シャハル",
+      "mode": "dialogue",
+      "text": "古竜シャハル。体はこの街に入らないので、鱗を一枚だけ、下ろしています。……ところで、その傘。"
     },
     {
       "type": "line",
       "id": "shahar.meet.node.line.007",
       "lineId": "shahar.meet.line.007",
-      "speakerId": "legacy.speaker.bkqdo1",
-      "speakerName": "シャハル",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "小さき者よ。その板を踏むな。今のお前では、私のくしゃみに耐えられぬ。"
+      "text": "こ、これですか？　今週限定の、限定色で……"
     },
     {
       "type": "line",
       "id": "shahar.meet.node.line.008",
       "lineId": "shahar.meet.line.008",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
+      "speakerId": "legacy.speaker.bkqdo1",
+      "speakerName": "シャハル",
       "mode": "dialogue",
-      "text": "屋上の落とし物じゃなかった。"
+      "text": "存じています。売店の行列を、三日前から上空より観測していました。……その色は、何年もちますか。"
     },
     {
       "type": "line",
       "id": "shahar.meet.node.line.009",
       "lineId": "shahar.meet.line.009",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "シャハルは、季節より長く生き、地上の都合へ動じない古竜に見えた。だから私は、普通のお客様へするのと同じ声で話しかけることにした。"
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "何年って……今週で販売終了です。だから並んだんですよ。"
     },
     {
       "type": "line",
       "id": "shahar.meet.node.line.010",
       "lineId": "shahar.meet.line.010",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "板じゃなくて鱗なんですね。では、落とし物窓口へ運ぶのも無理そうです。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "空の気配が、す、と冷めた。「今週で終わり」の一言で、興味の火が消される音がした。三日も観測してたくせに。",
+      "emotion": "comic"
     },
     {
       "type": "line",
@@ -169,7 +163,7 @@
       "speakerId": "legacy.speaker.bkqdo1",
       "speakerName": "シャハル",
       "mode": "dialogue",
-      "text": "落としたのは事実だ。返却期限は知らない。"
+      "text": "では、見送ります。私は長いので。どうせ終わるものに本気になると、あとが長いのです。……勇者の来訪も、流行も、私の物語も。全部、先に終わりました。"
     },
     {
       "type": "line",
@@ -177,7 +171,8 @@
       "lineId": "shahar.meet.line.012",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "たった一言の返事を待つ時間が、試合開始前より長い。背後ではいつもの業務放送が流れ、この場所だけが別の物語の入口みたいに静かだった。"
+      "text": "長生きの言い分は、寂しさの正装だった。私の物語も先に終わった——聞き流せない一言が、雲の上から降ってきた。",
+      "emotion": "revelation"
     },
     {
       "type": "line",
@@ -185,16 +180,17 @@
       "lineId": "shahar.meet.line.013",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "空の端で雷が一度だけ笑った。竜の機嫌を天気で読む仕事が、今日から増えた。"
+      "text": "私は考える前に、限定傘を開いて、鱗の隣に差した。銀白の鱗に、限定色がよく映えた。",
+      "emotion": "resolve"
     },
     {
       "type": "line",
       "id": "shahar.meet.node.line.014",
       "lineId": "shahar.meet.line.014",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "機嫌を少し動かすだけで、三県の天気予報と日の出時刻が書き換わる。それでも本人が気にしたのは、私が一歩引いたことの方だった。",
-      "emotion": "comic"
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "終わる前に見るのと、終わってから聞くのって、ぜんぜん違いますよ。ほら、今週限定の色です。今、見ないと。"
     },
     {
       "type": "line",
@@ -202,17 +198,17 @@
       "lineId": "shahar.meet.line.015",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "まだ事情はほとんど分からない。ただ、最初の考えだけでは説明できない表情を見てしまった。私は曲がった名札を直し、次に会う口実をひとつ残した。",
-      "emotion": "tender"
+      "text": "空が、身じろぎした。ゴ、と遠雷みたいな音がして、屋上の風向きが変わる。あとで知ったが、この瞬間、三県の天気予報が訂正された。",
+      "emotion": "comic"
     },
     {
       "type": "line",
       "id": "shahar.meet.node.line.016",
       "lineId": "shahar.meet.line.016",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "怖くないと言えば嘘になる。でも、怖さの奥に近づくだけで、守りたい小さな暮らしを天候ごと壊してしまうことがある気がして、目をそらす方が失礼に思えた。",
-      "emotion": "revelation"
+      "speakerId": "legacy.speaker.bkqdo1",
+      "speakerName": "シャハル",
+      "mode": "dialogue",
+      "text": "…………いい色です。記録します。「本日、いい色を見た」と。"
     },
     {
       "type": "line",
@@ -220,7 +216,8 @@
       "lineId": "shahar.meet.line.017",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "事情はまだ分からない。でも、ここで立ち去れば、たぶん後悔する。"
+      "text": "そのとき、私の手のひらに、小さな雲がひとつ降りてきた。綿あめくらいの、ちゃんと冷たい本物の雲。「挨拶です」と空が言う。握手の代わりらしい。",
+      "emotion": "tender"
     },
     {
       "type": "line",
@@ -228,16 +225,8 @@
       "lineId": "shahar.meet.line.018",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "名前を聞いただけ。約束も、契約も、まだ何もない。それなのに別れ際、次に会った時の言葉を考えている自分がいた。",
-      "emotion": "tender"
-    },
-    {
-      "type": "line",
-      "id": "shahar.meet.node.line.019",
-      "lineId": "shahar.meet.line.019",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "その場に残った一人分の茶を保温する手のひらほどの雲を見て、私は今日の出来事を勤務報告の一行だけでは終わらせられないと知った。"
+      "text": "手のひらの雲は、ひんやりして、少しだけ心拍を上げた。昼休みは、あと十分。この十分を、どう使うかだ。",
+      "emotion": "resolve"
     },
     {
       "type": "choice",
@@ -246,10 +235,10 @@
         {
           "id": "shahar.meet.choice.001",
           "label": "鱗を屋上の一席として扱う",
-          "result": "一枚の鱗へ椅子を出した。雲の上から礼だけが返った。",
-          "intent": "登録の前に、目の前の相手を知る",
-          "promise": "目先の報酬は得ない代わりに、相手が何を望んでいるかを確かめる。",
-          "memory": "手続きより先に話を聞いたことを、相手は最初の印象として覚えている。",
+          "result": "私は鱗の隣に「予約席」の札を立てた。「屋上庭園・古竜様御一行(鱗一枚)」。空が笑った気がして、屋上の花が一斉に揺れた。以後、昼休みの屋上には、銀白の鱗と限定傘が並んで立っている。天気は、なぜかいつも晴れる。",
+          "intent": "規格外のお客様に、ちゃんと席を用意する",
+          "promise": "目先の報酬は得ない代わりに、この人が何を見送ってきたかを知る。",
+          "memory": "鱗に席を用意した店員として、シャハルは私を覚えている。",
           "tone": "tender",
           "effects": [
             {
@@ -268,10 +257,10 @@
         {
           "id": "shahar.meet.choice.002",
           "label": "今日はシャハルを誘わず、用事へ戻る",
-          "result": "シャハルの名前と出会った場所だけを覚え、今日は普段の仕事へ戻った。急いで所属を決めなかったことが、次に会う時の距離として残った。",
-          "intent": "今は勧誘せず、相手との距離を保つ",
+          "result": "昼休みが終わり、私は仕事へ戻った。翌朝、屋上のベンチに小さな雲がひとつ、文鎮みたいに私の忘れた傘を押さえていた。傘は飛ばされず、雲は三日間消えなかった。長い人の「またね」は、耐久性が違う。",
+          "intent": "今日は昼休みの残りを大事にする",
           "promise": "所属選手にはならないが、後の出来事で再会できる。",
-          "memory": "最初の出会いで急いで仲間にしなかったことが、次の再会へ残る。",
+          "memory": "限定傘の色を見せた店員のことを、シャハルは覚えている。",
           "tone": "pragmatic",
           "effects": [],
           "goto": "shahar.meet.node.effect.001"
@@ -301,9 +290,9 @@
     }
   ],
   "debug": {
-    "status": "approved",
-    "sourceDocument": "native narrative block migration",
-    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "status": "review",
+    "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
+    "authorNote": "v2改稿: 鱗一枚と限定傘の事件。身じろぎで三県の天気が変わる規模の落差。手のひらの雲のドキドキ。Q1=私の物語も先に終わった。",
     "legacyGeneratedIds": false
   }
 }

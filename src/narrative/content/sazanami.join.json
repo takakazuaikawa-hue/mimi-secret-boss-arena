@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "id": "sazanami.join",
   "kind": "character",
-  "title": "スカウト",
-  "summary": "噴水広場で起きる「スカウト」",
+  "title": "体重欄に「海溝」",
+  "summary": "登録端末が海の大きさに敗北し、影だけが選手になる",
   "ownership": {
     "arcId": "character.sazanami",
     "characterId": "sazanami",
@@ -38,40 +38,6 @@
   },
   "nodes": [
     {
-      "type": "line",
-      "id": "sazanami.join.node.line.001",
-      "lineId": "sazanami.join.line.001",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "さざなみと初めて会ったあと、噴水広場でもう一度顔を合わせた。今日は、選手登録の条件を確かめることになっている。"
-    },
-    {
-      "type": "line",
-      "id": "sazanami.join.node.line.002",
-      "lineId": "sazanami.join.line.002",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "選手登録の面談室は狭い。机を挟めば仕事の距離を守れるはずなのに、同じ書類を覗き込むたび、沈黙だけが近くなる。",
-      "emotion": "tension"
-    },
-    {
-      "type": "line",
-      "id": "sazanami.join.node.line.003",
-      "lineId": "sazanami.join.line.003",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "登録端末の体重欄へ数字を入れるたび、沿岸地図が自動で縮尺を変えた。最終的に欄そのものが海色になった。"
-    },
-    {
-      "type": "line",
-      "id": "sazanami.join.node.line.004",
-      "lineId": "sazanami.join.line.004",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "出場枠、水槽一つ分で足りますか。"
-    },
-    {
       "type": "direction",
       "id": "sazanami.join.node.direction.001",
       "command": {
@@ -81,12 +47,39 @@
       }
     },
     {
-      "type": "direction",
-      "id": "sazanami.join.node.direction.002",
-      "command": {
-        "type": "effect",
-        "effectId": "pulse"
-      }
+      "type": "line",
+      "id": "sazanami.join.node.line.001",
+      "lineId": "sazanami.join.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "さざなみの選手登録は、噴水広場で行うことになった。水があるから話しやすいだろうという私の配慮は、五分で裏目に出る。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.join.node.line.002",
+      "lineId": "sazanami.join.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "影の一部が噴水へ移った途端、噴水の水位が三倍になった。広場の鳩が避難する。私は端末を開き、平常心で登録を始めた。接客業は、平常心の商売である。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.join.node.line.003",
+      "lineId": "sazanami.join.line.003",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "身長欄……えっと、さざなみさん、身長は。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.join.node.line.004",
+      "lineId": "sazanami.join.line.004",
+      "speakerId": "legacy.speaker.we7zqt",
+      "speakerName": "さざなみ",
+      "mode": "dialogue",
+      "text": "……どこからどこまでを、私と数えるかによる。潮なら、月まで届く日もある。"
     },
     {
       "type": "line",
@@ -94,69 +87,79 @@
       "lineId": "sazanami.join.line.005",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "選手登録は一枚で済むのに、さざなみを知るための欄はどこにもない。人間の距離感が分からない巨大生物なのだと決めれば簡単だ。でも、その決め方こそ契約書と同じに見えた。",
+      "text": "身長欄に「満潮時、月まで」と書いたら端末が再起動した。体重欄は自動計測に切り替わり、三十秒考えた末に「海溝」と表示して沈黙した。単位ですらない。",
       "emotion": "comic"
+    },
+    {
+      "type": "direction",
+      "id": "sazanami.join.node.direction.002",
+      "command": {
+        "type": "effect",
+        "effectId": "shake"
+      }
     },
     {
       "type": "line",
       "id": "sazanami.join.node.line.006",
       "lineId": "sazanami.join.line.006",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "さざなみの経歴は、端末の入力欄へ収まらない。けれど本人が書けずにいるのは、過去の偉業ではなく「これから何をしたいか」の一行だった。"
+      "speakerId": "legacy.speaker.we7zqt",
+      "speakerName": "さざなみ",
+      "mode": "dialogue",
+      "text": "……やはり、無理があるのでは。私が試合に出れば、会場が沈む。観客の靴が濡れる。売店の焼きそばが、しける。"
     },
     {
       "type": "line",
       "id": "sazanami.join.node.line.007",
       "lineId": "sazanami.join.line.007",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "影だけなら、もう少し軽くなりませんか。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "心配の三つ目が焼きそばなのが、この人だった。規模は海溝、気遣いは売店単位。",
+      "emotion": "comic"
     },
     {
       "type": "line",
       "id": "sazanami.join.node.line.008",
       "lineId": "sazanami.join.line.008",
-      "speakerId": "legacy.speaker.we7zqt",
-      "speakerName": "さざなみ",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "影だけでよい。"
+      "text": "なら、影だけ登録しましょう。水槽一個ぶんの、あなたの影。本体は海でお留守番です。"
     },
     {
       "type": "line",
       "id": "sazanami.join.node.line.009",
       "lineId": "sazanami.join.line.009",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "海溝より深い場所から、地上を小さな影として眺めるもの。その横顔が、空欄の前でだけ少し頼りなく見える。",
-      "emotion": "revelation"
+      "speakerId": "legacy.speaker.we7zqt",
+      "speakerName": "さざなみ",
+      "mode": "dialogue",
+      "text": "影だけ。……そんな出場が、許されるのか。"
     },
     {
       "type": "line",
       "id": "sazanami.join.node.line.010",
       "lineId": "sazanami.join.line.010",
-      "speakerId": "legacy.speaker.we7zqt",
-      "speakerName": "さざなみ",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "影にも深さはある。お前たちが見ない部分ほど重い。"
+      "text": "うちには災害カテゴリを同伴客に書き直した前例と、応援席が上空の前例があります。影くらい、通ります。"
     },
     {
       "type": "line",
       "id": "sazanami.join.node.line.011",
       "lineId": "sazanami.join.line.011",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "本体を呼ばないなら、たぶん。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "前例の使い方が完全に悪い方の事務員だが、実際、通った。出場区分「影(水槽つき)」。端末もこのチームの登録には慣れてきたのか、今回は一度も煙を吹かなかった。成長している。",
+      "emotion": "comic"
     },
     {
       "type": "line",
       "id": "sazanami.join.node.line.012",
       "lineId": "sazanami.join.line.012",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "採用する側らしい言葉を探した。でも必要なのは評価ではなく、ここにいてもいい理由を一緒に作ることなのだと思った。"
+      "speakerId": "legacy.speaker.we7zqt",
+      "speakerName": "さざなみ",
+      "mode": "dialogue",
+      "text": "……一つ、条件が。私の影が誰かの岸を揺らしたら、すぐに教えてほしい。私は、自分の大きさに、気づくのが遅い。"
     },
     {
       "type": "line",
@@ -164,7 +167,8 @@
       "lineId": "sazanami.join.line.013",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私は体重欄へ『沿岸三県』と書いた。端末は警報を鳴らしながら受理した。"
+      "text": "自分の大きさに気づくのが遅い。それは巨大な海の話であり、たぶん、優しさの話でもあった。この人の気遣いは、いつも本人が思うより大きく届く。",
+      "emotion": "revelation"
     },
     {
       "type": "line",
@@ -172,51 +176,8 @@
       "lineId": "sazanami.join.line.014",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "寝返り一つで沿岸三県の潮位が変わるのに、青のりの質には細かいという注意事項まで契約書へ加わり、一般的な選手登録は完全に諦めることになった。",
-      "emotion": "comic"
-    },
-    {
-      "type": "line",
-      "id": "sazanami.join.node.line.015",
-      "lineId": "sazanami.join.line.015",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "私のペンで未来まで埋めないよう、最後の空欄を机の中央へ戻した。待つ時間は気まずい。それでも、本人の言葉で始まるほうがいい。",
+      "text": "登録の最後に、面談の締めをどうするか。聞きたい話は、まだあった。",
       "emotion": "resolve"
-    },
-    {
-      "type": "line",
-      "id": "sazanami.join.node.line.016",
-      "lineId": "sazanami.join.line.016",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "最後に本人が確かめたのは報酬ではなく、地図を変えない歩き方で、同じ窓辺へ会いに来ることが規則違反にならないかどうかだった。",
-      "emotion": "tender"
-    },
-    {
-      "type": "line",
-      "id": "sazanami.join.node.line.017",
-      "lineId": "sazanami.join.line.017",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "登録を急ぐとしても、本人を置き去りにしたまま話を進めたくはなかった。"
-    },
-    {
-      "type": "line",
-      "id": "sazanami.join.node.line.018",
-      "lineId": "sazanami.join.line.018",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "登録完了の音が鳴る。これで仲間になった、と簡単に呼んでいいのか分からない。けれど退室する足音が、来た時より少しだけゆっくりだった。"
-    },
-    {
-      "type": "line",
-      "id": "sazanami.join.node.line.019",
-      "lineId": "sazanami.join.line.019",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "浅瀬の味だと評された空の弁当箱が机に残る。返そうと呼び止めると、「次に会う理由として置いておく」とだけ返ってきた。",
-      "emotion": "tender"
     },
     {
       "type": "choice",
@@ -225,10 +186,10 @@
         {
           "id": "sazanami.join.choice.001",
           "label": "水槽越しに、寝返りで揺れた海岸の話を聞く",
-          "result": "さざなみは謝らなかった。代わりに次の寝返り時刻を教え、沿岸放送へ自分で連絡を入れた。",
-          "intent": "本人の得意な戦い方を知る",
+          "result": "登録後、夜の水槽前で「揺らしてしまった岸」の話を聞いた。祭りの提灯を消した波。子どもの砂の城を崩した満ち潮。彼女は全部、覚えていた。「揺らした岸の数だけ、謝りたい相手がいる」。私は手帳に書いた。今度の休み、海岸清掃のボランティアにチームで参加する。謝り方は、一つじゃない。",
+          "intent": "大きさの後悔を、最後まで聞く",
           "promise": "登録は少し遅れるが、この人専用の成長ポイントを得る。",
-          "memory": "自分で書いた最初の条件を、相手は次の大事な場面でも覚えている。",
+          "memory": "揺らした岸の一覧を、二人で「これから謝りに行く場所リスト」に変えた。",
           "tone": "tender",
           "effects": [
             {
@@ -260,10 +221,10 @@
         {
           "id": "sazanami.join.choice.002",
           "label": "水槽の影だけを、出場者として登録する",
-          "result": "体重欄は『沿岸三県』、身長欄は『干潮時参照』で受理された。受付の理解が追いつく前に背番号が出た。",
-          "intent": "次の公式戦へ間に合わせる",
-          "promise": "本人の詳細は後回しになるが、誰にでも使える成長ポイントを得る。",
-          "memory": "先に席を確保した判断は、チームの始まり方として記録に残る。",
+          "result": "出場区分「影(水槽つき)」は、その日のうちに受理された。運営から届いた注意書きは一行。「水槽の水は、こぼさないでください」。さざなみはそれを三回読んで、泡文字で返信を書いた。「善処します(波は、生き物なので)」。運営と海の文通が、こうして始まった。",
+          "intent": "確実に出場できる形を先に固める",
+          "promise": "本人の事情は後回しになるが、誰にでも使える成長ポイントを得る。",
+          "memory": "運営との泡文字の文通を、チームの全員が楽しみにしている。",
           "tone": "pragmatic",
           "effects": [
             {
@@ -291,10 +252,10 @@
         {
           "id": "sazanami.join.choice.003",
           "label": "今回はさざなみを誘わず、別の機会を待つ",
-          "result": "さざなみの出場登録は行わなかった。相手は所属せず、それぞれの用事へ戻った。断る選択を残したことだけが、次に会う時まで静かに残った。",
+          "result": "「今回は、見送りましょう」。影は静かに噴水から引いていった。水位が戻ったあと、噴水の底に泡文字がひとつ、ゆっくり消えずに残っていた。「誘ってくれたこと——百点」。採点の人の百点は、重い。",
           "intent": "今回はチームへ誘わない",
           "promise": "今回の所属は見送るが、人物の物語と再会の可能性は失わない。",
-          "memory": "勧誘しない選択も尊重されたことを、相手は覚えている。",
+          "memory": "噴水の底の百点を、私は誰にも言わずに覚えている。",
           "tone": "pragmatic",
           "effects": [
             {
@@ -314,9 +275,9 @@
     }
   ],
   "debug": {
-    "status": "approved",
-    "sourceDocument": "native narrative block migration",
-    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "status": "review",
+    "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
+    "authorNote": "v2改稿: 体重欄「海溝」の登録事件。焼きそばの心配。影(水槽つき)の出場区分。過去2キャラの登録前例を安全参照(自チーム内の事実)。",
     "legacyGeneratedIds": false
   }
 }

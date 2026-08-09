@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "id": "shahar.liberation",
   "kind": "liberation",
-  "title": "契約の外側",
-  "summary": "闘技場上空で起きる「契約の外側」",
+  "title": "銀の留め飾り",
+  "summary": "鱗の登録を消す夜。一枚の鱗が、小さな銀の飾りに変わる",
   "ownership": {
     "arcId": "character.shahar",
     "characterId": "shahar",
@@ -28,51 +28,17 @@
     "weight": 1
   },
   "presentation": {
-    "location": "闘技場上空",
+    "location": "屋上庭園・夜",
     "assets": [
       {
         "id": "shahar.liberation.asset.background.001",
         "kind": "background",
         "path": "/assets/story/bg-casino-cafe-night.png",
-        "alt": "闘技場上空の背景"
+        "alt": "夜の屋上庭園の背景"
       }
     ]
   },
   "nodes": [
-    {
-      "type": "line",
-      "id": "shahar.liberation.node.line.001",
-      "lineId": "shahar.liberation.line.001",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "最終大会が近づくなか、シャハルの契約を終わらせられる条件がそろった。今日は勝敗より先に、本人の意思を確かめに来た。"
-    },
-    {
-      "type": "line",
-      "id": "shahar.liberation.node.line.002",
-      "lineId": "shahar.liberation.line.002",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "解除届を渡せば、この人を呼び止める権利はなくなる。最初から持つべきでなかった権利なのに、指が紙を離さない。",
-      "emotion": "tension"
-    },
-    {
-      "type": "line",
-      "id": "shahar.liberation.node.line.003",
-      "lineId": "shahar.liberation.line.003",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "解除手続きの朝、屋上の空はどこまでも晴れていた。鱗の周りだけ、旅支度のように風が渦を巻いている。"
-    },
-    {
-      "type": "line",
-      "id": "shahar.liberation.node.line.004",
-      "lineId": "shahar.liberation.line.004",
-      "speakerId": "legacy.speaker.bkqdo1",
-      "speakerName": "シャハル",
-      "mode": "dialogue",
-      "text": "鱗を返せ。契約はそこに刻まれている。"
-    },
     {
       "type": "direction",
       "id": "shahar.liberation.node.direction.001",
@@ -83,12 +49,39 @@
       }
     },
     {
-      "type": "direction",
-      "id": "shahar.liberation.node.direction.002",
-      "command": {
-        "type": "effect",
-        "effectId": "flash"
-      }
+      "type": "line",
+      "id": "shahar.liberation.node.line.001",
+      "lineId": "shahar.liberation.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "契約を終わらせる夜、指定された場所は屋上庭園だった。予約席の札の隣に、鱗が一枚。四百年の人との契約解除が、いつもの昼休みの場所で始まる。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.liberation.node.line.002",
+      "lineId": "shahar.liberation.line.002",
+      "speakerId": "legacy.speaker.bkqdo1",
+      "speakerName": "シャハル",
+      "mode": "dialogue",
+      "text": "解除届を読みました。この契約は、今週で終わる。……つまり、限定です。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.liberation.node.line.003",
+      "lineId": "shahar.liberation.line.003",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "……そうですね。今週限定の、最後の契約業務です。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.liberation.node.line.004",
+      "lineId": "shahar.liberation.line.004",
+      "speakerId": "legacy.speaker.bkqdo1",
+      "speakerName": "シャハル",
+      "mode": "dialogue",
+      "text": "では、丁寧にやりましょう。限定は、丁寧に扱うものだと、あなたに習ったので。"
     },
     {
       "type": "line",
@@ -96,8 +89,16 @@
       "lineId": "shahar.liberation.line.005",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "解除届は薄く、一人分の茶を保温する手のひらほどの雲より軽い。こんな紙で自由を渡せると思うこと自体、最後の所有なのかもしれない。手汗で端が少し曲がった。",
+      "text": "判を押す。鱗の登録が消える。空の気配は変わらないのに、書類の上の「所有」だけが、静かに蒸発した。",
       "emotion": "tension"
+    },
+    {
+      "type": "direction",
+      "id": "shahar.liberation.node.direction.002",
+      "command": {
+        "type": "effect",
+        "effectId": "pulse"
+      }
     },
     {
       "type": "line",
@@ -105,25 +106,26 @@
       "lineId": "shahar.liberation.line.006",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "シャハルは急かさない。季節より長く生き、地上の都合へ動じない古竜でありながら、私の迷いが言葉になるまで待っている。"
+      "text": "そのとき、ベンチの鱗が光った。畳一枚の銀白が、みるみる小さくなっていく。手のひらへ、指先へ。最後に残ったのは、小さな銀の留め飾りだった。",
+      "emotion": "tension"
     },
     {
       "type": "line",
       "id": "shahar.liberation.node.line.007",
       "lineId": "shahar.liberation.line.007",
-      "speakerId": "legacy.speaker.bkqdo1",
-      "speakerName": "シャハル",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "この一枚を返せば、私の声は地上へ届かなくなる。"
+      "text": "これ……鱗、ですか？"
     },
     {
       "type": "line",
       "id": "shahar.liberation.node.line.008",
       "lineId": "shahar.liberation.line.008",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
+      "speakerId": "legacy.speaker.bkqdo1",
+      "speakerName": "シャハル",
       "mode": "dialogue",
-      "text": "返したら、もう話せない？"
+      "text": "ええ。登録の消えた鱗は、ただの私物です。私物は、贈れる。……四百年で、いちばん小さく編んだ一枚です。"
     },
     {
       "type": "line",
@@ -131,26 +133,26 @@
       "lineId": "shahar.liberation.line.009",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "勝つために必要だという理由なら、いくらでも並べられた。でも今伝えたいのは、呼ばれたからではなく、会いたい日に空を渡ることをこの先も見届けたいという、命令にできない願いだった。",
+      "text": "髪に、銀の留め飾りが留まる。ひんやりして、少しだけ重い。都市より大きい人の一部が、私の前髪の横で、月の光を小さく反射している。心臓の音が、屋上の夜に響いてないといいけど。",
       "emotion": "tender"
     },
     {
       "type": "line",
       "id": "shahar.liberation.node.line.010",
       "lineId": "shahar.liberation.line.010",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
+      "speakerId": "legacy.speaker.bkqdo1",
+      "speakerName": "シャハル",
       "mode": "dialogue",
-      "text": "聞きたくなったら、空へ向かって呼んでもいいですか。"
+      "text": "それは何年もつか、と聞かれれば——四百年もちます。ですが、贈った理由は、今週の気分です。"
     },
     {
       "type": "line",
       "id": "shahar.liberation.node.line.011",
       "lineId": "shahar.liberation.line.011",
-      "speakerId": "legacy.speaker.bkqdo1",
-      "speakerName": "シャハル",
-      "mode": "dialogue",
-      "text": "空を見上げろ。声を届けるのに紙はいらない。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "長持ちするものに、今週の気分を乗せる。この人の四百年と私の今週が、一つの飾りの中で握手した。うまいこと言うようになったのは、絶対うちのチームのせいだ。",
+      "emotion": "comic"
     },
     {
       "type": "line",
@@ -158,69 +160,7 @@
       "lineId": "shahar.liberation.line.012",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "残ってほしいと言うことと、自由にすることは両立するのか。答えは書類にない。だから、本人へ聞くしかない。",
-      "emotion": "resolve"
-    },
-    {
-      "type": "line",
-      "id": "shahar.liberation.node.line.013",
-      "lineId": "shahar.liberation.line.013",
-      "speakerId": "legacy.speaker.bkqdo1",
-      "speakerName": "シャハル",
-      "mode": "dialogue",
-      "text": "声は届かずとも、天気を見れば分かる。私は返事の下手な竜ではない。"
-    },
-    {
-      "type": "line",
-      "id": "shahar.liberation.node.line.014",
-      "lineId": "shahar.liberation.line.014",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "機嫌を少し動かすだけで、三県の天気予報と日の出時刻が書き換わるほどの力を持つ存在が、一枚の紙を前に私の返事だけを待っている。その不釣り合いさが、泣きそうな場面を少しだけ可笑しくした。",
-      "emotion": "comic"
-    },
-    {
-      "type": "line",
-      "id": "shahar.liberation.node.line.015",
-      "lineId": "shahar.liberation.line.015",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "もう呼び止める権利はない。それでもシャハルが振り返るなら、そこから先は契約ではなく本人の答えだ。私は追わず、その一歩を待った。",
-      "emotion": "resolve"
-    },
-    {
-      "type": "line",
-      "id": "shahar.liberation.node.line.016",
-      "lineId": "shahar.liberation.line.016",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "契約印が消える。関係まで消える音はしなかった。代わりに、これからは断られるかもしれないという自由な静けさが来た。",
-      "emotion": "revelation"
-    },
-    {
-      "type": "line",
-      "id": "shahar.liberation.node.line.017",
-      "lineId": "shahar.liberation.line.017",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "契約をなくしても関係はなくならない。次に同じ場所へ立つなら、互いに選び直した結果でありたい。"
-    },
-    {
-      "type": "line",
-      "id": "shahar.liberation.node.line.018",
-      "lineId": "shahar.liberation.line.018",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "一人分の茶を保温する手のひらほどの雲を返そうとすると、相手は受け取らなかった。「預けるのではない。次に会う場所の印だ」と言った。",
-      "emotion": "tender"
-    },
-    {
-      "type": "line",
-      "id": "shahar.liberation.node.line.019",
-      "lineId": "shahar.liberation.line.019",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "別れの挨拶をした。それでも足音は同じ出口へ向かっている。契約ではなく、本人の歩幅で。",
+      "text": "残る手続きは一つ。契約のなくなった竜と、これからの関係の形だ。",
       "emotion": "resolve"
     },
     {
@@ -230,10 +170,10 @@
         {
           "id": "shahar.liberation.choice.001",
           "label": "鱗の登録を消し、空へ帰る時刻を本人へ返す",
-          "result": "登録灯が消えると鱗は窓から空へ上がった。しばらくして雨雲が闘技場の上だけへ戻り、次戦の開始時刻を雷で知らせた。",
-          "intent": "契約と出場登録を完全に分ける",
+          "result": "「帰る時刻も、来る時刻も、これからはあなたの気分です」。そう伝えると、空が静かに笑った。「では、予告なしで来ます。限定の登場は、予告しないものなので」。以後、屋上の予約席にいつ鱗があるかは、誰にも予測できない。天気予報より当たらない竜として、彼は街の名物になりつつある。",
+          "intent": "時刻表のない関係へ戻す",
           "promise": "所有者名を消し、本人が自分の名で次の試合を選べるようにする。",
-          "memory": "自由になったあと、最初に自分で選んだ集合時刻が残る。",
+          "memory": "予告なしの登場を、二人とも「限定の作法」と呼んでいる。",
           "tone": "defiant",
           "effects": [
             {
@@ -257,10 +197,10 @@
         {
           "id": "shahar.liberation.choice.002",
           "label": "契約を解き、屋上の一席だけ予約したままにする",
-          "result": "出場命令はなくなった。予約席には翌朝も巨大な爪が整理券を置き、空から来る観客として試合へ残った。",
-          "intent": "自由な相手へ改めて協力を頼む",
-          "promise": "断る権利を返したうえで、決勝を一緒に戦う新しい約束を結ぶ。",
-          "memory": "頼まれたからではなく、頼みを聞いたから残った。その違いを二人が覚えている。",
+          "result": "「予約席の札だけは、残していいですか」。私が聞くと、彼は長い間を置いて答えた。「席が残っているなら、竜は戻ります。四百年、席がなかっただけなので」。屋上の予約席の札は、今日から契約書より強い効力を持つ。少なくとも、うちの屋上では。",
+          "intent": "契約の代わりに、席を残す",
+          "promise": "断る権利を返したうえで、屋上の席という新しい約束を結ぶ。",
+          "memory": "契約より強い予約席の札のことを、二人だけが知っている。",
           "tone": "tender",
           "effects": [
             {
@@ -324,9 +264,9 @@
     }
   ],
   "debug": {
-    "status": "approved",
-    "sourceDocument": "native narrative block migration",
-    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "status": "review",
+    "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
+    "authorNote": "v2改稿: 鱗→銀の留め飾りの贈与。「四百年もつが、理由は今週の気分」。canonの銀の留め飾りを回収。",
     "legacyGeneratedIds": false
   }
 }

@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "id": "sazanami.crisis",
   "kind": "character",
-  "title": "最後の準備",
-  "summary": "地下貯水槽で起きる「最後の準備」",
+  "title": "海底遺物、即売会",
+  "summary": "黒い角封筒。海が預かってきた思い出の品を、会社が引き上げて売ろうとする",
   "ownership": {
     "arcId": "character.sazanami",
     "characterId": "sazanami",
@@ -34,45 +34,11 @@
         "id": "sazanami.crisis.asset.background.001",
         "kind": "background",
         "path": "/assets/story/bg-contract-archive-v2.png",
-        "alt": "地下貯水槽の背景"
+        "alt": "契約保管庫の背景"
       }
     ]
   },
   "nodes": [
-    {
-      "type": "line",
-      "id": "sazanami.crisis.node.line.001",
-      "lineId": "sazanami.crisis.line.001",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "アルデバラン社から届いた契約確認書には、さざなみの扱いを決める欄が残っていた。本人の意思を聞くため、地下貯水槽へ向かった。"
-    },
-    {
-      "type": "line",
-      "id": "sazanami.crisis.node.line.002",
-      "lineId": "sazanami.crisis.line.002",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "その週、相手は私を避けた。廊下の向こうに姿を見つけても、業務用の言葉だけを残して先に曲がる。",
-      "emotion": "tension"
-    },
-    {
-      "type": "line",
-      "id": "sazanami.crisis.node.line.003",
-      "lineId": "sazanami.crisis.line.003",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "会社は水槽の影を固定し、本体を地上へ引き上げる契約を用意した。紙から潮が滲み、机の脚が錆び始めている。"
-    },
-    {
-      "type": "line",
-      "id": "sazanami.crisis.node.line.004",
-      "lineId": "sazanami.crisis.line.004",
-      "speakerId": "legacy.speaker.we7zqt",
-      "speakerName": "さざなみ",
-      "mode": "dialogue",
-      "text": "契約は水槽を所有し、水槽が影を所有する。"
-    },
     {
       "type": "direction",
       "id": "sazanami.crisis.node.direction.001",
@@ -81,6 +47,59 @@
         "assetId": "sazanami.crisis.asset.background.001",
         "transition": "dissolve"
       }
+    },
+    {
+      "type": "line",
+      "id": "sazanami.crisis.node.line.001",
+      "lineId": "sazanami.crisis.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "黒い角封筒。差出人、アルデバラン社・物語資産管理部。件名——「資産『海域』沈下物の引き上げ販売について(海底遺物・即売会)」。同封のカタログには、値札つきの写真が並んでいた。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.crisis.node.line.002",
+      "lineId": "sazanami.crisis.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "指輪。手紙の束。片方だけの子ども靴。古いオルゴール。全部、海に沈んだ誰かの思い出だ。会社はそれを「所有海域内の無主物」と呼び、引き上げて、売る気でいる。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.crisis.node.line.003",
+      "lineId": "sazanami.crisis.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "貯水槽へ走った。水面が、今まで見たことのない形をしていた。波が立っているのに、音がない。海が、声を出さずに怒っている。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.crisis.node.line.004",
+      "lineId": "sazanami.crisis.line.004",
+      "speakerId": "legacy.speaker.we7zqt",
+      "speakerName": "さざなみ",
+      "mode": "dialogue",
+      "text": "……あれは、無主物ではない。ぜんぶ、預かりもの。持ち主が手放したくて手放したものは、海底には、ひとつもない。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.crisis.node.line.005",
+      "lineId": "sazanami.crisis.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "海は覚えていた。どの指輪が、どの嵐の日に、誰の手から滑り落ちたか。どの手紙が、どの桟橋から投げられたか。四十二点の青のりに厳しい人は、預かりものの台帳に、もっと厳しかった。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.crisis.node.line.006",
+      "lineId": "sazanami.crisis.line.006",
+      "speakerId": "legacy.speaker.we7zqt",
+      "speakerName": "さざなみ",
+      "mode": "dialogue",
+      "text": "引き上げ船が来たら、私は、沈める。……何隻でも。それで契約違反になっても、構わない。"
     },
     {
       "type": "direction",
@@ -92,29 +111,12 @@
     },
     {
       "type": "line",
-      "id": "sazanami.crisis.node.line.005",
-      "lineId": "sazanami.crisis.line.005",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "さざなみの返事が短い。怒っている、と決めれば私の不安には名前がつく。でも以前の私も「人間の距離感が分からない巨大生物なのだ」と決めつけた。また同じ読み違いをするところだった。",
-      "emotion": "tension"
-    },
-    {
-      "type": "line",
-      "id": "sazanami.crisis.node.line.006",
-      "lineId": "sazanami.crisis.line.006",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "嫌われたのなら理由を聞けばいい。そう思うのに、浅瀬の味だと評された空の弁当箱を見るたび、聞いた答えで今までの時間が変わるのが怖かった。"
-    },
-    {
-      "type": "line",
       "id": "sazanami.crisis.node.line.007",
       "lineId": "sazanami.crisis.line.007",
-      "speakerId": "legacy.speaker.we7zqt",
-      "speakerName": "さざなみ",
-      "mode": "dialogue",
-      "text": "引かれれば上がる。上がれば、この街は海の底になる。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "静かな声で、一番危ない宣言が出た。船を沈めれば、会社の思う壺だ。「危険資産」の判が押されて、回収の口実になる。でも、間違っているのは会社で、彼女じゃない。",
+      "emotion": "tension"
     },
     {
       "type": "line",
@@ -123,15 +125,16 @@
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "本体のあなたは？"
+      "text": "さざなみさん。沈めるより、いい方法があります。——先に、返しちゃいましょう。"
     },
     {
       "type": "line",
       "id": "sazanami.crisis.node.line.009",
       "lineId": "sazanami.crisis.line.009",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "ようやく追いついた場所で、さざなみは海溝より深い場所から、地上を小さな影として眺めるものに戻っていた。近づく前の、何も期待していなかった顔だ。"
+      "speakerId": "legacy.speaker.we7zqt",
+      "speakerName": "さざなみ",
+      "mode": "dialogue",
+      "text": "……返す？"
     },
     {
       "type": "line",
@@ -140,42 +143,43 @@
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "勝つ場所を残すために、住む場所を沈めるのは違います。"
+      "text": "即売会の前に、持ち主返却会をやるんです。あなたは、どれが誰のか、全部覚えてる。無主物じゃなくなれば、会社は売れません。売り物が、一個もなくなる。"
     },
     {
       "type": "line",
       "id": "sazanami.crisis.node.line.011",
       "lineId": "sazanami.crisis.line.011",
-      "speakerId": "legacy.speaker.we7zqt",
-      "speakerName": "さざなみ",
-      "mode": "dialogue",
-      "text": "どこにも属さない。だから影だけが苦しい。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "波が、止まった。それから、今まで聞いた中で一番大きな泡の音がした。海が、笑ったのだと思う。",
+      "emotion": "tender"
     },
     {
       "type": "line",
       "id": "sazanami.crisis.node.line.012",
       "lineId": "sazanami.crisis.line.012",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "原因は私への不信ではない。誰かへ近づくための一歩が、その人の暮らす海岸線を変えてしまうことから私を遠ざけようとしている。そのやさしさを、やさしいまま受け入れてはいけない気がした。",
-      "emotion": "revelation"
+      "speakerId": "legacy.speaker.we7zqt",
+      "speakerName": "さざなみ",
+      "mode": "dialogue",
+      "text": "その作戦——百点。……満点を、出してしまった。"
     },
     {
       "type": "line",
       "id": "sazanami.crisis.node.line.013",
       "lineId": "sazanami.crisis.line.013",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "水槽の水位がゆっくり下がった。怒りではなく、安堵で大きな波が引くこともあるらしい。"
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "いいんですか、満点出して。終わっちゃいますよ。"
     },
     {
       "type": "line",
       "id": "sazanami.crisis.node.line.014",
       "lineId": "sazanami.crisis.line.014",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "寝返り一つで沿岸三県の潮位が変わるのに、青のりの質には細かい。別れ話のように静かな場面なのに、施設全体は最終災害手順へ移行している。",
-      "emotion": "comic"
+      "speakerId": "legacy.speaker.we7zqt",
+      "speakerName": "さざなみ",
+      "mode": "dialogue",
+      "text": "終わらせない。この作戦は、続きが本番だから。……手伝って、ミミ。返す相手を、探すのは——陸の仕事。"
     },
     {
       "type": "line",
@@ -183,7 +187,7 @@
       "lineId": "sazanami.crisis.line.015",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "正しい答えを当てることより、間違えたまま命令しないことを選ぶ。私は逃げ道をふさがない位置で止まり、聞きたかったことを短い言葉にした。",
+      "text": "海の記憶と、陸の足。週末の闘技場ロビーが、臨時の「海の遺失物返却所」になった。ノノさんが受付を買って出て、写真と証言を突き合わせ、一つずつ持ち主を探していく。",
       "emotion": "resolve"
     },
     {
@@ -192,8 +196,8 @@
       "lineId": "sazanami.crisis.line.016",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "守るために離れるのは、残された側へ選択を渡さない。命令と同じだと告げると、初めて相手の表情が崩れた。",
-      "emotion": "resolve"
+      "text": "初日、五十年前に婚約指輪を落としたというお婆さんが来た。海が水の腕で、そっと指輪を差し出す。お婆さんは泣いて、それから言った。「海に落としたのに、覚えていてくれたの」。——覚えているのが、海です。うちの海は、そういう海です。",
+      "emotion": "tender"
     },
     {
       "type": "line",
@@ -201,24 +205,8 @@
       "lineId": "sazanami.crisis.line.017",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "勝つための答えと、あとで自分を嫌いにならない答えは、同じとは限らない。"
-    },
-    {
-      "type": "line",
-      "id": "sazanami.crisis.node.line.018",
-      "lineId": "sazanami.crisis.line.018",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "私は勝利を約束しない。安全も約束できない。ただ、地図を変えない歩き方で、同じ窓辺へ会いに来ることを諦める判断だけは本人へ返すと決めた。"
-    },
-    {
-      "type": "line",
-      "id": "sazanami.crisis.node.line.019",
-      "lineId": "sazanami.crisis.line.019",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "並んで戻る廊下には、まだ一人分の距離がある。でも今度の沈黙は拒絶ではなく、同じ答えを考えるためのものだった。",
-      "emotion": "tender"
+      "text": "即売会の予定日まで、あと少し。返却会をどの形で仕上げるかだ。",
+      "emotion": "resolve"
     },
     {
       "type": "choice",
@@ -227,10 +215,10 @@
         {
           "id": "sazanami.crisis.choice.001",
           "label": "水槽のまま、会場へ潮流を呼び込む",
-          "result": "水槽の中で尾が動き、会場へ一本の潮が通った。海そのものを呼ばず、さざなみにしか選べない流れで敵陣を崩した。",
-          "intent": "この人だけの突破法へ賭ける",
-          "promise": "予測しにくい方法を試し、この人専用の成長を大きく進める。",
-          "memory": "危機で選んだ方法は、契約を解く場面でも二人の共通の記憶として戻る。",
+          "result": "返却会の最終日、彼女は会場に小さな潮流を呼び、返しきれなかった品を光る流れに乗せて展示した。「持ち主を、探しています」。会場を一周する思い出の川に、観客が次々と足を止め、三十七件の「これ、うちの祖母の」が見つかった。即売会は開催前に中止された。売り物が、本当に一個もなくなったからだ。",
+          "intent": "海の記憶を、会場全体に見せる",
+          "promise": "危険を引き受け、この人専用の成長を最大まで進める。",
+          "memory": "思い出の川が流れた日を、闘技場の全員が覚えている。",
           "tone": "wild",
           "effects": [
             {
@@ -257,10 +245,10 @@
         {
           "id": "sazanami.crisis.choice.002",
           "label": "影を会場一面へ広げ、本体の一部を浮上させる",
-          "result": "広がった影から本体の一部が浮上した。深さを三人で測り続け、誰も飲み込まない範囲を共通の作戦にできた。",
-          "intent": "全員が使える安全な突破法を作る",
-          "promise": "本人だけの切り札は抑え、チーム全体へ使える成長を持ち帰る。",
-          "memory": "全員で組み直した手順は、契約を解く場面でも選んだ責任として戻る。",
+          "result": "会社の調査船が「無主物の確認」に来た日、会場の水面に本体の一部が静かに浮上した。水平線みたいな背中が、どこまでも続いている。調査員は台帳と海を三回見比べて、「無主物の管理者が、いました」とだけ報告して帰った。海そのものが持ち主だと、書類が認めた瞬間だった。",
+          "intent": "海の大きさを、一度だけ書類に見せる",
+          "promise": "本人の切り札は最小限に、チーム全体へ使える成長を持ち帰る。",
+          "memory": "調査員の報告書の一行を、チームは額装したがっている。",
           "tone": "pragmatic",
           "effects": [
             {
@@ -305,9 +293,9 @@
     }
   ],
   "debug": {
-    "status": "approved",
-    "sourceDocument": "native narrative block migration",
-    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "status": "review",
+    "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
+    "authorNote": "v2改稿: 黒い角封筒=海底遺物の即売会(Q2)。沈める宣言→持ち主返却会への転換。初めての満点。ノノさん参加。",
     "legacyGeneratedIds": false
   }
 }
