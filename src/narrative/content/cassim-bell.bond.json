@@ -29,6 +29,12 @@
     "location": "倉庫街",
     "assets": [
       {
+        "id": "cassim-bell.bond.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/events/cassim-bell-bond-lost-things-picnic-v1.png",
+        "alt": "七世界の落とし物に囲まれて茶会をするカシム・ベルとミミ"
+      },
+      {
         "id": "cassim-bell.bond.asset.background.001",
         "kind": "background",
         "path": "/assets/story/bg-casino-cafe-rain.png",
@@ -89,6 +95,11 @@
       "speakerName": "カシム・ベル",
       "mode": "dialogue",
       "text": "求人票第二条。「休憩は業務」。……業務は、真面目にやる主義です。"
+    },
+    {
+      "type": "direction",
+      "id": "cassim-bell.bond.node.direction.003",
+      "command": { "type": "still", "assetId": "cassim-bell.bond.asset.still.001" }
     },
     {
       "type": "line",

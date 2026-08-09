@@ -28,6 +28,12 @@
     "location": "賭場",
     "assets": [
       {
+        "id": "rinne.bond.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/events/rinne-bond-shooting-gallery-v1.png",
+        "alt": "射的で景品の兎を狙って外し続けるリンネと見守るミミ"
+      },
+      {
         "id": "rinne.bond.asset.background.001",
         "kind": "background",
         "path": "/assets/story/bg-casino-cafe-rain.png",
@@ -61,6 +67,11 @@
       "mode": "thought",
       "text": "予報どおり雨は上がり、闘技場の裏通りに夜市が伸びた。提灯、揚げ物の湯気、くじ屋の口上。リンネは屋台の間を、店が損をする未来だけ器用に避けながら歩く。だから彼女の通った後は、なぜかどの店主も機嫌がいい。",
       "emotion": "comic"
+    },
+    {
+      "type": "direction",
+      "id": "rinne.bond.node.direction.003",
+      "command": { "type": "still", "assetId": "rinne.bond.asset.still.001" }
     },
     {
       "type": "line",

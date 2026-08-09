@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s1.ep2",
+  "kind": "opening",
+  "title": "平和な窓口(午前の部)",
+  "summary": "遺失物窓口担当の朝。謎の卵がぐらりと揺れて、館内が総力戦になる",
+  "ownership": {
+    "arcId": "main.stage1"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "遺失物窓口",
+    "assets": [
+      {
+        "id": "main.s1.ep2.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-lost-property-counter-v1.png",
+        "alt": "遺失物窓口の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s1.ep2.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "main.s1.ep2.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.ep2.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s1.ep2.node.line.001",
+      "lineId": "main.s1.ep2.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "二週目、本日の担当は遺失物窓口。「一番暇な窓口です」と先輩は言った。台帳の預かり品は三件——傘三本、手袋片方、謎の卵ひとつ。私は椅子に座り、お茶を淹れ、一口飲んだ。その瞬間、棚の上で、卵が「ぐらり」と揺れた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.ep2.node.line.002",
+      "lineId": "main.s1.ep2.line.002",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "……揺れましたよね今。研修マニュアル、研修マニュアル……「卵」の項目、ない! 落とし物が孵る場合の項目がないんですけど!?"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.ep2.node.line.003",
+      "lineId": "main.s1.ep2.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "館内放送を頼んだのが運の尽きだった。「遺失物窓口より、卵の落とし主様——」放送が終わる前に、廊下の向こうから地響き。売店の幽霊夫妻が毛布を、食堂が湯たんぽを、警備が「卵警戒態勢」の腕章を持って殺到した。誰も落とし主ではない。全員、ただ見たいだけである。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.ep2.node.line.004",
+      "lineId": "main.s1.ep2.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "窓口は三分で満員になり、五分で誰かが「孵化日はいつか」の賭け札を刷り始め、七分で列が二列に割れて口論になり、十分で例の銅鑼が鳴った。腕相撲である。この街の紛争解決は今日も三十秒だった。私の「並んでください」だけが、今日も宙に浮いた。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.ep2.node.line.005",
+      "lineId": "main.s1.ep2.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "騒ぎの頂点で、人垣がすっと割れた。両替所の常連——山みたいな竜の紳士が、鼻先を窓口へ寄せたのだ。昨日卵を固めで頼んだ方である。紳士は卵を長いこと検分して、厳かに言った。「これは、あと三百年は孵りませんな」。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.ep2.node.line.006",
+      "lineId": "main.s1.ep2.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ホール中が、いっせいに賭け札を破り捨てた(孵化日の最短予想は「今日の昼」だった)。毛布と湯たんぽは回収され、卵は満足したように静かになり、警備は腕章を外した。竜の紳士は帰り際、私にだけ聞こえる声で付け足した。「……三百年待つのも、この街では珍しくありませんぞ」。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.ep2.node.line.007",
+      "lineId": "main.s1.ep2.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "正午、窓口は元通りになった。台帳の預かり品、傘三本、手袋片方、謎の卵ひとつ(異常なし・毛布一枚追加)。私はぬるくなったお茶を飲み干して、台帳にこう書いた。「本日、平和な窓口である」。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.ep2.node.line.008",
+      "lineId": "main.s1.ep2.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "そして——午後二時。廊下の奥から、台車の音がした。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "end",
+      "id": "main.s1.ep2.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_STAGE1_PLAN.md",
+    "authorNote": "第2話: 卵ぐらり→館内総力戦→竜の鑑定で一斉解散、のハチャメチャ連鎖。腕相撲決着と竜の紳士はep1のコールバック。ミナトmeet冒頭(平和な窓口・午後二時)の前日譚として無改変接続。卵は孵らない(meetの在庫と整合)。",
+    "legacyGeneratedIds": false
+  }
+}

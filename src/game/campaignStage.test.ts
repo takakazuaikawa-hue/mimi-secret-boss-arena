@@ -101,6 +101,19 @@ describe("三段階キャンペーン構造", () => {
     expect(followup.currentEvent?.fighterId).toBe("gidonozeaas");
   });
 
+  it("二段再生: 週2はメイン第2話→ミナトmeetへ連続再生する", () => {
+    const base = createRun("normal", "stage-test-main-2", {
+      campaignStage: campaignStages[0],
+    });
+    const week2 = { ...base, week: 2 };
+    const withMain = chooseWeeklyAction(week2, "work");
+    expect(withMain.currentEvent?.scene.id).toBe("main.s1.ep2");
+    const resolved = resolveCurrentEvent(withMain, 0);
+    const cleared = { ...resolved, lastEventOutcome: undefined };
+    const followup = maybeCreateMainStoryFollowup(cleared);
+    expect(followup.currentEvent?.fighterId).toBe("minato");
+  });
+
   it("区分未指定なら従来挙動(全員デッキ・持ち越しなし)", () => {
     const run = createRun("normal", "stage-test-legacy");
     expect(run.campaignStage).toBeUndefined();

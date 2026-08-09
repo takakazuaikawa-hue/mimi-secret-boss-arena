@@ -16,6 +16,7 @@ import { legacyCharacterNarrativeBlockById } from "../narrative/characterBlocks"
 import {
   legacyOpeningNarrativeBlockById,
   mainStageOneEpisodeOneBlock,
+  mainStageOneEpisodeTwoBlock,
   openingHotSpringBlock,
   openingOwnershipBlock,
 } from "../narrative/openingBlocks";
@@ -460,17 +461,19 @@ export const chooseWeeklyAction = (
     rngCursor: source.rngCursor + 1,
   };
 
-  // 三段階キャンペーン第一区分: 週1はメイン第1話を先に再生し、
-  // 終了後の followup でギドノ meet へ連続再生する(二段再生)。
-  if (
-    run.campaignStage === 1 &&
-    run.week === 1 &&
-    !run.eventHistory.includes("main.s1.ep1")
-  ) {
+  // 三段階キャンペーン第一区分: 該当週はメイン話を先に再生し、
+  // 終了後の followup で橋先の個別 meet へ連続再生する(二段再生)。
+  const mainEpisode = stageOneMainEpisodes.find(
+    (episode) =>
+      run.campaignStage === 1 &&
+      run.week === episode.week &&
+      !run.eventHistory.includes(episode.block.id),
+  );
+  if (mainEpisode) {
     return {
       ...run,
       currentEvent: weeklyEventFromNarrativeBlock(
-        mainStageOneEpisodeOneBlock,
+        mainEpisode.block,
         action,
         undefined,
         true,
@@ -984,35 +987,56 @@ export const maybeCreateOpeningOwnershipFollowup = (
   };
 };
 
+// 第一区分メインストーリーの対応表: 話の週・ブロック・橋先の人物。
+const stageOneMainEpisodes: ReadonlyArray<{
+  week: number;
+  block: typeof mainStageOneEpisodeOneBlock;
+  fighterId: string;
+  leadLineText?: string;
+}> = [
+  {
+    week: 1,
+    block: mainStageOneEpisodeOneBlock,
+    fighterId: "gidonozeaas",
+    leadLineText: "モップを置いて、私は閉店五分前の窓際へ向かった。",
+  },
+  {
+    week: 2,
+    block: mainStageOneEpisodeTwoBlock,
+    fighterId: "minato",
+  },
+];
+
 // メインストーリー終了直後に、橋先の個別場面を連続再生する(二段再生)。
-// 第1話→ギドノmeet。以後の話は追加時にここへ対応表を足す。
 export const maybeCreateMainStoryFollowup = (
   source: RunState,
 ): RunState => {
   if (source.currentEvent) return source;
-  if (
-    source.campaignStage === 1 &&
-    source.week === 1 &&
-    source.eventHistory.includes("main.s1.ep1") &&
-    !source.fighters.gidonozeaas.encountered
-  ) {
-    const scene = fighterDefinitions[0].scenes.meet;
-    return {
-      ...source,
-      currentEvent: weeklyEvent(
-        scene,
-        "work",
-        "gidonozeaas",
-        true,
-        source.week,
-        {
-          leadLineText:
-            "台帳を小脇に抱えたまま、私は閉店五分前の窓際へ向かった。",
-        },
-      ),
-    };
-  }
-  return source;
+  const episode = stageOneMainEpisodes.find(
+    (candidate) =>
+      source.campaignStage === 1 &&
+      source.week === candidate.week &&
+      source.eventHistory.includes(candidate.block.id) &&
+      !source.fighters[candidate.fighterId]?.encountered,
+  );
+  if (!episode) return source;
+  const fighter = fighterDefinitions.find(
+    (candidate) => candidate.id === episode.fighterId,
+  );
+  if (!fighter) return source;
+  return {
+    ...source,
+    currentEvent: weeklyEvent(
+      fighter.scenes.meet,
+      "work",
+      episode.fighterId,
+      true,
+      source.week,
+      episode.leadLineText
+        ? { leadLineText: episode.leadLineText }
+        : {},
+    ),
+  };
 };
 
 export const maybeCreateLiberationFollowup = (

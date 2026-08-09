@@ -29,6 +29,12 @@
     "location": "夜市",
     "assets": [
       {
+        "id": "night-eater.bond.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/events/night-eater-bond-lantern-tasting-v1.png",
+        "alt": "夜市で赤提灯の明かりを味わう夜を食べるもの"
+      },
+      {
         "id": "night-eater.bond.asset.background.001",
         "kind": "background",
         "path": "/assets/story/bg-casino-cafe-rain.png",
@@ -53,6 +59,11 @@
       "speakerId": "narrator",
       "mode": "thought",
       "text": "雨上がりの夜市。チームの息抜きに、みんなで食べ歩きに来た。人間チームは屋台の焼きそばを。夜を食べるものは——明かりの食べ歩きである。"
+    },
+    {
+      "type": "direction",
+      "id": "night-eater.bond.node.direction.003",
+      "command": { "type": "still", "assetId": "night-eater.bond.asset.still.001" }
     },
     {
       "type": "line",

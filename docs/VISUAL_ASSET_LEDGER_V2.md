@@ -188,6 +188,24 @@
 - ピオニー方針: 正本の大胆な露出、角、花飾り、金装飾、巨人らしい豊かな体格を維持する。未成年は画面内に描かず、画面外の相手へ紙の王冠を差し出す構図で出来事を示す。
 - 生成モード: OpenAI 内蔵画像生成。既存の各キャラクター絵は人物同一性、衣装、画風の参照に限定。
 
+## 2026-08-10 思い出一枚絵・追加バッチ
+
+| 場面 | 決定的瞬間 | ファイル |
+| --- | --- | --- |
+| `amara.bond` | 浴衣で本気の卓球。「両者勝訴」が生まれる瞬間 | `public/assets/story/events/amara-bond-onsen-table-tennis-v1.png` |
+| `cassim-bell.bond` | 七世界の落とし物の谷、巨大竜の靴で二人のお茶会 | `public/assets/story/events/cassim-bell-bond-lost-things-picnic-v1.png` |
+| `minato.join` | 券売機のA/Bを世界の命運のように悩む元勇者 | `public/assets/story/events/minato-join-lunch-choice-v1.png` |
+| `night-eater.bond` | 夜市の赤提灯を食べずに味わい、五つ星を付ける | `public/assets/story/events/night-eater-bond-lantern-tasting-v1.png` |
+| `rinne.bond` | 兎の景品だけを外し続け、店主が根負けする射的 | `public/assets/story/events/rinne-bond-shooting-gallery-v1.png` |
+| `ushiro.power` | 百二十七の影からミミが本体を一発で指し当てる | `public/assets/story/events/ushiro-power-127-shadows-v1.png` |
+| `room-seventeen.power` | 最下層の宝物として大切に飾られた片方の靴下 | `public/assets/story/events/room-seventeen-power-first-sock-v1.png` |
+| `sazanami.bond` | 携帯水槽の小さな海と、雨の商店街を初めて散歩 | `public/assets/story/events/sazanami-bond-portable-aquarium-v1.png` |
+| `shahar.bond` | 鱗のエレベーターで雲上の古竜へ弁当を届ける | `public/assets/story/events/shahar-bond-cloud-delivery-v1.png` |
+
+- 8点は1672×941 px、`cassim-bell-bond-lost-things-picnic-v1.png` は1672×940 px / PNG / RGB / 不透明。
+- 目的: 物語の要約ではなく、後から見た瞬間に台詞、笑い、関係性を思い出せる一瞬を収録する。
+- 生成モード: OpenAI 内蔵画像生成。既存プロジェクト画像は人物同一性、衣装、設定、画風の参照に限定。
+
 - 未制作だった13人分を `public/assets/battle/cutins/` に制作し、`characterVisuals[id].battleCutIn` へ接続済み。
 - 全点 `1672×941 px / WebP / RGB / 不透明`。通常戦闘絵、被弾・勝利・敗北差分は再生成していない。
 - 画面上の参照は陣営ではなく `fighterId` 優先へ変更。主要15人が敵側へ回っても同じ通常戦闘絵・固有技カットインを使用する。

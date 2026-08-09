@@ -29,6 +29,12 @@
     "location": "温泉旅館・鏡見の湯",
     "assets": [
       {
+        "id": "amara.bond.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/events/amara-bond-onsen-table-tennis-v1.png",
+        "alt": "浴衣姿で卓球に全力を出すアマラとミミ"
+      },
+      {
         "id": "amara.bond.asset.background.001",
         "kind": "background",
         "path": "/assets/story/bg-hot-spring-ryokan.png",
@@ -205,6 +211,11 @@
       "speakerName": "アマラ",
       "mode": "dialogue",
       "text": "条文が一行。……美しい法です。"
+    },
+    {
+      "type": "direction",
+      "id": "amara.bond.node.direction.003",
+      "command": { "type": "still", "assetId": "amara.bond.asset.still.001" }
     },
     {
       "type": "line",

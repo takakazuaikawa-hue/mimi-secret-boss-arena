@@ -28,6 +28,12 @@
     "location": "雨の商店街",
     "assets": [
       {
+        "id": "sazanami.bond.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/events/sazanami-bond-portable-aquarium-v1.png",
+        "alt": "雨の商店街でサザナミの携帯水槽を抱えるミミ"
+      },
+      {
         "id": "sazanami.bond.asset.background.001",
         "kind": "background",
         "path": "/assets/story/bg-casino-cafe-rain.png",
@@ -44,6 +50,11 @@
         "assetId": "sazanami.bond.asset.background.001",
         "transition": "dissolve"
       }
+    },
+    {
+      "type": "direction",
+      "id": "sazanami.bond.node.direction.003",
+      "command": { "type": "still", "assetId": "sazanami.bond.asset.still.001" }
     },
     {
       "type": "line",

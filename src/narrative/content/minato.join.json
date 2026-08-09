@@ -28,6 +28,12 @@
     "location": "商店街",
     "assets": [
       {
+        "id": "minato.join.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/events/minato-join-lunch-choice-v1.png",
+        "alt": "定食屋の券売機で唐揚げと焼き魚を選べず悩むミナト"
+      },
+      {
         "id": "minato.join.asset.background.001",
         "kind": "background",
         "path": "/assets/story/bg-employee-entrance.png",
@@ -44,6 +50,11 @@
         "assetId": "minato.join.asset.background.001",
         "transition": "dissolve"
       }
+    },
+    {
+      "type": "direction",
+      "id": "minato.join.node.direction.003",
+      "command": { "type": "still", "assetId": "minato.join.asset.still.001" }
     },
     {
       "type": "line",

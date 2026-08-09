@@ -48,6 +48,15 @@ identity, costume, setting, and rendering-style references:
 - `public/assets/story/events/marian-meet-fingertip-v2.png`
 - `public/assets/story/events/sazanami-meet-single-eye-v2.png`
 - `public/assets/story/events/shahar-meet-sky-dragon-v2.png`
+- `public/assets/story/events/amara-bond-onsen-table-tennis-v1.png`
+- `public/assets/story/events/cassim-bell-bond-lost-things-picnic-v1.png`
+- `public/assets/story/events/minato-join-lunch-choice-v1.png`
+- `public/assets/story/events/night-eater-bond-lantern-tasting-v1.png`
+- `public/assets/story/events/rinne-bond-shooting-gallery-v1.png`
+- `public/assets/story/events/ushiro-power-127-shadows-v1.png`
+- `public/assets/story/events/room-seventeen-power-first-sock-v1.png`
+- `public/assets/story/events/sazanami-bond-portable-aquarium-v1.png`
+- `public/assets/story/events/shahar-bond-cloud-delivery-v1.png`
 
 The reusable character and prop assets were generated on flat chroma-key
 backgrounds and converted locally to RGBA PNG files. No third-party character,

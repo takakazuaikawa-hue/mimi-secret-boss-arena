@@ -20,6 +20,12 @@
     "location": "最下層らしき場所",
     "assets": [
       {
+        "id": "room-seventeen.power.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/events/room-seventeen-power-first-sock-v1.png",
+        "alt": "最下層の台座脇に大切に飾られた片方の靴下"
+      },
+      {
         "id": "room-seventeen.power.asset.background.001",
         "kind": "background",
         "path": "/assets/story/bg-observation-deck-night.png",
@@ -49,6 +55,11 @@
       "speakerName": "十七号室",
       "mode": "dialogue",
       "text": "最下層です。……私の、最初の部屋。攻略者の皆様が、宝を目指して降りてきた頃の、最終フロアです。"
+    },
+    {
+      "type": "direction",
+      "id": "room-seventeen.power.node.direction.003",
+      "command": { "type": "still", "assetId": "room-seventeen.power.asset.still.001" }
     },
     {
       "type": "line",

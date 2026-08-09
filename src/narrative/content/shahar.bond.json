@@ -28,6 +28,12 @@
     "location": "配送ヤード発・雲の上",
     "assets": [
       {
+        "id": "shahar.bond.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/events/shahar-bond-cloud-delivery-v1.png",
+        "alt": "竜の鱗で雲の上へ弁当を届けるミミ"
+      },
+      {
         "id": "shahar.bond.asset.background.001",
         "kind": "background",
         "path": "/assets/story/bg-casino-cafe-rain.png",
@@ -96,6 +102,11 @@
         "type": "effect",
         "effectId": "flash"
       }
+    },
+    {
+      "type": "direction",
+      "id": "shahar.bond.node.direction.003",
+      "command": { "type": "still", "assetId": "shahar.bond.asset.still.001" }
     },
     {
       "type": "line",

@@ -20,6 +20,12 @@
     "location": "鏡のない部屋",
     "assets": [
       {
+        "id": "ushiro.power.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/events/ushiro-power-127-shadows-v1.png",
+        "alt": "鏡のない部屋を満たす百二十七人のうしろ"
+      },
+      {
         "id": "ushiro.power.asset.background.001",
         "kind": "background",
         "path": "/assets/story/bg-observation-deck-night.png",
@@ -54,6 +60,11 @@
       "type": "direction",
       "id": "ushiro.power.node.direction.002",
       "command": { "type": "effect", "effectId": "flash" }
+    },
+    {
+      "type": "direction",
+      "id": "ushiro.power.node.direction.003",
+      "command": { "type": "still", "assetId": "ushiro.power.asset.still.001" }
     },
     {
       "type": "line",
