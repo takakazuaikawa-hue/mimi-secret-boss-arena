@@ -3,24 +3,16 @@
   "id": "marian.epilogue",
   "kind": "character",
   "title": "第一回・治さない相談日",
-  "summary": "何でも治せる聖女が、治さずに話を聞く一日を自分で始める",
+  "summary": "新しい救護室の特別診療日と、治さずに半分こするクッキー",
   "ownership": {
     "arcId": "character.marian",
     "characterId": "marian",
     "stage": "epilogue"
   },
   "trigger": {
-    "actions": [
-      "rest"
-    ],
-    "when": {
-      "all": [],
-      "any": [],
-      "none": []
-    },
-    "repeat": {
-      "mode": "once-per-run"
-    },
+    "actions": ["rest"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
     "priority": 400,
     "weight": 1
   },
@@ -31,30 +23,40 @@
         "id": "marian.epilogue.asset.background.001",
         "kind": "background",
         "path": "/assets/story/bg-casino-cafe-morning.png",
-        "alt": "朝の新しい救護室"
+        "alt": "朝の新しい救護室の背景"
       },
       {
         "id": "marian.epilogue.asset.still.001",
         "kind": "still",
         "path": "/assets/story/events/marian-epilogue-no-treatment-day-v2.png",
-        "alt": "治さない相談日の救護室で、割れたクッキーを直さず半分ずつ選ぶマリアンとミミ"
+        "alt": "治さない相談日の救護室の一枚絵"
       },
       {
         "id": "marian.epilogue.asset.still.002",
         "kind": "still",
         "path": "/assets/story/events/marian-epilogue-unhealed-cookie-reward-v2.png",
-        "alt": "大治癒陣を二つに分け、一枚のクッキーを不揃いな二片のまま残すマリアンと選ぶミミ"
+        "alt": "二分した大治癒陣と止まった金糸、不揃いな二片のクッキーと二杯の一枚絵"
       }
     ]
   },
   "nodes": [
+    {
+      "type": "direction",
+      "id": "marian.epilogue.node.direction.001",
+      "command": { "type": "background", "assetId": "marian.epilogue.asset.background.001", "transition": "dissolve" }
+    },
     {
       "type": "line",
       "id": "marian.epilogue.node.line.001",
       "lineId": "marian.epilogue.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "最終大会の翌週、救護室の前に朝から長い列ができた。けが人は一人もいない。先頭には欠けた聖剣、その後ろには成仏するか迷っている幽霊、最後尾には昨日から眠れていない事務員が並んでいた。"
+      "text": "最終大会のあと、新しい救護室に、月に一度の特別な札が掛かるようになった。「本日——第一回・治さない相談日。治療は、緊急の方のみ。それ以外は、お話を伺います」。"
+    },
+    {
+      "type": "direction",
+      "id": "marian.epilogue.node.direction.002",
+      "command": { "type": "still", "assetId": "marian.epilogue.asset.still.001" }
     },
     {
       "type": "line",
@@ -62,7 +64,8 @@
       "lineId": "marian.epilogue.line.002",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "扉には新しい札が下がっている。『第一回・治さない相談日』。治せない、ではない。治さない。何でも治してしまえるマリアンが、自分で選んだ四文字だった。"
+      "text": "初日は、盛況だった。癖毛のおじいさんは奥さんの話をしに来た。膝の古傷の元選手は「これは勲章だから治すな」と自慢しに来た。受付票の束が、治療記録ではなく、思い出の記録で埋まっていく。",
+      "emotion": "tender"
     },
     {
       "type": "line",
@@ -70,32 +73,17 @@
       "lineId": "marian.epilogue.line.003",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私は受付を頼まれ、相談内容の欄を増やした。『直してほしい』『直さないでほしい』『そもそも傷か分からない』。三つ目へ丸をつける人が、思ったより多い。"
+      "text": "受付票の綴りの一番奥には、今も一枚だけ、死者用の受付票がある。空のベッドの人の分だ。彼女はそれを隠さなくなった。「間に合わなかった一人も、私の患者名簿にいます。……いていいと、思えるようになったので」。",
+      "emotion": "revelation"
     },
     {
       "type": "line",
       "id": "marian.epilogue.node.line.004",
       "lineId": "marian.epilogue.line.004",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "生者用の青い受付票と、死者用の半透明な受付票が風で混ざるたび、私は寿命を確認しながら仕分け直した。受付にも専門性が要る。"
-    },
-    {
-      "type": "direction",
-      "id": "marian.epilogue.node.direction.001",
-      "command": {
-        "type": "background",
-        "assetId": "marian.epilogue.asset.background.001",
-        "transition": "dissolve"
-      }
-    },
-    {
-      "type": "direction",
-      "id": "marian.epilogue.node.direction.002",
-      "command": {
-        "type": "effect",
-        "effectId": "pulse"
-      }
+      "speakerId": "legacy.speaker.quc8xa",
+      "speakerName": "マリアン",
+      "mode": "dialogue",
+      "text": "本日、最後の相談者の方。……どうぞ。"
     },
     {
       "type": "line",
@@ -103,7 +91,7 @@
       "lineId": "marian.epilogue.line.005",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "診察室から戻った聖剣は、欠けたままだった。持ち主の老騎士は『これで弟子に負けた日を忘れずに済む』と笑い、会計へ新品一本分を置こうとして、私に半分返された。相談料まで裏ボス級にしないでほしい。",
+      "text": "閉室間際、最後の相談者は、私だった。相談内容は、大したことじゃない。今週の疲れの話と、来週の楽しみの話。彼女は治さず、脈も測らず、ただ聞いて、時々「痛かったですね」と言った。満点の相槌である。師匠は私だが、もう抜かれている。",
       "emotion": "comic"
     },
     {
@@ -112,139 +100,52 @@
       "lineId": "marian.epilogue.line.006",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "次の幽霊は、成仏すると月末の当番が一人足りなくなると悩んでいた。マリアンは除霊も蘇生もせず、まず勤務表を開いた。死後まで人手不足に強い職場である。",
-      "emotion": "tension"
+      "text": "相談の締めに、私は例のものを出した。お土産のクッキー。今度のは、割れていない、綺麗な一枚。"
     },
     {
       "type": "line",
       "id": "marian.epilogue.node.line.007",
       "lineId": "marian.epilogue.line.007",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
+      "speakerId": "legacy.speaker.quc8xa",
+      "speakerName": "マリアン",
       "mode": "dialogue",
-      "text": "マリアン先生。これ、医療相談ですか。労務相談ですか。"
+      "text": "……割りましょう。半分こに。今日の私は、治さない日なので——不揃いでも、直しません。"
+    },
+    {
+      "type": "direction",
+      "id": "marian.epilogue.node.direction.003",
+      "command": { "type": "still", "assetId": "marian.epilogue.asset.still.002" }
+    },
+    {
+      "type": "direction",
+      "id": "marian.epilogue.node.direction.004",
+      "command": { "type": "effect", "effectId": "pulse" }
     },
     {
       "type": "line",
       "id": "marian.epilogue.node.line.008",
       "lineId": "marian.epilogue.line.008",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "あと半透明の受付票が床を抜けます。死者用だけ厚紙にできませんか。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ぱき、と乾いた音。クッキーは、見事に不揃いな二片に割れた。大きい方が、私の手に押しつけられる。金糸の治癒陣は編まれず、割れ目は割れ目のまま、二杯のお茶の隣にある。世界で一番、治されなかったクッキーだ。",
+      "emotion": "tender"
     },
     {
       "type": "line",
       "id": "marian.epilogue.node.line.009",
       "lineId": "marian.epilogue.line.009",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "昼を回るころ、マリアンは少し曲がった包帯の山を抱えて現れた。以前なら角が揃うまで診察を止めたはずなのに、今日は患者の話を聞く方を選んだらしい。",
-      "emotion": "revelation"
+      "speakerId": "legacy.speaker.quc8xa",
+      "speakerName": "マリアン",
+      "mode": "dialogue",
+      "text": "柿落としの出演届、出しました。演目「救護席は舞台袖に」。……出番がないことが、演目です。私の腕の見せ所は、誰も倒れない一日を、舞台袖から見届けることなので。"
     },
     {
       "type": "line",
       "id": "marian.epilogue.node.line.010",
       "lineId": "marian.epilogue.line.010",
-      "speakerId": "legacy.speaker.quc8xa",
-      "speakerName": "マリアン",
-      "mode": "dialogue",
-      "text": "患者さんの話を聞いていたら、畳み直す時間がなくなりました。こちらの方が、良い乱れ方です。"
-    },
-    {
-      "type": "line",
-      "id": "marian.epilogue.node.line.011",
-      "lineId": "marian.epilogue.line.011",
-      "speakerId": "legacy.speaker.quc8xa",
-      "speakerName": "マリアン",
-      "mode": "dialogue",
-      "text": "死者用の票は、次回から石板にします。落とすと床が割れますが、床は治せます。"
-    },
-    {
-      "type": "line",
-      "id": "marian.epilogue.node.line.012",
-      "lineId": "marian.epilogue.line.012",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "治せるから治すのではなく、相手が話し終えるまで待つ。簡単そうで、マリアンには世界をひっくり返すより難しかった。その難しい方を、今日は朝から十二回も選んでいる。",
-      "emotion": "tender"
-    },
-    {
-      "type": "direction",
-      "id": "marian.epilogue.node.direction.003",
-      "command": {
-        "type": "still",
-        "assetId": "marian.epilogue.asset.still.001",
-        "transition": "dissolve"
-      }
-    },
-    {
-      "type": "line",
-      "id": "marian.epilogue.node.line.013",
-      "lineId": "marian.epilogue.line.013",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "休憩に入ると、彼女は皿へクッキーを一枚置き、きれいに二つへ割った。割れ目から金色の光が漏れ、二つの半月がじりじり元へ戻ろうとする。"
-    },
-    {
-      "type": "line",
-      "id": "marian.epilogue.node.line.014",
-      "lineId": "marian.epilogue.line.014",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "マリアンは両手で皿を押さえた。世界を救う祈りと同じ真剣な顔で、おやつの蘇生を止めている。私は笑ってはいけないと思った。三秒しかもたなかった。",
-      "emotion": "comic"
-    },
-    {
-      "type": "line",
-      "id": "marian.epilogue.node.line.015",
-      "lineId": "marian.epilogue.line.015",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "『今日は、割れたまま選んでください』。差し出された皿には、大きい半分と、きれいな形の半分。どちらを選んでも彼女の練習になるらしい。急に責任が重いおやつになった。",
-      "emotion": "tender"
-    },
-    {
-      "type": "line",
-      "id": "marian.epilogue.node.line.016",
-      "lineId": "marian.epilogue.line.016",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "私は大きい方へ伸びかけた手を引っ込め、形の悪い方を取った。マリアンがほんの少し目を丸くして、それから包帯の角よりやわらかく笑った。胸の奥で、何かが診察券もなく順番を抜かした。",
-      "emotion": "tender"
-    },
-    {
-      "type": "line",
-      "id": "marian.epilogue.node.line.017",
-      "lineId": "marian.epilogue.line.017",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "そのとき机の予定帳が風で開いた。午後の患者欄は空白なのに、その下の私用欄へ『ミミさんと、割れた菓子を食べる』と書いてある。私用。声に出すと治療されそうなので、黙って二度読んだ。"
-    },
-    {
-      "type": "line",
-      "id": "marian.epilogue.node.line.018",
-      "lineId": "marian.epilogue.line.018",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "マリアンは予定帳を閉じなかった。書き間違いでも、業務上の処置でもないらしい。割れたクッキーの光だけが消え、二つの欠けた形がそのまま残った。"
-    },
-    {
-      "type": "direction",
-      "id": "marian.epilogue.node.direction.004",
-      "command": {
-        "type": "still",
-        "assetId": "marian.epilogue.asset.still.002",
-        "transition": "dissolve"
-      }
-    },
-    {
-      "type": "line",
-      "id": "marian.epilogue.node.line.019",
-      "lineId": "marian.epilogue.line.019",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "午後の相談者が扉を叩く。私たちは急いで半分ずつ食べた。クッキーは戻らず、時間も戻らない。だから次の休憩を、今度は二人で予定帳へ書いた。",
+      "text": "私用予定欄のある新しい手帳に、彼女は来月の相談日の日付を書き込んだ。それから、その隣の休日の欄に、小さく「クッキーを買いに行く」。治す人の私用予定が、初めて、治すことと無関係だった。良い予定だと思う。",
       "emotion": "tender"
     },
     {
@@ -254,9 +155,9 @@
     }
   ],
   "debug": {
-    "status": "approved",
-    "sourceDocument": "native narrative block migration",
-    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "status": "review",
+    "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
+    "authorNote": "v2改稿: 承認済み後日談(治さない相談日・死者用受付票・割れたクッキー・私用予定欄)の骨格を保持しLN文体へ。報酬CG=不揃いな二片と二杯に一致。",
     "legacyGeneratedIds": false
   }
 }

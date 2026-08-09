@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "id": "mumyo.power",
   "kind": "character",
-  "title": "取り戻す力",
-  "summary": "所有者名簿室で起きる「取り戻す力」",
+  "title": "所有者名簿室の、十四人",
+  "summary": "鞘に刻まれた全所有者の記録と、抜かない力の正体",
   "ownership": {
     "arcId": "character.mumyo",
     "characterId": "mumyo",
@@ -37,21 +37,30 @@
   },
   "nodes": [
     {
+      "type": "direction",
+      "id": "mumyo.power.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "mumyo.power.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
       "type": "line",
       "id": "mumyo.power.node.line.001",
       "lineId": "mumyo.power.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "練習のあと、無銘に呼ばれて所有者名簿室まで来た。いつもの力では足りない理由を、見せたいらしい。"
+      "text": "「見せたい場所がある」。無銘に案内されたのは、闘技場の地下にある所有者名簿室だった。この街に来た景品全部の、歴代所有者の記録が眠る書庫。その最奥に、彼の名簿があった。分厚さが、他の景品の十四倍あった。"
     },
     {
       "type": "line",
       "id": "mumyo.power.node.line.002",
       "lineId": "mumyo.power.line.002",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "警報より先に、相手の声が私の名を呼んだ。いつもと同じ呼び方なのに、その一音だけで足が止まる。",
-      "emotion": "tension"
+      "speakerId": "legacy.speaker.1whk6fw",
+      "speakerName": "無銘",
+      "mode": "dialogue",
+      "text": "十四人。全員、時代の勇者だった。全員、私を握って世界を救った。……そして全員、最後は私を握ったまま、私の名を、自分の名で上書きした。"
     },
     {
       "type": "line",
@@ -59,7 +68,8 @@
       "lineId": "mumyo.power.line.003",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "鞘から一寸だけ刃が出ると、展示室の鏡がすべて割れた。欠片の一つ一つに、違う時代の所有者が映っている。"
+      "text": "名簿をめくる。「勇者アルドの剣」「聖王グレンの剣」「竜殺しの剣」——十四個の呼び名が並び、どのページにも、剣自身の名前を書く欄はなかった。四百年ぶんの記録の中で、彼はずっと、誰かの持ち物としてだけ存在していた。",
+      "emotion": "tension"
     },
     {
       "type": "line",
@@ -68,16 +78,7 @@
       "speakerId": "legacy.speaker.1whk6fw",
       "speakerName": "無銘",
       "mode": "dialogue",
-      "text": "歴代の持ち主は、私を最強の剣と呼んだ。"
-    },
-    {
-      "type": "direction",
-      "id": "mumyo.power.node.direction.001",
-      "command": {
-        "type": "background",
-        "assetId": "mumyo.power.asset.background.001",
-        "transition": "dissolve"
-      }
+      "text": "次の強敵戦の前に、知っておいてほしい。私の本当の力は——抜けば分かる。少しだけ、下がっていてくれ。"
     },
     {
       "type": "direction",
@@ -93,7 +94,7 @@
       "lineId": "mumyo.power.line.005",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "一寸抜けるだけで歴代勇者の時代が同時に映り、展示室が最終決戦を十四回始める。そんな力が、目の前で息をしている。逃げる理由なら十分だった。それでも私は、力の大きさより無銘が最初にどこを見るのかを確かめたかった。",
+      "text": "鞘から、刃が一寸だけ出た。それだけで、名簿室の空気が十四枚に割れた。燃える王都。沈む天空城。月を噛む竜。終末の鐘。十四の時代の最終決戦が同時に立ち上がり、そのどれもの中心で、この剣が振るわれている。一寸で、これだ。全部抜いたら、世界がもう一回、十四通りに終わる。",
       "emotion": "tension"
     },
     {
@@ -102,25 +103,26 @@
       "lineId": "mumyo.power.line.006",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "無銘が私と危険の間へ立つ。触れてはいない。それでも、こちらへ届くはずだった圧力だけがきれいに二つへ割れた。"
+      "text": "刃が納まる。幻影が消える。気づけば無銘は、鏡の中で私と危険の間に立っていた。一寸の間、ずっと。見せるための力の披露で、最初に確保されていたのは、私の立ち位置だった。",
+      "emotion": "revelation"
     },
     {
       "type": "line",
       "id": "mumyo.power.node.line.007",
       "lineId": "mumyo.power.line.007",
-      "speakerId": "legacy.speaker.1whk6fw",
-      "speakerName": "無銘",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "私は彼ら全員より強い。だから全員が、私を自分の名で呼んだ。"
+      "text": "……ひとつ、分かりました。あなたの一番すごい力は、斬る方じゃないです。四百年、これを抜かずにいられた方です。"
     },
     {
       "type": "line",
       "id": "mumyo.power.node.line.008",
       "lineId": "mumyo.power.line.008",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
+      "speakerId": "legacy.speaker.1whk6fw",
+      "speakerName": "無銘",
       "mode": "dialogue",
-      "text": "あなた自身の呼び方は？"
+      "text": "……抜けば、誰かの願いが私を使う。抜かなければ、私は私のままでいられる。それを力と呼んだのは、お前が最初だ。"
     },
     {
       "type": "line",
@@ -128,94 +130,17 @@
       "lineId": "mumyo.power.line.009",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "持ち主の望む姿と名を映し、最強の武器として完成する剣。けれど今見せている力は、勝つためではなく、私を怖がらせないために抑えられている。",
-      "emotion": "revelation"
+      "text": "同行していた新人計測係くんは、幻影の最終決戦を十四件目まで数え切ってから気絶する寸前で踏みとどまり、記録板に「せかいのおわり、じゅうよん。ぜんぶ、しまった。」と書いた。今日も完璧な監査である。",
+      "emotion": "comic"
     },
     {
       "type": "line",
       "id": "mumyo.power.node.line.010",
       "lineId": "mumyo.power.line.010",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "強さを借りた人の名前じゃなく、あなた自身の呼ばれ方が必要ですね。"
-    },
-    {
-      "type": "line",
-      "id": "mumyo.power.node.line.011",
-      "lineId": "mumyo.power.line.011",
-      "speakerId": "legacy.speaker.1whk6fw",
-      "speakerName": "無銘",
-      "mode": "dialogue",
-      "text": "まだ決めていない。"
-    },
-    {
-      "type": "line",
-      "id": "mumyo.power.node.line.012",
-      "lineId": "mumyo.power.line.012",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "本気を見たいと思っていた。実際に目の前へ現れると、知りたかったのは強さではなく、その力を本人がどう恐れているかだった。"
-    },
-    {
-      "type": "line",
-      "id": "mumyo.power.node.line.013",
-      "lineId": "mumyo.power.line.013",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "刃はそれ以上出なかった。でも、無銘という仮の名を鏡の人物が初めて自分から口にした。"
-    },
-    {
-      "type": "line",
-      "id": "mumyo.power.node.line.014",
-      "lineId": "mumyo.power.line.014",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "一寸抜けるだけで歴代勇者の時代が同時に映り、展示室が最終決戦を十四回始める。闘技場の安全基準は一瞬で役に立たなくなり、担当者は私の顔を見て計測を諦めた。",
-      "emotion": "comic"
-    },
-    {
-      "type": "line",
-      "id": "mumyo.power.node.line.015",
-      "lineId": "mumyo.power.line.015",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "世界を壊せることより、壊さないために何を選んだかが胸へ残った。眠っていたのではなく、誰の願いでもない自分の声を選び分けるために黙っていた。その理解が正しいか、いつか本人の言葉で確かめたい。",
-      "emotion": "revelation"
-    },
-    {
-      "type": "line",
-      "id": "mumyo.power.node.line.016",
-      "lineId": "mumyo.power.line.016",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "力の中心にあったのは、自分の声だと思ったものまで、歴代所有者の願いの残響であること。最強であることが、本人にとって一番古い傷なのだと分かる。",
-      "emotion": "revelation"
-    },
-    {
-      "type": "line",
-      "id": "mumyo.power.node.line.017",
-      "lineId": "mumyo.power.line.017",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "怖さが消えたわけではない。だからこそ、使うかどうかを本人と決める必要がある。"
-    },
-    {
-      "type": "line",
-      "id": "mumyo.power.node.line.018",
-      "lineId": "mumyo.power.line.018",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "大丈夫とは言えない。怖いものは怖い。それでも、次に力を使う時は一人で決めなくていいと伝えた。",
+      "text": "名簿室の薄明かりの下で、力の使い方の相談に入った。抜くか、抜かないか。決めるのは、もう所有者ではない。",
       "emotion": "resolve"
-    },
-    {
-      "type": "line",
-      "id": "mumyo.power.node.line.019",
-      "lineId": "mumyo.power.line.019",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "値札も所有者欄も外された空の展示ケースだけが元の大きさで残り、さっきまで世界の終わりがいた場所に、帰り道の灯りが戻った。"
     },
     {
       "type": "choice",
@@ -224,7 +149,7 @@
         {
           "id": "mumyo.power.choice.001",
           "label": "鏡の本人に、抜く瞬間を選んでもらう",
-          "result": "私が命じる前に、刃が一度だけ光った。斬ったのは敵ではなく、ケースへ続く古い所有者名簿だった。",
+          "result": "「試合中、抜くかどうかも、いつ抜くかも、全部あなたが決めてください。私は合図もしません」。初めての試合で、刃は一度だけ、本人の選んだ一瞬にだけ光った。斬ったのは敵ではなく、敵の武器の影に潜んでいた古い呪いだけ。命じられない一閃は、十四代のどの伝説より正確で、そして初めて、誰の名前も付いていなかった。",
           "intent": "本来の力を一気に取り戻す",
           "promise": "失敗時の危険を引き受け、この人専用の成長を最大まで進める。",
           "memory": "力を恐れたまま任せたことを、相手は危機の場面で思い出す。",
@@ -254,7 +179,7 @@
         {
           "id": "mumyo.power.choice.002",
           "label": "鞘を開かず、剣圧だけを安全に取り出す",
-          "result": "本来の一撃は眠ったまま、三人が扱える風だけが残った。無銘は地味な成功を、少し誇らしそうに見ていた。",
+          "result": "本来の一撃は鞘の中に眠らせたまま、鞘越しに漏れる剣圧だけを、三人で扱える「風」として整えた。地味で、安全で、誰の伝説にもならない力。調整を終えた無銘は、その風で名簿室の埃を払ってみせた。「……十四代で、一番平和な使い道だ」。少し、誇らしそうだった。",
           "intent": "安全な段階解除で確実に進む",
           "promise": "本来の力は一部に留め、チーム全体の成長へ成果を持ち帰る。",
           "memory": "全員で帰ると決めた手順が、危機で使える安全策として残る。",
@@ -297,9 +222,9 @@
     }
   ],
   "debug": {
-    "status": "approved",
-    "sourceDocument": "native narrative block migration",
-    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "status": "review",
+    "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
+    "authorNote": "v2改稿: 所有者名簿室(十四倍の厚さ)。一寸=十四の最終決戦。真の力は「抜かずにいられた四百年」。",
     "legacyGeneratedIds": false
   }
 }

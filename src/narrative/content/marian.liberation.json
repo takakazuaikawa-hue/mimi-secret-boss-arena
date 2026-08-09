@@ -2,28 +2,17 @@
   "schemaVersion": 1,
   "id": "marian.liberation",
   "kind": "liberation",
-  "title": "契約の外側",
-  "summary": "使われない霊安室で起きる「契約の外側」",
+  "title": "怖いまま、選ぶ",
+  "summary": "責任転嫁の条項を消す夜。判断が、彼女自身の手に戻る",
   "ownership": {
     "arcId": "character.marian",
     "characterId": "marian",
     "stage": "liberation"
   },
   "trigger": {
-    "actions": [
-      "work",
-      "play",
-      "rest",
-      "search"
-    ],
-    "when": {
-      "all": [],
-      "any": [],
-      "none": []
-    },
-    "repeat": {
-      "mode": "once-per-run"
-    },
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
     "priority": 400,
     "weight": 1
   },
@@ -34,33 +23,38 @@
         "id": "marian.liberation.asset.background.001",
         "kind": "background",
         "path": "/assets/story/bg-casino-cafe-night.png",
-        "alt": "使われない霊安室の背景"
+        "alt": "夜の霊安室の背景"
       },
       {
         "id": "marian.liberation.asset.still.001",
         "kind": "still",
         "path": "/assets/story/events/marian-liberation.png",
-        "alt": "契約の外側のイベント一枚絵"
+        "alt": "解放の夜の一枚絵"
       }
     ]
   },
   "nodes": [
+    {
+      "type": "direction",
+      "id": "marian.liberation.node.direction.001",
+      "command": { "type": "background", "assetId": "marian.liberation.asset.background.001", "transition": "dissolve" }
+    },
     {
       "type": "line",
       "id": "marian.liberation.node.line.001",
       "lineId": "marian.liberation.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "最終大会が近づくなか、マリアンの契約を終わらせられる条件がそろった。今日は勝敗より先に、本人の意思を確かめに来た。"
+      "text": "契約を終わらせる夜。マリアンの契約書には、一見、彼女に優しい条項があった。「治療の結果に関する責任は、すべて所有者に帰属する」。彼女は、責任を負わなくていい。——その代わり、判断も、しなくていい。"
     },
     {
       "type": "line",
       "id": "marian.liberation.node.line.002",
       "lineId": "marian.liberation.line.002",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "解除届を渡せば、この人を呼び止める権利はなくなる。最初から持つべきでなかった権利なのに、指が紙を離さない。",
-      "emotion": "tension"
+      "speakerId": "legacy.speaker.quc8xa",
+      "speakerName": "マリアン",
+      "mode": "dialogue",
+      "text": "この条項に、私は、守られてきました。治す判断を、いつも誰かのせいに、できたので。……ですが、もう分かっています。判断を手放すことと、楽になることは、違う。"
     },
     {
       "type": "line",
@@ -68,7 +62,18 @@
       "lineId": "marian.liberation.line.003",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "解除届へ触れた指から淡い光が流れ、契約印の赤だけを癒やさずに剥がしていく。傷を残す治療を、彼女は選んだ。"
+      "text": "判を押す。責任転嫁の条項が消える。これからは、治すのも、治さないのも、祈る範囲も、全部、彼女の判断で、彼女の責任だ。優しい檻が、静かに開いた。",
+      "emotion": "tension"
+    },
+    {
+      "type": "direction",
+      "id": "marian.liberation.node.direction.002",
+      "command": { "type": "still", "assetId": "marian.liberation.asset.still.001" }
+    },
+    {
+      "type": "direction",
+      "id": "marian.liberation.node.direction.003",
+      "command": { "type": "effect", "effectId": "pulse" }
     },
     {
       "type": "line",
@@ -77,49 +82,16 @@
       "speakerId": "legacy.speaker.quc8xa",
       "speakerName": "マリアン",
       "mode": "dialogue",
-      "text": "契約が消えても、手は震えませんでした。"
-    },
-    {
-      "type": "direction",
-      "id": "marian.liberation.node.direction.001",
-      "command": {
-        "type": "background",
-        "assetId": "marian.liberation.asset.background.001",
-        "transition": "dissolve"
-      }
-    },
-    {
-      "type": "direction",
-      "id": "marian.liberation.node.direction.002",
-      "command": {
-        "type": "effect",
-        "effectId": "flash"
-      }
+      "text": "怖い、です。今も。たぶん、これからも、ずっと。……ですが、怖いまま、選びます。それが、あの練習の、卒業試験なので。"
     },
     {
       "type": "line",
       "id": "marian.liberation.node.line.005",
       "lineId": "marian.liberation.line.005",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "解除届は薄く、治さずに残した契約印の薄い痕より軽い。こんな紙で自由を渡せると思うこと自体、最後の所有なのかもしれない。手汗で端が少し曲がった。",
-      "emotion": "tension"
-    },
-    {
-      "type": "direction",
-      "id": "marian.liberation.node.direction.003",
-      "command": {
-        "type": "still",
-        "assetId": "marian.liberation.asset.still.001"
-      }
-    },
-    {
-      "type": "direction",
-      "id": "marian.liberation.node.direction.004",
-      "command": {
-        "type": "effect",
-        "effectId": "pulse"
-      }
+      "speakerId": "legacy.speaker.quc8xa",
+      "speakerName": "マリアン",
+      "mode": "dialogue",
+      "text": "ミミさん。一つ、お願いが。……隣で、脈を、測っていてくれますか。私の。"
     },
     {
       "type": "line",
@@ -127,25 +99,26 @@
       "lineId": "marian.liberation.line.006",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "マリアンは急かさない。救える命を一つも見捨てず、終わりさえ治療する聖女でありながら、私の迷いが言葉になるまで待っている。"
+      "text": "いつも測る側の手首が、差し出された。私は見よう見まねで、指を三本、当てた。速い。診断するまでもなく、緊張の脈だ。でも、確かに、生きて、選ぼうとしている脈だった。",
+      "emotion": "tender"
     },
     {
       "type": "line",
       "id": "marian.liberation.node.line.007",
       "lineId": "marian.liberation.line.007",
-      "speakerId": "legacy.speaker.quc8xa",
-      "speakerName": "マリアン",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "治さないことを選べるのは、思っていたより怖いですね。"
+      "text": "……診断結果。緊張してます。すごく。でも、悪い脈じゃないです。始まる前の脈です。"
     },
     {
       "type": "line",
       "id": "marian.liberation.node.line.008",
       "lineId": "marian.liberation.line.008",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "次の治療、お願いします。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "彼女は小さく笑って、「良い診断です。及第点」と言った。師匠は厳しい。夜の霊安室の花が、少しだけ揺れた。",
+      "emotion": "tender"
     },
     {
       "type": "line",
@@ -153,95 +126,7 @@
       "lineId": "marian.liberation.line.009",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "勝つために必要だという理由なら、いくらでも並べられた。でも今伝えたいのは、治さない選択を怖がりながら、本人の返事を待てることをこの先も見届けたいという、命令にできない願いだった。",
-      "emotion": "tender"
-    },
-    {
-      "type": "line",
-      "id": "marian.liberation.node.line.010",
-      "lineId": "marian.liberation.line.010",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "怖いまま選べるなら、それは命令よりずっと信用できます。"
-    },
-    {
-      "type": "line",
-      "id": "marian.liberation.node.line.011",
-      "lineId": "marian.liberation.line.011",
-      "speakerId": "legacy.speaker.quc8xa",
-      "speakerName": "マリアン",
-      "mode": "dialogue",
-      "text": "はい。今日は私が選んで治します。"
-    },
-    {
-      "type": "line",
-      "id": "marian.liberation.node.line.012",
-      "lineId": "marian.liberation.line.012",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "残ってほしいと言うことと、自由にすることは両立するのか。答えは書類にない。だから、本人へ聞くしかない。",
-      "emotion": "resolve"
-    },
-    {
-      "type": "line",
-      "id": "marian.liberation.node.line.013",
-      "lineId": "marian.liberation.line.013",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "最後の印が消えると、彼女は自分の脈を測った。確かめるように、二度。"
-    },
-    {
-      "type": "line",
-      "id": "marian.liberation.node.line.014",
-      "lineId": "marian.liberation.line.014",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "菓子の割れ目まで蘇生してしまい、休憩のおやつが永遠に食べ終わらないほどの力を持つ存在が、一枚の紙を前に私の返事だけを待っている。その不釣り合いさが、泣きそうな場面を少しだけ可笑しくした。",
-      "emotion": "comic"
-    },
-    {
-      "type": "line",
-      "id": "marian.liberation.node.line.015",
-      "lineId": "marian.liberation.line.015",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "もう呼び止める権利はない。それでもマリアンが振り返るなら、そこから先は契約ではなく本人の答えだ。私は追わず、その一歩を待った。",
-      "emotion": "resolve"
-    },
-    {
-      "type": "line",
-      "id": "marian.liberation.node.line.016",
-      "lineId": "marian.liberation.line.016",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "契約印が消える。関係まで消える音はしなかった。代わりに、これからは断られるかもしれないという自由な静けさが来た。",
-      "emotion": "revelation"
-    },
-    {
-      "type": "line",
-      "id": "marian.liberation.node.line.017",
-      "lineId": "marian.liberation.line.017",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "契約をなくしても関係はなくならない。次に同じ場所へ立つなら、互いに選び直した結果でありたい。"
-    },
-    {
-      "type": "line",
-      "id": "marian.liberation.node.line.018",
-      "lineId": "marian.liberation.line.018",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "治さずに残した契約印の薄い痕を返そうとすると、相手は受け取らなかった。「預けるのではない。次に会う場所の印だ」と言った。",
-      "emotion": "tender"
-    },
-    {
-      "type": "line",
-      "id": "marian.liberation.node.line.019",
-      "lineId": "marian.liberation.line.019",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "別れの挨拶をした。それでも足音は同じ出口へ向かっている。契約ではなく、本人の歩幅で。",
+      "text": "締めの形を、決める。",
       "emotion": "resolve"
     },
     {
@@ -251,58 +136,29 @@
         {
           "id": "marian.liberation.choice.001",
           "label": "責任転嫁の条項を消し、祈る範囲を本人へ返す",
-          "result": "禁じられた術の責任は誰にも移らなくなった。マリアンは自分で味方三人の名だけを書き、そこまでなら祈ると決めた。",
-          "intent": "契約と出場登録を完全に分ける",
+          "result": "条項の消えた契約書の余白に、彼女は自分の字で書き足した。「治療方針は、マリアンが決める。相談は、歓迎する」。責任を引き受けた人の字は、思ったより、のびのびしていた。帰り際、空のベッドの前で彼女は立ち止まり、初めて、囁くように言った。「……見ていてください。私、ちゃんと、選べるようになりました」。ベッドは、今夜も綺麗に整っていた。",
+          "intent": "判断の権利ごと、本人に返す",
           "promise": "所有者名を消し、本人が自分の名で次の試合を選べるようにする。",
-          "memory": "自由になったあと、最初に自分で選んだ集合時刻が残る。",
+          "memory": "余白の「相談は、歓迎する」の一行を、二人とも気に入っている。",
           "tone": "defiant",
           "effects": [
-            {
-              "type": "relationship",
-              "target": {
-                "type": "fighter",
-                "fighterId": "marian"
-              },
-              "mode": "add",
-              "trust": 10,
-              "ownership": 0
-            },
-            {
-              "type": "liberationDecision",
-              "fighterId": "marian",
-              "decision": "release"
-            }
+            { "type": "relationship", "target": { "type": "fighter", "fighterId": "marian" }, "mode": "add", "trust": 10, "ownership": 0 },
+            { "type": "liberationDecision", "fighterId": "marian", "decision": "release" }
           ],
           "goto": "marian.liberation.node.effect.001"
         },
         {
           "id": "marian.liberation.choice.002",
           "label": "契約を解き、救護室の当番を同僚として頼む",
-          "result": "先生でも所有物でもない席を用意した。マリアンは当番表へ署名し、試合欄にも同じ筆圧で丸をつけた。",
-          "intent": "自由な相手へ改めて協力を頼む",
-          "promise": "断る権利を返したうえで、決勝を一緒に戦う新しい約束を結ぶ。",
-          "memory": "頼まれたからではなく、頼みを聞いたから残った。その違いを二人が覚えている。",
+          "result": "「契約じゃなく、同僚としてのお願いです。救護室、続けてもらえますか」。彼女は診断の間くらい黙って、答えた。「条件が一つ。あなたの月一の休み判定に、私も従います。同僚は、対等なので」。かくして、救護担当と監督が、互いの右耳と脈を監視し合う健全な職場が完成した。",
+          "intent": "自由になった人と、対等な同僚になる",
+          "promise": "断る権利を返したうえで、救護室の新しい約束を結ぶ。",
+          "memory": "互いの休みを監視し合う協定を、チームは「右耳条約」と呼ぶ。",
           "tone": "tender",
           "effects": [
-            {
-              "type": "relationship",
-              "target": {
-                "type": "fighter",
-                "fighterId": "marian"
-              },
-              "mode": "add",
-              "trust": 6,
-              "ownership": 0
-            },
-            {
-              "type": "sharedPoints",
-              "amount": 4
-            },
-            {
-              "type": "liberationDecision",
-              "fighterId": "marian",
-              "decision": "release"
-            }
+            { "type": "relationship", "target": { "type": "fighter", "fighterId": "marian" }, "mode": "add", "trust": 6, "ownership": 0 },
+            { "type": "sharedPoints", "amount": 4 },
+            { "type": "liberationDecision", "fighterId": "marian", "decision": "release" }
           ],
           "goto": "marian.liberation.node.effect.001"
         }
@@ -312,30 +168,10 @@
       "type": "effect",
       "id": "marian.liberation.node.effect.001",
       "effects": [
-        {
-          "type": "setStoryStage",
-          "fighterId": "marian",
-          "stage": 6
-        },
-        {
-          "type": "setLiberationEligible",
-          "fighterId": "marian",
-          "eligible": false
-        },
-        {
-          "type": "setLiberated",
-          "fighterId": "marian",
-          "liberated": true
-        },
-        {
-          "type": "relationship",
-          "target": {
-            "type": "fighter",
-            "fighterId": "marian"
-          },
-          "mode": "set",
-          "ownership": 0
-        }
+        { "type": "setStoryStage", "fighterId": "marian", "stage": 6 },
+        { "type": "setLiberationEligible", "fighterId": "marian", "eligible": false },
+        { "type": "setLiberated", "fighterId": "marian", "liberated": true },
+        { "type": "relationship", "target": { "type": "fighter", "fighterId": "marian" }, "mode": "set", "ownership": 0 }
       ]
     },
     {
@@ -345,9 +181,9 @@
     }
   ],
   "debug": {
-    "status": "approved",
-    "sourceDocument": "native narrative block migration",
-    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "status": "review",
+    "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
+    "authorNote": "v2改稿(シリアス枠): 責任転嫁条項=優しい檻。「怖いまま、選ぶ」(canon)。脈を測る側の反転。",
     "legacyGeneratedIds": false
   }
 }

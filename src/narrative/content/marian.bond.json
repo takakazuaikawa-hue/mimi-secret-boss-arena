@@ -2,25 +2,17 @@
   "schemaVersion": 1,
   "id": "marian.bond",
   "kind": "character",
-  "title": "チームの日常",
-  "summary": "礼拝スペースで起きる「チームの日常」",
+  "title": "治さない練習",
+  "summary": "雨の礼拝スペース。擦り傷を前に、光りかける手を三回止める",
   "ownership": {
     "arcId": "character.marian",
     "characterId": "marian",
     "stage": "bond"
   },
   "trigger": {
-    "actions": [
-      "rest"
-    ],
-    "when": {
-      "all": [],
-      "any": [],
-      "none": []
-    },
-    "repeat": {
-      "mode": "once-per-run"
-    },
+    "actions": ["rest"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
     "priority": 400,
     "weight": 1
   },
@@ -31,96 +23,86 @@
         "id": "marian.bond.asset.background.001",
         "kind": "background",
         "path": "/assets/story/bg-casino-cafe-rain.png",
-        "alt": "礼拝スペースの背景"
+        "alt": "雨の礼拝スペースの背景"
       }
     ]
   },
   "nodes": [
+    {
+      "type": "direction",
+      "id": "marian.bond.node.direction.001",
+      "command": { "type": "background", "assetId": "marian.bond.asset.background.001", "transition": "dissolve" }
+    },
     {
       "type": "line",
       "id": "marian.bond.node.line.001",
       "lineId": "marian.bond.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "マリアンがチームに加わってから、礼拝スペースで顔を合わせることが増えた。今日は試合の話ではなく、少しだけ時間が空いている。"
+      "text": "雨の午後、備品を運んでいて、廊下で転んだ。膝に、教科書みたいな擦り傷。私はそれを見て、閃いた。これは、練習台に使える。"
     },
     {
       "type": "line",
       "id": "marian.bond.node.line.002",
       "lineId": "marian.bond.line.002",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "試合のない午後。窓を雨が細く叩き、業務連絡も歓声も今日は遠い。二人きりになる予定ではなかったのに、空いている席は向かいだけだった。",
-      "emotion": "tender"
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "マリアンさん。この擦り傷、治さないでください。そのうえで——話だけ、聞いてほしいんです。"
     },
     {
       "type": "line",
       "id": "marian.bond.node.line.003",
       "lineId": "marian.bond.line.003",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "休憩室で彼女がクッキーを半分に割ると、割れた方が元へ戻ろうとして皿の上を這った。治療の力が菓子にまで漏れている。"
+      "speakerId": "legacy.speaker.quc8xa",
+      "speakerName": "マリアン",
+      "mode": "dialogue",
+      "text": "……治さずに、ですか。目の前の傷を。……それは、私にとって、一番難しい依頼です。"
     },
     {
       "type": "line",
       "id": "marian.bond.node.line.004",
       "lineId": "marian.bond.line.004",
-      "speakerId": "legacy.speaker.quc8xa",
-      "speakerName": "マリアン",
-      "mode": "dialogue",
-      "text": "包帯を畳むの、手伝います。"
-    },
-    {
-      "type": "direction",
-      "id": "marian.bond.node.direction.001",
-      "command": {
-        "type": "background",
-        "assetId": "marian.bond.asset.background.001",
-        "transition": "dissolve"
-      }
-    },
-    {
-      "type": "direction",
-      "id": "marian.bond.node.direction.002",
-      "command": {
-        "type": "effect",
-        "effectId": "pulse"
-      }
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "治さない練習が、始まった。私が「転んで恥ずかしかった」と話す横で、彼女の右手が、三回、勝手に光りかけた。三回とも、左手で右手を押さえて止めた。全力の攻防である。相手は自分の善意だが。",
+      "emotion": "comic"
     },
     {
       "type": "line",
       "id": "marian.bond.node.line.005",
       "lineId": "marian.bond.line.005",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "試合も契約もない時間なら、もっと気楽に話せると思っていた。実際は、お茶を一口飲むたび沈黙の意味を考えてしまう。強さを見ている時より、マリアンの小さな癖のほうがずっと気になった。",
-      "emotion": "comic"
+      "speakerId": "legacy.speaker.quc8xa",
+      "speakerName": "マリアン",
+      "mode": "dialogue",
+      "text": "……いた、かった、ですね。廊下、硬いので。……これで、合っていますか。治さない相槌は。"
     },
     {
       "type": "line",
       "id": "marian.bond.node.line.006",
       "lineId": "marian.bond.line.006",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "白い包帯、二つに割ったクッキー、自分の脈を測る指。戦場では見落としていた小さな癖が、何も起きない時間ほどよく見える。"
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "満点です。今の「痛かったですね」、絆創膏より効きました。"
     },
     {
       "type": "line",
       "id": "marian.bond.node.line.007",
       "lineId": "marian.bond.line.007",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "食べ物が治ると、いつまでも食べ終わりませんね。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "その時、天井から、ぽた、と雨漏りが落ちた。マリアンが反射的に振り向く。淡い光。——雨漏りが、止まった。天井の防水層が「治った」のである。",
+      "emotion": "comic"
     },
     {
       "type": "line",
       "id": "marian.bond.node.line.008",
       "lineId": "marian.bond.line.008",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
+      "speakerId": "legacy.speaker.quc8xa",
+      "speakerName": "マリアン",
       "mode": "dialogue",
-      "text": "死者は包帯を急ぎません。ゆっくりで大丈夫。"
+      "text": "…………建物は、つい。……建物には、返事を聞けないので。"
     },
     {
       "type": "line",
@@ -128,8 +110,8 @@
       "lineId": "marian.bond.line.009",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "マリアンは救える命を一つも見捨てず、終わりさえ治療する聖女。そのはずなのに、私の休憩が終わる時刻を気にして、話題を一つずつ短くしている。",
-      "emotion": "revelation"
+      "text": "人には聞いてから治す。建物は聞けないから、つい治す。施設課が長年悩んでいた「なぜかうちの施設は雨漏りが自然に直る」の謎が、いま解けた。犯人は、善意だった。",
+      "emotion": "comic"
     },
     {
       "type": "line",
@@ -138,16 +120,16 @@
       "speakerId": "legacy.speaker.quc8xa",
       "speakerName": "マリアン",
       "mode": "dialogue",
-      "text": "良いことばかりではありません。終わることも、生きる形の一つです。"
+      "text": "ミミさん。……今日の練習の、お礼に。一つ、白状します。私は、治さない時間が、少しだけ、好きになり始めています。治している間、私は傷しか見ていない。治さない間は——相手の顔を、見ていられるので。"
     },
     {
       "type": "line",
       "id": "marian.bond.node.line.011",
       "lineId": "marian.bond.line.011",
-      "speakerId": "legacy.speaker.quc8xa",
-      "speakerName": "マリアン",
-      "mode": "dialogue",
-      "text": "生者の勤務時間は急ぐんです。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "雨音の礼拝スペースで、真っ直ぐ顔を見られて、私の脈拍は診断されたら怒られる数値になった。治さない時間は、心臓に悪い。良い意味で。",
+      "emotion": "tender"
     },
     {
       "type": "line",
@@ -155,68 +137,8 @@
       "lineId": "marian.bond.line.012",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "特別な話をしなくても、同じ音を聞いていられる。そんな時間が欲しかったのだと、失う前から気づいてしまった。"
-    },
-    {
-      "type": "line",
-      "id": "marian.bond.node.line.013",
-      "lineId": "marian.bond.line.013",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "彼女は力を抑え、今度は普通に割れた半分を私へ渡した。"
-    },
-    {
-      "type": "line",
-      "id": "marian.bond.node.line.014",
-      "lineId": "marian.bond.line.014",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "菓子の割れ目まで蘇生してしまい、休憩のおやつが永遠に食べ終わらない。甘い空気になりかけるたび、世界の方が先に耐えられなくなる。",
-      "emotion": "comic"
-    },
-    {
-      "type": "line",
-      "id": "marian.bond.node.line.015",
-      "lineId": "marian.bond.line.015",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "救う力を止められないことが、本人にとっては優しさより重い恐怖になっていた。そう気づくと、何も起きなかった午後が急に大事な出来事へ変わった。",
-      "emotion": "tender"
-    },
-    {
-      "type": "line",
-      "id": "marian.bond.node.line.016",
-      "lineId": "marian.bond.line.016",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "笑いが収まったあと、治さない選択を怖がりながら、本人の返事を待てることという、驚くほど普通の望みが語られた。",
-      "emotion": "tender"
-    },
-    {
-      "type": "line",
-      "id": "marian.bond.node.line.017",
-      "lineId": "marian.bond.line.017",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "試合の外で交わした言葉のほうが、次の指示より長く残ることがある。"
-    },
-    {
-      "type": "line",
-      "id": "marian.bond.node.line.018",
-      "lineId": "marian.bond.line.018",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "それは私が叶えるものではない。ただ、叶うまで隣にいることならできる。そう言いかけて、言葉にする勇気だけが遅れた。",
-      "emotion": "tension"
-    },
-    {
-      "type": "line",
-      "id": "marian.bond.node.line.019",
-      "lineId": "marian.bond.line.019",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "治さずに残した契約印の薄い痕を間に置いたまま、私たちは雨が止んでもしばらく席を立たなかった。",
-      "emotion": "tender"
+      "text": "午後の残りの使い方を決める。",
+      "emotion": "resolve"
     },
     {
       "type": "choice",
@@ -225,56 +147,28 @@
         {
           "id": "marian.bond.choice.001",
           "label": "治さなくていい擦り傷を見せ、相談だけする",
-          "result": "マリアンは薬を出さず、痛かったですねと言った。それだけで済んだことに、本人の方が驚いていた。",
-          "intent": "相手の秘密の勝ち方を試す",
-          "promise": "読みにくい作戦になる代わりに、この人だけの成長を大きく進める。",
-          "memory": "任せた一戦の手応えが、次に力を見せる理由になる。",
+          "result": "午後いっぱい、「治さない相談」の練習を続けた。私の膝の擦り傷は、三日かけて普通に治った。かさぶたが取れた日、彼女に報告したら、しばらく黙って、それから言った。「傷が、自分で治るのを最後まで見たのは……初めてです。体は、私が思っているより、強いのですね」。全部治してきた人の、初めての見学だった。",
+          "intent": "自然に治る時間を、一緒に見届ける",
+          "promise": "読みにくい成長になる代わりに、この人だけの成長を大きく進める。",
+          "memory": "三日かけて治った擦り傷の観察記録が、救護室の棚にある。",
           "tone": "wild",
           "effects": [
-            {
-              "type": "relationship",
-              "target": {
-                "type": "fighter",
-                "fighterId": "marian"
-              },
-              "mode": "add",
-              "trust": 9,
-              "ownership": -2
-            },
-            {
-              "type": "fighterPoints",
-              "target": {
-                "type": "fighter",
-                "fighterId": "marian"
-              },
-              "amount": 3
-            }
+            { "type": "relationship", "target": { "type": "fighter", "fighterId": "marian" }, "mode": "add", "trust": 9, "ownership": -2 },
+            { "type": "fighterPoints", "target": { "type": "fighter", "fighterId": "marian" }, "amount": 3 }
           ],
           "goto": "marian.bond.node.effect.001"
         },
         {
           "id": "marian.bond.choice.002",
           "label": "倒れた味方を一度だけ戻す手順を作る",
-          "result": "回数と対象を決めるほど、祈りは安定した。禁止事項が増えた紙を、彼女は安心した顔で折り畳んだ。",
-          "intent": "チームの新しい連携を試す",
-          "promise": "本人の流儀は崩すが、全員へ配れる成長ポイントを得る。",
-          "memory": "成功した作戦と短くなった会話の両方が、次の判断まで残る。",
+          "result": "午後は試合用の手順作りにした。名前は「一度だけの合図」。試合中、倒れた味方をマリアンが戻すのは、本人がタオルの端を握り返した時だけ。意識の返事を、治療の条件にする。「戦場でも、聞いてから治す」を形にした手順で、彼女は初めて、試合の治療を怖がらずに引き受けた。",
+          "intent": "戦場でも「聞いてから治す」を守る",
+          "promise": "練習の続きは後日になるが、全員へ配れる成長ポイントを得る。",
+          "memory": "タオルの端の合図を、チームの全員が知っている。",
           "tone": "pragmatic",
           "effects": [
-            {
-              "type": "relationship",
-              "target": {
-                "type": "fighter",
-                "fighterId": "marian"
-              },
-              "mode": "add",
-              "trust": 1,
-              "ownership": 7
-            },
-            {
-              "type": "sharedPoints",
-              "amount": 3
-            }
+            { "type": "relationship", "target": { "type": "fighter", "fighterId": "marian" }, "mode": "add", "trust": 1, "ownership": 7 },
+            { "type": "sharedPoints", "amount": 3 }
           ],
           "goto": "marian.bond.node.effect.001"
         }
@@ -284,11 +178,7 @@
       "type": "effect",
       "id": "marian.bond.node.effect.001",
       "effects": [
-        {
-          "type": "setStoryStage",
-          "fighterId": "marian",
-          "stage": 3
-        }
+        { "type": "setStoryStage", "fighterId": "marian", "stage": 3 }
       ]
     },
     {
@@ -298,9 +188,9 @@
     }
   ],
   "debug": {
-    "status": "approved",
-    "sourceDocument": "native narrative block migration",
-    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "status": "review",
+    "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
+    "authorNote": "v2改稿: 治さない練習(canon: 治さない会話を試す)。光る手を左手で止める攻防。雨漏りが治る施設の謎解き。",
     "legacyGeneratedIds": false
   }
 }

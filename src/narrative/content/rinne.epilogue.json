@@ -240,6 +240,15 @@
     },
     {
       "type": "line",
+      "id": "rinne.epilogue.node.line.020",
+      "lineId": "rinne.epilogue.line.020",
+      "speakerId": "legacy.speaker.1vpt9ol",
+      "speakerName": "リンネ",
+      "mode": "dialogue",
+      "text": "そうだ、演目表の出演届、出しといた。演目名は「元手ゼロ杯・持っていないもの選手権」。副題は——「賭けたのは、まだない物ばかり」。柿落としの結果は、見ないで待つ。"
+    },
+    {
+      "type": "line",
       "id": "rinne.epilogue.node.line.019",
       "lineId": "rinne.epilogue.line.019",
       "speakerId": "narrator",
@@ -254,9 +263,9 @@
     }
   ],
   "debug": {
-    "status": "approved",
-    "sourceDocument": "native narrative block migration",
-    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "status": "review",
+    "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
+    "authorNote": "承認済み本文(元手ゼロ杯)を保持し、出演届の一行のみ追加して演目表へ接続。",
     "legacyGeneratedIds": false
   }
 }

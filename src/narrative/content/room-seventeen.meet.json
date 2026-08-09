@@ -2,26 +2,17 @@
   "schemaVersion": 1,
   "id": "room-seventeen.meet",
   "kind": "character",
-  "title": "最初の遭遇",
-  "summary": "従業員通路で起きる「最初の遭遇」",
+  "title": "存在しない十七号室",
+  "summary": "備品を取りに入った部屋が、百階建ての過剰なもてなしだった",
   "ownership": {
     "arcId": "character.room-seventeen",
     "characterId": "room-seventeen",
     "stage": "meet"
   },
   "trigger": {
-    "actions": [
-      "work",
-      "search"
-    ],
-    "when": {
-      "all": [],
-      "any": [],
-      "none": []
-    },
-    "repeat": {
-      "mode": "once-per-run"
-    },
+    "actions": ["work", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
     "priority": 500,
     "weight": 1
   },
@@ -44,12 +35,17 @@
   },
   "nodes": [
     {
+      "type": "direction",
+      "id": "room-seventeen.meet.node.direction.001",
+      "command": { "type": "background", "assetId": "room-seventeen.meet.asset.background.001", "transition": "dissolve" }
+    },
+    {
       "type": "line",
       "id": "room-seventeen.meet.node.line.001",
       "lineId": "room-seventeen.meet.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "今週の用事で従業員通路へ立ち寄った。予定どおりなら、目の前の用事を済ませて帰るだけのはずだった。"
+      "text": "従業員通路の倉庫は、十六号室までしかない。ないはずだった。備品のモップを探していた私の前に、その日、見慣れない扉があった。真鍮のプレートに「17」。"
     },
     {
       "type": "line",
@@ -57,84 +53,63 @@
       "lineId": "room-seventeen.meet.line.002",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "その日、最初に目へ入ったのはどこにもない廊下、戻る階段、室内に二つだけ置かれた椅子だった。人より先に、その人の孤独だけが場所を取っていた。"
+      "text": "開けたら、モップはなかった。代わりに、大理石のロビーがあった。シャンデリア。噴水。曲線の大階段。案内板いわく「ようこそ。当室は百二十階建てです」。倉庫の扉の向こうに、である。",
+      "emotion": "tension"
+    },
+    {
+      "type": "direction",
+      "id": "room-seventeen.meet.node.direction.002",
+      "command": { "type": "still", "assetId": "room-seventeen.meet.asset.still.001" }
+    },
+    {
+      "type": "direction",
+      "id": "room-seventeen.meet.node.direction.003",
+      "command": { "type": "effect", "effectId": "pulse" }
     },
     {
       "type": "line",
       "id": "room-seventeen.meet.node.line.003",
       "lineId": "room-seventeen.meet.line.003",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "従業員通路に昨日までなかった扉がある。『会議室17』の札は新しいのに、取っ手だけ何百年も使われた色をしていた。"
+      "speakerId": "legacy.speaker.zzyjm6",
+      "speakerName": "十七号室",
+      "mode": "dialogue",
+      "text": "いらっしゃいませ。ごゆっくり、どうぞ。……三階に温泉、七階に図書館、十二階に映画館をご用意しました。今、しました。あなたの顔を見て。"
     },
     {
       "type": "line",
       "id": "room-seventeen.meet.node.line.004",
       "lineId": "room-seventeen.meet.line.004",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "この通路、十六号室までしかなかったはず。"
-    },
-    {
-      "type": "direction",
-      "id": "room-seventeen.meet.node.direction.001",
-      "command": {
-        "type": "background",
-        "assetId": "room-seventeen.meet.asset.background.001",
-        "transition": "dissolve"
-      }
-    },
-    {
-      "type": "direction",
-      "id": "room-seventeen.meet.node.direction.002",
-      "command": {
-        "type": "effect",
-        "effectId": "flash"
-      }
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "声は、部屋そのものから響いた。この扉、生きている。しかも、もてなしの初速がすごい。客の顔色から欲しいものを読んで、階を増設する建築である。",
+      "emotion": "comic"
     },
     {
       "type": "line",
       "id": "room-seventeen.meet.node.line.005",
       "lineId": "room-seventeen.meet.line.005",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "ここへ来た理由は、ごく普通の用事だった。けれど十七号室を見た瞬間、兎耳だけが先に危険を知らせる。私はとっさに、客を守るため出口を隠す親切な部屋なのだと思いかけた。",
-      "emotion": "comic"
-    },
-    {
-      "type": "direction",
-      "id": "room-seventeen.meet.node.direction.003",
-      "command": {
-        "type": "still",
-        "assetId": "room-seventeen.meet.asset.still.001"
-      }
-    },
-    {
-      "type": "direction",
-      "id": "room-seventeen.meet.node.direction.004",
-      "command": {
-        "type": "effect",
-        "effectId": "pulse"
-      }
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "あの、嬉しいんですけど、私、勤務中でして。モップだけ借りて帰り——出口、どこですか？"
     },
     {
       "type": "line",
       "id": "room-seventeen.meet.node.line.006",
       "lineId": "room-seventeen.meet.line.006",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "声をかけるべきか迷っている間に、視線だけが一度重なる。胸が跳ねたのは見た目のせいではない。見つけてはいけない何かを、向こうも隠さなかったからだ。",
-      "emotion": "tension"
+      "speakerId": "legacy.speaker.zzyjm6",
+      "speakerName": "十七号室",
+      "mode": "dialogue",
+      "text": "……出口。…………こちらです。たぶん。"
     },
     {
       "type": "line",
       "id": "room-seventeen.meet.node.line.007",
       "lineId": "room-seventeen.meet.line.007",
-      "speakerId": "legacy.speaker.zzyjm6",
-      "speakerName": "十七号室",
-      "mode": "dialogue",
-      "text": "予約時間を三分過ぎています。内部では三十二年に相当します。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "示された扉を開けたら、海底だった。ガラス張りの向こうに、魚の群れ。次の扉は、知らない会社の会議中(すみません)。その次は、夕暮れの港。……この部屋、入口は完璧なのに、出口が全部、下手だった。",
+      "emotion": "comic"
     },
     {
       "type": "line",
@@ -143,7 +118,7 @@
       "speakerId": "legacy.speaker.zzyjm6",
       "speakerName": "十七号室",
       "mode": "dialogue",
-      "text": "予約は空いている。"
+      "text": "……申し訳ありません。お迎えは、得意なのです。お見送りだけ、どうしても、その……手が、震えるので。"
     },
     {
       "type": "line",
@@ -151,7 +126,8 @@
       "lineId": "room-seventeen.meet.line.009",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "十七号室は、入った者へ安全な部屋を与え、出口だけを隠す迷宮に見えた。だから私は、普通のお客様へするのと同じ声で話しかけることにした。"
+      "text": "扉に手はないが、言いたいことは分かった。帰したら、もう来てもらえない気がして、出口を作る手が鈍るのだ。攻略者が来なくなって久しい迷宮の、正直すぎる白状だった。",
+      "emotion": "revelation"
     },
     {
       "type": "line",
@@ -160,24 +136,25 @@
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "誰も予約していません。それと、中から声がする会議室は普通しゃべりません。"
+      "text": "十七号室さん。接客業の先輩として、一ついいですか。お客様は、ちゃんと帰れたお店にだけ、また来るんです。お見送りは、次の「いらっしゃいませ」の前半分なんですよ。"
     },
     {
       "type": "line",
       "id": "room-seventeen.meet.node.line.011",
       "lineId": "room-seventeen.meet.line.011",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "部屋がしゃべった。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "長い沈黙のあと、ロビーの正面に、新しい扉がひとつ、ゆっくり生えた。開けると——見慣れた従業員通路。モップ立ての真ん前。完璧な出口だった。",
+      "emotion": "tender"
     },
     {
       "type": "line",
       "id": "room-seventeen.meet.node.line.012",
       "lineId": "room-seventeen.meet.line.012",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "たった一言の返事を待つ時間が、試合開始前より長い。背後ではいつもの業務放送が流れ、この場所だけが別の物語の入口みたいに静かだった。"
+      "speakerId": "legacy.speaker.zzyjm6",
+      "speakerName": "十七号室",
+      "mode": "dialogue",
+      "text": "……お帰りは、こちらです。……その、また、お越しいただけますか。"
     },
     {
       "type": "line",
@@ -185,59 +162,8 @@
       "lineId": "room-seventeen.meet.line.013",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "扉が少し開き、向こうに夕焼けの廊下が百本伸びた。冷房の風ではない季節が、足元へ触れた。"
-    },
-    {
-      "type": "line",
-      "id": "room-seventeen.meet.node.line.014",
-      "lineId": "room-seventeen.meet.line.014",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "少し寂しくなるだけで館内図が百一階まで増築され、非常口が昨日へつながる。それでも本人が気にしたのは、私が一歩引いたことの方だった。",
-      "emotion": "comic"
-    },
-    {
-      "type": "line",
-      "id": "room-seventeen.meet.node.line.015",
-      "lineId": "room-seventeen.meet.line.015",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "まだ事情はほとんど分からない。ただ、最初の考えだけでは説明できない表情を見てしまった。私は曲がった名札を直し、次に会う口実をひとつ残した。",
-      "emotion": "tender"
-    },
-    {
-      "type": "line",
-      "id": "room-seventeen.meet.node.line.016",
-      "lineId": "room-seventeen.meet.line.016",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "怖くないと言えば嘘になる。でも、怖さの奥に大切な客を失わないために、帰る道まで奪ってしまうことがある気がして、目をそらす方が失礼に思えた。",
-      "emotion": "revelation"
-    },
-    {
-      "type": "line",
-      "id": "room-seventeen.meet.node.line.017",
-      "lineId": "room-seventeen.meet.line.017",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "事情はまだ分からない。でも、ここで立ち去れば、たぶん後悔する。"
-    },
-    {
-      "type": "line",
-      "id": "room-seventeen.meet.node.line.018",
-      "lineId": "room-seventeen.meet.line.018",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "名前を聞いただけ。約束も、契約も、まだ何もない。それなのに別れ際、次に会った時の言葉を考えている自分がいた。",
-      "emotion": "tender"
-    },
-    {
-      "type": "line",
-      "id": "room-seventeen.meet.node.line.019",
-      "lineId": "room-seventeen.meet.line.019",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "その場に残った外側から初めて掛けられた『また来ます』の札を見て、私は今日の出来事を勤務報告の一行だけでは終わらせられないと知った。"
+      "text": "生まれて初めてのお見送りを終えた扉が、緊張の面持ち(気配)で返事を待っている。帰り方を覚えた迷宮への、最初の返事だ。ちゃんと選びたい。",
+      "emotion": "resolve"
     },
     {
       "type": "choice",
@@ -246,32 +172,23 @@
         {
           "id": "room-seventeen.meet.choice.001",
           "label": "会議室として一時間予約する",
-          "result": "一時間で三十二階まで見学し、延長料金は世界一つ分だった。",
-          "intent": "登録の前に、目の前の相手を知る",
-          "promise": "目先の報酬は得ない代わりに、相手が何を望んでいるかを確かめる。",
-          "memory": "手続きより先に話を聞いたことを、相手は最初の印象として覚えている。",
+          "result": "「また来ます。というか、明日、会議室として一時間予約します」。予約、という言葉に、部屋中のシャンデリアが一斉に瞬いた。翌日の会議(私の週報整理)は、百二十階建ての最上階、雲の見える一室で行われた。お茶のおかわりが四回、無言で出た。もてなしの本気を、一時間ぶん、正面から受けた。",
+          "intent": "帰ることと、また来ることを両方見せる",
+          "promise": "目先の報酬は得ない代わりに、この部屋が何を待っていたかを知る。",
+          "memory": "第一号の予約客として、十七号室は私を覚えている。",
           "tone": "tender",
           "effects": [
-            {
-              "type": "relationship",
-              "target": {
-                "type": "fighter",
-                "fighterId": "room-seventeen"
-              },
-              "mode": "add",
-              "trust": 7,
-              "ownership": -2
-            }
+            { "type": "relationship", "target": { "type": "fighter", "fighterId": "room-seventeen" }, "mode": "add", "trust": 7, "ownership": -2 }
           ],
           "goto": "room-seventeen.meet.node.effect.001"
         },
         {
           "id": "room-seventeen.meet.choice.002",
           "label": "今日は十七号室を誘わず、用事へ戻る",
-          "result": "十七号室の名前と出会った場所だけを覚え、今日は普段の仕事へ戻った。急いで所属を決めなかったことが、次に会う時の距離として残った。",
-          "intent": "今は勧誘せず、相手との距離を保つ",
+          "result": "モップを借りて(貸してくれた)、私は業務に戻った。翌朝、従業員通路の十七号室の扉に、手書き風の札が下がっていた。「本日の出口: 全部、ちゃんと通路に出ます」。練習したらしい。札の隅の字が、少し誇らしげだった。",
+          "intent": "今日は清掃業務を優先する",
           "promise": "所属選手にはならないが、後の出来事で再会できる。",
-          "memory": "最初の出会いで急いで仲間にしなかったことが、次の再会へ残る。",
+          "memory": "お見送りを教えた店員のことを、十七号室は覚えている。",
           "tone": "pragmatic",
           "effects": [],
           "goto": "room-seventeen.meet.node.effect.001"
@@ -282,16 +199,8 @@
       "type": "effect",
       "id": "room-seventeen.meet.node.effect.001",
       "effects": [
-        {
-          "type": "markEncountered",
-          "fighterId": "room-seventeen",
-          "encountered": true
-        },
-        {
-          "type": "setStoryStage",
-          "fighterId": "room-seventeen",
-          "stage": 1
-        }
+        { "type": "markEncountered", "fighterId": "room-seventeen", "encountered": true },
+        { "type": "setStoryStage", "fighterId": "room-seventeen", "stage": 1 }
       ]
     },
     {
@@ -301,9 +210,9 @@
     }
   ],
   "debug": {
-    "status": "approved",
-    "sourceDocument": "native narrative block migration",
-    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "status": "review",
+    "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
+    "authorNote": "v2改稿: 過剰なもてなしと下手な出口(誤出口=海底・会議・港)。「お見送りは次のいらっしゃいませの前半分」。Q1=攻略者が来なくなった迷宮。",
     "legacyGeneratedIds": false
   }
 }

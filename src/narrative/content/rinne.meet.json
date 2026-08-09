@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "id": "rinne.meet",
   "kind": "character",
-  "title": "最初の遭遇",
-  "summary": "裏口のベンチで起きる「最初の遭遇」",
+  "title": "一度も賭けずに、出禁",
+  "summary": "カジノを追い出された無一文の女性と、空のコインの音",
   "ownership": {
     "arcId": "character.rinne",
     "characterId": "rinne",
@@ -44,39 +44,6 @@
   },
   "nodes": [
     {
-      "type": "line",
-      "id": "rinne.meet.node.line.001",
-      "lineId": "rinne.meet.line.001",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "今週の用事で裏口のベンチへ立ち寄った。予定どおりなら、目の前の用事を済ませて帰るだけのはずだった。"
-    },
-    {
-      "type": "line",
-      "id": "rinne.meet.node.line.002",
-      "lineId": "rinne.meet.line.002",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "その日、最初に目へ入ったのは空のコイン、外れ続けるルーレット、温かい飲み物の最後の一口だった。人より先に、その人の孤独だけが場所を取っていた。"
-    },
-    {
-      "type": "line",
-      "id": "rinne.meet.node.line.003",
-      "lineId": "rinne.meet.line.003",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "カジノの出口で、無一文の女性が警備員へ丁寧に頭を下げていた。追い出された人にしては、胴元の方が青い顔をしている。"
-    },
-    {
-      "type": "line",
-      "id": "rinne.meet.node.line.004",
-      "lineId": "rinne.meet.line.004",
-      "speakerId": "legacy.speaker.1vpt9ol",
-      "speakerName": "リンネ",
-      "mode": "dialogue",
-      "text": "追い出された。今日はまだ一度も賭けてないのに。"
-    },
-    {
       "type": "direction",
       "id": "rinne.meet.node.direction.001",
       "command": {
@@ -86,25 +53,43 @@
       }
     },
     {
-      "type": "direction",
-      "id": "rinne.meet.node.direction.002",
-      "command": {
-        "type": "effect",
-        "effectId": "flash"
-      }
+      "type": "line",
+      "id": "rinne.meet.node.line.001",
+      "lineId": "rinne.meet.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "闘技場の裏口で、珍しい追放劇を見た。無一文の女性が、カジノの警備員に丁重に外へ出されている。おかしいのは表情の配役だ。追い出された本人は涼しい顔で、追い出した側の支配人が、真っ青だった。"
     },
     {
       "type": "line",
-      "id": "rinne.meet.node.line.005",
-      "lineId": "rinne.meet.line.005",
+      "id": "rinne.meet.node.line.002",
+      "lineId": "rinne.meet.line.002",
+      "speakerId": "legacy.speaker.1vpt9ol",
+      "speakerName": "リンネ",
+      "mode": "dialogue",
+      "text": "追い出された。今日はまだ、一度も賭けてないのに。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.meet.node.line.003",
+      "lineId": "rinne.meet.line.003",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ここへ来た理由は、ごく普通の用事だった。けれどリンネを見た瞬間、兎耳だけが先に危険を知らせる。私はとっさに、危険な賭けほど喜ぶ、後悔しない勝負師なのだと思いかけた。",
+      "text": "一度も賭けていない客を出禁にするカジノが、どこにある。気になって、裏口のベンチに座った彼女の隣、一人ぶん空けたところに腰を下ろした。彼女の手の中で、刻印のないコインが一枚、くるくる回っていた。",
       "emotion": "comic"
     },
     {
+      "type": "line",
+      "id": "rinne.meet.node.line.004",
+      "lineId": "rinne.meet.line.004",
+      "speakerId": "legacy.speaker.1vpt9ol",
+      "speakerName": "リンネ",
+      "mode": "dialogue",
+      "text": "勝ちすぎたんじゃないよ。店が勝つ未来を、ひとつずつ避けただけ。"
+    },
+    {
       "type": "direction",
-      "id": "rinne.meet.node.direction.003",
+      "id": "rinne.meet.node.direction.002",
       "command": {
         "type": "still",
         "assetId": "rinne.meet.asset.still.001"
@@ -112,7 +97,7 @@
     },
     {
       "type": "direction",
-      "id": "rinne.meet.node.direction.004",
+      "id": "rinne.meet.node.direction.003",
       "command": {
         "type": "effect",
         "effectId": "pulse"
@@ -120,124 +105,66 @@
     },
     {
       "type": "line",
+      "id": "rinne.meet.node.line.005",
+      "lineId": "rinne.meet.line.005",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "……それを普通は、勝ちすぎたって言うんじゃないですか。"
+    },
+    {
+      "type": "line",
       "id": "rinne.meet.node.line.006",
       "lineId": "rinne.meet.line.006",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "声をかけるべきか迷っている間に、視線だけが一度重なる。胸が跳ねたのは見た目のせいではない。見つけてはいけない何かを、向こうも隠さなかったからだ。",
-      "emotion": "tension"
+      "speakerId": "legacy.speaker.1vpt9ol",
+      "speakerName": "リンネ",
+      "mode": "dialogue",
+      "text": "違う。勝ってない。負けてもいない。店が勝つ台だけ避けて、一日歩いた。そしたら店の帳簿が、私の散歩に耐えられなくなった。"
     },
     {
       "type": "line",
       "id": "rinne.meet.node.line.007",
       "lineId": "rinne.meet.line.007",
-      "speakerId": "legacy.speaker.1vpt9ol",
-      "speakerName": "リンネ",
-      "mode": "dialogue",
-      "text": "勝ちすぎたんじゃないよ。店が勝つ未来を、ひとつずつ避けただけ。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "未来が、見えるのだ。この人には。賭ける前から、当たりも外れも全部。……だとしたら、この人の毎日は、答えを知っているテスト用紙を延々と配られるようなものではないのか。",
+      "emotion": "revelation"
     },
     {
       "type": "line",
       "id": "rinne.meet.node.line.008",
       "lineId": "rinne.meet.line.008",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "何をしたんですか。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "彼女が指で空の財布を弾くと、入っていないはずのコインの音がした。まだ投げていないコインの音、と本人は言った。意味は分からなかったが、その音は妙に澄んでいて、なぜか少し、寂しかった。",
+      "emotion": "tension"
     },
     {
       "type": "line",
       "id": "rinne.meet.node.line.009",
       "lineId": "rinne.meet.line.009",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "リンネは、持っていないものまで賭け、負けを笑って次へ進む勝負師に見えた。だから私は、普通のお客様へするのと同じ声で話しかけることにした。"
+      "speakerId": "legacy.speaker.1vpt9ol",
+      "speakerName": "リンネ",
+      "mode": "dialogue",
+      "text": "あんた、面白いね。私を見て、一歩も引かなかったのは久しぶり。……ああ、違うか。今、半歩引いた。半歩は、初めてだ。"
     },
     {
       "type": "line",
       "id": "rinne.meet.node.line.010",
       "lineId": "rinne.meet.line.010",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "それを普通は勝ちすぎたと言うんじゃないですか。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "半歩の距離まで数えられていた。心臓に悪い。しかも彼女は、私が次に何を言うかも、たぶんもう見えている。それなのに、私の口が開くのを、わざわざ待っている。答えを知っているのに、聞きたいらしい。",
+      "emotion": "tender"
     },
     {
       "type": "line",
       "id": "rinne.meet.node.line.011",
       "lineId": "rinne.meet.line.011",
-      "speakerId": "legacy.speaker.1vpt9ol",
-      "speakerName": "リンネ",
-      "mode": "dialogue",
-      "text": "店が勝つ台だけ避けて歩いた。"
-    },
-    {
-      "type": "line",
-      "id": "rinne.meet.node.line.012",
-      "lineId": "rinne.meet.line.012",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "たった一言の返事を待つ時間が、試合開始前より長い。背後ではいつもの業務放送が流れ、この場所だけが別の物語の入口みたいに静かだった。"
-    },
-    {
-      "type": "line",
-      "id": "rinne.meet.node.line.013",
-      "lineId": "rinne.meet.line.013",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "彼女が指で空の財布を弾くと、まだ投げていないコインの音がした。"
-    },
-    {
-      "type": "line",
-      "id": "rinne.meet.node.line.014",
-      "lineId": "rinne.meet.line.014",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "コインの裏表を外すたび別世界の確率が帳尻を合わせ、遠い王国が優勝する。それでも本人が気にしたのは、私が一歩引いたことの方だった。",
-      "emotion": "comic"
-    },
-    {
-      "type": "line",
-      "id": "rinne.meet.node.line.015",
-      "lineId": "rinne.meet.line.015",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "まだ事情はほとんど分からない。ただ、最初の考えだけでは説明できない表情を見てしまった。私は曲がった名札を直し、次に会う口実をひとつ残した。",
-      "emotion": "tender"
-    },
-    {
-      "type": "line",
-      "id": "rinne.meet.node.line.016",
-      "lineId": "rinne.meet.line.016",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "怖くないと言えば嘘になる。でも、怖さの奥に賭けなければ誰にも選ばれず、賭ければ大切なものを自分から失うことがある気がして、目をそらす方が失礼に思えた。",
-      "emotion": "revelation"
-    },
-    {
-      "type": "line",
-      "id": "rinne.meet.node.line.017",
-      "lineId": "rinne.meet.line.017",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "事情はまだ分からない。でも、ここで立ち去れば、たぶん後悔する。"
-    },
-    {
-      "type": "line",
-      "id": "rinne.meet.node.line.018",
-      "lineId": "rinne.meet.line.018",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "名前を聞いただけ。約束も、契約も、まだ何もない。それなのに別れ際、次に会った時の言葉を考えている自分がいた。",
-      "emotion": "tender"
-    },
-    {
-      "type": "line",
-      "id": "rinne.meet.node.line.019",
-      "lineId": "rinne.meet.line.019",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "その場に残った使わずにポケットへ残した一枚の空コインを見て、私は今日の出来事を勤務報告の一行だけでは終わらせられないと知った。"
+      "text": "別れ際、彼女はベンチに空のコインを一枚、置いていった。「次に会う口実。持ってて」。拾い上げたコインは軽くて、表にも裏にも、まだ何も刻まれていなかった。まだ何も決まっていない、ということらしい。",
+      "emotion": "resolve"
     },
     {
       "type": "choice",
@@ -246,7 +173,7 @@
         {
           "id": "rinne.meet.choice.001",
           "label": "賭けずに未来の見え方を聞く",
-          "result": "勝ち筋は教えてくれなかったが、負け方を三つ避けてくれた。",
+          "result": "「一つだけ教えて。私、この後どうなります?」。リンネは十二秒だけ遠くを見て、答えた。「勝ち筋は教えない。教えると、あんたの筋じゃなくなるから」。その代わり、と彼女は指を三本立てた。「今週の負け方を三つだけ消しといた。転ぶ廊下と、忘れる書類と、こぼす熱いお茶」。予言は三つとも、当たらなかった。避けられたので。",
           "intent": "登録の前に、目の前の相手を知る",
           "promise": "目先の報酬は得ない代わりに、相手が何を望んでいるかを確かめる。",
           "memory": "手続きより先に話を聞いたことを、相手は最初の印象として覚えている。",
@@ -268,7 +195,7 @@
         {
           "id": "rinne.meet.choice.002",
           "label": "今日はリンネを誘わず、用事へ戻る",
-          "result": "リンネの名前と出会った場所だけを覚え、今日は普段の仕事へ戻った。急いで所属を決めなかったことが、次に会う時の距離として残った。",
+          "result": "名前と、空のコインと、裏口のベンチ。今日はそれだけ持ち帰った。去り際、彼女は振り返らずに言った。「また会うよ。確率は——見ないでおく」。未来の見える人が、見ないでおくと言った。それが何かの始まりの合図に聞こえて、私はコインを強く握った。",
           "intent": "今は勧誘せず、相手との距離を保つ",
           "promise": "所属選手にはならないが、後の出来事で再会できる。",
           "memory": "最初の出会いで急いで仲間にしなかったことが、次の再会へ残る。",
@@ -301,9 +228,9 @@
     }
   ],
   "debug": {
-    "status": "approved",
-    "sourceDocument": "native narrative block migration",
-    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "status": "review",
+    "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
+    "authorNote": "v2改稿: 一度も賭けずに出禁になる導入。空のコイン=次に会う口実。半歩まで数える未来視。",
     "legacyGeneratedIds": false
   }
 }

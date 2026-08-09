@@ -2,28 +2,17 @@
   "schemaVersion": 1,
   "id": "marian.crisis",
   "kind": "character",
-  "title": "最後の準備",
-  "summary": "使われない霊安室で起きる「最後の準備」",
+  "title": "奇跡の、二十四時間営業",
+  "summary": "黒い角封筒。休診と治療拒否権を廃止する契約と、初めての「治しません」",
   "ownership": {
     "arcId": "character.marian",
     "characterId": "marian",
     "stage": "crisis"
   },
   "trigger": {
-    "actions": [
-      "work",
-      "play",
-      "rest",
-      "search"
-    ],
-    "when": {
-      "all": [],
-      "any": [],
-      "none": []
-    },
-    "repeat": {
-      "mode": "once-per-run"
-    },
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
     "priority": 400,
     "weight": 1
   },
@@ -34,18 +23,24 @@
         "id": "marian.crisis.asset.background.001",
         "kind": "background",
         "path": "/assets/story/bg-contract-archive-v2.png",
-        "alt": "使われない霊安室の背景"
+        "alt": "契約保管庫の背景"
       }
     ]
   },
   "nodes": [
+    {
+      "type": "direction",
+      "id": "marian.crisis.node.direction.001",
+      "command": { "type": "background", "assetId": "marian.crisis.asset.background.001", "transition": "dissolve" }
+    },
     {
       "type": "line",
       "id": "marian.crisis.node.line.001",
       "lineId": "marian.crisis.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "アルデバラン社から届いた契約確認書には、マリアンの扱いを決める欄が残っていた。本人の意思を聞くため、使われない霊安室へ向かった。"
+      "text": "黒い角封筒。差出人、アルデバラン社・物語資産管理部。件名——「資産『奇跡』の常時稼働について」。本文。「救護室を二十四時間の奇跡サービス窓口へ改組します。休診日、および資産による治療拒否の権利は、廃止します」。",
+      "emotion": "tension"
     },
     {
       "type": "line",
@@ -53,8 +48,7 @@
       "lineId": "marian.crisis.line.002",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "その週、相手は私を避けた。廊下の向こうに姿を見つけても、業務用の言葉だけを残して先に曲がる。",
-      "emotion": "tension"
+      "text": "治療拒否権の廃止。つまり、「治しますか」と聞く権利の廃止だ。彼女がたった一つ持っている安全装置を、会社は事務用語一行で外そうとしていた。"
     },
     {
       "type": "line",
@@ -62,68 +56,58 @@
       "lineId": "marian.crisis.line.003",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "会社は倒れた選手を何度でも戻す契約を提示した。敗北も負傷もなくせる代わりに、本人が休む権利まで消える。"
+      "text": "改組の告知が出た週、救護室には行列ができた。癖毛を直したい人。若返りたい人。古い思い出の品を直したい人。奇跡の無料販売所に、人は際限なく並ぶ。マリアンは三日間、休みなく治し続けた。",
+      "emotion": "tension"
     },
     {
       "type": "line",
       "id": "marian.crisis.node.line.004",
       "lineId": "marian.crisis.line.004",
-      "speakerId": "legacy.speaker.quc8xa",
-      "speakerName": "マリアン",
-      "mode": "dialogue",
-      "text": "命令があれば禁じられた術を使えます。責任は所有者へ移る。"
-    },
-    {
-      "type": "direction",
-      "id": "marian.crisis.node.direction.001",
-      "command": {
-        "type": "background",
-        "assetId": "marian.crisis.asset.background.001",
-        "transition": "dissolve"
-      }
-    },
-    {
-      "type": "direction",
-      "id": "marian.crisis.node.direction.002",
-      "command": {
-        "type": "effect",
-        "effectId": "shake"
-      }
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "四日目の夜、彼女は霊安室にいた。花を活け替える手が、少し震えていた。診断するまでもない。休み不足。私が月一で判定される、あれの重症版だ。",
+      "emotion": "tension"
     },
     {
       "type": "line",
       "id": "marian.crisis.node.line.005",
       "lineId": "marian.crisis.line.005",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "マリアンの返事が短い。怒っている、と決めれば私の不安には名前がつく。でも以前の私も「救えるものを放っておけない優しい聖女なのだ」と決めつけた。また同じ読み違いをするところだった。",
-      "emotion": "tension"
+      "speakerId": "legacy.speaker.quc8xa",
+      "speakerName": "マリアン",
+      "mode": "dialogue",
+      "text": "……並んでいる人を、断れないのです。私が断った次の一人が、あの空のベッドの人だったら。……その考えが、頭から、離れない。"
     },
     {
       "type": "line",
       "id": "marian.crisis.node.line.006",
       "lineId": "marian.crisis.line.006",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "嫌われたのなら理由を聞けばいい。そう思うのに、治さずに残した契約印の薄い痕を見るたび、聞いた答えで今までの時間が変わるのが怖かった。"
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "マリアンさん。列を、見てきました。並んでいるのは、癖毛と、若返りと、思い出の品です。……あの日のような誰かは、並んでいません。あなたの怖い記憶が、列の全員を、あの人に見せているだけです。"
+    },
+    {
+      "type": "direction",
+      "id": "marian.crisis.node.direction.002",
+      "command": { "type": "effect", "effectId": "shake" }
     },
     {
       "type": "line",
       "id": "marian.crisis.node.line.007",
       "lineId": "marian.crisis.line.007",
-      "speakerId": "legacy.speaker.quc8xa",
-      "speakerName": "マリアン",
-      "mode": "dialogue",
-      "text": "命じられれば、誰も死なせません。誰も終われなくなります。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "言いすぎたか、と思った。でも彼女は、長い沈黙のあと、初めて診断される側の顔で言った。「……そう、ですね。私は、列の顔を、見ていませんでした。傷しか、見ていなかった」。治している間は、傷しか見えない。彼女自身が言っていた言葉だった。",
+      "emotion": "revelation"
     },
     {
       "type": "line",
       "id": "marian.crisis.node.line.008",
       "lineId": "marian.crisis.line.008",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "責任だけじゃなく、判断もあなたに返します。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "翌日、救護室に新しい札が掛かった。「本日の治療は、予約制です。緊急の方は、いつでも。緊急でない方は——まず、お話から」。会社の通告への、彼女なりの回答だった。",
+      "emotion": "resolve"
     },
     {
       "type": "line",
@@ -131,94 +115,26 @@
       "lineId": "marian.crisis.line.009",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ようやく追いついた場所で、マリアンは救える命を一つも見捨てず、終わりさえ治療する聖女に戻っていた。近づく前の、何も期待していなかった顔だ。"
+      "text": "そして、列の先頭の常連さん——毎週癖毛を直しに来ていたおじいさんに、彼女は初めて言った。「今日は、治しません。代わりに、教えてください。その癖毛、本当に、お嫌いですか」。おじいさんは十分話して、笑って、治さずに帰った。亡くなった奥さんが、その癖毛を好きだったそうだ。",
+      "emotion": "tender"
     },
     {
       "type": "line",
       "id": "marian.crisis.node.line.010",
       "lineId": "marian.crisis.line.010",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
+      "speakerId": "legacy.speaker.quc8xa",
+      "speakerName": "マリアン",
       "mode": "dialogue",
-      "text": "勝つたび生き返らせるチームなんて、強いんじゃなくて帰れないだけです。"
+      "text": "……治さないことで、守れるものが、本当にあるのですね。練習では、知っていました。今日、初めて、確かめました。"
     },
     {
       "type": "line",
       "id": "marian.crisis.node.line.011",
       "lineId": "marian.crisis.line.011",
-      "speakerId": "legacy.speaker.quc8xa",
-      "speakerName": "マリアン",
-      "mode": "dialogue",
-      "text": "それは治療より難しい。"
-    },
-    {
-      "type": "line",
-      "id": "marian.crisis.node.line.012",
-      "lineId": "marian.crisis.line.012",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "原因は私への不信ではない。助ける力で、本人が終える権利や休む権利まで奪うことから私を遠ざけようとしている。そのやさしさを、やさしいまま受け入れてはいけない気がした。",
-      "emotion": "revelation"
-    },
-    {
-      "type": "line",
-      "id": "marian.crisis.node.line.013",
-      "lineId": "marian.crisis.line.013",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "彼女は包帯を握り、白い布へ初めて深い皺を作った。"
-    },
-    {
-      "type": "line",
-      "id": "marian.crisis.node.line.014",
-      "lineId": "marian.crisis.line.014",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "菓子の割れ目まで蘇生してしまい、休憩のおやつが永遠に食べ終わらない。別れ話のように静かな場面なのに、施設全体は最終災害手順へ移行している。",
-      "emotion": "comic"
-    },
-    {
-      "type": "line",
-      "id": "marian.crisis.node.line.015",
-      "lineId": "marian.crisis.line.015",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "正しい答えを当てることより、間違えたまま命令しないことを選ぶ。私は逃げ道をふさがない位置で止まり、聞きたかったことを短い言葉にした。",
+      "text": "会社は「サービス低下」と通告してくるだろう。次の試合で、答えを形にする必要がある。",
       "emotion": "resolve"
-    },
-    {
-      "type": "line",
-      "id": "marian.crisis.node.line.016",
-      "lineId": "marian.crisis.line.016",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "守るために離れるのは、残された側へ選択を渡さない。命令と同じだと告げると、初めて相手の表情が崩れた。",
-      "emotion": "resolve"
-    },
-    {
-      "type": "line",
-      "id": "marian.crisis.node.line.017",
-      "lineId": "marian.crisis.line.017",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "勝つための答えと、あとで自分を嫌いにならない答えは、同じとは限らない。"
-    },
-    {
-      "type": "line",
-      "id": "marian.crisis.node.line.018",
-      "lineId": "marian.crisis.line.018",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "私は勝利を約束しない。安全も約束できない。ただ、治さない選択を怖がりながら、本人の返事を待てることを諦める判断だけは本人へ返すと決めた。"
-    },
-    {
-      "type": "line",
-      "id": "marian.crisis.node.line.019",
-      "lineId": "marian.crisis.line.019",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "並んで戻る廊下には、まだ一人分の距離がある。でも今度の沈黙は拒絶ではなく、同じ答えを考えるためのものだった。",
-      "emotion": "tender"
     },
     {
       "type": "choice",
@@ -227,56 +143,28 @@
         {
           "id": "marian.crisis.choice.001",
           "label": "味方の傷だけを正しく生へ戻す",
-          "result": "マリアンは味方三人の名だけを呼び、傷を正しい生へ戻した。祈りの範囲を自分で止めたことが、新しい力になった。",
-          "intent": "この人だけの突破法へ賭ける",
-          "promise": "予測しにくい方法を試し、この人専用の成長を大きく進める。",
-          "memory": "危機で選んだ方法は、契約を解く場面でも二人の共通の記憶として戻る。",
+          "result": "次の試合、味方が大技を受けて倒れた。会場が静まる中、マリアンは駆け寄って、まず、聞いた。「治しますか」。タオルの端が、握り返される。それから、コイン一枚ぶんの小さな陣が、必要な傷だけを閉じた。過剰でも、無断でもない治療を、満員の観客が見た。翌日の新聞の見出しは「聞いてから治す聖女」。物語資産管理部は、二十四時間営業の稟議を取り下げた。聞く時間は、省略できないからだ。",
+          "intent": "「聞いてから治す」を、満員の前で通す",
+          "promise": "危険を引き受け、この人専用の成長を最大まで進める。",
+          "memory": "満員の会場の「治しますか」を、チームの全員が覚えている。",
           "tone": "wild",
           "effects": [
-            {
-              "type": "relationship",
-              "target": {
-                "type": "fighter",
-                "fighterId": "marian"
-              },
-              "mode": "add",
-              "trust": 12,
-              "ownership": -10
-            },
-            {
-              "type": "fighterPoints",
-              "target": {
-                "type": "fighter",
-                "fighterId": "marian"
-              },
-              "amount": 6
-            }
+            { "type": "relationship", "target": { "type": "fighter", "fighterId": "marian" }, "mode": "add", "trust": 12, "ownership": -10 },
+            { "type": "fighterPoints", "target": { "type": "fighter", "fighterId": "marian" }, "amount": 6 }
           ],
           "goto": "marian.crisis.node.effect.001"
         },
         {
           "id": "marian.crisis.choice.002",
           "label": "敵の大技を一度『死んだこと』にする",
-          "result": "敵の大技を一度だけ死んだことにすると、光が静かに消えた。禁じられた術を全員で止められる回数制の手順へ変えられた。",
-          "intent": "全員が使える安全な突破法を作る",
-          "promise": "本人だけの切り札は抑え、チーム全体へ使える成長を持ち帰る。",
-          "memory": "全員で組み直した手順は、契約を解く場面でも選んだ責任として戻る。",
+          "result": "相手のエースの必殺技が放たれた瞬間、マリアンは静かに祈った。技の軌道だけが、生死の境の向こう側へ「亡くなった」。この世から一度だけ弔われた必殺技は、二度と戻らなかった。相手は真っ青になり、審判は前例集を三十分めくった。判定は「有効(ただし前例としない)」。会社はこの力の商品化を検討し、「弔いは売れない」という倫理部の一言で断念したという。",
+          "intent": "境を扱う力の、静かな怖さを一度だけ見せる",
+          "promise": "本人の重さは残るが、チーム全体へ使える成長を持ち帰る。",
+          "memory": "弔われた必殺技の判定文を、審判部は今も保管している。",
           "tone": "pragmatic",
           "effects": [
-            {
-              "type": "relationship",
-              "target": {
-                "type": "fighter",
-                "fighterId": "marian"
-              },
-              "mode": "add",
-              "trust": -2,
-              "ownership": 10
-            },
-            {
-              "type": "sharedPoints",
-              "amount": 6
-            }
+            { "type": "relationship", "target": { "type": "fighter", "fighterId": "marian" }, "mode": "add", "trust": -2, "ownership": 10 },
+            { "type": "sharedPoints", "amount": 6 }
           ],
           "goto": "marian.crisis.node.effect.001"
         }
@@ -286,16 +174,8 @@
       "type": "effect",
       "id": "marian.crisis.node.effect.001",
       "effects": [
-        {
-          "type": "setStoryStage",
-          "fighterId": "marian",
-          "stage": 5
-        },
-        {
-          "type": "setLiberationEligible",
-          "fighterId": "marian",
-          "eligible": true
-        }
+        { "type": "setStoryStage", "fighterId": "marian", "stage": 5 },
+        { "type": "setLiberationEligible", "fighterId": "marian", "eligible": true }
       ]
     },
     {
@@ -305,9 +185,9 @@
     }
   ],
   "debug": {
-    "status": "approved",
-    "sourceDocument": "native narrative block migration",
-    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "status": "review",
+    "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
+    "authorNote": "v2改稿: 黒い角封筒=奇跡の24時間営業・治療拒否権の廃止(Q2、canon: 休む権利まで消す契約を拒む)。癖毛のおじいさんの「治さない」初実践。",
     "legacyGeneratedIds": false
   }
 }

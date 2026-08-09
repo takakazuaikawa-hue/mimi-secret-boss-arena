@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "id": "mumyo.meet",
   "kind": "character",
-  "title": "最初の遭遇",
-  "summary": "景品展示室で起きる「最初の遭遇」",
+  "title": "鏡の中に、立つ人",
+  "summary": "景品展示室の飾り気のない剣と、鏡にだけ映る黒髪の人物",
   "ownership": {
     "arcId": "character.mumyo",
     "characterId": "mumyo",
@@ -44,39 +44,6 @@
   },
   "nodes": [
     {
-      "type": "line",
-      "id": "mumyo.meet.node.line.001",
-      "lineId": "mumyo.meet.line.001",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "今週の用事で景品展示室へ立ち寄った。予定どおりなら、目の前の用事を済ませて帰るだけのはずだった。"
-    },
-    {
-      "type": "line",
-      "id": "mumyo.meet.node.line.002",
-      "lineId": "mumyo.meet.line.002",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "その日、最初に目へ入ったのは開いた展示ケース、割れた鏡、鞘から一寸だけ覗く刃だった。人より先に、その人の孤独だけが場所を取っていた。"
-    },
-    {
-      "type": "line",
-      "id": "mumyo.meet.node.line.003",
-      "lineId": "mumyo.meet.line.003",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "景品展示室のガラスケースに、飾り気のない剣が一本ある。正面には剣だけ、背後の鏡には黒髪の人物が立っていた。"
-    },
-    {
-      "type": "line",
-      "id": "mumyo.meet.node.line.004",
-      "lineId": "mumyo.meet.line.004",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "この剣、鏡だと人が立って見える。"
-    },
-    {
       "type": "direction",
       "id": "mumyo.meet.node.direction.001",
       "command": {
@@ -86,11 +53,54 @@
       }
     },
     {
+      "type": "line",
+      "id": "mumyo.meet.node.line.001",
+      "lineId": "mumyo.meet.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "景品展示室の一番奥に、豪華な景品たちから少し離れて、飾り気のない剣が一本ある。台座の説明書きは「景品番号・零」。名前の欄は、空白だった。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.meet.node.line.002",
+      "lineId": "mumyo.meet.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "気づいたのは、ケースの背面の鏡を見た時だ。鏡の中には、剣が映っていなかった。代わりに、黒髪の人物が一人、静かに立っていた。現実には剣。鏡の中には、人。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.meet.node.line.003",
+      "lineId": "mumyo.meet.line.003",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "……こんにちは。えっと、どちらに向かって話せば、失礼じゃないですか。剣の方? 鏡の方?"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.meet.node.line.004",
+      "lineId": "mumyo.meet.line.004",
+      "speakerId": "legacy.speaker.1whk6fw",
+      "speakerName": "無銘",
+      "mode": "dialogue",
+      "text": "……初めてだ。その質問は。皆、剣に話す。命令は、剣にするものだから。"
+    },
+    {
       "type": "direction",
       "id": "mumyo.meet.node.direction.002",
       "command": {
+        "type": "still",
+        "assetId": "mumyo.meet.asset.still.001"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "mumyo.meet.node.direction.003",
+      "command": {
         "type": "effect",
-        "effectId": "flash"
+        "effectId": "pulse"
       }
     },
     {
@@ -99,51 +109,35 @@
       "lineId": "mumyo.meet.line.005",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ここへ来た理由は、ごく普通の用事だった。けれど無銘を見た瞬間、兎耳だけが先に危険を知らせる。私はとっさに、強い所有者を待つ、まだ目覚めていない武器なのだと思いかけた。",
-      "emotion": "comic"
-    },
-    {
-      "type": "direction",
-      "id": "mumyo.meet.node.direction.003",
-      "command": {
-        "type": "still",
-        "assetId": "mumyo.meet.asset.still.001"
-      }
-    },
-    {
-      "type": "direction",
-      "id": "mumyo.meet.node.direction.004",
-      "command": {
-        "type": "effect",
-        "effectId": "pulse"
-      }
+      "text": "声は鏡の方から来た。低く、静かで、長く使われていない声だった。名前を聞くと、鏡の人物は首を横に振った。「名はない」。それから、鞘を手で隠すようにした。鞘には、びっしりと名前が刻まれていた——歴代の、所有者の名前が。",
+      "emotion": "revelation"
     },
     {
       "type": "line",
       "id": "mumyo.meet.node.line.006",
       "lineId": "mumyo.meet.line.006",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "声をかけるべきか迷っている間に、視線だけが一度重なる。胸が跳ねたのは見た目のせいではない。見つけてはいけない何かを、向こうも隠さなかったからだ。",
-      "emotion": "tension"
+      "speakerId": "legacy.speaker.1whk6fw",
+      "speakerName": "無銘",
+      "mode": "dialogue",
+      "text": "彼らの名は、ある。私を握った者の名は、全部ここに残る。……私の名を彫る場所は、この鞘のどこにもない。"
     },
     {
       "type": "line",
       "id": "mumyo.meet.node.line.007",
       "lineId": "mumyo.meet.line.007",
-      "speakerId": "legacy.speaker.1whk6fw",
-      "speakerName": "無銘",
-      "mode": "dialogue",
-      "text": "名を。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "好奇心で、ケースの説明書きを読み上げてしまった。「持ち主の望む姿と名を映し、最強の武器として完成する——」。読み終わる前に、鏡の人物が目を伏せた。褒め言葉のはずの一文が、この人には、たぶん一番長い呪いだった。",
+      "emotion": "tension"
     },
     {
       "type": "line",
       "id": "mumyo.meet.node.line.008",
       "lineId": "mumyo.meet.line.008",
-      "speakerId": "legacy.speaker.1whk6fw",
-      "speakerName": "無銘",
-      "mode": "dialogue",
-      "text": "名はない。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "その時、隣の団体客がケースにぶつかって、剣が台座の上で一寸だけ揺れた。刃が、ほんの一寸、鞘から覗く。——瞬間、展示室中の鏡という鏡に、燃える王都と、沈む城と、月を噛む竜が同時に映った。十四の時代の、十四の最終決戦。",
+      "emotion": "tension"
     },
     {
       "type": "line",
@@ -151,93 +145,17 @@
       "lineId": "mumyo.meet.line.009",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "無銘は、持ち主の望む姿と名を映し、最強の武器として完成する剣に見えた。だから私は、普通のお客様へするのと同じ声で話しかけることにした。"
+      "text": "刃が納まると、全部消えた。団体客は何も見ていない。私だけが腰を抜かしかけていて、鏡の人物は、世界の終わりを十四個しまい終えた顔で、私の方を見た。「……驚かせた。すまない」。謝る最強の武器を、私はこの日、初めて見た。",
+      "emotion": "comic"
     },
     {
       "type": "line",
       "id": "mumyo.meet.node.line.010",
       "lineId": "mumyo.meet.line.010",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "私はミミです。あなたの名前も聞いていいですか。"
-    },
-    {
-      "type": "line",
-      "id": "mumyo.meet.node.line.011",
-      "lineId": "mumyo.meet.line.011",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "今、鏡の中の人が答えた。"
-    },
-    {
-      "type": "line",
-      "id": "mumyo.meet.node.line.012",
-      "lineId": "mumyo.meet.line.012",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "たった一言の返事を待つ時間が、試合開始前より長い。背後ではいつもの業務放送が流れ、この場所だけが別の物語の入口みたいに静かだった。"
-    },
-    {
-      "type": "line",
-      "id": "mumyo.meet.node.line.013",
-      "lineId": "mumyo.meet.line.013",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "鏡の人物は答えず、鞘に刻まれた無数の所有者名を手で隠した。最後の空欄だけが白く残った。"
-    },
-    {
-      "type": "line",
-      "id": "mumyo.meet.node.line.014",
-      "lineId": "mumyo.meet.line.014",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "一寸抜けるだけで歴代勇者の時代が同時に映り、展示室が最終決戦を十四回始める。それでも本人が気にしたのは、私が一歩引いたことの方だった。",
-      "emotion": "comic"
-    },
-    {
-      "type": "line",
-      "id": "mumyo.meet.node.line.015",
-      "lineId": "mumyo.meet.line.015",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "まだ事情はほとんど分からない。ただ、最初の考えだけでは説明できない表情を見てしまった。私は曲がった名札を直し、次に会う口実をひとつ残した。",
+      "text": "怖くないと言えば嘘になる。でも、この人が最初に守ったのは自分の評判ではなく、通りすがりの団体客と、腰を抜かしかけた私だった。名札を直して、私は次に来る口実を考え始めていた。",
       "emotion": "tender"
-    },
-    {
-      "type": "line",
-      "id": "mumyo.meet.node.line.016",
-      "lineId": "mumyo.meet.line.016",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "怖くないと言えば嘘になる。でも、怖さの奥に自分の声だと思ったものまで、歴代所有者の願いの残響であることがある気がして、目をそらす方が失礼に思えた。",
-      "emotion": "revelation"
-    },
-    {
-      "type": "line",
-      "id": "mumyo.meet.node.line.017",
-      "lineId": "mumyo.meet.line.017",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "事情はまだ分からない。でも、ここで立ち去れば、たぶん後悔する。"
-    },
-    {
-      "type": "line",
-      "id": "mumyo.meet.node.line.018",
-      "lineId": "mumyo.meet.line.018",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "名前を聞いただけ。約束も、契約も、まだ何もない。それなのに別れ際、次に会った時の言葉を考えている自分がいた。",
-      "emotion": "tender"
-    },
-    {
-      "type": "line",
-      "id": "mumyo.meet.node.line.019",
-      "lineId": "mumyo.meet.line.019",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "その場に残った値札も所有者欄も外された空の展示ケースを見て、私は今日の出来事を勤務報告の一行だけでは終わらせられないと知った。"
     },
     {
       "type": "choice",
@@ -246,7 +164,7 @@
         {
           "id": "mumyo.meet.choice.001",
           "label": "鏡の中の本人へ先に名乗る",
-          "result": "剣は動かなかった。でも、鏡の人物には私の名を覚えられた。",
+          "result": "剣にではなく、鏡に向かって名乗った。「ミミです。闘技場の運営です。あなたは?」。答えは分かっていて、それでも聞いた。鏡の人物は少し考えて、答えた。「名はない。……が、覚えた。ミミ。私に名乗った、最初の人だ」。現実の剣は動かなかった。でも鏡の中で、黒髪の人が一歩、こちらへ近づいた。",
           "intent": "登録の前に、目の前の相手を知る",
           "promise": "目先の報酬は得ない代わりに、相手が何を望んでいるかを確かめる。",
           "memory": "手続きより先に話を聞いたことを、相手は最初の印象として覚えている。",
@@ -268,7 +186,7 @@
         {
           "id": "mumyo.meet.choice.002",
           "label": "今日は無銘を誘わず、用事へ戻る",
-          "result": "無銘の名前と出会った場所だけを覚え、今日は普段の仕事へ戻った。急いで所属を決めなかったことが、次に会う時の距離として残った。",
+          "result": "今日は名前の空白と、鏡の中の立ち姿だけを覚えて帰った。去り際に一度だけ振り返ると、鏡の人物はまだこちらを見ていた。展示ケースの中の存在に見送られたのは、初めてだった。",
           "intent": "今は勧誘せず、相手との距離を保つ",
           "promise": "所属選手にはならないが、後の出来事で再会できる。",
           "memory": "最初の出会いで急いで仲間にしなかったことが、次の再会へ残る。",
@@ -301,9 +219,9 @@
     }
   ],
   "debug": {
-    "status": "approved",
-    "sourceDocument": "native narrative block migration",
-    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "status": "review",
+    "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
+    "authorNote": "v2改稿: 鏡にだけ映る本人。鞘の所有者名と自分の名の不在。謝る最強の武器。静かな筆致。",
     "legacyGeneratedIds": false
   }
 }

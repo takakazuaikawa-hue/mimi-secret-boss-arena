@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "id": "rinne.bond",
   "kind": "character",
-  "title": "チームの日常",
-  "summary": "賭場で起きる「チームの日常」",
+  "title": "夜市と、当てない射的",
+  "summary": "雨上がりの夜市デート。一度も当てずに景品を取る人",
   "ownership": {
     "arcId": "character.rinne",
     "characterId": "rinne",
@@ -31,45 +31,11 @@
         "id": "rinne.bond.asset.background.001",
         "kind": "background",
         "path": "/assets/story/bg-casino-cafe-rain.png",
-        "alt": "賭場の背景"
+        "alt": "雨の賭場の背景"
       }
     ]
   },
   "nodes": [
-    {
-      "type": "line",
-      "id": "rinne.bond.node.line.001",
-      "lineId": "rinne.bond.line.001",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "リンネがチームに加わってから、賭場で顔を合わせることが増えた。今日は試合の話ではなく、少しだけ時間が空いている。"
-    },
-    {
-      "type": "line",
-      "id": "rinne.bond.node.line.002",
-      "lineId": "rinne.bond.line.002",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "試合のない午後。窓を雨が細く叩き、業務連絡も歓声も今日は遠い。二人きりになる予定ではなかったのに、空いている席は向かいだけだった。",
-      "emotion": "tender"
-    },
-    {
-      "type": "line",
-      "id": "rinne.bond.node.line.003",
-      "lineId": "rinne.bond.line.003",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "夜市の射的で、彼女は一度も当てないまま欲しい景品を取った。外れる場所だけを撃ち、店主が根負けしたらしい。"
-    },
-    {
-      "type": "line",
-      "id": "rinne.bond.node.line.004",
-      "lineId": "rinne.bond.line.004",
-      "speakerId": "legacy.speaker.1vpt9ol",
-      "speakerName": "リンネ",
-      "mode": "dialogue",
-      "text": "今日は当たりが見えない。"
-    },
     {
       "type": "direction",
       "id": "rinne.bond.node.direction.001",
@@ -78,6 +44,50 @@
         "assetId": "rinne.bond.asset.background.001",
         "transition": "dissolve"
       }
+    },
+    {
+      "type": "line",
+      "id": "rinne.bond.node.line.001",
+      "lineId": "rinne.bond.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "試合のない雨の午後、賭場でリンネに捕まった。「雨、あと四十分で上がる。上がったら夜市が出る。付き合って」。未来視の使い方が、完全に天気予報とお出かけの誘いだった。世界を左右する力の、正しい浪費だと思う。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.bond.node.line.002",
+      "lineId": "rinne.bond.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "予報どおり雨は上がり、闘技場の裏通りに夜市が伸びた。提灯、揚げ物の湯気、くじ屋の口上。リンネは屋台の間を、店が損をする未来だけ器用に避けながら歩く。だから彼女の通った後は、なぜかどの店主も機嫌がいい。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "rinne.bond.node.line.003",
+      "lineId": "rinne.bond.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "事件は射的屋で起きた。リンネは五発撃って、五発とも外した。全部、狙って外した。景品の兎のぬいぐるみの、周りの空白だけを正確に撃ち続けたのだ。六発目を構えたところで、店主が根負けした。「もう持ってけ! 頼むから他の店に行ってくれ!」。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "rinne.bond.node.line.004",
+      "lineId": "rinne.bond.line.004",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "未来が見えるなら、一発で当てた方が早くないですか。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.bond.node.line.005",
+      "lineId": "rinne.bond.line.005",
+      "speakerId": "legacy.speaker.1vpt9ol",
+      "speakerName": "リンネ",
+      "mode": "dialogue",
+      "text": "当たる未来は退屈なんだよ。結果が最初から見えてる的を撃つのは、答えを写すのと同じ。外しながら別の勝ち方を探す方が、ずっと面白い。"
     },
     {
       "type": "direction",
@@ -89,38 +99,30 @@
     },
     {
       "type": "line",
-      "id": "rinne.bond.node.line.005",
-      "lineId": "rinne.bond.line.005",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "試合も契約もない時間なら、もっと気楽に話せると思っていた。実際は、お茶を一口飲むたび沈黙の意味を考えてしまう。強さを見ている時より、リンネの小さな癖のほうがずっと気になった。",
-      "emotion": "comic"
-    },
-    {
-      "type": "line",
       "id": "rinne.bond.node.line.006",
       "lineId": "rinne.bond.line.006",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "空のコイン、外れ続けるルーレット、温かい飲み物の最後の一口。戦場では見落としていた小さな癖が、何も起きない時間ほどよく見える。"
+      "text": "彼女は戦利品の兎を、当然のように私へ渡した。「はい。あんたの」。自分は何も得ていないのに、今夜いちばん楽しそうな顔で笑う。提灯の灯りの下でそれを見て、私は兎を受け取る手が少し遅れた。心の準備というものがある。",
+      "emotion": "tender"
     },
     {
       "type": "line",
       "id": "rinne.bond.node.line.007",
       "lineId": "rinne.bond.line.007",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "未来が見えるなら、一発で当てた方が早くないですか。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "帰り道、屋台のくじ屋の前で、彼女がふと立ち止まった。「私さ、負けを笑って次へ行くの、得意でしょ。あれ、特技じゃないよ。失くしたものを惜しむ時間を、自分にあげないだけ」。声は軽かった。軽い声で言う練習を、たくさんしてきた軽さだった。",
+      "emotion": "revelation"
     },
     {
       "type": "line",
       "id": "rinne.bond.node.line.008",
       "lineId": "rinne.bond.line.008",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
+      "speakerId": "legacy.speaker.1vpt9ol",
+      "speakerName": "リンネ",
       "mode": "dialogue",
-      "text": "休めってことでは？"
+      "text": "だからね、ほしいものは実は、ずっと一つだけ。当たり外れのない約束を、一度だけ信じて、待ってみること。……ほら、笑って。今の、たぶんこの夜市で一番地味な願い事だから。"
     },
     {
       "type": "line",
@@ -128,95 +130,17 @@
       "lineId": "rinne.bond.line.009",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "リンネは持っていないものまで賭け、負けを笑って次へ進む勝負師。そのはずなのに、私の休憩が終わる時刻を気にして、話題を一つずつ短くしている。",
-      "emotion": "revelation"
+      "text": "笑えなかった。代わりに、それは私が叶えるものではないけれど、叶うまで隣にいることならできる——と言いかけて、揚げ物の屋台の煙に、盛大にむせた。人生で一番大事な台詞の、一番ひどい中断だった。リンネは今度こそ、声を上げて笑った。",
+      "emotion": "comic"
     },
     {
       "type": "line",
       "id": "rinne.bond.node.line.010",
       "lineId": "rinne.bond.line.010",
-      "speakerId": "legacy.speaker.1vpt9ol",
-      "speakerName": "リンネ",
-      "mode": "dialogue",
-      "text": "当たる未来は退屈なんだよ。外れを避けながら、別の勝ち方を探す方が面白い。"
-    },
-    {
-      "type": "line",
-      "id": "rinne.bond.node.line.011",
-      "lineId": "rinne.bond.line.011",
-      "speakerId": "legacy.speaker.1vpt9ol",
-      "speakerName": "リンネ",
-      "mode": "dialogue",
-      "text": "なるほど。それは一番見落としやすい当たりだ。"
-    },
-    {
-      "type": "line",
-      "id": "rinne.bond.node.line.012",
-      "lineId": "rinne.bond.line.012",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "特別な話をしなくても、同じ音を聞いていられる。そんな時間が欲しかったのだと、失う前から気づいてしまった。"
-    },
-    {
-      "type": "line",
-      "id": "rinne.bond.node.line.013",
-      "lineId": "rinne.bond.line.013",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "景品の小さな兎を私へ渡し、彼女は何も得なかった顔でいちばん楽しそうに笑った。"
-    },
-    {
-      "type": "line",
-      "id": "rinne.bond.node.line.014",
-      "lineId": "rinne.bond.line.014",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "コインの裏表を外すたび別世界の確率が帳尻を合わせ、遠い王国が優勝する。甘い空気になりかけるたび、世界の方が先に耐えられなくなる。",
-      "emotion": "comic"
-    },
-    {
-      "type": "line",
-      "id": "rinne.bond.node.line.015",
-      "lineId": "rinne.bond.line.015",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "笑って次へ進む速さは、失ったものを惜しむ時間を自分へ与えないためでもあった。そう気づくと、何も起きなかった午後が急に大事な出来事へ変わった。",
-      "emotion": "tender"
-    },
-    {
-      "type": "line",
-      "id": "rinne.bond.node.line.016",
-      "lineId": "rinne.bond.line.016",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "笑いが収まったあと、当たり外れのない約束を、一度だけ信じて待つことという、驚くほど普通の望みが語られた。",
-      "emotion": "tender"
-    },
-    {
-      "type": "line",
-      "id": "rinne.bond.node.line.017",
-      "lineId": "rinne.bond.line.017",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "試合の外で交わした言葉のほうが、次の指示より長く残ることがある。"
-    },
-    {
-      "type": "line",
-      "id": "rinne.bond.node.line.018",
-      "lineId": "rinne.bond.line.018",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "それは私が叶えるものではない。ただ、叶うまで隣にいることならできる。そう言いかけて、言葉にする勇気だけが遅れた。",
-      "emotion": "tension"
-    },
-    {
-      "type": "line",
-      "id": "rinne.bond.node.line.019",
-      "lineId": "rinne.bond.line.019",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "使わずにポケットへ残した一枚の空コインを間に置いたまま、私たちは雨が止んでもしばらく席を立たなかった。",
-      "emotion": "tender"
+      "text": "夜市の終わりに、くじ屋の前で締めを決める。",
+      "emotion": "resolve"
     },
     {
       "type": "choice",
@@ -225,7 +149,7 @@
         {
           "id": "rinne.bond.choice.001",
           "label": "当たりを聞かず、夜市のくじを一枚ずつ引く",
-          "result": "二人とも外れた。リンネは結果より、私が途中で聞かなかったことを嬉しそうに覚えていた。",
+          "result": "「見ないでよ」と釘を刺して、二人で一枚ずつ引いた。結果、二人とも外れ。景品はティッシュ一つずつ。なのにリンネは、外れくじを大事そうに財布へしまった。「初めてだ。結果を知らないまま引いて、知らないまま外れた。……くじって、こんなにドキドキするんだね」。未来の見える人の初めての外れくじが、今夜の夜市の、一番の当たりだった。",
           "intent": "相手の秘密の勝ち方を試す",
           "promise": "読みにくい作戦になる代わりに、この人だけの成長を大きく進める。",
           "memory": "任せた一戦の手応えが、次に力を見せる理由になる。",
@@ -255,7 +179,7 @@
         {
           "id": "rinne.bond.choice.002",
           "label": "次戦の勝率を、三人の役割ごとに計算する",
-          "result": "数字は上がったが、最良の組み合わせだけが本人の予想と違った。そこから新しい作戦が生まれた。",
+          "result": "夜市の帰りに賭場へ寄って、次戦の役割別勝率をリンネと計算した。数字は綺麗に上がった。ただ、最良の組み合わせだけが、彼女の見た未来と食い違った。「面白い。私の見てない未来を、あんたの計算が指してる」。予知と算数の隙間から、新しい作戦がひとつ生まれた。",
           "intent": "チームの新しい連携を試す",
           "promise": "本人の流儀は崩すが、全員へ配れる成長ポイントを得る。",
           "memory": "成功した作戦と短くなった会話の両方が、次の判断まで残る。",
@@ -298,9 +222,9 @@
     }
   ],
   "debug": {
-    "status": "approved",
-    "sourceDocument": "native narrative block migration",
-    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "status": "review",
+    "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
+    "authorNote": "v2改稿: 夜市デート。狙って外す射的、兎の景品、地味で切実な願い(当たり外れのない約束)。",
     "legacyGeneratedIds": false
   }
 }

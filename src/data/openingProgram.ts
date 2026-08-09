@@ -83,8 +83,9 @@ export const openingProgram: ProgramAct[] = [
   {
     act: 10,
     title: "救護席は舞台袖に(出番がないことが、演目です)",
+    note: "相談は、いつでも",
     fighterId: "marian",
-    status: "draft",
+    status: "final",
   },
   {
     act: 11,
@@ -103,20 +104,23 @@ export const openingProgram: ProgramAct[] = [
   {
     act: 13,
     title: "お化け屋敷ではありません(出口は全部正解)",
+    note: "当日は全フロア休業。客席で観ます",
     fighterId: "room-seventeen",
-    status: "draft",
+    status: "final",
   },
   {
     act: 14,
-    title: "結果を見ないビンゴ大会",
+    title: "元手ゼロ杯・持っていないもの選手権",
+    note: "賭けたのは、まだない物ばかり",
     fighterId: "rinne",
-    status: "draft",
+    status: "final",
   },
   {
     act: 15,
     title: "抜かない居合、十四連続",
+    note: "刃は、見せません",
     fighterId: "mumyo",
-    status: "draft",
+    status: "final",
   },
 ];
 

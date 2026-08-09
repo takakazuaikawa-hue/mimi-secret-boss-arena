@@ -204,6 +204,15 @@
     },
     {
       "type": "line",
+      "id": "mumyo.epilogue.node.line.020",
+      "lineId": "mumyo.epilogue.line.020",
+      "speakerId": "mumyo",
+      "speakerName": "無銘",
+      "mode": "dialogue",
+      "text": "演目表の出演届は、出しておいた。演目名は「抜かない居合、十四連続」。……刃は、見せない。納める方を、見せる。"
+    },
+    {
+      "type": "line",
       "id": "mumyo.epilogue.node.line.019",
       "lineId": "mumyo.epilogue.line.019",
       "speakerId": "narrator",
@@ -218,9 +227,9 @@
     }
   ],
   "debug": {
-    "status": "approved",
-    "sourceDocument": "native narrative block migration",
-    "authorNote": "正式IDへ移行済み。所有されず自分で用途と行き先を選ぶ無銘の後日談を正本とする。",
+    "status": "review",
+    "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
+    "authorNote": "承認済み本文(所有者なし搬出式)を保持し、出演届の一行のみ追加して演目表へ接続。",
     "legacyGeneratedIds": false
   }
 }

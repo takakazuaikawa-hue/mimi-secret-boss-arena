@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "id": "rinne.power",
   "kind": "character",
-  "title": "取り戻す力",
-  "summary": "閉店後のルーレットで起きる「取り戻す力」",
+  "title": "閉店後の、確率の海",
+  "summary": "無数の未来の軌道と、床に立ったコイン",
   "ownership": {
     "arcId": "character.rinne",
     "characterId": "rinne",
@@ -38,40 +38,6 @@
   },
   "nodes": [
     {
-      "type": "line",
-      "id": "rinne.power.node.line.001",
-      "lineId": "rinne.power.line.001",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "練習のあと、リンネに呼ばれて閉店後のルーレットまで来た。いつもの力では足りない理由を、見せたいらしい。"
-    },
-    {
-      "type": "line",
-      "id": "rinne.power.node.line.002",
-      "lineId": "rinne.power.line.002",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "警報より先に、相手の声が私の名を呼んだ。いつもと同じ呼び方なのに、その一音だけで足が止まる。",
-      "emotion": "tension"
-    },
-    {
-      "type": "line",
-      "id": "rinne.power.node.line.003",
-      "lineId": "rinne.power.line.003",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "彼女がコインを弾くと、空中へ無数の軌道が光った。落ちる前から表と裏が決まり、その外側に細い第三の道がある。"
-    },
-    {
-      "type": "line",
-      "id": "rinne.power.node.line.004",
-      "lineId": "rinne.power.line.004",
-      "speakerId": "legacy.speaker.1vpt9ol",
-      "speakerName": "リンネ",
-      "mode": "dialogue",
-      "text": "確率は変えない。外れの方を選ばないだけ。"
-    },
-    {
       "type": "direction",
       "id": "rinne.power.node.direction.001",
       "command": {
@@ -79,6 +45,23 @@
         "assetId": "rinne.power.asset.background.001",
         "transition": "dissolve"
       }
+    },
+    {
+      "type": "line",
+      "id": "rinne.power.node.line.001",
+      "lineId": "rinne.power.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "夜、閉店後のカジノに呼び出された。無人のホールで、ルーレットが一台だけ、誰も回していないのに回っている。その前にリンネが立っていた。「見せておく。次の強敵戦の前に。私の力の、本当の大きさ」。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.power.node.line.002",
+      "lineId": "rinne.power.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "彼女がコインを弾いた。その瞬間、暗いホール全体に、無数の光の軌道が咲いた。落ちる場所、跳ねる角度、表になる未来、裏になる未来——コイン一枚の全部の運命が、花火みたいに枝分かれして宙に描かれている。",
+      "emotion": "tension"
     },
     {
       "type": "direction",
@@ -90,38 +73,57 @@
     },
     {
       "type": "line",
-      "id": "rinne.power.node.line.005",
-      "lineId": "rinne.power.line.005",
+      "id": "rinne.power.node.line.003",
+      "lineId": "rinne.power.line.003",
+      "speakerId": "legacy.speaker.1vpt9ol",
+      "speakerName": "リンネ",
+      "mode": "dialogue",
+      "text": "確率は変えない。私はただ、外れの方を選ばないだけ。……でもね、それを一生続けると、どうなると思う? 選ばなかった外れが全部、どこにも行けずに、後ろに並ぶんだよ。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.power.node.line.004",
+      "lineId": "rinne.power.line.004",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "コインの裏表を外すたび別世界の確率が帳尻を合わせ、遠い王国が優勝する。そんな力が、目の前で息をしている。逃げる理由なら十分だった。それでも私は、力の大きさよりリンネが最初にどこを見るのかを確かめたかった。",
-      "emotion": "tension"
+      "text": "光の軌道の向こうに、それが見えた気がした。彼女が避け続けてきた無数の負けが、静かな行列になって、彼女の背中を待っている。最強の未来視の正体は、一度も清算していない外れ券の山だった。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "rinne.power.node.line.005",
+      "lineId": "rinne.power.line.005",
+      "speakerId": "legacy.speaker.1vpt9ol",
+      "speakerName": "リンネ",
+      "mode": "dialogue",
+      "text": "本気で選べば、勝ち続けられる。大会も、その先も、全部。ただし私がコインの裏表を外すたび、世界のどこかで確率が帳尻を合わせる。前は、遠い王国が理由もなく優勝した。……怖い?"
     },
     {
       "type": "line",
       "id": "rinne.power.node.line.006",
       "lineId": "rinne.power.line.006",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "リンネが私と危険の間へ立つ。触れてはいない。それでも、こちらへ届くはずだった圧力だけがきれいに二つへ割れた。"
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "怖いです。でも、いま怖いのは力の大きさじゃなくて——あなたが今夜、それを一人で見せようとしたことの方です。"
     },
     {
       "type": "line",
       "id": "rinne.power.node.line.007",
       "lineId": "rinne.power.line.007",
-      "speakerId": "legacy.speaker.1vpt9ol",
-      "speakerName": "リンネ",
-      "mode": "dialogue",
-      "text": "強い未来は選べる。でも選び続けると、選ばなかった全部が追いついてくる。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "軌道の光が、少し揺れた。彼女は勝つためではなく、私を怖がらせないために、ずっと力を絞っていた。それを知ってしまったら、逃げる選択肢は、私の中の確率表から消えた。",
+      "emotion": "tender"
     },
     {
       "type": "line",
       "id": "rinne.power.node.line.008",
       "lineId": "rinne.power.line.008",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "同じことじゃない？"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "そのとき、投げられたままだったコインが落ちてきて——床に、立った。表でも裏でもなく、細い縁で。リンネが目を丸くした。「……これは、見えてなかった」。全部見える人の見ていなかった結果を、二人でしばらく眺めて、それからどちらからともなく笑った。",
+      "emotion": "comic"
     },
     {
       "type": "line",
@@ -129,94 +131,8 @@
       "lineId": "rinne.power.line.009",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "持っていないものまで賭け、負けを笑って次へ進む勝負師。けれど今見せている力は、勝つためではなく、私を怖がらせないために抑えられている。",
-      "emotion": "revelation"
-    },
-    {
-      "type": "line",
-      "id": "rinne.power.node.line.010",
-      "lineId": "rinne.power.line.010",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "では、外れた時に笑える未来を残しましょう。"
-    },
-    {
-      "type": "line",
-      "id": "rinne.power.node.line.011",
-      "lineId": "rinne.power.line.011",
-      "speakerId": "legacy.speaker.1vpt9ol",
-      "speakerName": "リンネ",
-      "mode": "dialogue",
-      "text": "責任の所在が違う。"
-    },
-    {
-      "type": "line",
-      "id": "rinne.power.node.line.012",
-      "lineId": "rinne.power.line.012",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "本気を見たいと思っていた。実際に目の前へ現れると、知りたかったのは強さではなく、その力を本人がどう恐れているかだった。"
-    },
-    {
-      "type": "line",
-      "id": "rinne.power.node.line.013",
-      "lineId": "rinne.power.line.013",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "コインは床へ立った。彼女でさえ見ていなかった結果に、二人でしばらく笑った。"
-    },
-    {
-      "type": "line",
-      "id": "rinne.power.node.line.014",
-      "lineId": "rinne.power.line.014",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "コインの裏表を外すたび別世界の確率が帳尻を合わせ、遠い王国が優勝する。闘技場の安全基準は一瞬で役に立たなくなり、担当者は私の顔を見て計測を諦めた。",
-      "emotion": "comic"
-    },
-    {
-      "type": "line",
-      "id": "rinne.power.node.line.015",
-      "lineId": "rinne.power.line.015",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "世界を壊せることより、壊さないために何を選んだかが胸へ残った。笑って次へ進む速さは、失ったものを惜しむ時間を自分へ与えないためでもあった。その理解が正しいか、いつか本人の言葉で確かめたい。",
-      "emotion": "revelation"
-    },
-    {
-      "type": "line",
-      "id": "rinne.power.node.line.016",
-      "lineId": "rinne.power.line.016",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "力の中心にあったのは、賭けなければ誰にも選ばれず、賭ければ大切なものを自分から失うこと。最強であることが、本人にとって一番古い傷なのだと分かる。",
-      "emotion": "revelation"
-    },
-    {
-      "type": "line",
-      "id": "rinne.power.node.line.017",
-      "lineId": "rinne.power.line.017",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "怖さが消えたわけではない。だからこそ、使うかどうかを本人と決める必要がある。"
-    },
-    {
-      "type": "line",
-      "id": "rinne.power.node.line.018",
-      "lineId": "rinne.power.line.018",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "大丈夫とは言えない。怖いものは怖い。それでも、次に力を使う時は一人で決めなくていいと伝えた。",
+      "text": "大丈夫、とは言わなかった。怖いものは怖い。ただ、次にこの力を使う時は、一人で決めなくていい——それだけ伝えて、力の使い方の相談に入った。",
       "emotion": "resolve"
-    },
-    {
-      "type": "line",
-      "id": "rinne.power.node.line.019",
-      "lineId": "rinne.power.line.019",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "使わずにポケットへ残した一枚の空コインだけが元の大きさで残り、さっきまで世界の終わりがいた場所に、帰り道の灯りが戻った。"
     },
     {
       "type": "choice",
@@ -225,7 +141,7 @@
         {
           "id": "rinne.power.choice.001",
           "label": "勝率ゼロの未来へ、本人と一枚だけ賭ける",
-          "result": "表示は最後までゼロだった。それでも一枚の札が裏返り、存在しなかったはずの勝ち筋が一度だけ開いた。",
+          "result": "彼女の視界の隅には、勝率ゼロと表示されて誰にも選ばれない未来が、いつも一つ転がっているという。「じゃあ、それに賭けましょう。二人で、一枚だけ」。表示は最後までゼロだった。それでも札は裏返った。理屈は今も不明である。リンネは札を高く掲げて言った。「ゼロを引いたの、転生して初めて! ……ねえ、これ、額に入れていい?」。入れた。チームの控室に、勝率ゼロの当たり札が飾ってある。",
           "intent": "本来の力を一気に取り戻す",
           "promise": "失敗時の危険を引き受け、この人専用の成長を最大まで進める。",
           "memory": "力を恐れたまま任せたことを、相手は危機の場面で思い出す。",
@@ -255,7 +171,7 @@
         {
           "id": "rinne.power.choice.002",
           "label": "最も平凡な勝ち筋を、全員で確実に積む",
-          "result": "奇跡は起きなかった。代わりに誰が欠けても残る手順ができ、リンネはそれを珍しい未来だと言った。",
+          "result": "派手な未来は全部封印して、一番地味で一番堅い勝ち筋を、チーム全員の手順に落とした。誰が欠けても崩れない、奇跡ゼロの設計図。完成した手順書を眺めて、リンネはぽつりと言った。「不思議。どの未来にも、こんな退屈な勝ち方はなかった。……つまりこれ、私の知らない未来だ」。平凡が、彼女には一番の珍品だった。",
           "intent": "安全な段階解除で確実に進む",
           "promise": "本来の力は一部に留め、チーム全体の成長へ成果を持ち帰る。",
           "memory": "全員で帰ると決めた手順が、危機で使える安全策として残る。",
@@ -298,9 +214,9 @@
     }
   ],
   "debug": {
-    "status": "approved",
-    "sourceDocument": "native narrative block migration",
-    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "status": "review",
+    "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
+    "authorNote": "v2改稿: 確率の海の可視化。避けた外れの行列=古傷。縁で立つコイン=見えていない結果の救い。",
     "legacyGeneratedIds": false
   }
 }

@@ -2,26 +2,17 @@
   "schemaVersion": 1,
   "id": "marian.join",
   "kind": "character",
-  "title": "スカウト",
-  "summary": "礼拝スペースで起きる「スカウト」",
+  "title": "逆さの健康診断",
+  "summary": "契約面談のはずが、ミミの休み不足を診断される",
   "ownership": {
     "arcId": "character.marian",
     "characterId": "marian",
     "stage": "join"
   },
   "trigger": {
-    "actions": [
-      "rest",
-      "work"
-    ],
-    "when": {
-      "all": [],
-      "any": [],
-      "none": []
-    },
-    "repeat": {
-      "mode": "once-per-run"
-    },
+    "actions": ["rest", "work"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
     "priority": 400,
     "weight": 1
   },
@@ -38,21 +29,26 @@
   },
   "nodes": [
     {
+      "type": "direction",
+      "id": "marian.join.node.direction.001",
+      "command": { "type": "background", "assetId": "marian.join.asset.background.001", "transition": "dissolve" }
+    },
+    {
       "type": "line",
       "id": "marian.join.node.line.001",
       "lineId": "marian.join.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "マリアンと初めて会ったあと、礼拝スペースでもう一度顔を合わせた。今日は、選手登録の条件を確かめることになっている。"
+      "text": "マリアンの選手契約の面談は、静かな礼拝スペースで行うことになった。人混みだと、治したくない人まで治してしまうからだ。この面談の準備だけで、彼女の日常の不便さが少し分かる。"
     },
     {
       "type": "line",
       "id": "marian.join.node.line.002",
       "lineId": "marian.join.line.002",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "選手登録の面談室は狭い。机を挟めば仕事の距離を守れるはずなのに、同じ書類を覗き込むたび、沈黙だけが近くなる。",
-      "emotion": "tension"
+      "speakerId": "legacy.speaker.quc8xa",
+      "speakerName": "マリアン",
+      "mode": "dialogue",
+      "text": "契約の前に、一つだけ。……あなたの脈を、測らせてください。診断は、契約より先です。"
     },
     {
       "type": "line",
@@ -60,7 +56,8 @@
       "lineId": "marian.join.line.003",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "選手登録より先に、彼女は私の脈を測った。触れられた指先から、昨夜の寝不足まで見つかった気がする。"
+      "text": "面談する側の私が、先に診断される側になった。手首に、冷たい指が三本。静かな時間が一分。彼女の診断は、治癒陣を使わない。指と、目と、経験だけで診る。",
+      "emotion": "tension"
     },
     {
       "type": "line",
@@ -69,33 +66,16 @@
       "speakerId": "legacy.speaker.quc8xa",
       "speakerName": "マリアン",
       "mode": "dialogue",
-      "text": "試合中なら、治療の結果が記録されます。"
-    },
-    {
-      "type": "direction",
-      "id": "marian.join.node.direction.001",
-      "command": {
-        "type": "background",
-        "assetId": "marian.join.asset.background.001",
-        "transition": "dissolve"
-      }
-    },
-    {
-      "type": "direction",
-      "id": "marian.join.node.direction.002",
-      "command": {
-        "type": "effect",
-        "effectId": "pulse"
-      }
+      "text": "……診断結果。あなた、休みが足りていません。兎耳が、疲れると右だけ下がる癖があります。今、下がっています。"
     },
     {
       "type": "line",
       "id": "marian.join.node.line.005",
       "lineId": "marian.join.line.005",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "選手登録は一枚で済むのに、マリアンを知るための欄はどこにもない。救えるものを放っておけない優しい聖女なのだと決めれば簡単だ。でも、その決め方こそ契約書と同じに見えた。",
-      "emotion": "comic"
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "み、右耳のことは会社にも秘密にしてください。……というか、面談、始めさせてください。"
     },
     {
       "type": "line",
@@ -103,25 +83,26 @@
       "lineId": "marian.join.line.006",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "マリアンの経歴は、端末の入力欄へ収まらない。けれど本人が書けずにいるのは、過去の偉業ではなく「これから何をしたいか」の一行だった。"
+      "text": "面談は、変わった形で進んだ。彼女が試合に出たい理由は、賞金でも名誉でもなかった。「治療記録が、欲しいのです。私の力が、戦いの場でどこまで暴れるか。正確な記録がないと、私は私を、制御できないので」。",
+      "emotion": "revelation"
     },
     {
       "type": "line",
       "id": "marian.join.node.line.007",
       "lineId": "marian.join.line.007",
-      "speakerId": "legacy.speaker.quc8xa",
-      "speakerName": "マリアン",
-      "mode": "dialogue",
-      "text": "担当者の体調が悪い。診断結果は『本人が休む気を持っていない』です。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "自分の力の観察記録のために、戦場へ出たいと言う人。無茶なような、誰よりも慎重なような。私は記録係を買って出ることにした。接客業は、メモの速さにも自信がある。",
+      "emotion": "comic"
     },
     {
       "type": "line",
       "id": "marian.join.node.line.008",
       "lineId": "marian.join.line.008",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
+      "speakerId": "legacy.speaker.quc8xa",
+      "speakerName": "マリアン",
       "mode": "dialogue",
-      "text": "実験台みたいな言い方。"
+      "text": "契約条件も、一つだけ。私が「治しますか」と聞いた時——答えを、急かさないでください。あなたにも、誰にも。答えを待つ時間が、私の治療の、一番大事な部分なので。"
     },
     {
       "type": "line",
@@ -129,95 +110,17 @@
       "lineId": "marian.join.line.009",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "救える命を一つも見捨てず、終わりさえ治療する聖女。その横顔が、空欄の前でだけ少し頼りなく見える。",
-      "emotion": "revelation"
+      "text": "治す前に、聞く。聞いたら、待つ。効きすぎる力の持ち主が編み出した、たった一つの安全装置が、その「間」だった。私は契約書の特記事項に書いた。「本人の質問と、相手の返事の間に、誰も口を挟まないこと」。",
+      "emotion": "tender"
     },
     {
       "type": "line",
       "id": "marian.join.node.line.010",
       "lineId": "marian.join.line.010",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "それ、病名なんですか。"
-    },
-    {
-      "type": "line",
-      "id": "marian.join.node.line.011",
-      "lineId": "marian.join.line.011",
-      "speakerId": "legacy.speaker.quc8xa",
-      "speakerName": "マリアン",
-      "mode": "dialogue",
-      "text": "失礼。共同研究者と呼びます。"
-    },
-    {
-      "type": "line",
-      "id": "marian.join.node.line.012",
-      "lineId": "marian.join.line.012",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "採用する側らしい言葉を探した。でも必要なのは評価ではなく、ここにいてもいい理由を一緒に作ることなのだと思った。"
-    },
-    {
-      "type": "line",
-      "id": "marian.join.node.line.013",
-      "lineId": "marian.join.line.013",
-      "speakerId": "legacy.speaker.quc8xa",
-      "speakerName": "マリアン",
-      "mode": "dialogue",
-      "text": "この施設では最も多い症例です。治療には、本人の同意が必要ですが。"
-    },
-    {
-      "type": "line",
-      "id": "marian.join.node.line.014",
-      "lineId": "marian.join.line.014",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "菓子の割れ目まで蘇生してしまい、休憩のおやつが永遠に食べ終わらないという注意事項まで契約書へ加わり、一般的な選手登録は完全に諦めることになった。",
-      "emotion": "comic"
-    },
-    {
-      "type": "line",
-      "id": "marian.join.node.line.015",
-      "lineId": "marian.join.line.015",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "私のペンで未来まで埋めないよう、最後の空欄を机の中央へ戻した。待つ時間は気まずい。それでも、本人の言葉で始まるほうがいい。",
+      "text": "署名の前に、締めの形を決める。",
       "emotion": "resolve"
-    },
-    {
-      "type": "line",
-      "id": "marian.join.node.line.016",
-      "lineId": "marian.join.line.016",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "最後に本人が確かめたのは報酬ではなく、治さない選択を怖がりながら、本人の返事を待てることが規則違反にならないかどうかだった。",
-      "emotion": "tender"
-    },
-    {
-      "type": "line",
-      "id": "marian.join.node.line.017",
-      "lineId": "marian.join.line.017",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "登録を急ぐとしても、本人を置き去りにしたまま話を進めたくはなかった。"
-    },
-    {
-      "type": "line",
-      "id": "marian.join.node.line.018",
-      "lineId": "marian.join.line.018",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "登録完了の音が鳴る。これで仲間になった、と簡単に呼んでいいのか分からない。けれど退室する足音が、来た時より少しだけゆっくりだった。"
-    },
-    {
-      "type": "line",
-      "id": "marian.join.node.line.019",
-      "lineId": "marian.join.line.019",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "治さずに残した契約印の薄い痕が机に残る。返そうと呼び止めると、「次に会う理由として置いておく」とだけ返ってきた。",
-      "emotion": "tender"
     },
     {
       "type": "choice",
@@ -226,83 +129,43 @@
         {
           "id": "marian.join.choice.001",
           "label": "包帯を畳みながら、治療が効きすぎる話を聞く",
-          "result": "包帯の角を揃える間に、三人を生き返らせすぎた経緯を聞いた。怖い話なのに、マリアンは畳み方だけ厳しかった。",
-          "intent": "本人の得意な戦い方を知る",
+          "result": "契約のあと、救護室の在庫整理を手伝った。畳みながら聞いた失敗談は、悲惨で、少しだけ可笑しかった。敵の骨折を治してしまった試合。枯れかけの観葉植物が巨木になった待合室。「効きすぎの記録も、全部書き残してください」と彼女は言った。「失敗の記録だけが、私を止められるので」。私の記録係の初仕事は、巨木の育成記録からになった。",
+          "intent": "力の失敗談ごと、引き受ける",
           "promise": "登録は少し遅れるが、この人専用の成長ポイントを得る。",
-          "memory": "自分で書いた最初の条件を、相手は次の大事な場面でも覚えている。",
+          "memory": "待合室の巨木の由来を、二人だけが正確に知っている。",
           "tone": "tender",
           "effects": [
-            {
-              "type": "relationship",
-              "target": {
-                "type": "fighter",
-                "fighterId": "marian"
-              },
-              "mode": "add",
-              "trust": 8,
-              "ownership": -3
-            },
-            {
-              "type": "fighterPoints",
-              "target": {
-                "type": "fighter",
-                "fighterId": "marian"
-              },
-              "amount": 2
-            },
-            {
-              "type": "recruitmentDecision",
-              "fighterId": "marian",
-              "decision": "join"
-            }
+            { "type": "relationship", "target": { "type": "fighter", "fighterId": "marian" }, "mode": "add", "trust": 8, "ownership": -3 },
+            { "type": "fighterPoints", "target": { "type": "fighter", "fighterId": "marian" }, "amount": 2 },
+            { "type": "recruitmentDecision", "fighterId": "marian", "decision": "join" }
           ],
           "goto": "marian.join.node.end.001"
         },
         {
           "id": "marian.join.choice.002",
           "label": "救護担当を兼ねた選手証を先に発行する",
-          "result": "規約上は選手、救護室では先生になった。死亡欄だけが赤字で『使用禁止』へ変わった。",
-          "intent": "次の公式戦へ間に合わせる",
-          "promise": "本人の詳細は後回しになるが、誰にでも使える成長ポイントを得る。",
-          "memory": "先に席を確保した判断は、チームの始まり方として記録に残る。",
+          "result": "選手証は「選手兼・救護担当」の肩書きで発行された。チーム全員の健康診断が月一で定例化し、初回の診断で全員に「休み不足」の判定が出た。監督の私を含めて、である。救護担当の最初の業務命令は、こうだった。「全員、今週は一日、必ず休むこと。これは治療です」。",
+          "intent": "チームの健康管理ごと任せる",
+          "promise": "本人の記録は後回しになるが、誰にでも使える成長ポイントを得る。",
+          "memory": "「これは治療です」の休養命令を、チームは今も守っている。",
           "tone": "pragmatic",
           "effects": [
-            {
-              "type": "relationship",
-              "target": {
-                "type": "fighter",
-                "fighterId": "marian"
-              },
-              "mode": "add",
-              "trust": 0,
-              "ownership": 8
-            },
-            {
-              "type": "sharedPoints",
-              "amount": 2
-            },
-            {
-              "type": "recruitmentDecision",
-              "fighterId": "marian",
-              "decision": "join"
-            }
+            { "type": "relationship", "target": { "type": "fighter", "fighterId": "marian" }, "mode": "add", "trust": 0, "ownership": 8 },
+            { "type": "sharedPoints", "amount": 2 },
+            { "type": "recruitmentDecision", "fighterId": "marian", "decision": "join" }
           ],
           "goto": "marian.join.node.end.001"
         },
         {
           "id": "marian.join.choice.003",
           "label": "今回はマリアンを誘わず、別の機会を待つ",
-          "result": "マリアンの出場登録は行わなかった。相手は所属せず、それぞれの用事へ戻った。断る選択を残したことだけが、次に会う時まで静かに残った。",
+          "result": "「今回は、見送りましょう」。彼女は静かにうなずいて、帰り際、私の右耳を見て一言だけ残した。「下がったままです。今日は、早く帰ってください。……これは診断ではなく、お願いです」。診断より、お願いの方が、効いた。その日は定時で帰った。",
           "intent": "今回はチームへ誘わない",
           "promise": "今回の所属は見送るが、人物の物語と再会の可能性は失わない。",
-          "memory": "勧誘しない選択も尊重されたことを、相手は覚えている。",
+          "memory": "「診断ではなく、お願い」の言い方を、私は覚えている。",
           "tone": "pragmatic",
           "effects": [
-            {
-              "type": "recruitmentDecision",
-              "fighterId": "marian",
-              "decision": "decline"
-            }
+            { "type": "recruitmentDecision", "fighterId": "marian", "decision": "decline" }
           ],
           "goto": "marian.join.node.end.001"
         }
@@ -315,9 +178,9 @@
     }
   ],
   "debug": {
-    "status": "approved",
-    "sourceDocument": "native narrative block migration",
-    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "status": "review",
+    "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
+    "authorNote": "v2改稿: 逆さの健康診断(右耳が下がる癖)。加入動機=治療記録の協働(canon)。安全装置=「治しますか」の間。",
     "legacyGeneratedIds": false
   }
 }

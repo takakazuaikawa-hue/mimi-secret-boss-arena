@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "id": "rinne.crisis",
   "kind": "character",
-  "title": "最後の準備",
-  "summary": "閉店後のルーレットで起きる「最後の準備」",
+  "title": "的中率、百パーセントの檻",
+  "summary": "黒い角封筒。会社が未来視を「必勝商品」として固定しようとする",
   "ownership": {
     "arcId": "character.rinne",
     "characterId": "rinne",
@@ -34,45 +34,11 @@
         "id": "rinne.crisis.asset.background.001",
         "kind": "background",
         "path": "/assets/story/bg-contract-archive-v2.png",
-        "alt": "閉店後のルーレットの背景"
+        "alt": "契約保管庫の背景"
       }
     ]
   },
   "nodes": [
-    {
-      "type": "line",
-      "id": "rinne.crisis.node.line.001",
-      "lineId": "rinne.crisis.line.001",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "アルデバラン社から届いた契約確認書には、リンネの扱いを決める欄が残っていた。本人の意思を聞くため、閉店後のルーレットへ向かった。"
-    },
-    {
-      "type": "line",
-      "id": "rinne.crisis.node.line.002",
-      "lineId": "rinne.crisis.line.002",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "その週、相手は私を避けた。廊下の向こうに姿を見つけても、業務用の言葉だけを残して先に曲がる。",
-      "emotion": "tension"
-    },
-    {
-      "type": "line",
-      "id": "rinne.crisis.node.line.003",
-      "lineId": "rinne.crisis.line.003",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "会社は『勝利する未来』だけを契約条件へ固定しようとしている。紙の周りで、選ばれなかった敗北が黒い染みになって滲む。"
-    },
-    {
-      "type": "line",
-      "id": "rinne.crisis.node.line.004",
-      "lineId": "rinne.crisis.line.004",
-      "speakerId": "legacy.speaker.1vpt9ol",
-      "speakerName": "リンネ",
-      "mode": "dialogue",
-      "text": "命令なら、絶対に当たる未来を選べる。外れはお前へ行く。"
-    },
     {
       "type": "direction",
       "id": "rinne.crisis.node.direction.001",
@@ -81,6 +47,60 @@
         "assetId": "rinne.crisis.asset.background.001",
         "transition": "dissolve"
       }
+    },
+    {
+      "type": "line",
+      "id": "rinne.crisis.node.line.001",
+      "lineId": "rinne.crisis.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "黒い角封筒。差出人、アルデバラン社・物語資産管理部。件名——「資産『未来視』の商品化について」。本文。「当該資産の予知を『的中率百パーセントの予想商品』として販売開始します。つきましては今後、当該資産の選択を『勝利する未来』のみに固定します」。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "rinne.crisis.node.line.002",
+      "lineId": "rinne.crisis.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "勝利する未来のみに、固定。それはつまり、リンネから「選ばない」も「外す」も「見ないでおく」も、全部取り上げるということだ。当たりしか引けないくじ引きは、もう、くじ引きではない。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "rinne.crisis.node.line.003",
+      "lineId": "rinne.crisis.line.003",
+      "speakerId": "legacy.speaker.1vpt9ol",
+      "speakerName": "リンネ",
+      "mode": "dialogue",
+      "text": "……白状する。この通知、ちょっとだけ、楽だなって思った。全部固定されたら、私はもう何も選ばなくていい。選ばなければ、失くさない。あんたのことも——賭けずに、済む。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.crisis.node.line.004",
+      "lineId": "rinne.crisis.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "会社の通告は、いつも正確に古傷を突いてくる。賭けなければ誰にも選ばれず、賭ければ大切なものを自分から失う——その痛みごと、会社は「仕様」として買い取るつもりなのだ。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "rinne.crisis.node.line.005",
+      "lineId": "rinne.crisis.line.005",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "リンネさん。勝つ未来しかない世界のあなたは、夜市でくじを引いて、ドキドキできますか。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.crisis.node.line.006",
+      "lineId": "rinne.crisis.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "長い沈黙のあと、リンネは笑った。いつもの、軽く作った笑いではなく、少し悔しそうな、本物の方だった。「……ずるいなあ。その質問、どの未来にもなかった」。",
+      "emotion": "tender"
     },
     {
       "type": "direction",
@@ -92,38 +112,21 @@
     },
     {
       "type": "line",
-      "id": "rinne.crisis.node.line.005",
-      "lineId": "rinne.crisis.line.005",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "リンネの返事が短い。怒っている、と決めれば私の不安には名前がつく。でも以前の私も「危険な賭けほど喜ぶ、後悔しない勝負師なのだ」と決めつけた。また同じ読み違いをするところだった。",
-      "emotion": "tension"
-    },
-    {
-      "type": "line",
-      "id": "rinne.crisis.node.line.006",
-      "lineId": "rinne.crisis.line.006",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "嫌われたのなら理由を聞けばいい。そう思うのに、使わずにポケットへ残した一枚の空コインを見るたび、聞いた答えで今までの時間が変わるのが怖かった。"
-    },
-    {
-      "type": "line",
       "id": "rinne.crisis.node.line.007",
       "lineId": "rinne.crisis.line.007",
       "speakerId": "legacy.speaker.1vpt9ol",
       "speakerName": "リンネ",
       "mode": "dialogue",
-      "text": "勝つ未来だけなら簡単。でも、その未来の私は二度と賭けられない。全部決まってるから。"
+      "text": "回答書、書いて。「当資産の的中率は、本人の意思により保証されません。外れも含めて、私の商品です」。……固定されたくじは引かない。私は、賭けの側に残る。"
     },
     {
       "type": "line",
       "id": "rinne.crisis.node.line.008",
       "lineId": "rinne.crisis.line.008",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "そんな賭けはしない。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私は回答書を清書し、証拠資料を一枚添えた。夜市の外れくじだ。未来の見える人が、結果を見ずに引いて、ちゃんと外した記録。的中率百パーセントの商品には、絶対にできない芸である。",
+      "emotion": "resolve"
     },
     {
       "type": "line",
@@ -131,94 +134,8 @@
       "lineId": "rinne.crisis.line.009",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ようやく追いついた場所で、リンネは持っていないものまで賭け、負けを笑って次へ進む勝負師に戻っていた。近づく前の、何も期待していなかった顔だ。"
-    },
-    {
-      "type": "line",
-      "id": "rinne.crisis.node.line.010",
-      "lineId": "rinne.crisis.line.010",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "勝つために、あなたの楽しみまで結果へ固定したくありません。"
-    },
-    {
-      "type": "line",
-      "id": "rinne.crisis.node.line.011",
-      "lineId": "rinne.crisis.line.011",
-      "speakerId": "legacy.speaker.1vpt9ol",
-      "speakerName": "リンネ",
-      "mode": "dialogue",
-      "text": "うん。だからこのチームに残ってる。"
-    },
-    {
-      "type": "line",
-      "id": "rinne.crisis.node.line.012",
-      "lineId": "rinne.crisis.line.012",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "原因は私への不信ではない。賭けなければ誰にも選ばれず、賭ければ大切なものを自分から失うことから私を遠ざけようとしている。そのやさしさを、やさしいまま受け入れてはいけない気がした。",
-      "emotion": "revelation"
-    },
-    {
-      "type": "line",
-      "id": "rinne.crisis.node.line.013",
-      "lineId": "rinne.crisis.line.013",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "彼女は契約金のコインを指で隠した。未来の光が消え、今の表情だけが残った。"
-    },
-    {
-      "type": "line",
-      "id": "rinne.crisis.node.line.014",
-      "lineId": "rinne.crisis.line.014",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "コインの裏表を外すたび別世界の確率が帳尻を合わせ、遠い王国が優勝する。別れ話のように静かな場面なのに、施設全体は最終災害手順へ移行している。",
-      "emotion": "comic"
-    },
-    {
-      "type": "line",
-      "id": "rinne.crisis.node.line.015",
-      "lineId": "rinne.crisis.line.015",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "正しい答えを当てることより、間違えたまま命令しないことを選ぶ。私は逃げ道をふさがない位置で止まり、聞きたかったことを短い言葉にした。",
+      "text": "会社は「収益予測の再提出」を求めてくるだろう。次の試合で、固定されない未来視の強さを、結果で見せる必要がある。",
       "emotion": "resolve"
-    },
-    {
-      "type": "line",
-      "id": "rinne.crisis.node.line.016",
-      "lineId": "rinne.crisis.line.016",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "守るために離れるのは、残された側へ選択を渡さない。命令と同じだと告げると、初めて相手の表情が崩れた。",
-      "emotion": "resolve"
-    },
-    {
-      "type": "line",
-      "id": "rinne.crisis.node.line.017",
-      "lineId": "rinne.crisis.line.017",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "勝つための答えと、あとで自分を嫌いにならない答えは、同じとは限らない。"
-    },
-    {
-      "type": "line",
-      "id": "rinne.crisis.node.line.018",
-      "lineId": "rinne.crisis.line.018",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "私は勝利を約束しない。安全も約束できない。ただ、当たり外れのない約束を、一度だけ信じて待つことを諦める判断だけは本人へ返すと決めた。"
-    },
-    {
-      "type": "line",
-      "id": "rinne.crisis.node.line.019",
-      "lineId": "rinne.crisis.line.019",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "並んで戻る廊下には、まだ一人分の距離がある。でも今度の沈黙は拒絶ではなく、同じ答えを考えるためのものだった。",
-      "emotion": "tender"
     },
     {
       "type": "choice",
@@ -227,7 +144,7 @@
         {
           "id": "rinne.crisis.choice.001",
           "label": "勝率ゼロと表示された未来へ少額だけ賭ける",
-          "result": "勝率ゼロの札は最後までゼロだった。それでもリンネが自分で選んだ一枚だけが裏返り、本人専用の奇策として残った。",
+          "result": "次の試合、リンネは全員の予想盤で勝率ゼロと表示された一手を、自分の意思で選んだ。表示は最後までゼロのまま——それでも、その一手だけが通った。観客席の予想屋が全滅する中、彼女は舌を出した。「ね? 私の外れは、売り物にならないでしょ」。物語資産管理部の商品企画書は、その夜、静かに取り下げられたらしい。",
           "intent": "この人だけの突破法へ賭ける",
           "promise": "予測しにくい方法を試し、この人専用の成長を大きく進める。",
           "memory": "危機で選んだ方法は、契約を解く場面でも二人の共通の記憶として戻る。",
@@ -257,7 +174,7 @@
         {
           "id": "rinne.crisis.choice.002",
           "label": "最も平凡な勝ち筋を全員で選ぶ",
-          "result": "奇跡を捨てて平凡な手を積むと、誰が欠けても崩れない勝ち筋になった。リンネは退屈そうに、その確実さを全員へ教えた。",
+          "result": "奇跡は使わず、全員で組んだ一番平凡な手順で勝ち切った。試合後、リンネは会社への回答書に一行追記した。「本日の勝利に、予知は一割も使っていません。よって商品化の根拠を欠きます」。退屈な勝ち方が、そのまま反論の証拠になった。彼女は少しだけ退屈そうで、でも手順書には、ちゃんと自分の名前を書いた。",
           "intent": "全員が使える安全な突破法を作る",
           "promise": "本人だけの切り札は抑え、チーム全体へ使える成長を持ち帰る。",
           "memory": "全員で組み直した手順は、契約を解く場面でも選んだ責任として戻る。",
@@ -305,9 +222,9 @@
     }
   ],
   "debug": {
-    "status": "approved",
-    "sourceDocument": "native narrative block migration",
-    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "status": "review",
+    "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
+    "authorNote": "v2改稿: 黒い角封筒=的中率の商品化(Q2)。固定への誘惑(選ばなければ失くさない)と、外れを含めた自分の宣言。",
     "legacyGeneratedIds": false
   }
 }
