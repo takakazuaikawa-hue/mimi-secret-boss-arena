@@ -61,6 +61,7 @@ export const createInitialProfile = (): PlayerProfile => ({
   clears: 0,
   unlockedRoutes: ["normal"],
   liberatedCollection: [],
+  grandCleared: false,
   seenEvents: [],
   hallOfFame: [],
   skipExplanations: false,

@@ -63,6 +63,7 @@ import { fighterById, fighterDefinitions } from "./data/characters";
 import { characterVisuals } from "./data/characterVisuals";
 import {
   arenaCharter,
+  finalCharterArticle,
   grandFinaleLines,
   unlockedCharterArticles,
 } from "./data/arenaCharter";
@@ -6502,6 +6503,17 @@ function EndingScreen({ onTitle, onArchive }: { onTitle: () => void; onArchive: 
                 </article>
               ))}
             </div>
+            <div className="grand-finale__final-article">
+              <span>THE LAST ARTICLE</span>
+              <p>
+                点呼が終わると、十五人が同時にこちらを見た。アマラが白いチョークを差し出す。「最終条は、起草者ではなく——あなたが」。
+              </p>
+              <blockquote>
+                <b>第{finalCharterArticle.article}条</b>
+                <strong>{finalCharterArticle.text}</strong>
+                <small>{finalCharterArticle.author}</small>
+              </blockquote>
+            </div>
           </section>
         )}
         <dl className="ending-score">
@@ -6933,7 +6945,10 @@ function ArchiveScreen({ onClose }: { onClose: () => void }) {
                   {unlocked ? (
                     <>
                       <span>{entry.text}</span>
-                      <small>{fighter?.name ?? entry.fighterId}</small>
+                      <small>
+                        {fighter?.name ?? entry.fighterId}
+                        {entry.article === 2 && "(起草者の強い意向により、第一条より長い)"}
+                      </small>
                     </>
                   ) : (
                     <>
@@ -6948,6 +6963,26 @@ function ArchiveScreen({ onClose }: { onClose: () => void }) {
                 </li>
               );
             })}
+            <li
+              className={profile.grandCleared ? "is-unlocked" : "is-locked"}
+            >
+              <b>第{finalCharterArticle.article}条</b>
+              {profile.grandCleared ? (
+                <>
+                  <span>{finalCharterArticle.text}</span>
+                  <small>{finalCharterArticle.author}</small>
+                </>
+              ) : (
+                <>
+                  <span className="charter-locked-text">
+                    ——最後の一条は、十五人がそろった開廷日に書かれる
+                  </span>
+                  <small>
+                    <LockKeyhole size={13} /> 真の柿落としで開示
+                  </small>
+                </>
+              )}
+            </li>
           </ol>
         </section>
       ) : tab === "collection" ? (

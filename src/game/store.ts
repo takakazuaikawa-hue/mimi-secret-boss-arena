@@ -119,6 +119,7 @@ const finishRun = (
       clears: profile.clears + (cleared ? 1 : 0),
       unlockedRoutes: [...unlocked],
       liberatedCollection,
+      grandCleared: profile.grandCleared || resolvedEnding === "grand",
       hallOfFame: [hallEntry, ...profile.hallOfFame].slice(0, 30),
     },
   };

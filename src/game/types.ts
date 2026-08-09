@@ -448,6 +448,8 @@ export interface PlayerProfile {
   clears: number;
   unlockedRoutes: Array<RunState["route"]>;
   liberatedCollection: string[];
+  // 真エンディング「十五人の開廷日」へ到達済みか(最終条の開示に使う)
+  grandCleared?: boolean;
   seenEvents: string[];
   hallOfFame: HallOfFameTeam[];
   skipExplanations: boolean;

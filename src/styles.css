@@ -15201,3 +15201,41 @@ h3 {
     grid-column: 2;
   }
 }
+
+/* 真エンディング・最終条 */
+.grand-finale__final-article {
+  display: grid;
+  gap: 10px;
+}
+.grand-finale__final-article > span {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  color: #b0741a;
+  font-weight: 700;
+}
+.grand-finale__final-article > p {
+  margin: 0;
+  font-size: 14.5px;
+  line-height: 1.7;
+}
+.grand-finale__final-article blockquote {
+  margin: 4px 0 0;
+  padding: 16px 18px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid rgba(214, 158, 46, 0.5);
+  display: grid;
+  gap: 6px;
+}
+.grand-finale__final-article blockquote b {
+  font-size: 13px;
+  color: #a8641b;
+}
+.grand-finale__final-article blockquote strong {
+  font-size: 18px;
+  line-height: 1.5;
+}
+.grand-finale__final-article blockquote small {
+  font-size: 12.5px;
+  color: #8a7a63;
+}

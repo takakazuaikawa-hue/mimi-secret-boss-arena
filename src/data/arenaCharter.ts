@@ -111,6 +111,15 @@ export const arenaCharter: CharterArticle[] = [
   },
 ];
 
+// 最終条。arenaCharter には含めない(完成判定は16条で行う)。
+// 真エンディングの場で、十五人に頼まれてミミが書く一条。
+// 記録室では到達前は「予告」、到達後に本文を開示する。
+export const finalCharterArticle = {
+  article: 17,
+  text: "この闘技場の続きは、ここにいる全員で書く",
+  author: "ミミ(と、十五人の署名)",
+} as const;
+
 // 真エンディング「十五人の開廷日」での点呼台詞。
 // 各人物、一行だけ。柿落とし興行の開場前、順に声が上がる。
 export const grandFinaleLines: Record<string, string> = {
