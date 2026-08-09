@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s2.ep2",
+  "kind": "opening",
+  "title": "電球たちの、団体交渉",
+  "summary": "更新週間の残業続きで、館内の照明から苦情が出る。伝票を持って夜の管理室へ",
+  "ownership": { "arcId": "main.stage2" },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "照明管理室・前",
+    "assets": [
+      {
+        "id": "main.s2.ep2.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-lighting-control-room-v1.png",
+        "alt": "照明管理室の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s2.ep2.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s2.ep2.asset.background.001", "transition": "dissolve" }
+    },
+    { "type": "direction", "id": "main.s2.ep2.node.direction.002", "command": { "type": "clearSprites" } },
+    {
+      "type": "line",
+      "id": "main.s2.ep2.node.line.001",
+      "lineId": "main.s2.ep2.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "更新週間の二週目。連日の残業で、館内の照明は点きっぱなしだった。そして今朝、備品課に前代未聞の書類が届いた。「団体交渉申入書。差出人・大ホール天井シャンデリア一同(電球数三千)」。要求事項、休憩時間の確保。この街では、電球も労働者らしい。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.ep2.node.line.002",
+      "lineId": "main.s2.ep2.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "交渉は難航した。電球側の主張は点滅で行われ、通訳できる者がいなかったからだ。モールス信号説、応援団説、単なる寿命説。会議室が三つ巴になりかけたところで、例の銅鑼が――鳴らなかった。電球相手に腕相撲はできない。この街の紛争解決が、初めて敗北した。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.ep2.node.line.003",
+      "lineId": "main.s2.ep2.line.003",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "つ、通訳を探しましょう! 照明に一番詳しい部署……照明管理室! 誰か常駐してるんですよね?"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.ep2.node.line.004",
+      "lineId": "main.s2.ep2.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "全員が、すっと目をそらした。「管理室の主さんは、夜しかいない」「というか、夜そのもの」「悪い方じゃないんだが、初対面は暗い」。要領を得ない証言と修理伝票一枚を託され、気づけば私が交渉特使だった。この職場、新人への信頼が重い。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.ep2.node.line.005",
+      "lineId": "main.s2.ep2.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "閉店五分前。伝票には走り書きで「三階廊下・電球が怯えている件も併せて相談」とある。管理室の扉の前に立つと、隙間から漏れる灯りが、ノックの前にすっと消えた。……初対面は、暗い。確かに。",
+      "emotion": "resolve"
+    },
+    { "type": "end", "id": "main.s2.ep2.node.end.001", "mode": "return-to-week" }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_STAGE1_PLAN.md",
+    "authorNote": "第二区分2話: 電球三千の団体交渉(点滅の通訳不能・銅鑼の敗北)。末尾は夜を食べるものmeet(閉店五分前・修理伝票・照明管理室)へ無改変接続。",
+    "legacyGeneratedIds": false
+  }
+}

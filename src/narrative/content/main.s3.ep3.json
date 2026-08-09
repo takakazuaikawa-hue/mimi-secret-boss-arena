@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s3.ep3",
+  "kind": "opening",
+  "title": "大掃除と、モップ争奪戦",
+  "summary": "祭り前の全館大掃除。モップが払底し、ミミが倉庫の奥地へ遠征する",
+  "ownership": { "arcId": "main.stage3" },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "従業員通路",
+    "assets": [
+      {
+        "id": "main.s3.ep3.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-employee-corridor-no-seventeenth-door-v1.png",
+        "alt": "従業員通路の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s3.ep3.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s3.ep3.asset.background.001", "transition": "dissolve" }
+    },
+    { "type": "direction", "id": "main.s3.ep3.node.direction.002", "command": { "type": "clearSprites" } },
+    {
+      "type": "line",
+      "id": "main.s3.ep3.node.line.001",
+      "lineId": "main.s3.ep3.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "祭り前の全館大掃除が始まった。人口より掃除熱の方が多い街である。開始一時間でモップが払底し、備品倉庫の前に行列ができ、貸出台帳が閉店セールみたいになった。清掃班の班長は仁王立ちで宣言した。「モップは、早い者勝ちではない。清い者勝ちだ」。基準が分からない。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.ep3.node.line.002",
+      "lineId": "main.s3.ep3.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "当然のように争奪はモップリレー大会になり(この街の伝統芸)、優勝した警備隊が全モップを総取りした。隊列でモップを回す姿は軍事演習だった。残された私たちに、班長が地図を寄越す。「奥の倉庫に予備がある。八番から先は、番号を声に出して数えながら行け」。……なぜ?",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.ep3.node.line.003",
+      "lineId": "main.s3.ep3.line.003",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "九番、十番……声に出す意味、あるんですかこれ……十四番、十五番、十六番——"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.ep3.node.line.004",
+      "lineId": "main.s3.ep3.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "足が、止まった。十六番の隣は、十八番のはずだった。倉庫の番号は昔から、十七を飛ばして振られている——縁起か、伝統か、誰も理由を知らない。なのに今、十六と十八のあいだに、扉が一枚ある。真鍮のプレートに、几帳面な「17」。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.ep3.node.line.005",
+      "lineId": "main.s3.ep3.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "モップのためである。モップのためなら、存在しないはずの倉庫だって開ける。私は職務に忠実な手つきで、十七番の扉のノブを回した。",
+      "emotion": "resolve"
+    },
+    { "type": "end", "id": "main.s3.ep3.node.end.001", "mode": "return-to-week" }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_STAGE1_PLAN.md",
+    "authorNote": "第三区分3話: モップ争奪リレー大会→倉庫番号の欠番(十七)に扉が生えている。末尾は十七号室meet(存在しない扉を開ける)へ無改変接続。背景は「十七番扉なし」版を使用。",
+    "legacyGeneratedIds": false
+  }
+}

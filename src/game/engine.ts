@@ -20,6 +20,8 @@ import {
   mainStageOneEpisodeOneBlock,
   mainStageOneEpisodeThreeBlock,
   mainStageOneEpisodeTwoBlock,
+  mainStageThreeEpisodeBlocks,
+  mainStageTwoEpisodeBlocks,
   openingHotSpringBlock,
   openingOwnershipBlock,
 } from "../narrative/openingBlocks";
@@ -468,7 +470,7 @@ export const chooseWeeklyAction = (
   // 終了後の followup で橋先の個別 meet へ連続再生する(二段再生)。
   const mainEpisode = stageOneMainEpisodes.find(
     (episode) =>
-      run.campaignStage === 1 &&
+      run.campaignStage === (episode.stage ?? 1) &&
       run.week === episode.week &&
       !run.eventHistory.includes(episode.block.id),
   );
@@ -990,8 +992,9 @@ export const maybeCreateOpeningOwnershipFollowup = (
   };
 };
 
-// 第一区分メインストーリーの対応表: 話の週・ブロック・橋先の人物。
+// メインストーリーの対応表: 区分・話の週・ブロック・橋先の人物。
 const stageOneMainEpisodes: ReadonlyArray<{
+  stage?: 1 | 2 | 3;
   week: number;
   block: typeof mainStageOneEpisodeOneBlock;
   fighterId: string;
@@ -1026,6 +1029,18 @@ const stageOneMainEpisodes: ReadonlyArray<{
     fighterId: "ushiro",
     leadLineText: "受付さんに手渡された苦情票を持って、私は現像室へ入った。",
   },
+  // 第二区分「更新週間」
+  { stage: 2, week: 1, block: mainStageTwoEpisodeBlocks[0], fighterId: "amara" },
+  { stage: 2, week: 2, block: mainStageTwoEpisodeBlocks[1], fighterId: "night-eater" },
+  { stage: 2, week: 3, block: mainStageTwoEpisodeBlocks[2], fighterId: "shahar" },
+  { stage: 2, week: 6, block: mainStageTwoEpisodeBlocks[3], fighterId: "sazanami" },
+  { stage: 2, week: 7, block: mainStageTwoEpisodeBlocks[4], fighterId: "cassim-bell" },
+  // 第三区分「祭りの準備週間」
+  { stage: 3, week: 1, block: mainStageThreeEpisodeBlocks[0], fighterId: "wolf-nine" },
+  { stage: 3, week: 2, block: mainStageThreeEpisodeBlocks[1], fighterId: "marian" },
+  { stage: 3, week: 3, block: mainStageThreeEpisodeBlocks[2], fighterId: "room-seventeen" },
+  { stage: 3, week: 6, block: mainStageThreeEpisodeBlocks[3], fighterId: "rinne" },
+  { stage: 3, week: 7, block: mainStageThreeEpisodeBlocks[4], fighterId: "mumyo" },
 ];
 
 // メインストーリー終了直後に、橋先の個別場面を連続再生する(二段再生)。
@@ -1035,7 +1050,7 @@ export const maybeCreateMainStoryFollowup = (
   if (source.currentEvent) return source;
   const episode = stageOneMainEpisodes.find(
     (candidate) =>
-      source.campaignStage === 1 &&
+      source.campaignStage === (candidate.stage ?? 1) &&
       source.week === candidate.week &&
       source.eventHistory.includes(candidate.block.id) &&
       !source.fighters[candidate.fighterId]?.encountered,

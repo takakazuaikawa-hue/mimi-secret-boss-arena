@@ -114,6 +114,34 @@ describe("三段階キャンペーン構造", () => {
     expect(followup.currentEvent?.fighterId).toBe("minato");
   });
 
+  it("二段再生: 区分2・3もメイン話→主軸meetへ連続再生する", () => {
+    const stage2 = createRun("normal", "stage-test-main-s2", {
+      campaignStage: campaignStages[1],
+    });
+    const s2main = chooseWeeklyAction(stage2, "work");
+    expect(s2main.currentEvent?.scene.id).toBe("main.s2.ep1");
+    const s2resolved = {
+      ...resolveCurrentEvent(s2main, 0),
+      lastEventOutcome: undefined,
+    };
+    expect(
+      maybeCreateMainStoryFollowup(s2resolved).currentEvent?.fighterId,
+    ).toBe("amara");
+
+    const stage3 = createRun("normal", "stage-test-main-s3", {
+      campaignStage: campaignStages[2],
+    });
+    const s3main = chooseWeeklyAction(stage3, "work");
+    expect(s3main.currentEvent?.scene.id).toBe("main.s3.ep1");
+    const s3resolved = {
+      ...resolveCurrentEvent(s3main, 0),
+      lastEventOutcome: undefined,
+    };
+    expect(
+      maybeCreateMainStoryFollowup(s3resolved).currentEvent?.fighterId,
+    ).toBe("wolf-nine");
+  });
+
   it("区分未指定なら従来挙動(全員デッキ・持ち越しなし)", () => {
     const run = createRun("normal", "stage-test-legacy");
     expect(run.campaignStage).toBeUndefined();

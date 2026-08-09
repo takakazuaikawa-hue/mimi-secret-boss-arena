@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s3.ep5",
+  "kind": "opening",
+  "title": "景品目録、最終確認",
+  "summary": "祭りの景品リストづくり。展示室の最後の一列に、目録に載らない一本がある",
+  "ownership": { "arcId": "main.stage3" },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "景品展示室",
+    "assets": [
+      {
+        "id": "main.s3.ep5.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-arena-reception.png",
+        "alt": "景品展示室の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s3.ep5.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s3.ep5.asset.background.001", "transition": "dissolve" }
+    },
+    { "type": "direction", "id": "main.s3.ep5.node.direction.002", "command": { "type": "clearSprites" } },
+    {
+      "type": "line",
+      "id": "main.s3.ep5.node.line.001",
+      "lineId": "main.s3.ep5.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "祭りの景品目録づくりが、準備週間の締めだった。展示室に全部署の推薦景品が集まってくる。食堂推薦「プリン(特大・要冷蔵・持ち帰り不可)」。警備推薦「表彰状(隊長の俳句つき)」。両替所推薦「竜の鱗(一枚・本人提供・日光浴済み)」。目録が読み物として面白すぎる。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.ep5.node.line.002",
+      "lineId": "main.s3.ep5.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "検品も一仕事だった。プリンは検品のたび一口減り(犯人は列の全員)、俳句の表彰状は検品員が感動して二枚に増え、鱗は日向へ置くと機嫌が良いことが判明した。備品なのに、全部に人格がある。この街の棚卸しは、点呼に近い。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.ep5.node.line.003",
+      "lineId": "main.s3.ep5.line.003",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "……よし、目録と現物、一致! 全九十九点、検品完了です! ——あれ。展示室の一番奥、まだ一列ありますね?"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.ep5.node.line.004",
+      "lineId": "main.s3.ep5.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "最奥の一列は、豪華な景品たちから少し離れて、静かだった。ガラスケースがひとつ。中には、飾り気のない剣が一本。台座の説明書きは「景品番号・零」。目録のどのページにも、載っていない番号だった。載せ忘れではない、と思う。目録は一番から始まっていた。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.ep5.node.line.005",
+      "lineId": "main.s3.ep5.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "確認のため、ケースへ近づく。夕陽が差して、ガラスの背面の鏡が光った。……鏡に、剣が映っていない。代わりに映っているものを確かめようと、私はもう一歩、近づいた。",
+      "emotion": "resolve"
+    },
+    { "type": "end", "id": "main.s3.ep5.node.end.001", "mode": "return-to-week" }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_STAGE1_PLAN.md",
+    "authorNote": "第三区分5話: 景品目録づくり(人格のある備品たち)→目録に載らない景品番号・零。末尾は無銘meet(鏡に映る人物)へ無改変接続。",
+    "legacyGeneratedIds": false
+  }
+}

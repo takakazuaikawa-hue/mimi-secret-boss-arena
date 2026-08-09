@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s2.ep1",
+  "kind": "opening",
+  "title": "更新週間、判子の乱",
+  "summary": "全館いっせいの契約更新ラッシュ。判子が足りず、名札が絞られる",
+  "ownership": { "arcId": "main.stage2" },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "闘技場・大ホール",
+    "assets": [
+      {
+        "id": "main.s2.ep1.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-arena-reception.png",
+        "alt": "更新週間の大ホールの背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s2.ep1.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s2.ep1.asset.background.001", "transition": "dissolve" }
+    },
+    { "type": "direction", "id": "main.s2.ep1.node.direction.002", "command": { "type": "clearSprites" } },
+    {
+      "type": "line",
+      "id": "main.s2.ep1.node.line.001",
+      "lineId": "main.s2.ep1.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "新しい勤務週の初日、街は「更新週間」だった。従業員も、屋台も、竜の両替所も、幽霊の新聞も、一年分の契約をいっせいに更新する一週間。ホールには判子の行列が三本でき、朱肉が品切れになり、代用に使われたベリージャムの列だけ妙に甘い匂いがした。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.ep1.node.line.002",
+      "lineId": "main.s2.ep1.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私の任務は書類の仕分け。積み上げた更新書類の「前年度実績」欄に、時々、身に覚えのある字を見つける。……気のせいだ。仕分けは進む。経理課は今年も法被を新調するらしい。良い職場である。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.ep1.node.line.003",
+      "lineId": "main.s2.ep1.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "事件は昼に起きた。判子ラッシュの圧で製版機が悲鳴を上げ、刷り上がった新しい名札が全員分、縦に潰れていたのだ。警備隊長の名札は「警備」が「敬俳」になり、俳句の人になった。隊長は困り顔で一句詠んだ。意外の才能だった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.ep1.node.line.004",
+      "lineId": "main.s2.ep1.line.004",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "私のは……「ミミ」が「三三」。数字の人になってる! 再発行、再発行はどこで……相談室ですね!"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.ep1.node.line.005",
+      "lineId": "main.s2.ep1.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "廊下を急ぐ私と、名札が「敬俳」の隊長と、「経理」が「軽理」になって軽くなった課長がぞろぞろ続く。従業員相談室の扉には、几帳面な字の貼り紙があった。「名札・各種相談、承ります。本日、混み合っております」。",
+      "emotion": "resolve"
+    },
+    { "type": "end", "id": "main.s2.ep1.node.end.001", "mode": "return-to-week" }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_STAGE1_PLAN.md",
+    "authorNote": "第二区分1話: 更新週間の判子ラッシュと名札誤植の連鎖。不思議は一粒(前年度実績欄の見覚えのある字、指摘せず流す)。末尾はアマラmeet(相談室・名札再発行)へ無改変接続。",
+    "legacyGeneratedIds": false
+  }
+}

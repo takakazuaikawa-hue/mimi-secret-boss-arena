@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s2.ep3",
+  "kind": "opening",
+  "title": "空域使用契約と、限定傘",
+  "summary": "屋上の空の契約更新。相手方の署名欄が大きすぎて、誰も意味が分からない",
+  "ownership": { "arcId": "main.stage2" },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "屋上庭園",
+    "assets": [
+      {
+        "id": "main.s2.ep3.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-arena-rooftop-day-v1.png",
+        "alt": "屋上庭園の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s2.ep3.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s2.ep3.asset.background.001", "transition": "dissolve" }
+    },
+    { "type": "direction", "id": "main.s2.ep3.node.direction.002", "command": { "type": "clearSprites" } },
+    {
+      "type": "line",
+      "id": "main.s2.ep3.node.line.001",
+      "lineId": "main.s2.ep3.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "更新書類の山の底から、とんでもない一枚が出てきた。「空域使用契約(屋上の上、全部)」。相手方の署名欄が、見開き二ページ丸ごと使ってある。しかも署名は文字ではなく、巨大な鱗の拓本だった。経理課は「先方は空です」と言った。空と契約している職場が、ここにある。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.ep3.node.line.002",
+      "lineId": "main.s2.ep3.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "更新のやり方を誰も知らなかった。前任者の引き継ぎには一行だけ。「晴れた昼、屋上で待つこと。誠意は傘で示すこと」。傘? 会議は三十分紛糾し、売店の限定傘(晴雨兼用・売店いちおし)を買っていく者が歴代最多だったという記録だけが見つかった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.ep3.node.line.003",
+      "lineId": "main.s2.ep3.line.003",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "つまり、限定傘を買って、晴れた昼に屋上で待てばいい……それ、ただのお昼休みでは?"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.ep3.node.line.004",
+      "lineId": "main.s2.ep3.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「そのとおり。歴代の担当は皆、お昼休みのついでに更新してきた」と経理課長は言った。「ちなみに更新に成功すると、その年は晴れが多い」。契約書の効果欄には、確かにそう書いてあった。効果: おおむね晴れ。世界で一番平和な契約かもしれない。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.ep3.node.line.005",
+      "lineId": "main.s2.ep3.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "というわけで、本日の私は代休扱いの重要任務である。売店で限定傘を買い、お弁当を持って、屋上庭園へ。よく晴れていた。傘を、開く。",
+      "emotion": "resolve"
+    },
+    { "type": "end", "id": "main.s2.ep3.node.end.001", "mode": "return-to-week" }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_STAGE1_PLAN.md",
+    "authorNote": "第二区分3話: 空との契約(署名=鱗の拓本、効果=おおむね晴れ)。末尾はシャハルmeet(屋上・昼休み・限定傘を開く)へ無改変接続。",
+    "legacyGeneratedIds": false
+  }
+}

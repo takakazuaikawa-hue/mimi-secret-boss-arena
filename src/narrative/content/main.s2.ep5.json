@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s2.ep5",
+  "kind": "opening",
+  "title": "忘れ物の日傘と、遠い窓口",
+  "summary": "更新週間の最終日。お客様の日傘を届けるだけの仕事が、遠足になる",
+  "ownership": { "arcId": "main.stage2" },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "館内通路",
+    "assets": [
+      {
+        "id": "main.s2.ep5.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-employee-entrance.png",
+        "alt": "館内通路の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s2.ep5.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s2.ep5.asset.background.001", "transition": "dissolve" }
+    },
+    { "type": "direction", "id": "main.s2.ep5.node.direction.002", "command": { "type": "clearSprites" } },
+    {
+      "type": "line",
+      "id": "main.s2.ep5.node.line.001",
+      "lineId": "main.s2.ep5.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "更新週間、最終日。全契約の判子が押し終わり、ホールに拍手が湧き、朱肉係が胴上げされた。私はといえば、打ち上げ前の最後の仕事を拾ってしまった。カフェのお客様の忘れ物——上品な日傘を、遺失物の「本館窓口」へ届けること。簡単な仕事のはずだった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.ep5.node.line.002",
+      "lineId": "main.s2.ep5.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "案内表示に従って歩く。「遺失物・本館窓口→」。角を曲がる。「→→」。階段を降りる。「↓→↑」。矢印が増えるにつれ、通路は古くなり、掲示は多言語になり、やがて七つの言語どころか、七つの世界の文字になった。すれ違う人も、鎧の騎士、雲の行商人、二次元の人(薄い)と、だんだん出身が遠くなる。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.ep5.node.line.003",
+      "lineId": "main.s2.ep5.line.003",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "日傘一本届けるのに、パスポートが要りそうな道のりなんですけど!?"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.ep5.node.line.004",
+      "lineId": "main.s2.ep5.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "道連れも増えた。雲の行商人は傘に「良い骨だ」と値を付け(売りません)、騎士は日傘を聖剣と誤認して跪き(違います)、薄い人は「窓口はこの先。私も落とし物(自分)を取りに行く」と言った。深く聞かないことにした。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.ep5.node.line.005",
+      "lineId": "main.s2.ep5.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "最後の角を曲がると、天井の高さが変わった。書架とも棚ともつかない何かが、雲の上まで続いている。案内表示は誇らしげに言った。「無限遺失物保管庫・総合受付」。……日傘、一本なんですが。私は受付の呼び鈴へ、手を伸ばした。",
+      "emotion": "resolve"
+    },
+    { "type": "end", "id": "main.s2.ep5.node.end.001", "mode": "return-to-week" }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_STAGE1_PLAN.md",
+    "authorNote": "第二区分5話: 日傘一本の配達が七世界の遠足になる。末尾はカシム・ベルmeet(無限保管庫受付)へ無改変接続。",
+    "legacyGeneratedIds": false
+  }
+}
