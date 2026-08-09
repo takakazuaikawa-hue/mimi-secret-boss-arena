@@ -15,6 +15,7 @@ import { weeklyNarrativeLines } from "../data/weeklyNarratives";
 import { legacyCharacterNarrativeBlockById } from "../narrative/characterBlocks";
 import {
   legacyOpeningNarrativeBlockById,
+  mainStageOneEpisodeOneBlock,
   openingHotSpringBlock,
   openingOwnershipBlock,
 } from "../narrative/openingBlocks";
@@ -458,6 +459,24 @@ export const chooseWeeklyAction = (
     weekActionDone: true,
     rngCursor: source.rngCursor + 1,
   };
+
+  // 三段階キャンペーン第一区分: 週1はメイン第1話を先に再生し、
+  // 終了後の followup でギドノ meet へ連続再生する(二段再生)。
+  if (
+    run.campaignStage === 1 &&
+    run.week === 1 &&
+    !run.eventHistory.includes("main.s1.ep1")
+  ) {
+    return {
+      ...run,
+      currentEvent: weeklyEventFromNarrativeBlock(
+        mainStageOneEpisodeOneBlock,
+        action,
+        undefined,
+        true,
+      ),
+    };
+  }
 
   if (run.week === 1 && !run.fighters.gidonozeaas.encountered) {
     const scene = fighterDefinitions[0].scenes.meet;
@@ -963,6 +982,37 @@ export const maybeCreateOpeningOwnershipFollowup = (
       false,
     ),
   };
+};
+
+// メインストーリー終了直後に、橋先の個別場面を連続再生する(二段再生)。
+// 第1話→ギドノmeet。以後の話は追加時にここへ対応表を足す。
+export const maybeCreateMainStoryFollowup = (
+  source: RunState,
+): RunState => {
+  if (source.currentEvent) return source;
+  if (
+    source.campaignStage === 1 &&
+    source.week === 1 &&
+    source.eventHistory.includes("main.s1.ep1") &&
+    !source.fighters.gidonozeaas.encountered
+  ) {
+    const scene = fighterDefinitions[0].scenes.meet;
+    return {
+      ...source,
+      currentEvent: weeklyEvent(
+        scene,
+        "work",
+        "gidonozeaas",
+        true,
+        source.week,
+        {
+          leadLineText:
+            "台帳を小脇に抱えたまま、私は閉店五分前の窓際へ向かった。",
+        },
+      ),
+    };
+  }
+  return source;
 };
 
 export const maybeCreateLiberationFollowup = (

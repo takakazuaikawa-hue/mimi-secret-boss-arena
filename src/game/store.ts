@@ -14,6 +14,7 @@ import {
   createRun,
   maybeCreateOpeningOwnershipFollowup,
   maybeCreateLiberationFollowup,
+  maybeCreateMainStoryFollowup,
   nextCampaignWeek,
   nextMatchId,
   resolveCurrentEvent,
@@ -215,10 +216,14 @@ export const useGameStore = create<GameStore>()(
           const wasLiberation = state.run.lastEventOutcome.isLiberation;
           const cleared = clearEventOutcome(state.run);
           const openingFollowup = maybeCreateOpeningOwnershipFollowup(cleared);
-          const next =
+          const afterLiberation =
             wasLiberation || openingFollowup.currentEvent
               ? openingFollowup
               : maybeCreateLiberationFollowup(openingFollowup);
+          // メインストーリー終了直後は、橋先の個別場面へ連続再生する。
+          const next = afterLiberation.currentEvent
+            ? afterLiberation
+            : maybeCreateMainStoryFollowup(afterLiberation);
           followup = Boolean(next.currentEvent);
           return { run: next };
         });

@@ -1,9 +1,14 @@
+import mainStageOneEpisodeOneSource from "./content/main.s1.ep1.json";
 import openingHotSpringSource from "./content/opening.hot-spring-trip.json";
 import openingOwnershipSource from "./content/opening.owner-transfer.json";
 import {
   narrativeEventBlockSchema,
   type NarrativeEventBlock,
 } from "./schema";
+
+export const mainStageOneEpisodeOneBlock = narrativeEventBlockSchema.parse(
+  mainStageOneEpisodeOneSource,
+);
 
 export const openingOwnershipBlock = narrativeEventBlockSchema.parse(
   openingOwnershipSource,
@@ -16,6 +21,7 @@ export const openingHotSpringBlock = narrativeEventBlockSchema.parse(
 export const legacyOpeningNarrativeBlocks: NarrativeEventBlock[] = [
   openingOwnershipBlock,
   openingHotSpringBlock,
+  mainStageOneEpisodeOneBlock,
 ];
 
 export const legacyOpeningNarrativeBlockById = new Map(

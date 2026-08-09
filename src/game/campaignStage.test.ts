@@ -5,7 +5,12 @@ import {
   stageForCompletedRuns,
 } from "../data/campaignStages";
 import { fighterDefinitions } from "../data/characters";
-import { createRun } from "./engine";
+import {
+  chooseWeeklyAction,
+  createRun,
+  maybeCreateMainStoryFollowup,
+  resolveCurrentEvent,
+} from "./engine";
 
 const allIds = fighterDefinitions.map((fighter) => fighter.id);
 
@@ -81,6 +86,19 @@ describe("三段階キャンペーン構造", () => {
     expect(new Set(run.encounterDeck)).toEqual(new Set(["teirei", "ushiro"]));
     // 途中まで進んだ物語段階は保持され、続きから向き合える
     expect(run.fighters.peony.storyStage).toBe(4);
+  });
+
+  it("二段再生: 週1はメイン第1話→ギドノmeetの順で連続再生する", () => {
+    const run = createRun("normal", "stage-test-main", {
+      campaignStage: campaignStages[0],
+    });
+    const withMain = chooseWeeklyAction(run, "work");
+    expect(withMain.currentEvent?.scene.id).toBe("main.s1.ep1");
+    const resolved = resolveCurrentEvent(withMain, 0);
+    expect(resolved.eventHistory).toContain("main.s1.ep1");
+    const cleared = { ...resolved, lastEventOutcome: undefined };
+    const followup = maybeCreateMainStoryFollowup(cleared);
+    expect(followup.currentEvent?.fighterId).toBe("gidonozeaas");
   });
 
   it("区分未指定なら従来挙動(全員デッキ・持ち越しなし)", () => {
