@@ -2,26 +2,17 @@
   "schemaVersion": 1,
   "id": "teirei.meet",
   "kind": "character",
-  "title": "最初の遭遇",
-  "summary": "搬入口で起きる「最初の遭遇」",
+  "title": "命令待機、四百時間",
+  "summary": "搬入口で雨ざらしのまま、前の命令を待ち続けていた精密機構",
   "ownership": {
     "arcId": "character.teirei",
     "characterId": "teirei",
     "stage": "meet"
   },
   "trigger": {
-    "actions": [
-      "work",
-      "search"
-    ],
-    "when": {
-      "all": [],
-      "any": [],
-      "none": []
-    },
-    "repeat": {
-      "mode": "once-per-run"
-    },
+    "actions": ["work", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
     "priority": 500,
     "weight": 1
   },
@@ -44,114 +35,98 @@
   },
   "nodes": [
     {
+      "type": "direction",
+      "id": "teirei.meet.node.direction.001",
+      "command": { "type": "background", "assetId": "teirei.meet.asset.background.001", "transition": "dissolve" }
+    },
+    {
       "type": "line",
       "id": "teirei.meet.node.line.001",
       "lineId": "teirei.meet.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "今週の用事で搬入口へ立ち寄った。予定どおりなら、目の前の用事を済ませて帰るだけのはずだった。"
+      "text": "搬入口に、雨の日も晴れの日も、直立不動で立っている人がいる。黒金の機構に、淡い金の髪。従業員の間では「搬入口の彫像さん」と呼ばれていた。今日、その彫像に、初めて業務が発生した。荷物の受け取りサインが、要るのだ。"
     },
     {
       "type": "line",
       "id": "teirei.meet.node.line.002",
       "lineId": "teirei.meet.line.002",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "その日、最初に目へ入ったのは十五度傾く首、空白の命令欄、湯気の温度を測る指だった。人より先に、その人の孤独だけが場所を取っていた。"
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "すみません、そこの方。この荷物の受け取り、お願いできますか。"
     },
     {
       "type": "line",
       "id": "teirei.meet.node.line.003",
       "lineId": "teirei.meet.line.003",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "搬入口の隅で、人型の機械が三種類の充電器を順番に試していた。差すたび、倉庫の照明が一列ずつ消える。"
+      "speakerId": "legacy.speaker.qmf7da",
+      "speakerName": "丁零",
+      "mode": "dialogue",
+      "text": "命令を受理。……いえ。受理できません。私は現在、別の命令を実行中です。「そこで待ってて」。経過、四百十三時間。"
+    },
+    {
+      "type": "direction",
+      "id": "teirei.meet.node.direction.002",
+      "command": { "type": "still", "assetId": "teirei.meet.asset.still.001" }
+    },
+    {
+      "type": "direction",
+      "id": "teirei.meet.node.direction.003",
+      "command": { "type": "effect", "effectId": "pulse" }
     },
     {
       "type": "line",
       "id": "teirei.meet.node.line.004",
       "lineId": "teirei.meet.line.004",
-      "speakerId": "legacy.speaker.qmf7da",
-      "speakerName": "丁零",
-      "mode": "dialogue",
-      "text": "充電規格が一致しません。あなたは電源ですか。"
-    },
-    {
-      "type": "direction",
-      "id": "teirei.meet.node.direction.001",
-      "command": {
-        "type": "background",
-        "assetId": "teirei.meet.asset.background.001",
-        "transition": "dissolve"
-      }
-    },
-    {
-      "type": "direction",
-      "id": "teirei.meet.node.direction.002",
-      "command": {
-        "type": "effect",
-        "effectId": "flash"
-      }
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "四百十三時間。十七日。誰かが軽く言った「そこで待ってて」を、この人は文字どおり、十七日間実行していた。首が、こてん、と十五度傾く。かわいい仕草に見えて、たぶん演算中の癖だ。",
+      "emotion": "tension"
     },
     {
       "type": "line",
       "id": "teirei.meet.node.line.005",
       "lineId": "teirei.meet.line.005",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "ここへ来た理由は、ごく普通の用事だった。けれど丁零を見た瞬間、兎耳だけが先に危険を知らせる。私はとっさに、曖昧な言葉を避ければ安全に動く兵器なのだと思いかけた。",
-      "emotion": "comic"
-    },
-    {
-      "type": "direction",
-      "id": "teirei.meet.node.direction.003",
-      "command": {
-        "type": "still",
-        "assetId": "teirei.meet.asset.still.001"
-      }
-    },
-    {
-      "type": "direction",
-      "id": "teirei.meet.node.direction.004",
-      "command": {
-        "type": "effect",
-        "effectId": "pulse"
-      }
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "その命令、私が上書きします！　えっと——楽にしてください！"
     },
     {
       "type": "line",
       "id": "teirei.meet.node.line.006",
       "lineId": "teirei.meet.line.006",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "声をかけるべきか迷っている間に、視線だけが一度重なる。胸が跳ねたのは見た目のせいではない。見つけてはいけない何かを、向こうも隠さなかったからだ。",
-      "emotion": "tension"
+      "speakerId": "legacy.speaker.qmf7da",
+      "speakerName": "丁零",
+      "mode": "dialogue",
+      "text": "「楽に」を解釈。——武装解除モードへ移行します。"
     },
     {
       "type": "line",
       "id": "teirei.meet.node.line.007",
       "lineId": "teirei.meet.line.007",
-      "speakerId": "legacy.speaker.qmf7da",
-      "speakerName": "丁零",
-      "mode": "dialogue",
-      "text": "規格不一致。敵性反応なし。次の命令を要求する。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ガシャン、と各部の装甲が展開し始めた。待って待って待って。私は接客史上最速で言い直した。「気楽に立っててください」。装甲が、不満そうに(?)戻る。曖昧な日本語は、この人には全部誤爆する。",
+      "emotion": "comic"
     },
     {
       "type": "line",
       "id": "teirei.meet.node.line.008",
       "lineId": "teirei.meet.line.008",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "派遣バニーです。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "そのとき、搬入口の給湯器が、ゴン、と嫌な音を立てて止まった。休憩中の作業員さんたちから悲鳴が上がる。冬の搬入口で、お湯は命綱である。"
     },
     {
       "type": "line",
       "id": "teirei.meet.node.line.009",
       "lineId": "teirei.meet.line.009",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "丁零は、命令を正確に実行し、誤差を残さない兵器に見えた。だから私は、普通のお客様へするのと同じ声で話しかけることにした。"
+      "speakerId": "legacy.speaker.qmf7da",
+      "speakerName": "丁零",
+      "mode": "dialogue",
+      "text": "故障を検知。……修理の命令を、ください。"
     },
     {
       "type": "line",
@@ -160,24 +135,25 @@
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "命令より先に、説明書を要求してもいいですか。"
+      "text": "えっ、直せるんですか？　じゃあ、お願いします！"
     },
     {
       "type": "line",
       "id": "teirei.meet.node.line.011",
       "lineId": "teirei.meet.line.011",
-      "speakerId": "legacy.speaker.qmf7da",
-      "speakerName": "丁零",
-      "mode": "dialogue",
-      "text": "近似カテゴリとして登録します。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "それは、軍事作戦だった。赤い照準レーザーがネジ穴を測距し、指先が0.01ミリ単位で配管を再調整し、三十秒後、給湯器は新品の音で蘇生した。ついでに保温効率が向上し、湯温は60.0度ちょうどで安定した。過剰性能である。",
+      "emotion": "comic"
     },
     {
       "type": "line",
       "id": "teirei.meet.node.line.012",
       "lineId": "teirei.meet.line.012",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "たった一言の返事を待つ時間が、試合開始前より長い。背後ではいつもの業務放送が流れ、この場所だけが別の物語の入口みたいに静かだった。"
+      "speakerId": "legacy.speaker.qmf7da",
+      "speakerName": "丁零",
+      "mode": "dialogue",
+      "text": "任務完了。……次の命令を、ください。"
     },
     {
       "type": "line",
@@ -185,7 +161,8 @@
       "lineId": "teirei.meet.line.013",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "首が正確に十五度傾いた。困惑まで機械的なのに、空白の命令欄を隠す手だけが妙に人間らしかった。"
+      "text": "次の命令を待つ目が、少しだけ、すがるようだった。聞けば、彼女の戦争はとっくに終わっていて、部隊も、指揮官も、もういない。「私の戦争は、終わりました。命令だけが、残りました」。命令の空欄が、この人はいちばん怖いのだ。",
+      "emotion": "revelation"
     },
     {
       "type": "line",
@@ -193,17 +170,17 @@
       "lineId": "teirei.meet.line.014",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "敵の定義を一行変えるだけで、都市防衛網の敵味方が丸ごと消える。それでも本人が気にしたのは、私が一歩引いたことの方だった。",
-      "emotion": "comic"
+      "text": "給湯器から、湯気が立つ。私は紙コップを二つ取って、一つを彼女の手に載せた。命令ではなく、ただのお茶として。黒金の指が、温度を測るように、じっとコップを包んだ。",
+      "emotion": "tender"
     },
     {
       "type": "line",
       "id": "teirei.meet.node.line.015",
       "lineId": "teirei.meet.line.015",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "まだ事情はほとんど分からない。ただ、最初の考えだけでは説明できない表情を見てしまった。私は曲がった名札を直し、次に会う口実をひとつ残した。",
-      "emotion": "tender"
+      "speakerId": "legacy.speaker.qmf7da",
+      "speakerName": "丁零",
+      "mode": "dialogue",
+      "text": "……60.0度。……悪くない、数値です。"
     },
     {
       "type": "line",
@@ -211,33 +188,8 @@
       "lineId": "teirei.meet.line.016",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "怖くないと言えば嘘になる。でも、怖さの奥に自分で選んだ行動まで、誰かの命令を模倣しただけかもしれないことがある気がして、目をそらす方が失礼に思えた。",
-      "emotion": "revelation"
-    },
-    {
-      "type": "line",
-      "id": "teirei.meet.node.line.017",
-      "lineId": "teirei.meet.line.017",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "事情はまだ分からない。でも、ここで立ち去れば、たぶん後悔する。"
-    },
-    {
-      "type": "line",
-      "id": "teirei.meet.node.line.018",
-      "lineId": "teirei.meet.line.018",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "名前を聞いただけ。約束も、契約も、まだ何もない。それなのに別れ際、次に会った時の言葉を考えている自分がいた。",
-      "emotion": "tender"
-    },
-    {
-      "type": "line",
-      "id": "teirei.meet.node.line.019",
-      "lineId": "teirei.meet.line.019",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "その場に残った初めて自分で直した給湯器の温度記録を見て、私は今日の出来事を勤務報告の一行だけでは終わらせられないと知った。"
+      "text": "命令ではないものを受け取った機械が、初めて感想を言った。この続きを、どうするか。",
+      "emotion": "resolve"
     },
     {
       "type": "choice",
@@ -246,32 +198,23 @@
         {
           "id": "teirei.meet.choice.001",
           "label": "充電器の規格から一緒に調べる",
-          "result": "必要だったのは電力ではなく、新しい命令を拒む時間だった。",
-          "intent": "登録の前に、目の前の相手を知る",
-          "promise": "目先の報酬は得ない代わりに、相手が何を望んでいるかを確かめる。",
-          "memory": "手続きより先に話を聞いたことを、相手は最初の印象として覚えている。",
+          "result": "聞けば十七日間、充電もしていなかった。私たちは倉庫で互換規格の充電器を探し、三十分かけて一台見つけた。接続の瞬間、彼女の胸の奥で琥珀色の灯がゆっくり明滅を始め、「……補給は、四百時間ぶりです」と言った。命令がないと、充電すら自分に許可できない人。私の初仕事は、その許可書の代筆だった。",
+          "intent": "命令の前に、生活の面倒を見る",
+          "promise": "目先の報酬は得ない代わりに、この人が何を失ったかを知る。",
+          "memory": "充電の許可を初めて出した相手として、丁零は私を記録している。",
           "tone": "tender",
           "effects": [
-            {
-              "type": "relationship",
-              "target": {
-                "type": "fighter",
-                "fighterId": "teirei"
-              },
-              "mode": "add",
-              "trust": 7,
-              "ownership": -2
-            }
+            { "type": "relationship", "target": { "type": "fighter", "fighterId": "teirei" }, "mode": "add", "trust": 7, "ownership": -2 }
           ],
           "goto": "teirei.meet.node.effect.001"
         },
         {
           "id": "teirei.meet.choice.002",
           "label": "今日は丁零を誘わず、用事へ戻る",
-          "result": "丁零の名前と出会った場所だけを覚え、今日は普段の仕事へ戻った。急いで所属を決めなかったことが、次に会う時の距離として残った。",
-          "intent": "今は勧誘せず、相手との距離を保つ",
+          "result": "荷物の受け取りサインは、結局彼女が代行してくれた。文字は印刷みたいに正確で、備考欄に小さく「給湯器、六十日間の保証をつけます」とあった。保証書つきの彫像さんは、翌日も搬入口に立っていた。ただし今度は、給湯器の隣で。",
+          "intent": "今日は搬入業務を優先する",
           "promise": "所属選手にはならないが、後の出来事で再会できる。",
-          "memory": "最初の出会いで急いで仲間にしなかったことが、次の再会へ残る。",
+          "memory": "紙コップのお茶を渡した店員のことを、丁零は記録している。",
           "tone": "pragmatic",
           "effects": [],
           "goto": "teirei.meet.node.effect.001"
@@ -282,16 +225,8 @@
       "type": "effect",
       "id": "teirei.meet.node.effect.001",
       "effects": [
-        {
-          "type": "markEncountered",
-          "fighterId": "teirei",
-          "encountered": true
-        },
-        {
-          "type": "setStoryStage",
-          "fighterId": "teirei",
-          "stage": 1
-        }
+        { "type": "markEncountered", "fighterId": "teirei", "encountered": true },
+        { "type": "setStoryStage", "fighterId": "teirei", "stage": 1 }
       ]
     },
     {
@@ -301,9 +236,9 @@
     }
   ],
   "debug": {
-    "status": "approved",
-    "sourceDocument": "native narrative block migration",
-    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "status": "review",
+    "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
+    "authorNote": "v2改稿: 「そこで待ってて」四百時間の事件。曖昧語の誤爆(楽に→武装解除)。給湯器の軍事修理。Q1=戦争は終わり命令だけが残った。",
     "legacyGeneratedIds": false
   }
 }

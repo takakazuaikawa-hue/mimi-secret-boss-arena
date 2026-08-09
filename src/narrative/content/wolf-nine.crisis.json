@@ -2,28 +2,17 @@
   "schemaVersion": 1,
   "id": "wolf-nine.crisis",
   "kind": "character",
-  "title": "最後の準備",
-  "summary": "無人の決闘場で起きる「最後の準備」",
+  "title": "台本つきの九戦目",
+  "summary": "黒い角封筒。会社が九戦目を八百長興行として売ろうとする",
   "ownership": {
     "arcId": "character.wolf-nine",
     "characterId": "wolf-nine",
     "stage": "crisis"
   },
   "trigger": {
-    "actions": [
-      "work",
-      "play",
-      "rest",
-      "search"
-    ],
-    "when": {
-      "all": [],
-      "any": [],
-      "none": []
-    },
-    "repeat": {
-      "mode": "once-per-run"
-    },
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
     "priority": 400,
     "weight": 1
   },
@@ -34,18 +23,24 @@
         "id": "wolf-nine.crisis.asset.background.001",
         "kind": "background",
         "path": "/assets/story/bg-contract-archive-v2.png",
-        "alt": "無人の決闘場の背景"
+        "alt": "契約保管庫の背景"
       }
     ]
   },
   "nodes": [
+    {
+      "type": "direction",
+      "id": "wolf-nine.crisis.node.direction.001",
+      "command": { "type": "background", "assetId": "wolf-nine.crisis.asset.background.001", "transition": "dissolve" }
+    },
     {
       "type": "line",
       "id": "wolf-nine.crisis.node.line.001",
       "lineId": "wolf-nine.crisis.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "アルデバラン社から届いた契約確認書には、ヴォルフ・ナインの扱いを決める欄が残っていた。本人の意思を聞くため、無人の決闘場へ向かった。"
+      "text": "黒い角封筒。差出人、アルデバラン社・物語資産管理部。件名——「資産『九戦目』の興行化について」。同封書類の表紙にはこうあった。「感動の九戦目・完全台本(勝敗決定済み)」。",
+      "emotion": "tension"
     },
     {
       "type": "line",
@@ -53,8 +48,7 @@
       "lineId": "wolf-nine.crisis.line.002",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "その週、相手は私を避けた。廊下の向こうに姿を見つけても、業務用の言葉だけを残して先に曲がる。",
-      "emotion": "tension"
+      "text": "会社は、彼が八年温めてきた「九戦目」を、対戦相手も、展開も、決着の一撃まで決めた興行として売る気だった。台本の結末は、涙の大勝利。八敗の狼が、ついに勝つ物語。——偽物の。"
     },
     {
       "type": "line",
@@ -62,7 +56,8 @@
       "lineId": "wolf-nine.crisis.line.003",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "会社は九度目の決闘相手を指定し、勝利するまで契約を繰り返す条項を加えようとしている。終わらない敗北の利用法だ。"
+      "text": "決闘場で彼を見つけた時、彼は台本を膝に置いて、九本目の白い旗を見上げていた。怒声を予想していた。違った。声は、静かだった。",
+      "emotion": "tension"
     },
     {
       "type": "line",
@@ -71,50 +66,39 @@
       "speakerId": "legacy.speaker.1vj9fme",
       "speakerName": "ヴォルフ・ナイン",
       "mode": "dialogue",
-      "text": "所有者命令なら、私を敗北させられる。"
-    },
-    {
-      "type": "direction",
-      "id": "wolf-nine.crisis.node.direction.001",
-      "command": {
-        "type": "background",
-        "assetId": "wolf-nine.crisis.asset.background.001",
-        "transition": "dissolve"
-      }
-    },
-    {
-      "type": "direction",
-      "id": "wolf-nine.crisis.node.direction.002",
-      "command": {
-        "type": "effect",
-        "effectId": "shake"
-      }
+      "text": "……なあ、ミミ。この台本、読んだか。よく書けてるんだ。九戦目の相手は強大で、俺は満身創痍で、最後の一撃で勝つ。観客は泣くだろうな。……俺が八年欲しかったものが、全部書いてある。"
     },
     {
       "type": "line",
       "id": "wolf-nine.crisis.node.line.005",
       "lineId": "wolf-nine.crisis.line.005",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "ウルフ・ナインの返事が短い。怒っている、と決めれば私の不安には名前がつく。でも以前の私も「強い相手と戦い続けられれば満足する戦士なのだ」と決めつけた。また同じ読み違いをするところだった。",
-      "emotion": "tension"
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "……受けたいん、ですか。"
     },
     {
       "type": "line",
       "id": "wolf-nine.crisis.node.line.006",
       "lineId": "wolf-nine.crisis.line.006",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "嫌われたのなら理由を聞けばいい。そう思うのに、勝敗を書かずに残した十枚目の対戦票を見るたび、聞いた答えで今までの時間が変わるのが怖かった。"
+      "speakerId": "legacy.speaker.1vj9fme",
+      "speakerName": "ヴォルフ・ナイン",
+      "mode": "dialogue",
+      "text": "惨めな話だがな。……一瞬、迷った。台本でもいい、九戦目が永遠に来ないよりは——ってな。八年は、長いんだ。白い旗ってのは、重いんだ。"
+    },
+    {
+      "type": "direction",
+      "id": "wolf-nine.crisis.node.direction.002",
+      "command": { "type": "effect", "effectId": "shake" }
     },
     {
       "type": "line",
       "id": "wolf-nine.crisis.node.line.007",
       "lineId": "wolf-nine.crisis.line.007",
-      "speakerId": "legacy.speaker.1vj9fme",
-      "speakerName": "ヴォルフ・ナイン",
-      "mode": "dialogue",
-      "text": "命じられた相手を倒せば、記録は完成する。だが、それは私の九度目ではない。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "初めて聞く、弱音だった。全部を勝負にする人が、たった一つの本物の勝負に飢えて、偽物に手が伸びかけている。ここで説教をしたら、負けだと思った。この人に届く言葉は、いつだって勝負の言葉だ。",
+      "emotion": "tension"
     },
     {
       "type": "line",
@@ -123,7 +107,7 @@
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "そんな敗北で強くなっても意味がない。"
+      "text": "ヴォルフ・ナインさん。ひとつ、聞きます。台本の九戦目が終わった朝、あなたは食堂で、胸を張って「決着がつかん！」って吠えられますか。"
     },
     {
       "type": "line",
@@ -131,34 +115,35 @@
       "lineId": "wolf-nine.crisis.line.009",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ようやく追いついた場所で、ウルフ・ナインは負けるたび強くなり、次の決闘だけを生きる九番目の狼に戻っていた。近づく前の、何も期待していなかった顔だ。"
+      "text": "長い沈黙。彼は台本を見て、白い旗を見て、それから、喉の奥で唸った。あいこ二十七連続の成績表。延長戦という名のおかわり。決着のつかない毎日の、あの騒がしい食卓を、思い出している顔だった。",
+      "emotion": "revelation"
     },
     {
       "type": "line",
       "id": "wolf-nine.crisis.node.line.010",
       "lineId": "wolf-nine.crisis.line.010",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
+      "speakerId": "legacy.speaker.1vj9fme",
+      "speakerName": "ヴォルフ・ナイン",
       "mode": "dialogue",
-      "text": "空いている場所を、会社の名前で埋めないでください。"
+      "text": "……吠えられんな。台本の勝ちじゃ、あの食卓に、座る資格がない。"
     },
     {
       "type": "line",
       "id": "wolf-nine.crisis.node.line.011",
       "lineId": "wolf-nine.crisis.line.011",
-      "speakerId": "legacy.speaker.1vj9fme",
-      "speakerName": "ヴォルフ・ナイン",
-      "mode": "dialogue",
-      "text": "同意する。だから命令するな。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "彼は立ち上がり、台本の返送封筒に、几帳面に封蝋を押した。差出人欄の書き方が、完全に果たし状のそれだった。",
+      "emotion": "tender"
     },
     {
       "type": "line",
       "id": "wolf-nine.crisis.node.line.012",
       "lineId": "wolf-nine.crisis.line.012",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "原因は私への不信ではない。勝ってしまえば、再戦を約束してくれる相手も生きる理由もなくなることから私を遠ざけようとしている。そのやさしさを、やさしいまま受け入れてはいけない気がした。",
-      "emotion": "revelation"
+      "speakerId": "legacy.speaker.1vj9fme",
+      "speakerName": "ヴォルフ・ナイン",
+      "mode": "dialogue",
+      "text": "返送の備考にはこう書いた。「九戦目の相手は、自分で選ぶ。結果は、当日のお楽しみ。——それが決闘だ、素人ども」。"
     },
     {
       "type": "line",
@@ -166,59 +151,8 @@
       "lineId": "wolf-nine.crisis.line.013",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "彼は挑戦状を縦に裂いた。紙より先に、八つの影が静かに伏せた。"
-    },
-    {
-      "type": "line",
-      "id": "wolf-nine.crisis.node.line.014",
-      "lineId": "wolf-nine.crisis.line.014",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "再戦の印が増えるほど月が欠け、九戦目には空そのものが決闘場になる。別れ話のように静かな場面なのに、施設全体は最終災害手順へ移行している。",
-      "emotion": "comic"
-    },
-    {
-      "type": "line",
-      "id": "wolf-nine.crisis.node.line.015",
-      "lineId": "wolf-nine.crisis.line.015",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "正しい答えを当てることより、間違えたまま命令しないことを選ぶ。私は逃げ道をふさがない位置で止まり、聞きたかったことを短い言葉にした。",
+      "text": "物語資産管理部への果たし状(実質)が、投函された。あとは、会社が用意した「台本の対戦相手」との公式戦が残っている。台本なしで、どう迎え撃つかだ。",
       "emotion": "resolve"
-    },
-    {
-      "type": "line",
-      "id": "wolf-nine.crisis.node.line.016",
-      "lineId": "wolf-nine.crisis.line.016",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "守るために離れるのは、残された側へ選択を渡さない。命令と同じだと告げると、初めて相手の表情が崩れた。",
-      "emotion": "resolve"
-    },
-    {
-      "type": "line",
-      "id": "wolf-nine.crisis.node.line.017",
-      "lineId": "wolf-nine.crisis.line.017",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "勝つための答えと、あとで自分を嫌いにならない答えは、同じとは限らない。"
-    },
-    {
-      "type": "line",
-      "id": "wolf-nine.crisis.node.line.018",
-      "lineId": "wolf-nine.crisis.line.018",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "私は勝利を約束しない。安全も約束できない。ただ、勝敗のつかない時間にも、同じ相手と食事を続けることを諦める判断だけは本人へ返すと決めた。"
-    },
-    {
-      "type": "line",
-      "id": "wolf-nine.crisis.node.line.019",
-      "lineId": "wolf-nine.crisis.line.019",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "並んで戻る廊下には、まだ一人分の距離がある。でも今度の沈黙は拒絶ではなく、同じ答えを考えるためのものだった。",
-      "emotion": "tender"
     },
     {
       "type": "choice",
@@ -227,56 +161,28 @@
         {
           "id": "wolf-nine.crisis.choice.001",
           "label": "九戦目を一撃だけの決闘にする",
-          "result": "九戦目は本当に一撃で終わった。過去八敗の全部を踏み込みへ変えた型は、ヴォルフにしか使えない切り札になった。",
-          "intent": "この人だけの突破法へ賭ける",
-          "promise": "予測しにくい方法を試し、この人専用の成長を大きく進める。",
-          "memory": "危機で選んだ方法は、契約を解く場面でも二人の共通の記憶として戻る。",
+          "result": "台本の相手が出てきた公式戦。ヴォルフは開幕、相手に一礼して言った。「あんたに台本は要らん。一撃で来い。俺も一撃で行く」。互いの最高の一撃が、中央で交差した。決着は、ついた——が、どちらが勝ったかより、両者が台本を破り捨てて全力を出したことに、会場は沸いた。物語資産管理部の担当者は、用意していた「感動の演出」のきっかけを、最後まで押せなかった。本物の前で、偽物のボタンは押せない。",
+          "intent": "台本のない一撃で、本物を見せる",
+          "promise": "危険を引き受け、この人専用の成長を最大まで進める。",
+          "memory": "一撃の交差を、観客は「台本破りの一撃」と呼んでいる。",
           "tone": "wild",
           "effects": [
-            {
-              "type": "relationship",
-              "target": {
-                "type": "fighter",
-                "fighterId": "wolf-nine"
-              },
-              "mode": "add",
-              "trust": 12,
-              "ownership": -10
-            },
-            {
-              "type": "fighterPoints",
-              "target": {
-                "type": "fighter",
-                "fighterId": "wolf-nine"
-              },
-              "amount": 6
-            }
+            { "type": "relationship", "target": { "type": "fighter", "fighterId": "wolf-nine" }, "mode": "add", "trust": 12, "ownership": -10 },
+            { "type": "fighterPoints", "target": { "type": "fighter", "fighterId": "wolf-nine" }, "amount": 6 }
           ],
           "goto": "wolf-nine.crisis.node.effect.001"
         },
         {
           "id": "wolf-nine.crisis.choice.002",
           "label": "過去八敗の型を順番に敵へ返す",
-          "result": "八つの敗北を順に再現すると、三人それぞれの弱点が見えた。地味な修正を重ね、誰でも使える八段階の対策表が残った。",
-          "intent": "全員が使える安全な突破法を作る",
-          "promise": "本人だけの切り札は抑え、チーム全体へ使える成長を持ち帰る。",
-          "memory": "全員で組み直した手順は、契約を解く場面でも選んだ責任として戻る。",
+          "result": "公式戦で、彼は八つの型を第一から順に全部使った。八人の強敵から持ち帰った八年ぶんの回答を、一戦に全部。台本には「苦戦の末の逆転」と書いてあったらしいが、現実は「八重の胸借りの完封」だった。試合後、彼は台本を相手に手渡した。「これはあんたのだ。破るなり、燃やすなり、勝負の記念にするなり、好きにしな」。相手は記念にしたそうだ。",
+          "intent": "八敗の重みで、台本を上書きする",
+          "promise": "本人の九戦目は温存し、チーム全体へ使える成長を持ち帰る。",
+          "memory": "八つの型の完封を、解説席は「八人がかりの勝利」と評した。",
           "tone": "pragmatic",
           "effects": [
-            {
-              "type": "relationship",
-              "target": {
-                "type": "fighter",
-                "fighterId": "wolf-nine"
-              },
-              "mode": "add",
-              "trust": -2,
-              "ownership": 10
-            },
-            {
-              "type": "sharedPoints",
-              "amount": 6
-            }
+            { "type": "relationship", "target": { "type": "fighter", "fighterId": "wolf-nine" }, "mode": "add", "trust": -2, "ownership": 10 },
+            { "type": "sharedPoints", "amount": 6 }
           ],
           "goto": "wolf-nine.crisis.node.effect.001"
         }
@@ -286,16 +192,8 @@
       "type": "effect",
       "id": "wolf-nine.crisis.node.effect.001",
       "effects": [
-        {
-          "type": "setStoryStage",
-          "fighterId": "wolf-nine",
-          "stage": 5
-        },
-        {
-          "type": "setLiberationEligible",
-          "fighterId": "wolf-nine",
-          "eligible": true
-        }
+        { "type": "setStoryStage", "fighterId": "wolf-nine", "stage": 5 },
+        { "type": "setLiberationEligible", "fighterId": "wolf-nine", "eligible": true }
       ]
     },
     {
@@ -305,9 +203,9 @@
     }
   ],
   "debug": {
-    "status": "approved",
-    "sourceDocument": "native narrative block migration",
-    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "status": "review",
+    "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
+    "authorNote": "v2改稿: 黒い角封筒=九戦目の台本興行(Q2)。偽の勝利への誘惑と弱音。「あの食卓に座る資格」での自力の拒否。",
     "legacyGeneratedIds": false
   }
 }

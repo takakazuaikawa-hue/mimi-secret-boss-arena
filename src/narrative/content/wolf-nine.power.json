@@ -2,26 +2,17 @@
   "schemaVersion": 1,
   "id": "wolf-nine.power",
   "kind": "character",
-  "title": "取り戻す力",
-  "summary": "無人の決闘場で起きる「取り戻す力」",
+  "title": "九つ目の型は、空白",
+  "summary": "無人の決闘場。八敗の型の全披露と、まだない九つ目",
   "ownership": {
     "arcId": "character.wolf-nine",
     "characterId": "wolf-nine",
     "stage": "power"
   },
   "trigger": {
-    "actions": [
-      "search",
-      "play"
-    ],
-    "when": {
-      "all": [],
-      "any": [],
-      "none": []
-    },
-    "repeat": {
-      "mode": "once-per-run"
-    },
+    "actions": ["search", "play"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
     "priority": 400,
     "weight": 1
   },
@@ -32,27 +23,37 @@
         "id": "wolf-nine.power.asset.background.001",
         "kind": "background",
         "path": "/assets/story/bg-observation-deck-night.png",
-        "alt": "無人の決闘場の背景"
+        "alt": "夜の無人の決闘場の背景"
       }
     ]
   },
   "nodes": [
+    {
+      "type": "direction",
+      "id": "wolf-nine.power.node.direction.001",
+      "command": { "type": "background", "assetId": "wolf-nine.power.asset.background.001", "transition": "dissolve" }
+    },
     {
       "type": "line",
       "id": "wolf-nine.power.node.line.001",
       "lineId": "wolf-nine.power.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "練習のあと、ヴォルフ・ナインに呼ばれて無人の決闘場まで来た。いつもの力では足りない理由を、見せたいらしい。"
+      "text": "夜、無人の決闘場に呼ばれた。ヴォルフ・ナインの「本気」を見る日だ。彼は九本の旗を場内に立てて回った。八本には、それぞれ別の紋章。九本目は——真っ白だった。"
     },
     {
       "type": "line",
       "id": "wolf-nine.power.node.line.002",
       "lineId": "wolf-nine.power.line.002",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "警報より先に、相手の声が私の名を呼んだ。いつもと同じ呼び方なのに、その一音だけで足が止まる。",
-      "emotion": "tension"
+      "speakerId": "legacy.speaker.1vj9fme",
+      "speakerName": "ヴォルフ・ナイン",
+      "mode": "dialogue",
+      "text": "俺の本気は、八つの型だ。八敗から、ひとつずつ持ち帰った。全部見せる。——第一の型から、行くぞ。"
+    },
+    {
+      "type": "direction",
+      "id": "wolf-nine.power.node.direction.002",
+      "command": { "type": "effect", "effectId": "flash" }
     },
     {
       "type": "line",
@@ -60,68 +61,53 @@
       "lineId": "wolf-nine.power.line.003",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "八つの敗北が、背後に獣の影となって立った。それぞれ傷の場所も構えも違い、九つ目の影だけが空いている。"
+      "text": "第一の型は、大剣使いの間合い。第二は、双剣の連撃を受け流す足。第三は、魔導士の詠唱を潰す初速。……八つの型は、八人の強敵の得意技への、八つの回答だった。負けるたび、相手の一番強いところを、体で覚えて帰ってきたのだ。",
+      "emotion": "tension"
     },
     {
       "type": "line",
       "id": "wolf-nine.power.node.line.004",
       "lineId": "wolf-nine.power.line.004",
-      "speakerId": "legacy.speaker.1vj9fme",
-      "speakerName": "ヴォルフ・ナイン",
-      "mode": "dialogue",
-      "text": "一度、私を負かせ。次の私はもっと強い。"
-    },
-    {
-      "type": "direction",
-      "id": "wolf-nine.power.node.direction.001",
-      "command": {
-        "type": "background",
-        "assetId": "wolf-nine.power.asset.background.001",
-        "transition": "dissolve"
-      }
-    },
-    {
-      "type": "direction",
-      "id": "wolf-nine.power.node.direction.002",
-      "command": {
-        "type": "effect",
-        "effectId": "flash"
-      }
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "新人くんは第五の型のあたりで計測器を諦め、記録板に「まけて、つよい。」と書いた。彼の五・七・五は完成に近づいている。",
+      "emotion": "comic"
     },
     {
       "type": "line",
       "id": "wolf-nine.power.node.line.005",
       "lineId": "wolf-nine.power.line.005",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "再戦の印が増えるほど月が欠け、九戦目には空そのものが決闘場になる。そんな力が、目の前で息をしている。逃げる理由なら十分だった。それでも私は、力の大きさよりウルフ・ナインが最初にどこを見るのかを確かめたかった。",
-      "emotion": "tension"
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "……九本目の旗は？　真っ白ですけど。"
     },
     {
       "type": "line",
       "id": "wolf-nine.power.node.line.006",
       "lineId": "wolf-nine.power.line.006",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "ウルフ・ナインが私と危険の間へ立つ。触れてはいない。それでも、こちらへ届くはずだった圧力だけがきれいに二つへ割れた。"
+      "speakerId": "legacy.speaker.1vj9fme",
+      "speakerName": "ヴォルフ・ナイン",
+      "mode": "dialogue",
+      "text": "九つ目の型の旗だ。……まだ、無い型だ。九戦目の相手から持ち帰る型のために、空けてある。"
     },
     {
       "type": "line",
       "id": "wolf-nine.power.node.line.007",
       "lineId": "wolf-nine.power.line.007",
-      "speakerId": "legacy.speaker.1vj9fme",
-      "speakerName": "ヴォルフ・ナイン",
-      "mode": "dialogue",
-      "text": "九度目に勝てば、私は完成する。そう信じてきた。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "八年間、白いままの旗。彼の強さの一番深いところは、この空白だった。決闘とは、二人で作るもの。型とは、相手からの贈り物。だから九つ目は、一人では永遠に作れない。",
+      "emotion": "revelation"
     },
     {
       "type": "line",
       "id": "wolf-nine.power.node.line.008",
       "lineId": "wolf-nine.power.line.008",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
+      "speakerId": "legacy.speaker.1vj9fme",
+      "speakerName": "ヴォルフ・ナイン",
       "mode": "dialogue",
-      "text": "わざと負けるのは嫌なんですよね。"
+      "text": "正直に言うとな、ミミ。最近、困っている。……あんたらと居ると、九戦目が、惜しくなくなってくる。九つ目の型が空白のままでも、毎日が悪くない。——それが、困る。"
     },
     {
       "type": "line",
@@ -129,94 +115,17 @@
       "lineId": "wolf-nine.power.line.009",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "負けるたび強くなり、次の決闘だけを生きる九番目の狼。けれど今見せている力は、勝つためではなく、私を怖がらせないために抑えられている。",
-      "emotion": "revelation"
+      "text": "八年間の執念が、朝食九種目に溶かされかけている。それを「困る」と言う顔が、ちっとも困っていなかった。夜の決闘場で、白い旗が緩く揺れる。急がなくていい空白も、あるのだと思う。",
+      "emotion": "tender"
     },
     {
       "type": "line",
       "id": "wolf-nine.power.node.line.010",
       "lineId": "wolf-nine.power.line.010",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "完成したら、十度目はどうするんですか。"
-    },
-    {
-      "type": "line",
-      "id": "wolf-nine.power.node.line.011",
-      "lineId": "wolf-nine.power.line.011",
-      "speakerId": "legacy.speaker.1vj9fme",
-      "speakerName": "ヴォルフ・ナイン",
-      "mode": "dialogue",
-      "text": "当然だ。本気で来い。"
-    },
-    {
-      "type": "line",
-      "id": "wolf-nine.power.node.line.012",
-      "lineId": "wolf-nine.power.line.012",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "本気を見たいと思っていた。実際に目の前へ現れると、知りたかったのは強さではなく、その力を本人がどう恐れているかだった。"
-    },
-    {
-      "type": "line",
-      "id": "wolf-nine.power.node.line.013",
-      "lineId": "wolf-nine.power.line.013",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "彼の爪が止まった。終わりの先を聞かれた顔は、初めて見るほど無防備だった。"
-    },
-    {
-      "type": "line",
-      "id": "wolf-nine.power.node.line.014",
-      "lineId": "wolf-nine.power.line.014",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "再戦の印が増えるほど月が欠け、九戦目には空そのものが決闘場になる。闘技場の安全基準は一瞬で役に立たなくなり、担当者は私の顔を見て計測を諦めた。",
-      "emotion": "comic"
-    },
-    {
-      "type": "line",
-      "id": "wolf-nine.power.node.line.015",
-      "lineId": "wolf-nine.power.line.015",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "世界を壊せることより、壊さないために何を選んだかが胸へ残った。決着を急ぐのは、勝敗のない時間に何を話せばいいか知らなかったからだった。その理解が正しいか、いつか本人の言葉で確かめたい。",
-      "emotion": "revelation"
-    },
-    {
-      "type": "line",
-      "id": "wolf-nine.power.node.line.016",
-      "lineId": "wolf-nine.power.line.016",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "力の中心にあったのは、勝ってしまえば、再戦を約束してくれる相手も生きる理由もなくなること。最強であることが、本人にとって一番古い傷なのだと分かる。",
-      "emotion": "revelation"
-    },
-    {
-      "type": "line",
-      "id": "wolf-nine.power.node.line.017",
-      "lineId": "wolf-nine.power.line.017",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "怖さが消えたわけではない。だからこそ、使うかどうかを本人と決める必要がある。"
-    },
-    {
-      "type": "line",
-      "id": "wolf-nine.power.node.line.018",
-      "lineId": "wolf-nine.power.line.018",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "大丈夫とは言えない。怖いものは怖い。それでも、次に力を使う時は一人で決めなくていいと伝えた。",
+      "text": "八つの型を、試合でどう出すか。仕上げを決める。",
       "emotion": "resolve"
-    },
-    {
-      "type": "line",
-      "id": "wolf-nine.power.node.line.019",
-      "lineId": "wolf-nine.power.line.019",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "勝敗を書かずに残した十枚目の対戦票だけが元の大きさで残り、さっきまで世界の終わりがいた場所に、帰り道の灯りが戻った。"
     },
     {
       "type": "choice",
@@ -225,56 +134,28 @@
         {
           "id": "wolf-nine.power.choice.001",
           "label": "九戦目だけに使う、一度限りの型を開く",
-          "result": "構えた瞬間、八つの敗北が一つの踏み込みへ重なった。二度使えなくても、次の一戦には十分だった。",
-          "intent": "本来の力を一気に取り戻す",
+          "result": "「九つ目の型の、下書きをしよう」と提案した。相手はいなくても、素振りはできる。彼は白い旗の前で、八つの型を全部混ぜた「まだ名前のない動き」を初めて舞った。完成度は本人いわく三割。「残りの七割は、九戦目の相手が埋める」。未完成のまま強い型を、私はこの夜、初めて見た。",
+          "intent": "空白の型の、最初の一筆を入れる",
           "promise": "失敗時の危険を引き受け、この人専用の成長を最大まで進める。",
-          "memory": "力を恐れたまま任せたことを、相手は危機の場面で思い出す。",
+          "memory": "名前のない動きの下書きを、二人だけが見ている。",
           "tone": "heroic",
           "effects": [
-            {
-              "type": "relationship",
-              "target": {
-                "type": "fighter",
-                "fighterId": "wolf-nine"
-              },
-              "mode": "add",
-              "trust": 10,
-              "ownership": -4
-            },
-            {
-              "type": "fighterPoints",
-              "target": {
-                "type": "fighter",
-                "fighterId": "wolf-nine"
-              },
-              "amount": 5
-            }
+            { "type": "relationship", "target": { "type": "fighter", "fighterId": "wolf-nine" }, "mode": "add", "trust": 10, "ownership": -4 },
+            { "type": "fighterPoints", "target": { "type": "fighter", "fighterId": "wolf-nine" }, "amount": 5 }
           ],
           "goto": "wolf-nine.power.node.effect.001"
         },
         {
           "id": "wolf-nine.power.choice.002",
           "label": "八つの敗北を、味方が使える基本動作へ分ける",
-          "result": "必殺技は消えたが、三人の足運びが強くなった。ヴォルフは『地味だ』と言いながら最後まで教えた。",
-          "intent": "安全な段階解除で確実に進む",
-          "promise": "本来の力は一部に留め、チーム全体の成長へ成果を持ち帰る。",
-          "memory": "全員で帰ると決めた手順が、危機で使える安全策として残る。",
+          "result": "八つの型を、チーム用に分解した。大剣の間合いは前衛へ、受け流しの足は後衛へ。「八敗流・初伝」と名付けられた稽古は、うちのチームの朝練の定番になった。彼は師範として、負けた話を胸を張って教える。「いいか、俺はここで、こう負けた！　だからお前らは、こう動け！」。世界一誇らしい敗北の授業である。",
+          "intent": "八敗を、チームの流派にする",
+          "promise": "本人の型は薄まるが、チーム全体の成長へ成果を持ち帰る。",
+          "memory": "「八敗流・初伝」の朝練は、見学者が増え続けている。",
           "tone": "pragmatic",
           "effects": [
-            {
-              "type": "relationship",
-              "target": {
-                "type": "fighter",
-                "fighterId": "wolf-nine"
-              },
-              "mode": "add",
-              "trust": 0,
-              "ownership": 9
-            },
-            {
-              "type": "sharedPoints",
-              "amount": 5
-            }
+            { "type": "relationship", "target": { "type": "fighter", "fighterId": "wolf-nine" }, "mode": "add", "trust": 0, "ownership": 9 },
+            { "type": "sharedPoints", "amount": 5 }
           ],
           "goto": "wolf-nine.power.node.effect.001"
         }
@@ -284,11 +165,7 @@
       "type": "effect",
       "id": "wolf-nine.power.node.effect.001",
       "effects": [
-        {
-          "type": "setStoryStage",
-          "fighterId": "wolf-nine",
-          "stage": 4
-        }
+        { "type": "setStoryStage", "fighterId": "wolf-nine", "stage": 4 }
       ]
     },
     {
@@ -298,9 +175,9 @@
     }
   ],
   "debug": {
-    "status": "approved",
-    "sourceDocument": "native narrative block migration",
-    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "status": "review",
+    "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
+    "authorNote": "v2改稿: 八つの型=八敗からの持ち帰り。九本目の白い旗。「九戦目が惜しくなくなって、困る」。",
     "legacyGeneratedIds": false
   }
 }

@@ -2,28 +2,17 @@
   "schemaVersion": 1,
   "id": "teirei.liberation",
   "kind": "liberation",
-  "title": "契約の外側",
-  "summary": "廃棄物保管区で起きる「契約の外側」",
+  "title": "命令元、空欄",
+  "summary": "契約を消す夜。空欄が怖かった機械が、空欄を自由と読み替える",
   "ownership": {
     "arcId": "character.teirei",
     "characterId": "teirei",
     "stage": "liberation"
   },
   "trigger": {
-    "actions": [
-      "work",
-      "play",
-      "rest",
-      "search"
-    ],
-    "when": {
-      "all": [],
-      "any": [],
-      "none": []
-    },
-    "repeat": {
-      "mode": "once-per-run"
-    },
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
     "priority": 400,
     "weight": 1
   },
@@ -34,35 +23,41 @@
         "id": "teirei.liberation.asset.background.001",
         "kind": "background",
         "path": "/assets/story/bg-casino-cafe-night.png",
-        "alt": "廃棄物保管区の背景"
+        "alt": "夜の保管区の背景"
       }
     ]
   },
   "nodes": [
+    {
+      "type": "direction",
+      "id": "teirei.liberation.node.direction.001",
+      "command": { "type": "background", "assetId": "teirei.liberation.asset.background.001", "transition": "dissolve" }
+    },
     {
       "type": "line",
       "id": "teirei.liberation.node.line.001",
       "lineId": "teirei.liberation.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "最終大会が近づくなか、丁零の契約を終わらせられる条件がそろった。今日は勝敗より先に、本人の意思を確かめに来た。"
+      "text": "契約を終わらせる夜。丁零の契約データの「命令元」欄には、ずっと私の名前が入っていた。今日、それを消す。"
     },
     {
       "type": "line",
       "id": "teirei.liberation.node.line.002",
       "lineId": "teirei.liberation.line.002",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "解除届を渡せば、この人を呼び止める権利はなくなる。最初から持つべきでなかった権利なのに、指が紙を離さない。",
-      "emotion": "tension"
+      "speakerId": "legacy.speaker.qmf7da",
+      "speakerName": "丁零",
+      "mode": "dialogue",
+      "text": "確認します。命令元が空欄になると、私に命令できる者は、いなくなります。……昔の私なら、三十秒で停止していた状態です。"
     },
     {
       "type": "line",
       "id": "teirei.liberation.node.line.003",
       "lineId": "teirei.liberation.line.003",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "解除端末に『以後の命令元』という必須欄がある。自由を申請する書類なのに、空欄を許さない。"
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "今の丁零さんなら？"
     },
     {
       "type": "line",
@@ -71,24 +66,7 @@
       "speakerId": "legacy.speaker.qmf7da",
       "speakerName": "丁零",
       "mode": "dialogue",
-      "text": "所有者欄を空白にしました。動作は継続しています。"
-    },
-    {
-      "type": "direction",
-      "id": "teirei.liberation.node.direction.001",
-      "command": {
-        "type": "background",
-        "assetId": "teirei.liberation.asset.background.001",
-        "transition": "dissolve"
-      }
-    },
-    {
-      "type": "direction",
-      "id": "teirei.liberation.node.direction.002",
-      "command": {
-        "type": "effect",
-        "effectId": "flash"
-      }
+      "text": "……検証してみましょう。消して、ください。"
     },
     {
       "type": "line",
@@ -96,8 +74,13 @@
       "lineId": "teirei.liberation.line.005",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "解除届は薄く、初めて自分で直した給湯器の温度記録より軽い。こんな紙で自由を渡せると思うこと自体、最後の所有なのかもしれない。手汗で端が少し曲がった。",
+      "text": "判を押す。命令元の欄から、私の名前が消える。空欄。彼女の一番怖かった形が、契約書の真ん中に、静かに開いた。",
       "emotion": "tension"
+    },
+    {
+      "type": "direction",
+      "id": "teirei.liberation.node.direction.002",
+      "command": { "type": "effect", "effectId": "pulse" }
     },
     {
       "type": "line",
@@ -105,7 +88,8 @@
       "lineId": "teirei.liberation.line.006",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "丁零は急かさない。命令を正確に実行し、誤差を残さない兵器でありながら、私の迷いが言葉になるまで待っている。"
+      "text": "三十秒。彼女は止まらなかった。一分。琥珀灯は静かに明滅している。それから彼女は、空欄をじっと見て、初めての分類を口にした。",
+      "emotion": "tension"
     },
     {
       "type": "line",
@@ -114,43 +98,43 @@
       "speakerId": "legacy.speaker.qmf7da",
       "speakerName": "丁零",
       "mode": "dialogue",
-      "text": "入力候補なし。処理不能。"
+      "text": "……この空欄は、怖くない、方の空欄です。好みの理由欄と、同じ形をしています。"
     },
     {
       "type": "line",
       "id": "teirei.liberation.node.line.008",
       "lineId": "teirei.liberation.line.008",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "最初に自分で決めることは？"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "空欄のまま提出していい欄が、彼女の世界に、また一つ増えた。命令元: (空欄のまま提出)。世界で一番自由な書類の完成である。",
+      "emotion": "tender"
     },
     {
       "type": "line",
       "id": "teirei.liberation.node.line.009",
       "lineId": "teirei.liberation.line.009",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "勝つために必要だという理由なら、いくらでも並べられた。でも今伝えたいのは、理由がなくても断り、頼まれなくても好きな修理を始めることをこの先も見届けたいという、命令にできない願いだった。",
-      "emotion": "tender"
+      "speakerId": "legacy.speaker.qmf7da",
+      "speakerName": "丁零",
+      "mode": "dialogue",
+      "text": "ミミ。最初の自己命令の実行を、開始します。……聞いていて、ください。"
     },
     {
       "type": "line",
       "id": "teirei.liberation.node.line.010",
       "lineId": "teirei.liberation.line.010",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
+      "speakerId": "legacy.speaker.qmf7da",
+      "speakerName": "丁零",
       "mode": "dialogue",
-      "text": "では端末のほうを直しましょう。命令元は『本人』です。"
+      "text": "「丁零は、ミミの隣にいる。理由: ——(空欄のまま提出)」。"
     },
     {
       "type": "line",
       "id": "teirei.liberation.node.line.011",
       "lineId": "teirei.liberation.line.011",
-      "speakerId": "legacy.speaker.qmf7da",
-      "speakerName": "丁零",
-      "mode": "dialogue",
-      "text": "充電器を買います。規格は私が選びます。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "理由欄の空欄を、こんな風に使う機械を、世界は他に知らないと思う。私の心拍は、また非標的のまま撃ち抜かれた。この人の精密射撃は、照準がなくても当たる。",
+      "emotion": "tender"
     },
     {
       "type": "line",
@@ -158,68 +142,7 @@
       "lineId": "teirei.liberation.line.012",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "残ってほしいと言うことと、自由にすることは両立するのか。答えは書類にない。だから、本人へ聞くしかない。",
-      "emotion": "resolve"
-    },
-    {
-      "type": "line",
-      "id": "teirei.liberation.node.line.013",
-      "lineId": "teirei.liberation.line.013",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "彼女はその文字を長く見つめ、確定ボタンを自分の指で押した。機械音が、深い息のように聞こえた。"
-    },
-    {
-      "type": "line",
-      "id": "teirei.liberation.node.line.014",
-      "lineId": "teirei.liberation.line.014",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "敵の定義を一行変えるだけで、都市防衛網の敵味方が丸ごと消えるほどの力を持つ存在が、一枚の紙を前に私の返事だけを待っている。その不釣り合いさが、泣きそうな場面を少しだけ可笑しくした。",
-      "emotion": "comic"
-    },
-    {
-      "type": "line",
-      "id": "teirei.liberation.node.line.015",
-      "lineId": "teirei.liberation.line.015",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "もう呼び止める権利はない。それでも丁零が振り返るなら、そこから先は契約ではなく本人の答えだ。私は追わず、その一歩を待った。",
-      "emotion": "resolve"
-    },
-    {
-      "type": "line",
-      "id": "teirei.liberation.node.line.016",
-      "lineId": "teirei.liberation.line.016",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "契約印が消える。関係まで消える音はしなかった。代わりに、これからは断られるかもしれないという自由な静けさが来た。",
-      "emotion": "revelation"
-    },
-    {
-      "type": "line",
-      "id": "teirei.liberation.node.line.017",
-      "lineId": "teirei.liberation.line.017",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "契約をなくしても関係はなくならない。次に同じ場所へ立つなら、互いに選び直した結果でありたい。"
-    },
-    {
-      "type": "line",
-      "id": "teirei.liberation.node.line.018",
-      "lineId": "teirei.liberation.line.018",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "初めて自分で直した給湯器の温度記録を返そうとすると、相手は受け取らなかった。「預けるのではない。次に会う場所の印だ」と言った。",
-      "emotion": "tender"
-    },
-    {
-      "type": "line",
-      "id": "teirei.liberation.node.line.019",
-      "lineId": "teirei.liberation.line.019",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "別れの挨拶をした。それでも足音は同じ出口へ向かっている。契約ではなく、本人の歩幅で。",
+      "text": "夜の保管区を出る前に、締めの形だけ決める。",
       "emotion": "resolve"
     },
     {
@@ -229,58 +152,29 @@
         {
           "id": "teirei.liberation.choice.001",
           "label": "命令元を空欄にし、最初の自己命令を待つ",
-          "result": "端末は空欄を警告し続けた。丁零は自分で警告を閉じ、『チーム参加を継続します』と初めて主語つきで入力した。",
-          "intent": "契約と出場登録を完全に分ける",
+          "result": "帰り道、彼女は保管区の同型機の墓標に、一機ずつ立ち止まって、何かを送信していった。聞くと、「命令元: 空欄」の書式を、眠っている同型機たちの記録にも残してきたという。「いつか誰かが再起動した時、空欄から始められるように」。自由の書式は、こうして静かに配布された。",
+          "intent": "空欄の自由を、本人の手に渡す",
           "promise": "所有者名を消し、本人が自分の名で次の試合を選べるようにする。",
-          "memory": "自由になったあと、最初に自分で選んだ集合時刻が残る。",
+          "memory": "同型機たちに配られた空欄の書式のことを、二人だけが知っている。",
           "tone": "defiant",
           "effects": [
-            {
-              "type": "relationship",
-              "target": {
-                "type": "fighter",
-                "fighterId": "teirei"
-              },
-              "mode": "add",
-              "trust": 10,
-              "ownership": 0
-            },
-            {
-              "type": "liberationDecision",
-              "fighterId": "teirei",
-              "decision": "release"
-            }
+            { "type": "relationship", "target": { "type": "fighter", "fighterId": "teirei" }, "mode": "add", "trust": 10, "ownership": 0 },
+            { "type": "liberationDecision", "fighterId": "teirei", "decision": "release" }
           ],
           "goto": "teirei.liberation.node.effect.001"
         },
         {
           "id": "teirei.liberation.choice.002",
           "label": "契約を削除し、次戦の作戦表だけ共有する",
-          "result": "命令ではなく資料として送った作戦表へ、丁零から修正案が返った。採用の判断まで本人の署名つきだった。",
-          "intent": "自由な相手へ改めて協力を頼む",
+          "result": "「契約は消えました。これは命令じゃなくて、共有です」と次戦の作戦表を渡すと、彼女は0.4秒で読了し、三箇所に赤入れして返してきた。「共有への、共有です」。命令でも服従でもない、対等な赤入れだった。あの「誤解の余地0.0パーセント」の几帳面さは、自由になっても健在である。",
+          "intent": "命令ではなく共有で、一緒に戦い続ける",
           "promise": "断る権利を返したうえで、決勝を一緒に戦う新しい約束を結ぶ。",
-          "memory": "頼まれたからではなく、頼みを聞いたから残った。その違いを二人が覚えている。",
+          "memory": "「共有への、共有です」の赤入れを、チームは新しい合言葉にした。",
           "tone": "tender",
           "effects": [
-            {
-              "type": "relationship",
-              "target": {
-                "type": "fighter",
-                "fighterId": "teirei"
-              },
-              "mode": "add",
-              "trust": 6,
-              "ownership": 0
-            },
-            {
-              "type": "sharedPoints",
-              "amount": 4
-            },
-            {
-              "type": "liberationDecision",
-              "fighterId": "teirei",
-              "decision": "release"
-            }
+            { "type": "relationship", "target": { "type": "fighter", "fighterId": "teirei" }, "mode": "add", "trust": 6, "ownership": 0 },
+            { "type": "sharedPoints", "amount": 4 },
+            { "type": "liberationDecision", "fighterId": "teirei", "decision": "release" }
           ],
           "goto": "teirei.liberation.node.effect.001"
         }
@@ -290,30 +184,10 @@
       "type": "effect",
       "id": "teirei.liberation.node.effect.001",
       "effects": [
-        {
-          "type": "setStoryStage",
-          "fighterId": "teirei",
-          "stage": 6
-        },
-        {
-          "type": "setLiberationEligible",
-          "fighterId": "teirei",
-          "eligible": false
-        },
-        {
-          "type": "setLiberated",
-          "fighterId": "teirei",
-          "liberated": true
-        },
-        {
-          "type": "relationship",
-          "target": {
-            "type": "fighter",
-            "fighterId": "teirei"
-          },
-          "mode": "set",
-          "ownership": 0
-        }
+        { "type": "setStoryStage", "fighterId": "teirei", "stage": 6 },
+        { "type": "setLiberationEligible", "fighterId": "teirei", "eligible": false },
+        { "type": "setLiberated", "fighterId": "teirei", "liberated": true },
+        { "type": "relationship", "target": { "type": "fighter", "fighterId": "teirei" }, "mode": "set", "ownership": 0 }
       ]
     },
     {
@@ -323,9 +197,9 @@
     }
   ],
   "debug": {
-    "status": "approved",
-    "sourceDocument": "native narrative block migration",
-    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "status": "review",
+    "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
+    "authorNote": "v2改稿: 命令元空欄の検証。「怖くない方の空欄」。自己命令「隣にいる。理由: 空欄のまま提出」。",
     "legacyGeneratedIds": false
   }
 }

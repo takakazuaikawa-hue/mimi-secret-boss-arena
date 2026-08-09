@@ -2,26 +2,17 @@
   "schemaVersion": 1,
   "id": "peony.meet",
   "kind": "character",
-  "title": "最初の遭遇",
-  "summary": "迷子案内所で起きる「最初の遭遇」",
+  "title": "紙の冠と、全力の指先",
+  "summary": "迷子案内所。城壁を砂にする手が、折り紙と格闘していた",
   "ownership": {
     "arcId": "character.peony",
     "characterId": "peony",
     "stage": "meet"
   },
   "trigger": {
-    "actions": [
-      "work",
-      "play"
-    ],
-    "when": {
-      "all": [],
-      "any": [],
-      "none": []
-    },
-    "repeat": {
-      "mode": "once-per-run"
-    },
+    "actions": ["work", "play"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
     "priority": 500,
     "weight": 1
   },
@@ -44,12 +35,17 @@
   },
   "nodes": [
     {
+      "type": "direction",
+      "id": "peony.meet.node.direction.001",
+      "command": { "type": "background", "assetId": "peony.meet.asset.background.001", "transition": "dissolve" }
+    },
+    {
       "type": "line",
       "id": "peony.meet.node.line.001",
       "lineId": "peony.meet.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "今週の用事で迷子案内所へ立ち寄った。予定どおりなら、目の前の用事を済ませて帰るだけのはずだった。"
+      "text": "迷子のお子様のお迎え要請で、案内所へ走った。着いてみると、迷子の男の子は泣いていなかった。代わりに、天井につっかえそうな巨大な人が、滝みたいな汗をかいて、折り紙と向き合っていた。"
     },
     {
       "type": "line",
@@ -57,41 +53,36 @@
       "lineId": "peony.meet.line.002",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "その日、最初に目へ入ったのは大きな角、紙の冠、指先に乗るほど小さな積み木だった。人より先に、その人の孤独だけが場所を取っていた。"
+      "text": "桃色の髪、立派な角、城壁みたいな肩幅。その巨躯が、全神経を指先の一点に集めて、紙の冠を折っている。男の子は隣で、わくわくと完成を待っている。",
+      "emotion": "tension"
+    },
+    {
+      "type": "direction",
+      "id": "peony.meet.node.direction.002",
+      "command": { "type": "still", "assetId": "peony.meet.asset.still.001" }
+    },
+    {
+      "type": "direction",
+      "id": "peony.meet.node.direction.003",
+      "command": { "type": "effect", "effectId": "pulse" }
     },
     {
       "type": "line",
       "id": "peony.meet.node.line.003",
       "lineId": "peony.meet.line.003",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "迷子案内所の天井近くに角が二本見えた。その下で、大きな女性が紙の冠を指先だけで折っている。"
+      "speakerId": "legacy.speaker.1e9iq7o",
+      "speakerName": "ピオニー",
+      "mode": "dialogue",
+      "text": "しー……。今、いちばん、むずかしいところ。……つのの、おりかえし。"
     },
     {
       "type": "line",
       "id": "peony.meet.node.line.004",
       "lineId": "peony.meet.line.004",
-      "speakerId": "legacy.speaker.1e9iq7o",
-      "speakerName": "ピオニー",
-      "mode": "dialogue",
-      "text": "この子の保護者、見つかった？"
-    },
-    {
-      "type": "direction",
-      "id": "peony.meet.node.direction.001",
-      "command": {
-        "type": "background",
-        "assetId": "peony.meet.asset.background.001",
-        "transition": "dissolve"
-      }
-    },
-    {
-      "type": "direction",
-      "id": "peony.meet.node.direction.002",
-      "command": {
-        "type": "effect",
-        "effectId": "flash"
-      }
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "あとで知ったが、この人の拳は、触れる前の風圧だけで城壁を砂にする。その手で、いま、五センチの折り返しに挑んでいる。私は息を止めて見守った。案内所全体が、息を止めていた。",
+      "emotion": "tension"
     },
     {
       "type": "line",
@@ -99,24 +90,13 @@
       "lineId": "peony.meet.line.005",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ここへ来た理由は、ごく普通の用事だった。けれどピオニーを見た瞬間、兎耳だけが先に危険を知らせる。私はとっさに、壊さないよう力加減を教えれば安心できるのだと思いかけた。",
+      "text": "——完成。紙の冠が、男の子の頭にそっと載る。歓声。その瞬間、ピオニーが安心して、大きく息を吸って——くしゃみをした。",
       "emotion": "comic"
     },
     {
       "type": "direction",
-      "id": "peony.meet.node.direction.003",
-      "command": {
-        "type": "still",
-        "assetId": "peony.meet.asset.still.001"
-      }
-    },
-    {
-      "type": "direction",
       "id": "peony.meet.node.direction.004",
-      "command": {
-        "type": "effect",
-        "effectId": "pulse"
-      }
+      "command": { "type": "effect", "effectId": "shake" }
     },
     {
       "type": "line",
@@ -124,8 +104,8 @@
       "lineId": "peony.meet.line.006",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "声をかけるべきか迷っている間に、視線だけが一度重なる。胸が跳ねたのは見た目のせいではない。見つけてはいけない何かを、向こうも隠さなかったからだ。",
-      "emotion": "tension"
+      "text": "窓の外で、雲が割れた。屋内の掲示物が全部めくれ、私の兎耳は真後ろへなびき、館内放送が「突風にご注意ください」と流れた。屋内で。",
+      "emotion": "comic"
     },
     {
       "type": "line",
@@ -134,42 +114,43 @@
       "speakerId": "legacy.speaker.1e9iq7o",
       "speakerName": "ピオニー",
       "mode": "dialogue",
-      "text": "もう一つ作れば、泣くのをやめられるかい。城なら前に壊したが、冠はまだ練習中でね。"
+      "text": "……ごめんなさい。でも、かんむりは、まもった。"
     },
     {
       "type": "line",
       "id": "peony.meet.node.line.008",
       "lineId": "peony.meet.line.008",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "もうすぐ来るそうです。その壁、何ですか。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "見ると、くしゃみの瞬間、彼女は両手で男の子と冠を風から囲っていた。雲は割ったが、紙の冠は守った。優先順位が、完璧に彼女だった。",
+      "emotion": "revelation"
     },
     {
       "type": "line",
       "id": "peony.meet.node.line.009",
       "lineId": "peony.meet.line.009",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "ピオニーは、壊れるものの前へ自分から立ち、全部の責任を引き受ける巨人に見えた。だから私は、普通のお客様へするのと同じ声で話しかけることにした。"
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "迷子係の方、ですか？"
     },
     {
       "type": "line",
       "id": "peony.meet.node.line.010",
       "lineId": "peony.meet.line.010",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
+      "speakerId": "legacy.speaker.1e9iq7o",
+      "speakerName": "ピオニー",
       "mode": "dialogue",
-      "text": "城壁を割った手で、この小さい折り目をつけたんですか。"
+      "text": "ううん。……わたしも、まいご。むかし守ってた城が、もう地図にないの。守り方だけ、おぼえてるんだけど。"
     },
     {
       "type": "line",
       "id": "peony.meet.node.line.011",
       "lineId": "peony.meet.line.011",
-      "speakerId": "legacy.speaker.1e9iq7o",
-      "speakerName": "ピオニー",
-      "mode": "dialogue",
-      "text": "昔ちょっと。力加減を間違えてね。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "案内所に居着いた理由が、それだった。迷子は、迷子の面倒を見るのが上手い。守る城を失くした巨人は、この小さな窓口で、紙の冠を守っている。",
+      "emotion": "revelation"
     },
     {
       "type": "line",
@@ -177,15 +158,17 @@
       "lineId": "peony.meet.line.012",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "たった一言の返事を待つ時間が、試合開始前より長い。背後ではいつもの業務放送が流れ、この場所だけが別の物語の入口みたいに静かだった。"
+      "text": "男の子のお母さんが迎えに来て、案内所が静かになる。ピオニーは、余った折り紙で二つ目の冠を折り始めた。さっきより、指が少しだけ緊張している。",
+      "emotion": "tender"
     },
     {
       "type": "line",
       "id": "peony.meet.node.line.013",
       "lineId": "peony.meet.line.013",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "子どもの頭へ冠を載せる手は、息を止めてしまうほど慎重だった。"
+      "speakerId": "legacy.speaker.1e9iq7o",
+      "speakerName": "ピオニー",
+      "mode": "dialogue",
+      "text": "……これは、うさみみが、じゃまにならない設計。……できたら、もらって、くれる？"
     },
     {
       "type": "line",
@@ -193,51 +176,8 @@
       "lineId": "peony.meet.line.014",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "くしゃみを我慢しただけで城壁が砂になり、本人だけが椅子の傷を気にしている。それでも本人が気にしたのは、私が一歩引いたことの方だった。",
-      "emotion": "comic"
-    },
-    {
-      "type": "line",
-      "id": "peony.meet.node.line.015",
-      "lineId": "peony.meet.line.015",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "まだ事情はほとんど分からない。ただ、最初の考えだけでは説明できない表情を見てしまった。私は曲がった名札を直し、次に会う口実をひとつ残した。",
+      "text": "城壁を砂にする手が、私の耳の位置を測って、冠の設計を変えている。断る選択肢は、この世に存在しなかった。",
       "emotion": "tender"
-    },
-    {
-      "type": "line",
-      "id": "peony.meet.node.line.016",
-      "lineId": "peony.meet.line.016",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "怖くないと言えば嘘になる。でも、怖さの奥に守ろうと力を出した瞬間、守る相手まで同じ拳で壊してしまうことがある気がして、目をそらす方が失礼に思えた。",
-      "emotion": "revelation"
-    },
-    {
-      "type": "line",
-      "id": "peony.meet.node.line.017",
-      "lineId": "peony.meet.line.017",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "事情はまだ分からない。でも、ここで立ち去れば、たぶん後悔する。"
-    },
-    {
-      "type": "line",
-      "id": "peony.meet.node.line.018",
-      "lineId": "peony.meet.line.018",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "名前を聞いただけ。約束も、契約も、まだ何もない。それなのに別れ際、次に会った時の言葉を考えている自分がいた。",
-      "emotion": "tender"
-    },
-    {
-      "type": "line",
-      "id": "peony.meet.node.line.019",
-      "lineId": "peony.meet.line.019",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "その場に残った角の部分だけ立派に折られた紙の冠を見て、私は今日の出来事を勤務報告の一行だけでは終わらせられないと知った。"
     },
     {
       "type": "choice",
@@ -246,32 +186,23 @@
         {
           "id": "peony.meet.choice.001",
           "label": "迷子が泣き止むまで隣に座る",
-          "result": "城壁を割る手が、紙の冠を壊さないよう慎重に折った。",
-          "intent": "登録の前に、目の前の相手を知る",
-          "promise": "目先の報酬は得ない代わりに、相手が何を望んでいるかを確かめる。",
-          "memory": "手続きより先に話を聞いたことを、相手は最初の印象として覚えている。",
+          "result": "その日の午後、案内所にはもう一人迷子が来た。今度は大泣きの女の子。ピオニーは慌てず、私と役割分担した。彼女が「おおきくて、あんしんな壁」になり、私が「はなしをきく係」になる。泣き止んだ女の子は、帰り際にピオニーの角へ、借りた紙冠をお返しに載せた。角の先の紙冠は、その日一日、彼女の宝物だった。",
+          "intent": "守る側の隣で、案内所の午後を手伝う",
+          "promise": "目先の報酬は得ない代わりに、この人が何を失ったかを知る。",
+          "memory": "角の先の紙冠の日を、ピオニーは何度も話す。",
           "tone": "tender",
           "effects": [
-            {
-              "type": "relationship",
-              "target": {
-                "type": "fighter",
-                "fighterId": "peony"
-              },
-              "mode": "add",
-              "trust": 7,
-              "ownership": -2
-            }
+            { "type": "relationship", "target": { "type": "fighter", "fighterId": "peony" }, "mode": "add", "trust": 7, "ownership": -2 }
           ],
           "goto": "peony.meet.node.effect.001"
         },
         {
           "id": "peony.meet.choice.002",
           "label": "今日はピオニーを誘わず、用事へ戻る",
-          "result": "ピオニーの名前と出会った場所だけを覚え、今日は普段の仕事へ戻った。急いで所属を決めなかったことが、次に会う時の距離として残った。",
-          "intent": "今は勧誘せず、相手との距離を保つ",
+          "result": "仕事に戻る私の頭には、兎耳がじゃまにならない設計の紙冠が載っていた。フロアのお客様たちに「かわいい」と言われるたび、作者の宣伝をしておいた。翌週、迷子案内所には「冠の折り方教室(こわれません)」の貼り紙が出た。括弧の但し書きに、彼女の全力が詰まっている。",
+          "intent": "今日は業務へ戻る",
           "promise": "所属選手にはならないが、後の出来事で再会できる。",
-          "memory": "最初の出会いで急いで仲間にしなかったことが、次の再会へ残る。",
+          "memory": "紙冠を一日かぶっていた店員のことを、ピオニーは覚えている。",
           "tone": "pragmatic",
           "effects": [],
           "goto": "peony.meet.node.effect.001"
@@ -282,16 +213,8 @@
       "type": "effect",
       "id": "peony.meet.node.effect.001",
       "effects": [
-        {
-          "type": "markEncountered",
-          "fighterId": "peony",
-          "encountered": true
-        },
-        {
-          "type": "setStoryStage",
-          "fighterId": "peony",
-          "stage": 1
-        }
+        { "type": "markEncountered", "fighterId": "peony", "encountered": true },
+        { "type": "setStoryStage", "fighterId": "peony", "stage": 1 }
       ]
     },
     {
@@ -301,9 +224,9 @@
     }
   ],
   "debug": {
-    "status": "approved",
-    "sourceDocument": "native narrative block migration",
-    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "status": "review",
+    "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
+    "authorNote": "v2改稿: 紙冠×くしゃみで雲が割れる(canonギャグ)。Q1=守ってた城が地図にない。兎耳対応設計の冠。",
     "legacyGeneratedIds": false
   }
 }

@@ -2,26 +2,17 @@
   "schemaVersion": 1,
   "id": "ushiro.meet",
   "kind": "character",
-  "title": "最初の遭遇",
-  "summary": "記念撮影所で起きる「最初の遭遇」",
+  "title": "百二十七枚の、写り込み",
+  "summary": "記念撮影所の苦情対応。全部の写真の背後に、同じ人がいる",
   "ownership": {
     "arcId": "character.ushiro",
     "characterId": "ushiro",
     "stage": "meet"
   },
   "trigger": {
-    "actions": [
-      "play",
-      "work"
-    ],
-    "when": {
-      "all": [],
-      "any": [],
-      "none": []
-    },
-    "repeat": {
-      "mode": "once-per-run"
-    },
+    "actions": ["play", "work"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
     "priority": 500,
     "weight": 1
   },
@@ -44,12 +35,17 @@
   },
   "nodes": [
     {
+      "type": "direction",
+      "id": "ushiro.meet.node.direction.001",
+      "command": { "type": "background", "assetId": "ushiro.meet.asset.background.001", "transition": "dissolve" }
+    },
+    {
       "type": "line",
       "id": "ushiro.meet.node.line.001",
       "lineId": "ushiro.meet.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "今週の用事で記念撮影所へ立ち寄った。予定どおりなら、目の前の用事を済ませて帰るだけのはずだった。"
+      "text": "記念撮影所から、苦情対応の応援要請が来た。内容が変だった。「本日の記念写真、百二十七枚すべてに、写ってはいけない人が写っています」。"
     },
     {
       "type": "line",
@@ -57,7 +53,18 @@
       "lineId": "ushiro.meet.line.002",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "その日、最初に目へ入ったのは写真の最後列、肩越しの足音、二本買った飲み物だった。人より先に、その人の孤独だけが場所を取っていた。"
+      "text": "現像された写真を確認する。新婚旅行のご夫婦の背後に、黒金の影がひとり。優勝記念の団体写真の最後列に、同じ影。赤ちゃんの初闘技場記念の背後にも、同じ影。全百二十七枚、全部同じ人。全部、律儀にピースをしている。",
+      "emotion": "comic"
+    },
+    {
+      "type": "direction",
+      "id": "ushiro.meet.node.direction.002",
+      "command": { "type": "still", "assetId": "ushiro.meet.asset.still.001" }
+    },
+    {
+      "type": "direction",
+      "id": "ushiro.meet.node.direction.003",
+      "command": { "type": "effect", "effectId": "pulse" }
     },
     {
       "type": "line",
@@ -65,76 +72,44 @@
       "lineId": "ushiro.meet.line.003",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "記念写真の最後列に、撮るたび一人分の影が増える。数え直そうと振り返ると、その席だけ空いていた。"
+      "text": "そして気づいた。今この瞬間、私の真後ろが、妙にあたたかい。振り返る——誰もいない。前に向き直る。うなじの気配が、戻ってくる。",
+      "emotion": "tension"
     },
     {
       "type": "line",
       "id": "ushiro.meet.node.line.004",
       "lineId": "ushiro.meet.line.004",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
+      "speakerId": "legacy.speaker.1ddw3j9",
+      "speakerName": "うしろ",
       "mode": "dialogue",
-      "text": "写真、人数が一人多い。"
-    },
-    {
-      "type": "direction",
-      "id": "ushiro.meet.node.direction.001",
-      "command": {
-        "type": "background",
-        "assetId": "ushiro.meet.asset.background.001",
-        "transition": "dissolve"
-      }
-    },
-    {
-      "type": "direction",
-      "id": "ushiro.meet.node.direction.002",
-      "command": {
-        "type": "effect",
-        "effectId": "flash"
-      }
+      "text": "……振り返っても、見えませんよ。私は「うしろ」なので。あなたの後ろに、いる限り。"
     },
     {
       "type": "line",
       "id": "ushiro.meet.node.line.005",
       "lineId": "ushiro.meet.line.005",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "ここへ来た理由は、ごく普通の用事だった。けれどうしろを見た瞬間、兎耳だけが先に危険を知らせる。私はとっさに、見つかりたくないから背後へ隠れているのだと思いかけた。",
-      "emotion": "comic"
-    },
-    {
-      "type": "direction",
-      "id": "ushiro.meet.node.direction.003",
-      "command": {
-        "type": "still",
-        "assetId": "ushiro.meet.asset.still.001"
-      }
-    },
-    {
-      "type": "direction",
-      "id": "ushiro.meet.node.direction.004",
-      "command": {
-        "type": "effect",
-        "effectId": "pulse"
-      }
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "写真の写り込み、あなたですね！？　百二十七枚！"
     },
     {
       "type": "line",
       "id": "ushiro.meet.node.line.006",
       "lineId": "ushiro.meet.line.006",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "声をかけるべきか迷っている間に、視線だけが一度重なる。胸が跳ねたのは見た目のせいではない。見つけてはいけない何かを、向こうも隠さなかったからだ。",
-      "emotion": "tension"
+      "speakerId": "legacy.speaker.1ddw3j9",
+      "speakerName": "うしろ",
+      "mode": "dialogue",
+      "text": "百二十七枚、同時に、です。私は百二十七人いるので。……全員の背後は、少し寂しかったもので、つい。"
     },
     {
       "type": "line",
       "id": "ushiro.meet.node.line.007",
       "lineId": "ushiro.meet.line.007",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "さっきから、写真の人数が合わないんですけど。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "つい、で百二十七件の写り込みをする人がいた。聞けば、彼(彼ら?)の役目は昔から「背後」だった。物語の主役たちの背後に立つ影。その物語が終わって、立つべき背後が、なくなった。",
+      "emotion": "revelation"
     },
     {
       "type": "line",
@@ -143,7 +118,7 @@
       "speakerId": "legacy.speaker.1ddw3j9",
       "speakerName": "うしろ",
       "mode": "dialogue",
-      "text": "数えないで。"
+      "text": "誰の背後も、空いてしまった。……写真の中なら、また誰かの後ろに、立てる気がして。"
     },
     {
       "type": "line",
@@ -151,33 +126,35 @@
       "lineId": "ushiro.meet.line.009",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "うしろは、正面を持たず、振り返られた瞬間に別の背後へ消える影に見えた。だから私は、普通のお客様へするのと同じ声で話しかけることにした。"
+      "text": "動機が切なすぎて、苦情対応の台本が使えなくなった。しかも本人、写りたい割に、正面から撮られるのは怖いらしい。撮影所のカメラを向けると、百二十七人がいっせいに柱の陰に隠れた。壮観だった。",
+      "emotion": "comic"
     },
     {
       "type": "line",
       "id": "ushiro.meet.node.line.010",
       "lineId": "ushiro.meet.line.010",
-      "speakerId": "legacy.speaker.1ddw3j9",
-      "speakerName": "うしろ",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "数えないで。"
+      "text": "……じゃあ、こうしましょう。写り込み、公認にします。"
     },
     {
       "type": "line",
       "id": "ushiro.meet.node.line.011",
       "lineId": "ushiro.meet.line.011",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "今、後ろから聞こえた？"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "撮影所と交渉して、新サービスを作った。「記念写真・見守りオプション(無料)」。希望のお客様の写真にだけ、後ろの人がそっと写り込む。苦情は、その日からゼロになった。むしろ「うちにも写って」の予約が入り始めた。",
+      "emotion": "comic"
     },
     {
       "type": "line",
       "id": "ushiro.meet.node.line.012",
       "lineId": "ushiro.meet.line.012",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "たった一言の返事を待つ時間が、試合開始前より長い。背後ではいつもの業務放送が流れ、この場所だけが別の物語の入口みたいに静かだった。"
+      "speakerId": "legacy.speaker.1ddw3j9",
+      "speakerName": "うしろ",
+      "mode": "dialogue",
+      "text": "……いいの、ですか。私、招かれた背後は、初めてで。"
     },
     {
       "type": "line",
@@ -185,59 +162,8 @@
       "lineId": "ushiro.meet.line.013",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "声は耳元ではなく、肩甲骨の間へ冷たい指で書かれたように届いた。"
-    },
-    {
-      "type": "line",
-      "id": "ushiro.meet.node.line.014",
-      "lineId": "ushiro.meet.line.014",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "一人で全員の背後へ立てるのに、記念写真では一席ぶんだけ遠慮する。それでも本人が気にしたのは、私が一歩引いたことの方だった。",
-      "emotion": "comic"
-    },
-    {
-      "type": "line",
-      "id": "ushiro.meet.node.line.015",
-      "lineId": "ushiro.meet.line.015",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "まだ事情はほとんど分からない。ただ、最初の考えだけでは説明できない表情を見てしまった。私は曲がった名札を直し、次に会う口実をひとつ残した。",
+      "text": "声が、うなじのあたりで少し震えた。振り返らないまま、私は言った。「初めてついでに、もう一つどうですか」。撮影台の最後列に、椅子を一脚、置いた。",
       "emotion": "tender"
-    },
-    {
-      "type": "line",
-      "id": "ushiro.meet.node.line.016",
-      "lineId": "ushiro.meet.line.016",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "怖くないと言えば嘘になる。でも、怖さの奥に見つけてもらうことと、形を決められることが同じになることがある気がして、目をそらす方が失礼に思えた。",
-      "emotion": "revelation"
-    },
-    {
-      "type": "line",
-      "id": "ushiro.meet.node.line.017",
-      "lineId": "ushiro.meet.line.017",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "事情はまだ分からない。でも、ここで立ち去れば、たぶん後悔する。"
-    },
-    {
-      "type": "line",
-      "id": "ushiro.meet.node.line.018",
-      "lineId": "ushiro.meet.line.018",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "名前を聞いただけ。約束も、契約も、まだ何もない。それなのに別れ際、次に会った時の言葉を考えている自分がいた。",
-      "emotion": "tender"
-    },
-    {
-      "type": "line",
-      "id": "ushiro.meet.node.line.019",
-      "lineId": "ushiro.meet.line.019",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "その場に残ったいつの間にか軽くなっていた二本目の飲み物を見て、私は今日の出来事を勤務報告の一行だけでは終わらせられないと知った。"
     },
     {
       "type": "choice",
@@ -246,32 +172,23 @@
         {
           "id": "ushiro.meet.choice.001",
           "label": "最後列に空席を一つ残す",
-          "result": "誰も座っていない席だけ、写真の中で深く会釈した。",
-          "intent": "登録の前に、目の前の相手を知る",
-          "promise": "目先の報酬は得ない代わりに、相手が何を望んでいるかを確かめる。",
-          "memory": "手続きより先に話を聞いたことを、相手は最初の印象として覚えている。",
+          "result": "「この席は、写りたくなった時に、どうぞ」。翌朝の従業員集合写真で、最後列の空席に、黒金の影がひとり、ちゃんと座っていた。初めて正面から写った「うしろ」は、ぎこちないピースをしていて、百二十六人ぶんの分身が、写真の外から見守っていた気配がある。現像係が「なんかこの写真、あったかいですね」と言った。分かる。",
+          "intent": "写りたい気持ちの席を、先に用意する",
+          "promise": "目先の報酬は得ない代わりに、この人が何を失ったかを知る。",
+          "memory": "初めて正面から写った一枚を、撮影所が「一号」と呼んで保管している。",
           "tone": "tender",
           "effects": [
-            {
-              "type": "relationship",
-              "target": {
-                "type": "fighter",
-                "fighterId": "ushiro"
-              },
-              "mode": "add",
-              "trust": 7,
-              "ownership": -2
-            }
+            { "type": "relationship", "target": { "type": "fighter", "fighterId": "ushiro" }, "mode": "add", "trust": 7, "ownership": -2 }
           ],
           "goto": "ushiro.meet.node.effect.001"
         },
         {
           "id": "ushiro.meet.choice.002",
           "label": "今日はうしろを誘わず、用事へ戻る",
-          "result": "うしろの名前と出会った場所だけを覚え、今日は普段の仕事へ戻った。急いで所属を決めなかったことが、次に会う時の距離として残った。",
-          "intent": "今は勧誘せず、相手との距離を保つ",
+          "result": "見守りオプションの開設を届け出て、私は業務へ戻った。数日後、私の従業員証の写真が、いつの間にか差し替わっていた。よく見ると、背景に黒金の影が小さく写って、小さくピースしている。総務に聞いても「差し替えの記録はない」という。うちの従業員証、世界一手厚い見守りがついている。",
+          "intent": "今日は苦情対応の完了を優先する",
           "promise": "所属選手にはならないが、後の出来事で再会できる。",
-          "memory": "最初の出会いで急いで仲間にしなかったことが、次の再会へ残る。",
+          "memory": "従業員証の背後のピースを、私は毎朝ちょっと確認している。",
           "tone": "pragmatic",
           "effects": [],
           "goto": "ushiro.meet.node.effect.001"
@@ -282,16 +199,8 @@
       "type": "effect",
       "id": "ushiro.meet.node.effect.001",
       "effects": [
-        {
-          "type": "markEncountered",
-          "fighterId": "ushiro",
-          "encountered": true
-        },
-        {
-          "type": "setStoryStage",
-          "fighterId": "ushiro",
-          "stage": 1
-        }
+        { "type": "markEncountered", "fighterId": "ushiro", "encountered": true },
+        { "type": "setStoryStage", "fighterId": "ushiro", "stage": 1 }
       ]
     },
     {
@@ -301,9 +210,9 @@
     }
   ],
   "debug": {
-    "status": "approved",
-    "sourceDocument": "native narrative block migration",
-    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "status": "review",
+    "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
+    "authorNote": "v2改稿: 127枚同時写り込み事件(襲撃ではなく写り込み=canon採用条件)。Q1=誰の背後も空いてしまった。最後列の空席。",
     "legacyGeneratedIds": false
   }
 }

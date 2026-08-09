@@ -2,26 +2,17 @@
   "schemaVersion": 1,
   "id": "wolf-nine.join",
   "kind": "character",
-  "title": "スカウト",
-  "summary": "練習場で起きる「スカウト」",
+  "title": "入団試験は、席取りゲーム",
+  "summary": "スカウトのはずが、逆に入団試験を出題される",
   "ownership": {
     "arcId": "character.wolf-nine",
     "characterId": "wolf-nine",
     "stage": "join"
   },
   "trigger": {
-    "actions": [
-      "work",
-      "play"
-    ],
-    "when": {
-      "all": [],
-      "any": [],
-      "none": []
-    },
-    "repeat": {
-      "mode": "once-per-run"
-    },
+    "actions": ["work", "play"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
     "priority": 400,
     "weight": 1
   },
@@ -38,29 +29,35 @@
   },
   "nodes": [
     {
+      "type": "direction",
+      "id": "wolf-nine.join.node.direction.001",
+      "command": { "type": "background", "assetId": "wolf-nine.join.asset.background.001", "transition": "dissolve" }
+    },
+    {
       "type": "line",
       "id": "wolf-nine.join.node.line.001",
       "lineId": "wolf-nine.join.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ヴォルフ・ナインと初めて会ったあと、練習場でもう一度顔を合わせた。今日は、選手登録の条件を確かめることになっている。"
+      "text": "ヴォルフ・ナインをチームに誘いに、練習場へ行った。九戦目の宛先候補として、うちの公式戦を提案するつもりだった。だが、口を開いたのは彼が先だった。"
     },
     {
       "type": "line",
       "id": "wolf-nine.join.node.line.002",
       "lineId": "wolf-nine.join.line.002",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "選手登録の面談室は狭い。机を挟めば仕事の距離を守れるはずなのに、同じ書類を覗き込むたび、沈黙だけが近くなる。",
-      "emotion": "tension"
+      "speakerId": "legacy.speaker.1vj9fme",
+      "speakerName": "ヴォルフ・ナイン",
+      "mode": "dialogue",
+      "text": "スカウトだろう。話は耳が拾った。——だが、順番が違う。俺が入るに値するチームか、まず試験だ。"
     },
     {
       "type": "line",
       "id": "wolf-nine.join.node.line.003",
       "lineId": "wolf-nine.join.line.003",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "契約書を渡すと、彼は条項より先に紙の厚さと破れ方を確かめた。決闘の最中に残るかどうかが重要らしい。"
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "スカウトされる側が、試験を出すんですか！？"
     },
     {
       "type": "line",
@@ -69,24 +66,7 @@
       "speakerId": "legacy.speaker.1vj9fme",
       "speakerName": "ヴォルフ・ナイン",
       "mode": "dialogue",
-      "text": "お前の選手と戦うため、まず同じチームへ入る。"
-    },
-    {
-      "type": "direction",
-      "id": "wolf-nine.join.node.direction.001",
-      "command": {
-        "type": "background",
-        "assetId": "wolf-nine.join.asset.background.001",
-        "transition": "dissolve"
-      }
-    },
-    {
-      "type": "direction",
-      "id": "wolf-nine.join.node.direction.002",
-      "command": {
-        "type": "effect",
-        "effectId": "pulse"
-      }
+      "text": "当然だ。真剣勝負を預けるチームだぞ。監督の力量を、この目で確かめる。種目は——「席取り」だ。"
     },
     {
       "type": "line",
@@ -94,7 +74,7 @@
       "lineId": "wolf-nine.join.line.005",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "選手登録は一枚で済むのに、ウルフ・ナインを知るための欄はどこにもない。強い相手と戦い続けられれば満足する戦士なのだと決めれば簡単だ。でも、その決め方こそ契約書と同じに見えた。",
+      "text": "ルールは単純。昼休みの従業員食堂で、いちばん良い席(窓際・給湯器近く・通路広め)を、正攻法で確保した方が勝ち。ただし走るの禁止、割り込み禁止、札置き禁止。つまり、読みと段取りだけの勝負である。",
       "emotion": "comic"
     },
     {
@@ -103,25 +83,26 @@
       "lineId": "wolf-nine.join.line.006",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ウルフ・ナインの経歴は、端末の入力欄へ収まらない。けれど本人が書けずにいるのは、過去の偉業ではなく「これから何をしたいか」の一行だった。"
+      "text": "正午の鐘と同時に、勝負が始まった。彼は狼の脚で最短経路を歩く。私は接客歴半年の知識で搦め手を打つ。配膳が遅いカレーの列をあえて選び、席が空く波を読み、常連さんに挨拶しながら自然に窓際へ流れる。",
+      "emotion": "comic"
     },
     {
       "type": "line",
       "id": "wolf-nine.join.node.line.007",
       "lineId": "wolf-nine.join.line.007",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "負けたら契約終了、という条件は入れません。負けたあとも次の週があります。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "結果——同着だった。良い席の両端に、同時に着席。彼は目を見開いて、それから食堂中に響く声で笑った。",
+      "emotion": "comic"
     },
     {
       "type": "line",
       "id": "wolf-nine.join.node.line.008",
       "lineId": "wolf-nine.join.line.008",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
+      "speakerId": "legacy.speaker.1vj9fme",
+      "speakerName": "ヴォルフ・ナイン",
       "mode": "dialogue",
-      "text": "順序がおかしくないですか。"
+      "text": "見事！　波を読んだな、あんた！　挨拶で進路を作るのは反則すれすれの妙手だ！　……合格だ。いや、俺が合格をもらう側か。どっちでもいい、合格！"
     },
     {
       "type": "line",
@@ -129,7 +110,7 @@
       "lineId": "wolf-nine.join.line.009",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "負けるたび強くなり、次の決闘だけを生きる九番目の狼。その横顔が、空欄の前でだけ少し頼りなく見える。",
+      "text": "勝負のあとの彼は、負けても同着でも、とにかく機嫌がいい。真剣に競えたこと自体が、この人へのごちそうなのだ。八敗の記録が、急に別の色で見えた。八回、全力で競えた記録でもあるのだ。",
       "emotion": "revelation"
     },
     {
@@ -139,84 +120,16 @@
       "speakerId": "legacy.speaker.1vj9fme",
       "speakerName": "ヴォルフ・ナイン",
       "mode": "dialogue",
-      "text": "敗北を終わりにしない契約か。それは甘いのではなく、長い。"
+      "text": "それで、契約の形だが。俺は書式にはうるさいぞ。決闘の作法で頼む。"
     },
     {
       "type": "line",
       "id": "wolf-nine.join.node.line.011",
       "lineId": "wolf-nine.join.line.011",
-      "speakerId": "legacy.speaker.1vj9fme",
-      "speakerName": "ヴォルフ・ナイン",
-      "mode": "dialogue",
-      "text": "近くで見た方が、次の決闘が良くなる。"
-    },
-    {
-      "type": "line",
-      "id": "wolf-nine.join.node.line.012",
-      "lineId": "wolf-nine.join.line.012",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "採用する側らしい言葉を探した。でも必要なのは評価ではなく、ここにいてもいい理由を一緒に作ることなのだと思った。"
-    },
-    {
-      "type": "line",
-      "id": "wolf-nine.join.node.line.013",
-      "lineId": "wolf-nine.join.line.013",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "彼は九本目の爪で署名し、初めて挑戦状ではない紙を丁寧に畳んだ。"
-    },
-    {
-      "type": "line",
-      "id": "wolf-nine.join.node.line.014",
-      "lineId": "wolf-nine.join.line.014",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "再戦の印が増えるほど月が欠け、九戦目には空そのものが決闘場になるという注意事項まで契約書へ加わり、一般的な選手登録は完全に諦めることになった。",
-      "emotion": "comic"
-    },
-    {
-      "type": "line",
-      "id": "wolf-nine.join.node.line.015",
-      "lineId": "wolf-nine.join.line.015",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "私のペンで未来まで埋めないよう、最後の空欄を机の中央へ戻した。待つ時間は気まずい。それでも、本人の言葉で始まるほうがいい。",
+      "text": "決闘の作法の契約。締め方を選ぶ番だった。",
       "emotion": "resolve"
-    },
-    {
-      "type": "line",
-      "id": "wolf-nine.join.node.line.016",
-      "lineId": "wolf-nine.join.line.016",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "最後に本人が確かめたのは報酬ではなく、勝敗のつかない時間にも、同じ相手と食事を続けることが規則違反にならないかどうかだった。",
-      "emotion": "tender"
-    },
-    {
-      "type": "line",
-      "id": "wolf-nine.join.node.line.017",
-      "lineId": "wolf-nine.join.line.017",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "登録を急ぐとしても、本人を置き去りにしたまま話を進めたくはなかった。"
-    },
-    {
-      "type": "line",
-      "id": "wolf-nine.join.node.line.018",
-      "lineId": "wolf-nine.join.line.018",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "登録完了の音が鳴る。これで仲間になった、と簡単に呼んでいいのか分からない。けれど退室する足音が、来た時より少しだけゆっくりだった。"
-    },
-    {
-      "type": "line",
-      "id": "wolf-nine.join.node.line.019",
-      "lineId": "wolf-nine.join.line.019",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "勝敗を書かずに残した十枚目の対戦票が机に残る。返そうと呼び止めると、「次に会う理由として置いておく」とだけ返ってきた。",
-      "emotion": "tender"
     },
     {
       "type": "choice",
@@ -225,83 +138,43 @@
         {
           "id": "wolf-nine.join.choice.001",
           "label": "八通分の挑戦状へ、一通ずつ返事を書く",
-          "result": "返事を書き終えた朝、九通目だけが先に届いた。ヴォルフは満足そうに、それを選手契約の上へ置いた。",
-          "intent": "本人の得意な戦い方を知る",
+          "result": "契約書の代わりに、私は「果たし状」の書式で勧誘状を書いた。便箋は彼と選び(三十分の真剣勝負)、封蝋は彼の私物を借りた。「ミミより、ヴォルフ・ナイン殿へ。我がチームとの真剣勝負の日々を、正式に申し込む」。彼は封を丁寧に開けて、読んで、雄叫びを一つ上げて、参加を受諾した。受取所に、初めて「宛先に届いた」彼宛ての手紙だった。",
+          "intent": "彼の作法で、正式に申し込む",
           "promise": "登録は少し遅れるが、この人専用の成長ポイントを得る。",
-          "memory": "自分で書いた最初の条件を、相手は次の大事な場面でも覚えている。",
+          "memory": "初めて宛先に届いた果たし状を、ヴォルフは額装している。",
           "tone": "tender",
           "effects": [
-            {
-              "type": "relationship",
-              "target": {
-                "type": "fighter",
-                "fighterId": "wolf-nine"
-              },
-              "mode": "add",
-              "trust": 8,
-              "ownership": -3
-            },
-            {
-              "type": "fighterPoints",
-              "target": {
-                "type": "fighter",
-                "fighterId": "wolf-nine"
-              },
-              "amount": 2
-            },
-            {
-              "type": "recruitmentDecision",
-              "fighterId": "wolf-nine",
-              "decision": "join"
-            }
+            { "type": "relationship", "target": { "type": "fighter", "fighterId": "wolf-nine" }, "mode": "add", "trust": 8, "ownership": -3 },
+            { "type": "fighterPoints", "target": { "type": "fighter", "fighterId": "wolf-nine" }, "amount": 2 },
+            { "type": "recruitmentDecision", "fighterId": "wolf-nine", "decision": "join" }
           ],
           "goto": "wolf-nine.join.node.end.001"
         },
         {
           "id": "wolf-nine.join.choice.002",
           "label": "次の公式戦を、九戦目の決闘として登録する",
-          "result": "大会事務局は受理した。封蝋の歯形だけ審査対象になり、本人はそこを一番気に入った。",
-          "intent": "次の公式戦へ間に合わせる",
-          "promise": "本人の詳細は後回しになるが、誰にでも使える成長ポイントを得る。",
-          "memory": "先に席を確保した判断は、チームの始まり方として記録に残る。",
+          "result": "「九戦目の相手は、次の公式戦の対戦チームでどうですか」。彼は三秒考えて、首を振った。「いや。九戦目は、まだ取っておく。九戦目ってのは、人生で一番大事な勝負に使う番号だ」。代わりに公式戦は「番外戦・全部」として登録された。番外戦を全力で戦う男の、九戦目の使い道は、まだ決まっていない。",
+          "intent": "九戦目の意味を、本人に決めさせる",
+          "promise": "本人の切り札番号は温存し、誰にでも使える成長ポイントを得る。",
+          "memory": "「九戦目は取っておく」の宣言を、チームの全員が聞いた。",
           "tone": "pragmatic",
           "effects": [
-            {
-              "type": "relationship",
-              "target": {
-                "type": "fighter",
-                "fighterId": "wolf-nine"
-              },
-              "mode": "add",
-              "trust": 0,
-              "ownership": 8
-            },
-            {
-              "type": "sharedPoints",
-              "amount": 2
-            },
-            {
-              "type": "recruitmentDecision",
-              "fighterId": "wolf-nine",
-              "decision": "join"
-            }
+            { "type": "relationship", "target": { "type": "fighter", "fighterId": "wolf-nine" }, "mode": "add", "trust": 0, "ownership": 8 },
+            { "type": "sharedPoints", "amount": 2 },
+            { "type": "recruitmentDecision", "fighterId": "wolf-nine", "decision": "join" }
           ],
           "goto": "wolf-nine.join.node.end.001"
         },
         {
           "id": "wolf-nine.join.choice.003",
           "label": "今回はヴォルフ・ナインを誘わず、別の機会を待つ",
-          "result": "ヴォルフ・ナインの出場登録は行わなかった。相手は所属せず、それぞれの用事へ戻った。断る選択を残したことだけが、次に会う時まで静かに残った。",
+          "result": "「今回は見送ります」と伝えると、彼はうなずいて、握手の代わりに封蝋を一つくれた。「気が変わったら、これで手紙を寄越せ。あんたの手紙なら、俺はどこにいても受け取りに走る」。宛先不明を八年続けた人の「受け取りに走る」は、重い約束である。",
           "intent": "今回はチームへ誘わない",
           "promise": "今回の所属は見送るが、人物の物語と再会の可能性は失わない。",
-          "memory": "勧誘しない選択も尊重されたことを、相手は覚えている。",
+          "memory": "もらった封蝋を、私は机の引き出しの一番手前に入れている。",
           "tone": "pragmatic",
           "effects": [
-            {
-              "type": "recruitmentDecision",
-              "fighterId": "wolf-nine",
-              "decision": "decline"
-            }
+            { "type": "recruitmentDecision", "fighterId": "wolf-nine", "decision": "decline" }
           ],
           "goto": "wolf-nine.join.node.end.001"
         }
@@ -314,9 +187,9 @@
     }
   ],
   "debug": {
-    "status": "approved",
-    "sourceDocument": "native narrative block migration",
-    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "status": "review",
+    "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
+    "authorNote": "v2改稿: 逆入団試験(席取りゲーム)と同着。果たし状書式の勧誘状=初めて宛先に届く手紙。",
     "legacyGeneratedIds": false
   }
 }

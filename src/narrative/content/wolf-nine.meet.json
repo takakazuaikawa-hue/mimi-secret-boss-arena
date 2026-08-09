@@ -2,26 +2,17 @@
   "schemaVersion": 1,
   "id": "wolf-nine.meet",
   "kind": "character",
-  "title": "最初の遭遇",
-  "summary": "郵便受取所で起きる「最初の遭遇」",
+  "title": "宛先不明、八通",
+  "summary": "郵便受取所の常連。戻ってきた挑戦状と、九通目の書けない宛先",
   "ownership": {
     "arcId": "character.wolf-nine",
     "characterId": "wolf-nine",
     "stage": "meet"
   },
   "trigger": {
-    "actions": [
-      "work",
-      "play"
-    ],
-    "when": {
-      "all": [],
-      "any": [],
-      "none": []
-    },
-    "repeat": {
-      "mode": "once-per-run"
-    },
+    "actions": ["work", "play"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
     "priority": 500,
     "weight": 1
   },
@@ -44,12 +35,17 @@
   },
   "nodes": [
     {
+      "type": "direction",
+      "id": "wolf-nine.meet.node.direction.001",
+      "command": { "type": "background", "assetId": "wolf-nine.meet.asset.background.001", "transition": "dissolve" }
+    },
+    {
       "type": "line",
       "id": "wolf-nine.meet.node.line.001",
       "lineId": "wolf-nine.meet.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "今週の用事で郵便受取所へ立ち寄った。予定どおりなら、目の前の用事を済ませて帰るだけのはずだった。"
+      "text": "郵便受取所の応援当番の日。窓口係さんから、申し送りがあった。「毎週金曜、耳の立派なお客様が来ます。受け取るのは、毎回同じ八通です」。"
     },
     {
       "type": "line",
@@ -57,15 +53,27 @@
       "lineId": "wolf-nine.meet.line.002",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "その日、最初に目へ入ったのは九つの決闘印、擦り切れた手袋、勝者の名がない表彰状だった。人より先に、その人の孤独だけが場所を取っていた。"
+      "text": "金曜の午後、その人は来た。狼の耳、旗みたいに立派なマント、封蝋の匂い。カウンターに置かれた「お受け取り」は、宛先不明で戻ってきた手紙、八通。全部、几帳面な封蝋つきの——挑戦状だった。",
+      "emotion": "tension"
+    },
+    {
+      "type": "direction",
+      "id": "wolf-nine.meet.node.direction.002",
+      "command": { "type": "still", "assetId": "wolf-nine.meet.asset.still.001" }
+    },
+    {
+      "type": "direction",
+      "id": "wolf-nine.meet.node.direction.003",
+      "command": { "type": "effect", "effectId": "pulse" }
     },
     {
       "type": "line",
       "id": "wolf-nine.meet.node.line.003",
       "lineId": "wolf-nine.meet.line.003",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "受付カウンターへ八通の挑戦状が扇のように並べられていた。どれも封蝋に深い歯形があり、宛名だけが私になっている。"
+      "speakerId": "legacy.speaker.1vj9fme",
+      "speakerName": "ヴォルフ・ナイン",
+      "mode": "dialogue",
+      "text": "確認する。八通、全部戻ったな？　……よし。今週も、全員不在か。"
     },
     {
       "type": "line",
@@ -74,49 +82,16 @@
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "封蝋の手紙、私宛て？"
-    },
-    {
-      "type": "direction",
-      "id": "wolf-nine.meet.node.direction.001",
-      "command": {
-        "type": "background",
-        "assetId": "wolf-nine.meet.asset.background.001",
-        "transition": "dissolve"
-      }
-    },
-    {
-      "type": "direction",
-      "id": "wolf-nine.meet.node.direction.002",
-      "command": {
-        "type": "effect",
-        "effectId": "flash"
-      }
+      "text": "あの、これ、毎週出して毎週戻ってるんですよね。宛先の方々は、その……"
     },
     {
       "type": "line",
       "id": "wolf-nine.meet.node.line.005",
       "lineId": "wolf-nine.meet.line.005",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "ここへ来た理由は、ごく普通の用事だった。けれどウルフ・ナインを見た瞬間、兎耳だけが先に危険を知らせる。私はとっさに、強い相手と戦い続けられれば満足する戦士なのだと思いかけた。",
-      "emotion": "comic"
-    },
-    {
-      "type": "direction",
-      "id": "wolf-nine.meet.node.direction.003",
-      "command": {
-        "type": "still",
-        "assetId": "wolf-nine.meet.asset.still.001"
-      }
-    },
-    {
-      "type": "direction",
-      "id": "wolf-nine.meet.node.direction.004",
-      "command": {
-        "type": "effect",
-        "effectId": "pulse"
-      }
+      "speakerId": "legacy.speaker.1vj9fme",
+      "speakerName": "ヴォルフ・ナイン",
+      "mode": "dialogue",
+      "text": "俺の生涯戦績は、八戦八敗だ。八人の強敵に、八回負けた。……再戦を誓った頃には、あいつらの物語は、全部終わっていた。国ごと、伝説ごと、地図ごとな。"
     },
     {
       "type": "line",
@@ -124,8 +99,8 @@
       "lineId": "wolf-nine.meet.line.006",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "声をかけるべきか迷っている間に、視線だけが一度重なる。胸が跳ねたのは見た目のせいではない。見つけてはいけない何かを、向こうも隠さなかったからだ。",
-      "emotion": "tension"
+      "text": "宛先不明の意味が、重かった。八人のライバルは、もうこの世のどの住所にもいない。それでも彼は毎週、挑戦状を書いて、出して、戻ってきたのを確認しに来る。それが彼の、再戦の続け方だった。",
+      "emotion": "revelation"
     },
     {
       "type": "line",
@@ -134,42 +109,43 @@
       "speakerId": "legacy.speaker.1vj9fme",
       "speakerName": "ヴォルフ・ナイン",
       "mode": "dialogue",
-      "text": "八度負けた。だから八度、弱くなくなった。次の相手を探している。"
+      "text": "笑っていいぞ。宛先のない手紙を出し続ける狼だ。……だが、出すのをやめたら、俺の八敗が、ただの負けっぱなしになる。"
     },
     {
       "type": "line",
       "id": "wolf-nine.meet.node.line.008",
       "lineId": "wolf-nine.meet.line.008",
-      "speakerId": "legacy.speaker.1vj9fme",
-      "speakerName": "ヴォルフ・ナイン",
-      "mode": "dialogue",
-      "text": "三日後、噴水前で待つ。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "笑えなかった。代わりに、受取所の中で一番きれいな消印を、八通ぶん、切手の横にそっと押し直した。「本日も、確かにお預かりしました」の判だ。彼の耳が、ぴんと立った。",
+      "emotion": "tender"
     },
     {
       "type": "line",
       "id": "wolf-nine.meet.node.line.009",
       "lineId": "wolf-nine.meet.line.009",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "ウルフ・ナインは、負けるたび強くなり、次の決闘だけを生きる九番目の狼に見えた。だから私は、普通のお客様へするのと同じ声で話しかけることにした。"
+      "speakerId": "legacy.speaker.1vj9fme",
+      "speakerName": "ヴォルフ・ナイン",
+      "mode": "dialogue",
+      "text": "……いい判の押し方だ。真剣勝負の音がした。あんた、名前は。"
     },
     {
       "type": "line",
       "id": "wolf-nine.meet.node.line.010",
       "lineId": "wolf-nine.meet.line.010",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "私、戦えませんよ。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "判の押し方で真剣勝負を見抜く人に、私は初めて会った。聞けば、彼の世界ではすべてが勝負であるらしい。便箋選びも、封蝋の温度も、席取りも、朝食も。真剣に競うことが、彼の礼儀で、彼の愛情表現なのだ。",
+      "emotion": "comic"
     },
     {
       "type": "line",
       "id": "wolf-nine.meet.node.line.011",
       "lineId": "wolf-nine.meet.line.011",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
+      "speakerId": "legacy.speaker.1vj9fme",
+      "speakerName": "ヴォルフ・ナイン",
       "mode": "dialogue",
-      "text": "待ち合わせじゃなくて決闘って書いてある。"
+      "text": "実はな、九通目を書きたいんだ。九戦目の挑戦状を。……だが、宛先がいない。この時代に、俺と真剣に競ってくれる奴の住所を、俺は知らない。"
     },
     {
       "type": "line",
@@ -177,68 +153,8 @@
       "lineId": "wolf-nine.meet.line.012",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "たった一言の返事を待つ時間が、試合開始前より長い。背後ではいつもの業務放送が流れ、この場所だけが別の物語の入口みたいに静かだった。"
-    },
-    {
-      "type": "line",
-      "id": "wolf-nine.meet.node.line.013",
-      "lineId": "wolf-nine.meet.line.013",
-      "speakerId": "legacy.speaker.1vj9fme",
-      "speakerName": "ヴォルフ・ナイン",
-      "mode": "dialogue",
-      "text": "知っている。戦う者を選ぶ目へ挑む。剣より鈍ければ、九度目には足りない。"
-    },
-    {
-      "type": "line",
-      "id": "wolf-nine.meet.node.line.014",
-      "lineId": "wolf-nine.meet.line.014",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "再戦の印が増えるほど月が欠け、九戦目には空そのものが決闘場になる。それでも本人が気にしたのは、私が一歩引いたことの方だった。",
-      "emotion": "comic"
-    },
-    {
-      "type": "line",
-      "id": "wolf-nine.meet.node.line.015",
-      "lineId": "wolf-nine.meet.line.015",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "まだ事情はほとんど分からない。ただ、最初の考えだけでは説明できない表情を見てしまった。私は曲がった名札を直し、次に会う口実をひとつ残した。",
-      "emotion": "tender"
-    },
-    {
-      "type": "line",
-      "id": "wolf-nine.meet.node.line.016",
-      "lineId": "wolf-nine.meet.line.016",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "怖くないと言えば嘘になる。でも、怖さの奥に勝ってしまえば、再戦を約束してくれる相手も生きる理由もなくなることがある気がして、目をそらす方が失礼に思えた。",
-      "emotion": "revelation"
-    },
-    {
-      "type": "line",
-      "id": "wolf-nine.meet.node.line.017",
-      "lineId": "wolf-nine.meet.line.017",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "事情はまだ分からない。でも、ここで立ち去れば、たぶん後悔する。"
-    },
-    {
-      "type": "line",
-      "id": "wolf-nine.meet.node.line.018",
-      "lineId": "wolf-nine.meet.line.018",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "名前を聞いただけ。約束も、契約も、まだ何もない。それなのに別れ際、次に会った時の言葉を考えている自分がいた。",
-      "emotion": "tender"
-    },
-    {
-      "type": "line",
-      "id": "wolf-nine.meet.node.line.019",
-      "lineId": "wolf-nine.meet.line.019",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "その場に残った勝敗を書かずに残した十枚目の対戦票を見て、私は今日の出来事を勤務報告の一行だけでは終わらせられないと知った。"
+      "text": "九通目の宛先。心当たりなら、なくもない。うちの闘技場は、真剣に競いたい規格外の巣窟である。窓口で、続きの話をするかどうかだ。",
+      "emotion": "resolve"
     },
     {
       "type": "choice",
@@ -247,32 +163,23 @@
         {
           "id": "wolf-nine.meet.choice.001",
           "label": "八通分の挑戦状へ返事を書く",
-          "result": "返事は一通で済んだ。翌朝、九通目だけが先に届いた。",
-          "intent": "登録の前に、目の前の相手を知る",
-          "promise": "目先の報酬は得ない代わりに、相手が何を望んでいるかを確かめる。",
-          "memory": "手続きより先に話を聞いたことを、相手は最初の印象として覚えている。",
+          "result": "「宛先の代わりに、返事を書きませんか。八人ぶん」。彼は目を丸くした。私たちは閉店後の受取所で、八人のライバルになったつもりで、返事を書いた。彼が語る八人の口癖、決め台詞、負けず嫌いの度合いを聞きながら。八通目の返事を書き終えた時、彼は静かに言った。「……全員、こういう返事を書く奴らだった。あんた、代筆の天才だな」。八敗が、八つの思い出になった夜だった。",
+          "intent": "戻ってきた手紙に、行き先を作る",
+          "promise": "目先の報酬は得ない代わりに、この人が何を待っていたかを知る。",
+          "memory": "八通の返事の代筆を、ヴォルフは「九戦目の前哨戦」と呼ぶ。",
           "tone": "tender",
           "effects": [
-            {
-              "type": "relationship",
-              "target": {
-                "type": "fighter",
-                "fighterId": "wolf-nine"
-              },
-              "mode": "add",
-              "trust": 7,
-              "ownership": -2
-            }
+            { "type": "relationship", "target": { "type": "fighter", "fighterId": "wolf-nine" }, "mode": "add", "trust": 7, "ownership": -2 }
           ],
           "goto": "wolf-nine.meet.node.effect.001"
         },
         {
           "id": "wolf-nine.meet.choice.002",
           "label": "今日はヴォルフ・ナインを誘わず、用事へ戻る",
-          "result": "ヴォルフ・ナインの名前と出会った場所だけを覚え、今日は普段の仕事へ戻った。急いで所属を決めなかったことが、次に会う時の距離として残った。",
-          "intent": "今は勧誘せず、相手との距離を保つ",
+          "result": "八通を渡して、業務へ戻った。翌週の金曜、受取所に私宛ての封書が一通届いていた。立派な封蝋つき。中身は挑戦状——ではなく、果たし状みたいな筆致の礼状だった。「先週の消印の押し方、見事だった。次は俺が、受け取りの作法で勝つ」。受け取りの作法で勝負を挑まれたのは、受取所史上初だという。",
+          "intent": "今日は窓口業務に徹する",
           "promise": "所属選手にはならないが、後の出来事で再会できる。",
-          "memory": "最初の出会いで急いで仲間にしなかったことが、次の再会へ残る。",
+          "memory": "果たし状みたいな礼状を、受取所が記念に飾りたがっている。",
           "tone": "pragmatic",
           "effects": [],
           "goto": "wolf-nine.meet.node.effect.001"
@@ -283,16 +190,8 @@
       "type": "effect",
       "id": "wolf-nine.meet.node.effect.001",
       "effects": [
-        {
-          "type": "markEncountered",
-          "fighterId": "wolf-nine",
-          "encountered": true
-        },
-        {
-          "type": "setStoryStage",
-          "fighterId": "wolf-nine",
-          "stage": 1
-        }
+        { "type": "markEncountered", "fighterId": "wolf-nine", "encountered": true },
+        { "type": "setStoryStage", "fighterId": "wolf-nine", "stage": 1 }
       ]
     },
     {
@@ -302,9 +201,9 @@
     }
   ],
   "debug": {
-    "status": "approved",
-    "sourceDocument": "native narrative block migration",
-    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "status": "review",
+    "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
+    "authorNote": "v2改稿: 宛先不明の八通=Q1(ライバルの物語が終わった)。判の押し方で真剣勝負を見抜く。九通目の宛先探し。",
     "legacyGeneratedIds": false
   }
 }

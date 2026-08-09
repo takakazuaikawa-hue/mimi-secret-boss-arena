@@ -2,28 +2,17 @@
   "schemaVersion": 1,
   "id": "peony.crisis",
   "kind": "character",
-  "title": "最後の準備",
-  "summary": "旧城壁展示区で起きる「最後の準備」",
+  "title": "城壁破壊ショーのお知らせ",
+  "summary": "黒い角封筒。会社が「破壊」を売り物にしようとし、彼女は守るものを増やしすぎる",
   "ownership": {
     "arcId": "character.peony",
     "characterId": "peony",
     "stage": "crisis"
   },
   "trigger": {
-    "actions": [
-      "work",
-      "play",
-      "rest",
-      "search"
-    ],
-    "when": {
-      "all": [],
-      "any": [],
-      "none": []
-    },
-    "repeat": {
-      "mode": "once-per-run"
-    },
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
     "priority": 400,
     "weight": 1
   },
@@ -34,18 +23,24 @@
         "id": "peony.crisis.asset.background.001",
         "kind": "background",
         "path": "/assets/story/bg-contract-archive-v2.png",
-        "alt": "旧城壁展示区の背景"
+        "alt": "契約保管庫の背景"
       }
     ]
   },
   "nodes": [
+    {
+      "type": "direction",
+      "id": "peony.crisis.node.direction.001",
+      "command": { "type": "background", "assetId": "peony.crisis.asset.background.001", "transition": "dissolve" }
+    },
     {
       "type": "line",
       "id": "peony.crisis.node.line.001",
       "lineId": "peony.crisis.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "アルデバラン社から届いた契約確認書には、ピオニーの扱いを決める欄が残っていた。本人の意思を聞くため、旧城壁展示区へ向かった。"
+      "text": "黒い角封筒。差出人、アルデバラン社・物語資産管理部。件名——「資産『怪力』の実演興行について」。本文。「毎公演、城壁三枚の破壊を実演すること。破壊は当社興行の花形です。契約により、辞退はできません」。",
+      "emotion": "tension"
     },
     {
       "type": "line",
@@ -53,8 +48,7 @@
       "lineId": "peony.crisis.line.002",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "その週、相手は私を避けた。廊下の向こうに姿を見つけても、業務用の言葉だけを残して先に曲がる。",
-      "emotion": "tension"
+      "text": "壊さないために全力を使ってきた人に、壊すことを売れという通告だった。ピオニーは封筒を読んで、静かに「わかった」とだけ言った。その静かさが、一番の異常事態だった。"
     },
     {
       "type": "line",
@@ -62,7 +56,8 @@
       "lineId": "peony.crisis.line.003",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "会社の指示書には『保護対象以外を排除』とある。守ることと壊すことを、一行で同じ命令にしていた。"
+      "text": "翌日から、彼女はおかしくなった。会場中の備品に「こわれもの注意」のシールを貼って回り始めたのだ。椅子に、手すりに、自販機に、掲示板に。夜中の三時に、売店のガラスケースへシールを貼っている巨人を、警備員さんが発見した。",
+      "emotion": "comic"
     },
     {
       "type": "line",
@@ -71,24 +66,7 @@
       "speakerId": "legacy.speaker.1e9iq7o",
       "speakerName": "ピオニー",
       "mode": "dialogue",
-      "text": "命令してくれれば殴れる。自分で決めると止まっちまう。"
-    },
-    {
-      "type": "direction",
-      "id": "peony.crisis.node.direction.001",
-      "command": {
-        "type": "background",
-        "assetId": "peony.crisis.asset.background.001",
-        "transition": "dissolve"
-      }
-    },
-    {
-      "type": "direction",
-      "id": "peony.crisis.node.direction.002",
-      "command": {
-        "type": "effect",
-        "effectId": "shake"
-      }
+      "text": "……こわすショーを、やるなら。……そのまえに、ぜんぶ、まもっておかないと。"
     },
     {
       "type": "line",
@@ -96,16 +74,22 @@
       "lineId": "peony.crisis.line.005",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ピオニーの返事が短い。怒っている、と決めれば私の不安には名前がつく。でも以前の私も「壊さないよう力加減を教えれば安心できるのだ」と決めつけた。また同じ読み違いをするところだった。",
+      "text": "守る対象を増やして増やして、パンクする寸前だった。会場の備品、約四万点。シールは三百枚入りを、既に十二袋消費している。このままでは、ショーの前に彼女が壊れる。",
       "emotion": "tension"
+    },
+    {
+      "type": "direction",
+      "id": "peony.crisis.node.direction.002",
+      "command": { "type": "effect", "effectId": "shake" }
     },
     {
       "type": "line",
       "id": "peony.crisis.node.line.006",
       "lineId": "peony.crisis.line.006",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "嫌われたのなら理由を聞けばいい。そう思うのに、角の部分だけ立派に折られた紙の冠を見るたび、聞いた答えで今までの時間が変わるのが怖かった。"
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "ピオニーさん、ストップ！　シール、いったん置いて。……聞いてください。守るものは、選んでいいんです。全部は、誰にも守れません。"
     },
     {
       "type": "line",
@@ -114,42 +98,43 @@
       "speakerId": "legacy.speaker.1e9iq7o",
       "speakerName": "ピオニー",
       "mode": "dialogue",
-      "text": "命じられれば迷わない。迷わなければ、間違えた時に止まれない。"
+      "text": "でも……まもりそこねたら、また、なくなるよ。わたしの城みたいに。ぜんぶ、まもらないと、ぜんぶ——"
     },
     {
       "type": "line",
       "id": "peony.crisis.node.line.008",
       "lineId": "peony.crisis.line.008",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "止まってもいい。勝ち方を一緒に考えます。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "出た。この人の一番深い場所。守りそこねた城の記憶が、「全部守る」という不可能な命題に化けて、彼女を夜中の売店に立たせている。",
+      "emotion": "revelation"
     },
     {
       "type": "line",
       "id": "peony.crisis.node.line.009",
       "lineId": "peony.crisis.line.009",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "ようやく追いついた場所で、ピオニーは壊れるものの前へ自分から立ち、全部の責任を引き受ける巨人に戻っていた。近づく前の、何も期待していなかった顔だ。"
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "……逆にしましょう。壊すものを、選ぶんです。この世には、壊されたがってるものが、ちゃんとあります。"
     },
     {
       "type": "line",
       "id": "peony.crisis.node.line.010",
       "lineId": "peony.crisis.line.010",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "誰を守るかは、あなたが決めてください。私は勝手に『それ以外』を作りません。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私は施設課の解体予定リストを持ち出した。老朽化した旧スタンド。撤去費用が出ずに三年放置の廃倉庫。危険で立入禁止の崩れかけ通路。——全部、「壊してほしい」建物たちだ。",
+      "emotion": "resolve"
     },
     {
       "type": "line",
       "id": "peony.crisis.node.line.011",
       "lineId": "peony.crisis.line.011",
-      "speakerId": "legacy.speaker.1e9iq7o",
-      "speakerName": "ピオニー",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "それなら、考える方から本気を出すよ。"
+      "text": "会社のショー、受けましょう。ただし演目名は変えます。「解体式典」。壊すのは、壊されたがってるものだけ。あなたの一撃で、三年分の危険が消えて、跡地に新しいものが建つ。——それ、破壊ショーじゃなくて、街のお手伝いです。"
     },
     {
       "type": "line",
@@ -157,16 +142,17 @@
       "lineId": "peony.crisis.line.012",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "原因は私への不信ではない。守ろうと力を出した瞬間、守る相手まで同じ拳で壊してしまうことから私を遠ざけようとしている。そのやさしさを、やさしいまま受け入れてはいけない気がした。",
-      "emotion": "revelation"
+      "text": "本番の日。満員の観客の前で、ピオニーは旧スタンドに一礼して、角の封印を外した。一撃。三年間誰も手を付けられなかった危険建築が、静かな砂の山に変わる。歓声より先に、施設課の職員さんたちが泣いた。",
+      "emotion": "tender"
     },
     {
       "type": "line",
       "id": "peony.crisis.node.line.013",
       "lineId": "peony.crisis.line.013",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "大きな拳がゆっくり開き、指先に乗っていた命令書が四角いまま床へ落ちた。"
+      "speakerId": "legacy.speaker.1e9iq7o",
+      "speakerName": "ピオニー",
+      "mode": "dialogue",
+      "text": "……こわすのも、まもるのと、おなじ手で、できるんだね。"
     },
     {
       "type": "line",
@@ -174,51 +160,8 @@
       "lineId": "peony.crisis.line.014",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "くしゃみを我慢しただけで城壁が砂になり、本人だけが椅子の傷を気にしている。別れ話のように静かな場面なのに、施設全体は最終災害手順へ移行している。",
-      "emotion": "comic"
-    },
-    {
-      "type": "line",
-      "id": "peony.crisis.node.line.015",
-      "lineId": "peony.crisis.line.015",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "正しい答えを当てることより、間違えたまま命令しないことを選ぶ。私は逃げ道をふさがない位置で止まり、聞きたかったことを短い言葉にした。",
+      "text": "物語資産管理部は「破壊の花形」が「解体の恩人」に化けたことに気づいて、企画書を持ち帰った。残るは、次の試合での仕上げだ。",
       "emotion": "resolve"
-    },
-    {
-      "type": "line",
-      "id": "peony.crisis.node.line.016",
-      "lineId": "peony.crisis.line.016",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "守るために離れるのは、残された側へ選択を渡さない。命令と同じだと告げると、初めて相手の表情が崩れた。",
-      "emotion": "resolve"
-    },
-    {
-      "type": "line",
-      "id": "peony.crisis.node.line.017",
-      "lineId": "peony.crisis.line.017",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "勝つための答えと、あとで自分を嫌いにならない答えは、同じとは限らない。"
-    },
-    {
-      "type": "line",
-      "id": "peony.crisis.node.line.018",
-      "lineId": "peony.crisis.line.018",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "私は勝利を約束しない。安全も約束できない。ただ、壊した責任ではなく、作り直す時間を誰かと分けることを諦める判断だけは本人へ返すと決めた。"
-    },
-    {
-      "type": "line",
-      "id": "peony.crisis.node.line.019",
-      "lineId": "peony.crisis.line.019",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "並んで戻る廊下には、まだ一人分の距離がある。でも今度の沈黙は拒絶ではなく、同じ答えを考えるためのものだった。",
-      "emotion": "tender"
     },
     {
       "type": "choice",
@@ -227,56 +170,28 @@
         {
           "id": "peony.crisis.choice.001",
           "label": "観客席を守る城壁役として前へ出る",
-          "result": "ピオニーは観客席の前へ立ち、敵の大技を城壁のように受け止めた。守る場所を本人が選んだことで、角の力も迷わなかった。",
-          "intent": "この人だけの突破法へ賭ける",
-          "promise": "予測しにくい方法を試し、この人専用の成長を大きく進める。",
-          "memory": "危機で選んだ方法は、契約を解く場面でも二人の共通の記憶として戻る。",
+          "result": "次の試合、相手の広範囲攻撃が観客席へ流れた瞬間、ピオニーは迷わず最前列へ出て、両腕のドームで一区画まるごと守り切った。守るものを「選ぶ」練習の成果だった——彼女はもう、四万点にシールを貼らない。守ると決めた範囲を、全力で守る。試合後、守られた区画の観客から、紙の冠が三十個届いた。",
+          "intent": "選んで守る強さを、本番で見せる",
+          "promise": "危険を引き受け、この人専用の成長を最大まで進める。",
+          "memory": "三十個の紙冠は、案内所の天井に飾ってある。",
           "tone": "wild",
           "effects": [
-            {
-              "type": "relationship",
-              "target": {
-                "type": "fighter",
-                "fighterId": "peony"
-              },
-              "mode": "add",
-              "trust": 12,
-              "ownership": -10
-            },
-            {
-              "type": "fighterPoints",
-              "target": {
-                "type": "fighter",
-                "fighterId": "peony"
-              },
-              "amount": 6
-            }
+            { "type": "relationship", "target": { "type": "fighter", "fighterId": "peony" }, "mode": "add", "trust": 12, "ownership": -10 },
+            { "type": "fighterPoints", "target": { "type": "fighter", "fighterId": "peony" }, "amount": 6 }
           ],
           "goto": "peony.crisis.node.effect.001"
         },
         {
           "id": "peony.crisis.choice.002",
           "label": "角の封印を外し、最短で決着をつける",
-          "result": "角の封印が外れ、一歩で敵陣へ届いた。止まる合図を三人で決めていたから、壊れたのは会社の広告塔だけで済んだ。",
-          "intent": "全員が使える安全な突破法を作る",
-          "promise": "本人だけの切り札は抑え、チーム全体へ使える成長を持ち帰る。",
-          "memory": "全員で組み直した手順は、契約を解く場面でも選んだ責任として戻る。",
+          "result": "長引くほど会場が危ない相手だったので、開始十秒、角の封印を外した「寸止めの花」で決着をつけた。相手の武装だけが砂になり、本人は無傷で降参した。解説席が絶句する中、ピオニーはマイクを借りて一言。「こわしたのは、ぶきだけ。……ぶきは、こわされたがってた、とおもう」。名解説だった。",
+          "intent": "最小の破壊で最速の決着を取る",
+          "promise": "本人の葛藤は残るが、チーム全体へ使える成長を持ち帰る。",
+          "memory": "開始十秒の決着を、実況は「花の閉会式」と呼んだ。",
           "tone": "pragmatic",
           "effects": [
-            {
-              "type": "relationship",
-              "target": {
-                "type": "fighter",
-                "fighterId": "peony"
-              },
-              "mode": "add",
-              "trust": -2,
-              "ownership": 10
-            },
-            {
-              "type": "sharedPoints",
-              "amount": 6
-            }
+            { "type": "relationship", "target": { "type": "fighter", "fighterId": "peony" }, "mode": "add", "trust": -2, "ownership": 10 },
+            { "type": "sharedPoints", "amount": 6 }
           ],
           "goto": "peony.crisis.node.effect.001"
         }
@@ -286,16 +201,8 @@
       "type": "effect",
       "id": "peony.crisis.node.effect.001",
       "effects": [
-        {
-          "type": "setStoryStage",
-          "fighterId": "peony",
-          "stage": 5
-        },
-        {
-          "type": "setLiberationEligible",
-          "fighterId": "peony",
-          "eligible": true
-        }
+        { "type": "setStoryStage", "fighterId": "peony", "stage": 5 },
+        { "type": "setLiberationEligible", "fighterId": "peony", "eligible": true }
       ]
     },
     {
@@ -305,9 +212,9 @@
     }
   ],
   "debug": {
-    "status": "approved",
-    "sourceDocument": "native narrative block migration",
-    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "status": "review",
+    "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
+    "authorNote": "v2改稿: 黒い角封筒=破壊の興行化(Q2)。守る対象を増やしすぎる暴走(canon指示)→解体式典への転換。",
     "legacyGeneratedIds": false
   }
 }

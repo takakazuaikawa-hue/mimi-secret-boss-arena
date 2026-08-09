@@ -3,24 +3,16 @@
   "id": "teirei.epilogue",
   "kind": "character",
   "title": "必要のない灯り",
-  "summary": "修理受付を閉めた丁零が、初めて役に立たないものを作る",
+  "summary": "夕方の修理受付。廃材から生まれた、実用性ゼロの機械花",
   "ownership": {
     "arcId": "character.teirei",
     "characterId": "teirei",
     "stage": "epilogue"
   },
   "trigger": {
-    "actions": [
-      "rest"
-    ],
-    "when": {
-      "all": [],
-      "any": [],
-      "none": []
-    },
-    "repeat": {
-      "mode": "once-per-run"
-    },
+    "actions": ["rest"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
     "priority": 400,
     "weight": 1
   },
@@ -31,24 +23,29 @@
         "id": "teirei.epilogue.asset.background.001",
         "kind": "background",
         "path": "/assets/story/bg-casino-cafe-morning.png",
-        "alt": "整備室の背景"
+        "alt": "夕方の修理受付の背景"
       },
       {
         "id": "teirei.epilogue.asset.still.001",
         "kind": "still",
         "path": "/assets/story/events/teirei-epilogue-useless-lamp-v1.png",
-        "alt": "夕暮れの修理受付で、自作の機械花ランプを見つめる丁零"
+        "alt": "廃材から作られた機械花のランプと、マグを二つ持つミミ、琥珀灯の一枚絵"
       }
     ]
   },
   "nodes": [
+    {
+      "type": "direction",
+      "id": "teirei.epilogue.node.direction.001",
+      "command": { "type": "background", "assetId": "teirei.epilogue.asset.background.001", "transition": "dissolve" }
+    },
     {
       "type": "line",
       "id": "teirei.epilogue.node.line.001",
       "lineId": "teirei.epilogue.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "最終大会が終わってから、丁零と整備室で顔を合わせるのは今日が初めてだった。"
+      "text": "最終大会のあと、搬入口には小さな看板が出た。「修理受付・丁零。直せないもの: 今のところ、なし」。看板に偽りなしで、彼女は連日、街の壊れものを軍事精度で直している。ただし営業時間は、きっちり定時まで。"
     },
     {
       "type": "line",
@@ -56,40 +53,36 @@
       "lineId": "teirei.epilogue.line.002",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "大会が終わってから、初めて自分で直した給湯器の温度記録を見るたび、あの人がいない日常の広さを測ってしまう。"
+      "text": "夕方、マグを二つ持って受付をのぞくと、彼女は今日の最後の作業をしていた。修理では、ない。廃材の歯車と配線で、何かを組んでいる。",
+      "emotion": "tender"
     },
     {
       "type": "line",
       "id": "teirei.epilogue.node.line.003",
       "lineId": "teirei.epilogue.line.003",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "搬入口の壁に、小さな修理受付ができていた。料金表の横には『断る場合があります』と丁寧に書かれている。"
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "それ、何の修理ですか？"
     },
     {
       "type": "line",
       "id": "teirei.epilogue.node.line.004",
       "lineId": "teirei.epilogue.line.004",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "丁零は整備室の責任者になった。"
-    },
-    {
-      "type": "direction",
-      "id": "teirei.epilogue.node.direction.001",
-      "command": {
-        "type": "background",
-        "assetId": "teirei.epilogue.asset.background.001",
-        "transition": "dissolve"
-      }
+      "speakerId": "legacy.speaker.qmf7da",
+      "speakerName": "丁零",
+      "mode": "dialogue",
+      "text": "修理では、ありません。……製作です。用途は、ありません。効率も、ありません。強いて言えば——好みです。"
     },
     {
       "type": "direction",
       "id": "teirei.epilogue.node.direction.002",
-      "command": {
-        "type": "effect",
-        "effectId": "pulse"
-      }
+      "command": { "type": "still", "assetId": "teirei.epilogue.asset.still.001" }
+    },
+    {
+      "type": "direction",
+      "id": "teirei.epilogue.node.direction.003",
+      "command": { "type": "effect", "effectId": "pulse" }
     },
     {
       "type": "line",
@@ -97,17 +90,17 @@
       "lineId": "teirei.epilogue.line.005",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "初めて自分で直した給湯器の温度記録を見て、入口へ目をやる。待っていると認めるのは落ち着かない。でも、来なくても責められない関係になれたことは、少し誇らしかった。",
-      "emotion": "comic"
+      "text": "完成したのは、機械の花だった。歯車の花びら、配線の茎、そして中心に、琥珀色の小さな灯。夕暮れの受付台で、それは何の役にも立たず、ただ、きれいに灯っていた。",
+      "emotion": "tender"
     },
     {
       "type": "line",
       "id": "teirei.epilogue.node.line.006",
       "lineId": "teirei.epilogue.line.006",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "会う約束はしていない。だから待っているわけではない、と自分へ言い聞かせる朝ほど、入口の音によく気づいた。",
-      "emotion": "tension"
+      "speakerId": "legacy.speaker.qmf7da",
+      "speakerName": "丁零",
+      "mode": "dialogue",
+      "text": "兵器だった頃の私は、必要なものしか、作れませんでした。……これは、私が作った、最初の「必要のないもの」です。"
     },
     {
       "type": "line",
@@ -116,119 +109,33 @@
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "依頼を断ったこと、ありますか。"
+      "text": "……必要ですよ。少なくとも私は今、この灯りのそばでお茶が飲みたいです。"
     },
     {
       "type": "line",
       "id": "teirei.epilogue.node.line.008",
       "lineId": "teirei.epilogue.line.008",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "また人を電源扱いしてません？"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "マグを二つ、受付台に置く。60.0度が二つ。機械花の琥珀灯を挟んで、夕方の定時後が、ゆっくり流れる。彼女の首が、満足の十五度に傾いた。",
+      "emotion": "tender"
     },
     {
       "type": "line",
       "id": "teirei.epilogue.node.line.009",
       "lineId": "teirei.epilogue.line.009",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "丁零は以前と同じように現れ、以前ならしなかった小さな選択を自分から済ませていた。",
-      "emotion": "revelation"
+      "speakerId": "legacy.speaker.qmf7da",
+      "speakerName": "丁零",
+      "mode": "dialogue",
+      "text": "柿落としの出演届を、提出済みです。演目「機械花の点灯式(実用性、ゼロ)」。備考——「照準は、花にだけ合わせます」。"
     },
     {
       "type": "line",
       "id": "teirei.epilogue.node.line.010",
       "lineId": "teirei.epilogue.line.010",
-      "speakerId": "legacy.speaker.qmf7da",
-      "speakerName": "丁零",
-      "mode": "dialogue",
-      "text": "昨日一件。理由なく急げと言われたため拒否した。処理速度は正常だった。"
-    },
-    {
-      "type": "line",
-      "id": "teirei.epilogue.node.line.011",
-      "lineId": "teirei.epilogue.line.011",
-      "speakerId": "legacy.speaker.qmf7da",
-      "speakerName": "丁零",
-      "mode": "dialogue",
-      "text": "現在は全員を同僚として誤認しています。"
-    },
-    {
-      "type": "line",
-      "id": "teirei.epilogue.node.line.012",
-      "lineId": "teirei.epilogue.line.012",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "修理受付の札は、営業時間より十七分早く裏返されていた。『本日の受付は終了しました』。字は丁零の手書きで、最後の丸だけ少し縦長だった。",
-      "emotion": "tender"
-    },
-    {
-      "type": "line",
-      "id": "teirei.epilogue.node.line.013",
-      "lineId": "teirei.epilogue.line.013",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "理由を聞くと、丁零は『今日は別のものを作りたい』と答えた。命令でも故障でも急用でもない。別のものを作りたい。私は念のため二回聞いた。"
-    },
-    {
-      "type": "line",
-      "id": "teirei.epilogue.node.line.014",
-      "lineId": "teirei.epilogue.line.014",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "作業台には、廃棄された検査灯、目覚まし時計の歯車、使い道のない薄い金属片が並んでいた。都市を焼ける腕が、花びら一枚の角度に七分かけている。",
-      "emotion": "comic"
-    },
-    {
-      "type": "line",
-      "id": "teirei.epilogue.node.line.015",
-      "lineId": "teirei.epilogue.line.015",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "私は『何に使うんですか』と言いかけて、飲み込んだ。役目を聞く癖は、命令を待つ癖と少し似ている。代わりに『どこが好きなんですか』と聞いた。",
-      "emotion": "tender"
-    },
-    {
-      "type": "line",
-      "id": "teirei.epilogue.node.line.016",
-      "lineId": "teirei.epilogue.line.016",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "丁零は停止した。首が正確に十五度傾き、内部で小さな歯車が三回鳴る。敵性判定より長い計算のあと、金属の花びらを一枚だけ指した。",
-      "emotion": "tender"
-    },
-    {
-      "type": "line",
-      "id": "teirei.epilogue.node.line.017",
-      "lineId": "teirei.epilogue.line.017",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "『この色を、好ましいと判断しました。理由は未実装です』。金色でも銅色でもない、夕焼けが機械油へ映ったような色だった。"
-    },
-    {
-      "type": "line",
-      "id": "teirei.epilogue.node.line.018",
-      "lineId": "teirei.epilogue.line.018",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "最後のねじを締めると、機械花がゆっくり開いた。柔らかな琥珀色が作業台を照らす。警報にも照準にも使えない。ただ、丁零が気に入った色だけが灯った。"
-    },
-    {
-      "type": "direction",
-      "id": "teirei.epilogue.node.direction.003",
-      "command": {
-        "type": "still",
-        "assetId": "teirei.epilogue.asset.still.001"
-      }
-    },
-    {
-      "type": "line",
-      "id": "teirei.epilogue.node.line.019",
-      "lineId": "teirei.epilogue.line.019",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "丁零は灯りではなく、その光を見ている私を観察していた。『ミミの表情も、好ましいに分類します』。胸の奥が急に明るくなり、私は故障ではないのに返事を四秒も待たせた。",
+      "text": "実用性ゼロを、堂々と演目にする元兵器。好みの一覧は、今日で何号まで増えただろう。理由欄は、きっと全部、空欄のまま提出されている。それでいい。それがいい。",
       "emotion": "tender"
     },
     {
@@ -238,9 +145,9 @@
     }
   ],
   "debug": {
-    "status": "approved",
-    "sourceDocument": "native narrative block migration",
-    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "status": "review",
+    "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
+    "authorNote": "v2改稿: 機械花の琥珀灯(報酬CG準拠)。最初の「必要のないもの」。出演届=機械花の点灯式。",
     "legacyGeneratedIds": false
   }
 }

@@ -2,26 +2,17 @@
   "schemaVersion": 1,
   "id": "ushiro.join",
   "kind": "character",
-  "title": "スカウト",
-  "summary": "従業員通路で起きる「スカウト」",
+  "title": "顔写真は、後頭部",
+  "summary": "登録写真が撮れない選手と、自撮りという発明",
   "ownership": {
     "arcId": "character.ushiro",
     "characterId": "ushiro",
     "stage": "join"
   },
   "trigger": {
-    "actions": [
-      "play",
-      "work"
-    ],
-    "when": {
-      "all": [],
-      "any": [],
-      "none": []
-    },
-    "repeat": {
-      "mode": "once-per-run"
-    },
+    "actions": ["play", "work"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
     "priority": 400,
     "weight": 1
   },
@@ -38,12 +29,17 @@
   },
   "nodes": [
     {
+      "type": "direction",
+      "id": "ushiro.join.node.direction.001",
+      "command": { "type": "background", "assetId": "ushiro.join.asset.background.001", "transition": "dissolve" }
+    },
+    {
       "type": "line",
       "id": "ushiro.join.node.line.001",
       "lineId": "ushiro.join.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "うしろと初めて会ったあと、従業員通路でもう一度顔を合わせた。今日は、選手登録の条件を確かめることになっている。"
+      "text": "うしろの選手登録で、想定通りの難所に着いた。顔写真である。カメラを向けると、彼は反射的に「相手の背後」へ回ってしまう。撮影者の背後に回られると、写真には何も写らない。"
     },
     {
       "type": "line",
@@ -51,172 +47,89 @@
       "lineId": "ushiro.join.line.002",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "選手登録の面談室は狭い。机を挟めば仕事の距離を守れるはずなのに、同じ書類を覗き込むたび、沈黙だけが近くなる。",
-      "emotion": "tension"
+      "text": "撮影係を三人に増やしてみた。三人の背後に、三人ぶんの彼が回った。分身は増えるのに、写真は増えない。従業員通路は、静かな鬼ごっこ会場と化した。",
+      "emotion": "comic"
     },
     {
       "type": "line",
       "id": "ushiro.join.node.line.003",
       "lineId": "ushiro.join.line.003",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "登録写真を正面から撮ると空席になり、カメラを背に向けると画面の端へ細い影が座った。"
+      "speakerId": "legacy.speaker.1ddw3j9",
+      "speakerName": "うしろ",
+      "mode": "dialogue",
+      "text": "すみません……。正面から見られると、体が勝手に。……長年の、職業病で。"
     },
     {
       "type": "line",
       "id": "ushiro.join.node.line.004",
       "lineId": "ushiro.join.line.004",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "選手枠、一つ空いてます。"
-    },
-    {
-      "type": "direction",
-      "id": "ushiro.join.node.direction.001",
-      "command": {
-        "type": "background",
-        "assetId": "ushiro.join.asset.background.001",
-        "transition": "dissolve"
-      }
-    },
-    {
-      "type": "direction",
-      "id": "ushiro.join.node.direction.002",
-      "command": {
-        "type": "effect",
-        "effectId": "pulse"
-      }
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "提出済みの写真候補は三枚。後頭部、後頭部、ブレた後頭部。登録課は全部差し戻してきた。ごもっともである。",
+      "emotion": "comic"
     },
     {
       "type": "line",
       "id": "ushiro.join.node.line.005",
       "lineId": "ushiro.join.line.005",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "選手登録は一枚で済むのに、うしろを知るための欄はどこにもない。見つかりたくないから背後へ隠れているのだと決めれば簡単だ。でも、その決め方こそ契約書と同じに見えた。",
-      "emotion": "comic"
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "……分かりました。カメラマンの背後に回っちゃうなら——カメラマンを、あなたにすればいいんです。"
     },
     {
       "type": "line",
       "id": "ushiro.join.node.line.006",
       "lineId": "ushiro.join.line.006",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "うしろの経歴は、端末の入力欄へ収まらない。けれど本人が書けずにいるのは、過去の偉業ではなく「これから何をしたいか」の一行だった。"
+      "speakerId": "legacy.speaker.1ddw3j9",
+      "speakerName": "うしろ",
+      "mode": "dialogue",
+      "text": "……？　私が私を撮ると、私は私の背後に回るのでは……回れ、ない……？"
     },
     {
       "type": "line",
       "id": "ushiro.join.node.line.007",
       "lineId": "ushiro.join.line.007",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "本人確認って、本人を見ない方がうまくいくこともあるんですね。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "自分の背後には、回れない。うしろ史上初の盲点だった。私はカメラを彼の手に渡した。腕を伸ばして、レンズを自分へ。世に言う、自撮りである。",
+      "emotion": "comic"
     },
     {
       "type": "line",
       "id": "ushiro.join.node.line.008",
       "lineId": "ushiro.join.line.008",
-      "speakerId": "legacy.speaker.1ddw3j9",
-      "speakerName": "うしろ",
-      "mode": "dialogue",
-      "text": "空いているなら、いる。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "シャッター音。画面には、初めての正面の彼が写っていた。緊張で目が泳いで、ピースの位置が高い。でも、写っていた。百二十七人が通路に出てきて、一枚の画面を代わる代わる覗き込んだ。",
+      "emotion": "tender"
     },
     {
       "type": "line",
       "id": "ushiro.join.node.line.009",
       "lineId": "ushiro.join.line.009",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "正面を持たず、振り返られた瞬間に別の背後へ消える影。その横顔が、空欄の前でだけ少し頼りなく見える。",
-      "emotion": "revelation"
+      "speakerId": "legacy.speaker.1ddw3j9",
+      "speakerName": "うしろ",
+      "mode": "dialogue",
+      "text": "……これが、私。……前から見ると、こういう顔を、していたのですね。"
     },
     {
       "type": "line",
       "id": "ushiro.join.node.line.010",
       "lineId": "ushiro.join.line.010",
-      "speakerId": "legacy.speaker.1ddw3j9",
-      "speakerName": "うしろ",
-      "mode": "dialogue",
-      "text": "見ようとする目は、形を一つに決める。私はまだ、決められたくない。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "自分の顔を初めて見る人の声を、私は初めて聞いた。登録写真の欄は、この一枚で埋まった。世界一時間のかかった自撮りとして、登録課の伝説になった。",
+      "emotion": "tender"
     },
     {
       "type": "line",
       "id": "ushiro.join.node.line.011",
       "lineId": "ushiro.join.line.011",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "振り返らずに登録しますね。"
-    },
-    {
-      "type": "line",
-      "id": "ushiro.join.node.line.012",
-      "lineId": "ushiro.join.line.012",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "採用する側らしい言葉を探した。でも必要なのは評価ではなく、ここにいてもいい理由を一緒に作ることなのだと思った。"
-    },
-    {
-      "type": "line",
-      "id": "ushiro.join.node.line.013",
-      "lineId": "ushiro.join.line.013",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "端末を机へ伏せて登録すると、背後で小さく椅子を引く音がした。"
-    },
-    {
-      "type": "line",
-      "id": "ushiro.join.node.line.014",
-      "lineId": "ushiro.join.line.014",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "一人で全員の背後へ立てるのに、記念写真では一席ぶんだけ遠慮するという注意事項まで契約書へ加わり、一般的な選手登録は完全に諦めることになった。",
-      "emotion": "comic"
-    },
-    {
-      "type": "line",
-      "id": "ushiro.join.node.line.015",
-      "lineId": "ushiro.join.line.015",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "私のペンで未来まで埋めないよう、最後の空欄を机の中央へ戻した。待つ時間は気まずい。それでも、本人の言葉で始まるほうがいい。",
+      "text": "残る欄は、あと少し。締め方を決める。",
       "emotion": "resolve"
-    },
-    {
-      "type": "line",
-      "id": "ushiro.join.node.line.016",
-      "lineId": "ushiro.join.line.016",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "最後に本人が確かめたのは報酬ではなく、振り返らなくても存在を疑われない距離で歩くことが規則違反にならないかどうかだった。",
-      "emotion": "tender"
-    },
-    {
-      "type": "line",
-      "id": "ushiro.join.node.line.017",
-      "lineId": "ushiro.join.line.017",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "登録を急ぐとしても、本人を置き去りにしたまま話を進めたくはなかった。"
-    },
-    {
-      "type": "line",
-      "id": "ushiro.join.node.line.018",
-      "lineId": "ushiro.join.line.018",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "登録完了の音が鳴る。これで仲間になった、と簡単に呼んでいいのか分からない。けれど退室する足音が、来た時より少しだけゆっくりだった。"
-    },
-    {
-      "type": "line",
-      "id": "ushiro.join.node.line.019",
-      "lineId": "ushiro.join.line.019",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "いつの間にか軽くなっていた二本目の飲み物が机に残る。返そうと呼び止めると、「次に会う理由として置いておく」とだけ返ってきた。",
-      "emotion": "tender"
     },
     {
       "type": "choice",
@@ -225,83 +138,43 @@
         {
           "id": "ushiro.join.choice.001",
           "label": "最後列へ空席を一つ残し、見えない返事を待つ",
-          "result": "誰も座っていない椅子だけが深く軋んだ。出席簿には影が一つ増え、私は振り返らずに挨拶した。",
-          "intent": "本人の得意な戦い方を知る",
+          "result": "契約欄の署名も、彼は「見られていない場所でなら」書けるという。私は書類を置いて、廊下の角まで下がった。三分後、戻ると署名が済んでいて、隣に小さな付記があった。「見ていなくても、待っていてくれたことは、背中で分かりました」。背中で分かる人と、契約した。",
+          "intent": "見られない自由を保ったまま、迎える",
           "promise": "登録は少し遅れるが、この人専用の成長ポイントを得る。",
-          "memory": "自分で書いた最初の条件を、相手は次の大事な場面でも覚えている。",
+          "memory": "「背中で分かりました」の付記を、私は大事にしている。",
           "tone": "tender",
           "effects": [
-            {
-              "type": "relationship",
-              "target": {
-                "type": "fighter",
-                "fighterId": "ushiro"
-              },
-              "mode": "add",
-              "trust": 8,
-              "ownership": -3
-            },
-            {
-              "type": "fighterPoints",
-              "target": {
-                "type": "fighter",
-                "fighterId": "ushiro"
-              },
-              "amount": 2
-            },
-            {
-              "type": "recruitmentDecision",
-              "fighterId": "ushiro",
-              "decision": "join"
-            }
+            { "type": "relationship", "target": { "type": "fighter", "fighterId": "ushiro" }, "mode": "add", "trust": 8, "ownership": -3 },
+            { "type": "fighterPoints", "target": { "type": "fighter", "fighterId": "ushiro" }, "amount": 2 },
+            { "type": "recruitmentDecision", "fighterId": "ushiro", "decision": "join" }
           ],
           "goto": "ushiro.join.node.end.001"
         },
         {
           "id": "ushiro.join.choice.002",
           "label": "欠席者のまま、選手名簿へ登録する",
-          "result": "出席簿は欠席、選手名簿は在籍になった。写真には全員の後ろへ、長い影だけがきれいに写った。",
-          "intent": "次の公式戦へ間に合わせる",
-          "promise": "本人の詳細は後回しになるが、誰にでも使える成長ポイントを得る。",
-          "memory": "先に席を確保した判断は、チームの始まり方として記録に残る。",
+          "result": "名簿の備考欄に「本選手は常に出席していますが、見えない場合があります」と書いて提出した。登録課は三十分悩んで、新しい区分を作った。「在席(不可視)」。以後、闘技場の名簿には、この区分がたまに増えるようになる。うちのチームが通ったあとの書式は、だいたい豊かになる。",
+          "intent": "見えないままでも、正式な席を作る",
+          "promise": "本人の緊張は残るが、誰にでも使える成長ポイントを得る。",
+          "memory": "区分「在席(不可視)」の発明を、登録課は少し誇りにしている。",
           "tone": "pragmatic",
           "effects": [
-            {
-              "type": "relationship",
-              "target": {
-                "type": "fighter",
-                "fighterId": "ushiro"
-              },
-              "mode": "add",
-              "trust": 0,
-              "ownership": 8
-            },
-            {
-              "type": "sharedPoints",
-              "amount": 2
-            },
-            {
-              "type": "recruitmentDecision",
-              "fighterId": "ushiro",
-              "decision": "join"
-            }
+            { "type": "relationship", "target": { "type": "fighter", "fighterId": "ushiro" }, "mode": "add", "trust": 0, "ownership": 8 },
+            { "type": "sharedPoints", "amount": 2 },
+            { "type": "recruitmentDecision", "fighterId": "ushiro", "decision": "join" }
           ],
           "goto": "ushiro.join.node.end.001"
         },
         {
           "id": "ushiro.join.choice.003",
           "label": "今回はうしろを誘わず、別の機会を待つ",
-          "result": "うしろの出場登録は行わなかった。相手は所属せず、それぞれの用事へ戻った。断る選択を残したことだけが、次に会う時まで静かに残った。",
+          "result": "「登録は、またの機会に」。彼は少しほっとした様子で、それでも初めての自撮りだけは、大事そうに持って帰った。翌週、記念撮影所の「見守りオプション」の案内看板に、スタッフ紹介として、あの自撮りが小さく貼られていた。デビューは、彼のペースで進んでいる。",
           "intent": "今回はチームへ誘わない",
           "promise": "今回の所属は見送るが、人物の物語と再会の可能性は失わない。",
-          "memory": "勧誘しない選択も尊重されたことを、相手は覚えている。",
+          "memory": "看板の小さな自撮りを、私は通るたび見てしまう。",
           "tone": "pragmatic",
           "effects": [
-            {
-              "type": "recruitmentDecision",
-              "fighterId": "ushiro",
-              "decision": "decline"
-            }
+            { "type": "recruitmentDecision", "fighterId": "ushiro", "decision": "decline" }
           ],
           "goto": "ushiro.join.node.end.001"
         }
@@ -314,9 +187,9 @@
     }
   ],
   "debug": {
-    "status": "approved",
-    "sourceDocument": "native narrative block migration",
-    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "status": "review",
+    "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
+    "authorNote": "v2改稿: 顔写真が撮れない問題→自撮りの発明(自分の背後には回れない)。初めて自分の顔を見る。",
     "legacyGeneratedIds": false
   }
 }

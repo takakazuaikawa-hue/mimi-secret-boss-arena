@@ -2,25 +2,17 @@
   "schemaVersion": 1,
   "id": "teirei.power",
   "kind": "character",
-  "title": "取り戻す力",
-  "summary": "廃棄物保管区で起きる「取り戻す力」",
+  "title": "照準を、花にだけ",
+  "summary": "廃棄物保管区。標的の定義を一行で書き換える力と、非標的リスト",
   "ownership": {
     "arcId": "character.teirei",
     "characterId": "teirei",
     "stage": "power"
   },
   "trigger": {
-    "actions": [
-      "search"
-    ],
-    "when": {
-      "all": [],
-      "any": [],
-      "none": []
-    },
-    "repeat": {
-      "mode": "once-per-run"
-    },
+    "actions": ["search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
     "priority": 400,
     "weight": 1
   },
@@ -31,27 +23,32 @@
         "id": "teirei.power.asset.background.001",
         "kind": "background",
         "path": "/assets/story/bg-observation-deck-night.png",
-        "alt": "廃棄物保管区の背景"
+        "alt": "夜の廃棄物保管区の背景"
       }
     ]
   },
   "nodes": [
+    {
+      "type": "direction",
+      "id": "teirei.power.node.direction.001",
+      "command": { "type": "background", "assetId": "teirei.power.asset.background.001", "transition": "dissolve" }
+    },
     {
       "type": "line",
       "id": "teirei.power.node.line.001",
       "lineId": "teirei.power.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "練習のあと、丁零に呼ばれて廃棄物保管区まで来た。いつもの力では足りない理由を、見せたいらしい。"
+      "text": "深夜の廃棄物保管区。丁零の「本気」の確認に、彼女自身が指定した場所だ。廃棄された旧式の防衛タレットが、鉄の墓標みたいに並んでいる。彼女の同型機も、ここに眠っているという。"
     },
     {
       "type": "line",
       "id": "teirei.power.node.line.002",
       "lineId": "teirei.power.line.002",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "警報より先に、相手の声が私の名を呼んだ。いつもと同じ呼び方なのに、その一音だけで足が止まる。",
-      "emotion": "tension"
+      "speakerId": "legacy.speaker.qmf7da",
+      "speakerName": "丁零",
+      "mode": "dialogue",
+      "text": "私の主兵装は、砲でも刃でもありません。——「定義」です。"
     },
     {
       "type": "line",
@@ -59,7 +56,13 @@
       "lineId": "teirei.power.line.003",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "訓練場の標的がすべて赤く染まり、次の瞬間には敵味方の表示そのものが消えた。空気だけが薄く焼けている。"
+      "text": "デモが始まった。彼女が起動信号を送ると、廃棄タレット三十基が一斉に目を覚まし、赤い照準が夜を埋めた。全部、こっちを向いている。心臓に悪い夜景である。",
+      "emotion": "tension"
+    },
+    {
+      "type": "direction",
+      "id": "teirei.power.node.direction.002",
+      "command": { "type": "effect", "effectId": "flash" }
     },
     {
       "type": "line",
@@ -68,24 +71,7 @@
       "speakerId": "legacy.speaker.qmf7da",
       "speakerName": "丁零",
       "mode": "dialogue",
-      "text": "旧命令表を発見。対象はすでに存在しません。"
-    },
-    {
-      "type": "direction",
-      "id": "teirei.power.node.direction.001",
-      "command": {
-        "type": "background",
-        "assetId": "teirei.power.asset.background.001",
-        "transition": "dissolve"
-      }
-    },
-    {
-      "type": "direction",
-      "id": "teirei.power.node.direction.002",
-      "command": {
-        "type": "effect",
-        "effectId": "flash"
-      }
+      "text": "全機へ、標的定義を再送信します。——「標的とは、花である」。"
     },
     {
       "type": "line",
@@ -93,8 +79,8 @@
       "lineId": "teirei.power.line.005",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "敵の定義を一行変えるだけで、都市防衛網の敵味方が丸ごと消える。そんな力が、目の前で息をしている。逃げる理由なら十分だった。それでも私は、力の大きさより丁零が最初にどこを見るのかを確かめたかった。",
-      "emotion": "tension"
+      "text": "一行だった。たった一行で、三十基の赤い照準が、いっせいに私から外れ——保管区の隅に咲いた雑草の花へ、集まった。夜の廃棄場で、名もない小さな花が、三十本のレーザーに照らされてスポットライトの主役になっている。",
+      "emotion": "revelation"
     },
     {
       "type": "line",
@@ -102,7 +88,8 @@
       "lineId": "teirei.power.line.006",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "丁零が私と危険の間へ立つ。触れてはいない。それでも、こちらへ届くはずだった圧力だけがきれいに二つへ割れた。"
+      "text": "同行の新人くんが、震える手で記録板に書いた。「ねらわれた。はなが。」——うん。事件の全てが書けている。",
+      "emotion": "comic"
     },
     {
       "type": "line",
@@ -111,60 +98,61 @@
       "speakerId": "legacy.speaker.qmf7da",
       "speakerName": "丁零",
       "mode": "dialogue",
-      "text": "敵を定義しなければ、攻撃対象は存在しない。存在しなければ、私は最も安全な兵器になる。"
+      "text": "これが本気です。私は、敵の兵器網の「敵」の定義を、一行で書き換えられる。……都市防衛網の全標的を、消したことも、あります。"
     },
     {
       "type": "line",
       "id": "teirei.power.node.line.008",
       "lineId": "teirei.power.line.008",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "じゃあ捨てましょう。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "戦争を終わらせかねない力だ。でも、彼女の声は自慢げではなかった。定義を書き換える力は、彼女自身の「兵器」という定義だけ、書き換えられなかったのだから。",
+      "emotion": "tension"
     },
     {
       "type": "line",
       "id": "teirei.power.node.line.009",
       "lineId": "teirei.power.line.009",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "命令を正確に実行し、誤差を残さない兵器。けれど今見せている力は、勝つためではなく、私を怖がらせないために抑えられている。",
-      "emotion": "revelation"
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "丁零さんの中の、標的リストって、今どうなってるんですか。"
     },
     {
       "type": "line",
       "id": "teirei.power.node.line.010",
       "lineId": "teirei.power.line.010",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
+      "speakerId": "legacy.speaker.qmf7da",
+      "speakerName": "丁零",
       "mode": "dialogue",
-      "text": "戦わないことで完成する兵器って、会社は喜ばなさそうです。"
+      "text": "標的リストは、戦争終結時に全消去。現在は——非標的リストだけが、あります。守る対象の一覧です。読み上げ、しますか。"
     },
     {
       "type": "line",
       "id": "teirei.power.node.line.011",
       "lineId": "teirei.power.line.011",
-      "speakerId": "legacy.speaker.qmf7da",
-      "speakerName": "丁零",
-      "mode": "dialogue",
-      "text": "削除には所有者権限が必要です。要求しますか。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "うなずくと、彼女は夜空を見たまま読み上げた。「第三位、給湯器。第二位、チームの全員。第一位——」。そこで照準レーザーが一本だけ、ふわりと私の足元の床を、丸く囲った。",
+      "emotion": "tender"
     },
     {
       "type": "line",
       "id": "teirei.power.node.line.012",
       "lineId": "teirei.power.line.012",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "本気を見たいと思っていた。実際に目の前へ現れると、知りたかったのは強さではなく、その力を本人がどう恐れているかだった。"
+      "speakerId": "legacy.speaker.qmf7da",
+      "speakerName": "丁零",
+      "mode": "dialogue",
+      "text": "……第一位は、照準で示しました。口頭では、演算が、照れます。"
     },
     {
       "type": "line",
       "id": "teirei.power.node.line.013",
       "lineId": "teirei.power.line.013",
-      "speakerId": "legacy.speaker.qmf7da",
-      "speakerName": "丁零",
-      "mode": "dialogue",
-      "text": "会社の満足は、現命令表に登録されていない。"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "機械の照れ方が、光学的すぎる。足元の光の輪の中で、私の心拍は非標的なのに撃ち抜かれていた。",
+      "emotion": "comic"
     },
     {
       "type": "line",
@@ -172,51 +160,8 @@
       "lineId": "teirei.power.line.014",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "敵の定義を一行変えるだけで、都市防衛網の敵味方が丸ごと消える。闘技場の安全基準は一瞬で役に立たなくなり、担当者は私の顔を見て計測を諦めた。",
-      "emotion": "comic"
-    },
-    {
-      "type": "line",
-      "id": "teirei.power.node.line.015",
-      "lineId": "teirei.power.line.015",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "世界を壊せることより、壊さないために何を選んだかが胸へ残った。空白の命令欄で止まる姿は故障ではなく、自分の理由を初めて探している途中だった。その理解が正しいか、いつか本人の言葉で確かめたい。",
-      "emotion": "revelation"
-    },
-    {
-      "type": "line",
-      "id": "teirei.power.node.line.016",
-      "lineId": "teirei.power.line.016",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "力の中心にあったのは、自分で選んだ行動まで、誰かの命令を模倣しただけかもしれないこと。最強であることが、本人にとって一番古い傷なのだと分かる。",
-      "emotion": "revelation"
-    },
-    {
-      "type": "line",
-      "id": "teirei.power.node.line.017",
-      "lineId": "teirei.power.line.017",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "怖さが消えたわけではない。だからこそ、使うかどうかを本人と決める必要がある。"
-    },
-    {
-      "type": "line",
-      "id": "teirei.power.node.line.018",
-      "lineId": "teirei.power.line.018",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "大丈夫とは言えない。怖いものは怖い。それでも、次に力を使う時は一人で決めなくていいと伝えた。",
+      "text": "この力を試合でどう使うか。仕上げの形を決める。",
       "emotion": "resolve"
-    },
-    {
-      "type": "line",
-      "id": "teirei.power.node.line.019",
-      "lineId": "teirei.power.line.019",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "初めて自分で直した給湯器の温度記録だけが元の大きさで残り、さっきまで世界の終わりがいた場所に、帰り道の灯りが戻った。"
     },
     {
       "type": "choice",
@@ -225,56 +170,28 @@
         {
           "id": "teirei.power.choice.001",
           "label": "廃棄命令の記憶領域だけを切り離す",
-          "result": "火花の中から、戦う技術だけが残った。丁零は消えた命令を検索し、それから検索を自分で終了した。",
-          "intent": "本来の力を一気に取り戻す",
+          "result": "彼女の中には、戦争末期に受けた「任務完了後、自壊せよ」の廃棄命令が、未実行のまま残っていた。実行を拒めず、かといって実行もせず、十七日の「待機」で凍らせていたのだ。今夜、二人でその記憶領域を切り離した。切り離しの完了音のあと、彼女は言った。「……軽い。私は、ずっと、命令一件ぶん、重かったのですね」。",
+          "intent": "残っていた最後の古い命令を、外す",
           "promise": "失敗時の危険を引き受け、この人専用の成長を最大まで進める。",
-          "memory": "力を恐れたまま任せたことを、相手は危機の場面で思い出す。",
+          "memory": "廃棄命令を外した夜の「軽い」を、二人とも覚えている。",
           "tone": "heroic",
           "effects": [
-            {
-              "type": "relationship",
-              "target": {
-                "type": "fighter",
-                "fighterId": "teirei"
-              },
-              "mode": "add",
-              "trust": 10,
-              "ownership": -4
-            },
-            {
-              "type": "fighterPoints",
-              "target": {
-                "type": "fighter",
-                "fighterId": "teirei"
-              },
-              "amount": 5
-            }
+            { "type": "relationship", "target": { "type": "fighter", "fighterId": "teirei" }, "mode": "add", "trust": 10, "ownership": -4 },
+            { "type": "fighterPoints", "target": { "type": "fighter", "fighterId": "teirei" }, "amount": 5 }
           ],
           "goto": "teirei.power.node.effect.001"
         },
         {
           "id": "teirei.power.choice.002",
           "label": "敵性判定を残し、守る対象を三人に限定する",
-          "result": "判断は安定した。鋭さの代わりに迷いが減り、誰かが倒れた時の戻り方まで手順になった。",
-          "intent": "安全な段階解除で確実に進む",
+          "result": "試合用の型は「非標的宣言」になった。試合開始時、彼女は敵チームの兵装へ一行だけ送信する。「この会場に、あなたの標的は存在しない」。相手の自動兵装や誘導技はすべて迷子になり、素の実力だけの勝負になる。飛び道具の多い相手ほど、丁零の前では正直になるしかない。",
+          "intent": "安全に運用できる勝ち型を固める",
           "promise": "本来の力は一部に留め、チーム全体の成長へ成果を持ち帰る。",
-          "memory": "全員で帰ると決めた手順が、危機で使える安全策として残る。",
+          "memory": "型「非標的宣言」の初披露で、相手の誘導弾が全部観客席の花束に着地した(無害)。",
           "tone": "pragmatic",
           "effects": [
-            {
-              "type": "relationship",
-              "target": {
-                "type": "fighter",
-                "fighterId": "teirei"
-              },
-              "mode": "add",
-              "trust": 0,
-              "ownership": 9
-            },
-            {
-              "type": "sharedPoints",
-              "amount": 5
-            }
+            { "type": "relationship", "target": { "type": "fighter", "fighterId": "teirei" }, "mode": "add", "trust": 0, "ownership": 9 },
+            { "type": "sharedPoints", "amount": 5 }
           ],
           "goto": "teirei.power.node.effect.001"
         }
@@ -284,11 +201,7 @@
       "type": "effect",
       "id": "teirei.power.node.effect.001",
       "effects": [
-        {
-          "type": "setStoryStage",
-          "fighterId": "teirei",
-          "stage": 4
-        }
+        { "type": "setStoryStage", "fighterId": "teirei", "stage": 4 }
       ]
     },
     {
@@ -298,9 +211,9 @@
     }
   ],
   "debug": {
-    "status": "approved",
-    "sourceDocument": "native narrative block migration",
-    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "status": "review",
+    "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
+    "authorNote": "v2改稿: 「標的とは、花である」の定義書き換えデモ。非標的リスト第一位を照準で示す照れ。廃棄命令の伏線。",
     "legacyGeneratedIds": false
   }
 }
