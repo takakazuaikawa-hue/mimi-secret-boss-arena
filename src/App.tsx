@@ -94,7 +94,7 @@ import {
   choiceToneMeta,
   resolveChoiceDesign,
 } from "./game/choiceDesign";
-import { opponentsForMatch } from "./game/battle";
+import { effectiveStat, opponentsForMatch } from "./game/battle";
 import { buildBattleBroadcast } from "./game/battleBroadcast";
 import { gameMachine, type GamePhase } from "./game/machine";
 import { playSound } from "./game/sound";
@@ -3969,6 +3969,11 @@ function MatchPrepScreen({ onStart }: { onStart: () => void }) {
                                 </option>
                               ))}
                             </select>
+                            <small className="formation-card-v2__tactic-note">
+                              {tacticDescriptions[
+                                run.battleTactics?.[id] ?? "signature"
+                              ]}
+                            </small>
                           </label>
                           <div className="formation-card-v2__order">
                             <button
@@ -4049,9 +4054,15 @@ function MatchPrepScreen({ onStart }: { onStart: () => void }) {
                   <section>
                     <span>監督ができること</span>
                     <strong>声掛け{expectedCheerUses}・強制{expectedForceUses}・読む2</strong>
-                    <p>重要局面だけ、ミミが指示できます。</p>
+                    <p>声掛けの回数は信頼、強制指示の回数は所有の高さで決まります。</p>
                   </section>
                 </div>
+
+                <p className="prep-rules-note">
+                  決着は相手の全滅、または第10ターン終了時に残りHPの多い側の勝ち。
+                  並び順は前衛ほど狙われやすく守りが上がり、後衛は魔力が上がる代わりに攻撃が下がります。
+                  MPを使う技は魔力、使わない技は攻撃の力で威力が決まります。
+                </p>
 
                 <div className="bet-panel-v2">
                   <header>
@@ -4964,6 +4975,7 @@ function BattleScreen({
   const [presentationStriking, setPresentationStriking] = useState(false);
   const [presentationImpacted, setPresentationImpacted] = useState(false);
   const [resolutionStep, setResolutionStep] = useState(0);
+  const [showLogHistory, setShowLogHistory] = useState(false);
   const [visualHp, setVisualHp] = useState<Record<string, number>>({});
   const [visualMp, setVisualMp] = useState<Record<string, number>>({});
   const soundedEventRef = useRef<string>();
@@ -5662,6 +5674,12 @@ function BattleScreen({
 
               <footer>
                 <div>
+                  <Info size={19} />
+                  <span>
+                    決着は相手の全滅、または第10ターン終了時に残りHPの多い側の勝ちです。
+                  </span>
+                </div>
+                <div>
                   <MousePointerClick size={19} />
                   <span>
                     AUTOなら選手紹介から技、ダメージ、決着まで自動で進みます。いつでも止められます。
@@ -5752,6 +5770,9 @@ function BattleScreen({
                       : "魔力を隠すように息を止めた"}
                 </strong>
                 {battle.enemyThreat && <small>{battle.enemyThreat}</small>}
+                {battle.enemyTellConfidence && (
+                  <small>読みの確度 {battle.enemyTellConfidence}%</small>
+                )}
               </div>
             </motion.aside>
           )}
@@ -5841,7 +5862,11 @@ function BattleScreen({
           <span>NEXT</span>
           {[...battle.player, ...battle.enemy]
             .filter((unit) => unit.hp > 0)
-            .sort((left, right) => right.stats.speed - left.stats.speed)
+            .sort(
+              (left, right) =>
+                effectiveStat(right, battle, "speed") -
+                effectiveStat(left, battle, "speed"),
+            )
             .map((unit, index) => (
               <div
                 key={unit.instanceId}
@@ -5857,6 +5882,26 @@ function BattleScreen({
               </div>
             ))}
         </div>
+        {battleStarted && (
+          <div
+            className="battle-momentum"
+            aria-label={`勢い ${battle.momentum}/${battle.momentumMax}。60で連携追撃が使える`}
+          >
+            <Sparkles size={14} />
+            <span>勢い</span>
+            <div>
+              <i
+                style={{
+                  width: `${Math.min(100, Math.round((battle.momentum / battle.momentumMax) * 100))}%`,
+                }}
+              />
+              <em style={{ left: "60%" }} title="連携追撃ライン" />
+            </div>
+            <strong>
+              {battle.momentum >= 60 ? "連携追撃OK" : `${battle.momentum}/60`}
+            </strong>
+          </div>
+        )}
         <AnimatePresence>
           {visiblePresentation &&
             presentationStriking &&
@@ -6118,6 +6163,14 @@ function BattleScreen({
         aria-live={narrating ? "off" : "polite"}
       >
         <span>戦況</span>
+        <button
+          className="battle-feed__history"
+          onClick={() => setShowLogHistory(true)}
+          title="実況の履歴をすべて表示"
+        >
+          <ScrollText size={14} />
+          すべての実況
+        </button>
         {visiblePresentation
           ? visiblePresentationFeed.map((event) => (
               <p
@@ -6137,6 +6190,48 @@ function BattleScreen({
               </p>
             ))}
       </div>
+
+      <AnimatePresence>
+        {showLogHistory && (
+          <motion.section
+            className="battle-log-history"
+            role="dialog"
+            aria-modal="true"
+            aria-label="実況の履歴"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 12 }}
+          >
+            <header>
+              <ScrollText size={18} />
+              <strong>実況の履歴</strong>
+              <button
+                className="icon-button"
+                onClick={() => setShowLogHistory(false)}
+                aria-label="履歴を閉じる"
+              >
+                <X size={18} />
+              </button>
+            </header>
+            <div className="battle-log-history__list">
+              {battle.logs.length === 0 ? (
+                <p className="tone-system">まだ実況はありません。</p>
+              ) : (
+                battle.logs.map((entry, index) => (
+                  <p
+                    className={`tone-${entry.tone}`}
+                    key={`history-${entry.turn}:${index}`}
+                  >
+                    <small>{entry.turn > 0 ? `T${entry.turn}` : "開始"}</small>
+                    <strong>{entry.actor}</strong>
+                    {entry.text}
+                  </p>
+                ))
+              )}
+            </div>
+          </motion.section>
+        )}
+      </AnimatePresence>
 
       {battle.status === "decision" && !narrating && (
         <motion.section
@@ -6183,7 +6278,7 @@ function BattleScreen({
               >
                 <Compass size={23} />
                 <strong>読む</strong>
-                <span>攻撃・防御・技を見切る</span>
+                <span>的中で対抗、外すと相手が勢いづく</span>
                 <small>残り {battle.readUses}</small>
               </button>
               <button
@@ -6201,13 +6296,22 @@ function BattleScreen({
               >
                 <LockKeyhole size={23} />
                 <strong>強制指示</strong>
-                <span>技を指定。反動あり</span>
+                <span>技を指定。反動でHPと防御が下がる</span>
                 <small>残り {battle.forceUses}</small>
+              </button>
+              <button
+                disabled={battle.momentum < 60}
+                onClick={() => intervene({ type: "link" })}
+              >
+                <Zap size={23} />
+                <strong>連携追撃</strong>
+                <span>勢い60を使い、全員で追撃する</span>
+                <small>勢い {Math.min(battle.momentum, 60)}/60</small>
               </button>
               <button onClick={() => intervene({ type: "pass" })}>
                 <UserRoundCheck size={23} />
                 <strong>任せる</strong>
-                <span>本人たちの判断を信じる</span>
+                <span>信じて任せる。勢いが少し上がる</span>
                 <small>信頼 {battle.teamTrust}</small>
               </button>
             </div>
@@ -6237,6 +6341,12 @@ function BattleScreen({
                 <span>魔力と勢いを連携へつなぐ</span>
               </button>
             </div>
+          )}
+          {command === "read" && (
+            <p className="command-note">
+              構えの確度はおよそ{battle.enemyTellConfidence ?? 75}%。的中なら対抗策が発動、
+              外すと勝負どころを逃し、相手の攻撃・魔力が上がる。
+            </p>
           )}
           {command === "read" && (
             <div className="prediction-grid">

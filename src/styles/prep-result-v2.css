@@ -570,3 +570,24 @@
   .result-title-v2 h2 { font-size: 52px; }
   .result-highlight-v2, .result-lessons-v2 { padding: 14px 18px; }
 }
+
+/* 戦い方の説明と試合ルール注記 */
+
+.formation-card-v2__tactic-note {
+  display: block;
+  margin-top: 4px;
+  color: rgba(46, 58, 66, 0.78);
+  font-size: 11.5px;
+  line-height: 1.55;
+}
+
+.prep-rules-note {
+  margin: 12px 0 0;
+  padding: 10px 13px;
+  border-left: 3px solid rgba(214, 160, 90, 0.9);
+  border-radius: 4px;
+  background: rgba(255, 250, 240, 0.85);
+  color: #3d4750;
+  font-size: 12.5px;
+  line-height: 1.7;
+}

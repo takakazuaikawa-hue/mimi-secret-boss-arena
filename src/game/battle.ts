@@ -404,7 +404,7 @@ const formationFactor = (
   return 1;
 };
 
-const effectiveStat = (
+export const effectiveStat = (
   unit: BattleUnit,
   battle: BattleState,
   stat: "attack" | "magic" | "defense" | "speed",

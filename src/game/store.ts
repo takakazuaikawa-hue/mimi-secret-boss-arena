@@ -535,7 +535,7 @@ export const useGameStore = create<GameStore>()(
           spectatorMatch: undefined,
           currentBet: 0,
           lastMatchSummary: won
-            ? `${match.name}に勝利。賞金${reward.toLocaleString("ja-JP")}Gを獲得。`
+            ? `${match.name}に勝利。賞金${reward.toLocaleString("ja-JP")}Gと、出場選手は各4育成ptを獲得。`
             : `${match.name}は敗戦。出場選手は各2育成ptを獲得。試合で見えた弱点を次の編成へ持ち帰った。`,
         };
 

@@ -26,7 +26,7 @@
 .battle-enemy-tell-cinematic {
   position: absolute;
   z-index: 26;
-  top: clamp(112px, 18vh, 164px);
+  top: clamp(168px, 26vh, 220px);
   left: clamp(22px, 7vw, 112px);
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);
@@ -131,8 +131,19 @@
 
 .battle-screen .command-grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 7px;
+}
+
+.battle-screen .command-note {
+  margin: 0 0 7px;
+  padding: 7px 10px;
+  border-left: 3px solid rgba(245, 212, 116, 0.85);
+  border-radius: 3px;
+  color: #f2ede2;
+  background: rgba(9, 28, 40, 0.72);
+  font-size: 12.5px;
+  line-height: 1.55;
 }
 
 .battle-screen .command-grid > button {
@@ -350,7 +361,7 @@
   }
 
   .battle-enemy-tell-cinematic {
-    top: 80px;
+    top: 106px;
     left: 8px;
     width: min(320px, calc(100% - 16px));
     min-height: 58px;
@@ -382,7 +393,7 @@
   }
 
   .battle-screen .command-grid {
-    grid-template-columns: repeat(5, minmax(58px, 1fr));
+    grid-template-columns: repeat(6, minmax(58px, 1fr));
     overflow-x: auto;
   }
 
