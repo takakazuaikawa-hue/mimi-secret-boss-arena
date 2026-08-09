@@ -22,8 +22,14 @@
       {
         "id": "room-seventeen.meet.asset.background.001",
         "kind": "background",
-        "path": "/assets/story/bg-arena-reception.png",
-        "alt": "従業員通路の背景"
+        "path": "/assets/story/bg-employee-corridor-no-seventeenth-door-v1.png",
+        "alt": "十六号室までしかない通常の従業員通路"
+      },
+      {
+        "id": "room-seventeen.meet.asset.background.002",
+        "kind": "background",
+        "path": "/assets/story/bg-employee-corridor-seventeenth-door-v1.png",
+        "alt": "十七号室の扉が出現した従業員通路"
       },
       {
         "id": "room-seventeen.meet.asset.still.001",
@@ -45,7 +51,21 @@
       "lineId": "room-seventeen.meet.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "従業員通路の倉庫は、十六号室までしかない。ないはずだった。備品のモップを探していた私の前に、その日、見慣れない扉があった。真鍮のプレートに「17」。"
+      "text": "従業員通路の倉庫は、十六号室までしかない。備品のモップを探していた私は、番号を端から数え直した。十五、十六。そこまで。やっぱり十七号室なんてない。"
+    },
+    {
+      "type": "direction",
+      "id": "room-seventeen.meet.node.direction.001b",
+      "command": { "type": "background", "assetId": "room-seventeen.meet.asset.background.002", "transition": "dissolve" }
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.meet.node.line.001b",
+      "lineId": "room-seventeen.meet.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "顔を上げる。今数えた十六号室の隣に、見慣れない扉が立っていた。真鍮のプレートに「17」。数え間違いではない。通路のほうが、増えている。",
+      "emotion": "tension"
     },
     {
       "type": "line",

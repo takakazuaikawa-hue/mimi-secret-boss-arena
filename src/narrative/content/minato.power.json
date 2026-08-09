@@ -30,8 +30,8 @@
       {
         "id": "minato.power.asset.background.001",
         "kind": "background",
-        "path": "/assets/story/bg-observation-deck-night.png",
-        "alt": "夜空の見える搬入口の背景"
+        "path": "/assets/story/bg-loading-dock-day-v1.png",
+        "alt": "日中の搬入口の背景"
       },
       {
         "id": "minato.power.asset.still.001",

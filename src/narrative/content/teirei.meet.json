@@ -22,14 +22,14 @@
       {
         "id": "teirei.meet.asset.background.001",
         "kind": "background",
-        "path": "/assets/story/bg-arena-reception.png",
+        "path": "/assets/story/bg-loading-dock-day-v1.png",
         "alt": "搬入口の背景"
       },
       {
         "id": "teirei.meet.asset.still.001",
         "kind": "still",
-        "path": "/assets/story/encounters/teirei.png",
-        "alt": "最初の遭遇のイベント一枚絵"
+        "path": "/assets/story/events/teirei-meet-standing-v2.png",
+        "alt": "搬入口で十七日間直立して待つ丁零"
       }
     ]
   },

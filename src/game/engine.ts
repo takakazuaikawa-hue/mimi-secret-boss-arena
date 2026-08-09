@@ -1,4 +1,8 @@
 import { ambientEvents } from "../data/ambientEvents";
+import {
+  campaignStages,
+  type CampaignStageDefinition,
+} from "../data/campaignStages";
 import { fighterDefinitions } from "../data/characters";
 import { matchForWeek } from "../data/matches";
 import {
@@ -22,6 +26,7 @@ import {
 import { asEventId } from "../narrative/schema";
 import { legacyWorldNarrativeBlockById } from "../narrative/worldBlocks";
 import type {
+  CarriedAllyState,
   CharacterScene,
   Condition,
   DialogueLine,
@@ -95,6 +100,10 @@ export const createRun = (
     // 周回をまたいだ解放済み人物。遭遇候補の後方へ回し、
     // 未解放の人物へ先に会える周回誘導を行う(真エンディング条件の到達支援)。
     deprioritizedEncounters?: readonly string[];
+    // 三段階キャンペーンの現在区分。指定時、遭遇デッキを主軸5人へ限定する。
+    campaignStage?: CampaignStageDefinition;
+    // 前区分から在籍し続ける仲間。開始時から加入済みとして復元する。
+    carriedAllies?: readonly CarriedAllyState[];
   } = {},
 ): RunState => {
   const random = randomForCursor(seed, 0);
@@ -104,6 +113,29 @@ export const createRun = (
     ids.map((id) => [id, initialFighterState(id)]),
   );
   const deprioritized = new Set(options.deprioritizedEncounters ?? []);
+  const stage = options.campaignStage;
+  const carried = (options.carriedAllies ?? []).filter((ally) =>
+    ids.includes(ally.id),
+  );
+  carried.forEach((ally) => {
+    fighters[ally.id] = {
+      ...fighters[ally.id],
+      encountered: true,
+      recruited: true,
+      liberated: ally.liberated,
+      trust: ally.trust,
+      ownership: ally.liberated ? 0 : ally.ownership,
+      storyStage: ally.storyStage,
+    };
+  });
+  const encounterPoolIds = ids.filter((id) => {
+    if (id === "gidonozeaas") return false;
+    if (carried.some((ally) => ally.id === id)) return false;
+    if (stage && !stage.mainFighterIds.includes(id)) return false;
+    return true;
+  });
+  // 区分2以降はギドノが持ち越し在籍のため、週1固定遭遇は自然に発生しない。
+  // 区分指定時にギドノが主軸かつ未持ち越しなら、従来どおり週1の固定遭遇が担う。
 
   return {
     id: `run-${Date.now()}`,
@@ -118,12 +150,10 @@ export const createRun = (
     mimiCondition: "normal",
     sharedPoints: routeDefinition.startingSharedPoints,
     fighters,
-    roster: [],
+    roster: carried.map((ally) => ally.id),
     activeTeam: [],
     encounterDeck: (() => {
-      const shuffled = random.shuffle(
-        ids.filter((id) => id !== "gidonozeaas"),
-      );
+      const shuffled = random.shuffle(encounterPoolIds);
       if (deprioritized.size === 0) return shuffled;
       // シャッフル順を保ったまま、未解放を前へ、解放済みを後ろへ。
       return [
@@ -131,6 +161,7 @@ export const createRun = (
         ...shuffled.filter((id) => deprioritized.has(id)),
       ];
     })(),
+    campaignStage: stage?.stage,
     eventHistory: [],
     flags: [],
     liberationWindowsUsed: [],
@@ -477,9 +508,19 @@ export const chooseWeeklyAction = (
     0,
     0.95,
   );
-  const storyCandidates = random.shuffle(
-    storyProspectsForAction(run, action),
-  );
+  const storyCandidates = (() => {
+    const shuffled = random.shuffle(storyProspectsForAction(run, action));
+    // 三段階キャンペーンでは、その周の主軸5人の物語を常に優先する。
+    // 持ち越し仲間の続きは、主軸の候補がない週だけ進む(枠の食い合い防止)。
+    if (!run.campaignStage) return shuffled;
+    const mains = new Set(
+      campaignStages[run.campaignStage - 1]?.mainFighterIds ?? [],
+    );
+    return [
+      ...shuffled.filter((id) => mains.has(id)),
+      ...shuffled.filter((id) => !mains.has(id)),
+    ];
+  })();
   const focusCandidate =
     run.focusFighterId &&
     storyCandidates.includes(run.focusFighterId) &&

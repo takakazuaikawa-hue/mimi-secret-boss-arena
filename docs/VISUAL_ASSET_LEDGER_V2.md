@@ -35,6 +35,10 @@
 | 背景 | `bg-casino-cafe-day-v1.png` | 通常営業、日中の共通会話 | 採用候補 |
 | ミミ立ち絵 | `sprites/mimi-confused-v1.png` | 困惑、不条理への反応 | 透過済み・採用候補 |
 | ミミ立ち絵 | `sprites/mimi-serious-v1.png` | 決断、危機、契約の選択 | 透過済み・採用候補 |
+| 背景 | `bg-employee-cafeteria-day-v1.png` | 昼食選び、休憩、従業員の日常 | 採用候補 |
+| 背景 | `bg-loading-dock-day-v1.png` | 荷受け、搬入口、修理受付、配送ヤード | 採用候補 |
+| 背景 | `bg-unused-mortuary-day-v1.png` | マリアン、使われない霊安室、記憶の場面 | 採用候補 |
+| 背景 | `bg-central-atrium-photo-studio-day-v1.png` | うしろ、記念撮影、写真騒動 | 採用候補 |
 
 ## 次の優先バッチ
 
@@ -167,3 +171,24 @@
 - 背景: 人物なし、読める文字なし、左右に立ち絵領域、会話UIで重要物が隠れない。
 - 一枚絵: 何が起きているか3秒で説明できる、選択結果を先取りしない、正本の衣装・形態・関係性と一致。
 - すべて: ロゴ、透かし、余分な指、融合した小物、別人化を不採用とする。
+
+## 2026-08-10 固有技カットイン制作・接続結果
+
+## 2026-08-10 物語監査・修正追加
+
+| 種別 | 場面 | ファイル | 状態 |
+| --- | --- | --- | --- |
+| 一枚絵 | `peony.meet`：迷子へ折り紙の王冠を作るピオニー | `public/assets/story/events/peony-meet-paper-crown-v2.png` | 制作・接続済み。実画面確認待ち |
+| 一枚絵 | `teirei.meet`：搬入口で十七日間直立して待つテイレイ | `public/assets/story/events/teirei-meet-standing-v2.png` | 制作・検品済み。物語JSONへの差し替え待ち |
+| 一枚絵 | `marian.meet`：ミミの指先の一ミリの傷を治すマリアン | `public/assets/story/events/marian-meet-fingertip-v2.png` | 制作・検品済み。物語JSONへの差し替え待ち |
+| 一枚絵 | `sazanami.meet`：水槽全体を満たす巨大な単眼 | `public/assets/story/events/sazanami-meet-single-eye-v2.png` | 制作・検品済み。物語JSONへの差し替え待ち |
+| 一枚絵 | `shahar.meet`：都市を覆う古竜と降りる一枚の鱗 | `public/assets/story/events/shahar-meet-sky-dragon-v2.png` | 制作・検品済み。物語JSONへの差し替え待ち |
+
+- 仕様: 1672×941 px / PNG / RGB / 不透明。
+- ピオニー方針: 正本の大胆な露出、角、花飾り、金装飾、巨人らしい豊かな体格を維持する。未成年は画面内に描かず、画面外の相手へ紙の王冠を差し出す構図で出来事を示す。
+- 生成モード: OpenAI 内蔵画像生成。既存の各キャラクター絵は人物同一性、衣装、画風の参照に限定。
+
+- 未制作だった13人分を `public/assets/battle/cutins/` に制作し、`characterVisuals[id].battleCutIn` へ接続済み。
+- 全点 `1672×941 px / WebP / RGB / 不透明`。通常戦闘絵、被弾・勝利・敗北差分は再生成していない。
+- 画面上の参照は陣営ではなく `fighterId` 優先へ変更。主要15人が敵側へ回っても同じ通常戦闘絵・固有技カットインを使用する。
+- CSS実表示枠はデスクトップ最大 `1000×330 px`、390px幅では `378×188 px`。全13点を両サイズ相当の中央 `object-fit: cover` クロップで一覧検収済み。

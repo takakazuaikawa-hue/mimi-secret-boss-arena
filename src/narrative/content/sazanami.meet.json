@@ -37,8 +37,8 @@
       {
         "id": "sazanami.meet.asset.still.001",
         "kind": "still",
-        "path": "/assets/story/encounters/sazanami.png",
-        "alt": "最初の遭遇のイベント一枚絵"
+        "path": "/assets/story/events/sazanami-meet-single-eye-v2.png",
+        "alt": "館内水槽を埋めるサザナミの巨大な単眼"
       }
     ]
   },

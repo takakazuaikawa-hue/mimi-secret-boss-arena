@@ -31,7 +31,7 @@
       {
         "id": "amara.meet.asset.background.001",
         "kind": "background",
-        "path": "/assets/story/bg-arena-reception.png",
+        "path": "/assets/story/bg-employee-consultation-room-v1.png",
         "alt": "従業員相談室の背景"
       },
       {
@@ -43,6 +43,15 @@
     ]
   },
   "nodes": [
+    {
+      "type": "direction",
+      "id": "amara.meet.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "amara.meet.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
     {
       "type": "line",
       "id": "amara.meet.node.line.001",
@@ -67,15 +76,6 @@
       "speakerName": "アマラ",
       "mode": "dialogue",
       "text": "開廷します。本日の被告、従業員休憩規定・第八条。"
-    },
-    {
-      "type": "direction",
-      "id": "amara.meet.node.direction.001",
-      "command": {
-        "type": "background",
-        "assetId": "amara.meet.asset.background.001",
-        "transition": "dissolve"
-      }
     },
     {
       "type": "line",

@@ -67,6 +67,10 @@ import {
   openingProgram,
   unlockedProgramActs,
 } from "./data/openingProgram";
+import {
+  campaignStages,
+  stageForCompletedRuns,
+} from "./data/campaignStages";
 import { opponentVisuals } from "./data/opponentVisuals";
 import {
   battleOpponentById,
@@ -434,7 +438,13 @@ function AppHeader({
         </div>
         <div className="header-progress" aria-label={`現在地: ${detail.label}`}>
           <div className="header-progress__current">
-            {run && !run.ended && <span>第{run.week}週</span>}
+            {run && !run.ended && (
+              <span>
+                {run.campaignStage
+                  ? `${campaignStages[run.campaignStage - 1].label}・第${run.week}週`
+                  : `第${run.week}週`}
+              </span>
+            )}
             <strong>{detail.label}</strong>
           </div>
           <div className="header-progress__steps" aria-hidden="true">
@@ -717,7 +727,7 @@ function TitleScreen({
   onContinue,
   onArchive,
 }: {
-  onStart: (route: RunState["route"]) => void;
+  onStart: (route: RunState["route"], stage?: 1 | 2 | 3) => void;
   onContinue: () => void;
   onArchive: () => void;
 }) {
@@ -726,6 +736,10 @@ function TitleScreen({
   const setSkip = useGameStore((state) => state.setSkipExplanations);
   const setSoundEnabled = useGameStore((state) => state.setSoundEnabled);
   const [route, setRoute] = useState<RunState["route"]>("normal");
+  const unlockedStage = stageForCompletedRuns(
+    profile.completedRuns ?? (profile.hasFinishedRun ? 1 : 0),
+  ).stage;
+  const [stageChoice, setStageChoice] = useState<1 | 2 | 3>(unlockedStage);
   const [showRoutePicker, setShowRoutePicker] = useState(false);
   const [showRestartConfirm, setShowRestartConfirm] = useState(false);
   const [attractorIndex, setAttractorIndex] = useState(0);
@@ -832,6 +846,11 @@ function TitleScreen({
             onClick={() =>
               soundAnd(() => {
                 if (run) setShowRestartConfirm(true);
+                else if (
+                  unlockedStage > 1 ||
+                  profile.unlockedRoutes.length > 1
+                )
+                  setShowRoutePicker(true);
                 else onStart("normal");
               })
             }
@@ -915,7 +934,14 @@ function TitleScreen({
                     className="primary-button title-restart-dialog__confirm"
                     onClick={() => {
                       setShowRestartConfirm(false);
-                      soundAnd(() => onStart("normal"));
+                      soundAnd(() => {
+                        if (
+                          unlockedStage > 1 ||
+                          profile.unlockedRoutes.length > 1
+                        )
+                          setShowRoutePicker(true);
+                        else onStart("normal");
+                      });
                     }}
                   >
                     派遣初日から始め直す
@@ -1026,6 +1052,44 @@ function TitleScreen({
                   ))}
                 </div>
               </div>
+              {unlockedStage > 1 && (
+                <div className="stage-picker" aria-label="勤務週区分">
+                  <span>WORK TERM</span>
+                  <strong>どの勤務週へ入りますか</strong>
+                  <div>
+                    {campaignStages
+                      .filter((stage) => stage.stage <= unlockedStage)
+                      .map((stage) => (
+                        <button
+                          key={stage.stage}
+                          className={
+                            stageChoice === stage.stage ? "is-selected" : ""
+                          }
+                          onClick={() => {
+                            setStageChoice(stage.stage);
+                            playSound("ui", profile.soundEnabled);
+                          }}
+                        >
+                          <strong>{stage.label}</strong>
+                          <small>
+                            {stage.mainFighterIds
+                              .map(
+                                (id) =>
+                                  fighterById.get(id)?.name ?? id,
+                              )
+                              .slice(0, 3)
+                              .join("・")}
+                            たちの週
+                          </small>
+                        </button>
+                      ))}
+                  </div>
+                  <p>
+                    済んだ勤務週へも入り直せます。まだ向き合えていない人と、
+                    もう一度同じ週を過ごせます。
+                  </p>
+                </div>
+              )}
               {profile.hasFinishedRun && (
                 <label className="skip-toggle">
                   <input
@@ -1041,7 +1105,7 @@ function TitleScreen({
                 <span>全26週・想定プレイ時間 約90分</span>
                 <button
                   className="primary-button primary-button--large"
-                  onClick={() => soundAnd(() => onStart(route))}
+                  onClick={() => soundAnd(() => onStart(route, stageChoice))}
                 >
                   <Play size={21} fill="currentColor" />
                   この興行で26週を始める
@@ -7398,7 +7462,7 @@ export function App() {
     else send({ type: "RESUME_WEEK" });
   };
 
-  const start = (route: RunState["route"]) => {
+  const start = (route: RunState["route"], stage?: 1 | 2 | 3) => {
     playTransition(
       {
         title: "派遣先へ向かっています",
@@ -7406,7 +7470,7 @@ export function App() {
         tip: "今日の仕事は給仕、受付補助、倉庫確認。大会運営とは書かれていません。",
       },
       () => {
-        startRun(route);
+        startRun(route, undefined, stage);
         playSound("ui", profile.soundEnabled);
         send({ type: "NEW_GAME" });
       },

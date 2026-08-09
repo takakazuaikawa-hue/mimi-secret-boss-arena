@@ -440,6 +440,18 @@ export interface RunState {
   inventory: Record<string, number>;
   ended: boolean;
   endingType?: "rebuild" | "company" | "retired" | "grand";
+  // 三段階キャンペーンの現在区分(1=第一勤務週/2=更新後/3=記録外)。
+  // 旧セーブには存在しないため省略可(省略時は従来の全員デッキ挙動)。
+  campaignStage?: 1 | 2 | 3;
+}
+
+// 周回を跨いで持ち越す仲間の状態(クリア後の世界では仲間だけが積み重なる)
+export interface CarriedAllyState {
+  id: string;
+  trust: number;
+  ownership: number;
+  storyStage: number;
+  liberated: boolean;
 }
 
 export interface PlayerProfile {
@@ -450,6 +462,10 @@ export interface PlayerProfile {
   liberatedCollection: string[];
   // 真エンディング「十五人の開廷日」へ到達済みか(最終条の開示に使う)
   grandCleared?: boolean;
+  // 完了した周回数(勝敗を問わず完走した回数)。三段階キャンペーンの区分判定に使う。
+  completedRuns?: number;
+  // 周回を跨いで在籍し続ける仲間(前区分の主軸たち)。
+  carriedAllies?: CarriedAllyState[];
   seenEvents: string[];
   hallOfFame: HallOfFameTeam[];
   skipExplanations: boolean;

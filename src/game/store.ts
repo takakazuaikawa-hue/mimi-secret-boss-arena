@@ -25,11 +25,16 @@ import { itemById } from "../data/items";
 import { getRouteDefinition } from "../data/routes";
 import { fighterDefinitions } from "../data/characters";
 import { isProgramComplete } from "../data/openingProgram";
+import {
+  campaignStages,
+  stageForCompletedRuns,
+} from "../data/campaignStages";
 import { randomForCursor } from "./rng";
 import { migrateNarrativeRunState } from "../narrative/saveMigration";
 import type {
   BattleIntervention,
   BattleState,
+  CarriedAllyState,
   PlayerProfile,
   RunState,
   Stats,
@@ -42,7 +47,11 @@ import type {
 interface GameStore {
   profile: PlayerProfile;
   run?: RunState;
-  startRun: (route: RunState["route"], seed?: string) => void;
+  startRun: (
+    route: RunState["route"],
+    seed?: string,
+    stage?: 1 | 2 | 3,
+  ) => void;
   clearRun: () => void;
   chooseAction: (action: WeeklyAction) => void;
   resolveEvent: (choiceIndex?: number) => void;
@@ -111,12 +120,30 @@ const finishRun = (
   const unlocked = new Set(profile.unlockedRoutes);
   if (cleared && run.route === "normal") unlocked.add("domination");
   if (cleared && run.route === "domination") unlocked.add("chaos");
+  // クリア後の世界では仲間だけが積み重なる: 今周の在籍者を持ち越しへ合流。
+  const carriedAllies: CarriedAllyState[] = [
+    ...(profile.carriedAllies ?? []).filter(
+      (ally) => !run.roster.includes(ally.id),
+    ),
+    ...run.roster
+      .filter((id) => run.fighters[id])
+      .map((id) => ({
+        id,
+        trust: run.fighters[id].trust,
+        ownership: run.fighters[id].ownership,
+        storyStage: run.fighters[id].storyStage,
+        liberated: run.fighters[id].liberated,
+      })),
+  ];
   return {
     run: endedRun,
     profile: {
       ...profile,
       hasFinishedRun: true,
       clears: profile.clears + (cleared ? 1 : 0),
+      completedRuns:
+        (profile.completedRuns ?? (profile.hasFinishedRun ? 1 : 0)) + 1,
+      carriedAllies,
       unlockedRoutes: [...unlocked],
       liberatedCollection,
       grandCleared: profile.grandCleared || resolvedEnding === "grand",
@@ -129,12 +156,37 @@ export const useGameStore = create<GameStore>()(
   persist(
     (set, get) => ({
       profile: createInitialProfile(),
-      startRun: (route, seed) =>
-        set((state) => ({
-          run: createRun(route, seed ?? undefined, {
-            deprioritizedEncounters: state.profile.liberatedCollection,
-          }),
-        })),
+      startRun: (route, seed, stage) =>
+        set((state) => {
+          // 旧セーブには持ち越しデータがないため、解放コレクションから合成する
+          // (解放済み=物語を終えて在籍し続ける仲間、として復元)。
+          const carriedAllies: CarriedAllyState[] =
+            state.profile.carriedAllies ??
+            state.profile.liberatedCollection.map((id) => ({
+              id,
+              trust: 90,
+              ownership: 0,
+              storyStage: 7,
+              liberated: true,
+            }));
+          // 到達済み区分の範囲で、やり直したい勤務週区分を選べる
+          // (クリア後の世界は毎回整い直されるため、再訪は世界観どおり)。
+          const unlockedStage = stageForCompletedRuns(
+            state.profile.completedRuns ??
+              (state.profile.hasFinishedRun ? 1 : 0),
+          );
+          const chosenStage =
+            campaignStages[
+              Math.min(stage ?? unlockedStage.stage, unlockedStage.stage) - 1
+            ];
+          return {
+            run: createRun(route, seed ?? undefined, {
+              deprioritizedEncounters: state.profile.liberatedCollection,
+              campaignStage: chosenStage,
+              carriedAllies,
+            }),
+          };
+        }),
       clearRun: () => set({ run: undefined }),
       chooseAction: (action) =>
         set((state) =>

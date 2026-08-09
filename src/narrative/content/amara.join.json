@@ -31,12 +31,21 @@
       {
         "id": "amara.join.asset.background.001",
         "kind": "background",
-        "path": "/assets/story/bg-employee-entrance.png",
+        "path": "/assets/story/bg-fountain-plaza-day-v1.png",
         "alt": "噴水広場の背景"
       }
     ]
   },
   "nodes": [
+    {
+      "type": "direction",
+      "id": "amara.join.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "amara.join.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
     {
       "type": "line",
       "id": "amara.join.node.line.001",
@@ -71,15 +80,6 @@
       "mode": "thought",
       "text": "噴水の縁に、白いチョークで丁寧に「参考人席」。私の椅子だけ、もう用意されていた。この人の法廷は、出張する。",
       "emotion": "comic"
-    },
-    {
-      "type": "direction",
-      "id": "amara.join.node.direction.001",
-      "command": {
-        "type": "background",
-        "assetId": "amara.join.asset.background.001",
-        "transition": "dissolve"
-      }
     },
     {
       "type": "line",
