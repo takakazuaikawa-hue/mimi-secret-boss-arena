@@ -4228,6 +4228,9 @@ const opponentBattleSizes: Record<
   "rookie-bat-mage": "small",
 };
 
+const battleVisualFor = (fighterId: string) =>
+  characterVisuals[fighterId] ?? opponentVisuals[fighterId];
+
 function BattleTechniqueShowcase({
   unit,
   event,
@@ -4235,10 +4238,8 @@ function BattleTechniqueShowcase({
   unit: BattleUnit;
   event: BattlePresentationEvent;
 }) {
-  const playerVisual =
-    unit.side === "player" ? characterVisuals[unit.fighterId] : undefined;
-  const visual = playerVisual ?? opponentVisuals[unit.fighterId];
-  const hasKeyArt = Boolean(playerVisual?.battleCutIn);
+  const visual = battleVisualFor(unit.fighterId);
+  const hasKeyArt = Boolean(visual?.battleCutIn);
 
   return (
     <motion.div
@@ -4266,11 +4267,11 @@ function BattleTechniqueShowcase({
         animate={{ scale: 1, x: 0 }}
         transition={{ duration: 0.68, ease: "easeOut" }}
       >
-        {playerVisual?.battleCutIn ? (
+        {visual?.battleCutIn ? (
           <img
-            src={playerVisual.battleCutIn}
+            src={visual.battleCutIn}
             alt=""
-            style={{ objectPosition: playerVisual.battleCutInPosition ?? "center" }}
+            style={{ objectPosition: visual.battleCutInPosition ?? "center" }}
           />
         ) : visual ? (
           <img src={visual.battle} alt="" className="is-standing-art" />
@@ -4326,10 +4327,7 @@ function BattleCombatant({
         : targeted
           ? "is-hit"
           : "";
-  const standingVisual =
-    unit.side === "player"
-      ? characterVisuals[unit.fighterId]
-      : opponentVisuals[unit.fighterId];
+  const standingVisual = battleVisualFor(unit.fighterId);
   const battleSize =
     standingVisual?.battleSize ?? opponentBattleSizes[unit.fighterId] ?? "standard";
   const attackDirection = unit.side === "player" ? 1 : -1;
@@ -4877,10 +4875,7 @@ function SpectatorBattleScreen() {
 
 function BattleEntryFighter({ unit }: { unit?: BattleUnit }) {
   if (!unit) return null;
-  const visual =
-    unit.side === "player"
-      ? characterVisuals[unit.fighterId]
-      : opponentVisuals[unit.fighterId];
+  const visual = battleVisualFor(unit.fighterId);
   return (
     <figure className="battle-entry-fighter">
       {visual ? (
@@ -5462,14 +5457,14 @@ function BattleScreen({
     activePresentation?.kind === "debuff" ||
     activePresentation?.kind === "miss";
   const activeTargetNames =
-    activePresentation?.targets.map((target) => target.name).join("・") ||
+    activePresentation?.targets.map((target) => target.name).join("と") ||
     activePresentation?.targetIds
       .map((targetId) =>
         battleUnits.find((unit) => unit.instanceId === targetId),
       )
       .filter((unit): unit is BattleUnit => Boolean(unit))
       .map((unit) => unit.name)
-      .join("・") ||
+      .join("と") ||
     "戦況全体";
   const activeIsSpotlight = Boolean(
     activePresentation?.spotlight ||

@@ -971,7 +971,11 @@ const act = (
       target.magicBuff = clamp(target.magicBuff + skill.power / 360, -0.5, 0.65);
       applySkillMechanics(battle, skill, target);
     });
-    pushLog(battle, actor.name, `${skill.name}。味方の戦型が整う。`);
+    pushLog(
+      battle,
+      actor.name,
+      `${skill.name}。${actor.side === "player" ? "味方" : "敵陣"}の戦型が整う。`,
+    );
     pushPresentation(battle, {
       actorId: actor.instanceId,
       actorName: actor.name,
@@ -991,7 +995,13 @@ const act = (
         tags: ["POWER UP"],
       })),
       headline: `${actor.name}の「${skill.name}」`,
-      detail: `${targets.length > 1 ? "味方全体" : targets[0]?.name}を強化`,
+      detail: `${
+        targets.length > 1
+          ? actor.side === "player"
+            ? "味方全体"
+            : "敵チーム全体"
+          : targets[0]?.name
+      }を強化`,
     });
   } else {
     const momentumBefore = battle.momentum;

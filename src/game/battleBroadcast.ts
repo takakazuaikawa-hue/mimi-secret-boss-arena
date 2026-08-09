@@ -108,7 +108,7 @@ const afterAction = (input: BattleBroadcastInput): BattleBroadcastLine => {
   if (kind === "heal") {
     return {
       headline: `「${detail}！」`,
-      body: `${actorName}の『${skillName}』が味方を立て直します。`,
+      body: `${actorName}の『${skillName}』が${targetNames}を立て直します。`,
     };
   }
   if (kind === "guard") {
@@ -120,7 +120,7 @@ const afterAction = (input: BattleBroadcastInput): BattleBroadcastLine => {
   if (kind === "buff") {
     return {
       headline: `「${detail}！」`,
-      body: "味方の能力が上がりました。",
+      body: `${targetNames}の能力が上がりました。`,
     };
   }
   if (kind === "debuff") {

@@ -106,6 +106,13 @@ log("gate rule visible:", gateText.includes("第10ターン終了時に残りHP"
 await page.getByRole("button", { name: /AUTOで試合を見る/ }).click();
 log("battle started (auto)");
 
+for (let i = 1; i <= 10; i++) {
+  await page.waitForTimeout(1100);
+  if (await page.locator(".command-panel").isVisible().catch(() => false)) break;
+  if (await page.locator(".battle-result").isVisible().catch(() => false)) break;
+  await shot(`action-${String(i).padStart(2, "0")}`);
+}
+
 let commandSeen = false;
 for (let i = 0; i < 400; i++) {
   await page.waitForTimeout(250);
