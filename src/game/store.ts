@@ -28,7 +28,7 @@ import { fighterDefinitions } from "../data/characters";
 import { isProgramComplete } from "../data/openingProgram";
 import {
   campaignStages,
-  stageForCompletedRuns,
+  unlockedCampaignStage,
 } from "../data/campaignStages";
 import { randomForCursor } from "./rng";
 import { migrateNarrativeRunState } from "../narrative/saveMigration";
@@ -172,19 +172,34 @@ export const useGameStore = create<GameStore>()(
             }));
           // 到達済み区分の範囲で、やり直したい勤務週区分を選べる
           // (クリア後の世界は毎回整い直されるため、再訪は世界観どおり)。
-          const unlockedStage = stageForCompletedRuns(
-            state.profile.completedRuns ??
-              (state.profile.hasFinishedRun ? 1 : 0),
-          );
+          const unlockedStage = unlockedCampaignStage(state.profile);
           const chosenStage =
-            campaignStages[
-              Math.min(stage ?? unlockedStage.stage, unlockedStage.stage) - 1
-            ];
+            campaignStages[Math.min(stage ?? unlockedStage, unlockedStage) - 1];
+          // 完走せずに始め直した場合でも、その周で仲間になった人は残る
+          // (この世界では、物語は進まなくても仲間だけが積み重なる)。
+          const abandoned = state.run;
+          const mergedAllies: CarriedAllyState[] = abandoned
+            ? [
+                ...carriedAllies.filter(
+                  (ally) => !abandoned.roster.includes(ally.id),
+                ),
+                ...abandoned.roster
+                  .filter((id) => abandoned.fighters[id])
+                  .map((id) => ({
+                    id,
+                    trust: abandoned.fighters[id].trust,
+                    ownership: abandoned.fighters[id].ownership,
+                    storyStage: abandoned.fighters[id].storyStage,
+                    liberated: abandoned.fighters[id].liberated,
+                  })),
+              ]
+            : carriedAllies;
           return {
+            profile: { ...state.profile, carriedAllies: mergedAllies },
             run: createRun(route, seed ?? undefined, {
               deprioritizedEncounters: state.profile.liberatedCollection,
               campaignStage: chosenStage,
-              carriedAllies,
+              carriedAllies: mergedAllies,
             }),
           };
         }),

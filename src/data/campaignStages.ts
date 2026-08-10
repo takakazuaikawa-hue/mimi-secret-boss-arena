@@ -43,6 +43,38 @@ export const stageForCompletedRuns = (
 ): CampaignStageDefinition =>
   campaignStages[Math.min(campaignStages.length - 1, Math.max(0, completedRuns))];
 
+/**
+ * 到達済みの最大区分。
+ *
+ * 26週の完走だけを条件にすると、途中で始め直したプレイヤーが同じ5人に
+ * 閉じ込められてしまう。そこで「その区分の主軸と出会った実績」でも解放する。
+ * 出会いの記録(`profile.seenEvents` の `<id>.meet`)は周回を跨いで残るため、
+ * 遊び方に関係なく前へ進める。
+ */
+export const unlockedCampaignStage = (profile: {
+  completedRuns?: number;
+  hasFinishedRun?: boolean;
+  seenEvents?: readonly string[];
+}): 1 | 2 | 3 => {
+  const seen = new Set(profile.seenEvents ?? []);
+  const metCount = (stage: CampaignStageDefinition) =>
+    stage.mainFighterIds.filter((id) => seen.has(`${id}.meet`)).length;
+  // 主軸5人のうち4人と出会っていれば、その区分は「見た」とみなす。
+  const byEncounters = campaignStages.reduce(
+    (unlocked, stage) =>
+      stage.stage === unlocked && metCount(stage) >= 4
+        ? Math.min(campaignStages.length, unlocked + 1)
+        : unlocked,
+    1,
+  );
+  const byRuns =
+    (profile.completedRuns ?? (profile.hasFinishedRun ? 1 : 0)) + 1;
+  return Math.min(
+    campaignStages.length,
+    Math.max(byEncounters, byRuns),
+  ) as 1 | 2 | 3;
+};
+
 /** 指定区分より前の区分の主軸(=持ち越し対象の顔ぶれ) */
 export const carriedFighterIdsBeforeStage = (
   stage: CampaignStageDefinition,

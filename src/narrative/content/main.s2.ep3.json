@@ -71,7 +71,7 @@
       "lineId": "main.s2.ep3.line.005",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "というわけで、本日の私は代休扱いの重要任務である。売店で限定傘を買い、お弁当を持って、屋上庭園へ。よく晴れていた。傘を、開く。",
+      "text": "というわけで、本日の私は代休扱いの重要任務である。売店で傘を一本買い、お弁当を提げて、階段をのぼった。今日はよく晴れている。契約更新には、絶好の昼休みだ。",
       "emotion": "resolve"
     },
     { "type": "end", "id": "main.s2.ep3.node.end.001", "mode": "return-to-week" }

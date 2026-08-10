@@ -69,7 +69,7 @@ import {
 } from "./data/openingProgram";
 import {
   campaignStages,
-  stageForCompletedRuns,
+  unlockedCampaignStage,
 } from "./data/campaignStages";
 import { opponentVisuals } from "./data/opponentVisuals";
 import {
@@ -736,9 +736,7 @@ function TitleScreen({
   const setSkip = useGameStore((state) => state.setSkipExplanations);
   const setSoundEnabled = useGameStore((state) => state.setSoundEnabled);
   const [route, setRoute] = useState<RunState["route"]>("normal");
-  const unlockedStage = stageForCompletedRuns(
-    profile.completedRuns ?? (profile.hasFinishedRun ? 1 : 0),
-  ).stage;
+  const unlockedStage = unlockedCampaignStage(profile);
   const [stageChoice, setStageChoice] = useState<1 | 2 | 3>(unlockedStage);
   const [showRoutePicker, setShowRoutePicker] = useState(false);
   const [showRestartConfirm, setShowRestartConfirm] = useState(false);

@@ -71,7 +71,7 @@
       "lineId": "main.s2.ep4.line.005",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "残業明けの館内は静かで、設置したての点数表が誇らしい。私は水槽前のベンチに座り、見切り品の海苔弁当のふたを、ぱかりと開けた。",
+      "text": "売店の棚から最後の一個をさらって、私は静かな館内を歩いた。設置したての点数表が、通路の先で誇らしげに光っている。夕食にはずいぶん遅い時間だが、今日の私はよく働いた。",
       "emotion": "resolve"
     },
     { "type": "end", "id": "main.s2.ep4.node.end.001", "mode": "return-to-week" }

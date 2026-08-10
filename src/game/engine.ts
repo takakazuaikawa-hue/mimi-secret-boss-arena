@@ -1004,7 +1004,6 @@ const stageOneMainEpisodes: ReadonlyArray<{
     week: 1,
     block: mainStageOneEpisodeOneBlock,
     fighterId: "gidonozeaas",
-    leadLineText: "モップを置いて、私は閉店五分前の窓際へ向かった。",
   },
   {
     week: 2,
@@ -1015,7 +1014,6 @@ const stageOneMainEpisodes: ReadonlyArray<{
     week: 3,
     block: mainStageOneEpisodeThreeBlock,
     fighterId: "teirei",
-    leadLineText: "伝票を持って、私は搬入口の奥へ向かった。",
   },
   {
     // 週4は初心者大会、週5は温泉旅行followupのため空ける
@@ -1027,7 +1025,6 @@ const stageOneMainEpisodes: ReadonlyArray<{
     week: 7,
     block: mainStageOneEpisodeFiveBlock,
     fighterId: "ushiro",
-    leadLineText: "受付さんに手渡された苦情票を持って、私は現像室へ入った。",
   },
   // 第二区分「更新週間」
   { stage: 2, week: 1, block: mainStageTwoEpisodeBlocks[0], fighterId: "amara" },
