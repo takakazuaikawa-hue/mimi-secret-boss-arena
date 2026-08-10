@@ -8,9 +8,20 @@
     "arcId": "main.stage1"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -38,7 +49,9 @@
     {
       "type": "direction",
       "id": "main.s1.ep5.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
     },
     {
       "type": "line",
@@ -72,7 +85,7 @@
       "lineId": "main.s1.ep5.line.004",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "行列が捌けた夕方、私は今日撮った全部署の写真をアルバムに整理した。どの写真も、笑っていたり、固かったり、火が出ていたり、半透明だったりした。良い街だと思う。三週間でずいぶん、顔と名前が一致するようになった。",
+      "text": "行列が捌けた夕方、券売のおじさんが訪ねてきた。手には、空っぽの札束の箱。『新人、いつ辞めるか』の札が、今朝すべて買い占められたのだという。買ったのは経理課と警備と食堂と両替所。四部署で全部買って、その場で破り捨てたらしい。「もう賭けにならんのよ、あんたには」。おじさんは笑って、空箱を私にくれた。",
       "emotion": "tender"
     },
     {
@@ -85,6 +98,44 @@
       "emotion": "resolve"
     },
     {
+      "type": "choice",
+      "id": "main.s1.ep5.node.choice.001",
+      "choices": [
+        {
+          "id": "main.s1.ep5.choice.001",
+          "label": "空箱を、チームの書類入れにする",
+          "result": "私は空箱を持ち帰り、選手登録の書類をそこへ入れた。街が私の「辞める日」に賭けるのをやめた箱に、これから増えていく仲間の名前を入れていく。三週間前、最短予想は「初日」だった。今のところ、全員の予想が外れ続けている。この記録は、できるだけ長く伸ばしたい。",
+          "intent": "賭けられた側から、迎える側へ",
+          "promise": "腹が決まり、チーム全体の支度が進む。",
+          "memory": "空の札箱が書類入れになった経緯を、券売のおじさんと二人だけが知っている。",
+          "tone": "tender",
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 3
+            }
+          ],
+          "goto": "main.s1.ep5.node.end.001"
+        },
+        {
+          "id": "main.s1.ep5.choice.002",
+          "label": "おじさんに、新しい賭けを一つ提案する",
+          "result": "「代わりに、新しいのを立ててください」と私は言った。「『ミミのチームが、何人で決勝に立つか』」。おじさんは顎を撫でて、それから嬉しそうに帳面を開いた。「そりゃあいい。倍率が読めん」。翌朝、掲示板に新しい欄ができた。私はまだ、一人も仲間がいない。倍率は、正直ひどいものだった。",
+          "intent": "賭けの街に、次の賭けで応える",
+          "promise": "街が次の目標を注視し始める。",
+          "memory": "「何人で決勝に立つか」の賭けが、この日から街で走り続けている。",
+          "tone": "defiant",
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
+          "goto": "main.s1.ep5.node.end.001"
+        }
+      ]
+    },
+    {
       "type": "end",
       "id": "main.s1.ep5.node.end.001",
       "mode": "return-to-week"
@@ -93,7 +144,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_STAGE1_PLAN.md",
-    "authorNote": "第5話: 団体写真ラッシュ(笑わない警備・くしゃみで火・半透明の写り要求)。経理課の法被=愛着の回収。末尾はうしろmeet(127枚の苦情)へ無改変接続。",
+    "authorNote": "第5話: 団体写真ラッシュ(笑わない警備・くしゃみで火・半透明の写り要求)。経理課の法被=愛着の回収。末尾はうしろmeet(127枚の苦情)へ無改変接続。 縦の筋を「街がミミの去就に賭けている」へ差し替え。",
     "legacyGeneratedIds": false
   }
 }

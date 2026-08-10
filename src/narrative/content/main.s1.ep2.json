@@ -8,9 +8,20 @@
     "arcId": "main.stage1"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -38,7 +49,9 @@
     {
       "type": "direction",
       "id": "main.s1.ep2.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
     },
     {
       "type": "line",
@@ -46,7 +59,16 @@
       "lineId": "main.s1.ep2.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "二週目、本日の担当は遺失物窓口。「一番暇な窓口です」と先輩は言った。台帳の預かり品は三件——傘三本、手袋片方、謎の卵ひとつ。私は椅子に座り、お茶を淹れ、一口飲んだ。その瞬間、棚の上で、卵が「ぐらり」と揺れた。"
+      "text": "二週目。私はまだ辞めていない。休憩室の掲示は『何日もつか』から『何週もつか』へ書き換えられ、倍率が下がっていた。街の評価が上がると倍率が下がる。喜んでいいのか分からない。本日の担当は遺失物窓口、「一番暇な窓口です」とのこと。預かり品は、傘三本、手袋片方、謎の卵ひとつ。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.ep2.node.line.001b",
+      "lineId": "main.s1.ep2.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "保証人。二名。派遣二週目の新人に、判子を押してくれる人が二人。……ペンを置いてお茶を淹れ、一口飲んだ。その瞬間、棚の上で、卵が「ぐらり」と揺れた。"
     },
     {
       "type": "line",
@@ -99,7 +121,7 @@
       "lineId": "main.s1.ep2.line.007",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "正午、窓口は元通りになった。台帳の預かり品、傘三本、手袋片方、謎の卵ひとつ(異常なし・毛布一枚追加)。私はぬるくなったお茶を飲み干して、台帳にこう書いた。「本日、平和な窓口である」。",
+      "text": "正午、窓口は元通りになった。台帳の預かり品、傘三本、手袋片方、謎の卵ひとつ(異常なし・毛布一枚追加)。ぬるいお茶を飲み干して、私は台帳に書いた。「本日、平和な窓口である」。ちなみに私の倍率は、卵騒動の仕切りぶりで、また少し下がったらしい。",
       "emotion": "comic"
     },
     {
@@ -112,6 +134,44 @@
       "emotion": "resolve"
     },
     {
+      "type": "choice",
+      "id": "main.s1.ep2.node.choice.001",
+      "choices": [
+        {
+          "id": "main.s1.ep2.choice.001",
+          "label": "卵の賭けに、自分も一枚だけ乗る",
+          "result": "「三百年後」に一枚だけ賭けた。竜の紳士の鑑定と同じ答えである(後出しではない、と主張したい)。周りは大笑いして、誰も配当を払わなかった。代わりに、その日から私は「卵の人」と呼ばれるようになった。あだ名がつくのは、悪くない。",
+          "intent": "街の遊びに、混ざってみる",
+          "promise": "顔と名前を覚えられ、支度が進む。",
+          "memory": "「卵の人」というあだ名の由来を、窓口の常連が覚えている。",
+          "tone": "wild",
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
+          "goto": "main.s1.ep2.node.end.001"
+        },
+        {
+          "id": "main.s1.ep2.choice.002",
+          "label": "賭けには乗らず、窓口の仕事に徹する",
+          "result": "騒ぎの間も、私は受付票を書き続けた。おかげで午後には三百年ぶんの落とし物に通し番号がついた。夕方、局員さんが感心して言った。「あんた、来週も来てくれない?」。掲示板の倍率より、この一言のほうが嬉しかった。",
+          "intent": "騒ぎより、目の前の仕事を進める",
+          "promise": "地道な信用が積み上がる。",
+          "memory": "三百年ぶんの台帳を整理した新人として、局員が覚えている。",
+          "tone": "pragmatic",
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 1
+            }
+          ],
+          "goto": "main.s1.ep2.node.end.001"
+        }
+      ]
+    },
+    {
       "type": "end",
       "id": "main.s1.ep2.node.end.001",
       "mode": "return-to-week"
@@ -120,7 +180,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_STAGE1_PLAN.md",
-    "authorNote": "第2話: 卵ぐらり→館内総力戦→竜の鑑定で一斉解散、のハチャメチャ連鎖。腕相撲決着と竜の紳士はep1のコールバック。ミナトmeet冒頭(平和な窓口・午後二時)の前日譚として無改変接続。卵は孵らない(meetの在庫と整合)。",
+    "authorNote": "第2話: 卵ぐらり→館内総力戦→竜の鑑定で一斉解散、のハチャメチャ連鎖。腕相撲決着と竜の紳士はep1のコールバック。ミナトmeet冒頭(平和な窓口・午後二時)の前日譚として無改変接続。卵は孵らない(meetの在庫と整合)。 縦の筋を「街がミミの去就に賭けている」へ差し替え。",
     "legacyGeneratedIds": false
   }
 }

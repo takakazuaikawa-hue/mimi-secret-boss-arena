@@ -8,9 +8,20 @@
     "arcId": "main.stage1"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -38,7 +49,9 @@
     {
       "type": "direction",
       "id": "main.s1.ep3.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
     },
     {
       "type": "line",
@@ -46,7 +59,7 @@
       "lineId": "main.s1.ep3.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "三週目。来週の新人向け大会へ向けて、館内は納品ラッシュだった。私の本日の任務は備品の検品。応援用の銅鑼、百枚(多い)。紙吹雪、三トン(多い)。優勝カップ、一基——これが門より大きくて、搬入口で完全に詰まっていた。"
+      "text": "三週目。私はまだ辞めていない。掲示板の私の倍率は下がり続け、賭博師たちが「新人銘柄」と呼び始めた。そんな中、来週の新人向け大会へ向けた納品ラッシュが来た。応援用の銅鑼、百枚(多い)。紙吹雪、三トン(多い)。優勝カップ、一基——これが門より大きくて、搬入口で完全に詰まっていた。"
     },
     {
       "type": "line",
@@ -86,6 +99,15 @@
     },
     {
       "type": "line",
+      "id": "main.s1.ep3.node.line.005b",
+      "lineId": "main.s1.ep3.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "その夜、掲示板の前は騒然としていた。「誰が代表のサインをするか」の賭けは、全部の予想が外れて胴元の総取りになったからだ。皆、札を破りながら笑っている。「新人に賭けるのは損だ」「次は当ててみせる」。損した顔で、なぜか嬉しそうだった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
       "id": "main.s1.ep3.node.line.006",
       "lineId": "main.s1.ep3.line.006",
       "speakerId": "narrator",
@@ -103,6 +125,44 @@
       "emotion": "resolve"
     },
     {
+      "type": "choice",
+      "id": "main.s1.ep3.node.choice.001",
+      "choices": [
+        {
+          "id": "main.s1.ep3.choice.001",
+          "label": "外した皆に、一杯おごる",
+          "result": "全部の予想を外させた張本人として、私は売店の安い飲み物を人数分おごった。経理課長は「奢られる筋合いはない」と言いながら二本飲んだ。警備隊長は一句詠んだ。おごりの理由を聞かれて、私は正直に答えた。「私に賭けてくれたので」。その夜から、私の欄の札だけ売れ行きが変わったらしい。",
+          "intent": "外した人たちへ、こちらから歩み寄る",
+          "promise": "街との距離が縮まり、支度が進む。",
+          "memory": "外れ札を持つ全員に一杯おごった夜のことを、街が覚えている。",
+          "tone": "tender",
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
+          "goto": "main.s1.ep3.node.end.001"
+        },
+        {
+          "id": "main.s1.ep3.choice.002",
+          "label": "何も言わず、次の仕事へ行く",
+          "result": "騒ぎの輪には入らず、私は納品の残りを片付けに行った。背中で、誰かが言うのが聞こえた。「あの子、当てさせてくれないな」。もう一人が返した。「当てさせない奴のほうが、応援しがいがあるだろ」。振り返らずに、少しだけ歩幅が大きくなった。",
+          "intent": "賭けの外側で、仕事を続ける",
+          "promise": "淡々と、しかし確実に信用が増す。",
+          "memory": "「当てさせない奴のほうが応援しがいがある」という声を、ミミは聞いてしまった。",
+          "tone": "pragmatic",
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 1
+            }
+          ],
+          "goto": "main.s1.ep3.node.end.001"
+        }
+      ]
+    },
+    {
       "type": "end",
       "id": "main.s1.ep3.node.end.001",
       "mode": "return-to-week"
@@ -111,7 +171,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_STAGE1_PLAN.md",
-    "authorNote": "第3話: 巨大カップ綱引き→代表サイン押し付け合いの大会化→ミミの常識が漢気として誤読される。末尾は丁零meet(彫像さんへサインを頼む)へ無改変接続。",
+    "authorNote": "第3話: 巨大カップ綱引き→代表サイン押し付け合いの大会化→ミミの常識が漢気として誤読される。末尾は丁零meet(彫像さんへサインを頼む)へ無改変接続。 縦の筋を「街がミミの去就に賭けている」へ差し替え。",
     "legacyGeneratedIds": false
   }
 }

@@ -468,9 +468,10 @@ export const chooseWeeklyAction = (
 
   // 三段階キャンペーン第一区分: 該当週はメイン話を先に再生し、
   // 終了後の followup で橋先の個別 meet へ連続再生する(二段再生)。
+  // 区分情報のない保存データ(この機能より前に始めた周回)は第一勤務週として扱う
   const mainEpisode = stageOneMainEpisodes.find(
     (episode) =>
-      run.campaignStage === (episode.stage ?? 1) &&
+      (run.campaignStage ?? 1) === (episode.stage ?? 1) &&
       run.week === episode.week &&
       !run.eventHistory.includes(episode.block.id),
   );
@@ -1047,7 +1048,7 @@ export const maybeCreateMainStoryFollowup = (
   if (source.currentEvent) return source;
   const episode = stageOneMainEpisodes.find(
     (candidate) =>
-      source.campaignStage === (candidate.stage ?? 1) &&
+      (source.campaignStage ?? 1) === (candidate.stage ?? 1) &&
       source.week === candidate.week &&
       source.eventHistory.includes(candidate.block.id) &&
       !source.fighters[candidate.fighterId]?.encountered,

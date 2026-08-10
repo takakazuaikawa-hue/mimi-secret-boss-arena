@@ -8,9 +8,20 @@
     "arcId": "main.stage1"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -38,7 +49,9 @@
     {
       "type": "direction",
       "id": "main.s1.ep4.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
     },
     {
       "type": "line",
@@ -46,7 +59,16 @@
       "lineId": "main.s1.ep4.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "大会の熱が冷めない街は、勝手に祝勝セールを始めていた。噴水広場は大混雑。売店は行列、屋台は二重の行列、賭け札売り場は三重の行列。そして混雑の街で増えるものといえば——迷子である。本日の私の任務は、迷子案内所の応援だった。"
+      "text": "新人向け大会に出た私たちは、街の予想を軒並み外して勝ち上がった。おかげで賭博師の顔色は悪く、街の機嫌は最高である。祝勝セールが勝手に始まり、噴水広場は大混雑になった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.ep4.node.line.001b",
+      "lineId": "main.s1.ep4.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "混雑の街で増えるものといえば——迷子である。本日の私の任務は、迷子案内所の応援だった。ちなみに掲示板の私の欄は、いつのまにか『何年もつか』になっていた。単位が変わっている。"
     },
     {
       "type": "line",
@@ -94,6 +116,44 @@
       "emotion": "resolve"
     },
     {
+      "type": "choice",
+      "id": "main.s1.ep4.node.choice.001",
+      "choices": [
+        {
+          "id": "main.s1.ep4.choice.001",
+          "label": "再会の札を、自分も一枚買っておく",
+          "result": "札売りのおじさんから「再会する」を一枚買った。全員が同じ方に賭けている、一円も儲からない賭けである。日が暮れて、最後の一組が抱き合ったとき、広場のあちこちで札が振られた。誰も配当を受け取らず、そのまま飲みに行った。祈りは、たしかに当たっていた。",
+          "intent": "この街の祈り方に、自分も混ざる",
+          "promise": "街の一員としての実感が、支度に変わる。",
+          "memory": "配当の出ない札を握って泣いた夕方のことを、ミミは覚えている。",
+          "tone": "tender",
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
+          "goto": "main.s1.ep4.node.end.001"
+        },
+        {
+          "id": "main.s1.ep4.choice.002",
+          "label": "札は買わず、一件でも多く引き合わせる",
+          "result": "賭けに使う時間があるなら、一件でも捌く。私は札を配り、手を引き、涙を拭いた。日が暮れるまでに、はぐれていた三百名が全員そろった。おじさんが後で教えてくれた。「あんたの働きに賭けた奴が、今日いちばん儲けたよ」。私の知らないところで、私は誰かを勝たせていた。",
+          "intent": "目の前の再会を最優先する",
+          "promise": "街の信用が跳ね上がる。",
+          "memory": "三百名を捌ききった日のことを、案内所が語り草にしている。",
+          "tone": "heroic",
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 1
+            }
+          ],
+          "goto": "main.s1.ep4.node.end.001"
+        }
+      ]
+    },
+    {
       "type": "end",
       "id": "main.s1.ep4.node.end.001",
       "mode": "return-to-week"
@@ -102,7 +162,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_STAGE1_PLAN.md",
-    "authorNote": "第4話: 軍記物の迷子放送・逆迷子の竜・方角音痴の騎士団。賭け=祈りの形、が美しさの一滴。末尾はピオニーmeet(案内所で折り紙と格闘する巨躯)へ無改変接続。",
+    "authorNote": "第4話: 軍記物の迷子放送・逆迷子の竜・方角音痴の騎士団。賭け=祈りの形、が美しさの一滴。末尾はピオニーmeet(案内所で折り紙と格闘する巨躯)へ無改変接続。 縦の筋を「街がミミの去就に賭けている」へ差し替え。",
     "legacyGeneratedIds": false
   }
 }

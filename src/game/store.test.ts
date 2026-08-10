@@ -243,8 +243,10 @@ describe("player UX defaults and batch growth", () => {
   });
 
   it("keeps a chosen emotional stance after the result panel closes", () => {
+    const base = createRun("normal", "choice-memory");
     useGameStore.setState({
-      run: createRun("normal", "choice-memory"),
+      // メイン第1話(選択肢なし)は再生済みとして、選択のある出会いから始める
+      run: { ...base, eventHistory: ["main.s1.ep1"] },
     });
 
     useGameStore.getState().chooseAction("search");

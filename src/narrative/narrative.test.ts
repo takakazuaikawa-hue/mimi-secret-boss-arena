@@ -12,6 +12,7 @@ import {
   chooseWeeklyAction,
   clearEventOutcome,
   createRun,
+  maybeCreateMainStoryFollowup,
   maybeCreateOpeningOwnershipFollowup,
   nextCampaignWeek,
   resolveCurrentEvent,
@@ -237,7 +238,11 @@ describe("narrative block migration", () => {
 
   it("runs the ownership-transfer follow-up through stable block effects", () => {
     let run = createRun("normal", "narrative-runtime-opening");
+    // 週1はメイン第1話 → ギドノの出会い → 権利移譲、の順で再生される
     run = chooseWeeklyAction(run, "work");
+    run = resolveCurrentEvent(run, 0);
+    run = clearEventOutcome(run);
+    run = maybeCreateMainStoryFollowup(run);
     run = resolveCurrentEvent(run, 0);
     run = clearEventOutcome(run);
     run = maybeCreateOpeningOwnershipFollowup(run);
@@ -284,7 +289,11 @@ describe("narrative block migration", () => {
 
   it("recalls a stable prior choice in the next character event", () => {
     let run = createRun("normal", "stable-choice-memory");
+    // メイン第1話 → 出会い(選択肢2) → 権利移譲
     run = chooseWeeklyAction(run, "work");
+    run = resolveCurrentEvent(run, 0);
+    run = clearEventOutcome(run);
+    run = maybeCreateMainStoryFollowup(run);
     const remembered =
       fighterDefinitions[0].scenes.meet.choices?.[1]?.memory;
     run = resolveCurrentEvent(run, 1);
@@ -292,7 +301,8 @@ describe("narrative block migration", () => {
     run = maybeCreateOpeningOwnershipFollowup(run);
     run = resolveCurrentEvent(run, 0);
     run = clearEventOutcome(run);
-    run = nextCampaignWeek(run);
+    // メイン話のない週で、個別の続きが再生される
+    run = { ...nextCampaignWeek(run), week: 8 };
     run = chooseWeeklyAction(run, "work");
 
     expect(run.currentEvent?.scene.id).toBe(

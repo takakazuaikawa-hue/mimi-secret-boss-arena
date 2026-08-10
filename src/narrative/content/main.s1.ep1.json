@@ -8,9 +8,20 @@
     "arcId": "main.stage1"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -38,7 +49,9 @@
     {
       "type": "direction",
       "id": "main.s1.ep1.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
     },
     {
       "type": "line",
@@ -108,8 +121,55 @@
       "lineId": "main.s1.ep1.line.008",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "本日最後の業務は、カフェの応援。エプロンを締め直して、私は併設カフェのフロアへ向かった。竜と、幽霊と、法被の経理課。初日にしては、上出来の一日だったと思う。",
+      "text": "休憩室の壁に、手書きの賭け札が貼り出されていた。『新人・ミミ、何日もつか』。最短「初日」、最長「一週間」。締切は本日十八時。……つまり全員、私が今日辞めるか明日辞めるかを楽しんでいる。名前まで書いてある。丁寧に。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.ep1.node.line.009",
+      "lineId": "main.s1.ep1.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "腹は立たなかった。むしろ、こう思った。——全部、外させてやろう。本日最後の業務は、カフェの応援。竜と、幽霊と、法被の経理課。初日にしては、上出来の一日だったと思う。",
       "emotion": "resolve"
+    },
+    {
+      "type": "choice",
+      "id": "main.s1.ep1.node.choice.001",
+      "choices": [
+        {
+          "id": "main.s1.ep1.choice.001",
+          "label": "掲示を見なかったことにして、笑って働く",
+          "result": "見なかったことにした。ただし帰り際、掲示の前を通るとき、わざと元気よく「お疲れさまでした!」と挨拶しておいた。翌朝、最短予想の「初日」の札が、静かに撤去されていた。誰も何も言わない。私も言わない。この街との、最初の会話だった。",
+          "intent": "騒がず、働きぶりで返す",
+          "promise": "街の見る目が変わり、支度が少し進む。",
+          "memory": "初日の挨拶ひとつで札が下がったことを、休憩室の全員が見ていた。",
+          "tone": "tender",
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
+          "goto": "main.s1.ep1.node.end.001"
+        },
+        {
+          "id": "main.s1.ep1.choice.002",
+          "label": "自分の札を一枚だけ買う(「辞めない」に)",
+          "result": "券売のおじさんに、一番安い札を一枚頼んだ。「どこに賭けます?」「『辞めない』で」。おじさんは目を丸くして、それから声を上げて笑った。「そんな欄はないよ。……作っとくわ」。翌日、掲示板に新しい欄が増えていた。倍率は、まだ誰も買っていないので無限大だった。",
+          "intent": "賭けの街には、賭けで返す",
+          "promise": "街の話題になり、支度が進む。",
+          "memory": "自分に賭けた新人の札を、券売のおじさんが取ってある。",
+          "tone": "defiant",
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 1
+            }
+          ],
+          "goto": "main.s1.ep1.node.end.001"
+        }
+      ]
     },
     {
       "type": "end",
@@ -120,7 +180,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_STAGE1_PLAN.md",
-    "authorNote": "改稿v3: 全ノードを「ミミが行動→世界が反応」の因果場面に。竜の給仕(働く=稼ぐ)、腕相撲決着(揉め事=試合)、経理課の応援(従業員チーム文化)、道案内(種は一粒)。観光案内の地の文を全廃。",
+    "authorNote": "改稿v3: 全ノードを「ミミが行動→世界が反応」の因果場面に。竜の給仕(働く=稼ぐ)、腕相撲決着(揉め事=試合)、経理課の応援(従業員チーム文化)、道案内(種は一粒)。観光案内の地の文を全廃。 縦の筋を「街がミミの去就に賭けている」へ差し替え。",
     "legacyGeneratedIds": false
   }
 }
