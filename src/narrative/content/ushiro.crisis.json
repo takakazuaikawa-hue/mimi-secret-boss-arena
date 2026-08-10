@@ -10,9 +10,20 @@
     "stage": "crisis"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 400,
     "weight": 1
   },
@@ -31,7 +42,11 @@
     {
       "type": "direction",
       "id": "ushiro.crisis.node.direction.001",
-      "command": { "type": "background", "assetId": "ushiro.crisis.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "ushiro.crisis.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "line",
@@ -39,7 +54,7 @@
       "lineId": "ushiro.crisis.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "黒い角封筒。差出人、アルデバラン社・物語資産管理部。件名——「資産『影』の複製リースについて」。本文。「当該資産の分身百二十七体を、警備人員として各施設へ配備します。単体単価は別紙。本体の同意は、資産規定により不要です」。",
+      "text": "取引先向けのカタログが、事務室に届いていた。『警備影・レンタルのご案内。同型百二十七体、即日手配可』。掲載写真は、うしろさんの分身たちだった。全員、律儀にピースをしている。本人の同意欄は、どこにもない。黒い角封筒は、そのカタログの見本誌に同封されていた。",
       "emotion": "tension"
     },
     {
@@ -71,7 +86,10 @@
     {
       "type": "direction",
       "id": "ushiro.crisis.node.direction.002",
-      "command": { "type": "effect", "effectId": "shake" }
+      "command": {
+        "type": "effect",
+        "effectId": "shake"
+      }
     },
     {
       "type": "line",
@@ -167,8 +185,24 @@
           "memory": "インタビュー写真の百二十七人の笑顔は、殿堂入りした。",
           "tone": "wild",
           "effects": [
-            { "type": "relationship", "target": { "type": "fighter", "fighterId": "ushiro" }, "mode": "add", "trust": 12, "ownership": -10 },
-            { "type": "fighterPoints", "target": { "type": "fighter", "fighterId": "ushiro" }, "amount": 6 }
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "ushiro"
+              },
+              "mode": "add",
+              "trust": 12,
+              "ownership": -10
+            },
+            {
+              "type": "fighterPoints",
+              "target": {
+                "type": "fighter",
+                "fighterId": "ushiro"
+              },
+              "amount": 6
+            }
           ],
           "goto": "ushiro.crisis.node.effect.001"
         },
@@ -181,8 +215,20 @@
           "memory": "「等身大の的」に引っかかった相手の数を、分身たちが正の字で数えている。",
           "tone": "pragmatic",
           "effects": [
-            { "type": "relationship", "target": { "type": "fighter", "fighterId": "ushiro" }, "mode": "add", "trust": -2, "ownership": 10 },
-            { "type": "sharedPoints", "amount": 6 }
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "ushiro"
+              },
+              "mode": "add",
+              "trust": -2,
+              "ownership": 10
+            },
+            {
+              "type": "sharedPoints",
+              "amount": 6
+            }
           ],
           "goto": "ushiro.crisis.node.effect.001"
         }
@@ -192,8 +238,16 @@
       "type": "effect",
       "id": "ushiro.crisis.node.effect.001",
       "effects": [
-        { "type": "setStoryStage", "fighterId": "ushiro", "stage": 5 },
-        { "type": "setLiberationEligible", "fighterId": "ushiro", "eligible": true }
+        {
+          "type": "setStoryStage",
+          "fighterId": "ushiro",
+          "stage": 5
+        },
+        {
+          "type": "setLiberationEligible",
+          "fighterId": "ushiro",
+          "eligible": true
+        }
       ]
     },
     {
@@ -205,7 +259,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 黒い角封筒=影のバラ売りリース(Q2)。三体の静かな抵抗(写り込みしかしない警備員)。人数確認不能の逆襲。「可算名詞ではない」。",
+    "authorNote": "v2改稿: 黒い角封筒=影のバラ売りリース(Q2)。三体の静かな抵抗(写り込みしかしない警備員)。人数確認不能の逆襲。「可算名詞ではない」。 圧力の到来形式を差別化(封筒は事後に届く落ちへ)。",
     "legacyGeneratedIds": false
   }
 }

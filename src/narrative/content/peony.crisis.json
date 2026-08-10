@@ -10,9 +10,20 @@
     "stage": "crisis"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 400,
     "weight": 1
   },
@@ -31,7 +42,11 @@
     {
       "type": "direction",
       "id": "peony.crisis.node.direction.001",
-      "command": { "type": "background", "assetId": "peony.crisis.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "peony.crisis.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "line",
@@ -39,7 +54,7 @@
       "lineId": "peony.crisis.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "黒い角封筒。差出人、アルデバラン社・物語資産管理部。件名——「資産『怪力』の実演興行について」。本文。「毎公演、城壁三枚の破壊を実演すること。破壊は当社興行の花形です。契約により、辞退はできません」。",
+      "text": "中庭に、仮設の観客席が組まれていた。三千席。正面には、真新しい城壁が一枚。立て看板いわく、『毎公演、城壁三枚破壊。迫力保証』。ピオニーさんは、その設営を遠くから見ていた。出演者本人だけが、聞かされていない公演だった。黒い角封筒が届いたのは、その日の夕方である。",
       "emotion": "tension"
     },
     {
@@ -80,7 +95,10 @@
     {
       "type": "direction",
       "id": "peony.crisis.node.direction.002",
-      "command": { "type": "effect", "effectId": "shake" }
+      "command": {
+        "type": "effect",
+        "effectId": "shake"
+      }
     },
     {
       "type": "line",
@@ -176,8 +194,24 @@
           "memory": "三十個の紙冠は、案内所の天井に飾ってある。",
           "tone": "wild",
           "effects": [
-            { "type": "relationship", "target": { "type": "fighter", "fighterId": "peony" }, "mode": "add", "trust": 12, "ownership": -10 },
-            { "type": "fighterPoints", "target": { "type": "fighter", "fighterId": "peony" }, "amount": 6 }
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "peony"
+              },
+              "mode": "add",
+              "trust": 12,
+              "ownership": -10
+            },
+            {
+              "type": "fighterPoints",
+              "target": {
+                "type": "fighter",
+                "fighterId": "peony"
+              },
+              "amount": 6
+            }
           ],
           "goto": "peony.crisis.node.effect.001"
         },
@@ -190,8 +224,20 @@
           "memory": "開始十秒の決着を、実況は「花の閉会式」と呼んだ。",
           "tone": "pragmatic",
           "effects": [
-            { "type": "relationship", "target": { "type": "fighter", "fighterId": "peony" }, "mode": "add", "trust": -2, "ownership": 10 },
-            { "type": "sharedPoints", "amount": 6 }
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "peony"
+              },
+              "mode": "add",
+              "trust": -2,
+              "ownership": 10
+            },
+            {
+              "type": "sharedPoints",
+              "amount": 6
+            }
           ],
           "goto": "peony.crisis.node.effect.001"
         }
@@ -201,8 +247,16 @@
       "type": "effect",
       "id": "peony.crisis.node.effect.001",
       "effects": [
-        { "type": "setStoryStage", "fighterId": "peony", "stage": 5 },
-        { "type": "setLiberationEligible", "fighterId": "peony", "eligible": true }
+        {
+          "type": "setStoryStage",
+          "fighterId": "peony",
+          "stage": 5
+        },
+        {
+          "type": "setLiberationEligible",
+          "fighterId": "peony",
+          "eligible": true
+        }
       ]
     },
     {
@@ -214,7 +268,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 黒い角封筒=破壊の興行化(Q2)。守る対象を増やしすぎる暴走(canon指示)→解体式典への転換。",
+    "authorNote": "v2改稿: 黒い角封筒=破壊の興行化(Q2)。守る対象を増やしすぎる暴走(canon指示)→解体式典への転換。 圧力の到来形式を差別化(封筒は事後に届く落ちへ)。",
     "legacyGeneratedIds": false
   }
 }

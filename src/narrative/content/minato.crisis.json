@@ -54,7 +54,7 @@
       "lineId": "minato.crisis.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "黒い角封筒。差出人、アルデバラン社・物語資産管理部。もう見慣れてしまった書式が、今度はミナト宛てに届いた。件名——「勇者機能 再開のお知らせ」。",
+      "text": "館内の柱という柱に、ポスターが貼り出されていた。『勇者、第二部——魔王、再臨』。主演の名前は、ミナト。公演は来月。チケットは本日発売。本人だけが、何も聞いていなかった。黒い角封筒がミナトの元へ届いたのは、ポスターが貼られた翌日である。宣伝が先で、通告が後。",
       "emotion": "tension"
     },
     {
@@ -312,7 +312,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 黒い角封筒(物語資産管理部)。第二部の再演命令=Q2手掛かり。「行かない」の練習と花柄の短剣の預託。",
+    "authorNote": "v2改稿: 黒い角封筒(物語資産管理部)。第二部の再演命令=Q2手掛かり。「行かない」の練習と花柄の短剣の預託。 圧力の到来形式を差別化(封筒は事後に届く落ちへ)。",
     "legacyGeneratedIds": false
   }
 }

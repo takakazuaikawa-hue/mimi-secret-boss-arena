@@ -10,9 +10,20 @@
     "stage": "crisis"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 400,
     "weight": 1
   },
@@ -31,7 +42,11 @@
     {
       "type": "direction",
       "id": "marian.crisis.node.direction.001",
-      "command": { "type": "background", "assetId": "marian.crisis.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "marian.crisis.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "line",
@@ -39,7 +54,7 @@
       "lineId": "marian.crisis.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "黒い角封筒。差出人、アルデバラン社・物語資産管理部。件名——「資産『奇跡』の常時稼働について」。本文。「救護室を二十四時間の奇跡サービス窓口へ改組します。休診日、および資産による治療拒否の権利は、廃止します」。",
+      "text": "救護室の扉に、見覚えのない張り紙が増えていた。『二十四時間・奇跡サービス窓口。予約不要、休診日なし』。マリアンさんが貼ったものではない。糊は、まだ乾いていなかった。——黒い角封筒は、その張り紙の下に画鋲で留めてあった。貼ってから、通告する。順番が逆である。",
       "emotion": "tension"
     },
     {
@@ -89,7 +104,10 @@
     {
       "type": "direction",
       "id": "marian.crisis.node.direction.002",
-      "command": { "type": "effect", "effectId": "shake" }
+      "command": {
+        "type": "effect",
+        "effectId": "shake"
+      }
     },
     {
       "type": "line",
@@ -149,8 +167,24 @@
           "memory": "満員の会場の「治しますか」を、チームの全員が覚えている。",
           "tone": "wild",
           "effects": [
-            { "type": "relationship", "target": { "type": "fighter", "fighterId": "marian" }, "mode": "add", "trust": 12, "ownership": -10 },
-            { "type": "fighterPoints", "target": { "type": "fighter", "fighterId": "marian" }, "amount": 6 }
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "marian"
+              },
+              "mode": "add",
+              "trust": 12,
+              "ownership": -10
+            },
+            {
+              "type": "fighterPoints",
+              "target": {
+                "type": "fighter",
+                "fighterId": "marian"
+              },
+              "amount": 6
+            }
           ],
           "goto": "marian.crisis.node.effect.001"
         },
@@ -163,8 +197,20 @@
           "memory": "弔われた必殺技の判定文を、審判部は今も保管している。",
           "tone": "pragmatic",
           "effects": [
-            { "type": "relationship", "target": { "type": "fighter", "fighterId": "marian" }, "mode": "add", "trust": -2, "ownership": 10 },
-            { "type": "sharedPoints", "amount": 6 }
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "marian"
+              },
+              "mode": "add",
+              "trust": -2,
+              "ownership": 10
+            },
+            {
+              "type": "sharedPoints",
+              "amount": 6
+            }
           ],
           "goto": "marian.crisis.node.effect.001"
         }
@@ -174,8 +220,16 @@
       "type": "effect",
       "id": "marian.crisis.node.effect.001",
       "effects": [
-        { "type": "setStoryStage", "fighterId": "marian", "stage": 5 },
-        { "type": "setLiberationEligible", "fighterId": "marian", "eligible": true }
+        {
+          "type": "setStoryStage",
+          "fighterId": "marian",
+          "stage": 5
+        },
+        {
+          "type": "setLiberationEligible",
+          "fighterId": "marian",
+          "eligible": true
+        }
       ]
     },
     {
@@ -187,7 +241,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 黒い角封筒=奇跡の24時間営業・治療拒否権の廃止(Q2、canon: 休む権利まで消す契約を拒む)。癖毛のおじいさんの「治さない」初実践。",
+    "authorNote": "v2改稿: 黒い角封筒=奇跡の24時間営業・治療拒否権の廃止(Q2、canon: 休む権利まで消す契約を拒む)。癖毛のおじいさんの「治さない」初実践。 圧力の到来形式を差別化(封筒は事後に届く落ちへ)。",
     "legacyGeneratedIds": false
   }
 }

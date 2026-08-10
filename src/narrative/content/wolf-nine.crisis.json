@@ -10,9 +10,20 @@
     "stage": "crisis"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 400,
     "weight": 1
   },
@@ -31,7 +42,11 @@
     {
       "type": "direction",
       "id": "wolf-nine.crisis.node.direction.001",
-      "command": { "type": "background", "assetId": "wolf-nine.crisis.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "wolf-nine.crisis.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "line",
@@ -39,7 +54,7 @@
       "lineId": "wolf-nine.crisis.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "黒い角封筒。差出人、アルデバラン社・物語資産管理部。件名——「資産『九戦目』の興行化について」。同封書類の表紙にはこうあった。「感動の九戦目・完全台本(勝敗決定済み)」。",
+      "text": "ヴォルフ・ナインの私書箱に、九通目が届いていた。ただし差出人は、本人ではない。中身も挑戦状ではなく、台本だった。表紙に『第九戦・進行台本(勝敗確定稿)』。八年待った一通の隣に、勝ち負けの決まった紙が並んでいる。黒い角封筒は、その台本の封筒だった。",
       "emotion": "tension"
     },
     {
@@ -89,7 +104,10 @@
     {
       "type": "direction",
       "id": "wolf-nine.crisis.node.direction.002",
-      "command": { "type": "effect", "effectId": "shake" }
+      "command": {
+        "type": "effect",
+        "effectId": "shake"
+      }
     },
     {
       "type": "line",
@@ -167,8 +185,24 @@
           "memory": "一撃の交差を、観客は「台本破りの一撃」と呼んでいる。",
           "tone": "wild",
           "effects": [
-            { "type": "relationship", "target": { "type": "fighter", "fighterId": "wolf-nine" }, "mode": "add", "trust": 12, "ownership": -10 },
-            { "type": "fighterPoints", "target": { "type": "fighter", "fighterId": "wolf-nine" }, "amount": 6 }
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "wolf-nine"
+              },
+              "mode": "add",
+              "trust": 12,
+              "ownership": -10
+            },
+            {
+              "type": "fighterPoints",
+              "target": {
+                "type": "fighter",
+                "fighterId": "wolf-nine"
+              },
+              "amount": 6
+            }
           ],
           "goto": "wolf-nine.crisis.node.effect.001"
         },
@@ -181,8 +215,20 @@
           "memory": "八つの型の完封を、解説席は「八人がかりの勝利」と評した。",
           "tone": "pragmatic",
           "effects": [
-            { "type": "relationship", "target": { "type": "fighter", "fighterId": "wolf-nine" }, "mode": "add", "trust": -2, "ownership": 10 },
-            { "type": "sharedPoints", "amount": 6 }
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "wolf-nine"
+              },
+              "mode": "add",
+              "trust": -2,
+              "ownership": 10
+            },
+            {
+              "type": "sharedPoints",
+              "amount": 6
+            }
           ],
           "goto": "wolf-nine.crisis.node.effect.001"
         }
@@ -192,8 +238,16 @@
       "type": "effect",
       "id": "wolf-nine.crisis.node.effect.001",
       "effects": [
-        { "type": "setStoryStage", "fighterId": "wolf-nine", "stage": 5 },
-        { "type": "setLiberationEligible", "fighterId": "wolf-nine", "eligible": true }
+        {
+          "type": "setStoryStage",
+          "fighterId": "wolf-nine",
+          "stage": 5
+        },
+        {
+          "type": "setLiberationEligible",
+          "fighterId": "wolf-nine",
+          "eligible": true
+        }
       ]
     },
     {
@@ -205,7 +259,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 黒い角封筒=九戦目の台本興行(Q2)。偽の勝利への誘惑と弱音。「あの食卓に座る資格」での自力の拒否。",
+    "authorNote": "v2改稿: 黒い角封筒=九戦目の台本興行(Q2)。偽の勝利への誘惑と弱音。「あの食卓に座る資格」での自力の拒否。 圧力の到来形式を差別化(封筒は事後に届く落ちへ)。",
     "legacyGeneratedIds": false
   }
 }

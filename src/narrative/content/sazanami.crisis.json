@@ -54,7 +54,7 @@
       "lineId": "sazanami.crisis.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "黒い角封筒。差出人、アルデバラン社・物語資産管理部。件名——「資産『海域』沈下物の引き上げ販売について(海底遺物・即売会)」。同封のカタログには、値札つきの写真が並んでいた。",
+      "text": "搬入口に、濡れた木箱が山積みになっていた。荷札には『海底遺物・即売会用』。蓋の隙間から覗いているのは、誰かの茶碗、誰かの櫛、誰かの手紙入れ。海が三百年預かってきたものが、値札をつけられて並ぼうとしている。黒い角封筒は、木箱の一番上に載っていた。",
       "emotion": "tension"
     },
     {
@@ -295,7 +295,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 黒い角封筒=海底遺物の即売会(Q2)。沈める宣言→持ち主返却会への転換。初めての満点。ノノさん参加。",
+    "authorNote": "v2改稿: 黒い角封筒=海底遺物の即売会(Q2)。沈める宣言→持ち主返却会への転換。初めての満点。ノノさん参加。 圧力の到来形式を差別化(封筒は事後に届く落ちへ)。",
     "legacyGeneratedIds": false
   }
 }

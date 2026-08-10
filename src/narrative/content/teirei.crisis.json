@@ -10,9 +10,20 @@
     "stage": "crisis"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 400,
     "weight": 1
   },
@@ -37,7 +48,11 @@
     {
       "type": "direction",
       "id": "teirei.crisis.node.direction.001",
-      "command": { "type": "background", "assetId": "teirei.crisis.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "teirei.crisis.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "line",
@@ -45,7 +60,7 @@
       "lineId": "teirei.crisis.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "黒い角封筒。差出人、アルデバラン社・物語資産管理部。件名——「資産『精密機構』の再配備について」。本文。「当該資産を本来用途(兵器)へ復帰させます。つきましては動作の最適化のため、後天記憶の初期化を実施します。日程、同封」。",
+      "text": "整備班の回覧板に、聞き慣れない書類が挟まっていた。『備品返却指示書』。返却先、本社兵装課。返却対象の欄に、丁零さんの登録番号が書いてある。回覧の判子は、もう五つ押されていた。黒い角封筒が本人へ届くのは、この後である。同僚たちの方が、先に知らされていた。",
       "emotion": "tension"
     },
     {
@@ -122,17 +137,26 @@
     {
       "type": "direction",
       "id": "teirei.crisis.node.direction.002",
-      "command": { "type": "effect", "effectId": "shake" }
+      "command": {
+        "type": "effect",
+        "effectId": "shake"
+      }
     },
     {
       "type": "direction",
       "id": "teirei.crisis.node.direction.003",
-      "command": { "type": "still", "assetId": "teirei.crisis.asset.still.001" }
+      "command": {
+        "type": "still",
+        "assetId": "teirei.crisis.asset.still.001"
+      }
     },
     {
       "type": "direction",
       "id": "teirei.crisis.node.direction.004",
-      "command": { "type": "effect", "effectId": "pulse" }
+      "command": {
+        "type": "effect",
+        "effectId": "pulse"
+      }
     },
     {
       "type": "line",
@@ -201,8 +225,24 @@
           "memory": "公式記録の「護衛」分類を、丁零は永久保存している。",
           "tone": "wild",
           "effects": [
-            { "type": "relationship", "target": { "type": "fighter", "fighterId": "teirei" }, "mode": "add", "trust": 12, "ownership": -10 },
-            { "type": "fighterPoints", "target": { "type": "fighter", "fighterId": "teirei" }, "amount": 6 }
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "teirei"
+              },
+              "mode": "add",
+              "trust": 12,
+              "ownership": -10
+            },
+            {
+              "type": "fighterPoints",
+              "target": {
+                "type": "fighter",
+                "fighterId": "teirei"
+              },
+              "amount": 6
+            }
           ],
           "goto": "teirei.crisis.node.effect.001"
         },
@@ -215,8 +255,20 @@
           "memory": "重役会議の紅茶配布事件は、社内報に載らなかったが全員が知っている。",
           "tone": "pragmatic",
           "effects": [
-            { "type": "relationship", "target": { "type": "fighter", "fighterId": "teirei" }, "mode": "add", "trust": -2, "ownership": 10 },
-            { "type": "sharedPoints", "amount": 6 }
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "teirei"
+              },
+              "mode": "add",
+              "trust": -2,
+              "ownership": 10
+            },
+            {
+              "type": "sharedPoints",
+              "amount": 6
+            }
           ],
           "goto": "teirei.crisis.node.effect.001"
         }
@@ -226,8 +278,16 @@
       "type": "effect",
       "id": "teirei.crisis.node.effect.001",
       "effects": [
-        { "type": "setStoryStage", "fighterId": "teirei", "stage": 5 },
-        { "type": "setLiberationEligible", "fighterId": "teirei", "eligible": true }
+        {
+          "type": "setStoryStage",
+          "fighterId": "teirei",
+          "stage": 5
+        },
+        {
+          "type": "setLiberationEligible",
+          "fighterId": "teirei",
+          "eligible": true
+        }
       ]
     },
     {
@@ -239,7 +299,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 黒い角封筒=再配備+初期化(Q2)。遠隔起動と照準をミミから外す危機CG準拠の山場。自己命令「丁零は、丁零の好みを守れ」。",
+    "authorNote": "v2改稿: 黒い角封筒=再配備+初期化(Q2)。遠隔起動と照準をミミから外す危機CG準拠の山場。自己命令「丁零は、丁零の好みを守れ」。 圧力の到来形式を差別化(封筒は事後に届く落ちへ)。",
     "legacyGeneratedIds": false
   }
 }

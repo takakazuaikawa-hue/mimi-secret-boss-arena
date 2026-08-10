@@ -54,7 +54,7 @@
       "lineId": "shahar.crisis.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "黒い角封筒。差出人、アルデバラン社・物語資産管理部。件名——「資産『古竜』の定期遊覧便化について」。中には時刻表が同封されていた。毎日五便。雨天決行。年中無休。",
+      "text": "売店の券売所に、朝から行列ができていた。『古竜遊覧便・一日五便・当日券あり』。時刻表まで刷ってある。第一便は明日の朝六時。——搭乗いただく予定の古竜ご本人は、屋上で日光浴をしていた。黒い角封筒は、その時刻表と一緒に届いた。",
       "emotion": "tension"
     },
     {
@@ -303,7 +303,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 黒い角封筒=定期遊覧便化(限定の破壊)。誤った信念の再発と「振替便なし」の宣言。Q2=資産『古竜』。",
+    "authorNote": "v2改稿: 黒い角封筒=定期遊覧便化(限定の破壊)。誤った信念の再発と「振替便なし」の宣言。Q2=資産『古竜』。 圧力の到来形式を差別化(封筒は事後に届く落ちへ)。",
     "legacyGeneratedIds": false
   }
 }
