@@ -98,6 +98,17 @@ const nonBrowserStorage: StateStorage = {
   removeItem: () => undefined,
 };
 
+const gameStateStorage = (): StateStorage => {
+  if (typeof window === "undefined") return nonBrowserStorage;
+  const params = new URLSearchParams(window.location.search);
+  const isDevBuild =
+    (import.meta as ImportMeta & { env?: { DEV?: boolean } }).env?.DEV === true;
+  const isIsolatedDebugSession =
+    isDevBuild &&
+    (params.has("debugBattle") || params.has("debugUi"));
+  return isIsolatedDebugSession ? sessionStorage : localStorage;
+};
+
 const finishRun = (
   run: RunState,
   profile: PlayerProfile,
@@ -696,9 +707,7 @@ export const useGameStore = create<GameStore>()(
     {
       name: "mimi-secret-boss-arena",
       version: 11,
-      storage: createJSONStorage(() =>
-        typeof window === "undefined" ? nonBrowserStorage : localStorage,
-      ),
+      storage: createJSONStorage(gameStateStorage),
       partialize: (state) => ({ profile: state.profile, run: state.run }),
       migrate: (persisted) => {
         const state = persisted as Partial<GameStore>;

@@ -13,6 +13,7 @@
     "test": "vitest run --maxWorkers=1",
     "test:watch": "vitest",
     "qa:onboarding": "node scripts/onboarding-qa.mjs",
+    "qa:debug-navigation": "node scripts/debug-navigation-qa.mjs",
     "qa:visual": "node scripts/visual-experience-qa.mjs",
     "audit:content": "vitest run src/game/content.test.ts",
     "audit:sim": "vitest run src/game/simulation.test.ts"

@@ -36,6 +36,7 @@ type GameEvent =
   | { type: "RESUME_BATTLE" }
   | { type: "RESUME_ENDING" }
   | { type: "RECOVER_TITLE" }
+  | { type: "RECOVER_PROLOGUE" }
   | { type: "RECOVER_WEEK" }
   | { type: "RECOVER_EVENT" }
   | { type: "RECOVER_OUTCOME" }
@@ -54,6 +55,7 @@ export const gameMachine = setup({
   on: {
     OPEN_ARCHIVE: ".archive",
     RECOVER_TITLE: ".title",
+    RECOVER_PROLOGUE: ".prologue",
     RECOVER_WEEK: ".week",
     RECOVER_EVENT: ".event",
     RECOVER_OUTCOME: ".outcome",

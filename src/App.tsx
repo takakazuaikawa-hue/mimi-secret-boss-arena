@@ -102,7 +102,19 @@ import { effectiveStat, opponentsForMatch } from "./game/battle";
 import { buildBattleBroadcast } from "./game/battleBroadcast";
 import { gameMachine, type GamePhase } from "./game/machine";
 import { playSound } from "./game/sound";
+import { resolveScenePresentation } from "./game/scenePresentation";
 import { useGameStore } from "./game/store";
+import {
+  debugNavigationTargetFromUrl,
+  debugScreenGroups,
+  debugScreenTargets,
+  enterDebugNavigationSession,
+  isDebugNavigationAvailable,
+  isDebugNavigationSession,
+  prepareDebugScreen,
+  type DebugArchiveTab,
+  type DebugScreenTarget,
+} from "./debugNavigation";
 import {
   FighterChibi,
   LoadingScreen,
@@ -127,7 +139,7 @@ import type {
 } from "./game/types";
 
 const money = (value: number) => `${value.toLocaleString("ja-JP")} G`;
-
+const AUTO_DELEGATE_SECONDS = 5;
 const battleTagLabel = (tag: string) => {
   const labels: Record<string, string> = {
     MISS: "かわした",
@@ -433,10 +445,13 @@ function AppHeader({
   }, [menuOpen, settingsOpen]);
   if (phase === "title" || phase === "prologue") return null;
   const detail = phaseDetails[phase];
+  const isStoryPhase = phase === "event" || phase === "outcome";
 
   return (
     <>
-      <header className="app-header">
+      <header
+        className={`app-header${isStoryPhase ? " app-header--story" : ""}`}
+      >
         <button className="icon-button" onClick={onTitle} title="タイトルへ">
           <Home size={19} />
         </button>
@@ -1302,19 +1317,13 @@ function PrologueScreen({
       void image.decode?.().catch(() => undefined);
     });
   }, [pages]);
-  let background = "/assets/story/bg-casino-dressing-room.png";
-  let sprite: SceneSpriteCue | null | undefined = null;
-  for (let index = 0; index <= page; index += 1) {
-    const direction = pages[index]?.direction;
-    if (direction?.background) background = direction.background;
-    if (
-      direction &&
-      Object.prototype.hasOwnProperty.call(direction, "sprite")
-    ) {
-      sprite = direction.sprite;
-    }
-  }
-  const currentStill = current.direction?.still;
+  const presentation = resolveScenePresentation(pages, page, {
+    background: "/assets/story/bg-casino-dressing-room.png",
+    sprite: null,
+  });
+  const background = presentation.background!;
+  const sprite = presentation.sprite;
+  const currentStill = presentation.still;
   const advance = () => {
     if (page < pages.length - 1) setPage(page + 1);
     else onDone();
@@ -2097,19 +2106,17 @@ function EventScreen({ onResolved }: { onResolved: () => void }) {
     ? characterVisuals[event.fighterId]
     : undefined;
 
-  let stageBackground = event.scene.background;
-  let stageSprite: SceneSpriteCue | null | undefined = event.scene.sprite;
-  for (let index = 0; index <= visibleLineIndex; index += 1) {
-    const direction = event.scene.lines[index]?.direction;
-    if (direction?.background) stageBackground = direction.background;
-    if (
-      direction &&
-      Object.prototype.hasOwnProperty.call(direction, "sprite")
-    ) {
-      stageSprite = direction.sprite;
-    }
-  }
-  const currentStill = atChoices ? undefined : line.direction?.still;
+  const presentation = resolveScenePresentation(
+    event.scene.lines,
+    visibleLineIndex,
+    {
+      background: event.scene.background,
+      sprite: event.scene.sprite,
+    },
+  );
+  const stageBackground = presentation.background;
+  const stageSprite = presentation.sprite;
+  const currentStill = presentation.still;
   const currentEffect = atChoices ? undefined : line.direction?.effect;
   const visibleSprite =
     stageSprite === null
@@ -2164,6 +2171,7 @@ function EventScreen({ onResolved }: { onResolved: () => void }) {
     <main
       className={[
         "scene-screen",
+        "scene-screen--event",
         event.isRare ? "scene-screen--rare" : "",
         atChoices ? "scene-screen--choices" : "",
         currentEffect ? `scene-screen--${currentEffect}` : "",
@@ -2181,7 +2189,7 @@ function EventScreen({ onResolved }: { onResolved: () => void }) {
         />
       )}
       <div className="scene-light" />
-      {stageBackground && (
+      {stageBackground && !currentStill && (
         <button
           className="scene-background-view"
           onClick={() =>
@@ -2220,9 +2228,8 @@ function EventScreen({ onResolved }: { onResolved: () => void }) {
             transition={{ duration: 0.24 }}
           >
             <img src={currentStill} alt={`${event.title}の一枚絵`} />
-            <span>
+            <span className="scene-image-expand" aria-hidden="true">
               <Maximize2 size={18} />
-              大きく見る
             </span>
           </motion.button>
         ) : visibleSprite ? (
@@ -2256,22 +2263,18 @@ function EventScreen({ onResolved }: { onResolved: () => void }) {
           </motion.button>
         ) : null}
       </AnimatePresence>
-      <div className="event-meta">
-        <span>{event.location}</span>
+      <div className="event-meta event-story-ticket">
+        <span className="event-story-ticket__location">{event.location}</span>
+        <strong className="event-story-ticket__title">{event.title}</strong>
+        <small>
+          {fighter ? `${fighter.kind}・${fighter.name}` : "今週の出来事"}
+        </small>
         {event.isRare && (
-          <strong>
+          <strong className="event-story-ticket__rare">
             <Star size={15} fill="currentColor" /> 希少な出来事
           </strong>
         )}
       </div>
-      {!atChoices && (
-        <div className="event-chapter">
-          <strong>{event.title}</strong>
-          <small>
-            {fighter ? `${fighter.kind}・${fighter.name}` : "今週の出来事"}
-          </small>
-        </div>
-      )}
       <AnimatePresence mode="wait">
         {!hidden && !atChoices && (
           <motion.div
@@ -2327,7 +2330,7 @@ function EventScreen({ onResolved }: { onResolved: () => void }) {
               {line.text}
               {line.cue ? ` ${line.cue}` : ""}
             </p>
-            <div className="dialogue-tools">
+            <div className="dialogue-tools" aria-label="会話の補助操作">
               <button
                 className="icon-button icon-button--light"
                 onClick={(clickEvent) => {
@@ -2526,21 +2529,30 @@ function OutcomeScreen({
     },
   ].filter((delta) => delta.show);
   const outcomeKicker = outcome.isLiberation
-    ? "CONTRACT RELEASED"
+    ? "FREEDOM MEMORY"
     : outcome.isRecruitment
-      ? "NEW SECRET BOSS"
-      : "DECISION RECORDED";
+      ? "NEW COMPANION"
+      : "WEEKLY MEMORY";
   const outcomeLabel = outcome.isLiberation
-    ? "契約から自由になり、自分の意思でチームに残った"
+    ? "自由を選んだ記憶"
     : outcome.isRecruitment
-      ? "新しい出場者が所属"
-      : "今週の選択が記録された";
+      ? "新しい仲間との記憶"
+      : "今週、起こったこと";
   const nextLabel =
     outcome.isLiberation
       ? "自由な仲間として、編成と育成を続けられる"
       : outcome.isRecruitment
         ? "新しい選手を編成し、最初の育成を決める"
         : "得られたポイントと次の編成を確認";
+  const outcomeVisual = outcome.visual ?? {
+    src: "/assets/ui/screen-scenes/weekly-result.webp",
+    kind: "background" as const,
+    alt: `${outcome.title}の記録`,
+  };
+  const handleContinue = () => {
+    const { followup } = continueEvent();
+    onContinue(followup);
+  };
 
   return (
     <main
@@ -2573,8 +2585,14 @@ function OutcomeScreen({
           </div>
         </header>
 
-        <section className="outcome-ticket">
-          <div className="outcome-ticket__story">
+        <section className="outcome-ticket outcome-memory-stage">
+          <img
+            src={outcomeVisual.src}
+            alt={outcomeVisual.alt}
+            className="outcome-memory-stage__image"
+          />
+          <div className="outcome-memory-stage__wash" />
+          <article className="outcome-ticket__story outcome-story-card">
             <div className="outcome-ticket__identity">
               <div className="outcome-card__mark">
                 {fighter ? (
@@ -2609,67 +2627,32 @@ function OutcomeScreen({
                 </div>
               </div>
             )}
-          </div>
-
-          <aside className="outcome-ticket__receipt">
-            <header>
-              <span>CHANGE REPORT</span>
-              <strong>今週、動いたもの</strong>
-            </header>
-            {deltas.length > 0 ? (
-              <div className="outcome-deltas" aria-label="選択による変化">
-                {deltas.map((delta) => (
-                  <div
-                    key={delta.label}
-                    className={
-                      delta.label === "所有" && delta.value < 0
-                        ? "is-positive"
-                        : delta.label === "所有" && delta.value > 0
-                          ? "is-negative"
-                          : delta.value > 0
-                            ? "is-positive"
-                            : delta.value < 0
-                              ? "is-negative"
-                              : ""
-                    }
-                  >
-                    <span>{delta.label}</span>
-                    <strong>
-                      {delta.before !== undefined &&
-                      delta.after !== undefined ? (
-                        <>
-                          <em>{delta.before.toLocaleString("ja-JP")}</em>
-                          <ChevronRight size={15} />
-                          <b>{delta.after.toLocaleString("ja-JP")}</b>
-                        </>
-                      ) : (
-                        deltaLabel(delta.value)
-                      )}
-                    </strong>
-                  </div>
-                ))}
-              </div>
-            ) : (
-              <div className="outcome-ticket__quiet">
-                <HeartHandshake size={22} />
-                <strong>数値には出ない余韻が残った</strong>
-              </div>
-            )}
             {(outcome.milestones?.length ?? 0) > 0 && (
-              <div className="outcome-milestones" role="status">
-                {outcome.milestones?.map((milestone) => (
-                  <div key={milestone}>
-                    {outcome.isRecruitment ? (
-                      <UserRoundCheck size={20} />
-                    ) : (
-                      <Sparkles size={20} />
-                    )}
-                    <strong>{milestone}</strong>
-                  </div>
-                ))}
+              <div className="outcome-story-milestone" role="status">
+                {outcome.isRecruitment ? (
+                  <UserRoundCheck size={15} />
+                ) : (
+                  <Sparkles size={15} />
+                )}
+                <strong>{outcome.milestones?.[0]}</strong>
               </div>
             )}
-          </aside>
+          </article>
+
+          {deltas.length > 0 && (
+            <aside className="outcome-change-chips" aria-label="今週の変化">
+              {deltas.map((delta) => (
+                <div key={delta.label}>
+                  <span>{delta.label}</span>
+                  <strong>
+                    {delta.before !== undefined && delta.after !== undefined
+                      ? `${delta.before.toLocaleString("ja-JP")} → ${delta.after.toLocaleString("ja-JP")}`
+                      : deltaLabel(delta.value)}
+                  </strong>
+                </div>
+              ))}
+            </aside>
+          )}
         </section>
 
         <footer className="outcome-stage__footer">
@@ -2678,8 +2661,9 @@ function OutcomeScreen({
             <strong>{nextLabel}</strong>
           </div>
           <button
+            type="button"
             className="outcome-continue"
-            onClick={() => onContinue(continueEvent().followup)}
+            onClick={handleContinue}
           >
             <span>
               {outcome.isLiberation
@@ -4966,6 +4950,7 @@ type BattleIntroductionLine = {
   label: string;
   headline: string;
   body: string;
+  unit?: BattleUnit;
 };
 
 const battleSlotLabel = (index: number, total: number) => {
@@ -4994,11 +4979,13 @@ const buildBattleIntroductionLines = (
     label: `${opponentName}・選手紹介`,
     headline: `「東門より、${battleAnnouncedName(unit, index, enemy.length)}！」`,
     body: `${unit.role}として出場。HPは${unit.maxHp}です。`,
+    unit,
   })),
   ...player.map((unit, index) => ({
     label: "ミミのチーム・選手紹介",
     headline: `「対する西門、${battleAnnouncedName(unit, index, player.length)}！」`,
     body: `${unit.role}として出場。HPは${unit.maxHp}です。`,
+    unit,
   })),
   {
     label: "試合開始",
@@ -5030,12 +5017,20 @@ function BattleScreen({
   const [command, setCommand] = useState<
     "main" | "read" | "force" | "rally" | "shift"
   >("main");
-  const [battleStarted, setBattleStarted] = useState(false);
+  const [autoDecisionTimer, setAutoDecisionTimer] = useState({
+    key: "",
+    seconds: AUTO_DELEGATE_SECONDS,
+  });
+  const activeDebugScreen = debugNavigationTargetFromUrl();
+  const debugBattleAutostart = Boolean(
+    activeDebugScreen === "battle" || activeDebugScreen?.startsWith("battle-"),
+  );
+  const [battleStarted, setBattleStarted] = useState(debugBattleAutostart);
   const [battleIntroIndex, setBattleIntroIndex] = useState<number | null>(null);
   const [battlePlayback, setBattlePlayback] = useState<
     "manual" | "auto" | "highlights"
-  >("manual");
-  const [paused, setPaused] = useState(true);
+  >(debugBattleAutostart ? "auto" : "manual");
+  const [paused, setPaused] = useState(!debugBattleAutostart);
   const [presentationIndex, setPresentationIndex] = useState(0);
   const [presentationStriking, setPresentationStriking] = useState(false);
   const [presentationImpacted, setPresentationImpacted] = useState(false);
@@ -5461,6 +5456,56 @@ function BattleScreen({
     if (battle?.status !== "decision") setCommand("main");
   }, [battle?.status, battle?.turn]);
 
+  const decisionTimerKey =
+    battle?.status === "decision"
+      ? [
+          battle.matchId,
+          battle.turn,
+          battle.decisionKind ?? "standard",
+          battle.decisionReason ?? "",
+          command,
+        ].join(":")
+      : "";
+  const autoDecisionSeconds =
+    autoDecisionTimer.key === decisionTimerKey
+      ? autoDecisionTimer.seconds
+      : AUTO_DELEGATE_SECONDS;
+  const autoDecisionReady = Boolean(
+    battleStarted &&
+      battle?.status === "decision" &&
+      battleIntroIndex === null &&
+      presentationEvents.length === 0,
+  );
+
+  useEffect(() => {
+    if (
+      !autoDecisionReady ||
+      !decisionTimerKey ||
+      battlePlayback === "manual" ||
+      paused
+    ) {
+      return;
+    }
+    if (autoDecisionSeconds <= 0) {
+      intervene({ type: "pass" });
+      return;
+    }
+    const timer = window.setTimeout(() => {
+      setAutoDecisionTimer({
+        key: decisionTimerKey,
+        seconds: autoDecisionSeconds - 1,
+      });
+    }, 1000);
+    return () => window.clearTimeout(timer);
+  }, [
+    autoDecisionReady,
+    autoDecisionSeconds,
+    battlePlayback,
+    decisionTimerKey,
+    intervene,
+    paused,
+  ]);
+
   if (!run) return null;
   if (!battle) {
     return (
@@ -5516,6 +5561,10 @@ function BattleScreen({
     ? battleUnits.find(
         (unit) => unit.instanceId === activePresentation.actorId,
       )
+    : undefined;
+  const featuredUnit = activeIntroduction?.unit ?? activeActor;
+  const featuredVisual = featuredUnit
+    ? battleVisualFor(featuredUnit.fighterId)
     : undefined;
   const activeResultTags = [
     ...new Set(
@@ -5590,10 +5639,10 @@ function BattleScreen({
   const topSkillUse = Object.entries(battle.metrics.skillUses ?? {}).sort(
     (left, right) => right[1] - left[1],
   )[0];
-  const topSkill = topSkillUse
+  const mostUsedSkill = topSkillUse
     ? battle.player
         .flatMap((unit) => unit.skills)
-        .find((entry) => entry.id === topSkillUse[0])
+        .find((skill) => skill.id === topSkillUse[0])
     : undefined;
   const resultStar =
     (topSkillUse
@@ -5604,55 +5653,17 @@ function BattleScreen({
   const resultStarVisual = resultStar
     ? characterVisuals[resultStar.fighterId]
     : undefined;
-  const battleLessons = [
-    (battle.metrics.criticalHits ?? 0) >= 2
-      ? {
-          tone: "good",
-          title: "会心の一撃が勝ち筋になった",
-          text: `${battle.metrics.criticalHits}回の会心で大きくHPを削りました。速度と攻撃力を伸ばすと、次も決定打を狙えます。`,
-        }
-      : {
-          tone: "good",
-          title: topSkill ? `主力技「${topSkill.name}」が働いた` : "役割どおりに戦い抜いた",
-          text: topSkill && topSkillUse
-            ? `${topSkillUse[1]}回使われました。次は攻撃役を伸ばすか、守備・回復役で使う時間を作ると狙いがはっきりします。`
-            : "HP、攻撃、防御、回復のどこが足りなかったかを次の育成目標にできます。",
-        },
-    (battle.metrics.turningPoints ?? 0) === 0
-      ? {
-          tone: "good",
-          title: "監督指示を待たずに決着した",
-          text: `第${battle.turn}ターンで勝負が決まりました。短期決戦では、攻撃役の主力技がそのまま結果へつながります。`,
-        }
-      : battle.turningPointOutcome === "seized"
-      ? {
-          tone: "good",
-          title: "勝負どころをつかんだ",
-          text: "予兆を見て選んだ指示が、その後の一手へつながりました。どの判断が通ったかを次戦でも狙えます。",
-        }
-      : battle.turningPointOutcome === "held"
-        ? {
-            tone: "good",
-            title: "流れを渡さず踏みとどまった",
-            text: "派手な逆転ではなくても、守りと信頼で相手の決め手を耐えました。編成の安定感が出ています。",
-          }
-      : {
-          tone: "warn",
-          title: "勝負どころでは相手が先に動いた",
-          text: "予兆と読みが噛み合いませんでした。次は相手の構えか、任せられる信頼のどちらかを育成目標にできます。",
-        },
-    (battle.metrics.damageTaken ?? 0) <=
-    (battle.metrics.damageDealt ?? 0) * 0.72
-      ? {
-          tone: "good",
-          title: "攻守の交換で優位を取った",
-          text: `与ダメージ${battle.metrics.damageDealt ?? 0}に対し、被ダメージ${battle.metrics.damageTaken ?? 0}。編成と方針が噛み合っています。`,
-        }
-      : {
-          tone: "warn",
-          title: "被害が大きい試合だった",
-          text: `被ダメージ${battle.metrics.damageTaken ?? 0}。守備役、回復技、堅守方針のどれか一つを次の育成目標にできます。`,
-        },
+  const totalSkillUses = Object.values(battle.metrics.skillUses ?? {}).reduce(
+    (total, count) => total + count,
+    0,
+  );
+  const battleStats = [
+    { label: "経過ターン", value: battle.turn, unit: "ターン" },
+    { label: "与ダメージ", value: battle.metrics.damageDealt ?? 0, unit: "DMG" },
+    { label: "被ダメージ", value: battle.metrics.damageTaken ?? 0, unit: "DMG" },
+    { label: "回復量", value: battle.metrics.healingDone ?? 0, unit: "HP" },
+    { label: "会心", value: battle.metrics.criticalHits ?? 0, unit: "回" },
+    { label: "技発動", value: totalSkillUses, unit: "回" },
   ];
   const startBattle = (mode: "manual" | "auto") => {
     setBattlePlayback(mode);
@@ -6062,6 +6073,24 @@ function BattleScreen({
           }
         >
           <AnimatePresence mode="wait">
+            {featuredUnit && featuredVisual && (
+              <motion.img
+                className={`battle-featured-fighter battle-featured-fighter--${featuredUnit.side}`}
+                key={`featured-${featuredUnit.instanceId}`}
+                src={featuredVisual.battle}
+                alt=""
+                initial={{
+                  opacity: 0,
+                  x: featuredUnit.side === "player" ? -34 : 34,
+                  scale: 0.94,
+                }}
+                animate={{ opacity: 1, x: 0, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.97 }}
+                transition={{ duration: 0.22, ease: "easeOut" }}
+              />
+            )}
+          </AnimatePresence>
+          <AnimatePresence mode="wait">
             {activeIntroduction ? (
               <motion.div
                 className="battle-action-focus battle-action-focus--introduction"
@@ -6315,6 +6344,22 @@ function BattleScreen({
               </span>
               <h3>{battle.decisionReason}</h3>
             </div>
+            {battlePlayback !== "manual" && (
+              <div
+                className="command-auto-delegate"
+                role="status"
+                aria-label={`${autoDecisionSeconds}秒後に任せるを自動選択`}
+              >
+                <Clock3 size={16} aria-hidden="true" />
+                <span><b>{autoDecisionSeconds}</b>秒後に</span>
+                <strong>任せる</strong>
+                <progress
+                  value={autoDecisionSeconds}
+                  max={AUTO_DELEGATE_SECONDS}
+                  aria-hidden="true"
+                />
+              </div>
+            )}
             {command !== "main" && (
               <button
                 className="icon-button"
@@ -6533,8 +6578,8 @@ function BattleScreen({
                   }}
                 />
                 <figcaption>
-                  <span>MATCH STAR</span>
-                  <strong>{resultStar.name}</strong>
+                  <span>最多使用技</span>
+                  <strong>{mostUsedSkill?.name ?? "記録なし"}・{topSkillUse?.[1] ?? 0}回</strong>
                 </figcaption>
               </motion.figure>
             )}
@@ -6565,39 +6610,25 @@ function BattleScreen({
           <div className="result-insights-v2 result-insights-v2--compact">
             <section className="result-highlight-v2">
               <header>
-                <span>{battle.status === "won" ? "勝因・次の一手" : "敗因・立て直し"}</span>
-                <strong>{battle.status === "won" ? "この試合から分かった3つ" : "負けたから見えた3つ"}</strong>
+                <span>MATCH DATA</span>
+                <strong>試合データ</strong>
               </header>
-              <ol className="result-lesson-list">
-                {battleLessons.slice(0, 3).map((lesson) => (
-                  <li className={`tone-${lesson.tone}`} key={lesson.title}>
-                    <strong>{lesson.title}</strong>
-                    <span>{lesson.text}</span>
-                  </li>
+              <div className="result-stat-grid">
+                {battleStats.map((stat) => (
+                  <div key={stat.label}>
+                    <span>{stat.label}</span>
+                    <strong>{stat.value.toLocaleString("ja-JP")}</strong>
+                    <small>{stat.unit}</small>
+                  </div>
                 ))}
-              </ol>
-              {battle.status === "lost" && (
-                <p className="result-comeback-line">
-                  {resultStar.name}「次は、今見えた弱点から潰そう。出場した全員に育成ポイントが残る」
-                </p>
-              )}
-              {topSkill && topSkillUse && (
-                <div className="result-technique-v2">
-                  <Sparkles size={19} />
-                  <span>最も働いた技</span>
-                  <strong>{topSkill.name}</strong>
-                  <small>{topSkillUse[1]}回使用・{topSkill.note}</small>
-                </div>
-              )}
+              </div>
             </section>
           </div>
           <footer className="result-footer-v2">
             <div>
               <span>NEXT</span>
               <strong>
-                {battle.status === "lost" && !run.spectatorMatch
-                  ? "敗戦の学びを持ち帰り、次の育成と編成へ"
-                  : "報酬と次週の育成記録へ"}
+                試合結果を記録して次へ
               </strong>
               {run.spectatorMatch?.status === "dismissed" && (
                 <small>
@@ -6619,7 +6650,7 @@ function BattleScreen({
                 </button>
               )}
               <button onClick={() => onSettled(settleBattle())}>
-                {battle.status === "lost" ? "学びを持ち帰る" : "結果を確定"}
+                {battle.status === "lost" ? "試合を終える" : "結果を確定"}
                 <ChevronRight size={19} />
               </button>
             </div>
@@ -6673,9 +6704,12 @@ function EndingScreen({ onTitle, onArchive }: { onTitle: () => void; onArchive: 
     <main className="ending-screen">
       <img src="/assets/event-casino-cafe.png" alt="" className="ending-image" />
       <div className="ending-copy">
-        <p className="eyebrow">{copy.kicker}</p>
-        <h1>{copy.title}</h1>
-        <p>{copy.text}</p>
+        <section className="ending-hero">
+          <p className="eyebrow">{copy.kicker}</p>
+          <h1>{copy.title}</h1>
+          <p>{copy.text}</p>
+        </section>
+        <section className="ending-record" aria-label="今回の周回記録">
         {run.endingType === "grand" && (
           <section className="grand-finale">
             <div className="grand-finale__charter">
@@ -6739,7 +6773,11 @@ function EndingScreen({ onTitle, onArchive }: { onTitle: () => void; onArchive: 
         <section className="ending-lineup">
           <div>
             <span>FINAL LINEUP</span>
-            <h2>最後まで戦った3人</h2>
+            <h2>
+              {run.activeTeam.length > 0
+                ? `最後まで戦った${run.activeTeam.length}人`
+                : "今回の出場記録"}
+            </h2>
           </div>
           <div className="ending-lineup__members">
             {run.activeTeam.map((id, index) => {
@@ -6798,6 +6836,7 @@ function EndingScreen({ onTitle, onArchive }: { onTitle: () => void; onArchive: 
             })}
           </section>
         )}
+        </section>
         <div className="ending-actions">
           <button className="primary-button" onClick={onTitle}>
             <Home size={18} /> タイトルへ
@@ -6878,10 +6917,16 @@ const memoryGalleryEntries: MemoryGalleryEntry[] = [
   },
 ];
 
-function ArchiveScreen({ onClose }: { onClose: () => void }) {
+function ArchiveScreen({
+  onClose,
+  initialTab = "hall",
+}: {
+  onClose: () => void;
+  initialTab?: DebugArchiveTab;
+}) {
   const profile = useGameStore((state) => state.profile);
   const run = useGameStore((state) => state.run);
-  const [tab, setTab] = useState<"hall" | "collection" | "charter" | "gallery">("hall");
+  const [tab, setTab] = useState<DebugArchiveTab>(initialTab);
   const [selectedTeamId, setSelectedTeamId] = useState(
     profile.hallOfFame[0]?.id,
   );
@@ -6908,9 +6953,14 @@ function ArchiveScreen({ onClose }: { onClose: () => void }) {
     ]) ?? [],
   );
   const hasSeenGidono = Boolean(
-    run?.roster.includes("gidono") ||
+    run?.roster.includes("gidonozeaas") ||
+      run?.roster.includes("gidono") ||
+      profile.liberatedCollection.includes("gidonozeaas") ||
       profile.liberatedCollection.includes("gidono"),
   );
+  const hasLiberatedGidono =
+    profile.liberatedCollection.includes("gidonozeaas") ||
+    profile.liberatedCollection.includes("gidono");
   const isGalleryUnlocked = (entry: MemoryGalleryEntry) => {
     if (entry.unlock === "always") return true;
     if (entry.unlock === "started") return Boolean(run || profile.hasFinishedRun);
@@ -6918,7 +6968,7 @@ function ArchiveScreen({ onClose }: { onClose: () => void }) {
       return Boolean(profile.hasFinishedRun || (run && run.week >= 4));
     }
     if (entry.unlock === "gidono") return hasSeenGidono;
-    return profile.liberatedCollection.includes("gidono");
+    return hasLiberatedGidono;
   };
   const selectedGallery = memoryGalleryEntries.find(
     (entry) =>
@@ -6932,6 +6982,7 @@ function ArchiveScreen({ onClose }: { onClose: () => void }) {
     window.addEventListener("keydown", close);
     return () => window.removeEventListener("keydown", close);
   }, [selectedGallery]);
+  useEffect(() => setTab(initialTab), [initialTab]);
   return (
     <main className="archive-screen content-page">
       <section className="archive-heading">
@@ -7341,11 +7392,134 @@ function ArchiveScreen({ onClose }: { onClose: () => void }) {
   );
 }
 
+function DebugNavigator({
+  phase,
+  onNavigate,
+}: {
+  phase: GamePhase;
+  onNavigate: (target: DebugScreenTarget) => void;
+}) {
+  const activeTarget = debugNavigationTargetFromUrl();
+  const enabled = isDebugNavigationSession();
+  const [open, setOpen] = useState<boolean>(
+    () => enabled && !debugNavigationTargetFromUrl(),
+  );
+  const [screenNumber, setScreenNumber] = useState("");
+  const navigateByNumber = () => {
+    const target = debugScreenTargets[Number(screenNumber) - 1];
+    if (!target) return;
+    onNavigate(target.id);
+    setOpen(false);
+  };
+
+  if (!isDebugNavigationAvailable) return null;
+  if (!enabled) {
+    return (
+      <button
+        type="button"
+        className="debug-navigation-launcher"
+        onClick={enterDebugNavigationSession}
+        title="通常セーブを複製して画面確認モードへ入る"
+      >
+        <Gauge size={15} />
+        <span>画面確認</span>
+      </button>
+    );
+  }
+
+  return (
+    <aside className={`debug-navigation${open ? " is-open" : ""}`}>
+      <button
+        type="button"
+        className="debug-navigation__toggle"
+        onClick={() => setOpen((value) => !value)}
+        aria-expanded={open}
+        aria-controls="debug-navigation-panel"
+      >
+        <Gauge size={15} />
+        <span>DEV</span>
+        <strong>
+          {phase === "title"
+            ? "タイトル"
+            : phase === "prologue"
+              ? "導入"
+              : phaseDetails[phase].label}
+        </strong>
+      </button>
+      {open && (
+        <section id="debug-navigation-panel" className="debug-navigation__panel">
+          <header>
+            <div>
+              <span>SCREEN NAVIGATOR</span>
+              <strong>画面確認入口</strong>
+            </div>
+            <button type="button" onClick={() => setOpen(false)} aria-label="閉じる">
+              <X size={15} />
+            </button>
+          </header>
+          <p>通常セーブとは分離された確認用データです。</p>
+          <form
+            className="debug-navigation__number"
+            onSubmit={(event) => {
+              event.preventDefault();
+              navigateByNumber();
+            }}
+          >
+            <label htmlFor="debug-screen-number">画面番号</label>
+            <input
+              id="debug-screen-number"
+              type="number"
+              inputMode="numeric"
+              min="1"
+              max={debugScreenTargets.length}
+              value={screenNumber}
+              onChange={(event) => setScreenNumber(event.target.value)}
+              placeholder={`1〜${debugScreenTargets.length}`}
+            />
+            <button type="submit" disabled={!debugScreenTargets[Number(screenNumber) - 1]}>
+              移動
+            </button>
+          </form>
+          {debugScreenGroups.map((group) => (
+            <div className="debug-navigation__group" key={group.label}>
+              <span>{group.label}</span>
+              <div>
+                {group.targets.map((target) => {
+                  const number =
+                    debugScreenTargets.findIndex((entry) => entry.id === target.id) + 1;
+                  return (
+                  <button
+                    type="button"
+                    className={activeTarget === target.id ? "is-current" : ""}
+                    key={target.id}
+                    onClick={() => {
+                      onNavigate(target.id);
+                      setOpen(false);
+                    }}
+                  >
+                    <b>{String(number).padStart(2, "0")}</b>
+                    {target.label}
+                  </button>
+                  );
+                })}
+              </div>
+            </div>
+          ))}
+        </section>
+      )}
+    </aside>
+  );
+}
+
 export function App() {
   const [state, send] = useMachine(gameMachine);
   const phase = state.value as GamePhase;
   const [archiveReturnPhase, setArchiveReturnPhase] =
     useState<GamePhase>("title");
+  const [debugArchiveTab, setDebugArchiveTab] =
+    useState<DebugArchiveTab>("hall");
+  const initialDebugTarget = useRef(debugNavigationTargetFromUrl());
+  const initialDebugTargetApplied = useRef(false);
   const [assetsReady, setAssetsReady] = useState(false);
   const [assetProgress, setAssetProgress] = useState(0);
   const [transitionNotice, setTransitionNotice] =
@@ -7481,6 +7655,41 @@ export function App() {
       send({ type: "RECOVER_TITLE" });
     }
   };
+
+  const navigateToDebugScreen = useCallback(
+    (target: DebugScreenTarget) => {
+      const prepared = prepareDebugScreen(target);
+      if (prepared.phase === "archive") {
+        setArchiveReturnPhase(phase === "archive" ? "title" : phase);
+        setDebugArchiveTab(prepared.archiveTab ?? "hall");
+        send({ type: "OPEN_ARCHIVE" });
+        return;
+      }
+      if (prepared.phase === "title") send({ type: "RECOVER_TITLE" });
+      else if (prepared.phase === "prologue") send({ type: "RECOVER_PROLOGUE" });
+      else if (prepared.phase === "week") send({ type: "RECOVER_WEEK" });
+      else if (prepared.phase === "event") send({ type: "RECOVER_EVENT" });
+      else if (prepared.phase === "outcome") send({ type: "RECOVER_OUTCOME" });
+      else if (prepared.phase === "management") {
+        send({ type: "RECOVER_MANAGEMENT" });
+      } else if (prepared.phase === "matchPrep") send({ type: "RECOVER_MATCH" });
+      else if (prepared.phase === "battle") send({ type: "RECOVER_BATTLE" });
+      else if (prepared.phase === "ending") send({ type: "RECOVER_ENDING" });
+    },
+    [phase, send],
+  );
+
+  useEffect(() => {
+    if (
+      !assetsReady ||
+      initialDebugTargetApplied.current ||
+      !initialDebugTarget.current
+    ) {
+      return;
+    }
+    initialDebugTargetApplied.current = true;
+    navigateToDebugScreen(initialDebugTarget.current);
+  }, [assetsReady, navigateToDebugScreen]);
 
   const resume = () => {
     if (!run) return;
@@ -7629,6 +7838,7 @@ export function App() {
       case "battle":
         return (
           <BattleScreen
+            key={`${run?.id ?? "run"}:${debugNavigationTargetFromUrl() ?? "play"}`}
             onRecover={() =>
               send({
                 type: run?.pendingMatchId ? "RECOVER_MATCH" : "RECOVER_WEEK",
@@ -7644,7 +7854,9 @@ export function App() {
       case "ending":
         return <EndingScreen onTitle={goTitle} onArchive={openArchive} />;
       case "archive":
-        return <ArchiveScreen onClose={closeArchive} />;
+        return (
+          <ArchiveScreen onClose={closeArchive} initialTab={debugArchiveTab} />
+        );
       default:
         return null;
     }
@@ -7670,6 +7882,7 @@ export function App() {
           <SceneTransition notice={transitionNotice} />
         )}
       </AnimatePresence>
+      <DebugNavigator phase={phase} onNavigate={navigateToDebugScreen} />
     </div>
   );
 }

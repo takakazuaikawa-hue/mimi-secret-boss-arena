@@ -24,7 +24,7 @@ export const characterVisuals: Record<string, CharacterVisualIdentity> = {
   minato: {
     portrait: "/assets/story/encounters/minato.png",
     standing: "/assets/battle/fighters/minato-v1.png",
-    battle: "/assets/battle/fighters/minato-v1.png",
+    battle: "/assets/battle/fighters/minato-combat-ready-v1.png",
     battleCutIn: "/assets/battle/cutins/minato-last-v1.webp",
     battleCutInPosition: "center center",
     alt: "無数の神器を返却するミナト",
@@ -44,7 +44,7 @@ export const characterVisuals: Record<string, CharacterVisualIdentity> = {
   shahar: {
     portrait: "/assets/story/sprites/shahar-trueform.png",
     standing: "/assets/battle/fighters/shahar-v1.png",
-    battle: "/assets/battle/fighters/shahar-v1.png",
+    battle: "/assets/battle/fighters/shahar-combat-ready-v1.png",
     battleCutIn: "/assets/battle/cutins/shahar-sky-v1.webp",
     battleCutInPosition: "center center",
     encounter: "/assets/story/encounters/shahar.png",
@@ -136,7 +136,7 @@ export const characterVisuals: Record<string, CharacterVisualIdentity> = {
   "room-seventeen": {
     portrait: "/assets/story/encounters/room-seventeen.png",
     standing: "/assets/battle/fighters/room-seventeen-v1.png",
-    battle: "/assets/battle/fighters/room-seventeen-v1.png",
+    battle: "/assets/battle/fighters/room-seventeen-combat-ready-v1.png",
     battleCutIn: "/assets/battle/cutins/room-seventeen-floor-v1.webp",
     battleCutInPosition: "center center",
     alt: "扉の姿をした十七号室",

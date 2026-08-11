@@ -164,6 +164,11 @@ export interface EventOutcome {
   sceneId: string;
   title: string;
   result: string;
+  visual?: {
+    src: string;
+    kind: "still" | "background";
+    alt: string;
+  };
   choiceLabel?: string;
   choiceTone?: ChoiceTone;
   choiceMemory?: string;

@@ -254,6 +254,8 @@ describe("player UX defaults and batch growth", () => {
 
     const resolved = useGameStore.getState().run!;
     expect(resolved.lastEventOutcome?.choiceTone).toBeTruthy();
+    expect(resolved.lastEventOutcome?.visual?.src).toMatch(/^\/assets\//);
+    expect(resolved.lastEventOutcome?.visual?.alt).toContain("の");
     expect(resolved.lastChoiceEcho?.memory.length).toBeGreaterThanOrEqual(12);
     expect(
       resolved.flags.some((flag) => flag.startsWith("choice-tone:")),

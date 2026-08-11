@@ -49,6 +49,7 @@ import type {
 } from "./types";
 import { randomForCursor, type RandomSource } from "./rng";
 import { resolveChoiceDesign } from "./choiceDesign";
+import { resolveScenePresentation } from "./scenePresentation";
 
 const clamp = (value: number, min: number, max: number) =>
   Math.min(max, Math.max(min, value));
@@ -755,6 +756,16 @@ export const resolveCurrentEvent = (
 ): RunState => {
   const event = source.currentEvent;
   if (!event) return source;
+  const finalPresentation = resolveScenePresentation(
+    event.scene.lines,
+    event.scene.lines.length - 1,
+    { background: event.scene.background, sprite: event.scene.sprite },
+  );
+  const lastStill = event.scene.lines
+    .map((line) => line.direction?.still)
+    .filter((still): still is string => Boolean(still))
+    .at(-1);
+  const outcomeVisual = lastStill ?? finalPresentation.background;
   const narrativeBlock = event.narrativeBlockId
     ? legacyOpeningNarrativeBlockById.get(asEventId(event.narrativeBlockId)) ??
       legacyCharacterNarrativeBlockById.get(asEventId(event.narrativeBlockId)) ??
@@ -928,6 +939,13 @@ export const resolveCurrentEvent = (
         (sceneKind === "liberation"
           ? "契約の効力が消えた。次の試合へ出るかは、もう本人が決める。"
           : "出来事は、次の週へ続いていく。"),
+      visual: outcomeVisual
+        ? {
+            src: outcomeVisual,
+            kind: lastStill ? "still" : "background",
+            alt: `${event.title}の${lastStill ? "一枚絵" : "舞台"}`,
+          }
+        : undefined,
       choiceLabel: choice?.label,
       choiceTone: choice?.tone,
       choiceMemory: choice?.memory,
