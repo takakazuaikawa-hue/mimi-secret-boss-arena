@@ -191,6 +191,14 @@ const skillKindLabels: Record<SkillDefinition["kind"], string> = {
   debuff: "妨害",
 };
 
+const skillTargetLabels: Record<SkillDefinition["target"], string> = {
+  enemy: "敵単体",
+  allEnemies: "敵全体",
+  ally: "味方単体",
+  allAllies: "味方全体",
+  self: "自分",
+};
+
 const positionLabels = {
   front: "前衛",
   middle: "中衛",
@@ -6447,24 +6455,49 @@ function BattleScreen({
                 .filter((unit) => !unit.defeated)
                 .map((unit) => (
                   <div key={unit.instanceId}>
-                    <strong>{unit.name}</strong>
+                    <strong>
+                      {unit.name}
+                      <small>MP {Math.round(unit.mp)}/{unit.maxMp}</small>
+                    </strong>
                     <div>
-                      {unit.skills.map((skill) => (
-                        <button
-                          key={skill.id}
-                          disabled={skill.mpCost > unit.mp}
-                          onClick={() =>
-                            intervene({
-                              type: "force",
-                              fighterId: unit.fighterId,
-                              skillId: skill.id,
-                            })
-                          }
-                        >
-                          {skill.name}
-                          <small>MP {skill.mpCost}</small>
-                        </button>
-                      ))}
+                      {unit.skills.map((skill) => {
+                        const short = skill.mpCost > unit.mp;
+                        return (
+                          <button
+                            key={skill.id}
+                            className={`force-skill force-skill--${skill.kind}`}
+                            disabled={short}
+                            title={skill.note}
+                            onClick={() =>
+                              intervene({
+                                type: "force",
+                                fighterId: unit.fighterId,
+                                skillId: skill.id,
+                              })
+                            }
+                          >
+                            <span className="force-skill__head">
+                              <b>{skill.name}</b>
+                              <em>
+                                {skillKindLabels[skill.kind]}・
+                                {skillTargetLabels[skill.target]}
+                              </em>
+                            </span>
+                            <span className="force-skill__note">
+                              {skill.note}
+                            </span>
+                            <small>
+                              {skill.mpCost === 0
+                                ? "MP不要"
+                                : `MP ${skill.mpCost}`}
+                              {skill.kind === "damage" || skill.kind === "heal"
+                                ? `・威力${skill.power}`
+                                : ""}
+                              {short ? "・MPが足りません" : ""}
+                            </small>
+                          </button>
+                        );
+                      })}
                     </div>
                   </div>
                 ))}

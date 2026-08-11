@@ -141,6 +141,23 @@ if (commandSeen) {
     await page.waitForTimeout(200);
   }
 
+  const forceButton = page.locator(".command-grid button", { hasText: "強制指示" }).first();
+  if (await forceButton.isEnabled().catch(() => false)) {
+    await forceButton.click();
+    await page.waitForTimeout(300);
+    await shot("06b-force-list");
+    const forceReport = await page.evaluate(() => {
+      const buttons = [...document.querySelectorAll(".force-list button")];
+      return buttons.slice(0, 3).map((b) => {
+        const s = getComputedStyle(b);
+        return { text: b.innerText.replace(/\n/g, " / "), color: s.color, bg: s.backgroundColor };
+      });
+    });
+    log("force skills:", JSON.stringify(forceReport));
+    await page.locator(".command-heading .icon-button").click().catch(() => {});
+    await page.waitForTimeout(200);
+  }
+
   const historyButton = page.locator(".battle-feed__history");
   if (await historyButton.isVisible().catch(() => false)) {
     await historyButton.click();

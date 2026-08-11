@@ -238,10 +238,102 @@
 }
 
 .battle-screen .force-list {
-  max-height: 148px;
+  max-height: 190px;
   overflow-y: auto;
   color: #fff;
 }
+
+.battle-screen .force-list > div {
+  grid-template-columns: 132px minmax(0, 1fr);
+  border-top-color: rgba(255, 255, 255, 0.16);
+}
+
+.battle-screen .force-list > div > strong {
+  display: grid;
+  gap: 2px;
+  font-size: 13px;
+}
+
+.battle-screen .force-list > div > strong small {
+  color: rgba(235, 245, 247, 0.66);
+  font-size: 10.5px;
+  font-weight: 700;
+}
+
+/* 暗色パネルに合わせる(白背景に白文字で読めなくなっていた箇所) */
+.battle-screen .force-list button {
+  display: grid;
+  gap: 3px;
+  min-height: 74px;
+  padding: 8px 9px;
+  color: #f5fafb;
+  border-color: rgba(255, 255, 255, 0.2);
+  border-left: 3px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.08);
+  text-align: left;
+}
+
+.battle-screen .force-list button:hover:not(:disabled) {
+  color: #102b3b;
+  border-color: #f3cf62;
+  background: #f3cf62;
+}
+
+.battle-screen .force-list button:disabled {
+  opacity: 0.42;
+  cursor: not-allowed;
+}
+
+.battle-screen .force-skill__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.battle-screen .force-skill__head b {
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.battle-screen .force-skill__head em {
+  color: rgba(235, 245, 247, 0.78);
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.battle-screen .force-skill__note {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  color: rgba(235, 245, 247, 0.72);
+  font-size: 10.5px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.battle-screen .force-list button small {
+  margin-top: 0;
+  color: #f3cf62;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.battle-screen .force-list button:hover:not(:disabled) .force-skill__head em,
+.battle-screen .force-list button:hover:not(:disabled) .force-skill__note,
+.battle-screen .force-list button:hover:not(:disabled) small {
+  color: #274051;
+}
+
+/* 技の種別を色で見分ける */
+.battle-screen .force-list button.force-skill--damage { border-left-color: #f28b82; }
+.battle-screen .force-list button.force-skill--heal { border-left-color: #8fe3b0; }
+.battle-screen .force-list button.force-skill--guard { border-left-color: #8fc7f5; }
+.battle-screen .force-list button.force-skill--buff { border-left-color: #f3cf62; }
+.battle-screen .force-list button.force-skill--debuff { border-left-color: #c9a5f0; }
 
 @media (max-width: 760px) {
   .battle-screen .battle-stage {
@@ -437,5 +529,24 @@
   .battle-screen.is-awaiting-command .battle-stage,
   .battle-screen.is-awaiting-command .battle-side {
     transition: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .battle-screen .force-list > div {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .battle-screen .force-list > div > div {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .battle-screen .force-list button {
+    min-height: 66px;
+  }
+
+  .battle-screen .force-skill__note {
+    -webkit-line-clamp: 1;
   }
 }
