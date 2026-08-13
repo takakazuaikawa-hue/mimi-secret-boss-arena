@@ -98,7 +98,11 @@ import {
   choiceToneMeta,
   resolveChoiceDesign,
 } from "./game/choiceDesign";
-import { effectiveStat, opponentsForMatch } from "./game/battle";
+import {
+  effectiveStat,
+  forecastEntrust,
+  opponentsForMatch,
+} from "./game/battle";
 import { buildBattleBroadcast } from "./game/battleBroadcast";
 import { gameMachine, type GamePhase } from "./game/machine";
 import { playSound } from "./game/sound";
@@ -115,6 +119,11 @@ import {
   type DebugArchiveTab,
   type DebugScreenTarget,
 } from "./debugNavigation";
+import {
+  galleryEntriesFromNarrativeBlocks,
+  isNarrativeGalleryEntryUnlocked,
+} from "./narrative/gallery";
+import { legacyNarrativeBlocks } from "./narrative/legacyBlocks";
 import {
   FighterChibi,
   LoadingScreen,
@@ -201,6 +210,24 @@ const skillKindLabels: Record<SkillDefinition["kind"], string> = {
   guard: "防御",
   buff: "強化",
   debuff: "妨害",
+};
+
+// 文末で区切る。ただし鉤括弧の内側では切らない(台詞を途中で送らない)。
+const splitIntoSentences = (text: string): string[] => {
+  const sentences: string[] = [];
+  let current = "";
+  let depth = 0;
+  for (const char of text) {
+    current += char;
+    if (char === "「" || char === "『") depth += 1;
+    if (char === "」" || char === "』") depth = Math.max(0, depth - 1);
+    if (depth === 0 && /[。！？]/.test(char)) {
+      sentences.push(current);
+      current = "";
+    }
+  }
+  if (current.trim()) sentences.push(current);
+  return sentences.length > 0 ? sentences : [text];
 };
 
 const skillTargetLabels: Record<SkillDefinition["target"], string> = {
@@ -862,7 +889,7 @@ function TitleScreen({
           )}
           <button
             className={`title-menu-button ${
-              run ? "" : "title-menu-button--continue"
+              run ? "title-menu-button--new" : "title-menu-button--continue title-menu-button--new"
             }`}
             onClick={() =>
               soundAnd(() => {
@@ -1941,7 +1968,7 @@ function WeekScreen({
       <section className="week-command-dock" aria-labelledby="weekly-action-title">
         <div className="week-command-dock__heading">
           <div>
-            <span>WEEKLY ACTION</span>
+            <span className="eyebrow">WEEKLY ACTION</span>
             <h3 id="weekly-action-title">今週を選ぶ</h3>
           </div>
           <div className="week-command-dock__utilities">
@@ -1970,7 +1997,7 @@ function WeekScreen({
         </div>
         <div className="week-command-dock__body">
           <div className="week-action-tickets">
-            {actionPreviewData.map(({ action, headline, index }) => {
+            {actionPreviewData.map(({ action }) => {
               const Icon = action.icon;
               const selected = previewAction === action.id;
               return (
@@ -1989,26 +2016,34 @@ function WeekScreen({
                     setPreviewAction(action.id);
                   }}
                   aria-pressed={selected}
-                  animate={{ y: selected ? -8 : 0 }}
-                  whileHover={{ y: -8 }}
-                  whileTap={{ y: -2, scale: 0.99 }}
+                  animate={{ y: 0 }}
+                  whileHover={{ y: -2 }}
+                  whileTap={{ y: 0, scale: 0.99 }}
                 >
-                  <span className="week-action-ticket__number">
-                    0{index + 1}
-                  </span>
                   <span className="week-action-ticket__icon">
                     <Icon size={24} />
                   </span>
                   <span className="week-action-ticket__copy">
                     <strong>{action.label}</strong>
-                    <small>{selected ? headline : actionEffects[action.id]}</small>
-                  </span>
-                  <span className="week-action-ticket__state">
-                    {selected ? "SELECTED" : "見る"}
+                    <small>{actionEffects[action.id]}</small>
                   </span>
                 </motion.button>
               );
             })}
+          </div>
+          <div className="week-action-detail" aria-live="polite">
+            <div>
+              <span>この予定で起こること</span>
+              <strong>{selectedPreview.headline}</strong>
+              <small>
+                {actionEffects[previewAction]}・{actionContexts[previewAction]}
+              </small>
+            </div>
+            <div>
+              <span>物語の気配</span>
+              <strong>{selectedEncounterLabel}</strong>
+              <small>{selectedPreview.eventForecast}</small>
+            </div>
           </div>
           <motion.button
             className="week-action-confirm"
@@ -2016,7 +2051,7 @@ function WeekScreen({
             whileHover={{ x: 4 }}
             whileTap={{ scale: 0.985 }}
           >
-            <span>{selectedPreview.action.label}を実行</span>
+            <span>選択中・{selectedPreview.action.label}</span>
             <strong>この予定で進める</strong>
             <ChevronRight size={26} />
           </motion.button>
@@ -2498,6 +2533,38 @@ function OutcomeScreen({
   const run = useGameStore((state) => state.run);
   const continueEvent = useGameStore((state) => state.continueEvent);
   const outcome = run?.lastEventOutcome;
+  const [revealStage, setRevealStage] = useState<0 | 1 | 2 | 3>(0);
+  const [resultSentenceIndex, setResultSentenceIndex] = useState(0);
+  const outcomeSceneId = outcome?.sceneId;
+  const outcomeChoiceLabel = outcome?.choiceLabel;
+
+  useEffect(() => {
+    if (!outcome) return;
+    const reducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+    setRevealStage(reducedMotion ? 3 : 0);
+    setResultSentenceIndex(0);
+    if (reducedMotion) return;
+
+    const isMajorMemory = outcome.isRecruitment || outcome.isLiberation;
+    const timers = [
+      window.setTimeout(
+        () => setRevealStage(1),
+        isMajorMemory ? 900 : 650,
+      ),
+      window.setTimeout(
+        () => setRevealStage(2),
+        isMajorMemory ? 2500 : 1800,
+      ),
+      window.setTimeout(
+        () => setRevealStage(3),
+        isMajorMemory ? 5000 : 3200,
+      ),
+    ];
+    return () => timers.forEach((timer) => window.clearTimeout(timer));
+  }, [outcomeSceneId, outcomeChoiceLabel]);
+
   if (!run || !outcome) return null;
   const fighter = outcome.fighterId
     ? fighterById.get(outcome.fighterId)
@@ -2507,7 +2574,24 @@ function OutcomeScreen({
     : Sparkles;
   const deltas = [
     {
+      label: "信頼",
+      help: fighter ? `${fighter.name}との信頼` : "仲間との信頼",
+      value: outcome.deltas.trust,
+      show: outcome.deltas.trust !== 0,
+      before: outcome.before?.trust,
+      after: outcome.after?.trust,
+    },
+    {
+      label: "所有",
+      help: "契約による拘束",
+      value: outcome.deltas.ownership,
+      show: outcome.deltas.ownership !== 0,
+      before: outcome.before?.ownership,
+      after: outcome.after?.ownership,
+    },
+    {
       label: "資金",
+      help: "運営と買い物に使える",
       value: outcome.deltas.money,
       show: outcome.deltas.money !== 0,
       before: outcome.before?.money,
@@ -2515,6 +2599,7 @@ function OutcomeScreen({
     },
     {
       label: "共有P",
+      help: "誰の育成にも使える",
       value: outcome.deltas.sharedPoints,
       show: outcome.deltas.sharedPoints !== 0,
       before: outcome.before?.sharedPoints,
@@ -2522,33 +2607,39 @@ function OutcomeScreen({
     },
     {
       label: "固有P",
+      help: `${fighter?.name ?? "本人"}だけの育成に使える`,
       value: outcome.deltas.fighterPoints,
       show: outcome.deltas.fighterPoints !== 0,
       before: outcome.before?.fighterPoints,
       after: outcome.after?.fighterPoints,
     },
   ].filter((delta) => delta.show);
-  const outcomeKicker = outcome.isLiberation
-    ? "FREEDOM MEMORY"
-    : outcome.isRecruitment
-      ? "NEW COMPANION"
-      : "WEEKLY MEMORY";
-  const outcomeLabel = outcome.isLiberation
-    ? "自由を選んだ記憶"
-    : outcome.isRecruitment
-      ? "新しい仲間との記憶"
-      : "今週、起こったこと";
-  const nextLabel =
-    outcome.isLiberation
-      ? "自由な仲間として、編成と育成を続けられる"
-      : outcome.isRecruitment
-        ? "新しい選手を編成し、最初の育成を決める"
-        : "得られたポイントと次の編成を確認";
   const outcomeVisual = outcome.visual ?? {
     src: "/assets/ui/screen-scenes/weekly-result.webp",
     kind: "background" as const,
     alt: `${outcome.title}の記録`,
   };
+  const firstSentence = outcome.result.match(/^.*?[。！？]/)?.[0];
+  const outcomeHeadline =
+    outcome.outcomeHeadline ?? firstSentence ?? outcome.title;
+  // 結果文は会話画面と同じく一文ずつ送って読ませる(行数で切らない)。
+  // 鉤括弧の内側では切らない(台詞の途中で送らないため)。
+  const resultSentences = splitIntoSentences(outcome.result);
+  const visibleSentences = resultSentences.slice(0, resultSentenceIndex + 1);
+  const hasMoreSentences = resultSentenceIndex < resultSentences.length - 1;
+  const advanceResult = () => {
+    if (hasMoreSentences) {
+      setResultSentenceIndex((index) => index + 1);
+      return;
+    }
+    if (revealStage < 3) setRevealStage(3);
+  };
+  const memoryLine = outcome.choiceMemory ?? outcome.milestones?.[0];
+  const continueLabel = outcome.isLiberation
+    ? "自由な仲間との次へ"
+    : outcome.isRecruitment
+      ? "仲間との次へ"
+      : "この記憶を持って進む";
   const handleContinue = () => {
     const { followup } = continueEvent();
     onContinue(followup);
@@ -2558,124 +2649,153 @@ function OutcomeScreen({
     <main
       className={[
         "outcome-screen",
+        "outcome-cinematic",
         outcome.isRecruitment ? "outcome-screen--recruitment" : "",
         outcome.isLiberation ? "outcome-screen--liberation" : "",
+        outcomeVisual.kind === "background"
+          ? "outcome-screen--background-fallback"
+          : "outcome-screen--dedicated-still",
+        `outcome-screen--reveal-${revealStage}`,
       ]
         .filter(Boolean)
         .join(" ")}
+      data-visual-kind={outcomeVisual.kind}
+      aria-label={`${outcome.title}の結果`}
     >
       <img
-        src="/assets/ui/screen-scenes/weekly-result.webp"
-        alt=""
-        className="outcome-screen__scene"
+        src={outcomeVisual.src}
+        alt={outcomeVisual.alt}
+        className="outcome-cinematic__image"
+        style={{
+          objectPosition: `${outcomeVisual.focusX ?? 50}% ${outcomeVisual.focusY ?? 50}%`,
+        }}
+        loading="eager"
+        decoding="async"
       />
-      <div className="outcome-screen__wash" />
-      <div className="outcome-stage">
-        <header className="outcome-stage__header">
-          <div className="outcome-stage__week">
-            <span>WEEK</span>
-            <strong>{String(run.week).padStart(2, "0")}</strong>
-          </div>
-          <div>
-            <span>{outcomeKicker}</span>
-            <strong>{outcomeLabel}</strong>
-          </div>
-          <div className="outcome-stage__seal" aria-hidden="true">
-            <Check size={23} strokeWidth={3} />
-          </div>
-        </header>
+      <div className="outcome-cinematic__grade" aria-hidden="true" />
 
-        <section className="outcome-ticket outcome-memory-stage">
-          <img
-            src={outcomeVisual.src}
-            alt={outcomeVisual.alt}
-            className="outcome-memory-stage__image"
-          />
-          <div className="outcome-memory-stage__wash" />
-          <article className="outcome-ticket__story outcome-story-card">
-            <div className="outcome-ticket__identity">
-              <div className="outcome-card__mark">
-                {fighter ? (
-                  <FighterMark id={fighter.id} size="large" />
-                ) : (
-                  <Sparkles size={34} />
-                )}
-              </div>
-              <div>
-                <span>{fighter?.kind ?? "今週の記録"}</span>
-                <strong>{fighter?.name ?? "ミミの選択"}</strong>
-              </div>
-            </div>
-            <p className="eyebrow">{outcomeKicker}</p>
-            <h2>{outcome.title}</h2>
-            {outcome.choiceLabel && (
-              <p className="outcome-choice">「{outcome.choiceLabel}」</p>
-            )}
-            <p className="outcome-result">{outcome.result}</p>
-            {outcome.choiceMemory && (
-              <div
-                className={`outcome-memory ${
-                  outcome.choiceTone
-                    ? `outcome-memory--${outcome.choiceTone}`
-                    : ""
-                }`}
-              >
-                <OutcomeMemoryIcon size={20} />
-                <div>
-                  <span>この選択が残したもの</span>
-                  <strong>{outcome.choiceMemory}</strong>
-                </div>
-              </div>
-            )}
-            {(outcome.milestones?.length ?? 0) > 0 && (
-              <div className="outcome-story-milestone" role="status">
-                {outcome.isRecruitment ? (
-                  <UserRoundCheck size={15} />
-                ) : (
-                  <Sparkles size={15} />
-                )}
-                <strong>{outcome.milestones?.[0]}</strong>
-              </div>
-            )}
-          </article>
-
-          {deltas.length > 0 && (
-            <aside className="outcome-change-chips" aria-label="今週の変化">
-              {deltas.map((delta) => (
-                <div key={delta.label}>
-                  <span>{delta.label}</span>
-                  <strong>
-                    {delta.before !== undefined && delta.after !== undefined
-                      ? `${delta.before.toLocaleString("ja-JP")} → ${delta.after.toLocaleString("ja-JP")}`
-                      : deltaLabel(delta.value)}
-                  </strong>
-                </div>
-              ))}
-            </aside>
-          )}
-        </section>
-
-        <footer className="outcome-stage__footer">
-          <div>
-            <span>NEXT / TEAM OFFICE</span>
-            <strong>{nextLabel}</strong>
-          </div>
+      <div className="outcome-cinematic__topline">
+        <div className="outcome-cinematic__week-ticket">
+          <span>WEEK {String(run.week).padStart(2, "0")}</span>
+          <strong>結果</strong>
+        </div>
+        {(revealStage < 3 || hasMoreSentences) && (
           <button
             type="button"
-            className="outcome-continue"
-            onClick={handleContinue}
+            className="outcome-cinematic__reveal-all"
+            onClick={() => {
+              setResultSentenceIndex(resultSentences.length - 1);
+              setRevealStage(3);
+            }}
           >
-            <span>
-              {outcome.isLiberation
-                ? "自由になった仲間を確認"
-                : outcome.isRecruitment && fighter
-                  ? `${fighter.name}を育成`
-                  : "編成と育成へ"}
-            </span>
-            <ChevronRight size={22} />
+            <FastForward size={15} aria-hidden="true" />
+            まとめて表示
           </button>
-        </footer>
+        )}
       </div>
+
+      <button
+        type="button"
+        className="outcome-cinematic__advance-area"
+        onClick={advanceResult}
+        aria-label={
+          hasMoreSentences ? "結果の続きを読む" : "結果をすべて表示する"
+        }
+      />
+
+      <section
+        className="outcome-cinematic__story"
+        aria-live="polite"
+        aria-atomic="false"
+      >
+        <AnimatePresence>
+          {revealStage >= 1 && (
+            <motion.article
+              key="consequence"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.34 }}
+            >
+              <p className="outcome-cinematic__chapter">{outcome.title}</p>
+              {outcome.choiceLabel && (
+                <p className="outcome-cinematic__cause">
+                  <span>あなたが選んだ</span>「{outcome.choiceLabel}」
+                </p>
+              )}
+              <h1>{outcomeHeadline}</h1>
+              <p className="outcome-cinematic__result">
+                {visibleSentences.join("")}
+              </p>
+            </motion.article>
+          )}
+        </AnimatePresence>
+        <AnimatePresence>
+          {revealStage >= 2 && memoryLine && (
+            <motion.div
+              className={`outcome-cinematic__memory ${
+                outcome.choiceTone
+                  ? `outcome-memory--${outcome.choiceTone}`
+                  : ""
+              }`}
+              key="memory"
+              initial={{ opacity: 0, x: -10 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.34 }}
+            >
+              <OutcomeMemoryIcon size={15} aria-hidden="true" />
+              <span>この選択が残したもの</span>
+              <strong>{memoryLine}</strong>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </section>
+
+      <AnimatePresence>
+        {revealStage >= 3 && (
+          <motion.aside
+            className="outcome-cinematic__summary"
+            aria-label="選択による変化"
+            key="summary"
+            initial={{ opacity: 0, x: 14 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.34 }}
+          >
+            <div className="outcome-cinematic__changes">
+              <span className="outcome-cinematic__changes-title">
+                選択で変わったこと
+              </span>
+              {deltas.length > 0 ? (
+                deltas.map((delta) => (
+                  <div
+                    className={delta.value >= 0 ? "is-positive" : "is-negative"}
+                    key={delta.label}
+                    aria-label={`${delta.label} ${deltaLabel(delta.value)}`}
+                  >
+                    <span>
+                      <b>{delta.label}</b>
+                      <small>{delta.help}</small>
+                    </span>
+                    <strong>{deltaLabel(delta.value)}</strong>
+                  </div>
+                ))
+              ) : (
+                <div className="outcome-cinematic__no-number">
+                  <Sparkles size={15} aria-hidden="true" />
+                  <span>{outcome.milestones?.[0] ?? "物語が先へ進んだ"}</span>
+                </div>
+              )}
+            </div>
+            <button
+              type="button"
+              className="outcome-cinematic__continue"
+              onClick={handleContinue}
+            >
+              <span>{continueLabel}</span>
+              <ChevronRight size={20} aria-hidden="true" />
+            </button>
+          </motion.aside>
+        )}
+      </AnimatePresence>
     </main>
   );
 }
@@ -3792,9 +3912,10 @@ function MatchPrepScreen({ onStart }: { onStart: () => void }) {
   const routeDifficulty =
     match.difficulty * getRouteDefinition(run.route).battleScale;
   const enemyScale =
-    routeDifficulty <= 1
+    (routeDifficulty <= 1
       ? routeDifficulty
-      : 1 + (routeDifficulty - 1) * 0.42;
+      : 1 + (routeDifficulty - 1) * 0.42) *
+    (tournamentId === "opening-cup" ? 1 : 1.52);
   const enemyPower = opponents.reduce(
     (total, opponent) =>
       total +
@@ -3863,10 +3984,19 @@ function MatchPrepScreen({ onStart }: { onStart: () => void }) {
       <div className="match-prep-v2__layout">
         <section className="match-brief-v2">
           <header>
-            <span>WEEK {run.week} / OFFICIAL MATCH</span>
+            <span>第{run.week}週</span>
             <b>第{tournamentRound}試合 / 全{tournamentTotal}試合</b>
           </header>
-          <h1>{match.name}</h1>
+          <h1>
+            {match.name.endsWith("トーナメント") ? (
+              <>
+                <span>{match.name.slice(0, -"トーナメント".length)}</span>
+                <span>トーナメント</span>
+              </>
+            ) : (
+              match.name
+            )}
+          </h1>
           <p>{match.story}</p>
 
           {isOpeningTournament && (
@@ -3882,20 +4012,24 @@ function MatchPrepScreen({ onStart }: { onStart: () => void }) {
 
           <div className="match-versus-v2" aria-label="対戦カード">
             <div>
-              <span>OWNER</span>
               <strong>ミミのチーム</strong>
               <small>{run.activeTeam.length}人で出場予定</small>
             </div>
-            <b>VS</b>
+            <b>対</b>
             <div>
-              <span>CHALLENGER</span>
               <strong>{match.opponentName}</strong>
               <small>{opponents.length}体編成</small>
             </div>
           </div>
 
           <div className="opponent-scout-v2">
-            <span>対戦記録から分かったこと</span>
+            <span>対戦相手</span>
+            {match.battleFeature && (
+              <p className="opponent-scout-v2__feature">
+                <strong>{match.battleFeature.name}</strong>
+                {match.battleFeature.summary}
+              </p>
+            )}
             <div>
               {opponents.map((fighter, index) => (
                 <article key={fighter.id}>
@@ -3950,7 +4084,6 @@ function MatchPrepScreen({ onStart }: { onStart: () => void }) {
               <div className="prep-lineup-v2">
                 <div className="prep-panel-title-v2">
                   <div>
-                    <span>LINEUP</span>
                     <h2>誰に任せる？</h2>
                   </div>
                   <p>選んだ順に前衛・中衛・後衛へ並びます。</p>
@@ -4057,7 +4190,6 @@ function MatchPrepScreen({ onStart }: { onStart: () => void }) {
               <div className="prep-strategy-v2">
                 <div className="prep-panel-title-v2">
                   <div>
-                    <span>GAME PLAN</span>
                     <h2>どう勝ちにいく？</h2>
                   </div>
                   <p>迷ったら「均衡」のままで大丈夫です。</p>
@@ -4122,7 +4254,6 @@ function MatchPrepScreen({ onStart }: { onStart: () => void }) {
                   <header>
                     <Dices size={20} />
                     <div>
-                      <span>OPTIONAL BET</span>
                       <strong>この試合に賭ける</strong>
                     </div>
                     <small>負けても周回は続きます</small>
@@ -4148,7 +4279,6 @@ function MatchPrepScreen({ onStart }: { onStart: () => void }) {
 
           <footer className="prep-console-v2__footer">
             <div>
-              <span>READY</span>
               <strong>
                 {run.activeTeam.length === 0
                   ? "出場選手を選んでください"
@@ -4285,6 +4415,20 @@ const opponentBattleSizes: Record<
 const battleVisualFor = (fighterId: string) =>
   characterVisuals[fighterId] ?? opponentVisuals[fighterId];
 
+const battleArtNeedsMirror = (
+  visual: ReturnType<typeof battleVisualFor>,
+  side: "player" | "enemy",
+) =>
+  Boolean(
+    visual &&
+      visual.battleFacing !== (side === "player" ? "right" : "left"),
+  );
+
+const battleArtMirrorClass = (
+  visual: ReturnType<typeof battleVisualFor>,
+  side: "player" | "enemy",
+) => (battleArtNeedsMirror(visual, side) ? " is-mirrored" : "");
+
 function BattleTechniqueShowcase({
   unit,
   event,
@@ -4328,7 +4472,11 @@ function BattleTechniqueShowcase({
             style={{ objectPosition: visual.battleCutInPosition ?? "center" }}
           />
         ) : visual ? (
-          <img src={visual.battle} alt="" className="is-standing-art" />
+          <img
+            src={visual.battle}
+            alt=""
+            className={`is-standing-art${battleArtMirrorClass(visual, unit.side)}`}
+          />
         ) : (
           <FighterChibi id={unit.fighterId} mood="cheer" />
         )}
@@ -4452,7 +4600,7 @@ function BattleCombatant({
           <img
             src={standingVisual.battle}
             alt=""
-            className={`battle-character-art battle-character-art--${unit.fighterId}`}
+            className={`battle-character-art battle-character-art--${unit.fighterId}${battleArtMirrorClass(standingVisual, unit.side)}`}
           />
         ) : (
           <FighterChibi
@@ -4560,8 +4708,8 @@ const spectatorTeamMeta: Record<
   SpectatorSide,
   { name: string; label: string; short: string }
 > = {
-  azure: { name: "蒼天サイド", label: "AZURE SIDE", short: "蒼" },
-  coral: { name: "珊瑚サイド", label: "CORAL SIDE", short: "珊" },
+  azure: { name: "蒼天サイド", label: "蒼の陣", short: "蒼" },
+  coral: { name: "珊瑚サイド", label: "珊瑚の陣", short: "珊" },
 };
 
 function SpectatorFighter({
@@ -4595,7 +4743,14 @@ function SpectatorFighter({
     >
       <div className="spectator-fighter__art">
         <span className="spectator-fighter__halo" />
-        <img src={visual.battle} alt={visual.alt} />
+        <img
+          src={visual.battle}
+          alt={visual.alt}
+          className={battleArtNeedsMirror(
+            visual,
+            side === "azure" ? "player" : "enemy",
+          ) ? "is-mirrored" : undefined}
+        />
       </div>
       <div className="spectator-fighter__name">
         <strong>{fighter.name}</strong>
@@ -4705,12 +4860,12 @@ function SpectatorBattleScreen() {
     : undefined;
   const actionCopy =
     revealStep === 0
-      ? { phase: "MATCH READY", title: "歓声が満ちる。勝負はまだ、どちらにも転ぶ", detail: "両チーム、入場完了" }
+      ? { phase: "入場", title: "歓声が満ちる。勝負はまだ、どちらにも転ぶ", detail: "両チーム、入場完了" }
       : revealStep === 1
-        ? { phase: "FIRST MOVE", title: `${fastest?.name ?? "先鋒"}が先手を奪う`, detail: `${openingSkill?.name ?? "通常攻撃"}・速度差が最初の一手を決めた` }
+        ? { phase: "先手", title: `${fastest?.name ?? "先鋒"}が先手を奪う`, detail: `${openingSkill?.name ?? "通常攻撃"}・速度差が最初の一手を決めた` }
         : revealStep === 2
-          ? { phase: "CHAIN CHECK", title: `${spectatorTeamMeta[spectator.winnerSide].name}の連携が通る`, detail: `${supportSkill?.name ?? "連携技"}・役割の噛み合わせで勝負どころをつかむ` }
-          : { phase: "FINAL DRAW", title: `${finisher?.name ?? "決着役"}、${decisiveSkill?.name ?? "決着技"}`, detail: `${spectatorTeamMeta[spectator.winnerSide].name}が決着を引き寄せた` };
+          ? { phase: "連携", title: `${spectatorTeamMeta[spectator.winnerSide].name}の連携が通る`, detail: `${supportSkill?.name ?? "連携技"}・役割の噛み合わせで勝負どころをつかむ` }
+          : { phase: "決着", title: `${finisher?.name ?? "決着役"}、${decisiveSkill?.name ?? "決着技"}`, detail: `${spectatorTeamMeta[spectator.winnerSide].name}が決着を引き寄せた` };
   const teamHp = (side: SpectatorSide) => {
     if (revealStep === 0) return 100;
     if (revealStep === 1) return side === activeSide ? 94 : 82;
@@ -4729,7 +4884,6 @@ function SpectatorBattleScreen() {
         <div className="battle-shade" />
         <header className="spectator-heading">
           <div>
-            <span>AFTER MATCH / SPECIAL CARD</span>
             <h1>次の試合で、取り返す？</h1>
             <p>準決勝・他選手二対二。観戦だけでも構いません。</p>
           </div>
@@ -4784,7 +4938,7 @@ function SpectatorBattleScreen() {
         </section>
         <footer className="spectator-bet-dock">
           <div>
-            <span>BET</span>
+            <span>賭け金</span>
             <strong>{stake === 0 ? "観戦のみ" : money(stake)}</strong>
           </div>
           <div className="segmented-control spectator-stakes">
@@ -4846,7 +5000,7 @@ function SpectatorBattleScreen() {
           </div>
           {spectator.status === "watching" && (
             <button className="spectator-skip" onClick={skipResolution}>
-              <FastForward size={16} /> SKIP
+              <FastForward size={16} /> 決着へ
             </button>
           )}
         </div>
@@ -4859,7 +5013,7 @@ function SpectatorBattleScreen() {
               <strong>{spectatorTeamMeta[side].name}</strong>
               <div className="spectator-team-hp">
                 <i style={{ width: `${teamHp(side)}%` }} />
-                <b>TEAM HP {teamHp(side)}%</b>
+                <b>残りHP {teamHp(side)}%</b>
               </div>
             </header>
             <div className="spectator-lineup">
@@ -4890,7 +5044,7 @@ function SpectatorBattleScreen() {
       </section>
       <footer className={`spectator-ticket spectator-ticket--${spectator.status}`}>
         <div>
-          <span>MY TICKET</span>
+          <span>応援中</span>
           <strong>{spectatorTeamMeta[spectator.selectedSide ?? "azure"].name}</strong>
           <b>{spectator.stake === 0 ? "応援のみ" : `${money(spectator.stake)} → ${money(spectator.payout)}`}</b>
         </div>
@@ -4919,7 +5073,7 @@ function SpectatorBattleScreen() {
         ) : (
           <div className="spectator-live-mark">
             <span />
-            LIVE
+            試合中
           </div>
         )}
       </footer>
@@ -4936,6 +5090,7 @@ function BattleEntryFighter({ unit }: { unit?: BattleUnit }) {
         <img
           src={visual.battle}
           alt={visual.alt}
+          className={battleArtNeedsMirror(visual, unit.side) ? "is-mirrored" : undefined}
           style={{ objectPosition: `${visual.focusX}% bottom` }}
         />
       ) : (
@@ -5036,6 +5191,7 @@ function BattleScreen({
   const [presentationImpacted, setPresentationImpacted] = useState(false);
   const [resolutionStep, setResolutionStep] = useState(0);
   const [showLogHistory, setShowLogHistory] = useState(false);
+  const [resultDetailsOpen, setResultDetailsOpen] = useState(false);
   const [visualHp, setVisualHp] = useState<Record<string, number>>({});
   const [visualMp, setVisualMp] = useState<Record<string, number>>({});
   const soundedEventRef = useRef<string>();
@@ -5476,6 +5632,7 @@ function BattleScreen({
       battleIntroIndex === null &&
       presentationEvents.length === 0,
   );
+  const entrustForecast = battle ? forecastEntrust(battle) : undefined;
 
   useEffect(() => {
     if (
@@ -5653,6 +5810,11 @@ function BattleScreen({
   const resultStarVisual = resultStar
     ? characterVisuals[resultStar.fighterId]
     : undefined;
+  const defeatLead =
+    battle.enemy.find((unit) => !unit.defeated) ?? battle.enemy[0];
+  const defeatLeadVisual = defeatLead
+    ? battleVisualFor(defeatLead.fighterId)
+    : undefined;
   const totalSkillUses = Object.values(battle.metrics.skillUses ?? {}).reduce(
     (total, count) => total + count,
     0,
@@ -5685,7 +5847,7 @@ function BattleScreen({
         battle.status === "decision" && !narrating ? "is-awaiting-command" : ""
       } ${narrating ? "is-presenting-action" : ""} ${
         visiblePresentation && presentationStriking ? "is-striking" : ""
-      }`}
+      } ${visiblePresentation?.kind === "trait" ? "is-presenting-trait" : ""}`}
     >
       <img
         src="/assets/battle/arena-daylight-v2.png"
@@ -5708,7 +5870,7 @@ function BattleScreen({
               <div className="battle-entry-gate__fighter battle-entry-gate__fighter--ally">
                 <BattleEntryFighter unit={battle.player[0]} />
               </div>
-              <b>VS</b>
+              <b>対</b>
               <div className="battle-entry-gate__fighter battle-entry-gate__fighter--enemy">
                 <BattleEntryFighter unit={battle.enemy[0]} />
               </div>
@@ -5724,30 +5886,6 @@ function BattleScreen({
                 </p>
               </header>
 
-              <ol className="battle-entry-gate__steps">
-                <li>
-                  <b>1</b>
-                  <div>
-                    <strong>まず選手紹介を聞く</strong>
-                    <span>相手と味方の名前、役割、HPを実況が順に紹介。</span>
-                  </div>
-                </li>
-                <li>
-                  <b>2</b>
-                  <div>
-                    <strong>攻撃と結果を一つずつ見る</strong>
-                    <span>誰の攻撃か、何ダメージか、能力がどう変わったかを追う。</span>
-                  </div>
-                </li>
-                <li>
-                  <b>3</b>
-                  <div>
-                    <strong>静寂が来たら指示する</strong>
-                    <span>「勝負どころ」だけ、ミミが一度声を届ける。</span>
-                  </div>
-                </li>
-              </ol>
-
               <footer>
                 <div>
                   <Info size={19} />
@@ -5757,9 +5895,7 @@ function BattleScreen({
                 </div>
                 <div>
                   <MousePointerClick size={19} />
-                  <span>
-                    AUTOなら選手紹介から技、ダメージ、決着まで自動で進みます。いつでも止められます。
-                  </span>
+                  <span>歓声が止まった時だけ、ミミの指示を選びます。</span>
                 </div>
                 <div className="battle-entry-gate__actions">
                   <button onClick={() => startBattle("auto")}>
@@ -5808,7 +5944,6 @@ function BattleScreen({
           <i className={flowLabel === "押している" ? "is-active" : ""} />
         </div>
         <strong>{flowLabel}</strong>
-        <small>{playbackGuide}</small>
       </div>
       <motion.section
         className="battle-stage"
@@ -5827,27 +5962,23 @@ function BattleScreen({
           <span className="battle-stage__center" />
         </div>
         <AnimatePresence>
-          {battle.status === "decision" && !narrating && battle.enemyTell && (
+          {battle.status === "decision" && !narrating && battle.enemyCue && (
             <motion.aside
-              className={`battle-enemy-tell-cinematic battle-enemy-tell-cinematic--${battle.enemyTell}`}
+              className="battle-enemy-tell-cinematic battle-enemy-tell-cinematic--clue"
               initial={{ opacity: 0, x: -24, scale: 0.96 }}
               animate={{ opacity: 1, x: 0, scale: 1 }}
               exit={{ opacity: 0, x: -12 }}
-              aria-label="相手の予兆"
+              aria-label="相手の仕草と台詞"
             >
               <Compass size={22} />
               <div>
-                <span>相手の構え</span>
-                <strong>
-                  {battle.enemyTell === "attack"
-                    ? "正面から踏み込んでくる"
-                    : battle.enemyTell === "guard"
-                      ? "重心を落として待っている"
-                      : "魔力を隠すように息を止めた"}
-                </strong>
-                {battle.enemyThreat && <small>{battle.enemyThreat}</small>}
+                <span>{battle.enemyCue.speaker}の仕草</span>
+                <strong>{battle.enemyCue.gesture}</strong>
+                <small className="battle-enemy-cue__line">「{battle.enemyCue.line}」</small>
                 {battle.enemyTellConfidence && (
-                  <small>読みの確度 {battle.enemyTellConfidence}%</small>
+                  <small className="battle-enemy-cue__confidence">
+                    本心の確度 {battle.enemyTellConfidence}%
+                  </small>
                 )}
               </div>
             </motion.aside>
@@ -5882,7 +6013,6 @@ function BattleScreen({
           >
             {paused ? <Play size={17} fill="currentColor" /> : <Pause size={17} />}
           </button>
-          <span className="battle-playback__label">文字送り</span>
           <div className="segmented-control segmented-control--dark battle-playback__mode">
             {(
               [
@@ -5935,7 +6065,7 @@ function BattleScreen({
           </button>
         </div>
         <div className="battle-turn-order" aria-label="行動順">
-          <span>NEXT</span>
+          <span>行動順</span>
           {[...battle.player, ...battle.enemy]
             .filter((unit) => unit.hp > 0)
             .sort(
@@ -6041,7 +6171,6 @@ function BattleScreen({
         </AnimatePresence>
         <div className={`battle-side battle-side--player battle-side--count-${battle.player.length}`}>
           <header>
-            <span>PLAYER TEAM</span>
             <strong>ミミのチーム</strong>
           </header>
           <div className="battle-squad">
@@ -6083,9 +6212,19 @@ function BattleScreen({
                   opacity: 0,
                   x: featuredUnit.side === "player" ? -34 : 34,
                   scale: 0.94,
+                  scaleX: battleArtNeedsMirror(featuredVisual, featuredUnit.side) ? -1 : 1,
                 }}
-                animate={{ opacity: 1, x: 0, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.97 }}
+                animate={{
+                  opacity: 1,
+                  x: 0,
+                  scale: 1,
+                  scaleX: battleArtNeedsMirror(featuredVisual, featuredUnit.side) ? -1 : 1,
+                }}
+                exit={{
+                  opacity: 0,
+                  scale: 0.97,
+                  scaleX: battleArtNeedsMirror(featuredVisual, featuredUnit.side) ? -1 : 1,
+                }}
                 transition={{ duration: 0.22, ease: "easeOut" }}
               />
             )}
@@ -6205,11 +6344,6 @@ function BattleScreen({
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
               >
-                <span>
-                  {battle.decisionKind === "turningPoint"
-                    ? "TURNING POINT"
-                    : "MANAGER WINDOW"}
-                </span>
                 <strong>
                   {battle.decisionKind === "turningPoint"
                     ? "場内が静まり、ミミの声だけが届く"
@@ -6232,7 +6366,6 @@ function BattleScreen({
 
         <div className={`battle-side battle-side--enemy battle-side--count-${battle.enemy.length}`}>
           <header>
-            <span>OPPONENT</span>
             <strong>{match.opponentName}</strong>
           </header>
           <div className="battle-squad">
@@ -6337,11 +6470,6 @@ function BattleScreen({
         >
           <div className="command-heading">
             <div>
-              <span>
-                {battle.decisionKind === "turningPoint"
-                  ? "ONE CALL ONLY"
-                  : "MANAGER CALL"}
-              </span>
               <h3>{battle.decisionReason}</h3>
             </div>
             {battlePlayback !== "manual" && (
@@ -6388,7 +6516,7 @@ function BattleScreen({
               >
                 <Compass size={23} />
                 <strong>読む</strong>
-                <span>的中で対抗、外すと相手が勢いづく</span>
+                <span>的中で対抗、外すと敵の攻撃・魔力↑</span>
                 <small>残り {battle.readUses}</small>
               </button>
               <button
@@ -6421,8 +6549,14 @@ function BattleScreen({
               <button onClick={() => intervene({ type: "pass" })}>
                 <UserRoundCheck size={23} />
                 <strong>任せる</strong>
-                <span>信じて任せる。勢いが少し上がる</span>
-                <small>信頼 {battle.teamTrust}</small>
+                <span>{entrustForecast?.summary ?? "三人の判断へ任せる"}</span>
+                <small>
+                  {entrustForecast?.grade === "strong"
+                    ? "好機"
+                    : entrustForecast?.grade === "risky"
+                      ? "危険"
+                      : "安定"}
+                </small>
               </button>
             </div>
           )}
@@ -6454,8 +6588,9 @@ function BattleScreen({
           )}
           {command === "read" && (
             <p className="command-note">
-              構えの確度はおよそ{battle.enemyTellConfidence ?? 75}%。的中なら対抗策が発動、
-              外すと勝負どころを逃し、相手の攻撃・魔力が上がる。
+              仕草と台詞から次の狙いを推理します。手掛かりの確度はおよそ
+              {battle.enemyTellConfidence ?? 75}%。的中なら対抗策が発動、
+              外すと敵全体の攻撃と魔力が上がります。
             </p>
           )}
           {command === "read" && (
@@ -6466,10 +6601,10 @@ function BattleScreen({
                   onClick={() => intervene({ type: "read", prediction })}
                 >
                   {prediction === "attack"
-                    ? "通常攻撃"
+                    ? "正面突破を狙う"
                     : prediction === "guard"
-                      ? "防御"
-                      : "技・妨害"}
+                      ? "守って機を待つ"
+                      : "大技・妨害を仕込む"}
                 </button>
               ))}
             </div>
@@ -6577,10 +6712,23 @@ function BattleScreen({
                       resultStarVisual.battleCutInPosition ?? "center bottom",
                   }}
                 />
-                <figcaption>
-                  <span>最多使用技</span>
-                  <strong>{mostUsedSkill?.name ?? "記録なし"}・{topSkillUse?.[1] ?? 0}回</strong>
-                </figcaption>
+              </motion.figure>
+            )}
+            {battle.status === "lost" && defeatLead && defeatLeadVisual && (
+              <motion.figure
+                className="result-star-art-v3 result-rival-art-v3 has-standing-art"
+                initial={{ opacity: 0, x: 34, scale: 1.04 }}
+                animate={{ opacity: 1, x: 0, scale: 1 }}
+                transition={{ duration: 0.65, ease: "easeOut" }}
+              >
+                <img
+                  src={defeatLeadVisual.battleCutIn ?? defeatLeadVisual.battle}
+                  alt={`${defeatLead.name}の勝利イラスト`}
+                  style={{
+                    objectPosition:
+                      defeatLeadVisual.battleCutInPosition ?? "center bottom",
+                  }}
+                />
               </motion.figure>
             )}
             <div className="result-crest-v2">
@@ -6591,45 +6739,54 @@ function BattleScreen({
               )}
             </div>
             <div className="result-title-v2">
-              <span>
-                {battle.status === "won" ? "OFFICIAL VICTORY" : "MATCH ENDED"}
-              </span>
               <h2>{battle.status === "won" ? "勝利" : "敗北"}</h2>
               <p>
                 {battle.status === "won"
-                  ? "実況「勝者、ミミのチーム！　驚きの戦いでした！」"
-                  : `実況「勝者、${match.opponentName}！　最後まで目の離せない戦いでした！」`}
+                  ? `歓声の中、${resultStar?.name ?? "選手たち"}がミミを見つけ、小さく拳を掲げた。`
+                  : `歓声を背に、${defeatLead?.name ?? match.opponentName}がこちらを振り返る。その目は、もう再戦を待っている。`}
               </p>
             </div>
             <div className="result-match-v2">
               <span>{match.name}</span>
               <b>ミミのチーム</b>
-              <small>vs {match.opponentName}</small>
+              <small>対 {match.opponentName}</small>
             </div>
           </header>
-          <div className="result-insights-v2 result-insights-v2--compact">
-            <section className="result-highlight-v2">
-              <header>
-                <span>MATCH DATA</span>
-                <strong>試合データ</strong>
-              </header>
-              <div className="result-stat-grid">
-                {battleStats.map((stat) => (
-                  <div key={stat.label}>
-                    <span>{stat.label}</span>
-                    <strong>{stat.value.toLocaleString("ja-JP")}</strong>
-                    <small>{stat.unit}</small>
-                  </div>
-                ))}
-              </div>
-            </section>
-          </div>
+          {resultDetailsOpen && (
+            <motion.div
+              className="result-insights-v2 result-insights-v2--compact"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+            >
+              <section className="result-highlight-v2">
+                <header>
+                  <strong>試合記録</strong>
+                  <small>
+                    最多使用技　{mostUsedSkill?.name ?? "記録なし"}・{topSkillUse?.[1] ?? 0}回
+                  </small>
+                </header>
+                <div className="result-stat-grid">
+                  {battleStats.map((stat) => (
+                    <div key={stat.label}>
+                      <span>{stat.label}</span>
+                      <strong>{stat.value.toLocaleString("ja-JP")}</strong>
+                      <small>{stat.unit}</small>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            </motion.div>
+          )}
           <footer className="result-footer-v2">
             <div>
-              <span>NEXT</span>
-              <strong>
-                試合結果を記録して次へ
-              </strong>
+              <button
+                className="result-data-toggle-v2"
+                onClick={() => setResultDetailsOpen((open) => !open)}
+                aria-expanded={resultDetailsOpen}
+              >
+                <ScrollText size={16} />
+                {resultDetailsOpen ? "余韻に戻る" : "試合記録を見る"}
+              </button>
               {run.spectatorMatch?.status === "dismissed" && (
                 <small>
                   観戦結果: {run.spectatorMatch.payout > 0
@@ -6650,7 +6807,7 @@ function BattleScreen({
                 </button>
               )}
               <button onClick={() => onSettled(settleBattle())}>
-                {battle.status === "lost" ? "試合を終える" : "結果を確定"}
+                {battle.status === "lost" ? "試合を終える" : "控室へ戻る"}
                 <ChevronRight size={19} />
               </button>
             </div>
@@ -6855,6 +7012,7 @@ type MemoryGalleryEntry = {
   title: string;
   caption: string;
   image: string;
+  fit?: "cover" | "contain";
   unlock: "always" | "started" | "arena" | "gidono" | "gidono-free";
 };
 
@@ -6899,6 +7057,7 @@ const memoryGalleryEntries: MemoryGalleryEntry[] = [
     title: "三百年前の限定予約",
     caption: "見た目は封印されたスライム。予約名は、裏ボスのそれだった。",
     image: "/assets/story/gidono-sealed-neutral.png",
+    fit: "contain",
     unlock: "gidono",
   },
   {
@@ -6906,6 +7065,7 @@ const memoryGalleryEntries: MemoryGalleryEntry[] = [
     title: "食べたかったもの",
     caption: "大魔王の後に現れるはずの存在にも、楽しみにしていた味がある。",
     image: "/assets/story/gidono-sealed-soft.png",
+    fit: "contain",
     unlock: "gidono",
   },
   {
@@ -6913,9 +7073,14 @@ const memoryGalleryEntries: MemoryGalleryEntry[] = [
     title: "封印の外側",
     caption: "命令ではなく、本人が選んだ姿で隣に立つ。",
     image: "/assets/story/gidono-unsealed-soft.png",
+    fit: "contain",
     unlock: "gidono-free",
   },
 ];
+
+const narrativeMemoryGalleryEntries = galleryEntriesFromNarrativeBlocks(
+  legacyNarrativeBlocks,
+);
 
 function ArchiveScreen({
   onClose,
@@ -6934,6 +7099,24 @@ function ArchiveScreen({
     profile.liberatedCollection[0],
   );
   const [selectedGalleryId, setSelectedGalleryId] = useState<string>();
+  const narrativeGalleryEntries = useMemo(
+    () =>
+      narrativeMemoryGalleryEntries.filter((entry) =>
+        isNarrativeGalleryEntryUnlocked(entry, {
+          seenEvents: profile.seenEvents,
+          eventHistory: run?.eventHistory,
+          flags: [...(profile.seenChoices ?? []), ...(run?.flags ?? [])],
+          liberatedCharacterIds: profile.liberatedCollection,
+        }),
+      ),
+    [
+      profile.liberatedCollection,
+      profile.seenChoices,
+      profile.seenEvents,
+      run?.eventHistory,
+      run?.flags,
+    ],
+  );
   const selectedTeam =
     profile.hallOfFame.find((team) => team.id === selectedTeamId) ??
     profile.hallOfFame[0];
@@ -6974,14 +7157,18 @@ function ArchiveScreen({
     (entry) =>
       entry.id === selectedGalleryId && isGalleryUnlocked(entry),
   );
+  const selectedNarrativeGallery = narrativeGalleryEntries.find(
+    (entry) => entry.id === selectedGalleryId,
+  );
+  const selectedMemory = selectedNarrativeGallery ?? selectedGallery;
   useEffect(() => {
-    if (!selectedGallery) return;
+    if (!selectedMemory) return;
     const close = (event: KeyboardEvent) => {
       if (event.key === "Escape") setSelectedGalleryId(undefined);
     };
     window.addEventListener("keydown", close);
     return () => window.removeEventListener("keydown", close);
-  }, [selectedGallery]);
+  }, [selectedMemory]);
   useEffect(() => setTab(initialTab), [initialTab]);
   return (
     <main className="archive-screen content-page">
@@ -7288,11 +7475,14 @@ function ArchiveScreen({
                 <strong>{selectedCollection.traitName}</strong>
                 <span>{selectedCollection.traitText}</span>
               </div>
-              <p>
-                {selectedCollection.scenes.epilogue.lines
-                  .map((line) => line.text)
-                  .join(" ")}
-              </p>
+              <div className="collection-detail__story" aria-label="その後の記録">
+                {selectedCollection.scenes.epilogue.lines.map((line, index) => (
+                  <p key={`${selectedCollection.id}-memory-${index}`}>
+                    <b>{line.speaker ?? (line.kind === "thought" ? "ミミの記憶" : "記録")}</b>
+                    <span>{line.text}</span>
+                  </p>
+                ))}
+              </div>
             </section>
           )}
         </>
@@ -7308,11 +7498,30 @@ function ArchiveScreen({
             </p>
           </section>
           <section className="memory-gallery-grid">
+            {narrativeGalleryEntries.map((entry, index) => (
+              <button
+                className="is-unlocked"
+                key={entry.id}
+                onClick={() => setSelectedGalleryId(entry.id)}
+                aria-label={`${entry.title}を大きく見る`}
+              >
+                <img src={entry.image} alt="" />
+                <span className="memory-gallery-grid__index">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <span className="memory-gallery-grid__copy">
+                  <strong>{entry.title}</strong>
+                  <small>{entry.chapter}</small>
+                </span>
+              </button>
+            ))}
             {memoryGalleryEntries.map((entry, index) => {
               const unlocked = isGalleryUnlocked(entry);
               return (
                 <button
-                  className={unlocked ? "is-unlocked" : "is-locked"}
+                  className={`${unlocked ? "is-unlocked" : "is-locked"}${
+                    entry.fit === "contain" ? " is-contain" : ""
+                  }`}
                   key={entry.id}
                   disabled={!unlocked}
                   onClick={() => setSelectedGalleryId(entry.id)}
@@ -7330,7 +7539,7 @@ function ArchiveScreen({
                     </span>
                   )}
                   <span className="memory-gallery-grid__index">
-                    {String(index + 1).padStart(2, "0")}
+                    {String(narrativeGalleryEntries.length + index + 1).padStart(2, "0")}
                   </span>
                   <span className="memory-gallery-grid__copy">
                     <strong>{unlocked ? entry.title : "まだ見ていない景色"}</strong>
@@ -7343,22 +7552,19 @@ function ArchiveScreen({
             })}
           </section>
           <p className="memory-gallery-count">
-            {
-              memoryGalleryEntries.filter((entry) =>
-                isGalleryUnlocked(entry),
-              ).length
-            }
-            /{memoryGalleryEntries.length} 解放
+            {narrativeGalleryEntries.length} CG / {memoryGalleryEntries.filter((entry) =>
+              isGalleryUnlocked(entry),
+            ).length} BASIC
           </p>
         </>
       )}
       <AnimatePresence>
-        {selectedGallery && (
+        {selectedMemory && (
           <motion.div
             className="memory-lightbox"
             role="dialog"
             aria-modal="true"
-            aria-label={selectedGallery.title}
+            aria-label={selectedMemory.title}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -7370,11 +7576,11 @@ function ArchiveScreen({
               exit={{ opacity: 0, scale: 0.985 }}
               onMouseDown={(event) => event.stopPropagation()}
             >
-              <img src={selectedGallery.image} alt={selectedGallery.title} />
+              <img src={selectedMemory.image} alt={selectedMemory.title} />
               <figcaption>
-                <span>MEMORY</span>
-                <strong>{selectedGallery.title}</strong>
-                <p>{selectedGallery.caption}</p>
+                <span>{selectedNarrativeGallery?.chapter ?? "MEMORY"}</span>
+                <strong>{selectedMemory.title}</strong>
+                <p>{selectedMemory.caption}</p>
               </figcaption>
               <button
                 className="icon-button memory-lightbox__close"

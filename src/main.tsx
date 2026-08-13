@@ -6,6 +6,8 @@ import "./styles/battle-entry-gate.css";
 import "./styles/battle-decision-dock.css";
 import "./styles/battle-broadcast.css";
 import "./styles/system-commercial.css";
+import "./styles/outcome-cinematic.css";
+import "./styles/battle-native-800.css";
 
 const GAME_CANVAS_QUERY = "gameCanvas";
 

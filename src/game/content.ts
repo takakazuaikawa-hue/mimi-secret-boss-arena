@@ -42,6 +42,7 @@ const skillSchema = z.object({
 const choiceSchema = z.object({
   label: z.string().min(1),
   result: z.string().min(1),
+  outcomeHeadline: z.string().min(1).optional(),
   trust: z.number().min(-100).max(100),
   ownership: z.number().min(-100).max(100),
   money: z.number().optional(),
@@ -56,6 +57,14 @@ const choiceSchema = z.object({
   intent: z.string().min(1).optional(),
   promise: z.string().min(1).optional(),
   memory: z.string().min(1).optional(),
+  outcomeVisual: z
+    .object({
+      src: z.string().regex(/^\/assets\//),
+      alt: z.string().min(1),
+      focusX: z.number().min(0).max(100).optional(),
+      focusY: z.number().min(0).max(100).optional(),
+    })
+    .optional(),
 });
 
 const spriteSchema = z.object({

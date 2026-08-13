@@ -12,7 +12,12 @@ import {
   matchesForRoute,
 } from "../data/matches";
 import { getRouteDefinition } from "../data/routes";
-import { applyIntervention, createBattle, resolveBattleRound } from "./battle";
+import {
+  applyIntervention,
+  createBattle,
+  inferEnemyIntentFromCue,
+  resolveBattleRound,
+} from "./battle";
 import { createRandom } from "./rng";
 import type { RunState, WeeklyAction } from "./types";
 
@@ -144,10 +149,10 @@ const auditBattles = (
                   type: "cheer",
                   order: "advance",
                 })
-              : managed && battle.enemyTell && battle.readUses > 0
+              : managed && battle.enemyCue && battle.readUses > 0
                 ? applyIntervention(battle, {
                     type: "read",
-                    prediction: battle.enemyTell,
+                    prediction: inferEnemyIntentFromCue(battle),
                   })
                 : applyIntervention(battle, { type: "pass" });
         } else {

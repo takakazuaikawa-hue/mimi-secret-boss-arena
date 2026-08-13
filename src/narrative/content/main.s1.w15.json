@@ -1,0 +1,180 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s1.w15",
+  "kind": "opening",
+  "title": "雨の日、傘は三百本",
+  "summary": "世界ごとに雨の意味が違い、館内が傘と水たまりで大騒ぎ",
+  "ownership": {
+    "arcId": "main.stage1"
+  },
+  "trigger": {
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "正面玄関の傘置き場",
+    "assets": [
+      {
+        "id": "main.s1.w15.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-casino-cafe-rain.png",
+        "alt": "正面玄関の傘置き場の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s1.w15.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "main.s1.w15.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.w15.node.direction.002",
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w15.node.line.001",
+      "lineId": "main.s1.w15.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "十五週目。朝から地上の雨だった。私が玄関のマットを敷き直した途端、海底王国の団体が外へ走り出た。傘を差し出したら、二十人全員に断られた。「降ってくるの!?」「上から!?」——海底に雨はない。水の中に水は降らない。団体は庇の外で空を仰ぎ、拍手した。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w15.node.line.002",
+      "lineId": "main.s1.w15.line.002",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "あの、お風邪を……いえ、そうですね。楽しいですよね、上から降ってくるの。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w15.node.line.003",
+      "lineId": "main.s1.w15.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "予備の傘立てを引きずってきたら、玄関にもう傘が三百本立っていた。雲上修道院の一行である。あそこは毎日雨だから、彼らは借りる側ではなく貸す側で来館する。私の傘立ては三秒で埋まった。修道士が祈祷札を切り分けて番号札にし、勝手に貸出所を開く。「一本につき、感謝を一回」。券売のおじさんが商売敵の顔をした。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w15.node.line.004",
+      "lineId": "main.s1.w15.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "灰の王都から来た客が、柱の陰から出てこない。傘を一本抜いて持っていくと、客は柱の裏へ半歩下がった。あの街では、空から降るのは灰である。落ちてくるものは、たいてい悪い知らせだ。私が次の言葉を探しているうちに、館内放送のお姉さんが涼やかに告げた。「本日、天は水を放てり。全戦線、傘の下へ退くべし」。客はもう半歩下がった。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w15.node.line.005",
+      "lineId": "main.s1.w15.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私はコップを一つ持って、竜の紳士の席へ行った。飲んでみてほしい、と頼んだ。紳士は黙って庇の外へ出て、なみなみと雨を受け、一口飲んだ。「飲めます」。それだけ言って戻り、モーニングの卵を固めで頼んだ。灰の客が柱から半歩出た。あと半歩が、どうしても出ない。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w15.node.line.006",
+      "lineId": "main.s1.w15.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私がモップを取りに走ったころには、床は水たまりだらけになっていた。経理課チームが法被の裾で滑り、警備隊長が転びかけて、そのまま一句詠んだ。「水たまり　踏んで確かむ　春の底」。季語が合っているのか誰も知らない。そしてモップは一本しかない。経理課が握り、警備が引き、食堂のおばちゃんの手も伸びた。誰かが銅鑼の紐に手をかけた。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w15.node.line.007",
+      "lineId": "main.s1.w15.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "濡れていない傘が一本だけ、傘置き場の端に残っていた。遺失物へ届けると、局員さんは札を書いて柄に括り、いちばん目立つ場所へ立てた。「持ち主　まだ濡れていない人」。柱の陰から、視線が一つこちらを向いた。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w15.node.line.008",
+      "lineId": "main.s1.w15.line.008",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "傘は三百本。水たまりは数えるのをやめました。柱の陰は、あと半歩。……新人一人だと、行ける先が一つなんですよね。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "choice",
+      "id": "main.s1.w15.node.choice.001",
+      "choices": [
+        {
+          "id": "main.s1.w15.choice.001",
+          "label": "柱の陰の客と、雨へ出る",
+          "result": "手を引いて庇の外へ出た。客は目を閉じたまま掌を上に向け、しばらく黙って、それから笑い出した。「灰じゃない」。海底の団体が拍手し、雲上の修道士が傘を差し出してきたが、私と客はそろって断った。客は二十分戻らず、宿へ仲間を呼びに走った。翌週の予約表に、灰の王都から団体が三組入っている。全員、雨の日希望と書いてある。",
+          "intent": "怖い雨を、飲める雨に変える",
+          "promise": "灰の王都からの客足が増え、館内の評判が上がる。",
+          "memory": "灰の王都の客が「初めて雨に濡れた日」としてミミを覚えている。",
+          "tone": "tender",
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
+          "goto": "main.s1.w15.node.end.001"
+        },
+        {
+          "id": "main.s1.w15.choice.002",
+          "label": "モップの取り合いを、銅鑼で決める",
+          "result": "私が銅鑼を鳴らした。三十秒、腕相撲、勝った方が拭く。勝った経理課は「これは勝者の権利だ」とモップを掲げ、法被の裾ごと床を磨いた。水を吸った法被は倍に重くなり、そろばんが二丁沈んだ。床は鏡になった。仕上がりを見に来た警備隊長が、最初に滑って転ぶ。鏡には庇の外の雨が映っている。柱の陰の客が出てきて、映ったほうの雨を踏んでいた。まだ、本物には濡れていない。",
+          "intent": "モップの取り合いを三十秒で終わらせる",
+          "promise": "床が磨き上がり、開館の支度が整う。",
+          "memory": "経理課チームが「銅鑼を鳴らした新人」としてミミを覚えている。",
+          "tone": "comic",
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 1
+            }
+          ],
+          "goto": "main.s1.w15.node.end.001"
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "main.s1.w15.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_STAGE1_PLAN.md",
+    "authorNote": "第15週。この闘技場の一シーズンを追うメインストーリー。人物の場面は別枠で再生される。",
+    "legacyGeneratedIds": false
+  }
+}

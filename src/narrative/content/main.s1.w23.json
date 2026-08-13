@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s1.w23",
+  "kind": "opening",
+  "title": "支度という名の祭り",
+  "summary": "全部署が本気を出し、準備そのものが祭りになる",
+  "ownership": {
+    "arcId": "main.stage1"
+  },
+  "trigger": {
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "闘技場の中庭",
+    "assets": [
+      {
+        "id": "main.s1.w23.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-loading-dock-day-v1.png",
+        "alt": "闘技場の中庭の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s1.w23.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "main.s1.w23.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.w23.node.direction.002",
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w23.node.line.001",
+      "lineId": "main.s1.w23.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "決勝週の準備表を中庭の柱に貼った。画鋲を一本刺しただけだ。それを見ていた館内放送のお姉さんが、「決勝週の支度、ここに始まる」と読み上げた。声は涼やかで、中身は完全に軍記物だった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w23.node.line.002",
+      "lineId": "main.s1.w23.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "三十分後、食堂のおばちゃんが中庭に屋台を三十軒建てていた。木槌の音が拍子になって、両替所の竜の紳士がそれに合わせて足を踏んでいる。「卵は固めで焼きます」とおばちゃんが宣言し、竜が深くうなずいた。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w23.node.line.003",
+      "lineId": "main.s1.w23.line.003",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "三十軒って、どこから出てきたんですか",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w23.node.line.004",
+      "lineId": "main.s1.w23.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「倉庫」。おばちゃんは一言で片づけた。倉庫の扉はまだ開いていて、中から幟がどんどん生えてくる。幽霊のご夫妻が新聞を二部抱えたまま、幟の列を数えていた。二部目は数え直し用らしい。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w23.node.line.005",
+      "lineId": "main.s1.w23.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "警備隊長が中庭を横切り、私の前で止まった。「準備表、拝見しました」。右手を上げると、隊員二十人の槍が一斉に傾いて、傾いたまま止まる。「隊列演舞、名は『銅鑼を待つ』」。隊長が一句詠んだ。「銅鑼待つや 槍二十本 汗の粒」。隊員が石突きで拍子を取った。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w23.node.line.006",
+      "lineId": "main.s1.w23.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "経理課チームが法被姿で現れ、壁に板を打ちつけはじめた。そろばんが縦に百二十個並んでいる。玉を弾くと文字が浮かぶ。手作りの電光掲示板だ。課長が最下段を一つ弾くと『本日 大入』と浮かび、まだ誰もいない中庭が拍手した。課長はそこで手を止め、私に場所を空けた。「上の段は、貼り紙をした人が弾く決まりでして」",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w23.node.line.007",
+      "lineId": "main.s1.w23.line.007",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "これ、準備ですよね。もう本番みたいなんですけど",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w23.node.line.008",
+      "lineId": "main.s1.w23.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "券売のおじさんが賭け札を刷りながら答えた。「準備が一番売れる」。刷りたての札には『どの部署が一番派手か』と書いてある。胴元の欄に私の名前があった。聞いていない。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w23.node.line.009",
+      "lineId": "main.s1.w23.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "中庭の隅で、局員さんが遺失物の箱を抱えていた。私が覗き込んだ瞬間、箱の中で銅鑼が一度だけ鳴った。局員さんと目が合う。二人とも、まだ箱に手を入れていない。",
+      "emotion": "tension"
+    },
+    {
+      "type": "choice",
+      "id": "main.s1.w23.node.choice.001",
+      "choices": [
+        {
+          "id": "main.s1.w23.choice.001",
+          "label": "屋台の味見を引き受ける",
+          "result": "私が一軒目の串を齧った瞬間、おばちゃんが手を挙げた。「味見係、決定」。二軒目から三十軒目までが一斉に串を突き出す。端から順に齧った。二十七軒目には竜の紳士が並んでいて、自分の卵を差し出してきた。固めだった。おいしかった。残り三軒は明日に回してもらう。翌朝、屋台の看板全部に『味見済』の焼き印が入っていた。誰が入れたのかは、誰も言わない。",
+          "intent": "祭りの味を先に確かめる",
+          "promise": "全屋台の味が私の舌で揃い、客足が伸びる",
+          "memory": "食堂のおばちゃんが、味見係は私だと決めている",
+          "tone": "comic",
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
+          "goto": "main.s1.w23.node.end.001"
+        },
+        {
+          "id": "main.s1.w23.choice.002",
+          "label": "電光掲示板の上の段を弾く",
+          "result": "私が上の段の玉を三つ弾いた。板に『決勝週まで あと七日』と浮かび、中庭が沸いた。調子に乗って四つ目を弾いたら『帰りに雨』と出た。頼んでいない天気予報だ。五分後、本当に降った。警備隊長が槍を傾けて雨を受け、隊員二十人が同じ角度に傾いた。傘の代わりだと言い張っている。掲示板は今も、雨の日だけ勝手に玉が動く。",
+          "intent": "経理課の発明に乗ってみる",
+          "promise": "街中が掲示板を見上げ、決勝週の熱が上がる",
+          "memory": "経理課チームが、上の段の初弾を弾いたのは私だと記録した",
+          "tone": "wild",
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 3
+            }
+          ],
+          "goto": "main.s1.w23.node.end.001"
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "main.s1.w23.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_STAGE1_PLAN.md",
+    "authorNote": "第23週。この闘技場の一シーズンを追うメインストーリー。人物の場面は別枠で再生される。",
+    "legacyGeneratedIds": false
+  }
+}

@@ -248,7 +248,17 @@ export const prepareDebugScreen = (
           battle: {
             ...resultRun.battle,
             status: won ? "won" : "lost",
+            turn: won ? resultRun.battle.turn : 6,
             presentationEvents: [],
+            metrics: won
+              ? resultRun.battle.metrics
+              : {
+                  ...resultRun.battle.metrics,
+                  damageDealt: 84,
+                  damageTaken: 213,
+                  healingDone: 46,
+                  criticalHits: 1,
+                },
             player: resultRun.battle.player.map((unit) =>
               won ? unit : { ...unit, hp: 0, defeated: true },
             ),

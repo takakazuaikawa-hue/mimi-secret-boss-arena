@@ -1,0 +1,180 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s1.w21",
+  "kind": "opening",
+  "title": "記録室の棚おろし",
+  "summary": "百年分の帳面を整理し、空の欄を見つける",
+  "ownership": {
+    "arcId": "main.stage1"
+  },
+  "trigger": {
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "記録室",
+    "assets": [
+      {
+        "id": "main.s1.w21.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-contract-archive.png",
+        "alt": "記録室の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s1.w21.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "main.s1.w21.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.w21.node.direction.002",
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w21.node.line.001",
+      "lineId": "main.s1.w21.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ミミが記録室の扉を引いた。蝶番が鳴った途端、棚という棚が歓声を吐き出した。埃ではない。百年前の拍手が、乾いて紙のあいだに挟まっていたのだ。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w21.node.line.002",
+      "lineId": "main.s1.w21.line.002",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "掃除用具より先に、耳栓を借りるべきでした",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w21.node.line.003",
+      "lineId": "main.s1.w21.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ミミが一番上の帳面を開いた。表紙を起こした拍子にそろばんの珠が一つ転がり出て、床で三度跳ねた。百年前、優勝、経理課。勝因の欄は一行だけ、「そろばんで受け止めた」。挟まっていた法被の切れ端は、今の法被と同じ藍色だった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w21.node.line.004",
+      "lineId": "main.s1.w21.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ミミが下の段へ手を伸ばすと、抜いた帳面が湯気を上げた。三百年前の大興行、七日七晩、竜が三頭、両替所が三度品切れ。ミミがめくるたびに芋の匂いが濃くなる。食堂のおばちゃんの先々代が三千個蒸した、と欄外にあった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w21.node.line.005",
+      "lineId": "main.s1.w21.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ミミが湯気ごとその頁を掲げると、匂いに釣られて券売のおじさんが顔を出し、三百年前の倍率をよどみなく諳んじた。「札はうちの爺さんの爺さんが刷った。刷りすぎて、指が黒いまま埋まったそうだ」",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w21.node.line.006",
+      "lineId": "main.s1.w21.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ミミが最後まで繰ると、筆跡が十七回変わった。代々の記録係が、前の人の行の続きから書き始めている。誰も一行も空けていない。その筆が、今週の欄で止まっていた。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w21.node.line.007",
+      "lineId": "main.s1.w21.line.007",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "ここ、私たちの名前が入るところですか",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w21.node.line.008",
+      "lineId": "main.s1.w21.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ミミが問うと、帳面がひとりでに一枚めくれ、空の欄が開いた。館内放送のお姉さんが涼やかな声で「記録室、湯気に注意」と流し、そのまま軍記物の調子で棚の番号を読み上げていく。読み終えて、一言だけ付け足した。「なお来週の頁、一行ぶん、すでに押さえてございます」",
+      "emotion": "resolve"
+    },
+    {
+      "type": "choice",
+      "id": "main.s1.w21.node.choice.001",
+      "choices": [
+        {
+          "id": "main.s1.w21.choice.001",
+          "label": "今週の欄に名前を書く",
+          "result": "ミミが筆を借りて名前を書いた。書いた端から墨が乾き、帳面が一度だけ、ぱん、と鳴った。拍手の音だった。廊下の掲示板に今週の欄の写しが出ると、経理課チームが法被のまま見に来て、「百年前の優勝も藍だ」と主任がそろばんを三回鳴らした。警備隊長が俳句を詠んだ。字余りだった。それでも誰も直さず、帳面の余白に書き足された。",
+          "intent": "歴代と同じ紙に並ぶ",
+          "promise": "名前が代々の続きに載る",
+          "memory": "記録係の帳面が十八人目の筆跡を覚える",
+          "tone": "heroic",
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 3
+            }
+          ],
+          "goto": "main.s1.w21.node.end.001"
+        },
+        {
+          "id": "main.s1.w21.choice.002",
+          "label": "大興行の記録を貼り出す",
+          "result": "ミミが三百年前の頁を写して、両替所の横へ貼った。竜の紳士が卵を固めに頼んだまま立ち止まり、「祖父が観た」と言った。券売のおじさんが倍率を諳んじ、幽霊のご夫妻が新聞を二部そろえて頷く。夕方には紙の前に人だかりができ、食堂のおばちゃんが芋を三十個追加で蒸した。開始の銅鑼が鳴っても列は動かず、館内放送のお姉さんが試合開始を二度読み上げた。",
+          "intent": "過去の熱気を客へ見せる",
+          "promise": "常連が三百年前を語り出す",
+          "memory": "券売のおじさんが当時の倍率を覚えている",
+          "tone": "comic",
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
+          "goto": "main.s1.w21.node.end.001"
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "main.s1.w21.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_STAGE1_PLAN.md",
+    "authorNote": "第21週。この闘技場の一シーズンを追うメインストーリー。人物の場面は別枠で再生される。",
+    "legacyGeneratedIds": false
+  }
+}

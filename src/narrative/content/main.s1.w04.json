@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s1.w04",
+  "kind": "opening",
+  "title": "初陣、七通りの歓声",
+  "summary": "初の公式戦。応援の作法が世界ごとに違い、最前列が水没する",
+  "ownership": {
+    "arcId": "main.stage1"
+  },
+  "trigger": {
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "中央闘技場 第一試合場",
+    "assets": [
+      {
+        "id": "main.s1.w04.asset.background.001",
+        "kind": "background",
+        "path": "/assets/arena-daylight.png",
+        "alt": "中央闘技場 第一試合場の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s1.w04.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "main.s1.w04.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.w04.node.direction.002",
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w04.node.line.001",
+      "lineId": "main.s1.w04.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私が選手入場口の札を「出場」へ裏返した瞬間、竜席が一斉に火を噴いた。歓声だった。天井の散水装置がそれを火事と判断して放水し、二階席が全員ずぶ濡れになった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w04.node.line.002",
+      "lineId": "main.s1.w04.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私が最前列へ手を伸ばして握手を求めると、幽霊のご夫妻の手は私の手をすり抜けた。代わりに、膝の上の新聞が二部そろって同じ間で三度めくれた。これが拍手だと気づくのに、私は三秒かかった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w04.node.line.003",
+      "lineId": "main.s1.w04.line.003",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "ありがとうございます! 今、たぶんすごく拍手されてます!",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w04.node.line.004",
+      "lineId": "main.s1.w04.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私が手を振り返すと、人魚の応援団が返礼に水柱を上げた。最前列が水没した。券売のおじさんが浮き輪を配って回りながら叫んだ。「賭け札は防水ですのでご安心を!」実際、防水だった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w04.node.line.005",
+      "lineId": "main.s1.w04.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私が雲上修道院の一団へ会釈すると、一団は無音のまま祈り返した。同時に、私の靴紐がひとりでに固く結ばれた。ありがたい。ほどけない。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w04.node.line.006",
+      "lineId": "main.s1.w04.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私が砂へ一歩出ると、館内放送のお姉さんが七世界同時通訳を始めた。私の名は人魚語で「はじめて水を知る者」になり、灰の王都では軍記物の一節に化け、竜語では「初陣」が「初焼き」と訳された。竜席が全員、卵を固めでと注文した。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w04.node.line.007",
+      "lineId": "main.s1.w04.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私が「今のは褒められてますか」と聞くと、警備隊長は答えの代わりに一句詠んだ。「初陣や 火にも水にも 礼を言う」。名札の誤植以来、隊長の返事はぜんぶ十七音でできている。褒められたことにした。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w04.node.line.008",
+      "lineId": "main.s1.w04.line.008",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "……賭け札に私の名前が刷ってある。昨日まで私、両替所でチップを数える側だったのに",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w04.node.line.009",
+      "lineId": "main.s1.w04.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "銅鑼が鳴った。私が砂へ二歩目を置いた瞬間、七つの世界が七通りのやり方で私の名前を呼んだ。火と、水と、無音と、軍記物で。三歩目を出したら、たぶん天井が落ちる。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "choice",
+      "id": "main.s1.w04.node.choice.001",
+      "choices": [
+        {
+          "id": "main.s1.w04.choice.001",
+          "label": "七つ全部に返す",
+          "result": "私は火に手を振り、無音の拍手には無音でお辞儀を返し、水柱には濡れたまま両手で万歳を返し、祈りには祈り返した。竜が照れて天井を焦がし、幽霊のご夫妻は新聞を三部に増やし、人魚は最前列をもう一列沈めた。館内放送のお姉さんが「新人職員、七つの世界へ同時に礼を返す」と読み上げ、券売のおじさんはその場で私の勝率に倍率をつけた。よく売れた。",
+          "intent": "どの世界も置き去りにしない",
+          "promise": "七つの世界の常連が、私の名前と礼の形を覚える",
+          "memory": "幽霊のご夫妻が、返ってきたお辞儀の角度を覚えている",
+          "tone": "heroic",
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 3
+            }
+          ],
+          "goto": "main.s1.w04.node.end.001"
+        },
+        {
+          "id": "main.s1.w04.choice.002",
+          "label": "先に浮き輪を投げる",
+          "result": "私は入場を三十秒だけ止めて、最前列へ浮き輪を投げた。経理課チームがそろばんを筏にして漕ぎ出し、食堂のおばちゃんが濡れた客へ熱い汁物を配って回った。人魚の応援団は恐縮して水位を膝まで下げ、この試合場の応援は膝までと決まった。私の初出場は三十秒遅れ、規則が一つ増え、客席の全員が私に汁物を勧めてきた。",
+          "intent": "客を沈めたまま入場しない",
+          "promise": "この試合場に、応援の水位は膝までという決まりが残る",
+          "memory": "人魚の応援団長が、遅らせた三十秒を借りだと思っている",
+          "tone": "pragmatic",
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
+          "goto": "main.s1.w04.node.end.001"
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "main.s1.w04.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_STAGE1_PLAN.md",
+    "authorNote": "第4週。この闘技場の一シーズンを追うメインストーリー。人物の場面は別枠で再生される。",
+    "legacyGeneratedIds": false
+  }
+}

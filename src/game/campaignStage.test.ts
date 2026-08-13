@@ -101,20 +101,23 @@ describe("三段階キャンペーン構造", () => {
     expect(followup.currentEvent?.fighterId).toBe("gidonozeaas");
   });
 
-  it("二段再生: 週2はメイン第2話→ミナトmeetへ連続再生する", () => {
+  it("二段再生: メインの直後に、その週の場面が続けて再生される", () => {
     const base = createRun("normal", "stage-test-main-2", {
       campaignStage: campaignStages[0],
     });
     const week2 = { ...base, week: 2 };
     const withMain = chooseWeeklyAction(week2, "work");
     expect(withMain.currentEvent?.scene.id).toBe("main.s1.ep2");
+    // メインは特定の人物の前座ではない(橋渡しを持たない)
+    expect(withMain.currentEvent?.fighterId).toBeUndefined();
     const resolved = resolveCurrentEvent(withMain, 0);
     const cleared = { ...resolved, lastEventOutcome: undefined };
     const followup = maybeCreateMainStoryFollowup(cleared);
-    expect(followup.currentEvent?.fighterId).toBe("minato");
+    expect(followup.currentEvent).toBeTruthy();
+    expect(followup.currentEvent?.scene.id).not.toBe("main.s1.ep2");
   });
 
-  it("二段再生: 区分2・3もメイン話→主軸meetへ連続再生する", () => {
+  it("二段再生: 区分2・3でも、その区分のメインが先に再生される", () => {
     const stage2 = createRun("normal", "stage-test-main-s2", {
       campaignStage: campaignStages[1],
     });
@@ -124,9 +127,7 @@ describe("三段階キャンペーン構造", () => {
       ...resolveCurrentEvent(s2main, 0),
       lastEventOutcome: undefined,
     };
-    expect(
-      maybeCreateMainStoryFollowup(s2resolved).currentEvent?.fighterId,
-    ).toBe("amara");
+    expect(maybeCreateMainStoryFollowup(s2resolved).currentEvent).toBeTruthy();
 
     const stage3 = createRun("normal", "stage-test-main-s3", {
       campaignStage: campaignStages[2],
@@ -137,9 +138,7 @@ describe("三段階キャンペーン構造", () => {
       ...resolveCurrentEvent(s3main, 0),
       lastEventOutcome: undefined,
     };
-    expect(
-      maybeCreateMainStoryFollowup(s3resolved).currentEvent?.fighterId,
-    ).toBe("wolf-nine");
+    expect(maybeCreateMainStoryFollowup(s3resolved).currentEvent).toBeTruthy();
   });
 
   it("区分未指定なら従来挙動(全員デッキ・持ち越しなし)", () => {

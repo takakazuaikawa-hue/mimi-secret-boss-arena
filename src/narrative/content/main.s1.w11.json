@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s1.w11",
+  "kind": "opening",
+  "title": "宛先のない棚",
+  "summary": "郵便受取所の応援で、届かない手紙の宛先を継ぐ",
+  "ownership": {
+    "arcId": "main.stage1"
+  },
+  "trigger": {
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "郵便受取所",
+    "assets": [
+      {
+        "id": "main.s1.w11.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-lost-property-counter-v1.png",
+        "alt": "郵便受取所の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s1.w11.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "main.s1.w11.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.w11.node.direction.002",
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w11.node.line.001",
+      "lineId": "main.s1.w11.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "郵便受取所の応援初日、私は屋根へ上げられて受け網を渡された。遺失物窓口と掛け持ちの局員さんが「天空郵便の刻限です」と言った三秒後、空から木箱が落ちてきた。受けた。腕が痺れた。開けたら羽根枕だった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w11.node.line.002",
+      "lineId": "main.s1.w11.line.002",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "あの、天空郵便って、投げてるんですか",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w11.node.line.003",
+      "lineId": "main.s1.w11.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "局員さんは首を振った。「手を離しているだけです。下は必ず地上ですから」。言い終わる前に二箱目が来て、受け網が縦に裂けた。三箱目は食堂のおばちゃんが鍋の蓋で弾き、屋根の上で二回転して止まった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w11.node.line.004",
+      "lineId": "main.s1.w11.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "屋根から降りて窓口に立つと、潮の便が着いていた。私が持ち上げようとしたら、蝋で固めた封に貝が七つ張りついていて、端を蟹が掴んで離さない。局員さんが「海底王国から潮に乗って三日、そちらが配達員です」と麩を差し出すと、蟹は麩を抱えて帰っていった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w11.node.line.005",
+      "lineId": "main.s1.w11.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "空いた棚へ潮の便を並べようとしたら、局員さんに止められた。「そこは灰の王都行きです」。棚は手紙で満杯だった。私が一通抜いた拍子に上の段が雪崩れて、二十通が足の甲に落ちた。拾って表を見ると、宛名はどれも「灰の王都」で終わっていた。名前がない。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w11.node.line.006",
+      "lineId": "main.s1.w11.line.006",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "届かないのに、みんな出すんですか",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w11.node.line.007",
+      "lineId": "main.s1.w11.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "局員さんは崩れた手紙を拾い、私の手に載せた。「読みます。読んだ人が宛先になる決まりです」。封筒の隅には、あとから足した名前が小さく入っていた。棚から別の一通を抜いても、また同じ名前だった。机の下に、書いた返事の控えが樽で二つ。八年分だという。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w11.node.line.008",
+      "lineId": "main.s1.w11.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私が一通読んで返事を書き始めると、警備隊長が肩越しに覗いて余白へ俳句を足した。局員さんは眉一つ動かさず「加筆は自由です」と言い、樽の底から糊を出した。俳句は季語が二つ入っていた。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w11.node.line.009",
+      "lineId": "main.s1.w11.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私が書き上げた返事を出した翌朝、窓口の受け箱に私宛の一通があった。宛名は「郵便受取所　ミミ」。差出人の欄には、灰の王都。局員さんは新しい樽を足元へ置いて言った。「返事はお早めに」",
+      "emotion": "comic"
+    },
+    {
+      "type": "choice",
+      "id": "main.s1.w11.node.choice.001",
+      "choices": [
+        {
+          "id": "main.s1.w11.choice.001",
+          "label": "灰の王都行きを読み上げる",
+          "result": "私が窓口で一通読み上げると、聞きに来た客が列を作った。券売のおじさんが横に台を出し、「返事が来るか来ないか」の札を売り始めた。売り上げは全部、切手代に化けた。局員さんは控えの樽を三つへ増やし、館内放送のお姉さんが「本日の読み上げ、第一便」と軍記物の声で告げた。読み上げ係は、その日から私になった。",
+          "intent": "届かない手紙に耳をつくる",
+          "promise": "読み上げに客がつき、切手代の寄付が集まる",
+          "memory": "券売のおじさんが、読み上げの日に賭けの台を出すようになる",
+          "tone": "tender",
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
+          "goto": "main.s1.w11.node.end.001"
+        },
+        {
+          "id": "main.s1.w11.choice.002",
+          "label": "天空郵便に混ぜて落とす",
+          "result": "私は灰の王都行きを一束、天空郵便の箱へ混ぜた。天空城は手を離すだけなので、束はどこかの地上へ着く。三日後、束は闘技場の屋根に戻ってきた。受けたのは食堂のおばちゃんの鍋の蓋。中の一通に、見覚えのない筆跡の付箋が挟まっていた。「読んだ。次は卵を固めで」。竜の紳士は自分ではないと言い張った。",
+          "intent": "宛先のない束を空へ出す",
+          "promise": "落とした先から、付箋の返事が一枚戻ってくる",
+          "memory": "竜の紳士が、卵は固めという注文を根に持ち続ける",
+          "tone": "wild",
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 3
+            }
+          ],
+          "goto": "main.s1.w11.node.end.001"
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "main.s1.w11.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_STAGE1_PLAN.md",
+    "authorNote": "第11週。この闘技場の一シーズンを追うメインストーリー。人物の場面は別枠で再生される。",
+    "legacyGeneratedIds": false
+  }
+}

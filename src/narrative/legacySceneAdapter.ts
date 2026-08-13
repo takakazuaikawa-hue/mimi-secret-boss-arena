@@ -244,6 +244,9 @@ export const adaptLegacyScene = (
         id: `${scene.id}.choice.legacy-${index + 1}`,
         label: choice.label,
         result: choice.result,
+        ...(choice.outcomeHeadline
+          ? { outcomeHeadline: choice.outcomeHeadline }
+          : {}),
         ...(choice.intent ? { intent: choice.intent } : {}),
         ...(choice.promise ? { promise: choice.promise } : {}),
         ...(choice.memory ? { memory: choice.memory } : {}),

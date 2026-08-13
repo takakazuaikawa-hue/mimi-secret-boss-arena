@@ -1486,12 +1486,24 @@ body.game-canvas-document .app-header + .screen-frame {
 }
 
 .collection-grid article {
+  grid-template-columns: 38px minmax(0, 1fr) 22px;
+  gap: 4px;
   min-height: 54px;
   padding: 5px;
   color: rgba(255, 255, 255, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 0;
   background: rgba(255, 255, 255, 0.035);
+}
+
+.collection-grid article > div {
+  min-width: 0;
+}
+
+.collection-grid article .icon-button {
+  width: 22px;
+  height: 30px;
+  padding: 0;
 }
 
 .collection-grid article.is-selected {
@@ -1507,10 +1519,17 @@ body.game-canvas-document .app-header + .screen-frame {
 }
 
 .collection-grid strong {
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   font-size: 8px;
 }
 
 .collection-grid span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   color: rgba(255, 255, 255, 0.54);
   font-size: 6px;
 }
@@ -1595,11 +1614,32 @@ body.game-canvas-document .app-header + .screen-frame {
 }
 
 .charter-list li {
+  display: grid;
+  grid-template-columns: 30px minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  align-items: start;
+  gap: 1px 5px;
   min-height: 47px;
   padding: 5px 7px;
   color: #fff;
   border: 1px solid rgba(255, 255, 255, 0.12);
   background: rgba(255, 255, 255, 0.035);
+}
+
+.charter-list li > b {
+  grid-column: 1;
+  grid-row: 1 / 3;
+  color: var(--system-gold);
+}
+
+.charter-list li > span,
+.charter-list li > small {
+  grid-column: 2;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 1.25;
 }
 
 .charter-list li b,
@@ -1609,6 +1649,17 @@ body.game-canvas-document .app-header + .screen-frame {
 
 .charter-list li span {
   font-size: 8px;
+}
+
+.charter-list .charter-note {
+  display: block;
+  margin: 1px 0 0;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.48);
+  font-size: 6px;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .memory-gallery-heading {
@@ -1710,6 +1761,847 @@ body.game-canvas-document .app-header + .screen-frame {
 
 .empty-archive {
   color: rgba(255, 255, 255, 0.68);
+}
+
+/*
+ * Native 800 x 450 product pass.
+ *
+ * Older desktop layouts used 800px as a responsive breakpoint and fell into
+ * their tall/mobile compositions inside the fixed landscape canvas.  These
+ * rules make the logical canvas the authored layout instead: one-screen
+ * composition, readable supporting copy, and a full-width action rail.
+ */
+
+body.game-canvas-document {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+}
+
+body.game-canvas-document .app-header .header-progress__current {
+  font-size: 10px;
+}
+
+body.game-canvas-document .app-header .header-progress__steps span {
+  font-size: 9px;
+}
+
+/* Weekly hub: preserve the accepted art direction, remove seven-pixel copy. */
+.week-hud__week span,
+.week-hud__week em,
+.week-hud__figure span,
+.week-hud__progress span,
+.week-mission span,
+.week-action-ticket__copy small,
+.week-action-ticket__state {
+  font-size: 10px;
+}
+
+.week-hud__figure strong,
+.week-hud__progress strong,
+.week-mission strong {
+  font-size: 12px;
+}
+
+.week-mimi-line > span,
+.week-command-dock__heading .eyebrow {
+  font-size: 9px;
+}
+
+.week-mimi-line p,
+.week-command-dock__heading p {
+  font-size: 10px;
+}
+
+.week-action-confirm span {
+  font-size: 10px;
+}
+
+/* First handover / first registration: a true one-screen management screen. */
+.opening-management-screen.content-page {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-rows: 64px minmax(0, 1fr) 50px;
+  width: 100%;
+  height: 400px;
+  min-height: 400px;
+  gap: 6px;
+  padding: 8px 10px 0;
+  overflow: hidden;
+  color: #fff;
+  background: var(--system-ink-deep);
+}
+
+.opening-management-screen::before {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(5, 17, 25, 0.34), rgba(5, 17, 25, 0.1) 55%, rgba(5, 17, 25, 0.38)),
+    url("/assets/ui/team-lounge-day.png") center / cover;
+  content: "";
+}
+
+.opening-management-screen::after {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(5, 17, 25, 0.58), transparent 62%);
+  content: "";
+  pointer-events: none;
+}
+
+.opening-management__heading,
+.opening-management__layout,
+.opening-management__footer {
+  min-width: 0;
+  min-height: 0;
+  margin: 0;
+  color: #fff;
+  border: 1px solid var(--system-line);
+  border-radius: 0;
+  background: rgba(var(--system-ink-rgb), 0.93);
+  box-shadow: 0 12px 28px rgba(3, 11, 17, 0.3);
+  backdrop-filter: blur(12px);
+  clip-path: var(--system-cut);
+}
+
+.opening-management__heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 184px;
+  align-items: stretch;
+  gap: 0;
+  overflow: hidden;
+  border-left: 5px solid var(--system-coral);
+}
+
+.opening-management__heading > div:first-child {
+  display: grid;
+  align-content: center;
+  min-width: 0;
+  padding: 6px 14px;
+}
+
+.opening-management__heading .eyebrow {
+  margin: 0;
+  color: var(--system-gold);
+  font-size: 9px;
+}
+
+.opening-management__heading h2 {
+  margin: 0;
+  color: #fff;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 22px;
+  line-height: 1.12;
+}
+
+.opening-management__heading p:not(.eyebrow) {
+  display: -webkit-box;
+  margin: 2px 0 0;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 10px;
+  line-height: 1.35;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.opening-management__access {
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  align-content: center;
+  align-items: center;
+  min-width: 0;
+  gap: 1px 8px;
+  padding: 7px 12px;
+  color: #fff;
+  border: 0;
+  border-left: 1px solid rgba(255, 255, 255, 0.14);
+  background: linear-gradient(90deg, rgba(33, 170, 157, 0.3), rgba(33, 170, 157, 0.08));
+}
+
+.opening-management__access svg {
+  grid-row: 1 / 3;
+  color: #75d3c9;
+}
+
+.opening-management__access span {
+  color: #75d3c9;
+  font-size: 9px;
+}
+
+.opening-management__access strong {
+  overflow: hidden;
+  color: #fff;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.opening-management__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+  overflow: hidden;
+  color: var(--system-ink);
+  background: rgba(255, 253, 247, 0.96);
+  clip-path: none;
+}
+
+.opening-fighter-sheet,
+.opening-growth-choice {
+  min-width: 0;
+  min-height: 0;
+  padding: 12px 14px;
+  overflow: hidden;
+}
+
+.opening-growth-choice {
+  border-top: 0;
+  border-left: 1px solid rgba(16, 39, 55, 0.18);
+  background: rgba(240, 248, 246, 0.96);
+}
+
+.opening-fighter-sheet__identity {
+  display: grid;
+  grid-template-columns: 104px minmax(0, 1fr);
+  align-items: center;
+  gap: 13px;
+  height: 100%;
+}
+
+.opening-fighter-sheet__identity > img,
+.opening-fighter-sheet__identity > .fighter-mark {
+  width: 104px;
+  height: 150px;
+  align-self: end;
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+.opening-fighter-sheet__identity span {
+  color: var(--system-coral-deep);
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.opening-fighter-sheet__identity h3 {
+  margin: 3px 0 6px;
+  color: var(--system-ink);
+  font-size: 19px;
+  line-height: 1.25;
+}
+
+.opening-fighter-sheet__identity p,
+.opening-growth-choice > p {
+  display: -webkit-box;
+  margin: 0;
+  overflow: hidden;
+  color: #5b6d78;
+  font-size: 11px;
+  line-height: 1.55;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+}
+
+.opening-relationship {
+  margin-top: 8px;
+}
+
+.opening-growth-choice .section-title {
+  min-height: 38px;
+  margin: 0 0 7px;
+  padding: 0 0 6px;
+  border-bottom: 1px solid rgba(16, 39, 55, 0.16);
+}
+
+.opening-growth-choice .section-title span {
+  font-size: 9px;
+}
+
+.opening-growth-choice .section-title h3 {
+  font-size: 15px;
+}
+
+.opening-growth-buttons {
+  display: grid;
+  gap: 7px;
+  margin-top: 9px;
+}
+
+.opening-growth-buttons button {
+  min-height: 54px;
+  padding: 7px 9px;
+}
+
+.opening-growth-buttons strong,
+.opening-growth-complete strong {
+  font-size: 11px;
+}
+
+.opening-growth-buttons small,
+.opening-growth-complete span {
+  font-size: 10px;
+}
+
+.opening-growth-complete {
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.opening-management__footer {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 214px;
+  align-items: stretch;
+  width: calc(100% + 20px);
+  height: 50px;
+  margin: 0 -10px;
+  padding: 0 0 0 16px;
+  overflow: hidden;
+  border-right: 0;
+  border-bottom: 0;
+  border-left: 0;
+  background: rgba(7, 23, 34, 0.98);
+  clip-path: none;
+}
+
+.opening-management__footer > div {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-content: center;
+  min-width: 0;
+  gap: 1px 8px;
+}
+
+.opening-management__footer span {
+  grid-row: 1 / 3;
+  align-self: center;
+  color: var(--system-gold);
+  font-size: 9px;
+}
+
+.opening-management__footer strong {
+  overflow: hidden;
+  color: #fff;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.opening-management__footer small {
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.opening-management__footer .primary-button {
+  align-self: stretch;
+  justify-content: center;
+  width: 100%;
+  min-height: 50px;
+  padding: 0 15px;
+  border: 0;
+  border-left: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 0;
+  color: #fff;
+  background: linear-gradient(135deg, var(--system-coral), var(--system-coral-deep));
+  font-size: 14px;
+  clip-path: polygon(14px 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/* Match preparation: keep the two-column broadcast layout at logical 800px. */
+.match-prep--v2 {
+  width: 100%;
+  height: 400px;
+  min-height: 400px;
+  overflow: hidden;
+}
+
+.match-prep-v2__layout {
+  grid-template-columns: 310px minmax(0, 1fr);
+  width: 100%;
+  height: 400px;
+  margin: 0;
+  gap: 0;
+}
+
+.match-brief-v2 {
+  justify-content: center;
+  min-height: 0;
+  padding: 15px 14px 62px 16px;
+  overflow: hidden;
+  background: linear-gradient(90deg, rgba(6, 25, 37, 0.82), rgba(6, 25, 37, 0.58));
+}
+
+.match-brief-v2 > header {
+  margin-bottom: 7px;
+  padding-left: 8px;
+  border-left-width: 3px;
+}
+
+.match-brief-v2 > header span,
+.match-brief-v2 > header b {
+  font-size: 10px;
+}
+
+.match-brief-v2 > header b {
+  padding: 4px 6px;
+}
+
+.match-brief-v2 h1 {
+  font-size: 28px;
+  line-height: 1.12;
+}
+
+.match-brief-v2 > p {
+  margin: 8px 0;
+  font-size: 10px;
+  line-height: 1.55;
+  -webkit-line-clamp: 3;
+}
+
+.match-prize-v2 {
+  grid-template-columns: 26px minmax(0, 1fr);
+  gap: 6px;
+  padding: 6px 8px;
+}
+
+.match-prize-v2 span,
+.match-prize-v2 small {
+  font-size: 9px;
+}
+
+.match-prize-v2 strong {
+  font-size: 11px;
+}
+
+.match-prize-v2 > small {
+  display: none;
+}
+
+.match-versus-v2 {
+  grid-template-columns: minmax(0, 1fr) 38px minmax(0, 1fr);
+  margin-top: 8px;
+}
+
+.match-versus-v2 > div {
+  padding: 6px 8px;
+}
+
+.match-versus-v2 > b {
+  font-size: 17px;
+}
+
+.match-versus-v2 span,
+.match-versus-v2 small {
+  font-size: 9px;
+}
+
+.match-versus-v2 strong {
+  font-size: 11px;
+}
+
+.opponent-scout-v2 {
+  display: none;
+}
+
+.prep-console-v2 {
+  position: static;
+  grid-template-rows: 44px 38px minmax(0, 1fr);
+  min-height: 0;
+  height: 400px;
+  padding-bottom: 50px;
+  border: 0;
+  border-left: 1px solid var(--system-line);
+  border-radius: 0;
+  box-shadow: -16px 0 38px rgba(4, 19, 30, 0.28);
+}
+
+.prep-console-v2__summary {
+  padding: 6px 10px;
+}
+
+.prep-console-v2__summary span,
+.prep-matchup-v2 small {
+  font-size: 9px;
+}
+
+.prep-console-v2__summary strong,
+.prep-matchup-v2 strong {
+  font-size: 12px;
+}
+
+.prep-matchup-v2 {
+  min-width: 96px;
+  padding: 4px 8px;
+}
+
+.prep-tabs-v2 {
+  min-height: 38px;
+}
+
+.prep-tabs-v2 button {
+  min-height: 38px;
+  gap: 5px;
+  font-size: 11px;
+}
+
+.prep-tabs-v2 button b {
+  font-size: 9px;
+}
+
+.prep-console-v2__body {
+  overflow: hidden;
+}
+
+.prep-lineup-v2,
+.prep-strategy-v2 {
+  min-height: 0;
+  height: 100%;
+  gap: 5px;
+  padding: 7px 9px;
+  overflow-y: auto;
+}
+
+.prep-lineup-v2 {
+  grid-template-rows: 32px 50px minmax(0, 1fr);
+}
+
+.prep-panel-title-v2 {
+  align-items: center;
+  gap: 8px;
+}
+
+.prep-panel-title-v2 span {
+  font-size: 9px;
+}
+
+.prep-panel-title-v2 h2 {
+  font-size: 16px;
+}
+
+.prep-panel-title-v2 p {
+  max-width: 190px;
+  font-size: 10px;
+  text-align: right;
+}
+
+.lineup-picker-v2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-height: 50px;
+  gap: 5px;
+}
+
+.lineup-picker-v2 button {
+  grid-template-columns: 34px minmax(0, 1fr) 18px;
+  min-height: 46px;
+  gap: 5px;
+  padding: 4px 6px;
+}
+
+.lineup-picker-v2 .fighter-mark {
+  width: 34px;
+  height: 34px;
+}
+
+.lineup-picker-v2 strong {
+  font-size: 11px;
+}
+
+.lineup-picker-v2 small {
+  font-size: 9px;
+}
+
+.formation-list-v2 {
+  min-height: 0;
+  gap: 4px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.formation-card-v2 {
+  grid-template-columns: 34px 32px minmax(90px, 1fr) 94px 70px;
+  min-height: 52px;
+  gap: 5px;
+  padding: 4px 5px;
+  border-left-width: 4px;
+}
+
+.formation-card-v2 > .fighter-mark {
+  width: 32px;
+  height: 32px;
+}
+
+.formation-card-v2__identity strong {
+  font-size: 11px;
+}
+
+.formation-card-v2__identity small {
+  font-size: 9px;
+}
+
+.formation-card-v2__identity em,
+.formation-card-v2__tactic-note,
+.formation-card-v2 label > span {
+  display: none;
+}
+
+.formation-card-v2 select {
+  height: 32px;
+  font-size: 10px;
+}
+
+.formation-card-v2__order {
+  display: flex;
+  gap: 4px;
+}
+
+.formation-card-v2__order button {
+  width: 32px;
+  height: 32px;
+}
+
+.prep-console-v2__footer {
+  position: absolute;
+  z-index: 6;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  padding: 0 0 0 326px;
+  border-top: 1px solid var(--system-line);
+  background: rgba(7, 23, 34, 0.98);
+}
+
+.prep-console-v2__footer > div {
+  padding-left: 10px;
+}
+
+.prep-console-v2__footer span {
+  font-size: 9px;
+}
+
+.prep-console-v2__footer strong {
+  font-size: 11px;
+}
+
+.prep-console-v2__footer button {
+  align-self: stretch;
+  min-width: 174px;
+  min-height: 50px;
+  border-radius: 0;
+  font-size: 13px;
+}
+
+/* Outcome and ending use one full-bleed bottom command rail. */
+.outcome-stage {
+  padding: 8px 10px 0;
+}
+
+.outcome-stage__header > div > span,
+.outcome-ticket__identity span,
+.outcome-ticket__story .eyebrow,
+.outcome-stage__footer span {
+  font-size: 9px;
+}
+
+.outcome-ticket__identity strong,
+.outcome-stage__footer strong {
+  font-size: 11px;
+}
+
+.outcome-ticket__story .outcome-choice,
+.outcome-ticket__story .outcome-result,
+.outcome-ticket__story .outcome-memory,
+.outcome-story-milestone {
+  font-size: 10px;
+}
+
+.outcome-memory-stage .outcome-story-card {
+  width: min(420px, 54%);
+}
+
+.outcome-memory-stage__wash {
+  background:
+    linear-gradient(90deg, rgba(5, 17, 25, 0.94) 0%, rgba(7, 23, 34, 0.8) 43%, rgba(7, 23, 34, 0.06) 68%),
+    linear-gradient(0deg, rgba(5, 16, 24, 0.5), transparent 48%);
+}
+
+.outcome-stage__footer {
+  width: calc(100% + 20px);
+  margin: 0 -10px;
+  border-right: 0;
+  border-bottom: 0;
+  border-left: 0;
+  clip-path: none;
+}
+
+.ending-screen {
+  padding: 8px 10px 0;
+}
+
+.ending-hero .eyebrow,
+.ending-record .ending-score dt,
+.ending-record .ending-lineup > div:first-child span,
+.ending-record .ending-lineup__members article > b,
+.ending-record .ending-lineup__members span,
+.ending-record .ending-lineup__members small,
+.ending-record .ending-lineup > p {
+  font-size: 9px;
+}
+
+.ending-record .ending-lineup__members strong {
+  font-size: 10px;
+}
+
+.ending-actions {
+  width: calc(100% + 20px);
+  margin: 0 -10px;
+  border-right: 0;
+  border-bottom: 0;
+  border-left: 0;
+  clip-path: none;
+}
+
+/* Archive: readable records, a 2 x 8 program and an all-visible 4 x 2 gallery. */
+.archive-heading .eyebrow,
+.memory-gallery-heading span,
+.memory-gallery-count {
+  font-size: 9px;
+}
+
+.archive-tabs button {
+  font-size: 10px;
+}
+
+.hall-entry__score span,
+.hall-entry > div:nth-child(2) > span,
+.hall-entry p,
+.hall-entry .secondary-button,
+.hall-detail header span,
+.hall-detail__record,
+.hall-detail__lineup span,
+.hall-detail__lineup small,
+.hall-detail__lineup em,
+.hall-detail__lineup b {
+  font-size: 9px;
+}
+
+.hall-entry h3,
+.hall-detail__lineup strong {
+  font-size: 10px;
+}
+
+.collection-grid article {
+  grid-template-columns: 38px minmax(0, 1fr) 32px;
+}
+
+.collection-grid article .icon-button {
+  width: 32px;
+  height: 38px;
+}
+
+.collection-grid strong {
+  font-size: 10px;
+}
+
+.collection-grid span,
+.collection-detail span,
+.collection-detail p {
+  font-size: 9px;
+}
+
+.charter-list {
+  grid-template-columns: 198px minmax(0, 1fr);
+  gap: 8px;
+}
+
+.charter-list__head {
+  padding: 9px 10px;
+}
+
+.charter-list__head .eyebrow {
+  font-size: 9px;
+}
+
+.charter-list__head h3 {
+  font-size: 19px;
+}
+
+.charter-list__head p {
+  font-size: 10px;
+  line-height: 1.55;
+}
+
+.charter-list ol {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(8, minmax(0, 1fr));
+  grid-auto-flow: column;
+  align-content: stretch;
+  gap: 4px;
+  overflow: hidden;
+}
+
+.charter-list li {
+  grid-template-columns: 38px minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  min-height: 0;
+  padding: 4px 7px;
+}
+
+.charter-list li b,
+.charter-list li small {
+  font-size: 9px;
+}
+
+.charter-list li span {
+  font-size: 10px;
+}
+
+.charter-list .charter-note {
+  display: none;
+}
+
+.memory-gallery-heading {
+  padding: 18px 20px;
+}
+
+.memory-gallery-heading p {
+  font-size: 10px;
+}
+
+.memory-gallery-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: none;
+  grid-auto-rows: 86px;
+  align-content: start;
+  gap: 6px;
+  overflow-y: auto;
+}
+
+.memory-gallery-grid > button {
+  min-height: 0;
+  aspect-ratio: 16 / 9;
+}
+
+.memory-gallery-grid__copy {
+  padding: 18px 7px 6px;
+}
+
+.memory-gallery-grid__copy strong {
+  font-size: 10px;
+}
+
+.memory-gallery-grid__copy small {
+  display: none;
+}
+
+.memory-gallery-grid__index {
+  font-size: 9px;
 }
 
 .memory-lightbox {
@@ -2618,4 +3510,484 @@ body.game-canvas-document .app-header + .screen-frame {
   .memory-gallery-grid > button {
     transition: none;
   }
+}
+
+/* Final native-canvas polish: ten-pixel support copy and unobstructed CTAs. */
+.title-logo__series,
+.title-logo__promise,
+.title-attractor span,
+.title-menu-button small,
+.prologue-label span,
+.week-mimi-line > span,
+.week-command-dock__heading .eyebrow,
+.scene-screen--event .event-story-ticket__location,
+.scene-screen--event .event-story-ticket small,
+.scene-screen--event .event-story-ticket__rare,
+.scene-screen--event .dialogue-speaker,
+.scene-screen--event .prologue-progress,
+.opening-management__heading .eyebrow,
+.opening-management__access span,
+.opening-growth-choice .section-title span,
+.opening-management__footer span,
+.match-prize-v2 span,
+.match-prize-v2 small,
+.match-versus-v2 span,
+.match-versus-v2 small,
+.prep-console-v2__summary span,
+.prep-matchup-v2 small,
+.prep-tabs-v2 button b,
+.prep-panel-title-v2 span,
+.lineup-picker-v2 small,
+.prep-console-v2__footer span,
+.outcome-stage__header > div > span,
+.outcome-ticket__identity span,
+.outcome-ticket__story .eyebrow,
+.outcome-ticket__story .outcome-choice,
+.outcome-ticket__story .outcome-result,
+.outcome-ticket__story .outcome-memory,
+.outcome-story-milestone,
+.outcome-change-chips span,
+.outcome-stage__footer span,
+.ending-hero .eyebrow,
+.ending-record .ending-score dt,
+.ending-record .ending-lineup > div:first-child span,
+.ending-record .ending-lineup__members article > b,
+.ending-record .ending-lineup__members span,
+.ending-record .ending-lineup__members small,
+.ending-record .ending-lineup > p,
+.archive-heading .eyebrow,
+.archive-tabs button,
+.hall-entry__score span,
+.hall-entry > div:nth-child(2) > span,
+.hall-entry p,
+.hall-entry .secondary-button,
+.hall-detail header span,
+.hall-detail__record,
+.hall-detail__lineup span,
+.hall-detail__lineup small,
+.hall-detail__lineup em,
+.hall-detail__lineup b,
+.charter-list__head .eyebrow,
+.charter-list li b,
+.charter-list li small,
+.memory-gallery-heading span,
+.memory-gallery-count,
+.memory-gallery-grid__index {
+  font-size: 10px;
+}
+
+.week-command-dock__heading .eyebrow {
+  font-size: 9px;
+}
+
+.ending-copy {
+  width: calc(100% - 20px);
+}
+
+.ending-actions {
+  width: calc(100% + 20px);
+}
+
+.debug-navigation-launcher,
+.debug-navigation {
+  right: 7px;
+  bottom: auto;
+  top: 8px;
+  z-index: 1250;
+}
+
+.debug-navigation-launcher,
+.debug-navigation__toggle {
+  width: 30px;
+  min-width: 30px;
+  height: 30px;
+  min-height: 30px;
+  justify-content: center;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.debug-navigation-launcher span,
+.debug-navigation__toggle span,
+.debug-navigation__toggle strong {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.debug-navigation__panel {
+  top: 35px;
+  right: 0;
+  bottom: auto;
+}
+
+/*
+ * Native-canvas closure pass.
+ * The compact landscape stylesheet used four narrow weekly cards, which made
+ * the action effects unreadable.  A 2 x 2 command matrix gives every choice a
+ * complete label and effect while keeping the selected action one click away.
+ */
+.week-command-dock {
+  min-height: 160px;
+  padding: 7px 8px 8px;
+}
+
+.week-command-dock__heading {
+  height: 28px;
+}
+
+.week-command-dock__body {
+  grid-template-columns: minmax(0, 1fr) 220px;
+  grid-template-rows: 50px 62px;
+  align-items: stretch;
+  gap: 5px 8px;
+}
+
+.week-action-tickets {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-row: 1;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: 50px;
+  align-items: stretch;
+  gap: 6px;
+}
+
+.week-action-ticket,
+.week-action-ticket.is-selected {
+  grid-template-columns: 30px minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  width: 100%;
+  height: 50px;
+  gap: 0 7px;
+  padding: 6px 7px;
+  border-bottom-width: 3px;
+  transform: none;
+}
+
+.week-action-ticket__icon {
+  grid-row: 1 / 3;
+  width: 28px;
+  height: 28px;
+}
+
+.week-action-ticket__icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.week-action-ticket__copy {
+  align-self: center;
+  gap: 1px;
+}
+
+.week-action-ticket__copy strong {
+  font-size: 15px;
+  line-height: 1.05;
+}
+
+.week-action-ticket__copy small {
+  max-width: none;
+  overflow: visible;
+  font-size: 10px;
+  line-height: 1.25;
+  text-overflow: clip;
+  white-space: nowrap;
+}
+
+.week-action-confirm {
+  grid-column: 2;
+  grid-row: 2;
+  grid-template-rows: auto auto;
+  width: 100%;
+  height: 62px;
+  padding: 9px 18px 9px 24px;
+}
+
+.week-action-confirm span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.week-action-confirm strong {
+  font-size: 14px;
+}
+
+.week-action-confirm svg {
+  grid-row: 1 / 3;
+}
+
+.week-action-detail {
+  grid-column: 1;
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  min-width: 0;
+  height: 62px;
+  overflow: hidden;
+  color: #fff;
+  border: 1px solid rgba(117, 211, 201, 0.42);
+  background: rgba(7, 23, 34, 0.8);
+}
+
+.week-action-detail > div {
+  display: grid;
+  align-content: center;
+  min-width: 0;
+  gap: 1px;
+  padding: 5px 9px;
+}
+
+.week-action-detail > div + div {
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.week-action-detail span,
+.week-action-detail small {
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 10px;
+  line-height: 1.15;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.week-action-detail span {
+  color: var(--system-gold);
+  font-weight: 900;
+}
+
+.week-action-detail strong {
+  overflow: hidden;
+  font-size: 11px;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Keep tournament phrases intact and show the full brief instead of clipping it. */
+.match-brief-v2 h1 {
+  font-size: 26px;
+  word-break: auto-phrase;
+}
+
+.match-brief-v2 h1 > span {
+  display: block;
+  white-space: nowrap;
+}
+
+.match-brief-v2 > p {
+  -webkit-line-clamp: 4;
+}
+
+/* The collection is a directory, not a thumbnail wall: full names win. */
+.collection-grid {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.collection-grid article {
+  min-height: 48px;
+}
+
+.collection-grid strong,
+.collection-grid span {
+  overflow: visible;
+  font-size: 10px;
+  text-overflow: clip;
+  white-space: nowrap;
+}
+
+.collection-detail span,
+.collection-detail p {
+  font-size: 10px;
+  line-height: 1.55;
+}
+
+/* Free the record text from the position badge and prevent semantic clipping. */
+.hall-detail__lineup article {
+  position: relative;
+  grid-template-columns: 40px minmax(0, 1fr);
+  min-height: 110px;
+  gap: 6px;
+  padding: 19px 6px 6px;
+}
+
+.hall-detail__lineup article > b {
+  position: absolute;
+  top: 4px;
+  left: 6px;
+  color: var(--system-coral);
+  font-size: 10px;
+}
+
+.hall-detail__lineup .fighter-mark {
+  width: 40px;
+  height: 40px;
+}
+
+.hall-detail__lineup article > div {
+  gap: 2px;
+}
+
+.hall-detail__lineup strong,
+.hall-detail__lineup span,
+.hall-detail__lineup small,
+.hall-detail__lineup em {
+  overflow: visible;
+  font-size: 10px;
+  line-height: 1.2;
+  text-overflow: clip;
+  white-space: normal;
+}
+
+/* Full-bleed result rail: the parent's 10px inset is deliberately cancelled. */
+.ending-actions {
+  width: calc(100% + 20px);
+  margin: 0 -10px;
+  box-sizing: border-box;
+}
+
+/* In normal game screens the debug entry lives in the header's free slot. */
+.app:has(> .app-header) .debug-navigation-launcher,
+.app:has(> .app-header) .debug-navigation {
+  right: auto;
+  left: 50px;
+}
+
+.app:has(> .app-header) .debug-navigation__panel {
+  right: auto;
+  left: 0;
+}
+
+.week-command-dock__heading .eyebrow,
+.week-mimi-line > span {
+  font-size: 10px;
+}
+
+.week-mission {
+  height: 48px;
+  min-height: 48px;
+}
+
+.formation-card-v2__identity small,
+.formation-card-v2__identity em,
+.formation-card-v2__tactic-note {
+  font-size: 10px;
+}
+
+.prep-console-v2__footer button {
+  box-sizing: border-box;
+  height: 100%;
+  min-height: 0;
+}
+
+.ending-screen .ending-lineup__members strong,
+.ending-screen .ending-lineup__members span,
+.ending-screen .ending-lineup__members small,
+.ending-screen .ending-lineup__members article > b {
+  overflow: visible;
+  font-size: 10px;
+  line-height: 1.15;
+  text-overflow: clip;
+  white-space: normal;
+}
+
+.ending-hero {
+  background:
+    linear-gradient(0deg, rgba(7, 23, 34, 0.98) 0%, rgba(7, 23, 34, 0.72) 48%, rgba(7, 23, 34, 0.28) 100%),
+    url("/assets/ui/team-lounge-day.png") center / cover;
+}
+
+.collection-detail {
+  grid-template-rows: auto auto minmax(0, 1fr);
+}
+
+.collection-detail__story {
+  grid-column: 2;
+  grid-row: 3;
+  min-height: 0;
+  height: auto;
+  max-height: 100%;
+  align-self: stretch;
+  padding: 6px 8px 6px 0;
+  overflow-y: auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  scrollbar-width: thin;
+}
+
+.collection-detail__story p {
+  display: grid;
+  gap: 2px;
+  margin: 0;
+  padding: 6px 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 10px;
+  line-height: 1.55;
+}
+
+.collection-detail__story p + p {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.collection-detail__story b {
+  color: var(--system-gold);
+  font-size: 10px;
+}
+
+.collection-detail__story span {
+  color: inherit;
+  font-size: 10px;
+  white-space: normal;
+}
+
+.memory-gallery-grid > button.is-contain > img {
+  padding: 5px;
+  object-fit: contain;
+  background: #071722;
+}
+
+.memory-lightbox {
+  padding: 10px;
+}
+
+.memory-lightbox figure {
+  grid-template-columns: minmax(0, 1fr) 190px;
+  width: 100%;
+  max-height: 430px;
+}
+
+.memory-lightbox figure > img {
+  height: min(88vh, 396px);
+}
+
+.memory-lightbox figcaption {
+  padding: 18px 16px;
+}
+
+.memory-lightbox figcaption span {
+  font-size: 10px;
+}
+
+.memory-lightbox figcaption strong {
+  font-size: 18px;
+}
+
+.memory-gallery-grid__copy {
+  padding: 9px 7px 5px;
+}
+
+.memory-gallery-grid__copy small {
+  display: block;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 10px;
+  line-height: 1.15;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }

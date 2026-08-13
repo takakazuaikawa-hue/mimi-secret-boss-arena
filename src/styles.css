@@ -12520,6 +12520,19 @@ h3 {
   filter: drop-shadow(0 9px 8px rgba(23, 45, 54, 0.19));
 }
 
+.fighter-chibi__art {
+  display: block;
+  width: 116px;
+  height: 116px;
+  object-fit: contain;
+  object-position: center bottom;
+  filter: drop-shadow(0 9px 8px rgba(23, 45, 54, 0.19));
+}
+
+.battle-combatant--enemy .fighter-chibi__art--opponent {
+  transform: scaleX(-1);
+}
+
 .fighter-chibi figcaption {
   position: relative;
   z-index: 1;

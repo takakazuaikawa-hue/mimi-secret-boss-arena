@@ -99,6 +99,16 @@ export const assetReferenceSchema = z.object({
   alt: z.string(),
   focusX: z.number().min(0).max(100).optional(),
   focusY: z.number().min(0).max(100).optional(),
+  gallery: z
+    .object({
+      title: z.string().min(1),
+      chapter: z.string().min(1),
+      caption: z.string().min(1),
+      unlock: z.enum(["on-view", "on-event-complete", "on-choice"]),
+      /** Required for branch-specific memories so an unchosen CG stays locked. */
+      choiceId: choiceIdSchema.optional(),
+    })
+    .optional(),
 });
 
 export const directionCommandSchema = z.discriminatedUnion("type", [
@@ -269,9 +279,11 @@ const choiceSchema = z.object({
   id: choiceIdSchema,
   label: z.string().min(1),
   result: z.string().min(1),
+  outcomeHeadline: z.string().min(1).optional(),
   intent: z.string().min(1).optional(),
   promise: z.string().min(1).optional(),
   memory: z.string().min(1).optional(),
+  outcomeAssetId: assetIdSchema.optional(),
   tone: z
     .enum(["comic", "heroic", "tender", "defiant", "wild", "pragmatic"])
     .optional(),

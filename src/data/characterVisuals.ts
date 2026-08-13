@@ -8,6 +8,8 @@ export interface CharacterVisualIdentity {
   alt: string;
   focusX: number;
   battleSize: "small" | "standard" | "large" | "giant";
+  /** Direction the source battle art faces before any in-game mirroring. */
+  battleFacing: "left" | "right";
 }
 
 export const characterVisuals: Record<string, CharacterVisualIdentity> = {
@@ -20,6 +22,7 @@ export const characterVisuals: Record<string, CharacterVisualIdentity> = {
     alt: "黒い星を抱いた封印形態のギドノゼアース",
     focusX: 50,
     battleSize: "large",
+    battleFacing: "left",
   },
   minato: {
     portrait: "/assets/story/encounters/minato.png",
@@ -30,6 +33,7 @@ export const characterVisuals: Record<string, CharacterVisualIdentity> = {
     alt: "無数の神器を返却するミナト",
     focusX: 78,
     battleSize: "standard",
+    battleFacing: "left",
   },
   amara: {
     portrait: "/assets/story/encounters/amara.png",
@@ -40,6 +44,7 @@ export const characterVisuals: Record<string, CharacterVisualIdentity> = {
     alt: "天秤の裁定者アマラ",
     focusX: 77,
     battleSize: "standard",
+    battleFacing: "left",
   },
   shahar: {
     portrait: "/assets/story/sprites/shahar-trueform.png",
@@ -51,6 +56,7 @@ export const characterVisuals: Record<string, CharacterVisualIdentity> = {
     alt: "一枚の鱗を端末に雲上から語る古竜シャハル",
     focusX: 50,
     battleSize: "giant",
+    battleFacing: "left",
   },
   teirei: {
     portrait: "/assets/story/encounters/teirei.png",
@@ -61,6 +67,7 @@ export const characterVisuals: Record<string, CharacterVisualIdentity> = {
     alt: "都市防衛兵器の丁零",
     focusX: 79,
     battleSize: "standard",
+    battleFacing: "left",
   },
   "night-eater": {
     portrait: "/assets/story/encounters/night-eater.png",
@@ -71,6 +78,7 @@ export const characterVisuals: Record<string, CharacterVisualIdentity> = {
     alt: "夜の輪郭をまとう夜を食べるもの",
     focusX: 83,
     battleSize: "large",
+    battleFacing: "left",
   },
   peony: {
     portrait: "/assets/story/encounters/peony.png",
@@ -81,6 +89,7 @@ export const characterVisuals: Record<string, CharacterVisualIdentity> = {
     alt: "巨人の守護者ピオニー",
     focusX: 51,
     battleSize: "large",
+    battleFacing: "left",
   },
   "cassim-bell": {
     portrait: "/assets/story/encounters/cassim-bell.png",
@@ -91,6 +100,7 @@ export const characterVisuals: Record<string, CharacterVisualIdentity> = {
     alt: "失くした世界の番人カシム・ベル",
     focusX: 78,
     battleSize: "standard",
+    battleFacing: "left",
   },
   sazanami: {
     portrait: "/assets/story/sprites/sazanami-trueform.png",
@@ -102,6 +112,7 @@ export const characterVisuals: Record<string, CharacterVisualIdentity> = {
     alt: "水槽へ巨大な瞳と影だけを映すさざなみ",
     focusX: 50,
     battleSize: "giant",
+    battleFacing: "left",
   },
   marian: {
     portrait: "/assets/story/encounters/marian.png",
@@ -112,6 +123,7 @@ export const characterVisuals: Record<string, CharacterVisualIdentity> = {
     alt: "終わりまで治す聖女マリアン",
     focusX: 80,
     battleSize: "standard",
+    battleFacing: "left",
   },
   ushiro: {
     portrait: "/assets/story/encounters/ushiro.png",
@@ -122,6 +134,7 @@ export const characterVisuals: Record<string, CharacterVisualIdentity> = {
     alt: "人々の背後に立つうしろ",
     focusX: 55,
     battleSize: "standard",
+    battleFacing: "left",
   },
   "wolf-nine": {
     portrait: "/assets/story/encounters/wolf-nine.png",
@@ -132,6 +145,7 @@ export const characterVisuals: Record<string, CharacterVisualIdentity> = {
     alt: "九度目の決闘者ヴォルフ・ナイン",
     focusX: 79,
     battleSize: "large",
+    battleFacing: "left",
   },
   "room-seventeen": {
     portrait: "/assets/story/encounters/room-seventeen.png",
@@ -142,6 +156,7 @@ export const characterVisuals: Record<string, CharacterVisualIdentity> = {
     alt: "扉の姿をした十七号室",
     focusX: 18,
     battleSize: "large",
+    battleFacing: "left",
   },
   rinne: {
     portrait: "/assets/story/encounters/rinne.png",
@@ -152,6 +167,7 @@ export const characterVisuals: Record<string, CharacterVisualIdentity> = {
     alt: "未来を賭ける勝負師リンネ",
     focusX: 77,
     battleSize: "standard",
+    battleFacing: "left",
   },
   mumyo: {
     portrait: "/assets/story/sprites/mumyo-trueform.png",
@@ -163,6 +179,7 @@ export const characterVisuals: Record<string, CharacterVisualIdentity> = {
     alt: "鏡の中だけに人影を映す一振りの無銘",
     focusX: 50,
     battleSize: "giant",
+    battleFacing: "left",
   },
 };
 

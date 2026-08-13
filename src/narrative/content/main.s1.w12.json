@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s1.w12",
+  "kind": "opening",
+  "title": "天井を外した日",
+  "summary": "屋根を開けたら上空が満員になり、投げ銭が危険物になる",
+  "ownership": {
+    "arcId": "main.stage1"
+  },
+  "trigger": {
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "闘技場の大屋根の下",
+    "assets": [
+      {
+        "id": "main.s1.w12.asset.background.001",
+        "kind": "background",
+        "path": "/assets/arena-daylight.png",
+        "alt": "闘技場の大屋根の下の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s1.w12.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "main.s1.w12.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.w12.node.direction.002",
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w12.node.line.001",
+      "lineId": "main.s1.w12.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "第三戦の相手は、床を踏まずに勝つ選手だった。控室に入ったら梁にぶら下がったまま私へ手を振り、天井が低くて本気が出せない、と苦情まで言ってきた。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w12.node.line.002",
+      "lineId": "main.s1.w12.line.002",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "わかりました。天井、外します",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w12.node.line.003",
+      "lineId": "main.s1.w12.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "警備隊長が銅鑼を三つ鳴らした。屋根の四隅で鎖が唸り、大屋根が真っ二つに割れて両側へ滑っていく。青空が落ちてきた。客席の帽子が一斉に押さえられた。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w12.node.line.004",
+      "lineId": "main.s1.w12.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "開いた穴へ、上から影が差す。雲上修道院の客だった。雲の縁に腰かけ、足をぶらぶらさせて下を覗き込んでいる。三十人。五十人。気づけば上空が満員になった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w12.node.line.005",
+      "lineId": "main.s1.w12.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "館内放送のお姉さんが涼やかに読み上げる。上空席ただいま満員、雲の端に立たれますと落下いたします、ご武運を祈る。最前列の子どもが立ち上がって敬礼した。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w12.node.line.006",
+      "lineId": "main.s1.w12.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "竜の紳士が首を伸ばして見上げ、席が増えましたな、と満足そうに言った。経理課チームは法被の袖をまくってそろばんを弾き、入場料の桁を一つ書き足している。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w12.node.line.007",
+      "lineId": "main.s1.w12.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "問題は、上の客が喜ぶと投げ銭をすることだった。銀貨が空から降ってくる。高さ百尺を落ちてきた銀貨は、もう祝儀ではない。券売のおじさんの帽子に穴が開いた。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w12.node.line.008",
+      "lineId": "main.s1.w12.line.008",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "隊長、あれ、お心づけじゃなくて危険物です",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w12.node.line.009",
+      "lineId": "main.s1.w12.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "警備隊長は空を睨み、降る銭や頭上注意の春の空、と一句詠んだ。詠み終えてから、私を見る。で、どうします、という顔だった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "choice",
+      "id": "main.s1.w12.node.choice.001",
+      "choices": [
+        {
+          "id": "main.s1.w12.choice.001",
+          "label": "網を張って受ける",
+          "result": "網で受けます、と私が言うと、食堂のおばちゃんが漁の網を担いできた。四隅を鎖に縛り、穴の下いっぱいに広げる。降る銀貨は網が全部受け止め、経理課チームがそろばんを構えて下で数え始めた。上の客はじきに狙って投げ出し、網の真ん中へ当たると歓声が湧く。翌日から、その的当ては正式な余興になった。賞金は網に溜まった分の半分。おばちゃんの網は破れない。",
+          "intent": "落ちる銀貨を下で受ける",
+          "promise": "危険物が消え、上空席の売上がそのまま帳簿へ載る",
+          "memory": "経理課チームが、初めて網の真ん中へ当てた客の名を帳面に残した",
+          "tone": "pragmatic",
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
+          "goto": "main.s1.w12.node.end.001"
+        },
+        {
+          "id": "main.s1.w12.choice.002",
+          "label": "幽霊夫妻に空を任す",
+          "result": "幽霊のご夫妻に上空席をお願いした。ご夫妻は新聞を二部抱えたまま、雲の間をゆっくり漂って回る。銀貨は投げる前に受け取られ、代わりに賭け札が手渡しで配られた。危険物は空から消え、上では新聞まで売れた。券売のおじさんが下で腕を組み、上の売上のほうが多いな、と唸る。ご夫妻は今日も、自分の分は二部だけ買った。翌朝、おじさんは上空席専用の賭け札を刷りに走り、刷り上がる前に雲の上へ次の列ができていた。",
+          "intent": "浮ける者に上を任せる",
+          "promise": "空の客席が売り場になり、投げ銭が手渡しへ変わる",
+          "memory": "幽霊のご夫妻が、上空席へ最初に腰かけた客の顔を覚えている",
+          "tone": "wild",
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 3
+            }
+          ],
+          "goto": "main.s1.w12.node.end.001"
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "main.s1.w12.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_STAGE1_PLAN.md",
+    "authorNote": "第12週。この闘技場の一シーズンを追うメインストーリー。人物の場面は別枠で再生される。",
+    "legacyGeneratedIds": false
+  }
+}

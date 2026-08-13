@@ -1,11 +1,12 @@
-import { fighterById, fighterDefinitions } from "../data/characters";
+import { fighterById } from "../data/characters";
 import { itemById } from "../data/items";
-import { parseBonusMatchId } from "../data/matches";
+import { getMatchDefinition, parseBonusMatchId } from "../data/matches";
 import {
+  battleOpponentById,
   openingRookieOpponents,
   type BattleFighterDefinition,
 } from "../data/opponents";
-import { createRandom, type RandomSource } from "./rng";
+import { type RandomSource } from "./rng";
 import type {
   BattleIntervention,
   BattleLogEntry,
@@ -150,13 +151,15 @@ export const opponentsForMatch = (
         ],
     );
   }
-  const selectedIds = selectedFighters.map((fighter) => fighter.id);
-  const pool = fighterDefinitions.filter(
-    (fighter) => !selectedIds.includes(fighter.id),
+  const ids = match.opponentIds ?? getMatchDefinition(baseMatchId)?.opponentIds ?? [];
+  const dedicated = ids
+    .map((id) => battleOpponentById.get(id))
+    .filter((fighter): fighter is BattleFighterDefinition => Boolean(fighter));
+  const pool = dedicated.length > 0 ? dedicated : openingRookieOpponents;
+  return Array.from(
+    { length: selectedFighters.length },
+    (_, index) => pool[index % pool.length],
   );
-  return createRandom(`${run.seed}:opponents:${match.id}`)
-    .shuffle(pool)
-    .slice(0, selectedFighters.length);
 };
 
 const pushLog = (
@@ -257,6 +260,125 @@ const startTraits = (battle: BattleState) => {
   });
 };
 
+const announceMatchRule = (battle: BattleState, text: string) => {
+  pushLog(battle, "実況", text, "system");
+};
+
+const applyOpeningMatchRule = (battle: BattleState) => {
+  if (battle.battleRule === "first-star") {
+    living(battle.enemy).forEach((unit) => {
+      unit.barrier += Math.round(unit.maxHp * 0.12);
+      unit.defenseBuff = clamp(unit.defenseBuff + 0.06, -0.45, 0.65);
+    });
+    announceMatchRule(battle, "一等星の無敗手順。相手全員が開幕障壁を展開しました。");
+  }
+  if (battle.battleRule === "scorecard-wall") {
+    living(battle.enemy).forEach((unit) => {
+      unit.barrier += Math.round(unit.maxHp * 0.1);
+    });
+    announceMatchRule(battle, "北塔査定課が先に減点札を並べ、障壁を作りました。");
+  }
+};
+
+const buffEnemyTeam = (
+  battle: BattleState,
+  buffs: { attack?: number; magic?: number; defense?: number; speed?: number },
+  message: string,
+) => {
+  living(battle.enemy).forEach((unit) => {
+    unit.attackBuff = clamp(unit.attackBuff + (buffs.attack ?? 0), -0.5, 0.65);
+    unit.magicBuff = clamp(unit.magicBuff + (buffs.magic ?? 0), -0.5, 0.65);
+    unit.defenseBuff = clamp(unit.defenseBuff + (buffs.defense ?? 0), -0.45, 0.65);
+    unit.speedBuff = clamp(unit.speedBuff + (buffs.speed ?? 0), -0.45, 0.55);
+  });
+  announceMatchRule(battle, message);
+};
+
+const applyRoundMatchRule = (battle: BattleState) => {
+  if (battle.battleRule === "closing-shift" && battle.turn === 4) {
+    buffEnemyTeam(
+      battle,
+      { attack: 0.12, speed: 0.1 },
+      "閉店前の追い込み。午後班の攻撃と速度が上がります。",
+    );
+  } else if (
+    battle.battleRule === "postal-order" &&
+    battle.turn <= 6 &&
+    battle.turn % 2 === 0
+  ) {
+    buffEnemyTeam(
+      battle,
+      { defense: 0.05, magic: 0.04 },
+      "郵便騎士団が配達順を確認。守りと魔力を積み上げます。",
+    );
+  } else if (
+    battle.battleRule === "full-course" &&
+    (battle.turn === 3 || battle.turn === 6)
+  ) {
+    const enemies = living(battle.enemy);
+    const before = new Map(enemies.map((unit) => [unit.instanceId, unit.hp]));
+    enemies.forEach((unit) => {
+      unit.hp = Math.min(unit.maxHp, unit.hp + Math.round(unit.maxHp * 0.08));
+    });
+    announceMatchRule(battle, "次の皿が到着。厨房部が全員を立て直します。");
+    pushPresentation(battle, {
+      actorName: "王都ホテル厨房部",
+      side: "enemy",
+      skillName: "次の一皿",
+      kind: "heal",
+      element: "star",
+      targetIds: enemies.map((unit) => unit.instanceId),
+      targets: enemies.map((unit) => ({
+        instanceId: unit.instanceId,
+        name: unit.name,
+        hpBefore: before.get(unit.instanceId) ?? unit.hp,
+        hpAfter: unit.hp,
+        breakBefore: unit.breakGauge,
+        breakAfter: unit.breakGauge,
+        value: unit.hp - (before.get(unit.instanceId) ?? unit.hp),
+        tags: ["RECOVER"],
+      })),
+      headline: "厨房部の「次の一皿」",
+      detail: "敵全員のHPが回復",
+    });
+  } else if (
+    battle.battleRule === "first-star" &&
+    battle.turn === 4
+  ) {
+    buffEnemyTeam(
+      battle,
+      { attack: 0.08, magic: 0.08, speed: 0.08 },
+      "無敗手順C。三人の一等星が終盤戦へ再点火します。",
+    );
+  } else if (
+    battle.battleRule === "uncontrolled-finale" &&
+    (battle.turn === 3 || battle.turn === 6)
+  ) {
+    buffEnemyTeam(
+      battle,
+      { attack: 0.08, magic: 0.08, speed: 0.05 },
+      "規定外の力が解放され、三王の攻撃・魔力・速度が上がります。",
+    );
+  } else if (battle.battleRule === "moving-standard") {
+    buffEnemyTeam(
+      battle,
+      battle.turn % 2 === 1 ? { attack: 0.04 } : { defense: 0.04 },
+      battle.turn % 2 === 1
+        ? "西塔の評価基準は積極性。相手の攻撃が上がります。"
+        : "西塔の評価基準は安定性。相手の防御が上がります。",
+    );
+  } else if (
+    battle.battleRule === "overtime-rush" &&
+    battle.turn === 6
+  ) {
+    buffEnemyTeam(
+      battle,
+      { attack: 0.14, speed: 0.14 },
+      "説明会が倍速進行へ。南塔査定課の攻撃と速度が急上昇します。",
+    );
+  }
+};
+
 export const createBattle = (
   run: RunState,
   match: MatchDefinition,
@@ -266,10 +388,13 @@ export const createBattle = (
       makeUnit(fighter, "player", scaledStats(fighter, run), run, index),
     );
 
-  const enemyScale =
+  const difficultyScale =
     match.difficulty <= 1
       ? match.difficulty
       : 1 + (match.difficulty - 1) * 0.42;
+  const baseMatchId = parseBonusMatchId(match.id)?.baseId ?? match.id;
+  const dedicatedOpponentScale = baseMatchId === "opening-cup" ? 1 : 1.52;
+  const enemyScale = difficultyScale * dedicatedOpponentScale;
   const enemyFighters = opponentsForMatch(run, match);
   const enemyTitles =
     enemyFighters.length === 1
@@ -323,6 +448,8 @@ export const createBattle = (
     plan: run.battlePlan,
     teamTrust,
     teamOwnership,
+    battleRule: match.battleRule,
+    battleFeature: match.battleFeature,
     forcedFighterId:
       match.id === "opening-cup" &&
       player.some((unit) => unit.fighterId === "gidonozeaas")
@@ -346,6 +473,7 @@ export const createBattle = (
     },
   };
   startTraits(battle);
+  applyOpeningMatchRule(battle);
   return battle;
 };
 
@@ -583,6 +711,17 @@ const onAllyDefeated = (
   defeated: BattleUnit,
   allies: BattleUnit[],
 ) => {
+  if (battle.battleRule === "optimization-chain" && defeated.side === "enemy") {
+    living(allies).forEach((unit) => {
+      unit.attackBuff = clamp(unit.attackBuff + 0.1, -0.5, 0.65);
+      unit.magicBuff = clamp(unit.magicBuff + 0.1, -0.5, 0.65);
+      unit.defenseBuff = clamp(unit.defenseBuff + 0.08, -0.45, 0.65);
+    });
+    announceMatchRule(
+      battle,
+      `${defeated.name}の欠員を最適化。残った敵の攻撃・魔力・防御が上がります。`,
+    );
+  }
   const marian = living(allies).find(
     (unit) => unit.fighterId === "marian" && !unit.defeatTraitTriggered,
   );
@@ -1104,6 +1243,39 @@ export const predictedEnemyAction = (battle: BattleState) => {
   )[0]?.[0] ?? "attack";
 };
 
+const fallbackEnemyCues = {
+  attack: [
+    { gesture: "前列の重心が一斉にこちらへ傾く", line: "次で押し込みます" },
+    { gesture: "武器を握る手だけが低く下がる", line: "正面を空けないで" },
+  ],
+  guard: [
+    { gesture: "三人の足幅が広がり、呼吸が止まる", line: "ここは受けます" },
+    { gesture: "前列が半歩下がって後列を隠す", line: "急がず、構えて" },
+  ],
+  skill: [
+    { gesture: "後列の指先にだけ光が集まる", line: "合図まで隠して" },
+    { gesture: "三人が短い符丁を交わす", line: "手順を切り替えます" },
+  ],
+} as const;
+
+export const inferEnemyIntentFromCue = (battle: BattleState) => {
+  const cue = battle.enemyCue;
+  if (!cue) return predictedEnemyAction(battle);
+  const match = getMatchDefinition(battle.matchId);
+  const cueSets = match?.enemyCues ?? fallbackEnemyCues;
+  for (const intent of ["attack", "guard", "skill"] as const) {
+    if (
+      cueSets[intent].some(
+        (candidate) =>
+          candidate.gesture === cue.gesture && candidate.line === cue.line,
+      )
+    ) {
+      return intent;
+    }
+  }
+  return predictedEnemyAction(battle);
+};
+
 const setEnemyIntent = (battle: BattleState, random: RandomSource) => {
   const enemies = living(battle.enemy);
   const likelyIntent = predictedEnemyAction(battle);
@@ -1121,8 +1293,16 @@ const setEnemyIntent = (battle: BattleState, random: RandomSource) => {
       skill: likelySkill(unit, battle.enemy, battle.player),
     }))
     .find(({ skill }) => skillCategory(skill) === likelyIntent);
-  battle.enemyTell = likelyIntent;
+  const match = getMatchDefinition(battle.matchId);
+  const cueSets = match?.enemyCues ?? fallbackEnemyCues;
+  const cue = random.pick([...cueSets[likelyIntent]]);
+  battle.enemyTell = undefined;
   battle.enemyIntent = intent;
+  battle.enemyCue = {
+    speaker: lead?.unit.name ?? enemies[0]?.name ?? "相手チーム",
+    gesture: cue.gesture,
+    line: cue.line,
+  };
   battle.enemyTellConfidence = Math.round(confidence);
   battle.enemyThreat = lead ? `${lead.unit.name}の「${lead.skill.name}」` : undefined;
 };
@@ -1152,6 +1332,7 @@ export const resolveBattleRound = (
   if (battle.status !== "running") return battle;
   battle.presentationEvents = [];
   battle.turn += 1;
+  applyRoundMatchRule(battle);
   [...battle.player, ...battle.enemy].forEach((unit) => {
     unit.guarding = false;
     unit.evasion = Math.max(
@@ -1188,6 +1369,13 @@ export const resolveBattleRound = (
     battle.turningPointUsed = true;
     battle.decisionKind = "turningPoint";
     setEnemyIntent(battle, random);
+    if (battle.battleRule === "midterm-pressure") {
+      buffEnemyTeam(
+        battle,
+        { defense: 0.12 },
+        "中央塔査定課が勝負どころを評価保留。敵全員の防御が上がります。",
+      );
+    }
     const playerRatio = totalHealthRatio(battle.player) / battle.player.length;
     const enemyRatio = totalHealthRatio(battle.enemy) / battle.enemy.length;
     battle.decisionReason =
@@ -1270,6 +1458,54 @@ const resolveLink = (battle: BattleState) => {
   return true;
 };
 
+export interface EntrustForecast {
+  grade: "strong" | "steady" | "risky";
+  momentumGain: number;
+  summary: string;
+}
+
+export const forecastEntrust = (battle: BattleState): EntrustForecast => {
+  const playerRatio = totalHealthRatio(battle.player) / Math.max(1, battle.player.length);
+  const enemyRatio = totalHealthRatio(battle.enemy) / Math.max(1, battle.enemy.length);
+  const underPressure =
+    playerRatio + 0.16 < enemyRatio ||
+    (battle.battleRule === "closing-shift" && battle.turn >= 3) ||
+    (battle.battleRule === "overtime-rush" && battle.turn >= 5) ||
+    (battle.battleRule === "uncontrolled-finale" && battle.turn >= 2) ||
+    (battle.battleRule === "optimization-chain" && living(battle.enemy).length < battle.enemy.length);
+  const trustCountersOrders =
+    battle.battleRule === "ownership-audit" && battle.teamTrust >= 55;
+  const trustCarries = battle.teamTrust >= 72 && !underPressure;
+
+  if (trustCountersOrders || trustCarries) {
+    const momentumGain = 14 + Math.round((battle.teamTrust - 50) / 10);
+    return {
+      grade: "strong",
+      momentumGain,
+      summary: trustCountersOrders
+        ? `命令待ちの敵へ信頼が刺さる。勢い+${momentumGain}、味方の攻撃・速度も上昇`
+        : `三人の呼吸が合っている。勢い+${momentumGain}、味方の攻撃・速度も上昇`,
+    };
+  }
+
+  if (battle.teamTrust < 48 || underPressure) {
+    return {
+      grade: "risky",
+      momentumGain: 0,
+      summary: underPressure
+        ? "今は相手の圧が強い。任せると敵の攻撃・速度が上がる"
+        : "まだ呼吸が揃わない。任せても勢いは増えず、敵が先に動く",
+    };
+  }
+
+  const momentumGain = 6 + Math.round((battle.teamTrust - 45) / 8);
+  return {
+    grade: "steady",
+    momentumGain,
+    summary: `任せた三人が守りを整える。勢い+${momentumGain}、味方の防御も上昇`,
+  };
+};
+
 const settleTurningPoint = (
   battle: BattleState,
   outcome: NonNullable<BattleState["turningPointOutcome"]>,
@@ -1291,10 +1527,6 @@ const settleTurningPoint = (
     });
     pushLog(battle, "実況", "流れは渡さない。次の一撃へ踏みとどまりました。", "good");
   } else {
-    living(battle.enemy).forEach((unit) => {
-      unit.attackBuff = clamp(unit.attackBuff + 0.08, -0.5, 0.65);
-      unit.magicBuff = clamp(unit.magicBuff + 0.08, -0.5, 0.65);
-    });
     pushLog(battle, "実況", "読みが外れた一瞬を、相手は見逃しません。", "bad");
   }
 
@@ -1328,9 +1560,34 @@ export const applyIntervention = (
   let accepted = false;
 
   if (intervention.type === "pass") {
-    const gain = 12 + Math.round(battle.teamTrust / 10);
+    const forecast = forecastEntrust(battle);
+    const gain = forecast.momentumGain;
     battle.momentum = clamp(battle.momentum + gain, 0, 100);
-    pushLog(battle, "ミミ", `今は任せる。信頼が勢いを${gain}生んだ。`, "good");
+    if (forecast.grade === "strong") {
+      living(battle.player).forEach((unit) => {
+        unit.attackBuff = clamp(unit.attackBuff + 0.08, -0.5, 0.65);
+        unit.speedBuff = clamp(unit.speedBuff + 0.06, -0.45, 0.55);
+      });
+    } else if (forecast.grade === "steady") {
+      living(battle.player).forEach((unit) => {
+        unit.defenseBuff = clamp(unit.defenseBuff + 0.06, -0.45, 0.65);
+      });
+    } else {
+      living(battle.enemy).forEach((unit) => {
+        unit.attackBuff = clamp(unit.attackBuff + 0.06, -0.5, 0.65);
+        unit.speedBuff = clamp(unit.speedBuff + 0.05, -0.45, 0.55);
+      });
+    }
+    pushLog(
+      battle,
+      "ミミ",
+      forecast.grade === "strong"
+        ? `今は任せる。信頼が勢いを${gain}生み、三人が前へ出た。`
+        : forecast.grade === "steady"
+          ? `今は任せる。勢いを${gain}蓄え、三人が守りを整えた。`
+          : "任せたが、相手の圧が先に届いた。",
+      forecast.grade === "risky" ? "bad" : "good",
+    );
     pushPresentation(battle, {
       actorName: "ミミ",
       skillName: "任せる",
@@ -1341,9 +1598,14 @@ export const applyIntervention = (
       momentumBefore,
       momentumAfter: battle.momentum,
       headline: "監督指示「任せる」",
-      detail: `信頼が勢いを${gain}生んだ`,
+      detail: forecast.summary,
     });
-    turningPointOutcome = battle.teamTrust >= 55 ? "seized" : "held";
+    turningPointOutcome =
+      forecast.grade === "strong"
+        ? "seized"
+        : forecast.grade === "steady"
+          ? "held"
+          : "missed";
     accepted = true;
   } else if (intervention.type === "cheer" && battle.cheerUses > 0) {
     battle.cheerUses -= 1;
@@ -1424,6 +1686,10 @@ export const applyIntervention = (
       battle.momentum = clamp(battle.momentum + 18, 0, 100);
       pushLog(battle, "ミミ", "読めた。相手の狙いへ先回りした！", "good");
     } else {
+      living(battle.enemy).forEach((unit) => {
+        unit.attackBuff = clamp(unit.attackBuff + 0.08, -0.5, 0.65);
+        unit.magicBuff = clamp(unit.magicBuff + 0.08, -0.5, 0.65);
+      });
       pushLog(battle, "ミミ", "読みは外れた。情報だけは残った。", "bad");
     }
     pushPresentation(battle, {
@@ -1445,7 +1711,7 @@ export const applyIntervention = (
       detail:
         actual === intervention.prediction
           ? "敵の次手へ先回りし、対抗策が発動"
-          : "効果は得られないが、指示機会は続く",
+          : "敵全体の攻撃と魔力が上昇",
     });
     turningPointOutcome =
       actual === intervention.prediction ? "seized" : "missed";
@@ -1494,6 +1760,12 @@ export const applyIntervention = (
       unit.hp = Math.max(1, unit.hp - Math.round(unit.maxHp * 0.08));
       unit.defenseBuff = Math.max(-0.45, unit.defenseBuff - 0.1);
       battle.momentum = Math.max(0, battle.momentum - 15);
+      if (battle.battleRule === "ownership-audit") {
+        living(battle.enemy).forEach((enemy) => {
+          enemy.attackBuff = clamp(enemy.attackBuff + 0.08, -0.5, 0.65);
+          enemy.magicBuff = clamp(enemy.magicBuff + 0.08, -0.5, 0.65);
+        });
+      }
       pushLog(battle, "ミミ", `${unit.name}に契約権限で${skill.name}を命じた。反動が残る。`, "bad");
       pushPresentation(battle, {
         actorName: "ミミ",
@@ -1505,9 +1777,12 @@ export const applyIntervention = (
         momentumBefore,
         momentumAfter: battle.momentum,
         headline: `強制指示「${skill.name}」`,
-        detail: `${unit.name}は次の行動で命令された技を使う。HPと防御に反動`,
+        detail:
+          battle.battleRule === "ownership-audit"
+            ? `${unit.name}は次の行動で技を使う。HPと防御に反動、敵の攻撃と魔力が上昇`
+            : `${unit.name}は次の行動で命令された技を使う。HPと防御に反動`,
       });
-      turningPointOutcome = "seized";
+      turningPointOutcome = battle.battleRule === "ownership-audit" ? "missed" : "seized";
       accepted = true;
     }
   } else if (intervention.type === "link") {
@@ -1525,6 +1800,7 @@ export const applyIntervention = (
   battle.decisionKind = undefined;
   battle.enemyTell = undefined;
   battle.enemyIntent = undefined;
+  battle.enemyCue = undefined;
   battle.enemyTellConfidence = undefined;
   battle.enemyThreat = undefined;
   return battle;

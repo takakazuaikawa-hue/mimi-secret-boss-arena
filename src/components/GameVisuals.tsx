@@ -5,6 +5,7 @@ import {
   battleOpponentById,
   battleOpponentVisualIndex,
 } from "../data/opponents";
+import { opponentVisuals } from "../data/opponentVisuals";
 
 const atlasPosition = (index: number) => ({
   "--chibi-x": `${((index % 4) * 100) / 3}%`,
@@ -25,6 +26,7 @@ export function FighterChibi({
   mood?: "idle" | "cheer" | "rest";
 }) {
   const opponent = battleOpponentById.get(id);
+  const opponentVisual = opponentVisuals[id];
   const index =
     id === "mimi"
       ? 15
@@ -41,16 +43,24 @@ export function FighterChibi({
       className={`fighter-chibi fighter-chibi--${mood}`}
       aria-label={showName ? name : undefined}
     >
-      <span
-        className={`fighter-chibi__sprite ${
-          opponent ? "fighter-chibi__sprite--opponent" : ""
-        }`}
-        style={
-          opponent
-            ? opponentAtlasPosition(battleOpponentVisualIndex[id] ?? 0)
-            : atlasPosition(index)
-        }
-      />
+      {opponentVisual ? (
+        <img
+          src={opponentVisual.battle}
+          alt=""
+          className="fighter-chibi__art fighter-chibi__art--opponent"
+        />
+      ) : (
+        <span
+          className={`fighter-chibi__sprite ${
+            opponent ? "fighter-chibi__sprite--opponent" : ""
+          }`}
+          style={
+            opponent
+              ? opponentAtlasPosition(battleOpponentVisualIndex[id] ?? 0)
+              : atlasPosition(index)
+          }
+        />
+      )}
       {showName && <figcaption>{name}</figcaption>}
     </figure>
   );

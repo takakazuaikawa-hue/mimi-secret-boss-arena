@@ -19,12 +19,25 @@ const targets = [
   ["management", ".management-screen, .opening-management-screen"],
   ["match-prep", ".match-prep"],
   ["battle", ".battle-screen"],
+  ["battle-decision", ".battle-screen"],
+  ["battle-victory", ".battle-screen"],
+  ["battle-defeat", ".battle-screen"],
   ["ending", ".ending-screen"],
   ["archive-hall", ".archive-screen .hall-list"],
   ["archive-collection", ".archive-screen .collection-grid"],
   ["archive-charter", ".archive-screen .charter-list"],
   ["archive-gallery", ".archive-screen .memory-gallery-grid"],
 ];
+const requestedTargets = new Set(
+  (process.env.MIMI_QA_TARGETS ?? "")
+    .split(",")
+    .map((value) => value.trim())
+    .filter(Boolean),
+);
+const targetsToRun =
+  requestedTargets.size > 0
+    ? targets.filter(([target]) => requestedTargets.has(target))
+    : targets;
 
 await mkdir(outputDir, { recursive: true });
 const browser = await chromium.launch({ headless: true, executablePath: chromePath });
@@ -38,7 +51,7 @@ const debugUrl = (target) => {
 };
 
 try {
-  for (const [target, selector] of targets) {
+  for (const [target, selector] of targetsToRun) {
     const page = await browser.newPage({ viewport: { width: 800, height: 450 } });
     const pageIssues = [];
     page.on("console", (message) => {
@@ -61,11 +74,16 @@ try {
     }
     if (target === "archive-gallery") {
       const galleryText = await page.locator(".archive-screen").innerText();
-      if (!galleryText.includes("8/8 解放")) {
-        pageIssues.push("gallery fixture did not unlock all 8 memories");
+      const unlockedMemories = await page.locator(
+        ".archive-screen .memory-gallery-grid > button.is-unlocked",
+      ).count();
+      if (!/\d+ CG \/ 8 BASIC/.test(galleryText) || unlockedMemories < 8) {
+        pageIssues.push(
+          `gallery fixture did not expose the authored memories (${unlockedMemories})`,
+        );
       }
     }
-    const screenshotPath = join(outputDir, `${target}-1280x720.png`);
+    const screenshotPath = join(outputDir, `${target}-800x450.png`);
     if (target.startsWith("archive-")) {
       await page.screenshot({ path: screenshotPath, animations: "disabled" });
     }
@@ -75,17 +93,46 @@ try {
   }
 
   const interaction = await browser.newPage({ viewport: { width: 800, height: 450 } });
+  const interactionIssues = [];
+  interaction.on("console", (message) => {
+    if (message.type() === "error") interactionIssues.push(`console: ${message.text()}`);
+  });
+  interaction.on("pageerror", (error) => interactionIssues.push(`page: ${String(error)}`));
   await interaction.goto(debugUrl("1"), {
     waitUntil: "domcontentloaded",
     timeout: 60_000,
   });
   const numberInput = interaction.getByLabel("画面番号", { exact: true });
-  await numberInput.fill("13");
-  await numberInput.press("Enter");
-  await interaction
-    .locator(".archive-screen .memory-gallery-grid")
-    .waitFor({ state: "visible", timeout: 30_000 });
+  const galleryScreenNumber = await numberInput.getAttribute("max");
+  await numberInput.fill(galleryScreenNumber ?? "16");
+  const numberEntryPath = join(outputDir, "number-entry-800x450.png");
+  await interaction.screenshot({ path: numberEntryPath, animations: "disabled" });
+  const moveButton = interaction.getByRole("button", { name: "移動", exact: true });
+  const moveEnabled = await moveButton.isEnabled();
+  await moveButton.click();
+  await interaction.waitForTimeout(1_200);
   const interactionUrl = interaction.url();
+  const interactionText = await interaction.locator("body").innerText();
+  const interactionReachedGallery = await interaction
+    .locator(".archive-screen .memory-gallery-grid")
+    .isVisible()
+    .catch(() => false);
+  console.log(
+    JSON.stringify({
+      numberNavigation: {
+        moveEnabled,
+        interactionUrl,
+        interactionReachedGallery,
+        interactionIssues,
+        numberEntryPath,
+        text: interactionText.slice(0, 1_000),
+      },
+    }),
+  );
+  if (!interactionReachedGallery) {
+    issues.push(`number ${galleryScreenNumber ?? "16"} did not open the memory gallery`);
+  }
+  issues.push(...interactionIssues);
   if (!interactionUrl.includes("debugUi=archive-gallery")) {
     issues.push(`interaction URL was not updated: ${interactionUrl}`);
   }

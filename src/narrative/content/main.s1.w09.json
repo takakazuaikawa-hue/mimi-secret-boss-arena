@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s1.w09",
+  "kind": "opening",
+  "title": "為替板は褒めると上がる",
+  "summary": "両替所の応援。板の機嫌と焦げの読み方を覚える",
+  "ownership": {
+    "arcId": "main.stage1"
+  },
+  "trigger": {
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "闘技場・両替所",
+    "assets": [
+      {
+        "id": "main.s1.w09.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-arena-reception.png",
+        "alt": "闘技場・両替所の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s1.w09.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "main.s1.w09.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.w09.node.direction.002",
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w09.node.line.001",
+      "lineId": "main.s1.w09.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "窓口の札を「開」に裏返した瞬間、為替板の札が一斉にめくれた。パタパタパタ、と拍手みたいな音が鳴って、竜の鱗が三枚ぶん値上がりした。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w09.node.line.002",
+      "lineId": "main.s1.w09.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "券売のおじさんが横から言う。「板は生きとる。褒めると上がる、疑うと下がる」。試しに板をじっと疑ってやったら、雲上の祈祷券がすとんと落ちた。おじさんは「な」とだけ言った。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w09.node.line.003",
+      "lineId": "main.s1.w09.line.003",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "褒めると上がるって、それもう相場じゃなくて機嫌ですよね",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w09.node.line.004",
+      "lineId": "main.s1.w09.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私がそう言った途端、板の一段目がくるりと回って「機嫌」と表示した。列のお客が全員そこを見た。海底のお客は真珠を握りしめ、雲上の修道士は祈祷券に息を吹きかけて磨きはじめた。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w09.node.line.005",
+      "lineId": "main.s1.w09.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "列の先頭は竜の紳士。鱗を一枚、指ではじいて窓口に置く。「本日は固めで」。私が「それは食堂の窓口です」と鱗を秤に載せた途端、板が「卵」の欄を新設した。固めが二段上がって、後ろの海底のお客まで「では私も固めで」と言い出した。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w09.node.line.006",
+      "lineId": "main.s1.w09.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "次は灰の王都のご老人。焼け残った硬貨を、焦げた面を上にして置く。私が焦げを数えはじめると、おじさんが手を叩いた。「そこだ。灰は焦げの数で値が決まる。三つ焦げは強い」",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w09.node.line.007",
+      "lineId": "main.s1.w09.line.007",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "焦げが多いほど高いんですか",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w09.node.line.008",
+      "lineId": "main.s1.w09.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「生き延びた証だからな」。私が三つ焦げを一番高い値で読み上げると、列の全員が拍手した。硬貨の持ち主は胸を張り、板はその拍手のぶんだけ灰の王都を押し上げた。おじさんが横で、また「な」と言った。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w09.node.line.009",
+      "lineId": "main.s1.w09.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "閉店間際、板が突然すべての欄を白紙にして、一行だけ表示した。「本日の最高値、両替所職員ミミ」。竜の紳士が、静かに列の最後尾へ並び直した。",
+      "emotion": "comic"
+    },
+    {
+      "type": "choice",
+      "id": "main.s1.w09.node.choice.001",
+      "choices": [
+        {
+          "id": "main.s1.w09.choice.001",
+          "label": "為替板を全力で褒める",
+          "result": "私が板に向かって「今日の並び、完璧です」と言い切ると、板は全欄を一段ずつ持ち上げ、最後に自分の縁を金色に光らせた。列が沸いて、海底のお客が真珠を二粒も余計に出した。券売のおじさんは「褒めすぎだ、明日の朝は必ず下がる」と言いながら、板にこっそり会釈して帰っていった。",
+          "intent": "相場の機嫌を味方につける",
+          "promise": "両替所ごと沸かせる、褒め上手の看板",
+          "memory": "板を全力で褒めた新人の声を、為替板と券売のおじさんが覚えている。",
+          "tone": "comic",
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 3
+            }
+          ],
+          "goto": "main.s1.w09.node.end.001"
+        },
+        {
+          "id": "main.s1.w09.choice.002",
+          "label": "焦げの読み方を覚える",
+          "result": "私が焦げ面の数え方を帳面に書き取ると、灰の王都のご老人は硬貨を三枚並べ、焦げの向きまで教えてくれた。覚えたての手つきで読み上げたら、後ろの客が慌てて自分の硬貨を袖で磨きはじめ、焦げが薄くなって値を落とした。ご老人は帰りぎわ、いちばん黒い一枚を私の手に握らせて言った。「これは値がつかん。持っとけ」",
+          "intent": "レートを自分の目で読む",
+          "promise": "焦げの数で値を読む目と、値のつかない一枚",
+          "memory": "焦げを正しく数えた新人の手つきを、灰の王都のご老人が覚えている。",
+          "tone": "pragmatic",
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
+          "goto": "main.s1.w09.node.end.001"
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "main.s1.w09.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_STAGE1_PLAN.md",
+    "authorNote": "第9週。この闘技場の一シーズンを追うメインストーリー。人物の場面は別枠で再生される。",
+    "legacyGeneratedIds": false
+  }
+}

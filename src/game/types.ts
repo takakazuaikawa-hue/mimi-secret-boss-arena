@@ -7,6 +7,20 @@ export type RallyOrder = "advance" | "endure" | "sync";
 export type Element = "neutral" | "flame" | "tide" | "gale" | "star";
 export type SkillKind = "damage" | "heal" | "guard" | "buff" | "debuff";
 export type TargetKind = "enemy" | "ally" | "allEnemies" | "allAllies" | "self";
+export type EnemyIntent = "attack" | "guard" | "skill";
+export type BattleRule =
+  | "rookie-rally"
+  | "closing-shift"
+  | "postal-order"
+  | "full-course"
+  | "ownership-audit"
+  | "first-star"
+  | "uncontrolled-finale"
+  | "scorecard-wall"
+  | "moving-standard"
+  | "midterm-pressure"
+  | "overtime-rush"
+  | "optimization-chain";
 export type FighterRole =
   | "万能"
   | "攻撃"
@@ -85,6 +99,7 @@ export interface DialogueLine {
 export interface SceneChoice {
   label: string;
   result: string;
+  outcomeHeadline?: string;
   trust: number;
   ownership: number;
   money?: number;
@@ -97,6 +112,12 @@ export interface SceneChoice {
   intent?: string;
   promise?: string;
   memory?: string;
+  outcomeVisual?: {
+    src: string;
+    alt: string;
+    focusX?: number;
+    focusY?: number;
+  };
 }
 
 export interface CharacterScene {
@@ -164,10 +185,13 @@ export interface EventOutcome {
   sceneId: string;
   title: string;
   result: string;
+  outcomeHeadline?: string;
   visual?: {
     src: string;
     kind: "still" | "background";
     alt: string;
+    focusX?: number;
+    focusY?: number;
   };
   choiceLabel?: string;
   choiceTone?: ChoiceTone;
@@ -222,6 +246,19 @@ export interface MatchDefinition {
   prize: number;
   roundsOnWin: number;
   story: string;
+  opponentIds?: [string, string, string];
+  battleRule?: BattleRule;
+  battleFeature?: {
+    name: string;
+    summary: string;
+  };
+  enemyCues?: Record<
+    EnemyIntent,
+    [
+      { gesture: string; line: string },
+      { gesture: string; line: string },
+    ]
+  >;
   final?: boolean;
 }
 
@@ -333,9 +370,15 @@ export interface BattleState {
   shiftUses: number;
   momentum: number;
   momentumMax: number;
-  predictedAction?: "attack" | "guard" | "skill";
-  enemyTell?: "attack" | "guard" | "skill";
-  enemyIntent?: "attack" | "guard" | "skill";
+  predictedAction?: EnemyIntent;
+  /** @deprecated Old saves may still contain this answer-like field. */
+  enemyTell?: EnemyIntent;
+  enemyIntent?: EnemyIntent;
+  enemyCue?: {
+    speaker: string;
+    gesture: string;
+    line: string;
+  };
   enemyTellConfidence?: number;
   enemyThreat?: string;
   forcedSkillId?: string;
@@ -343,6 +386,8 @@ export interface BattleState {
   plan: BattlePlan;
   teamTrust: number;
   teamOwnership: number;
+  battleRule?: BattleRule;
+  battleFeature?: MatchDefinition["battleFeature"];
   metrics: {
     weaknessHits: number;
     criticalHits: number;
@@ -448,6 +493,12 @@ export interface RunState {
   // 三段階キャンペーンの現在区分(1=第一勤務週/2=更新後/3=記録外)。
   // 旧セーブには存在しないため省略可(省略時は従来の全員デッキ挙動)。
   campaignStage?: 1 | 2 | 3;
+  // メインストーリー再生中に保持する、その週に選ばれた行動。
+  // メイン終了後、同じ行動で人物・世界の場面を続けて選ぶために使う。
+  pendingWeeklyAction?: WeeklyAction;
+  // 前の勤務週区分から持ち越した仲間。出場枠は使うが、
+  // 「この周で新しく出会う人数」の勘定からは外す(新しい5人と会えるように)。
+  carriedIds?: string[];
 }
 
 // 周回を跨いで持ち越す仲間の状態(クリア後の世界では仲間だけが積み重なる)
@@ -472,6 +523,8 @@ export interface PlayerProfile {
   // 周回を跨いで在籍し続ける仲間(前区分の主軸たち)。
   carriedAllies?: CarriedAllyState[];
   seenEvents: string[];
+  /** Stable narrative choice IDs preserve branch-specific CG unlocks. */
+  seenChoices?: string[];
   hallOfFame: HallOfFameTeam[];
   skipExplanations: boolean;
   textSpeed: "slow" | "normal" | "fast" | "instant";

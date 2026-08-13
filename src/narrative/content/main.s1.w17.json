@@ -1,0 +1,198 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s1.w17",
+  "kind": "opening",
+  "title": "七本の箒と七つの汚れ",
+  "summary": "世界ごとに違う汚れを、世界別の道具で落とす大掃除",
+  "ownership": {
+    "arcId": "main.stage1"
+  },
+  "trigger": {
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "闘技場 本館の廊下と客席",
+    "assets": [
+      {
+        "id": "main.s1.w17.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-employee-corridor-no-seventeenth-door-v1.png",
+        "alt": "闘技場 本館の廊下と客席の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s1.w17.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "main.s1.w17.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.w17.node.direction.002",
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w17.node.line.001",
+      "lineId": "main.s1.w17.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "大掃除の朝、私が物置の扉を開けたら、箒が七本まとめて倒れてきた。柄が鉄のもの、柄が貝殻のもの、柄に湯たんぽを括りつけたもの。世界の数だけ道具があって、世界の数だけ私の腰が鳴った。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w17.node.line.002",
+      "lineId": "main.s1.w17.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "まず一階の廊下を掃いた。掃くたびに床から金の粉が舞い上がって、私の睫毛まで金になった。券売のおじさんが飛んできて、私の顔を見るなり両手を合わせて拝んだ。その後ろから、卵を固めで平らげた竜の紳士が歩いてくる。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w17.node.line.003",
+      "lineId": "main.s1.w17.line.003",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "紳士さま、廊下がぴかぴかなのは嬉しいんですけど、これ全部、紳士さまから落ちてます",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w17.node.line.004",
+      "lineId": "main.s1.w17.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私が床を指差すと、竜の紳士は品よく首を傾げ、玄関先で三度身震いした。金の粉が一気に降って、床が絨毯になった。経理課チームが法被の袖をまくってそろばんを弾き、粉の山の上で「今月の備品費、これで賄えます」と叫んだ。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w17.node.line.005",
+      "lineId": "main.s1.w17.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私が貝殻の柄の刷毛で客席を撫でると、白いものが樽ひとつ分たまった。海底王国のお客が乾いたあとに残していく塩だ。食堂のおばちゃんが樽ごと担いで厨房へ消え、十分後、館内に味噌汁の匂いが充満した。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w17.node.line.006",
+      "lineId": "main.s1.w17.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私が鉄の柄の箒を東側の客席へ入れると、灰の王都のお客が落とした灰は掃くそばから固まって、一段まるごと石畳になった。西側では天空城のお客の忘れていった雲の切れ端が座面に居座っていて、押しても叩いても動かない。私が上に乗ったら、私ごと三十センチ浮いた。下を通りかかった局員さんが、遺失物の札に「浮いている職員」と書き足した。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w17.node.line.007",
+      "lineId": "main.s1.w17.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私が湯たんぽ付きの箒を階段の手すりへ押し当てると、霜がぱきぱき鳴って解けた。解けた端から幽霊のご夫妻が上がってきて、新聞を二部抱えたまま手すりを二人で握り直す。手すりはまた白くなった。警備隊長が下から一句詠んだ。「霜柱 二人分だけ 温めて」",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w17.node.line.008",
+      "lineId": "main.s1.w17.line.008",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "待って、羽根が逃げます。雲上の羽根って、掃くと上に行くんですけど！",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w17.node.line.009",
+      "lineId": "main.s1.w17.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私が箒を振るたび、羽根は天井へ避難した。館内放送のお姉さんが涼やかに「羽根は歌に集まります」と告げ、そのまま軍記物の一節を読み上げた。羽根は放送席へ一斉に集合し、お姉さんは首まで埋まったまま原稿を読み続けた。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w17.node.line.010",
+      "lineId": "main.s1.w17.line.010",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私が最後のひと掃きを終えると、正面玄関から闘技場の中央まで、泥の足跡が一列に残っていた。まだ乾いていない。券売のおじさんは十秒で賭け札を刷り、私の手に一枚握らせた。「足跡の主。当たったらみんなで飲む」",
+      "emotion": "comic"
+    },
+    {
+      "type": "choice",
+      "id": "main.s1.w17.node.choice.001",
+      "choices": [
+        {
+          "id": "main.s1.w17.choice.001",
+          "label": "金の粉を両替所へ運ぶ",
+          "result": "私が金の粉を樽に集めて両替所へ運ぶと、計りの針は一周して戻った。局員さんが飛んできて樽に「落とし主の判明した落とし物」と札を貼り、そこへ当の竜の紳士が現れて、「それは私のものだ、買い取ろう」と言い出した。自分の粉を自分で買う紳士に、経理課のそろばんが三回鳴って、今月の備品費が浮いた。翌朝、来月の掃除当番の一番上に、紳士の名が金の粉で書かれていた。",
+          "intent": "集めた粉を館の益に変える",
+          "promise": "備品費が浮き、竜の紳士が掃除の側へ回りはじめる",
+          "memory": "竜の紳士が、自分の粉を自分で買った朝を覚えている",
+          "tone": "pragmatic",
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
+          "goto": "main.s1.w17.node.end.001"
+        },
+        {
+          "id": "main.s1.w17.choice.002",
+          "label": "羽根の山からお姉さんを掘る",
+          "result": "私が羽根の山へ腕を突っ込んで館内放送のお姉さんを掘り出すと、お姉さんは埋まったまま一行も読み飛ばしていなかった。掘り出した一拍あと、お姉さんの声が館内に追いついて「よくぞ参られた」と響き、客席の全員が拍手した。その風で羽根がもう一度舞い上がり、掃除は振り出しに戻った。お姉さんは涼しい顔で次の一節を読んだ。",
+          "intent": "埋まった同僚を先に助ける",
+          "promise": "放送が途切れず、客席がひとつの拍手になる",
+          "memory": "館内放送のお姉さんが、自分を掘り出した手を覚えている",
+          "tone": "comic",
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 3
+            }
+          ],
+          "goto": "main.s1.w17.node.end.001"
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "main.s1.w17.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_STAGE1_PLAN.md",
+    "authorNote": "第17週。この闘技場の一シーズンを追うメインストーリー。人物の場面は別枠で再生される。",
+    "legacyGeneratedIds": false
+  }
+}

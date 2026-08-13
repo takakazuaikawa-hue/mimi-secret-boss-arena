@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s1.w05",
+  "kind": "opening",
+  "title": "湯の作法、七通り",
+  "summary": "勝利報酬の温泉で、ミミが初めて休む",
+  "ownership": {
+    "arcId": "main.stage1"
+  },
+  "trigger": {
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "七辻温泉 大浴場と縁側",
+    "assets": [
+      {
+        "id": "main.s1.w05.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-hot-spring-ryokan.png",
+        "alt": "七辻温泉 大浴場と縁側の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s1.w05.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "main.s1.w05.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.w05.node.direction.002",
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w05.node.line.001",
+      "lineId": "main.s1.w05.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ミミが暖簾をくぐると、仲居さんが番号札を七枚まとめて突き出した。「竜のお客様は釜場、幽霊のお客様は三階の湯気、人魚のお客様は塩を足した二番湯、雲上のお客様は湯上がりの縁側、灰の王都のお客様は打たせ湯、魔王城跡地のお客様は水風呂でございます」息継ぎが一度もなかった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w05.node.line.002",
+      "lineId": "main.s1.w05.line.002",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "あの、私の札はどこですか",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w05.node.line.003",
+      "lineId": "main.s1.w05.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "仲居さんは手元に残った七枚目を、見もせずに差し出した。「お客様は、何もしないお部屋でございます」ミミの手から札が落ちた。拾ったのは遺失物窓口の局員さんで、その場で台帳を開いた。休みの日まで台帳を持ち歩いていた。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w05.node.line.004",
+      "lineId": "main.s1.w05.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ミミが釜場を覗くと、竜の紳士が尻尾の先だけを湯に浸けていた。「今日は四十二度で承っている」紳士は湯気の向こうで言った。「卵は固めが好みだが、湯は柔らかめでね」釜焚きが三人がかりで温度計を読んでいた。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w05.node.line.005",
+      "lineId": "main.s1.w05.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ミミが三階へ上がって手を振ると、湯気の層に浮かんだ幽霊のご夫妻が振り返した。奥さんが新聞を二部たたんで枕にする。ご主人が「湯加減は上々」と言った瞬間、湯気がひとまわり濃くなり、ミミの前髪がぺたりと寝た。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w05.node.line.006",
+      "lineId": "main.s1.w05.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ミミが二番湯を覗くと、人魚の客が塩の壺を抱えて唸っていた。「真水は薄い」仲居さんが壺ごと湯へ落とした。湯が海になった。縁側の警備隊長が一句詠む。「湯けむりや 塩壺ひとつ 海となる」経理課チームが法被のまま拍手し、そろばんが濡れた。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w05.node.line.007",
+      "lineId": "main.s1.w05.line.007",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "休むって、具体的には何をすればいいんでしょう",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w05.node.line.008",
+      "lineId": "main.s1.w05.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "仲居さんはミミを縁側に座らせ、何も渡さなかった。隣の雲上の客が目を閉じている。「湯よりも、この風がいいのです」と言ったきり動かない。ミミも真似して目を閉じた。三十秒で寝た。仲居さんが襖を静かに閉めた。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w05.node.line.009",
+      "lineId": "main.s1.w05.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "帰りのバスにミミが乗り込むと、誰も予約していない座席が一つ増えていた。「毎年ございます」仲居さんはそう言って、その席に湯上がりの牛乳を一本置いた。山を下りきったとき、瓶は倒れないまま空になっていた。",
+      "emotion": "comic"
+    },
+    {
+      "type": "choice",
+      "id": "main.s1.w05.node.choice.001",
+      "choices": [
+        {
+          "id": "main.s1.w05.choice.001",
+          "label": "もう一度目を閉じる",
+          "result": "ミミが縁側で目を閉じ直すと、雲上の客が風の向きを一度だけ変えてくれた。仲居さんは通りすがりに膝掛けを置き、何も言わずに行った。三十分後、そろばんの音で目が覚めた。「休憩、きっちり三十分でした」と経理課の主任が言った。廊下の端では、竜の紳士が尻尾で人払いをしていた。",
+          "intent": "休むを最後までやり切る",
+          "promise": "縁側の三十分と、廊下で人払いをする竜の尻尾",
+          "memory": "仲居さんが、膝掛けの下で寝ていた新人の寝顔を覚えている",
+          "tone": "tender",
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
+          "goto": "main.s1.w05.node.end.001"
+        },
+        {
+          "id": "main.s1.w05.choice.002",
+          "label": "仲居さんを手伝う",
+          "result": "ミミが盆を持つと、仲居さんは盆を取り上げ、代わりに牛乳を持たせた。「これを飲み干すまでがお仕事です」ミミが飲む間に、竜の紳士がひと息で湯を四十三度へ上げ、人魚が塩を足し、幽霊のご夫妻が湯気を濃くした。七つの世界が勝手に回った。飲み干したミミに、仲居さんは二本目を持たせた。仕事は終わらなかった。",
+          "intent": "働く癖のまま現場へ出る",
+          "promise": "湯場の全員が持ち場を回す手際と、牛乳二本",
+          "memory": "仲居さんが、盆を取り上げても諦めなかった新人を覚えている",
+          "tone": "comic",
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 3
+            }
+          ],
+          "goto": "main.s1.w05.node.end.001"
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "main.s1.w05.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_STAGE1_PLAN.md",
+    "authorNote": "第5週。この闘技場の一シーズンを追うメインストーリー。人物の場面は別枠で再生される。",
+    "legacyGeneratedIds": false
+  }
+}

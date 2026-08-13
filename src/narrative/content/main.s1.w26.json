@@ -1,0 +1,180 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s1.w26",
+  "kind": "opening",
+  "title": "決勝当日、七つの空の下",
+  "summary": "決勝の開場準備。七つの世界の席を同じ屋根の下に並べる",
+  "ownership": {
+    "arcId": "main.stage1"
+  },
+  "trigger": {
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "決勝会場の観客席",
+    "assets": [
+      {
+        "id": "main.s1.w26.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-central-atrium-photo-studio-day-v1.png",
+        "alt": "決勝会場の観客席の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s1.w26.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "main.s1.w26.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.w26.node.direction.002",
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w26.node.line.001",
+      "lineId": "main.s1.w26.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "決勝当日。正面扉が開くまで一時間。七つの世界のうち六つは、そもそも扉を使わない。私は座席点検の札を首から下げて、まず水路の栓をひねった。通路がざぶんと満ちて、海底王国のお客様が三十名、泳ぎこんで席に着く。座り方が全員横向きだった。券売のおじさんが賭け札を油紙で包み直しながら、「今日だけは濡らせん」と唸った。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w26.node.line.002",
+      "lineId": "main.s1.w26.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "次は上空席。天空城のお客様は天窓から降りてきて、椅子を使わない。私が「この高さでお願いします!」と旗を振ると、四十名がその線にぴたりと浮かんで整列した。真下の湯気席へ「熱、上へ行きます」と声をかけたら、雲上修道院の一行が湯をもう一段張った。上から「いい湯加減ですね」、下から「上、影になってます」。開場前から近所付き合いが始まった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w26.node.line.003",
+      "lineId": "main.s1.w26.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "灰よけ席では、灰の王都のお客様が灰ごと来場した。私が油紙の傘を配ると、湯気席から「こちらへ流れます」と苦情が来る。傘を斜め二十度に倒したら、灰は湯気に当たって落ち、通路に灰の道ができた。食堂のおばちゃんが箒で掃いて袋に詰め、「これ、畑の肥料になるのよ」と持って帰った。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w26.node.line.004",
+      "lineId": "main.s1.w26.line.004",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "水は下! 風は上! 灰は斜め二十度! 湯気はその間! ——よし、四つ入りました。残り三つ!",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w26.node.line.005",
+      "lineId": "main.s1.w26.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "耐熱席の最前列に席札を置くと、竜の紳士が首を下げた。「本日はモーニングを控えました。卵は固めが好みでしてね、興奮すると火が出る」。隣の暗がりへ「こちら、定員はございません」と札を置いたら、魔王城跡地からの影が七百名、きれいに折り重なって収まった。警備隊長が三度数え直し、あきらめて一句詠んだ。字余りだった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w26.node.line.006",
+      "lineId": "main.s1.w26.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私が放送室へ「開場五分前です」と伝えると、館内放送のお姉さんが涼やかな声で読み上げた。「東の階段、満潮につき閉鎖。西の回廊、灰の降下量、平年並み。上空席のお客様は、下の湯気にご慈悲を」。抑揚は完全に軍記物だった。扉の外では、地上のお客様だけが、ふつうに列に並んで、ふつうに弁当を広げて待っている。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w26.node.line.007",
+      "lineId": "main.s1.w26.line.007",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "……六つぶんの空が、もう一枚に重なってる。あとは、ふつうの扉から入ってくるお客様だけ。私、この会場の席順、ぜんぶ言えるようになっちゃった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w26.node.line.008",
+      "lineId": "main.s1.w26.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "開場五分前。私は正面扉の前に立って、閂に手をかけた。背中で水がゆれ、風が回り、湯気が上がり、灰が斜めに落ちる。六つぶんの音が、扉一枚の裏で重なっている。閂が指の下でひとつ鳴った。外で、弁当の蓋がいっせいに閉じた。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "choice",
+      "id": "main.s1.w26.node.choice.001",
+      "choices": [
+        {
+          "id": "main.s1.w26.choice.001",
+          "label": "席の作法を、貼り出す",
+          "result": "私は開場五分前に、七つの世界の席の作法を一枚に書いて、どの席からも見える中央の柱へ貼った。水は静かに、風は列を崩さず、灰は斜め二十度、湯気は譲り合い、影は重ならない、火は席で吐かない、地上はふつうに。すると客が他人の欄まで読み始めた。竜の紳士が海底流の会釈を練習し、海底のお客様が油紙の傘を斜めに構える。全員が隣の世界の作法を間違えて使い出し、扉を開ける前の会場が、もう祭りになった。",
+          "intent": "七つの作法を一枚に並べる",
+          "promise": "隣の世界の作法を覚えた客が、支度を手伝ってくれる。",
+          "memory": "海底流の会釈を練習した竜の紳士が、掲示の文面を覚えている。",
+          "tone": "pragmatic",
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 3
+            }
+          ],
+          "goto": "main.s1.w26.node.end.001"
+        },
+        {
+          "id": "main.s1.w26.choice.002",
+          "label": "銅鑼を七度、鳴らす",
+          "result": "銅鑼は一つしかない。私は撞木を担いで、七回鳴らした。竜の谷の二拍、海底の長い一打、天空の高い一打、修道院の三つ刻み、灰の王都の重い一打、跡地の無音(振り上げて止める)、そして地上のふつうの一打。無音の番で客席が全部静まり、次の一打で場内の全員が立った。海底のお客様だけが、立てずにいっせいに浮いた。最後の一打は扉の外まで届いて、地上の列がひとつ前に詰まった。",
+          "intent": "七つの世界へ同時に合図する",
+          "promise": "七つの世界が同じ拍で動き、会場が一つになる。",
+          "memory": "無音の一打で息を止めた瞬間を、七つの世界の客が覚えている。",
+          "tone": "heroic",
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
+          "goto": "main.s1.w26.node.end.001"
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "main.s1.w26.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_STAGE1_PLAN.md",
+    "authorNote": "第26週。この闘技場の一シーズンを追うメインストーリー。人物の場面は別枠で再生される。",
+    "legacyGeneratedIds": false
+  }
+}

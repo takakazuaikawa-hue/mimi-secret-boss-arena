@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s1.w22",
+  "kind": "opening",
+  "title": "値切りは三十秒で",
+  "summary": "値切りが全部試合になる買い出しの日",
+  "ownership": {
+    "arcId": "main.stage1"
+  },
+  "trigger": {
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "闘技場裏門の七世界市場",
+    "assets": [
+      {
+        "id": "main.s1.w22.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-fountain-plaza-day-v1.png",
+        "alt": "闘技場裏門の七世界市場の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s1.w22.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "main.s1.w22.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.w22.node.direction.002",
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w22.node.line.001",
+      "lineId": "main.s1.w22.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "買い出しの朝、券売のおじさんが私に籠を六つ重ねて渡した。「持てるだけでいい」と言いながら、七つ目を上に乗せた。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w22.node.line.002",
+      "lineId": "main.s1.w22.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "裏門をくぐった私が籠を抱え直して立ち止まると、市場の売り子が一斉に立ち上がった。菓子屋が焼きたての段をこっちへ押し出し、塩売りが桶を叩き、霞漬け屋が壺の蓋を開けて匂いを扇いでくる。七種類の言語の呼び声が、全部私一人に向かってきた。まだ朝が早くて、客は私しかいなかった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w22.node.line.003",
+      "lineId": "main.s1.w22.line.003",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "すみません、霞漬け、二壺でいくら──",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w22.node.line.004",
+      "lineId": "main.s1.w22.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私が値を聞き終わる前に、隣の台から銅鑼が鳴った。漬物屋のおばあさんが袖をまくる。「腕相撲、三十秒。勝ったら一割引き」。市場の全員が振り返り、私の籠を誰かが預かってくれた。段取りが良すぎる。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w22.node.line.005",
+      "lineId": "main.s1.w22.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私は負けた。二十八秒。それでも見物人が拍手して、おばあさんは「粘ったから」と一割の半分だけ引いてくれた。値切り交渉が試合で、観客が審判で、負けても少しは引かれる。この市場、賭場より賭場だ。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w22.node.line.006",
+      "lineId": "main.s1.w22.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私が籠を持ち上げると、両隣から声が飛んだ。塩売りは「一息で塩の名を十言えたら二割」、炭屋は「息止め勝負」、菓子屋は「味見の言い当て」。通りかかった警備隊長が、値切りの列を見て一句詠んだ。「銅鑼鳴るや 値も客も揺れ 汗をかく」。誰も上手いとは言わなかった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w22.node.line.007",
+      "lineId": "main.s1.w22.line.007",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "わかりました。全部やります。荷物、置く場所ください",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w22.node.line.008",
+      "lineId": "main.s1.w22.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "市場が沸いた。幽霊のご夫妻が新聞を二部広げて日陰を作り、経理課チームがそろばんを構えて割引の累計を弾き始める。私はまだ何も買っていないのに、応援団だけが完成していた。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w22.node.line.009",
+      "lineId": "main.s1.w22.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "さて、どの台から崩そう。籠の重さより、勝ち筋の方が気になってきた。",
+      "emotion": "comic"
+    },
+    {
+      "type": "choice",
+      "id": "main.s1.w22.node.choice.001",
+      "choices": [
+        {
+          "id": "main.s1.w22.choice.001",
+          "label": "炭の値切りを引き受ける",
+          "result": "私は竜の谷の炭屋の前で袖をまくった。種目は「息止め」。炭火の前で長く耐えたほうが勝ち。三十年焼き続けた顔の主人を前に、私は三十秒で吹き出した。すると隣の竜の紳士が「代打を」と言って静かに息を吸い、そのまま四分黙った。主人が先に咳き込んだ。炭は半値になり、おまけに火起こし用の杉皮が付いた。竜の紳士は「肺は資産です」と言って、また卵の固さの話に戻った。籠はまだ半分空いていて、市場の奥でもう次の銅鑼が鳴った。",
+          "intent": "力ずくで安く買う",
+          "promise": "上等の炭が半値と杉皮のおまけ",
+          "memory": "炭屋は、竜が四分黙った日として覚えている",
+          "tone": "wild",
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 3
+            }
+          ],
+          "goto": "main.s1.w22.node.end.001"
+        },
+        {
+          "id": "main.s1.w22.choice.002",
+          "label": "焼き菓子の味見で挑む",
+          "result": "私は灰の王都の菓子屋に、味見勝負を申し込んだ。種目は「言い当て」。目隠しで焼き菓子の産地を当てる。菓子屋は三つ当てた。私は五つ当てた。全部、食堂のおばちゃんの弁当で食べた味だった。菓子屋は肩を落とし、それから急に嬉しそうになって、割れた端を袋いっぱいに詰めてくれた。「賄いの味を覚えてる客は、いい客だ」。私は袋を荷物の一番上に置いた。角を曲がるまでに二枚食べた。この袋が闘技場まで持つかどうかは、まだ私にもわからない。",
+          "intent": "舌で勝って親しくなる",
+          "promise": "割れ菓子ひと袋と菓子屋の顔なじみ",
+          "memory": "菓子屋は、賄いの味で勝った新人を覚えている",
+          "tone": "tender",
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
+          "goto": "main.s1.w22.node.end.001"
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "main.s1.w22.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_STAGE1_PLAN.md",
+    "authorNote": "第22週。この闘技場の一シーズンを追うメインストーリー。人物の場面は別枠で再生される。",
+    "legacyGeneratedIds": false
+  }
+}

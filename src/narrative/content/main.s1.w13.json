@@ -1,0 +1,180 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s1.w13",
+  "kind": "opening",
+  "title": "濡れる本、沈む棚",
+  "summary": "世界別の本が棚を壊し、分類法を作り直す",
+  "ownership": {
+    "arcId": "main.stage1"
+  },
+  "trigger": {
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "闘技場 図書室",
+    "assets": [
+      {
+        "id": "main.s1.w13.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-contract-archive-v2.png",
+        "alt": "闘技場 図書室の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s1.w13.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "main.s1.w13.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.w13.node.direction.002",
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w13.node.line.001",
+      "lineId": "main.s1.w13.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "図書室の扉を開けた私を、潮の匂いがどっと押し戻した。海底王国の棚が夜のあいだに膨らんで、通路の半分を占領していた。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w13.node.line.002",
+      "lineId": "main.s1.w13.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "濡れた一冊を抜くと、床にぼたぼた水が落ちた。押さえた指は三秒でふやけて、梅干しの皮になった。局員さんが黙って乾いた手ぬぐいを差し出す。「遺失物窓口より、こちらのほうが行方不明が多いんです」",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w13.node.line.003",
+      "lineId": "main.s1.w13.line.003",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "では五十音順で並べますね。ええと、あ行の海底の本が……あ、字が泳いで、題名がどこかへ行きました",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w13.node.line.004",
+      "lineId": "main.s1.w13.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "雲上修道院の詩集を持ち上げたら、薄すぎて向こうの警備隊長の顔がくっきり透けた。隊長は詩集越しに一句詠んだ。「薄すぎて 隣の詩まで 読めました」",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w13.node.line.005",
+      "lineId": "main.s1.w13.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "竜の谷の一冊を棚へ戻した途端、板がめきりと鳴って床が三寸沈んだ。経理課チームが法被のまま駆け上がり、そろばんで沈み具合を弾いて告げた。「あと二冊で、下の階が図書室になります」",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w13.node.line.006",
+      "lineId": "main.s1.w13.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "灰の王都の伝記を開くと、読んだ行から順に灰が立った。三行で机に小山ができ、食堂のおばちゃんが鍋を抱えて現れた。「その灰、磨きに最高なのよ」。山ごと持って帰られた。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w13.node.line.007",
+      "lineId": "main.s1.w13.line.007",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "分かりました。この図書室、著者でも題でも分けられません。分けるなら――読むと何が起きるかで分けます",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w13.node.line.008",
+      "lineId": "main.s1.w13.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "館内放送のお姉さんが涼やかに読み上げた。「図書室、本日より新たな陣立て。濡れる、透ける、沈む、灰が出る。四つの陣、みだりに攻め入るべからず」。頷いた竜の紳士が、いちばん奥の棚を指した。「では、開くと客が増える棚は、どちらへ入れますかな」",
+      "emotion": "revelation"
+    },
+    {
+      "type": "choice",
+      "id": "main.s1.w13.node.choice.001",
+      "choices": [
+        {
+          "id": "main.s1.w13.choice.001",
+          "label": "四つの部屋に住み分ける",
+          "result": "濡れる部屋の床に排水溝を掘り、沈む部屋は最初から一階へ移し、灰の部屋は食堂の隣に置いた。おばちゃんは毎朝、鍋を抱えて灰を汲みに来る。ところが透ける部屋だけは壁まで透けて、隣の帳簿室が丸見えになった。経理課が慌てて竜の谷の分厚い帳簿を並べ、目隠しにした。その重みで、床がまた三寸沈んだ。",
+          "intent": "本の性質どおりに部屋を分ける",
+          "promise": "手がふやけない読書と、灰の行き先",
+          "memory": "食堂のおばちゃんが、毎朝の灰の汲み場所として覚えている",
+          "tone": "pragmatic",
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
+          "goto": "main.s1.w13.node.end.001"
+        },
+        {
+          "id": "main.s1.w13.choice.002",
+          "label": "棚の順番は試合で決める",
+          "result": "銅鑼が鳴り、図書室の真ん中で本の重さ比べが始まった。竜の谷の一冊は卓を割り、雲上の詩集は警備隊長の息で飛び、海底の本は自分の水で滑って場外へ落ちた。券売のおじさんは三十秒で賭け札を刷り上げ、判定は隊長が務めた。順番はきれいに決まった。決まった順に並べたら、重い順に棚が端から全部沈んだ。",
+          "intent": "揉める棚は試合で決着させる",
+          "promise": "判定つきの並び順と、刷りたての賭け札",
+          "memory": "券売のおじさんが、図書室でも札が売れた日として覚えている",
+          "tone": "wild",
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 3
+            }
+          ],
+          "goto": "main.s1.w13.node.end.001"
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "main.s1.w13.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_STAGE1_PLAN.md",
+    "authorNote": "第13週。この闘技場の一シーズンを追うメインストーリー。人物の場面は別枠で再生される。",
+    "legacyGeneratedIds": false
+  }
+}

@@ -21,6 +21,10 @@ import { auditNarrativeBlocks } from "./audit";
 import { adaptLegacyScene } from "./legacySceneAdapter";
 import { legacyNarrativeBlockById, legacyNarrativeBlocks } from "./legacyBlocks";
 import {
+  galleryEntriesFromNarrativeBlocks,
+  isNarrativeGalleryEntryUnlocked,
+} from "./gallery";
+import {
   openingHotSpringBlock,
   openingOwnershipBlock,
 } from "./openingBlocks";
@@ -34,11 +38,76 @@ import { legacyWorldNarrativeBlockById } from "./worldBlocks";
 const publicAssetExists = (path: string) =>
   existsSync(join(process.cwd(), "public", path.replace(/^\//, "")));
 
+// 毎週まずメインストーリーが再生されるため、
+// 人物・世界の場面を見るには、メインを消化してから followup を取る。
+const weeklyEventAfterMain = (
+  source: ReturnType<typeof createRun>,
+  action: "work" | "play" | "rest" | "search",
+) => {
+  const withMain = chooseWeeklyAction(source, action);
+  if (!withMain.currentEvent?.scene.id.startsWith("main.s")) return withMain;
+  const resolved = clearEventOutcome(resolveCurrentEvent(withMain, 0));
+  return maybeCreateMainStoryFollowup(resolved);
+};
+
 describe("narrative block migration", () => {
+  it("derives one memory-gallery record from every authored still", () => {
+    const stillCount = legacyNarrativeBlocks.flatMap((block) =>
+      block.presentation.assets.filter((asset) => asset.kind === "still"),
+    ).length;
+    const gallery = galleryEntriesFromNarrativeBlocks(legacyNarrativeBlocks);
+
+    expect(gallery).toHaveLength(stillCount);
+    expect(new Set(gallery.map((entry) => entry.id)).size).toBe(gallery.length);
+    gallery.forEach((entry) => {
+      expect(entry.title.length).toBeGreaterThan(0);
+      expect(entry.chapter.length).toBeGreaterThan(0);
+      expect(entry.caption.length).toBeGreaterThan(0);
+      expect(entry.image).toMatch(/^\/assets\//);
+    });
+  });
+
+  it("keeps viewed memories unlocked after the current run is replaced", () => {
+    const [entry] = galleryEntriesFromNarrativeBlocks(legacyNarrativeBlocks);
+    expect(entry).toBeDefined();
+    expect(
+      isNarrativeGalleryEntryUnlocked(entry!, {
+        seenEvents: [entry!.eventId],
+        liberatedCharacterIds: [],
+      }),
+    ).toBe(true);
+    expect(
+      isNarrativeGalleryEntryUnlocked(entry!, {
+        seenEvents: [],
+        liberatedCharacterIds: [],
+      }),
+    ).toBe(false);
+  });
+
+  it("keeps unchosen branch memories locked", () => {
+    const choiceEntry = galleryEntriesFromNarrativeBlocks(
+      legacyNarrativeBlocks,
+    ).find((entry) => entry.choiceId);
+    expect(choiceEntry).toBeDefined();
+    expect(
+      isNarrativeGalleryEntryUnlocked(choiceEntry!, {
+        seenEvents: [choiceEntry!.eventId],
+        flags: [`choice:${choiceEntry!.choiceId}`],
+        liberatedCharacterIds: [],
+      }),
+    ).toBe(true);
+    expect(
+      isNarrativeGalleryEntryUnlocked(choiceEntry!, {
+        seenEvents: [choiceEntry!.eventId],
+        flags: [`choice:${choiceEntry!.eventId}.choice.not-selected`],
+        liberatedCharacterIds: [],
+      }),
+    ).toBe(false);
+  });
   it("adapts every existing CharacterScene exactly once", () => {
     const expectedCount =
-      // opening: 所有権移譲・温泉旅行・メイン各区分5話×3
-      17 +
+      // opening: 所有権移譲・温泉旅行・メイン各区分の全話
+      38 +
       fighterDefinitions.length * 7 +
       Object.values(ambientEvents).flat().length +
       Object.values(routeEvents).flatMap((scenes) => scenes ?? []).length;
@@ -226,7 +295,7 @@ describe("narrative block migration", () => {
       activeTeam: ["gidonozeaas"],
     };
 
-    run = chooseWeeklyAction(run, "work");
+    run = weeklyEventAfterMain(run, "work");
 
     expect(run.currentEvent?.scene.id).toBe("gidonozeaas.crisis");
     expect(
@@ -301,9 +370,9 @@ describe("narrative block migration", () => {
     run = maybeCreateOpeningOwnershipFollowup(run);
     run = resolveCurrentEvent(run, 0);
     run = clearEventOutcome(run);
-    // メイン話のない週で、個別の続きが再生される
+    // 翌週、メインの後に個別の続きが再生される
     run = { ...nextCampaignWeek(run), week: 8 };
-    run = chooseWeeklyAction(run, "work");
+    run = weeklyEventAfterMain(run, "work");
 
     expect(run.currentEvent?.scene.id).toBe(
       fighterDefinitions[0].scenes.join.id,
@@ -332,7 +401,7 @@ describe("narrative block migration", () => {
       roster: fighterDefinitions.slice(0, 3).map((fighter) => fighter.id),
       activeTeam: fighterDefinitions.slice(0, 3).map((fighter) => fighter.id),
     };
-    run = chooseWeeklyAction(run, "rest");
+    run = weeklyEventAfterMain(run, "rest");
 
     expect(run.currentEvent?.narrativeBlockId).toBeTruthy();
     expect(

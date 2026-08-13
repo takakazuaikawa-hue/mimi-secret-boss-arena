@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s1.w14",
+  "kind": "opening",
+  "title": "夜の部、開場",
+  "summary": "夜勤初日。客が総入れ替わる夜",
+  "ownership": {
+    "arcId": "main.stage1"
+  },
+  "trigger": {
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "闘技場・深夜の正面ロビー",
+    "assets": [
+      {
+        "id": "main.s1.w14.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-observation-deck-night.png",
+        "alt": "闘技場・深夜の正面ロビーの背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s1.w14.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "main.s1.w14.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.w14.node.direction.002",
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w14.node.line.001",
+      "lineId": "main.s1.w14.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "深夜零時。受付の札を「夜の部」へ裏返した。裏返す音より早く、正面扉が七つ同時に開いた。蹄、下駄、車輪、裸足。床を鳴らす音が、一度に四種類へ増えた。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w14.node.line.002",
+      "lineId": "main.s1.w14.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "先頭は毛皮の帽子の団体だった。私が「こんばんは」と頭を下げたら、十二人が声をそろえて「おはよう」と返した。灰の王都は時差で、向こうはいま昼の三時らしい。挨拶が正面から衝突した。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w14.node.line.003",
+      "lineId": "main.s1.w14.line.003",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "では両方で。おはようございまして、こんばんは",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w14.node.line.004",
+      "lineId": "main.s1.w14.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "言い切った途端、商人が全員手帳を開いた。「これが噂の、昼のバニーだ」。頁に貼られた私の似顔絵は、耳が実物より二割長い。券売のおじさんの絵だ。あの人は私の耳を、必ず二割増しで描く。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w14.node.line.005",
+      "lineId": "main.s1.w14.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "絵の礼を言いに寄って、ついでに夜の札の違いを聞いた。券売のおじさんは帽子のつばを持ち上げ、売り場の灯りを消した。真っ暗になった台の上で、賭け札の数字だけが青く光る。後ろの行列が一斉に「おお」と言って、三人ほど余分に買っていった。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w14.node.line.006",
+      "lineId": "main.s1.w14.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "幽霊のご夫妻へ新聞を二部そろえて渡すと、奥さんが声に出して読み始めた。夜は文字がよく見えるのだそうだ。旦那さんが頷くたび、椅子は少しも軋まず、ロビーの温度だけが下がっていった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w14.node.line.007",
+      "lineId": "main.s1.w14.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "寒いので、私はロビーの窓を順に閉めて回った。三つ目を閉めた途端、館内放送のお姉さんの声が降ってきた。「夜の部、開場。眠らぬ客、五百。眠れぬ客、三。後者には毛布を配る」。毛布は本当に運ばれてきた。三枚だけ、盆に載せて恭しく。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w14.node.line.008",
+      "lineId": "main.s1.w14.line.008",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "三枚なら私が配ります。眠れないの、どちら様ですか",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w14.node.line.009",
+      "lineId": "main.s1.w14.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "手を挙げたのは竜の紳士だった。私が毛布を膝へ掛けた瞬間、夜行性の客たちが揃って息を止める。隣の席の誰かが私の袖を引いて、小声で言った。「寝かせるな。この人、寝ると三日起きない」",
+      "emotion": "tension"
+    },
+    {
+      "type": "choice",
+      "id": "main.s1.w14.node.choice.001",
+      "choices": [
+        {
+          "id": "main.s1.w14.choice.001",
+          "label": "夜の常連を全員覚える",
+          "result": "毛布を配って回りながら、一人ずつ名前を聞いた。灰の王都の商人が十二人、雲上修道院の徹夜組が四人、海底王国の貝殻売りが一人。最後に全員を言い当てたら、館内放送のお姉さんが即興で読み上げた。「夜の部、名を持つ者、十七。以上、記録に残す」。翌朝、その十七人分の似顔絵が掲示板に貼られていた。全員、耳が二割長かった。",
+          "intent": "夜の顔ぶれを覚えきる",
+          "promise": "夜の常連十七人が、私を名前で呼ぶようになる",
+          "memory": "灰の王都の商人が、手帳の似顔絵を一枚増やしている",
+          "tone": "pragmatic",
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
+          "goto": "main.s1.w14.node.end.001"
+        },
+        {
+          "id": "main.s1.w14.choice.002",
+          "label": "竜の紳士を寝かせない",
+          "result": "膝の毛布をそっと剥がして、両替所の椅子へ座り直してもらい、熱いお茶を差し出した。「起きていてください。夜の分の卵、まだ固まってません」。紳士は目を丸くして、それから三十秒だけ静かに笑った。夜行性の客たちが拍手する。おかげで紳士は朝まで起きていて、食堂のおばちゃんは卵を百二十個、固茹でにする羽目になった。",
+          "intent": "紳士を朝まで起こしておく",
+          "promise": "夜行性の客たちが、私の頼みを一度は聞いてくれる",
+          "memory": "竜の紳士が、固茹で卵百二十個の借りを覚えている",
+          "tone": "comic",
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 3
+            }
+          ],
+          "goto": "main.s1.w14.node.end.001"
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "main.s1.w14.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_STAGE1_PLAN.md",
+    "authorNote": "第14週。この闘技場の一シーズンを追うメインストーリー。人物の場面は別枠で再生される。",
+    "legacyGeneratedIds": false
+  }
+}

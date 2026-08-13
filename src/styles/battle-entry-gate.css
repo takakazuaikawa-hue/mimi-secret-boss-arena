@@ -72,6 +72,10 @@
   object-position: center bottom;
 }
 
+.battle-entry-fighter > img.is-mirrored {
+  transform: scaleX(-1);
+}
+
 .battle-entry-fighter > .fighter-chibi {
   width: min(100%, 410px);
   height: min(52vw, 520px);

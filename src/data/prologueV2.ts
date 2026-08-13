@@ -49,7 +49,7 @@ const scenePages = (
 export const fullProloguePages: ProloguePage[] = [
   ...scenePages(
     "プロローグ　いつものカジノ",
-    "/assets/story/bg-casino-dressing-room.png",
+    "/assets/story/bg-casino-cafe-night.png",
     null,
     [
       thought(
@@ -86,7 +86,7 @@ export const fullProloguePages: ProloguePage[] = [
   ),
   ...scenePages(
     "臨時派遣　従業員カウンター",
-    "/assets/story/bg-employee-entrance.png",
+    "/assets/story/bg-lost-property-counter-v1.png",
     null,
     [
       line(

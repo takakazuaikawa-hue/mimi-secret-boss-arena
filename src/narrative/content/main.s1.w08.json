@@ -1,0 +1,180 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s1.w08",
+  "kind": "opening",
+  "title": "水没席、三倍の値がつく",
+  "summary": "海水を張った客席が最前列から売り切れる",
+  "ownership": {
+    "arcId": "main.stage1"
+  },
+  "trigger": {
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "闘技場 水没席",
+    "assets": [
+      {
+        "id": "main.s1.w08.asset.background.001",
+        "kind": "background",
+        "path": "/assets/arena-daylight.png",
+        "alt": "闘技場 水没席の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s1.w08.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "main.s1.w08.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.w08.node.direction.002",
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w08.node.line.001",
+      "lineId": "main.s1.w08.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "搬入口の扉を開けたら、潮の便の樽が三百、いっぺんに転がり出た。御者が「二百の予定でしたが、王が張り切りまして」と頭を下げる。廊下がくるぶしまで海になり、食堂のおばちゃんが網を持って走ってきて、鰯を九匹掬った。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w08.node.line.002",
+      "lineId": "main.s1.w08.line.002",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "これ、客席に張る分ですよね。廊下に張る分じゃないですよね",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w08.node.line.003",
+      "lineId": "main.s1.w08.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私が図面を広げて「前の三列を水没席にします」と言ったら、経理課チームがそろばんを鳴らして「三倍」と答えた。券売のおじさんはまだ札を刷っていない。なのに行列の先頭には、もう竜の紳士が立っていた。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w08.node.line.004",
+      "lineId": "main.s1.w08.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私が券売のおじさんを急かすと、最前列の札が三枚だけ刷り上がった。竜の紳士はそれを全部買い、「モーニングは卵を固めで、席まで運んでいただけますか」と言った。水の中の席である。私が念のため確かめると、紳士は「だから固めなのです」と答えた。後ろに並ぶ客が全員うなずいた。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w08.node.line.005",
+      "lineId": "main.s1.w08.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私が開場を頼むと、館内放送のお姉さんが涼やかに読み上げた。「潮、満ちたり。客、雪崩れ込むこと数千」。水没席は一息で埋まった。幽霊のご夫妻が新聞を二部持って沈んでいき、濡れないまま読み始めた。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w08.node.line.006",
+      "lineId": "main.s1.w08.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私が「お静かに」と頼んだら、警備隊長が代わりに一句詠んだ。「潮満ちて 賭札浮かぶ 昼下がり」。拍手が起きる。拍手のたびに波が立ち、前三列が同時に沈む。誰も怒らない。全員、もう一句を要求した。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w08.node.line.007",
+      "lineId": "main.s1.w08.line.007",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "水没席のお客様へご案内します。息継ぎは各自の判断で、拍手はどうか静かにお願いします",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w08.node.line.008",
+      "lineId": "main.s1.w08.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私が「本日の相手は海底王国代表です」と案内した瞬間、水面が真ん中からへこんだ。代表が一口飲んだのだ。水没席はただの席になり、三倍の券を握った客が一斉に立ち上がった。竜の紳士だけが座ったまま卵の固さを確かめ、「おかわりの潮は、勝ったほうへ」と言った。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "choice",
+      "id": "main.s1.w08.node.choice.001",
+      "choices": [
+        {
+          "id": "main.s1.w08.choice.001",
+          "label": "水没席に浮き輪を配る",
+          "result": "私が浮き輪を配ったら、竜の紳士が角に通し、幽霊のご夫妻は二人で一つを分け合った。経理課チームが浮き輪に賭け率を書いて売り出し、券売のおじさんが慌てて浮き輪の札を刷り足した。浮き輪のほうが席より高値になった。最後の一つを警備隊長が買い、被って一句詠んだ。「輪の中 潮と客と 昼の月」。水没席の客は、輪の中から静かに拍手した。",
+          "intent": "沈む客の安全を確保する",
+          "promise": "水没席が名物になり、潮の便が増える",
+          "memory": "券売のおじさんが、浮き輪は席より高く売れると覚えた",
+          "tone": "pragmatic",
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
+          "goto": "main.s1.w08.node.end.001"
+        },
+        {
+          "id": "main.s1.w08.choice.002",
+          "label": "水位をもう一列上げる",
+          "result": "私が水門をもう一段開けたら、水は四列目まで上がった。四列目の客は券を買い直さず、三倍の顔をして座っている。差額を追いかけて経理課チームが泳ぎ出し、そろばんが浮いた。食堂のおばちゃんが網でそろばんを回収し、代わりに鰯を配った。客は差額を払わず、鰯を三匹ずつ持って帰った。経理課チームだけが、まだ泳いでいた。",
+          "intent": "見せ場を客席まで広げる",
+          "promise": "四列目まで名物になり、口伝が世界へ渡る",
+          "memory": "経理課チームが、そろばんは水に浮くと覚えた",
+          "tone": "wild",
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 3
+            }
+          ],
+          "goto": "main.s1.w08.node.end.001"
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "main.s1.w08.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_STAGE1_PLAN.md",
+    "authorNote": "第8週。この闘技場の一シーズンを追うメインストーリー。人物の場面は別枠で再生される。",
+    "legacyGeneratedIds": false
+  }
+}

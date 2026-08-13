@@ -26,13 +26,73 @@
     "weight": 1
   },
   "presentation": {
-    "location": "闘技場・大ホール",
+    "location": "闘技場・初勤務の各所",
     "assets": [
       {
         "id": "main.s1.ep1.asset.background.001",
         "kind": "background",
+        "path": "/assets/story/bg-central-atrium-photo-studio-day-v1.png",
+        "alt": "朝の闘技場大ホール"
+      },
+      {
+        "id": "main.s1.ep1.asset.background.002",
+        "kind": "background",
+        "path": "/assets/story/bg-casino-cafe-day-v1.png",
+        "alt": "昼の売店前とカフェ"
+      },
+      {
+        "id": "main.s1.ep1.asset.background.003",
+        "kind": "background",
+        "path": "/assets/arena-daylight.png",
+        "alt": "日中の闘技場試合会場"
+      },
+      {
+        "id": "main.s1.ep1.asset.background.004",
+        "kind": "background",
         "path": "/assets/story/bg-arena-reception.png",
-        "alt": "闘技場大ホールの背景"
+        "alt": "闘技場受付"
+      },
+      {
+        "id": "main.s1.ep1.asset.background.005",
+        "kind": "background",
+        "path": "/assets/story/bg-fountain-plaza-day-v1.png",
+        "alt": "闘技場正面口前の噴水広場"
+      },
+      {
+        "id": "main.s1.ep1.asset.background.006",
+        "kind": "background",
+        "path": "/assets/story/bg-staff-room-rain.png",
+        "alt": "従業員休憩室"
+      },
+      {
+        "id": "main.s1.ep1.asset.outcome.001",
+        "kind": "still",
+        "path": "/assets/story/events/main-s1-ep1-outcome-tender-v1.png",
+        "alt": "翌朝、消えた初日の賭け札を見つけたミミと見守る職員たち",
+        "focusX": 50,
+        "focusY": 46,
+        "gallery": {
+          "title": "最初の札が消えた朝",
+          "chapter": "第1週 / 初出勤と、この街のふつう",
+          "caption": "掲示を見なかったことにして働いた翌朝。最短予想の札だけが消え、休憩室の全員がその変化を見ていた。",
+          "unlock": "on-choice",
+          "choiceId": "main.s1.ep1.choice.001"
+        }
+      },
+      {
+        "id": "main.s1.ep1.asset.outcome.002",
+        "kind": "still",
+        "path": "/assets/story/events/main-s1-ep1-outcome-defiant-v1.png",
+        "alt": "自分に賭けたミミと辞めない札を書き足して笑う券売員",
+        "focusX": 50,
+        "focusY": 46,
+        "gallery": {
+          "title": "倍率無限大の新人",
+          "chapter": "第1週 / 初出勤と、この街のふつう",
+          "caption": "自分自身へ一枚だけ賭けたミミに、券売員は笑って新しい欄を作った。",
+          "unlock": "on-choice",
+          "choiceId": "main.s1.ep1.choice.002"
+        }
       }
     ]
   },
@@ -121,7 +181,7 @@
       "lineId": "main.s1.ep1.line.008",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "休憩室の壁に、手書きの賭け札が貼り出されていた。『新人・ミミ、何日もつか』。最短「初日」、最長「一週間」。締切は本日十八時。……つまり全員、私が今日辞めるか明日辞めるかを楽しんでいる。名前まで書いてある。丁寧に。",
+      "text": "帰り際、正面口の来場者名簿を見て、手が止まった。本日のご来場、二千四百名。出身欄が、竜の谷、海底王国、天空城、雲上修道院、魔王城(跡地)。……跡地。先輩は平然と言った。「うち、来ない世界のほうが少ないですよ」。",
       "emotion": "comic"
     },
     {
@@ -130,7 +190,7 @@
       "lineId": "main.s1.ep1.line.009",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "腹は立たなかった。むしろ、こう思った。——全部、外させてやろう。本日最後の業務は、カフェの応援。竜と、幽霊と、法被の経理課。初日にしては、上出来の一日だったと思う。",
+      "text": "世界中から人が集まって、両替して、モーニングを食べて、腕相撲で揉め事を片付けて、帰っていく。とんでもない場所で働き始めたらしい。本日最後の業務は、カフェの応援。竜と、幽霊と、法被の経理課。初日にしては、上出来の一日だったと思う。",
       "emotion": "resolve"
     },
     {
@@ -139,35 +199,39 @@
       "choices": [
         {
           "id": "main.s1.ep1.choice.001",
-          "label": "掲示を見なかったことにして、笑って働く",
-          "result": "見なかったことにした。ただし帰り際、掲示の前を通るとき、わざと元気よく「お疲れさまでした!」と挨拶しておいた。翌朝、最短予想の「初日」の札が、静かに撤去されていた。誰も何も言わない。私も言わない。この街との、最初の会話だった。",
-          "intent": "騒がず、働きぶりで返す",
-          "promise": "街の見る目が変わり、支度が少し進む。",
-          "memory": "初日の挨拶ひとつで札が下がったことを、休憩室の全員が見ていた。",
-          "tone": "tender",
+          "label": "名簿の「跡地」について聞いてみる",
+          "result": "「魔王城跡地って、なんですか」。先輩はさらりと答えた。「潰れた後も観光地として残ってるんです。年間三万人。土産物屋もありますよ」。滅ぼされた城が観光地。しかもたぶん、潰した本人も客として来ている。この街の常識を、私はまだ一割も知らない。",
+          "intent": "分からないことを、その場で聞く",
+          "promise": "世界の見え方が一段広がり、支度が進む。",
+          "memory": "魔王城跡地に土産物屋があると知った日のことを、ミミは覚えている。",
+          "tone": "comic",
           "effects": [
             {
               "type": "sharedPoints",
               "amount": 2
             }
           ],
-          "goto": "main.s1.ep1.node.end.001"
+          "goto": "main.s1.ep1.node.end.001",
+          "outcomeHeadline": "翌朝、「初日」の札だけが消えていた。",
+          "outcomeAssetId": "main.s1.ep1.asset.outcome.001"
         },
         {
           "id": "main.s1.ep1.choice.002",
-          "label": "自分の札を一枚だけ買う(「辞めない」に)",
-          "result": "券売のおじさんに、一番安い札を一枚頼んだ。「どこに賭けます?」「『辞めない』で」。おじさんは目を丸くして、それから声を上げて笑った。「そんな欄はないよ。……作っとくわ」。翌日、掲示板に新しい欄が増えていた。倍率は、まだ誰も買っていないので無限大だった。",
-          "intent": "賭けの街には、賭けで返す",
-          "promise": "街の話題になり、支度が進む。",
-          "memory": "自分に賭けた新人の札を、券売のおじさんが取ってある。",
-          "tone": "defiant",
+          "label": "名簿を閉じて、明日の仕込みを覚える",
+          "result": "驚くのは後回しにして、私は明日の段取りを覚えることにした。竜のモーニングは卵固め、幽霊のご夫妻は新聞を二部、人魚のお客様には水差しを深めのものへ。名簿の出身欄より、目の前の好みを覚えるほうが先だ。……とはいえ、寝る前にもう一度だけ「天空城」の文字を思い出してしまった。",
+          "intent": "驚きより、目の前の仕事を覚える",
+          "promise": "現場が身につき、支度が少し進む。",
+          "memory": "初日に覚えたお客様の好みを、フロアの先輩たちが評価している。",
+          "tone": "pragmatic",
           "effects": [
             {
               "type": "sharedPoints",
               "amount": 1
             }
           ],
-          "goto": "main.s1.ep1.node.end.001"
+          "goto": "main.s1.ep1.node.end.001",
+          "outcomeHeadline": "「辞めない」が、賭け札に加わった。",
+          "outcomeAssetId": "main.s1.ep1.asset.outcome.002"
         }
       ]
     },
@@ -180,7 +244,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_STAGE1_PLAN.md",
-    "authorNote": "改稿v3: 全ノードを「ミミが行動→世界が反応」の因果場面に。竜の給仕(働く=稼ぐ)、腕相撲決着(揉め事=試合)、経理課の応援(従業員チーム文化)、道案内(種は一粒)。観光案内の地の文を全廃。 縦の筋を「街がミミの去就に賭けている」へ差し替え。",
+    "authorNote": "改稿v3: 全ノードを「ミミが行動→世界が反応」の因果場面に。竜の給仕(働く=稼ぐ)、腕相撲決着(揉め事=試合)、経理課の応援(従業員チーム文化)、道案内(種は一粒)。観光案内の地の文を全廃。 縦の筋は「見える世界が一段ずつ広がる」(職場内の話・去就への賭けは撤去)。",
     "legacyGeneratedIds": false
   }
 }

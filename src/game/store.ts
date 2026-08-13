@@ -224,6 +224,11 @@ export const useGameStore = create<GameStore>()(
           if (!state.run?.currentEvent) return {};
           const sceneId = state.run.currentEvent.scene.id;
           const resolved = resolveCurrentEvent(state.run, choiceIndex);
+          const selectedChoiceFlag = resolved.flags.find(
+            (flag) =>
+              flag.startsWith("choice:") &&
+              !state.run?.flags.includes(flag),
+          );
           return {
             run: resolved,
             profile: {
@@ -231,6 +236,14 @@ export const useGameStore = create<GameStore>()(
               seenEvents: [
                 ...new Set([...state.profile.seenEvents, sceneId]),
               ],
+              seenChoices: selectedChoiceFlag
+                ? [
+                    ...new Set([
+                      ...(state.profile.seenChoices ?? []),
+                      selectedChoiceFlag,
+                    ]),
+                  ]
+                : state.profile.seenChoices ?? [],
             },
           };
         });
@@ -706,7 +719,7 @@ export const useGameStore = create<GameStore>()(
     }),
     {
       name: "mimi-secret-boss-arena",
-      version: 11,
+      version: 12,
       storage: createJSONStorage(gameStateStorage),
       partialize: (state) => ({ profile: state.profile, run: state.run }),
       migrate: (persisted) => {
@@ -715,12 +728,13 @@ export const useGameStore = create<GameStore>()(
         const profile: PlayerProfile = {
           ...defaultProfile,
           ...(state.profile ?? {}),
-          version: 11,
+          version: 12,
           dialogueMode: "step",
           unlockedRoutes:
             state.profile?.unlockedRoutes ?? defaultProfile.unlockedRoutes,
           liberatedCollection: state.profile?.liberatedCollection ?? [],
           seenEvents: state.profile?.seenEvents ?? [],
+          seenChoices: state.profile?.seenChoices ?? [],
           hallOfFame: state.profile?.hallOfFame ?? [],
         };
         let run: RunState | undefined = state.run

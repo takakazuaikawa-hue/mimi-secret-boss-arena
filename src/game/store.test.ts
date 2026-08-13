@@ -208,7 +208,7 @@ describe("player UX defaults and batch growth", () => {
   it("starts with staged dialogue and a brisk interruptible battle speed", () => {
     const profile = useGameStore.getState().profile;
 
-    expect(profile.version).toBe(11);
+    expect(profile.version).toBe(12);
     expect(profile.dialogueMode).toBe("step");
     expect(profile.battleSpeed).toBe("fast");
     expect(profile.battlePlayback).toBe("manual");
@@ -259,6 +259,11 @@ describe("player UX defaults and batch growth", () => {
     expect(resolved.lastChoiceEcho?.memory.length).toBeGreaterThanOrEqual(12);
     expect(
       resolved.flags.some((flag) => flag.startsWith("choice-tone:")),
+    ).toBe(true);
+    expect(
+      useGameStore.getState().profile.seenChoices?.some((flag) =>
+        flag.startsWith("choice:"),
+      ),
     ).toBe(true);
 
     useGameStore.getState().continueEvent();

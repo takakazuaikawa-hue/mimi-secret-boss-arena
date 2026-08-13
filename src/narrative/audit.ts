@@ -213,6 +213,58 @@ export const auditNarrativeBlocks = (
             );
           }
           choiceIds.add(choice.id);
+          if (!choice.outcomeAssetId) {
+            issues.push(
+              issue(
+                "warning",
+                "asset.missing-choice-outcome",
+                `Choice ${choice.id} has no dedicated outcome still; the result screen will fall back to a background.`,
+                block.id,
+                node.id,
+              ),
+            );
+          }
+          if (choice.outcomeAssetId && !assetIds.has(choice.outcomeAssetId)) {
+            issues.push(
+              issue(
+                "error",
+                "asset.unregistered-choice-outcome",
+                `Choice references unregistered outcome asset ${choice.outcomeAssetId}.`,
+                block.id,
+                node.id,
+              ),
+            );
+          }
+          if (choice.outcomeAssetId) {
+            const outcomeAsset = block.presentation.assets.find(
+              (asset) => asset.id === choice.outcomeAssetId,
+            );
+            if (outcomeAsset && outcomeAsset.kind !== "still") {
+              issues.push(
+                issue(
+                  "error",
+                  "asset.choice-outcome-not-still",
+                  `Choice outcome asset ${choice.outcomeAssetId} must be a still.`,
+                  block.id,
+                  node.id,
+                ),
+              );
+            }
+            if (
+              outcomeAsset?.gallery?.unlock === "on-choice" &&
+              outcomeAsset.gallery.choiceId !== choice.id
+            ) {
+              issues.push(
+                issue(
+                  "error",
+                  "gallery.choice-mismatch",
+                  `Choice outcome ${choice.outcomeAssetId} must identify its owning choice as ${choice.id}.`,
+                  block.id,
+                  node.id,
+                ),
+              );
+            }
+          }
         });
       }
 

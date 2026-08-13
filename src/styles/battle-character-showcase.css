@@ -93,6 +93,10 @@
   filter: drop-shadow(0 18px 22px rgba(0, 0, 0, 0.34));
 }
 
+.battle-technique-showcase.has-live-art .is-standing-art.is-mirrored {
+  transform: scaleX(-1);
+}
+
 .battle-technique-showcase.has-live-art .fighter-chibi {
   position: absolute;
   right: 8%;

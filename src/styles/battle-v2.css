@@ -231,7 +231,18 @@
     drop-shadow(0 16px 12px rgba(16, 48, 57, 0.34));
 }
 
+.battle-combatant__portrait .fighter-chibi__art {
+  width: 144px;
+  height: 144px;
+  object-fit: contain;
+  object-position: center bottom;
+  filter:
+    drop-shadow(0 5px 0 rgba(255, 255, 255, 0.5))
+    drop-shadow(0 16px 12px rgba(16, 48, 57, 0.34));
+}
+
 .battle-character-art {
+  --battle-facing-scale: 1;
   position: relative;
   z-index: 3;
   display: block;
@@ -243,6 +254,11 @@
     drop-shadow(0 2px 0 rgba(255, 255, 255, 0.86))
     drop-shadow(0 18px 15px rgba(15, 43, 55, 0.3));
   transform-origin: 50% 100%;
+  transform: scaleX(var(--battle-facing-scale)) scale(var(--battle-character-scale, 1));
+}
+
+.battle-character-art.is-mirrored {
+  --battle-facing-scale: -1;
 }
 
 .battle-side--player.battle-side--count-1 .battle-combatant__portrait {
@@ -286,7 +302,7 @@
 }
 
 .battle-character-art--gidonozeaas {
-  transform: scale(1.06);
+  --battle-character-scale: 1.06;
 }
 
 .battle-combatant__aura {
@@ -2045,12 +2061,12 @@
   filter:
     drop-shadow(0 2px 0 rgba(255, 255, 255, 0.8))
     drop-shadow(0 18px 14px rgba(7, 27, 35, 0.34));
-  transform: scale(var(--spectator-scale));
+  transform: scaleX(var(--spectator-facing-scale, 1)) scale(var(--spectator-scale));
   transform-origin: 50% 100%;
 }
 
-.spectator-fighter--coral .spectator-fighter__art img {
-  transform: scaleX(-1) scale(var(--spectator-scale));
+.spectator-fighter__art img.is-mirrored {
+  --spectator-facing-scale: -1;
 }
 
 .spectator-fighter__halo {
@@ -2606,7 +2622,7 @@
 .battle-side--player.battle-side--count-1 .battle-character-art {
   width: min(100%, 430px);
   height: clamp(360px, 56vh, 580px);
-  transform: scale(var(--battle-character-scale, 1));
+  transform: scaleX(var(--battle-facing-scale, 1)) scale(var(--battle-character-scale, 1));
 }
 
 .battle-combatant[data-battle-size="small"] {

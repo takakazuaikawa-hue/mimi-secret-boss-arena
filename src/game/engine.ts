@@ -20,6 +20,7 @@ import {
   mainStageOneEpisodeOneBlock,
   mainStageOneEpisodeThreeBlock,
   mainStageOneEpisodeTwoBlock,
+  mainStageOneWeeklyBlocks,
   mainStageThreeEpisodeBlocks,
   mainStageTwoEpisodeBlocks,
   openingHotSpringBlock,
@@ -65,17 +66,25 @@ export const availableRosterIds = (run: RunState) =>
     return state?.recruited;
   });
 
+// この周で新しく仲間にした人数(持ち越しは数えない)。
+// 勧誘の確率と枠は、この人数で判定する。
+const newRecruitCount = (run: RunState) => {
+  const carried = new Set(run.carriedIds ?? []);
+  return availableRosterIds(run).filter((id) => !carried.has(id)).length;
+};
+
 export const workIncomeForCondition = (condition: Condition) =>
   condition === "good" ? 1200 : condition === "bad" ? 750 : 1000;
 
 export const createInitialProfile = (): PlayerProfile => ({
-  version: 11,
+  version: 12,
   hasFinishedRun: false,
   clears: 0,
   unlockedRoutes: ["normal"],
   liberatedCollection: [],
   grandCleared: false,
   seenEvents: [],
+  seenChoices: [],
   hallOfFame: [],
   skipExplanations: false,
   textSpeed: "normal",
@@ -170,6 +179,7 @@ export const createRun = (
       ];
     })(),
     campaignStage: stage?.stage,
+    carriedIds: carried.map((ally) => ally.id),
     eventHistory: [],
     flags: [],
     liberationWindowsUsed: [],
@@ -330,7 +340,7 @@ export const storyProspectsForAction = (
     if (!state.encountered) return false;
     if (
       !state.recruited &&
-      availableRosterIds(run).length >= getRouteDefinition(run.route).maxRoster
+      newRecruitCount(run) >= getRouteDefinition(run.route).maxRoster
     ) {
       return false;
     }
@@ -358,7 +368,7 @@ export const recruitmentForecastForAction = (
   }
 
   const routeDefinition = getRouteDefinition(run.route);
-  const availableCount = availableRosterIds(run).length;
+  const availableCount = newRecruitCount(run);
   const belowTarget = availableCount < 3;
   const openingGuarantee = run.week <= 3 && belowTarget;
   const funded = action !== "search" || run.money >= 800;
@@ -459,26 +469,26 @@ export const chooseWeeklyAction = (
   source: RunState,
   action: WeeklyAction,
 ): RunState => {
-  const recruitmentForecast = recruitmentForecastForAction(source, action);
   const random = randomForCursor(source.seed, source.rngCursor);
-  let run = {
+  const run = {
     ...applyActionEffects(source, action, random),
     weekActionDone: true,
     rngCursor: source.rngCursor + 1,
   };
 
-  // 三段階キャンペーン第一区分: 該当週はメイン話を先に再生し、
-  // 終了後の followup で橋先の個別 meet へ連続再生する(二段再生)。
-  // 区分情報のない保存データ(この機能より前に始めた周回)は第一勤務週として扱う
-  const mainEpisode = stageOneMainEpisodes.find(
+  // 毎週、まずメインストーリー(この街の一年)を再生する。
+  // 終了後の followup で、その週の人物の場面へ続けて進む(二段再生)。
+  // 区分情報のない保存データ(この機能より前に始めた周回)は第一勤務週として扱う。
+  const mainEpisode = mainStoryEpisodes.find(
     (episode) =>
-      (run.campaignStage ?? 1) === (episode.stage ?? 1) &&
+      (run.campaignStage ?? 1) === episode.stage &&
       run.week === episode.week &&
       !run.eventHistory.includes(episode.block.id),
   );
   if (mainEpisode) {
     return {
       ...run,
+      pendingWeeklyAction: action,
       currentEvent: weeklyEventFromNarrativeBlock(
         mainEpisode.block,
         action,
@@ -487,6 +497,19 @@ export const chooseWeeklyAction = (
       ),
     };
   }
+
+  return selectWeeklyEvent(run, action);
+};
+
+// 週行動の効果適用後、その週に再生する人物・世界の場面を選ぶ。
+// メインストーリーの後にも同じ選択を使うため、独立した関数にしてある。
+const selectWeeklyEvent = (
+  source: RunState,
+  action: WeeklyAction,
+): RunState => {
+  const recruitmentForecast = recruitmentForecastForAction(source, action);
+  const random = randomForCursor(source.seed, source.rngCursor);
+  let run = { ...source, pendingWeeklyAction: undefined };
 
   if (run.week === 1 && !run.fighters.gidonozeaas.encountered) {
     const scene = fighterDefinitions[0].scenes.meet;
@@ -614,7 +637,7 @@ export const chooseWeeklyAction = (
 
   const { chance: recruitChance } = recruitmentForecast;
   const shouldRecruit =
-    availableRosterIds(run).length < routeDefinition.maxRoster &&
+    newRecruitCount(run) < routeDefinition.maxRoster &&
     run.encounterDeck.length > 0 &&
     random.next() < recruitChance;
 
@@ -765,7 +788,6 @@ export const resolveCurrentEvent = (
     .map((line) => line.direction?.still)
     .filter((still): still is string => Boolean(still))
     .at(-1);
-  const outcomeVisual = lastStill ?? finalPresentation.background;
   const narrativeBlock = event.narrativeBlockId
     ? legacyOpeningNarrativeBlockById.get(asEventId(event.narrativeBlockId)) ??
       legacyCharacterNarrativeBlockById.get(asEventId(event.narrativeBlockId)) ??
@@ -778,6 +800,8 @@ export const resolveCurrentEvent = (
   }
   const rawChoice = event.scene.choices?.[choiceIndex];
   const choice = rawChoice ? resolveChoiceDesign(rawChoice) : undefined;
+  const outcomeVisual =
+    choice?.outcomeVisual?.src ?? lastStill ?? finalPresentation.background;
   const narrativeChoice =
     narrativeBlock?.nodes
       .find((node) => node.type === "choice")
@@ -939,11 +963,16 @@ export const resolveCurrentEvent = (
         (sceneKind === "liberation"
           ? "契約の効力が消えた。次の試合へ出るかは、もう本人が決める。"
           : "出来事は、次の週へ続いていく。"),
+      outcomeHeadline: choice?.outcomeHeadline,
       visual: outcomeVisual
         ? {
             src: outcomeVisual,
-            kind: lastStill ? "still" : "background",
-            alt: `${event.title}の${lastStill ? "一枚絵" : "舞台"}`,
+            kind: choice?.outcomeVisual || lastStill ? "still" : "background",
+            alt:
+              choice?.outcomeVisual?.alt ??
+              `${event.title}の${lastStill ? "一枚絵" : "舞台"}`,
+            focusX: choice?.outcomeVisual?.focusX,
+            focusY: choice?.outcomeVisual?.focusY,
           }
         : undefined,
       choiceLabel: choice?.label,
@@ -1011,84 +1040,63 @@ export const maybeCreateOpeningOwnershipFollowup = (
   };
 };
 
-// メインストーリーの対応表: 区分・話の週・ブロック・橋先の人物。
-const stageOneMainEpisodes: ReadonlyArray<{
-  stage?: 1 | 2 | 3;
+// メインストーリーの対応表: 区分と週。物語はこの闘技場の一シーズン(26週)を
+// 追うもので、人物の場面は followup で別に再生する(キャラ紹介の前座にしない)。
+const mainStoryEpisodes: ReadonlyArray<{
+  stage: 1 | 2 | 3;
   week: number;
   block: typeof mainStageOneEpisodeOneBlock;
-  fighterId: string;
-  leadLineText?: string;
 }> = [
-  {
-    week: 1,
-    block: mainStageOneEpisodeOneBlock,
-    fighterId: "gidonozeaas",
-  },
-  {
-    week: 2,
-    block: mainStageOneEpisodeTwoBlock,
-    fighterId: "minato",
-  },
-  {
-    week: 3,
-    block: mainStageOneEpisodeThreeBlock,
-    fighterId: "teirei",
-  },
-  {
-    // 週4は初心者大会、週5は温泉旅行followupのため空ける
-    week: 6,
-    block: mainStageOneEpisodeFourBlock,
-    fighterId: "peony",
-  },
-  {
-    week: 7,
-    block: mainStageOneEpisodeFiveBlock,
-    fighterId: "ushiro",
-  },
+  { stage: 1, week: 1, block: mainStageOneEpisodeOneBlock },
+  { stage: 1, week: 2, block: mainStageOneEpisodeTwoBlock },
+  { stage: 1, week: 3, block: mainStageOneEpisodeThreeBlock },
+  { stage: 1, week: 6, block: mainStageOneEpisodeFourBlock },
+  { stage: 1, week: 7, block: mainStageOneEpisodeFiveBlock },
+  { stage: 1, week: 4, block: mainStageOneWeeklyBlocks[0] },
+  // 第5週は既存の温泉旅行イベントが物語を担う週。ここへメインを置くと
+  // 温泉の話が二本続けて流れるため、メインは置かない
+  // (未使用の main.s1.w05 は書き直して別の週へ回す。docs/MAIN_STORY_ISSUES.md)
+  { stage: 1, week: 8, block: mainStageOneWeeklyBlocks[2] },
+  { stage: 1, week: 9, block: mainStageOneWeeklyBlocks[3] },
+  { stage: 1, week: 10, block: mainStageOneWeeklyBlocks[4] },
+  { stage: 1, week: 11, block: mainStageOneWeeklyBlocks[5] },
+  { stage: 1, week: 12, block: mainStageOneWeeklyBlocks[6] },
+  { stage: 1, week: 13, block: mainStageOneWeeklyBlocks[7] },
+  { stage: 1, week: 14, block: mainStageOneWeeklyBlocks[8] },
+  { stage: 1, week: 15, block: mainStageOneWeeklyBlocks[9] },
+  { stage: 1, week: 16, block: mainStageOneWeeklyBlocks[10] },
+  { stage: 1, week: 17, block: mainStageOneWeeklyBlocks[11] },
+  { stage: 1, week: 18, block: mainStageOneWeeklyBlocks[12] },
+  { stage: 1, week: 19, block: mainStageOneWeeklyBlocks[13] },
+  { stage: 1, week: 20, block: mainStageOneWeeklyBlocks[14] },
+  { stage: 1, week: 21, block: mainStageOneWeeklyBlocks[15] },
+  { stage: 1, week: 22, block: mainStageOneWeeklyBlocks[16] },
+  { stage: 1, week: 23, block: mainStageOneWeeklyBlocks[17] },
+  { stage: 1, week: 24, block: mainStageOneWeeklyBlocks[18] },
+  { stage: 1, week: 25, block: mainStageOneWeeklyBlocks[19] },
+  { stage: 1, week: 26, block: mainStageOneWeeklyBlocks[20] },
   // 第二区分「更新週間」
-  { stage: 2, week: 1, block: mainStageTwoEpisodeBlocks[0], fighterId: "amara" },
-  { stage: 2, week: 2, block: mainStageTwoEpisodeBlocks[1], fighterId: "night-eater" },
-  { stage: 2, week: 3, block: mainStageTwoEpisodeBlocks[2], fighterId: "shahar" },
-  { stage: 2, week: 6, block: mainStageTwoEpisodeBlocks[3], fighterId: "sazanami" },
-  { stage: 2, week: 7, block: mainStageTwoEpisodeBlocks[4], fighterId: "cassim-bell" },
+  { stage: 2, week: 1, block: mainStageTwoEpisodeBlocks[0] },
+  { stage: 2, week: 2, block: mainStageTwoEpisodeBlocks[1] },
+  { stage: 2, week: 3, block: mainStageTwoEpisodeBlocks[2] },
+  { stage: 2, week: 6, block: mainStageTwoEpisodeBlocks[3] },
+  { stage: 2, week: 7, block: mainStageTwoEpisodeBlocks[4] },
   // 第三区分「祭りの準備週間」
-  { stage: 3, week: 1, block: mainStageThreeEpisodeBlocks[0], fighterId: "wolf-nine" },
-  { stage: 3, week: 2, block: mainStageThreeEpisodeBlocks[1], fighterId: "marian" },
-  { stage: 3, week: 3, block: mainStageThreeEpisodeBlocks[2], fighterId: "room-seventeen" },
-  { stage: 3, week: 6, block: mainStageThreeEpisodeBlocks[3], fighterId: "rinne" },
-  { stage: 3, week: 7, block: mainStageThreeEpisodeBlocks[4], fighterId: "mumyo" },
+  { stage: 3, week: 1, block: mainStageThreeEpisodeBlocks[0] },
+  { stage: 3, week: 2, block: mainStageThreeEpisodeBlocks[1] },
+  { stage: 3, week: 3, block: mainStageThreeEpisodeBlocks[2] },
+  { stage: 3, week: 6, block: mainStageThreeEpisodeBlocks[3] },
+  { stage: 3, week: 7, block: mainStageThreeEpisodeBlocks[4] },
 ];
 
-// メインストーリー終了直後に、橋先の個別場面を連続再生する(二段再生)。
+// メインストーリーの直後に、その週の人物・世界の場面を続けて再生する(二段再生)。
 export const maybeCreateMainStoryFollowup = (
   source: RunState,
 ): RunState => {
   if (source.currentEvent) return source;
-  const episode = stageOneMainEpisodes.find(
-    (candidate) =>
-      (source.campaignStage ?? 1) === (candidate.stage ?? 1) &&
-      source.week === candidate.week &&
-      source.eventHistory.includes(candidate.block.id) &&
-      !source.fighters[candidate.fighterId]?.encountered,
-  );
-  if (!episode) return source;
-  const fighter = fighterDefinitions.find(
-    (candidate) => candidate.id === episode.fighterId,
-  );
-  if (!fighter) return source;
-  return {
-    ...source,
-    currentEvent: weeklyEvent(
-      fighter.scenes.meet,
-      "work",
-      episode.fighterId,
-      true,
-      source.week,
-      episode.leadLineText
-        ? { leadLineText: episode.leadLineText }
-        : {},
-    ),
-  };
+  const action = source.pendingWeeklyAction;
+  if (!action) return source;
+  return selectWeeklyEvent(source, action);
 };
 
 export const maybeCreateLiberationFollowup = (

@@ -1,8 +1,15 @@
 import fc from "fast-check";
 import { describe, expect, it } from "vitest";
 import { fighterDefinitions } from "../data/characters";
-import { officialMatches } from "../data/matches";
-import { createBattle, applyIntervention, resolveBattleRound } from "./battle";
+import { matchesForRoute, officialMatches } from "../data/matches";
+import {
+  applyIntervention,
+  createBattle,
+  forecastEntrust,
+  inferEnemyIntentFromCue,
+  opponentsForMatch,
+  resolveBattleRound,
+} from "./battle";
 import { createRun } from "./engine";
 import { createRandom } from "./rng";
 
@@ -164,9 +171,17 @@ describe("battle audit", () => {
     const run = battleReadyRun("force-command");
     const random = createRandom("force-command");
     let battle = createBattle(run, officialMatches[0], random);
-    while (battle.status !== "decision") {
+    let safety = 0;
+    while (
+      battle.status !== "decision" &&
+      battle.status !== "won" &&
+      battle.status !== "lost" &&
+      safety < 12
+    ) {
       battle = resolveBattleRound(battle, random);
+      safety += 1;
     }
+    expect(battle.status).toBe("decision");
     const unit = battle.player[0];
     const trust = unit.trust;
     battle = applyIntervention(battle, {
@@ -241,10 +256,12 @@ describe("battle audit", () => {
       while (battle.status !== "won" && battle.status !== "lost") {
         battle =
           battle.status === "decision"
-            ? applyIntervention(battle, {
-                type: "read",
-                prediction: battle.enemyTell ?? "attack",
-              })
+            ? battle.readUses > 0
+              ? applyIntervention(battle, {
+                  type: "read",
+                  prediction: inferEnemyIntentFromCue(battle),
+                })
+              : applyIntervention(battle, { type: "pass" })
             : resolveBattleRound(battle, random);
         expect(battle.momentum).toBeGreaterThanOrEqual(0);
         expect(battle.momentum).toBeLessThanOrEqual(100);
@@ -361,7 +378,7 @@ describe("battle audit", () => {
     expect(spent.burst).toBeGreaterThan(spent.conserve * 1.18);
   });
 
-  it("treats the enemy tell as a useful clue rather than a guaranteed answer", () => {
+  it("treats character-specific gestures as useful clues rather than answer labels", () => {
     let correct = 0;
     const samples = 400;
     for (let index = 0; index < samples; index += 1) {
@@ -371,10 +388,59 @@ describe("battle audit", () => {
         createBattle(run, officialMatches[index % officialMatches.length], random),
         random,
       );
-      correct += Number(battle.enemyTell === battle.enemyIntent);
+      expect(battle.enemyTell).toBeUndefined();
+      expect(battle.enemyCue?.gesture).toBeTruthy();
+      expect(battle.enemyCue?.line).toBeTruthy();
+      correct += Number(inferEnemyIntentFromCue(battle) === battle.enemyIntent);
     }
     const accuracy = correct / samples;
     expect(accuracy).toBeGreaterThan(0.68);
     expect(accuracy).toBeLessThan(0.84);
+  });
+
+  it("uses dedicated opponents for every official match instead of allied fighters", () => {
+    const run = battleReadyRun("dedicated-opponents");
+    matchesForRoute("domination").forEach((match) => {
+      const opponents = opponentsForMatch(run, match);
+      expect(opponents).toHaveLength(run.activeTeam.length);
+      expect(opponents.every((opponent) => opponent.id !== "gidonozeaas")).toBe(true);
+      expect(opponents.every((opponent) => match.opponentIds?.includes(opponent.id))).toBe(true);
+    });
+  });
+
+  it("makes entrusting a situational trust tactic rather than a universal reward", () => {
+    const run = battleReadyRun("entrust-tactic");
+    const random = createRandom("entrust-tactic");
+    let battle = createBattle(run, officialMatches[6], random);
+    battle = resolveBattleRound(battle, random);
+    battle.player.forEach((unit) => {
+      unit.hp = Math.max(1, Math.round(unit.maxHp * 0.35));
+    });
+    const forecast = forecastEntrust(battle);
+    expect(forecast.grade).toBe("risky");
+    const momentumBefore = battle.momentum;
+    const enemyAttackBefore = battle.enemy[0].attackBuff;
+    battle = applyIntervention(battle, { type: "pass" });
+    expect(battle.momentum).toBe(momentumBefore);
+    expect(battle.enemy[0].attackBuff).toBeGreaterThan(enemyAttackBefore);
+  });
+
+  it("applies the advertised attack and magic penalty whenever a read misses", () => {
+    const run = battleReadyRun("read-penalty");
+    const random = createRandom("read-penalty");
+    let battle = createBattle(run, officialMatches[2], random);
+    battle = resolveBattleRound(battle, random);
+    const wrong = (["attack", "guard", "skill"] as const).find(
+      (intent) => intent !== battle.enemyIntent,
+    )!;
+    const enemyBefore = battle.enemy.map((unit) => ({
+      attack: unit.attackBuff,
+      magic: unit.magicBuff,
+    }));
+    battle = applyIntervention(battle, { type: "read", prediction: wrong });
+    battle.enemy.forEach((unit, index) => {
+      expect(unit.attackBuff).toBeGreaterThan(enemyBefore[index].attack);
+      expect(unit.magicBuff).toBeGreaterThan(enemyBefore[index].magic);
+    });
   });
 });

@@ -243,7 +243,10 @@ const assetPath = (
   return asset.path;
 };
 
-const legacyChoiceFromNarrative = (choice: NarrativeChoice): SceneChoice => {
+const legacyChoiceFromNarrative = (
+  block: NarrativeEventBlock,
+  choice: NarrativeChoice,
+): SceneChoice => {
   const relationshipEffects = choice.effects.filter(
     (
       effect,
@@ -265,6 +268,7 @@ const legacyChoiceFromNarrative = (choice: NarrativeChoice): SceneChoice => {
   return {
     label: choice.label,
     result: choice.result,
+    outcomeHeadline: choice.outcomeHeadline,
     trust: relationshipEffects.reduce(
       (sum, effect) => sum + (effect.trust ?? 0),
       0,
@@ -300,6 +304,21 @@ const legacyChoiceFromNarrative = (choice: NarrativeChoice): SceneChoice => {
     intent: choice.intent,
     promise: choice.promise,
     memory: choice.memory,
+    outcomeVisual: choice.outcomeAssetId
+      ? {
+          src: assetPath(block, choice.outcomeAssetId, "still"),
+          alt:
+            block.presentation.assets.find(
+              (asset) => asset.id === choice.outcomeAssetId,
+            )?.alt ?? `${block.title}の選択結果`,
+          focusX: block.presentation.assets.find(
+            (asset) => asset.id === choice.outcomeAssetId,
+          )?.focusX,
+          focusY: block.presentation.assets.find(
+            (asset) => asset.id === choice.outcomeAssetId,
+          )?.focusY,
+        }
+      : undefined,
   };
 };
 
@@ -358,7 +377,11 @@ export const materializeNarrativeBlock = (
     }
 
     if (node.type === "choice") {
-      choices.push(...node.choices.map(legacyChoiceFromNarrative));
+      choices.push(
+        ...node.choices.map((choice) =>
+          legacyChoiceFromNarrative(block, choice),
+        ),
+      );
     }
   });
 

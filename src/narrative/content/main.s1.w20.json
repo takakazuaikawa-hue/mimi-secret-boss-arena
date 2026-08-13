@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s1.w20",
+  "kind": "opening",
+  "title": "満員、通路まで客席",
+  "summary": "街中の客が押し寄せ、通路も天井も客席になる",
+  "ownership": {
+    "arcId": "main.stage1"
+  },
+  "trigger": {
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "闘技場 本会場",
+    "assets": [
+      {
+        "id": "main.s1.w20.asset.background.001",
+        "kind": "background",
+        "path": "/assets/arena-daylight.png",
+        "alt": "闘技場 本会場の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s1.w20.node.direction.001",
+      "command": {
+        "type": "background",
+        "assetId": "main.s1.w20.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.w20.node.direction.002",
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w20.node.line.001",
+      "lineId": "main.s1.w20.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "開場三十分前に鍵を開けたら、扉が外から膨らんでいた。押し返した私の隣で、券売のおじさんが空の札箱を掲げた。「今日は竜の谷と海底王国が、水路の件で腕相撲だ。札は朝の内に売り切れた。四十年やって初めてだ」",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w20.node.line.002",
+      "lineId": "main.s1.w20.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私は「順に詰めてお座りください」と叫んだ。席が埋まり、通路が埋まり、階段まで埋まった。警備隊長が拡声器を構えて俳句を詠んだ。「満ちてなお 客の来たりて 息を吸え」。誰も動けないので、全員が素直に息を吸った。会場が一回り小さくなった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w20.node.line.003",
+      "lineId": "main.s1.w20.line.003",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "通路は避難経路です! 座らないでください! ……あの、私の足の上で寝ないで!",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w20.node.line.004",
+      "lineId": "main.s1.w20.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私が天井を指して「あそこは席ではありません」と言った。言い終わる前に、天空城の客が梁へ足を引っ掛けて逆さに並んだ。海底王国の一行は演出用の水槽へ入り、内側から硝子を叩いた。拍手の代わりらしい。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w20.node.line.005",
+      "lineId": "main.s1.w20.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私は札の売上を数えに券売所へ回った。帳面が閉じない。街中の賭け札が今日の腕相撲へ集まりすぎていた。経理課チームが法被のまま駆けつけ、そろばんを四挺つないで一本の橋にした。玉の音が屋根まで届き、客がそれに合わせて手拍子を始めた。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w20.node.line.006",
+      "lineId": "main.s1.w20.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私が「飲食は場外の屋台で」と案内したら、屋台の方が場内へ引っ越してきた。串焼きも氷菓も、台車ごと階段を上ってくる。食堂のおばちゃんが三段目に鍋を据え、煮込みの器が客の頭上を渡っていった。一杯もこぼれない。こぼした客は、その場で腕相撲になるからだ。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w20.node.line.007",
+      "lineId": "main.s1.w20.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私は竜の紳士に「立ち見でもよろしいですか」と尋ねた。紳士が立った瞬間、後ろ三十列の視界が消えた。紳士はすぐ正座した。正座しても大きかったので、その一角の客は結局、竜を椅子にして座った。紳士は文句も言わず、卵を固めで注文した。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w20.node.line.008",
+      "lineId": "main.s1.w20.line.008",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "今の放送、聞きましたか! 『後方へ流れよ』って、それ突撃の合図です! ……あ、綺麗に整列した。みなさん、なんでそっちは従うんですか",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w20.node.line.009",
+      "lineId": "main.s1.w20.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私は入口へ戻り、両手で扉を押さえて「本日は満員です」と宣言した。銅鑼が鳴った。会場が一斉に息を止めて、静かになった。その静けさの底で、私の手のひらの下から、扉が控えめに三度叩かれた。まだ外に、誰かいる。",
+      "emotion": "tension"
+    },
+    {
+      "type": "choice",
+      "id": "main.s1.w20.node.choice.001",
+      "choices": [
+        {
+          "id": "main.s1.w20.choice.001",
+          "label": "天井を正式な客席にする",
+          "result": "私は逆さ吊りの一角を「天井席」と名付け、券売のおじさんに札を刷らせた。値は普通席の半分。売り出して七秒で完売した。私は規則を一つ足した。帽子と小銭は下で預かる。預け損ねた帽子が一つだけ落ちて、真下の竜の紳士の頭へ綺麗に着地した。紳士は返さずに被って観戦した。返却は試合の後になった。",
+          "intent": "入れない客を入れる",
+          "promise": "客席が二百増え、天井が会場の名物になる",
+          "memory": "券売のおじさんが、七秒で売り切れた札の話を繰り返す",
+          "tone": "pragmatic",
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
+          "goto": "main.s1.w20.node.end.001"
+        },
+        {
+          "id": "main.s1.w20.choice.002",
+          "label": "扉の外の街へ実況を流す",
+          "result": "私は館内放送のお姉さんに頼み、実況を扉の外へ流してもらった。軍記物の声が通りを走り、屋根を越え、両替所の行列まで届いた。街の人たちは道端に座り込み、見えない試合を声だけで見た。銅鑼が鳴るたび通りが揺れた。翌朝、沿道の店から苦情が来た。内容は「うるさい」ではなく「もう一度やれ」だった。",
+          "intent": "入れなかった客へ届ける",
+          "promise": "会場に入れない街の人まで同じ試合を共有する",
+          "memory": "館内放送のお姉さんが、通りを揺らした自分の声を誇る",
+          "tone": "heroic",
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 3
+            }
+          ],
+          "goto": "main.s1.w20.node.end.001"
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "main.s1.w20.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_STAGE1_PLAN.md",
+    "authorNote": "第20週。この闘技場の一シーズンを追うメインストーリー。人物の場面は別枠で再生される。",
+    "legacyGeneratedIds": false
+  }
+}
