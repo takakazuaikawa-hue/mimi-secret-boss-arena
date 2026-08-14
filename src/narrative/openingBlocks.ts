@@ -26,6 +26,13 @@ import mainStageTwoWeek10Source from "./content/main.s2.w10.json";
 import mainStageTwoWeek11Source from "./content/main.s2.w11.json";
 import mainStageTwoWeek12Source from "./content/main.s2.w12.json";
 import mainStageTwoWeek13Source from "./content/main.s2.w13.json";
+import mainStageTwoWeek14Source from "./content/main.s2.w14.json";
+import mainStageTwoWeek15Source from "./content/main.s2.w15.json";
+import mainStageTwoWeek16Source from "./content/main.s2.w16.json";
+import mainStageTwoWeek17Source from "./content/main.s2.w17.json";
+import mainStageTwoWeek18Source from "./content/main.s2.w18.json";
+import mainStageTwoWeek19Source from "./content/main.s2.w19.json";
+import mainStageTwoWeek20Source from "./content/main.s2.w20.json";
 import mainStageThreeEp1Source from "./content/main.s3.ep1.json";
 import mainStageThreeEp2Source from "./content/main.s3.ep2.json";
 import mainStageThreeEp3Source from "./content/main.s3.ep3.json";
@@ -67,7 +74,7 @@ export const mainStageTwoEpisodeBlocks = [
   mainStageTwoEp5Source,
 ].map((source) => narrativeEventBlockSchema.parse(source));
 
-// 第二区分の週替わりメイン本体。添字0=週1、添字1=週2、…、添字12=週13。
+// 第二区分の週替わりメイン本体。添字0=週1、添字1=週2、…、添字19=週20。
 // エンジンの mainStoryEpisodes が添字で参照するため、途中挿入はしないこと。
 export const mainStageTwoWeeklyBlocks = [
   mainStageTwoWeek01Source,
@@ -83,6 +90,13 @@ export const mainStageTwoWeeklyBlocks = [
   mainStageTwoWeek11Source,
   mainStageTwoWeek12Source,
   mainStageTwoWeek13Source,
+  mainStageTwoWeek14Source,
+  mainStageTwoWeek15Source,
+  mainStageTwoWeek16Source,
+  mainStageTwoWeek17Source,
+  mainStageTwoWeek18Source,
+  mainStageTwoWeek19Source,
+  mainStageTwoWeek20Source,
 ].map((source) => narrativeEventBlockSchema.parse(source));
 
 export const mainStageThreeEpisodeBlocks = [

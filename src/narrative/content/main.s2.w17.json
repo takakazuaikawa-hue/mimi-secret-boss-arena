@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s2.w17",
+  "kind": "opening",
+  "title": "謝酒祭(二年目)",
+  "summary": "覚えていない人との、二度目の友情。酔いの本音がこぼす決勝の企み",
+  "ownership": {
+    "arcId": "main.stage2"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "噴水広場(謝酒祭)",
+    "assets": [
+      {
+        "id": "main.s2.w17.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-fountain-plaza-day-v1.png",
+        "alt": "謝酒祭の噴水広場の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s2.w17.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s2.w17.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.w17.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w17.node.line.001",
+      "lineId": "main.s2.w17.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "赤線の三本目——胴元総取りの条文——は、祭りの前の日に引いた。戻ってきた行列と、外れ札を額に入れて飾った胴元が、何よりの理由だった。そして翌日、謝酒祭が今年も来た。噴水はうっすら発泡し、白い手袋の査定官も今年も来た。「資産価値の定期査定です」。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w17.node.line.002",
+      "lineId": "main.s2.w17.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "彼は、去年を覚えていない。焼きとうもろこしにプライスレスと付けた夜のことも、希望欄の束に目元を押さえたことも、湯気になった。初対面の顔で名刺を差し出されて、私は初対面の顔で受け取った。二度目の、はじめまして。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w17.node.line.003",
+      "lineId": "main.s2.w17.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "そして今年も、竜のお客様が火酒を勧めた。「感謝の杯を断るのは、決闘の申し込みじゃぞ」。査定官は今年も、職務の顔のまま飲んだ。——台帳が無くても、人は同じ道で転ぶ。少し、安心する転び方である。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w17.node.line.004",
+      "lineId": "main.s2.w17.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "三十分後、酔った査定官の値札は、今年も詩になった。夕焼けに「評価不能(良い意味で)」。そして受付の掲示板——赤線の一覧の写しの前で、彼は長いこと立ち止まり、値札を一枚、そっと貼った。「赤線: プライスレス」。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w17.node.line.005",
+      "lineId": "main.s2.w17.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「……いい仕事ですね、これは」。あなた、去年も同じ顔で同じことを言いましたよ——とは、言わないでおいた。覚えていない人との二度目の友情は、教えないのが礼儀だと思う。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w17.node.line.006",
+      "lineId": "main.s2.w17.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "宴もたけなわ、酔いの深くなった査定官が、ぽろりとこぼした。「決勝の日程……上が、何か企んでますよ。同日に、何か、大きいのを……ぶつけるとか、なんとか」。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w17.node.line.007",
+      "lineId": "main.s2.w17.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "同日に、大きいのを、ぶつける。——胸の奥で、嫌な予感が組み上がる。会社の目玉興行。滅亡ショー。うちの決勝。祭りの喧騒の中で、その三つが、一つの日付に向かって滑り出す音がした。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w17.node.line.008",
+      "lineId": "main.s2.w17.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "翌朝、素面に戻った査定官は、完璧な職務の顔で帰っていった。「赤線: プライスレス」の値札だけは、ノノさんが「正式な備品です」と剥がさずに残した。——ただ、酔いの本音がこぼした「同日」の二文字だけが、祭りのあとも、喉の奥に残りつづけた。",
+      "emotion": "comic"
+    },
+    {
+      "type": "effect",
+      "id": "main.s2.w17.node.effect.001",
+      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+    },
+    {
+      "type": "end",
+      "id": "main.s2.w17.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "2周目・週17(8行・選択肢なし)。祭事=謝酒祭二年目。台帳が無くても人は同じ道で転ぶ(優しい再演)。酔いの本音=同日興行の予告(週18への種)。「二度目の友情は教えないのが礼儀」。",
+    "legacyGeneratedIds": false
+  }
+}

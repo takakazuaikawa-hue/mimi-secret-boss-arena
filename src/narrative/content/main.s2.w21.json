@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s2.w21",
+  "kind": "opening",
+  "title": "監督席のない週",
+  "summary": "赤線四本目の夜に届いた報復——監督資格停止",
+  "ownership": {
+    "arcId": "main.stage2"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "闘技場 正面受付",
+    "assets": [
+      {
+        "id": "main.s2.w21.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-arena-reception.png",
+        "alt": "闘技場の正面受付の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s2.w21.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s2.w21.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.w21.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w21.node.line.001",
+      "lineId": "main.s2.w21.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "赤線の四本目は、震える手で引いた。出口廃止条項。十七号室の一戦と、部屋に浮かんだ扉と、満員の証人。あの条文はもう、誰も守れない。儀式のあと、部屋への約束どおり、大工さんと出口の相談も始めた。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w21.node.line.002",
+      "lineId": "main.s2.w21.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "——その夜に、来た。黒ではない。白でもない。灰色の封筒。「通告: 貴殿の監督資格を、緊急規定により停止する。事由: 興行秩序の毀損」。……興行秩序。人の自由を四つ返したことの、会社の呼び名である。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w21.node.line.003",
+      "lineId": "main.s2.w21.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "資格停止。つまり、監督席に座れない。決勝の指揮を、執れない。付記があった。「なお、チームの決勝出場は、正規任命の監督着任を条件とする」。——うちに、会社の監督を挿げ替える気だ。打倒まであと二本、というところで、頭を取りに来た。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w21.node.line.004",
+      "lineId": "main.s2.w21.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "翌朝、監督席のない一週間が始まった。練習場の柵の外から、特訓を見る。声は、届く。届くが、柵の内と外は、こんなに違う。四百年ぶりに辞められなくなった女は、二年目に、座る席を奪われた。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w21.node.line.005",
+      "lineId": "main.s2.w21.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "うちの面々は、静かだった。静かなまま、練習の質が一段上がった。柵の外の私に、誰かが言った。「監督。柵は、規定ですか」。規定です。「なら——次の赤線で、消しましょう」。……この人たちは、もう、戦い方を知っている。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w21.node.line.006",
+      "lineId": "main.s2.w21.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "街も、静かではなかった。練習場の柵の外に、人が集まり始めたのだ。休止札を掲げた救護の人たち。外れ札を額に入れた胴元。九通の挑戦状の写しを旗にした誰か。——壊したルールの数だけ、柵の外に、味方が立っている。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w21.node.line.007",
+      "lineId": "main.s2.w21.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ノノさんが、受付から書式の束を抱えてきた。目が、据わっていた。「資格停止への異議申立。申立人の欄は——**何枚あっても、いいんです**」。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w21.node.line.008",
+      "lineId": "main.s2.w21.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "何枚あっても、いい。柵の外の人だかりを見る。書式の束を見る。……なるほど。この勝負、署名の数で殴り合う流れらしい。事務員の喧嘩としては、望むところである。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "effect",
+      "id": "main.s2.w21.node.effect.001",
+      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+    },
+    {
+      "type": "end",
+      "id": "main.s2.w21.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "2周目・週21どん底(8行・選択肢なし)。赤線四本目(勝敗ロバスト)→灰色の封筒=資格停止+監督挿げ替え。柵の内外の画。壊したルールの数だけ味方が立つ=週22署名の壁への助走。",
+    "legacyGeneratedIds": false
+  }
+}

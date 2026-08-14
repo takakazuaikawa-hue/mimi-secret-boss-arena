@@ -1093,6 +1093,13 @@ const mainStoryEpisodes: ReadonlyArray<{
   { stage: 2, week: 11, block: mainStageTwoWeeklyBlocks[10] },
   { stage: 2, week: 12, block: mainStageTwoWeeklyBlocks[11] },
   { stage: 2, week: 13, block: mainStageTwoWeeklyBlocks[12] },
+  { stage: 2, week: 14, block: mainStageTwoWeeklyBlocks[13] },
+  { stage: 2, week: 15, block: mainStageTwoWeeklyBlocks[14] },
+  { stage: 2, week: 16, block: mainStageTwoWeeklyBlocks[15] },
+  { stage: 2, week: 17, block: mainStageTwoWeeklyBlocks[16] },
+  { stage: 2, week: 18, block: mainStageTwoWeeklyBlocks[17] },
+  { stage: 2, week: 19, block: mainStageTwoWeeklyBlocks[18] },
+  { stage: 2, week: 20, block: mainStageTwoWeeklyBlocks[19] },
   // 第三区分「祭りの準備週間」
   { stage: 3, week: 1, block: mainStageThreeEpisodeBlocks[0] },
   { stage: 3, week: 2, block: mainStageThreeEpisodeBlocks[1] },

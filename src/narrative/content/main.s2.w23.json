@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s2.w23",
+  "kind": "opening",
+  "title": "新作祭",
+  "summary": "街が新作側へ回る祭り。そして遠目に見た、完璧な去年の私",
+  "ownership": {
+    "arcId": "main.stage2"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "噴水広場(新作祭)",
+    "assets": [
+      {
+        "id": "main.s2.w23.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-fountain-plaza-day-v1.png",
+        "alt": "新作祭の噴水広場の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s2.w23.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s2.w23.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.w23.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w23.node.line.001",
+      "lineId": "main.s2.w23.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "決戦前の祭りは、名前ごと変わっていた。去年の「再建祭」の幟の上に、新しい布が重ね縫いされている。——「新作祭」。改名の理由を聞いたら、商店会は胸を張った。「今年は、再建するものが無いからね!」。健やかな理屈である。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w23.node.line.002",
+      "lineId": "main.s2.w23.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "祭りの品書きも、新作づくしだった。新作大福(中身が日替わり。今日は何と、普通のこしあん——それが一番の変化球だという)。試し打ちの新作花火。夜店のくじは「景品も新作(中身は誰も知らない)」。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w23.node.line.003",
+      "lineId": "main.s2.w23.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "広場の隅の掲示に、足が止まった。「新作劇、旗揚げ公演のお知らせ——リバイバル一座改め、一番星一座」。座長さんの一座だ。彼らは、滅亡ショーの出演を降りたのだ。あの楽屋の縁が、こんな旗になって返ってきた。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w23.node.line.004",
+      "lineId": "main.s2.w23.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "会社も、物量で来ていた。滅亡ショーの宣伝が、壁という壁を覆っている。ただ、その貼り紙の余白に、子どもの落書きが増えていく。兎の耳の絵と、下手な字。「けっしょう みにいく」。——物量は、落書き一つに負けることがある。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w23.node.line.005",
+      "lineId": "main.s2.w23.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "決勝の席は、前売りをしないことにした。当日、並んだ人から。興行の正面勝負に、予約の貯金は持ち込まない。発表の日から、剣士さんが列の先頭の位置を下見している。「当日いちばん、は、わしの新作じゃ」。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w23.node.line.006",
+      "lineId": "main.s2.w23.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "——祭りの帰り道、見てしまった。会社の練習場。柵の向こうで、「去年のうち」が稽古をしていた。再現された三人と、再現された監督。名簿の抱え方も、背筋の伸ばし方も、去年の私の癖のままだった。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w23.node.line.007",
+      "lineId": "main.s2.w23.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ぞくり、とした。怖かったのではない。……上手かったのだ。あれは、強い。去年のうちは、本当に強い。だからこそ——今年のうちで、勝つ意味がある。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "effect",
+      "id": "main.s2.w23.node.effect.001",
+      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+    },
+    {
+      "type": "end",
+      "id": "main.s2.w23.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "2周目・週23(7行・選択肢なし)。祭事=新作祭(改名)。一座の造反(週6の縁の回収)。落書き対物量。引き=完璧な去年の私の稽古(鏡写しの実在感)。",
+    "legacyGeneratedIds": false
+  }
+}

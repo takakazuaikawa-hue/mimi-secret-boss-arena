@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s2.w15",
+  "kind": "opening",
+  "title": "雨の定席(二年目)",
+  "summary": "倍率の流れる雨と、暦の外にいる人たち",
+  "ownership": {
+    "arcId": "main.stage2"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "閉店後のカジノカフェ(雨)",
+    "assets": [
+      {
+        "id": "main.s2.w15.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-casino-cafe-rain.png",
+        "alt": "雨のカジノカフェの背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s2.w15.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s2.w15.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.w15.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w15.node.line.001",
+      "lineId": "main.s2.w15.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "朝から、太い雨だった。掲示板に「本日、全興行休止」。倍率を洗い流す雨も、二年目になると、少し親しい。傘を差して、足は自然にあの店へ向いた。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w15.node.line.002",
+      "lineId": "main.s2.w15.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "閉店後のカジノカフェ。窓際の定席に、白ひげの剣士さん。湯気の立つ茶。去年と同じ画の中で、彼は去年と違うことを、はっきり言った。「——去年も、この席だったのう」。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w15.node.line.003",
+      "lineId": "main.s2.w15.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "向かいに座って、覚えている人の名簿を、そっと突き合わせた。剣士さん。仲居さん。うちの面々。去年のライバルの五人。……並べてみると、輪郭が浮かぶ。みんな、物語を、終えた人たちだ。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w15.node.line.004",
+      "lineId": "main.s2.w15.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "剣士さんは、茶を一口すすって言った。「終わった者はの、暦の外におる。台帳とやらは、終わった話を、書き直せんのじゃろ」。……暦の外。再演の筆が、届かない場所。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w15.node.line.005",
+      "lineId": "main.s2.w15.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "では、私は? 終わっていないのに、覚えている。聞くと、剣士さんはしばらく私を眺めて、笑った。「あんたは——なぜじゃろうなあ」。答えは、雨の音に流れていった。深追いは、しないでおく。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w15.node.line.006",
+      "lineId": "main.s2.w15.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "去年と違うことが、もう一つ。雨の日の店に、人が集まっていた。倍率の無い日は、自由の話がよく進む。赤線の一覧の写しを囲んで、常連たちが「次はどの条文か」を、茶請けに議論している。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w15.node.line.007",
+      "lineId": "main.s2.w15.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "雨上がり、帰り道の掲示板で足が止まった。ジャックポット杯の予想紙が、雨に濡れて貼られたままになっている。「的中率100%」の字が、滲んでいた。——滲んだ予想は、当たるのだろうか。",
+      "emotion": "tension"
+    },
+    {
+      "type": "effect",
+      "id": "main.s2.w15.node.effect.001",
+      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+    },
+    {
+      "type": "end",
+      "id": "main.s2.w15.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "2周目・週15(7行・選択肢なし)。静の週。覚えている者の輪郭=物語を終えた者は暦の外(剣士さんに言語化させる)。ミミ自身の謎は深追いせず流す(種は一粒規定)。引き=滲んだ予想紙→週16。",
+    "legacyGeneratedIds": false
+  }
+}

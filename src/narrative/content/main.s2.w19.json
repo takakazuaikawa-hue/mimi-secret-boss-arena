@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s2.w19",
+  "kind": "opening",
+  "title": "額の隣の、日焼け跡",
+  "summary": "決戦準備の週。趣意書の隣に、昔なにかが掛かっていた",
+  "ownership": {
+    "arcId": "main.stage2"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "闘技場 正面玄関",
+    "assets": [
+      {
+        "id": "main.s2.w19.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-arena-reception.png",
+        "alt": "闘技場の正面玄関の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s2.w19.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s2.w19.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.w19.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w19.node.line.001",
+      "lineId": "main.s2.w19.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "決戦準備の週は、掃除から始めた。験担ぎである。正面玄関の趣意書の額を、ノノさんと二人で外して、硝子を磨く。「当場は、物語を終えた者たちが、続きを生きるための場所である」。何度読んでも、いい一行だ。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w19.node.line.002",
+      "lineId": "main.s2.w19.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "額を外した壁を見て、ノノさんが「あら」と言った。趣意書の掛かっていた場所の隣に——もう一つ、四角い日焼け跡がある。同じ大きさの跡。ここには昔、もう一枚、何かが並んで掛かっていた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w19.node.line.003",
+      "lineId": "main.s2.w19.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "記録室の司書さんに聞いた。彼女は台帳を三往復して、首を振った。「記録に、ありません。台帳にも」。それから、少しだけ声を落とした。「……台帳に無いものが、この街には、いくつかあるんです。あなたの控えと。この跡と」。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w19.node.line.004",
+      "lineId": "main.s2.w19.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "深追いは、今週はしない。決勝前である。それでも事務員の癖で、跡の寸法だけ測って控えた。縦横、趣意書と同寸。掛け直した額の隣の空白は、心なしか、何かを待っている顔をしていた。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w19.node.line.005",
+      "lineId": "main.s2.w19.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "準備は、順調だった。特訓は仕上げに入り、装備は磨かれ、まかないは験担ぎの献立表を組み始めた。赤線は三本。残る条文は、出口廃止、名入れ販売——そして、条文の無い六つ目。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w19.node.line.006",
+      "lineId": "main.s2.w19.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "掲示板には、所有者グランプリの告知が出た。会場の欄を読んで、受付が静まった。「本日の会場: **第十七号室**」。——会場が、部屋。部屋の中で、試合をするらしい。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w19.node.line.007",
+      "lineId": "main.s2.w19.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "夜、帰りぎわに振り返ると、正面玄関の灯りの下、誰かが立って、額の隣の日焼け跡をじっと見上げていた。背中しか、見えなかった。声は、かけなかった。",
+      "emotion": "tension"
+    },
+    {
+      "type": "effect",
+      "id": "main.s2.w19.node.effect.001",
+      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+    },
+    {
+      "type": "end",
+      "id": "main.s2.w19.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "2周目・週19(7行・選択肢なし)。3周目への遠い糸=額の隣の日焼け跡(説明しない)。台帳の外のものの列挙(控え・跡)。引き=会場「第十七号室」+跡を見上げる背中(誰かは書かない)。",
+    "legacyGeneratedIds": false
+  }
+}

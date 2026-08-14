@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s2.w24",
+  "kind": "opening",
+  "title": "賞品欄に、人の名前",
+  "summary": "準決勝。優勝賞品は「第十五代所有者権」——名入れ販売の悪と戦う",
+  "ownership": {
+    "arcId": "main.stage2"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "中央闘技場(準決勝)",
+    "assets": [
+      {
+        "id": "main.s2.w24.asset.background.001",
+        "kind": "background",
+        "path": "/assets/arena-daylight.png",
+        "alt": "準決勝当日の闘技場の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s2.w24.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s2.w24.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.w24.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w24.node.line.001",
+      "lineId": "main.s2.w24.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "準決勝の朝、会場の入口で、悪趣味の見本を見た。会社の特設ブース。垂れ幕に大きく——「本大会優勝者へ進呈: 聖剣・第十五代所有者権(名入れ彫刻つき)」。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w24.node.line.002",
+      "lineId": "main.s2.w24.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "賞品の欄に、人の名前が書いてある。今日の対戦相手——鞘の剣士の、所有者権が、優勝賞品にされている。名入れ販売・所有者公募規定。一覧の五条目が、こんな形で目の前に来た。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w24.node.line.003",
+      "lineId": "main.s2.w24.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "対戦相手の控室へ、仁義を切りに行った。鞘の剣士——銘は、無い。無銘。それが、そのまま名だという。抜き身の気配を鞘の中に丁寧に畳んでいる人だ。私が垂れ幕の話を切り出すと、彼は——まばたきを、二回した。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w24.node.line.004",
+      "lineId": "main.s2.w24.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "それから、静かに言った。「……あの賞品は、私だ。私の、次の持ち主の席だ」。淡々とした声だった。淡々と、四百年、そう扱われてきた声だった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w24.node.line.005",
+      "lineId": "main.s2.w24.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「だから——その優勝賞品は、あなたに獲ってほしい」。彼は、まっすぐ私を見た。「あなたが獲れば、少なくとも、知らない誰かの名前が彫られることは、ない」。……対戦相手からの、こんな依頼があるだろうか。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w24.node.line.006",
+      "lineId": "main.s2.w24.line.006",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "獲ります。そして——賞品欄から、人の名前を消します。それが今日の、うちの優勝の使い道です。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w24.node.line.007",
+      "lineId": "main.s2.w24.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "鞘の剣士は、もう一度だけ、まばたきを二回した。それから、深く一礼して言った。「では——全力で、阻む。賞品に、値打ちをつけるのも、剣の仕事だ」。……この人は、負ける気で頼んだのではない。勝ちに来る。その上で、頼んだのだ。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w24.node.line.008",
+      "lineId": "main.s2.w24.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ガヤ氏の前説が響く。「準決勝——抜かずの剣に、挑むは新作の旗手!」。入場口の札が裏返る。赤線の五本目と、人の名前の消された賞品欄と、決勝への切符。今日の一戦に、懸かっているものが多い。多いほど、うちは強い。",
+      "emotion": "tension"
+    },
+    {
+      "type": "choice",
+      "id": "main.s2.w24.node.choice.001",
+      "choices": [
+        {
+          "id": "main.s2.w24.choice.001",
+          "label": "獲った権利は、その場で本人に返すと公言する",
+          "result": "「優勝したら、第十五代所有者権は、その場で御本人にお渡しします。所有者欄——本人、で受理してもらいます」。場内へ届く声で公言した。ブースの係員が「前例が」と言いかけ、観客席から「作れー!」の大合唱が被さった。前例は、作れば前例である。鞘の剣士が、遠くで小さく頭を下げるのが見えた。約束は、砂の上で果たすものになった。",
+          "intent": "賞品化された所有権を、本人へ返す道筋を先に立てる",
+          "promise": "約束が公になる代わりに、勝てなければ空手形になる",
+          "memory": "「所有者欄・本人で受理」の公言が場内記録に残った",
+          "tone": "heroic",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "goto": "main.s2.w24.node.end.001"
+        },
+        {
+          "id": "main.s2.w24.choice.002",
+          "label": "賞品制度そのものを、審理台へ載せる",
+          "result": "試合前の場内放送の時間を借りて、正式に申し立てた。「人の所有権を賞品とする本制度について、興行規約に基づく審理を請求します」。会場に来ていた判事さんが、心得た顔で小槌を取り出した(持ち歩いているらしい)。「受理します。審理は——本日の試合内容を、証拠として採用します」。試合が、そのまま法廷になった。うちの試合は、いつもどこかが裁判である。",
+          "intent": "一勝で終わらせず、制度ごと壊す土俵を作る",
+          "promise": "赤線が制度に届く代わりに、試合内容まで証拠として見られる",
+          "memory": "試合=審理の前例が、また一つ増えた",
+          "tone": "defiant",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "goto": "main.s2.w24.node.end.001"
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "main.s2.w24.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "2周目・週24準決勝(8行+選択)。ルール=名入れ販売(賞品欄に人の名前、の画で悪を立たせる)。無銘の描写は公開範囲(まばたき二回・鞘)。「勝ちに来る。その上で頼んだ」で試合の尊厳を守る。彼の危機(名入れ販売の封筒)の中身は先食いしない。",
+    "legacyGeneratedIds": false
+  }
+}

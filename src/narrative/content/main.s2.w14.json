@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s2.w14",
+  "kind": "opening",
+  "title": "去年の判",
+  "summary": "会社の控えに残る、自分の一年。そして当たると言われて嬉しくない予言",
+  "ownership": {
+    "arcId": "main.stage2"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "闘技場 正面受付",
+    "assets": [
+      {
+        "id": "main.s2.w14.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-arena-reception.png",
+        "alt": "闘技場の正面受付の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s2.w14.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s2.w14.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.w14.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w14.node.line.001",
+      "lineId": "main.s2.w14.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "会社から、事務便が届いた。契約更新の付属書類一式——去年ぶんの写しも、まとめて。分厚い束を、帳場で一枚ずつ検める。事務便に善意は期待しないが、情報は期待していい。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w14.node.line.002",
+      "lineId": "main.s2.w14.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "めくっていて、手が止まった。去年の申請書の裏。——私の判が、並んでいる。一行ズレた最初の判。訂正申請の判。取り下げの、まっすぐな判。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w14.node.line.003",
+      "lineId": "main.s2.w14.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "会社の書類は冷たい。なのに、自分の判の並びだけ、妙にあたたかく見えた。縛られながら、それでも一つずつ選んできた列だからだと思う。去年の私から、今年の私への、引き継ぎ書類である。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w14.node.line.004",
+      "lineId": "main.s2.w14.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ノノさんが横から覗いて、しみじみ言った。「会社の控えの中にも、ミミさんの歴史があるんですね」。ありますとも。敵の帳簿の中にだって、私の判は私のものだ。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w14.node.line.005",
+      "lineId": "main.s2.w14.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "感傷は、そこまで。更新条項の末尾に、小さな変更を見つけた。「異議申立への対応窓口: 再演企画室へ一本化」。……こちらの武器(正式な異議)への、防衛工事だ。会社も、学んでいる。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w14.node.line.006",
+      "lineId": "main.s2.w14.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "街では、新しい刷り物が出回り始めていた。会社の売店に平積みの『的中率百パーセント予想』。次の勝敗が、印刷されて売られている。当たるから、賭けの意味が死ぬ。——一覧の三条目が、店頭に並んだ形だ。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w14.node.line.007",
+      "lineId": "main.s2.w14.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "その一面を見て、うちの控室が静まった。「次回・黄金ジャックポット杯 勝者: ミミのチーム(的中率100%)」。——当たると言われて、こんなに嬉しくない予言があるだろうか。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w14.node.line.008",
+      "lineId": "main.s2.w14.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "予言どおりに勝てば、予想紙の宣伝になる。負ければ、赤線が遠のく。どちらへ転んでも会社の得、に見える盤面。——見える、だけのはずだ。カジノ育ちは知っている。胴元が笑っている台ほど、抜け道の探しがいがある。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "effect",
+      "id": "main.s2.w14.node.effect.001",
+      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+    },
+    {
+      "type": "end",
+      "id": "main.s2.w14.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "2周目・週14(8行・選択肢なし)。去年の判=縛られながら選んだ列の感傷を一拍。会社の防衛工事(異議窓口の一本化=週20報復の種)。予想紙=週16への引き(的中固定の盤面)。予想紙はリンネ個人ではなく会社の商品として描き、個別の危機を先食いしない。",
+    "legacyGeneratedIds": false
+  }
+}
