@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s2.w06",
+  "kind": "opening",
+  "title": "リバイバル公演、初日",
+  "summary": "去年のうちの試合が、舞台で再演される。楽屋の隅に黒い角封筒",
+  "ownership": {
+    "arcId": "main.stage2"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "中央闘技場(特設舞台)",
+    "assets": [
+      {
+        "id": "main.s2.w06.asset.background.001",
+        "kind": "background",
+        "path": "/assets/arena-daylight.png",
+        "alt": "特設舞台になった闘技場の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s2.w06.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s2.w06.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.w06.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w06.node.line.001",
+      "lineId": "main.s2.w06.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "リバイバル公演の初日は、大入りだった。演目「先付け、四十二点」——去年の、うちの初戦。自分たちの再演を自分たちで観に行くという、妙な座組でうちは客席に並んだ。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w06.node.line.002",
+      "lineId": "main.s2.w06.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "幕が開いて、役者の「ミミ」が出てきた。衣装が完璧だった。兎の耳の角度まで完璧だった。私は自分の耳を、思わず触った。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w06.node.line.003",
+      "lineId": "main.s2.w06.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "偽ミミが見得を切る。「初心者です。監督が。」——場内、爆笑。本人の隣で。うちの面々は変な声を出して笑い、私は笑いながら、座席に深く沈んだ。自分の名場面は、正面から観るものではない。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w06.node.line.004",
+      "lineId": "main.s2.w06.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "笑って観ていた。途中までは。役者さんたちは、上手い。上手いのに——どこか、手順をなぞる目をしている。去年あの砂の上にあった「次がどうなるか誰も知らない」が、板の上には、無い。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w06.node.line.005",
+      "lineId": "main.s2.w06.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "波の大道具が、仕掛けの泡文字を掲げた。「せんつけ 42てん」。客席から拍手。……本物のあの泡は、生きて、選んで、点を付けていたのだけれど。作り物の泡は、毎晩同じ点を掲げるのだろう。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w06.node.line.006",
+      "lineId": "main.s2.w06.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "幕間、隣の席の剣士さんが、ぽつりと言った。「よく出来とる。……出来すぎとって、寂しいのう」。同じことを感じている人が、隣にいた。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w06.node.line.007",
+      "lineId": "main.s2.w06.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "終演後、楽屋へ見舞いに行った。役者さんに罪はない。むしろ立派な仕事だ。役者の「ミミ」さんは、目を輝かせて喜んだ。「ご本人に観ていただけるなんて! 明日から、もっと寄せます!」。寄せなくていいです。今ので満点です。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w06.node.line.008",
+      "lineId": "main.s2.w06.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "——その楽屋の、衣装棚の上。見てしまった。黒い、角封筒。赤い封蝋。宛名は「座長殿」。役者さんたちは、まだ誰も気づいていない。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w06.node.line.009",
+      "lineId": "main.s2.w06.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "帰り道は、静かだった。会社は、自分で立ち上げた再演の座組にすら、あの封筒を出す。……この公演の裏で、何が数えられているんだろう。",
+      "emotion": "tension"
+    },
+    {
+      "type": "choice",
+      "id": "main.s2.w06.node.choice.001",
+      "choices": [
+        {
+          "id": "main.s2.w06.choice.001",
+          "label": "翌朝、座長に封筒のことを伝えに行く",
+          "result": "見て見ぬふりは、性に合わない。翌朝、座長さんを訪ねて、見たままを伝えた。座長さんは封筒を確かめ、長く息を吐いた。「……うちの一座にも、来ましたか」。来ましたか、という言い方だった。この街の興行の世界で、あの封筒はよく知られた不幸の形らしい。「ご忠告、痛み入ります。困ったときは——おたくの受付に、相談に行っても?」。どうぞ。うちの受付は、この街でいちばん正式です。",
+          "intent": "見てしまった不幸を、放置しない",
+          "promise": "一座との縁ができる代わりに、会社の内情に一歩踏み込む",
+          "memory": "座長の「うちの一座にも、来ましたか」が手帳に残る",
+          "tone": "heroic",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "goto": "main.s2.w06.node.end.001"
+        },
+        {
+          "id": "main.s2.w06.choice.002",
+          "label": "まず、封筒の宛先の意味を調べる",
+          "result": "動く前に、知る。ノノさんと二人、興行側へ出る封筒の前例を洗った。分かったこと——座組への封筒は、大抵「演目の差し替え」か「上演権の回収」。つまりあの一座は近々、演目か、一座そのものを、会社に動かされる。差し替え先の演目名はまだ分からない。分からないが、嫌な予感の形は、もう知っている。「世界滅亡ショー」。……考えすぎであってほしい。",
+          "intent": "善意で動く前に、事実を揃える",
+          "promise": "先が読める代わりに、動き出しは一歩遅れる",
+          "memory": "座組封筒の前例(差し替え/回収)の控えが増えた",
+          "tone": "pragmatic",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "goto": "main.s2.w06.node.end.001"
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "main.s2.w06.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "2周目・週6(9行+選択)。再演の質感(上手いのに「次を知らない」が無い)=この周の主題の実感化。黒角封筒は座長宛の遠景(キャラ個別の書式と共通)。選択Bが週10の滅亡ショー発表の予感線。",
+    "legacyGeneratedIds": false
+  }
+}

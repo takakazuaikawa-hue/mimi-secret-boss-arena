@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s2.w02",
+  "kind": "opening",
+  "title": "起きない事故",
+  "summary": "二度目の第二週。引継ぎ事故は起きず、台本のズレが始まる",
+  "ownership": {
+    "arcId": "main.stage2"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "闘技場 正面受付",
+    "assets": [
+      {
+        "id": "main.s2.w02.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-arena-reception.png",
+        "alt": "闘技場の正面受付の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s2.w02.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s2.w02.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.w02.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w02.node.line.001",
+      "lineId": "main.s2.w02.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "二度目の第二週の朝は、受付のインクの匂いまで去年と同じだった。今日は——去年なら、引継ぎ事故の日だ。私の名義が、一行ズレて動いた日。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w02.node.line.002",
+      "lineId": "main.s2.w02.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "だから、身構えていた。マダムが返却に来て、書類が出て、誰かが署名する。二度目は、間違えない。何なら訂正用の書式まで、先回りで用意しておいた。二年目の朝は、準備がいい。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w02.node.line.003",
+      "lineId": "main.s2.w02.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "マダムは、来た。「ごめんなさいねえ——」と言いかけて、ぴたりと止まった。「……あら? 私、何を謝りに来たのかしら」。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w02.node.line.004",
+      "lineId": "main.s2.w02.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "事故は、起きなかった。名義はもう私で、契約は更新済みで、返す書類がそもそも無い。マダムは首をかしげたまま、持ってきた八つ裂き大福だけ置いて帰った。——台本のズレ、第一号である。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w02.node.line.005",
+      "lineId": "main.s2.w02.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ノノさんに、聞いてみた。「去年の今日、何がありました?」「去年、ですか? ……あれ。思い出そうとすると、湯気みたいになるんです」。湯気。覚えていない側の記憶は、湯気になるらしい。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w02.node.line.006",
+      "lineId": "main.s2.w02.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "夜、控室で検証会をした。うちの面々は全員、去年を覚えている。街の大半は、湯気。剣士さんは覚えている。マダムは「あら?」で引っかかる。線引きの仮説が、一つ濃くなった。——濃くなっただけにして、今夜は解散。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w02.node.line.007",
+      "lineId": "main.s2.w02.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "帰り道、街角で稽古の声がした。役者さんたちが、輪になって台本を読み合わせている。表紙が見えた。「名場面選集・第一集(アルデバラン社興行部・監修)」。例の、リバイバル公演の稽古だ。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w02.node.line.008",
+      "lineId": "main.s2.w02.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "通り過ぎようとした、その時。稽古の輪から、よく通る声がひとつ、飛んできた。——「初心者です。監督が。」",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w02.node.line.009",
+      "lineId": "main.s2.w02.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "足が、止まった。私の台詞だ。去年の、大会の朝の、私の台詞が——他人の口から、聞こえた。",
+      "emotion": "tension"
+    },
+    {
+      "type": "effect",
+      "id": "main.s2.w02.node.effect.001",
+      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+    },
+    {
+      "type": "end",
+      "id": "main.s2.w02.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "2周目・週2(9行・選択肢なし)。起きない事故=台本のズレ第一号。湯気の記憶(覚えていない側の質感)。引き=自分の台詞が他人の口から(リバイバル公演の不穏を実感へ変換)。",
+    "legacyGeneratedIds": false
+  }
+}

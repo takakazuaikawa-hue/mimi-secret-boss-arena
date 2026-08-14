@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s2.w03",
+  "kind": "opening",
+  "title": "顔合わせ(去年のライバルたち)",
+  "summary": "挨拶に行く前に、向こうから来た。覚えている五人",
+  "ownership": {
+    "arcId": "main.stage2"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "闘技場 正面受付",
+    "assets": [
+      {
+        "id": "main.s2.w03.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-arena-reception.png",
+        "alt": "闘技場の正面受付の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s2.w03.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s2.w03.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.w03.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w03.node.line.001",
+      "lineId": "main.s2.w03.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "今週の予定は、挨拶回りだった。去年、砂の上で向かい合った人たち——海、闇、法廷、窓口、空。あの五人に、二年目の挨拶へ行こうと決めていた。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w03.node.line.002",
+      "lineId": "main.s2.w03.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "行く前に、向こうから来た。朝の受付が、いきなり満員になったのだ。波の音と、涼しい闇と、小槌の音と、完璧な整列と、翼の影。——五人、そろって。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w03.node.line.003",
+      "lineId": "main.s2.w03.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "泡文字が、ぷつぷつと空中に浮かんだ。「ことしも よろしく」。……去年、を知っている挨拶だった。この五人は、覚えている側だ。全員、物語を終えた人たちだから。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w03.node.line.004",
+      "lineId": "main.s2.w03.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "翼の影が、静かに言った。「去年の決勝——見届けました。それで、決めたことがあります」。何年もつか、見届けたくなった、のその先を、この人は自分の足で選びに来たらしい。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w03.node.line.005",
+      "lineId": "main.s2.w03.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "小槌の音が、こつんと鳴った。「今年は、審理する側ではなく——審理される側の気分を、味わいに来ました」。判事さんのその言い方は、たぶん、この街でいちばん遠回りな「仲間にしてほしい」である。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w03.node.line.006",
+      "lineId": "main.s2.w03.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "去年は会社の看板として、査定もされずに管理されていた人たち。その五人が今、うちの受付に、自分の足で並んでいる。——去年のうちに教わったことを、思い出す。選手登録票の真ん中には、本人署名の欄がある。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w03.node.line.007",
+      "lineId": "main.s2.w03.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ノノさんが(はじめましての顔のまま)、選手登録の綴りを五冊、そっと積んだ。「みなさま、ご記入はあちらの台で」。……湯気の記憶でも、受付の腕は一級である。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w03.node.line.008",
+      "lineId": "main.s2.w03.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "夕方、街の掲示板に、リバイバル公演の演目一覧が正式に貼り出された。第一幕の題を読んで、手が冷たくなった。——「先付け、四十二点」。うちの去年が、演目になっている。",
+      "emotion": "tension"
+    },
+    {
+      "type": "choice",
+      "id": "main.s2.w03.node.choice.001",
+      "choices": [
+        {
+          "id": "main.s2.w03.choice.001",
+          "label": "今年は、うちで戦いませんか、と言う",
+          "result": "回りくどいのは、性に合わない。「今年は、うちで戦いませんか。全員」。五人が、それぞれの流儀で返事をした。泡が跳ね、闇が深くなり、小槌が二回鳴り、整列が一段美しくなり、翼が大きくたわんだ。ノノさんが小声で聞いてきた。「今の、全部お返事ですか?」。全部、お返事です。たぶん、全部イエスです。",
+          "intent": "去年の因縁を、今年の勧誘で回収する",
+          "promise": "話が早く進む代わりに、五人分の事情も引き受けることになる",
+          "memory": "五様の返事の形を、受付の全員が目撃している",
+          "tone": "heroic",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "goto": "main.s2.w03.node.end.001"
+        },
+        {
+          "id": "main.s2.w03.choice.002",
+          "label": "まず、去年のお礼から言って回る",
+          "result": "勧誘より先に、言うべきことがある。「去年の滅亡のとき、残ってくれて、ありがとうございました」。五人が、一瞬、静かになった。あの共闘を、こちらが覚えていて、口に出したことが、たぶん効いた。泡文字がゆっくり浮かぶ。「おぼえていて くれたのか」。覚えています。うちの手帳は、育つ手帳なので。",
+          "intent": "契約の前に、去年の借りを言葉で返す",
+          "promise": "信頼から始まる代わりに、勧誘の話は少し先になる",
+          "memory": "「おぼえていてくれたのか」の泡文字が、受付に残った",
+          "tone": "tender",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "goto": "main.s2.w03.node.end.001"
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "main.s2.w03.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "2周目・週3(8行+選択)。一括顔合わせの週(システムはこの後、新主軸5人のmeetを連鎖)。五人は覚えている側=終わった者たち。引き=演目「先付け、四十二点」。人物名は出さず流儀(泡・小槌・翼)で示し、meet場面の内容を先食いしない。",
+    "legacyGeneratedIds": false
+  }
+}

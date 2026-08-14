@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s2.w04",
+  "kind": "opening",
+  "title": "招待状(二度目)",
+  "summary": "最上級のうちに、初心者大会の招待が来る。台帳は去年の進行を要求する",
+  "ownership": {
+    "arcId": "main.stage2"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "中央闘技場 控室",
+    "assets": [
+      {
+        "id": "main.s2.w04.asset.background.001",
+        "kind": "background",
+        "path": "/assets/arena-daylight.png",
+        "alt": "大会当日の闘技場の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s2.w04.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s2.w04.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.w04.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w04.node.line.001",
+      "lineId": "main.s2.w04.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "二度目の大会の朝。控室は今年も、砂と石鹸の匂いがする。手の中には、今年の招待状——「初心者大会のご招待」。……初心者。うちは、最上級なのだが。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w04.node.line.002",
+      "lineId": "main.s2.w04.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ノノさんに問い合わせたら、困った笑顔が返ってきた。「規定ですので……進行表が、そうなっていて」。進行表。台帳は、去年と同じ順番で今年を進めたがっている。最上級チームに、初心者大会の招待を出してでも。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w04.node.line.003",
+      "lineId": "main.s2.w04.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "会場では、主催の係員さんが世界一困っていた。「あの……初心者では、ないですよね……」。初心者です。監督が——って、去年言いました。壁の向こうでガヤ氏が叫ぶ。「出ました、聞き覚えのある名文句!」",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w04.node.line.004",
+      "lineId": "main.s2.w04.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "相手側の普通のモンスターの皆さんは、去年三歩下がった。今年は五歩下がって、それから——半分が応援側に回った。「勝てる気がしないなら、応援した方が楽しい」。この街の合理は、いつも明るい方へ倒れる。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w04.node.line.005",
+      "lineId": "main.s2.w04.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "計測係くんが、抱えてきた新しい計測器を構えた。上限の上の、手書きの目盛り——「みたことない」。「い、一応、今年も計っておきたくて。記録は、係の誇りなので」。いい顔で言うようになったものだ。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w04.node.line.006",
+      "lineId": "main.s2.w04.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "賞品は、今年も温泉旅行(二泊)。控室では「連覇したら二泊が四泊になるのか」という下世話な議論が白熱している。ならないと思う。ならないとは、言い切れないのがこの街だが。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w04.node.line.007",
+      "lineId": "main.s2.w04.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "視察席に、会社の席札が出ていた。読んで、少し眉が動く。——「再演企画室」。去年は、資産管理部だった。名前が、変わっている。組織の名前が変わるとき、中では何かが本気になっている。事務員の経験則である。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w04.node.line.008",
+      "lineId": "main.s2.w04.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ふと、思う。台帳が「去年と同じ」を求めてくるなら——うちが去年と違うことをするたび、どこかが軋むはずだ。今日の試合、去年と違う勝ち方をしてみる価値が、ある。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w04.node.line.009",
+      "lineId": "main.s2.w04.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "整列の号令。入場口の札が、係員さんの手で「出場」へ裏返る。二年目の光は、去年より少しだけ、まぶしい気がした。客席が増えたからだと思う。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "choice",
+      "id": "main.s2.w04.node.choice.001",
+      "choices": [
+        {
+          "id": "main.s2.w04.choice.001",
+          "label": "今年も宣言する——温泉、行きましょう!",
+          "result": "様式美というものがある。「勝ちましょう、じゃなくて——温泉、行きましょう!」。ガヤ氏が待ってましたと場内へ流す。「今年も出ました、目標は温泉!」。客席が沸き、券売のおじさんが叫ぶ。「温泉に単勝、今年も発売!」。だから何の単勝だ。去年と同じ宣言で、去年より大きな笑いが起きた。天丼は、二年目からが本番である。",
+          "intent": "去年の宣言を、様式美として繰り返す",
+          "promise": "街との合言葉が育つ代わりに、台帳の想定どおりの型でもある",
+          "memory": "「目標は温泉」が、二年目にして街の恒例になった",
+          "tone": "wild",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "goto": "main.s2.w04.node.end.001"
+        },
+        {
+          "id": "main.s2.w04.choice.002",
+          "label": "今年は、新しい宣言をする",
+          "result": "「今年の目標は——去年と違う勝ち方です!」。ガヤ氏が一瞬詰まって、それから面白がった。「新目標、台本にない勝ち方ァ!」。視察席の「再演企画室」の席で、誰かがペンを止めたのが見えた。台帳の想定の外に、一歩。踏み出した足の下で、世界が軋んだ気がしたのは、たぶん気のせいではない。",
+          "intent": "台帳の想定の外へ、最初の一歩を出す",
+          "promise": "新作の旗が立つ代わりに、会社の目がこちらの「違い」に集まる",
+          "memory": "「台本にない勝ち方」の宣言を、再演企画室が記録した",
+          "tone": "defiant",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "goto": "main.s2.w04.node.end.001"
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "main.s2.w04.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "2周目・週4大会週(9行+選択)。台帳の慣性(最上級に初心者大会の招待)を楽しく。再演企画室の初出(名前の変わった会社)。選択=天丼(様式美)か新作宣言か——周のテーマそのもの。",
+    "legacyGeneratedIds": false
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s2.w01",
+  "kind": "opening",
+  "title": "第一週(二度目)",
+  "summary": "街が去年の初日をやり直している。覚えている者と、覚えていない者",
+  "ownership": {
+    "arcId": "main.stage2"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "闘技場 正面受付",
+    "assets": [
+      {
+        "id": "main.s2.w01.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-arena-reception.png",
+        "alt": "闘技場の正面受付の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s2.w01.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s2.w01.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.w01.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w01.node.line.001",
+      "lineId": "main.s2.w01.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "目が覚めて、暦を三度見た。「更新後の勤務週・第一週」。……第一週? 昨日まで、決勝の後片付けをしていたはずだ。窓の外の街は、いつも通りの朝の顔をしている。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w01.node.line.002",
+      "lineId": "main.s2.w01.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "鞄の中を確かめる。去年の控えの束。金縁の選手証。太い紐の手帳——うちの、はじまりの記録。ぜんぶ、ある。街の暦がどうなっていようと、私の一年は、鞄の中にちゃんとある。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w01.node.line.003",
+      "lineId": "main.s2.w01.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "出勤すると、受付のノノさんが、まっさらの笑顔で言った。「はじめまして! 受付のノノです。今日はよろしくお願いしますね」。……はじめまして?",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w01.node.line.004",
+      "lineId": "main.s2.w01.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "冗談かと思った。冗談では、なかった。名札は新品で、判子は下ろしたてで、掲示板は去年の初日の顔ぶれ。街ごと、第一週をやり直している。誰も、それを変だと思っていない。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w01.node.line.005",
+      "lineId": "main.s2.w01.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "白ひげの剣士さんが、窓口に並んだ。腰の剣が、低く鳴りつづけている。来る。あの台詞が、来る。「世界を三度すくった者だが」「ポイント五倍は、今日です」「——ほう。話が早いのう」。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w01.node.line.006",
+      "lineId": "main.s2.w01.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "先回り、できてしまった。台詞を知っている朝は、便利で、少しだけ寂しい。剣士さんは判を受け取りながら、私をじっと見た。「……あんた、二年目の顔をしとるな」。——この人は、分かる側だ。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w01.node.line.007",
+      "lineId": "main.s2.w01.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "控室のうちの面々は、いつも通りだった。「監督、暦がおかしい」「街が初日をやっている」「まかないの献立が去年の初日と同じだった(重要)」。——覚えている。全員、ちゃんと覚えている。安心して、肩の力が抜けた。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w01.node.line.008",
+      "lineId": "main.s2.w01.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "覚えている者と、覚えていない者が、いる。線引きは、まだ分からない。分からないが——去年の私なら狼狽えていた場面だ。二年目の私は、まず控えを取る。「暦の巻き戻り: 一件。関係者: 調査中」。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w01.node.line.009",
+      "lineId": "main.s2.w01.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "昼、マダムが来た。「あら、新しい派遣さん?」。マダム、私です。「あらあらあら! ……あら?」。マダムは覚えていない側らしい。ただ、三つ目の「あら」だけ、少し引っかかった顔をした。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w01.node.line.010",
+      "lineId": "main.s2.w01.line.010",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "夕方、経理課から封筒が届いた。赤い社印。「契約更新のお知らせ——受理済み。本年度も、よろしくお願いいたします」。……受理済み。私、いつ申請しました?",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w01.node.line.011",
+      "lineId": "main.s2.w01.line.011",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "帳場の奥で、手帳を開いた。去年の最後の頁の次に、新しい頁が白く待っている。書いた。「更新後の勤務週、初日。街は二度目の第一週。——うちは、二年目」。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w01.node.line.012",
+      "lineId": "main.s2.w01.line.012",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "帰りぎわ、掲示板の隅に、新しい貼り紙を見つけた。「近日開演——名場面リバイバル公演(主催: アルデバラン社興行部)」。リバイバル。……嫌な予感の形をした、見覚えのある単語だった。",
+      "emotion": "tension"
+    },
+    {
+      "type": "choice",
+      "id": "main.s2.w01.node.choice.001",
+      "choices": [
+        {
+          "id": "main.s2.w01.choice.001",
+          "label": "去年の控えと、今日の街の差分表を作る",
+          "result": "夜、去年の控えと今日の街を突き合わせた。同じもの: 献立、貼り紙、判子の音、ノノさんの挨拶の抑揚。違うもの: 私の鞄の中身と、うちの面々と、剣士さんの目つき。差分表の最後に、一行だけ仮説を書いた。「覚えているのは——物語を、終えた者たち?」。仮説は手帳に挟んで、誰にも見せないでおく。種は、一粒でいい。",
+          "intent": "二年目の朝を、事務員の方法で確かめる",
+          "promise": "世界の線引きに近づく代わりに、知らなくてよかったことにも近づく",
+          "memory": "差分表の最後の一行が、手帳に挟まっている",
+          "tone": "pragmatic",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "goto": "main.s2.w01.node.end.001"
+        },
+        {
+          "id": "main.s2.w01.choice.002",
+          "label": "二年目も、いつも通りに働く",
+          "result": "暦が何をやり直そうと、うちの仕事は変わらない。給仕をして、判を押して、練習場の鍵を開ける。いつも通りは、それだけで小さな反撃である。夕方、ノノさんが首をかしげた。「ミミさん、初日なのに、なんだか手慣れてますね?」。二年目ですから——とは、声に出さず、接客用の笑顔で返しておいた。",
+          "intent": "不思議に飲まれず、日常の側に立つ",
+          "promise": "地に足がつく代わりに、謎の調査は後回しになる",
+          "memory": "「初日なのに手慣れてる」というノノさんの首かしげが残る",
+          "tone": "heroic",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "goto": "main.s2.w01.node.end.001"
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "main.s2.w01.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "2周目・週1。二度目の第一週。覚えている者(終わった者たち+ミミ+仲間)と覚えていない者の線引きを、怖がらせず楽しく提示。引き=リバイバル公演の貼り紙。仲間は特定名を出さず「うちの面々」(持ち越し編成に非依存)。",
+    "legacyGeneratedIds": false
+  }
+}

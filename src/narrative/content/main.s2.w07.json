@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s2.w07",
+  "kind": "opening",
+  "title": "九通目の封蝋",
+  "summary": "八通の挑戦状と、勝敗が先に書いてある一通。裏側の悪の、最初の物証",
+  "ownership": {
+    "arcId": "main.stage2"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "闘技場 正面受付",
+    "assets": [
+      {
+        "id": "main.s2.w07.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-arena-reception.png",
+        "alt": "闘技場の正面受付の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s2.w07.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s2.w07.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.w07.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w07.node.line.001",
+      "lineId": "main.s2.w07.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "朝の受付に、封筒が積んであった。八通。全部うち宛て。全部、同じ差出人。——来週の対戦相手からの、挑戦状である。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w07.node.line.002",
+      "lineId": "main.s2.w07.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "一通目「綱引きで勝負」。二通目「早食いで勝負」。三通目「にらめっこで勝負」。……八通目まで、全部種目が違う。すべてを種目化して挑んでくる人らしい。うちの控室は、返事の割り振りで朝から盛り上がった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w07.node.line.003",
+      "lineId": "main.s2.w07.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「にらめっこは私が出る」「早食いは譲らん」「綱引きは全員でいいのでは?」。挑戦状というものは、受け取る側をこんなに元気にするものなのか。八通の便箋は、どれも楽しそうな字で書いてあった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w07.node.line.004",
+      "lineId": "main.s2.w07.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "夕方、九通目が届いた。同じ宛先。だが——封蝋が、違った。赤い、会社の社印。挑戦状の束に、一通だけ紛れ込んだ、事務の匂いのする封筒。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w07.node.line.005",
+      "lineId": "main.s2.w07.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "中身は、書類だった。表題——「第九戦 進行台本(関係者外秘)」。頁をめくる。試合の流れが、台詞つきで書いてある。見せ場の位置。盛り上がりの秒数。そして、最後の頁。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w07.node.line.006",
+      "lineId": "main.s2.w07.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「結果: 挑戦者チームの敗北(興行都合)」。——勝敗が、先に、書いてある。うちが負けることが、試合の一週間前に、決まっている。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w07.node.line.007",
+      "lineId": "main.s2.w07.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "手が、冷たくなった。怒りというものは、熱くなる前に一度冷たくなるらしい。初めて知った。八通の楽しい挑戦状と、一通の台本。同じ「第九戦」を、挑む側は本気で楽しみにしていて、会社は先に終わらせている。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w07.node.line.008",
+      "lineId": "main.s2.w07.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "控室に台本を置いた。全員が、順番に読んだ。読み終えた顔が、全員、同じだった。静かで、冷たくて——それから、ゆっくり熱くなる顔。誰かが言った。「監督。これは、破っていい台本か」。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w07.node.line.009",
+      "lineId": "main.s2.w07.line.009",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "破りましょう。ただし紙は破りません——**試合で**破ります。証拠は、綴じて取っておくものなので。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w07.node.line.010",
+      "lineId": "main.s2.w07.line.010",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "台本は控えを取って、原本は帳場の金庫へ。八通の挑戦状は、控室の壁に貼った。来週、うちは九つの勝負を全部受ける。九つ目だけは——書いてある結果と、逆の方を。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "effect",
+      "id": "main.s2.w07.node.effect.001",
+      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+    },
+    {
+      "type": "end",
+      "id": "main.s2.w07.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "2周目・週7(10行・選択肢なし)。組織打倒アークの起点=台本試合の物証。ヴォルフの登記モチーフ(挑戦状八通+九通目・全種目化)を公開範囲で使用。「破っていい台本か」「試合で破ります」が週8の宣言。",
+    "legacyGeneratedIds": false
+  }
+}

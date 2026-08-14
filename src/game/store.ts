@@ -116,6 +116,9 @@ const finishRun = (
   run: RunState,
   profile: PlayerProfile,
   endingType: NonNullable<RunState["endingType"]>,
+  // 区分2の週26勝利など、この完走そのものが記録すべき合成フラグ。
+  // 保存形式は seenEvents への要素追加のみ(スキーマ変更なし)。
+  extraSeenEvents: readonly string[] = [],
 ): { run: RunState; profile: PlayerProfile } => {
   const liberatedCollection = [
     ...new Set([
@@ -163,6 +166,10 @@ const finishRun = (
       liberatedCollection,
       grandCleared: profile.grandCleared || resolvedEnding === "grand",
       hallOfFame: [hallEntry, ...profile.hallOfFame].slice(0, 30),
+      seenEvents:
+        extraSeenEvents.length > 0
+          ? [...new Set([...profile.seenEvents, ...extraSeenEvents])]
+          : profile.seenEvents,
     },
   };
 };
@@ -690,7 +697,17 @@ export const useGameStore = create<GameStore>()(
             (id) => nextRun.fighters[id].liberated,
           ).length;
           const endingType = won && liberated >= 2 ? "rebuild" : won ? "company" : "retired";
-          const finished = finishRun(nextRun, state.profile, endingType);
+          // 区分2(更新後の勤務週)は、週26の最終戦に本当に勝たないと
+          // 区分3(記録外勤務週)が解禁されない。勝敗はこの settleBattle が
+          // 確定させる `won`(最終戦の battle.status)そのものを使う。
+          const stageTwoClearEvents: string[] =
+            won && nextRun.campaignStage === 2 ? ["main.s2.cleared"] : [];
+          const finished = finishRun(
+            nextRun,
+            state.profile,
+            endingType,
+            stageTwoClearEvents,
+          );
           set(finished);
           return { bonus: false, ended: true, won };
         }

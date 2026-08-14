@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s2.w05",
+  "kind": "opening",
+  "title": "鏡見の湯(二年目)",
+  "summary": "二度目の湯治。仲居さんの「今年も」と、湯が守る記録",
+  "ownership": {
+    "arcId": "main.stage2"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "温泉旅館「鏡見の湯」門前",
+    "assets": [
+      {
+        "id": "main.s2.w05.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-hot-spring-ryokan.png",
+        "alt": "温泉旅館の門前の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s2.w05.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s2.w05.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.w05.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w05.node.line.001",
+      "lineId": "main.s2.w05.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "二度目の山道は、硫黄の匂いまで懐かしかった。大会明けの温泉行き。今年は速達に追いかけられない、静かな旅——のはずだった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w05.node.line.002",
+      "lineId": "main.s2.w05.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "速達は、今年も来た。差出人、闘技場計測室。「貴チームのランク: 最上級(継続)。特記事項: 前年比、異常なし」。……異常なし、とわざわざ書かれると、逆に不安になるのはなぜだろう。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w05.node.line.003",
+      "lineId": "main.s2.w05.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "更新版の選手証も同封されていた。金縁が、二重になっている。「二年目の線です」とノノさんの添え書き。年輪みたいな身分証である。ちょっと、気に入ってしまった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w05.node.line.004",
+      "lineId": "main.s2.w05.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "今年のバスは、去年より席が足りなかった。うちの所帯が、それだけ増えたということだ。通路まで詰まった顔ぶれを見渡して、監督は静かに満足した。定員オーバーは、いい悩みである。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w05.node.line.005",
+      "lineId": "main.s2.w05.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "暖簾の前で、仲居さんが深々と頭を下げた。「お待ちしておりました——今年も」。……今年も。街の記憶が湯気になる中で、この人は、はっきり「も」と言った。覚えている人の名簿に、仲居さんを書き加える。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w05.node.line.006",
+      "lineId": "main.s2.w05.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "聞いてみると、仲居さんは当たり前の顔で言った。「うちは鏡見の湯ですから。湯が、記憶を守るんです」。見れば効能書きの隅に、小さな字がある。「すべての疲れに効く(物忘れにも)」。……効能、そういう意味も、あったのか。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w05.node.line.007",
+      "lineId": "main.s2.w05.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "宴会は、去年より静かに始まって、去年より大きく育った。今年は誰も「最上級」でははしゃがない。かわりに「連覇」の二文字で全員がはしゃいだ。成長といえば成長である。方向はさておき。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w05.node.line.008",
+      "lineId": "main.s2.w05.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "帰りぎわ、帳場の宿帳が目に入った。頁を繰る指が、勝手に去年を探す。——あった。去年の日付、私の字、私の名前。街の記録は湯気になるのに、宿帳には、残っている。湯の守った記録が、ここに一冊。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w05.node.line.009",
+      "lineId": "main.s2.w05.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "宿帳の去年の頁に、そっと今年の栞を挟んだ。証拠は、増やしておくに限る。うちの控えと、湯の宿帳。台帳の外の記録が、これで二冊になった。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "effect",
+      "id": "main.s2.w05.node.effect.001",
+      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+    },
+    {
+      "type": "end",
+      "id": "main.s2.w05.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "2周目・週5(9行・選択肢なし)。祭事=温泉の二年目。仲居さん=覚えている側(湯が記憶を守る——効能書きのギャグで通過)。台帳の外の記録が二冊に(控え+宿帳)。宿の中の場面は既存イベントの領分のまま。",
+    "legacyGeneratedIds": false
+  }
+}

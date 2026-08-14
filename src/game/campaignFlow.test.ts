@@ -1,11 +1,14 @@
-import { describe, expect, it } from "vitest";
+import { beforeEach, describe, expect, it } from "vitest";
 import {
   campaignStages,
   unlockedCampaignStage,
 } from "../data/campaignStages";
+import { officialMatches } from "../data/matches";
+import { createBattle } from "./battle";
 import {
   availableRosterIds,
   chooseWeeklyAction,
+  createInitialProfile,
   createRun,
   maybeCreateCastIntroductionFollowup,
   maybeCreateHonmeiFollowup,
@@ -16,6 +19,8 @@ import {
   nextCampaignWeek,
   resolveCurrentEvent,
 } from "./engine";
+import { createRandom } from "./rng";
+import { useGameStore } from "./store";
 import type { RunState } from "./types";
 import { legacyCharacterNarrativeBlockById } from "../narrative/characterBlocks";
 import {
@@ -176,22 +181,43 @@ describe("キャンペーン進行の実流", () => {
     expect(new Set(meets).size).toBe(meets.length);
   });
 
-  it("完走しなくても、主軸と出会った実績で次の勤務週が解放される", () => {
+  it("完走しなくても、区分1の主軸と出会った実績で区分2の勤務週が解放される", () => {
     const seenAllStageOne = campaignStages[0].mainFighterIds.map(
       (id) => `${id}.meet`,
     );
     expect(unlockedCampaignStage({ seenEvents: [] })).toBe(1);
     expect(unlockedCampaignStage({ seenEvents: seenAllStageOne })).toBe(2);
+    // 完走した場合は従来どおり進む(勝敗を問わない)
+    expect(unlockedCampaignStage({ completedRuns: 1 })).toBe(2);
+  });
+
+  it("区分3は、区分2主軸との遭遇や完走回数では解放されず、main.s2.cleared がある場合だけ解放される", () => {
+    const seenAllStageOne = campaignStages[0].mainFighterIds.map(
+      (id) => `${id}.meet`,
+    );
+    const seenAllStageTwo = campaignStages[1].mainFighterIds.map(
+      (id) => `${id}.meet`,
+    );
+    // 区分2の主軸5人と全員出会っていても、区分3は解禁されない
+    // (区分2は「本当に勝たないと解禁されない」仕様のため)。
     expect(
       unlockedCampaignStage({
-        seenEvents: [
-          ...seenAllStageOne,
-          ...campaignStages[1].mainFighterIds.map((id) => `${id}.meet`),
-        ],
+        seenEvents: [...seenAllStageOne, ...seenAllStageTwo],
+      }),
+    ).toBe(2);
+    // 完走回数(勝敗を問わない finishRun 経由)を積んでも区分3は解禁されない。
+    expect(unlockedCampaignStage({ completedRuns: 2 })).toBe(2);
+    expect(unlockedCampaignStage({ completedRuns: 9 })).toBe(2);
+    // main.s2.cleared(週26の勝利記録)があれば区分3が解禁される。
+    expect(unlockedCampaignStage({ seenEvents: ["main.s2.cleared"] })).toBe(
+      3,
+    );
+    expect(
+      unlockedCampaignStage({
+        completedRuns: 1,
+        seenEvents: ["main.s2.cleared"],
       }),
     ).toBe(3);
-    // 完走した場合は従来どおり進む
-    expect(unlockedCampaignStage({ completedRuns: 1 })).toBe(2);
   });
 
   it("週3終了時点で、その区分の主軸5人が全員 encountered=true になる(出場者不足バグの回帰)", () => {
@@ -339,5 +365,68 @@ describe("決勝前夜(週25)の本命選択", () => {
       campaignStages[0].mainFighterIds.includes(run.honmeiFighterId ?? ""),
     ).toBe(true);
     expect(run.fighters[run.honmeiFighterId ?? ""]?.recruited).toBe(true);
+  });
+});
+
+describe("区分2: 週26の勝敗と main.s2.cleared の記録", () => {
+  beforeEach(() => {
+    useGameStore.setState({
+      profile: createInitialProfile(),
+      run: undefined,
+    });
+  });
+
+  // 区分2(更新後の勤務週)で週26の最終戦だけを直接組み立てる。
+  const buildStageTwoFinalRun = (seed: string): RunState => {
+    const run = createRun("normal", seed, {
+      campaignStage: campaignStages[1],
+    });
+    const fighterId = campaignStages[1].mainFighterIds[0];
+    run.fighters[fighterId] = {
+      ...run.fighters[fighterId],
+      recruited: true,
+      encountered: true,
+    };
+    run.week = 26;
+    run.roster = [fighterId];
+    run.activeTeam = [fighterId];
+    const finalMatch = officialMatches.at(-1)!;
+    run.pendingMatchId = finalMatch.id;
+    run.battle = createBattle(run, finalMatch, createRandom(seed));
+    return run;
+  };
+
+  it("(a) 区分2で週26の最終戦に勝利すると main.s2.cleared が記録される", () => {
+    const run = buildStageTwoFinalRun("s2-final-win");
+    run.battle!.status = "won";
+    useGameStore.setState({ run });
+    const result = useGameStore.getState().settleBattle();
+    expect(result.ended).toBe(true);
+    expect(result.won).toBe(true);
+    expect(useGameStore.getState().profile.seenEvents).toContain(
+      "main.s2.cleared",
+    );
+    expect(unlockedCampaignStage(useGameStore.getState().profile)).toBe(3);
+  });
+
+  it("(b) 区分2で週26の最終戦に敗北すると main.s2.cleared は記録されない", () => {
+    const run = buildStageTwoFinalRun("s2-final-lose");
+    run.battle!.status = "lost";
+    useGameStore.setState({ run });
+    const result = useGameStore.getState().settleBattle();
+    expect(result.ended).toBe(true);
+    expect(result.won).toBe(false);
+    expect(useGameStore.getState().profile.seenEvents).not.toContain(
+      "main.s2.cleared",
+    );
+    expect(unlockedCampaignStage(useGameStore.getState().profile)).toBe(2);
+  });
+
+  it("(c) unlockedCampaignStage は main.s2.cleared の有無で区分3/2を返す", () => {
+    expect(unlockedCampaignStage({ seenEvents: ["main.s2.cleared"] })).toBe(
+      3,
+    );
+    expect(unlockedCampaignStage({ seenEvents: [] })).toBe(1);
+    expect(unlockedCampaignStage({ completedRuns: 3 })).toBe(2);
   });
 });

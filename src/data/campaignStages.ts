@@ -46,10 +46,15 @@ export const stageForCompletedRuns = (
 /**
  * 到達済みの最大区分。
  *
- * 26週の完走だけを条件にすると、途中で始め直したプレイヤーが同じ5人に
- * 閉じ込められてしまう。そこで「その区分の主軸と出会った実績」でも解放する。
+ * 区分2は、26週の完走だけを条件にすると、途中で始め直したプレイヤーが同じ5人に
+ * 閉じ込められてしまう。そこで「区分1の主軸と出会った実績」でも解放する。
  * 出会いの記録(`profile.seenEvents` の `<id>.meet`)は周回を跨いで残るため、
  * 遊び方に関係なく前へ進める。
+ *
+ * 区分3(記録外勤務週)は、区分2「本当に勝たないと解禁されない」仕様のため、
+ * 主軸との遭遇や完走回数では解放しない。週26の最終戦に勝利した記録
+ * (`profile.seenEvents` の合成フラグ `main.s2.cleared`)がある場合だけ解放する。
+ * 負けても持ち越し仲間で再挑戦できるため詰みはない。
  */
 export const unlockedCampaignStage = (profile: {
   completedRuns?: number;
@@ -57,22 +62,16 @@ export const unlockedCampaignStage = (profile: {
   seenEvents?: readonly string[];
 }): 1 | 2 | 3 => {
   const seen = new Set(profile.seenEvents ?? []);
-  const metCount = (stage: CampaignStageDefinition) =>
-    stage.mainFighterIds.filter((id) => seen.has(`${id}.meet`)).length;
-  // 主軸5人のうち4人と出会っていれば、その区分は「見た」とみなす。
-  const byEncounters = campaignStages.reduce(
-    (unlocked, stage) =>
-      stage.stage === unlocked && metCount(stage) >= 4
-        ? Math.min(campaignStages.length, unlocked + 1)
-        : unlocked,
-    1,
-  );
-  const byRuns =
-    (profile.completedRuns ?? (profile.hasFinishedRun ? 1 : 0)) + 1;
-  return Math.min(
-    campaignStages.length,
-    Math.max(byEncounters, byRuns),
-  ) as 1 | 2 | 3;
+  const metStageOne =
+    campaignStages[0].mainFighterIds.filter((id) => seen.has(`${id}.meet`))
+      .length >= 4;
+  const anyRunCompleted =
+    (profile.completedRuns ?? (profile.hasFinishedRun ? 1 : 0)) >= 1;
+  const unlockedStage2 = metStageOne || anyRunCompleted;
+  const unlockedStage3 = seen.has("main.s2.cleared");
+  if (unlockedStage3) return 3;
+  if (unlockedStage2) return 2;
+  return 1;
 };
 
 /** 指定区分より前の区分の主軸(=持ち越し対象の顔ぶれ) */
