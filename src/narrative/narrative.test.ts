@@ -107,7 +107,7 @@ describe("narrative block migration", () => {
   it("adapts every existing CharacterScene exactly once", () => {
     const expectedCount =
       // opening: 所有権移譲・温泉旅行・メイン各区分の全話・本命前夜5話
-      58 +
+      64 +
       fighterDefinitions.length * 7 +
       Object.values(ambientEvents).flat().length +
       Object.values(routeEvents).flatMap((scenes) => scenes ?? []).length;

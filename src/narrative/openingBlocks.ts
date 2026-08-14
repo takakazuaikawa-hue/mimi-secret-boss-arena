@@ -33,6 +33,12 @@ import mainStageTwoWeek17Source from "./content/main.s2.w17.json";
 import mainStageTwoWeek18Source from "./content/main.s2.w18.json";
 import mainStageTwoWeek19Source from "./content/main.s2.w19.json";
 import mainStageTwoWeek20Source from "./content/main.s2.w20.json";
+import mainStageTwoWeek21Source from "./content/main.s2.w21.json";
+import mainStageTwoWeek22Source from "./content/main.s2.w22.json";
+import mainStageTwoWeek23Source from "./content/main.s2.w23.json";
+import mainStageTwoWeek24Source from "./content/main.s2.w24.json";
+import mainStageTwoWeek25Source from "./content/main.s2.w25.json";
+import mainStageTwoWeek26Source from "./content/main.s2.w26.json";
 import mainStageThreeEp1Source from "./content/main.s3.ep1.json";
 import mainStageThreeEp2Source from "./content/main.s3.ep2.json";
 import mainStageThreeEp3Source from "./content/main.s3.ep3.json";
@@ -74,7 +80,7 @@ export const mainStageTwoEpisodeBlocks = [
   mainStageTwoEp5Source,
 ].map((source) => narrativeEventBlockSchema.parse(source));
 
-// 第二区分の週替わりメイン本体。添字0=週1、添字1=週2、…、添字19=週20。
+// 第二区分の週替わりメイン本体。添字0=週1、添字1=週2、…、添字25=週26。
 // エンジンの mainStoryEpisodes が添字で参照するため、途中挿入はしないこと。
 export const mainStageTwoWeeklyBlocks = [
   mainStageTwoWeek01Source,
@@ -97,6 +103,12 @@ export const mainStageTwoWeeklyBlocks = [
   mainStageTwoWeek18Source,
   mainStageTwoWeek19Source,
   mainStageTwoWeek20Source,
+  mainStageTwoWeek21Source,
+  mainStageTwoWeek22Source,
+  mainStageTwoWeek23Source,
+  mainStageTwoWeek24Source,
+  mainStageTwoWeek25Source,
+  mainStageTwoWeek26Source,
 ].map((source) => narrativeEventBlockSchema.parse(source));
 
 export const mainStageThreeEpisodeBlocks = [
