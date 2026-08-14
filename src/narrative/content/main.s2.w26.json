@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s2.w26",
+  "kind": "opening",
+  "title": "決勝、四百年の伝説と",
+  "summary": "史上最強の再演との全面対決。最後の赤線は、台帳そのものに",
+  "ownership": {
+    "arcId": "main.stage2"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "中央闘技場(決勝)",
+    "assets": [
+      {
+        "id": "main.s2.w26.asset.background.001",
+        "kind": "background",
+        "path": "/assets/arena-daylight.png",
+        "alt": "決勝当日の闘技場の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s2.w26.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s2.w26.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.w26.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w26.node.line.001",
+      "lineId": "main.s2.w26.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "決勝の朝は、約束どおり、まかないの朝ごはんから始めた。いつもの席、いつもの味噌汁。二年目のこの儀式も、もう板についた。緊張の量だけが、去年より一杯ぶん多い。味噌汁は、三杯飲んだ。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w26.node.line.002",
+      "lineId": "main.s2.w26.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "街の大通りは、二つの流れに割れていた。右へ行けば、うちの決勝。左へ行けば、世界滅亡ショー。人の流れそのものが、今日の勝負である。——右の列の先頭には、夜明け前から並んだ白ひげの剣士さん。宣言どおり、当日いちばんだった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w26.node.line.003",
+      "lineId": "main.s2.w26.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "客席は、埋まった。滅亡ショーと真っ向の同時刻で、この入りである。ガヤ氏は開口一番、実況席で泣いた。「両方は、中継できませんでしたが——わたくし、こちらを選びました!」。彼の体は一つで、その一つが、ここにいる。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w26.node.line.004",
+      "lineId": "main.s2.w26.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "相手が、入場してきた。歴代王者選抜——四百年の全盛期が、一列で歩いてくる。場内が静まり、それから、地鳴りのようなどよめきが来た。誰もが本や口伝でしか知らなかった伝説が、目の前の砂を踏んでいるのだ。監督席の向かいには、室長。声のいい会釈で言った。「良い興行に、しましょう」。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w26.node.line.005",
+      "lineId": "main.s2.w26.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "手帳の一覧を、最後にもう一度開いた。赤線、五本。六つ目の「台帳による再演の強制」には——条文が、無い。無いなら、引く場所は決まっている。**台帳そのもの**だ。史上最強の再演に、今日の新作で勝つ。記録より記憶が強いことを、満員の証人の前で見せる。それが、条文の無い悪への、赤線の引き方だ。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w26.node.line.006",
+      "lineId": "main.s2.w26.line.006",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "今日の一戦は——四百年の伝説たちへの、感謝の試合です。全力で勝って、みなさんを、思い出に返します!",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w26.node.line.007",
+      "lineId": "main.s2.w26.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "うちの三人が、砂場へ歩き出す。向こうは、四百年ぶんの全盛期。——違いは、一つだけ。あちらの時間は、記録の日で止まっている。こちらの時間は、今日も、明日へ動いている。その差を、これから見せる。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w26.node.line.008",
+      "lineId": "main.s2.w26.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "銅鑼の前の、最後の静寂。私は監督席の手すりを握った。フロア長の立ち方。腹から出す声。育つ手帳。二年ぶんの全部を、この一戦へ。——新作対再演、開演である。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "choice",
+      "id": "main.s2.w26.node.choice.001",
+      "choices": [
+        {
+          "id": "main.s2.w26.choice.001",
+          "label": "伝説たちに、深く一礼してから始める",
+          "result": "銅鑼の前に、一つだけ挟ませてもらった。うちの全員で、向かいの伝説たちへ、深く一礼。この街の四百年への、礼である。客席の年配の観客たちが、次々に立ち上がって、同じ礼をした。憧れて育った人たちの、四百年ぶんの礼。——再現体たちが、台帳に無いその光景に、ほんの一瞬、動きを止めた。記録の外から始まる試合。それが、こちらの初手である。",
+          "intent": "対戦相手ではなく、街の憧れそのものに敬意を払う",
+          "promise": "試合が敬意で始まる代わりに、感傷も一緒に背負って戦う",
+          "memory": "客席ごと立ち上がった四百年の一礼が、語り草になる",
+          "tone": "tender",
+          "effects": [{ "type": "sharedPoints", "amount": 3 }],
+          "goto": "main.s2.w26.node.end.001"
+        },
+        {
+          "id": "main.s2.w26.choice.002",
+          "label": "いつも通り、笑って始める",
+          "result": "特別なことは、しない。いつもの合図、いつもの並び、いつもの「さあ、行きましょう」。向こうは四百年の型の完成——こちらは、今日もまだ変わり続ける途中である。完成と、途中。記録と、続き。ガヤ氏が叫んだ。「両者、構えに——おや? 挑戦者の側、なんだか楽しそうだ!」。そう。それが、うちの型です。",
+          "intent": "積み重ねた日常を、そのまま武器にする",
+          "promise": "平常心で戦える代わりに、派手な立ち上がりは無い",
+          "memory": "「今年の側、なんだか楽しそうだ」の実況が残った",
+          "tone": "wild",
+          "effects": [{ "type": "sharedPoints", "amount": 3 }],
+          "goto": "main.s2.w26.node.end.001"
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "main.s2.w26.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "2周目・週26決勝(8行+選択)。相手=歴代王者選抜(台帳再現)・監督は室長(2026-08-15ユーザー指摘でミラーマッチから変更)。動員対決は人の流れの画で可視化。条文の無い六本目=台帳そのものに引く。勝敗はゲーム結果(勝利=main.s2.cleared→3周目解禁/敗北=バッドエンド「再演の夜」)。エンディング三段は実装側。",
+    "legacyGeneratedIds": false
+  }
+}

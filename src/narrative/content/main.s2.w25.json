@@ -1,0 +1,145 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s2.w25",
+  "kind": "opening",
+  "title": "前夜、記録の外の笑い方",
+  "summary": "決勝前夜。誰も観ていない砂場で、伝説の再現体が型を繰り返していた",
+  "ownership": {
+    "arcId": "main.stage2"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "夜の闘技場(前夜)",
+    "assets": [
+      {
+        "id": "main.s2.w25.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-observation-deck-night.png",
+        "alt": "決勝前夜の闘技場の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s2.w25.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s2.w25.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.w25.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w25.node.line.001",
+      "lineId": "main.s2.w25.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "決勝の前夜祭は、去年より一回り大きな祭りになった。提灯と屋台と、あちこちで聞こえる明日の話。私は宴の輪を少し外れて、手帳を開いた。明日のことを、一度ぜんぶ、並べておきたかったのだ。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w25.node.line.002",
+      "lineId": "main.s2.w25.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "書き出すと、こうなる。相手は、歴代王者選抜——四百年の優勝者たちの、全盛期の再現。監督席には、あの室長が自ら座る。同じ時刻に、街の反対側では「世界滅亡ショー」が開演し、客の取り合いになる。勝てば、最後の赤線。負ければ——それは、書かない。書かないが、覚悟だけは、しておく。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w25.node.line.003",
+      "lineId": "main.s2.w25.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "赤線は、いま五本。台本試合、常時稼働、胴元総取り、出口廃止、名入れ販売——壊すたび、街の空気が軽くなった条文たち。残るは六つ目、「台帳による再演の強制」。ただしこれには、条文が無い。無いものに、どう線を引くか。答えは明日、砂の上で出す。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w25.node.line.004",
+      "lineId": "main.s2.w25.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "手帳を閉じて、夜風に当たりに歩いた。誰もいないはずの、闘技場の砂場——に、灯りがひとつ。誰かが、型の練習をしている。見たことのない、古い、美しい型。優美で、力強くて、まるで教科書がひとりでに動いているようだった。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w25.node.line.005",
+      "lineId": "main.s2.w25.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "決勝の相手——歴代王者の再現体の、一人だった。開演を明日に控えた夜、たった一人で、誰も観ていない砂場で、型を繰り返している。いつの間にか隣に、散歩中の剣士さんが立っていた。何も言わずに、二人で、それを見た。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w25.node.line.006",
+      "lineId": "main.s2.w25.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "気づけば、声をかけていた。「こんばんは」。再現体は、こちらを向いて——四百年前の、優勝の口上を述べた。朗々と、完璧に、場違いに。……こんばんは、は、記録に無いらしい。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w25.node.line.007",
+      "lineId": "main.s2.w25.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "記録は、ぜんぶある。型も、口上も、栄光の一部始終も。でも、今夜の夜風に何を思うかは——どこにも、記録されていない。台帳の再現とは、そういうものだ。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w25.node.line.008",
+      "lineId": "main.s2.w25.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "剣士さんが、静かに言った。「ワシらの憧れたあの人はの、試合のあと、いつも屋台で笑っとった。……その笑い方は、台帳に、載っとらんのじゃな」。憧れられた人の、いちばん愛された部分は——記録の外に、あったのだ。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w25.node.line.009",
+      "lineId": "main.s2.w25.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "決めた。明日の決勝の意味が、今夜、はっきりした。明日、勝つ。勝って、再演の強制を終わらせる。四百年の伝説たちを、資産ではなく——ただの、大切な思い出に返す。**明日は、この街の憧れを、取り戻しに行く日だ。**",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w25.node.line.010",
+      "lineId": "main.s2.w25.line.010",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "宴へ戻って、明日の話をひとつだけした。「決勝の朝、全員で朝ごはんを食べましょう。まかないの、いつもの席で」。二年目も、この約束から始める。大一番の前夜に要るのは、いつも通りが続くという約束だ。",
+      "emotion": "tender"
+    },
+    {
+      "type": "effect",
+      "id": "main.s2.w25.node.effect.001",
+      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+    },
+    {
+      "type": "end",
+      "id": "main.s2.w25.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "2周目・週25(10行・選択肢なし)。手帳ブリーフ=プレイヤー向けの明日の全整理(相手=歴代王者選抜/同時刻の滅亡ショー/勝敗の意味/赤線5本の復習)。伝説の再現体との邂逅+剣士さんの「その笑い方は台帳に載っとらん」で決勝の意味を確定(街の憧れを取り戻す)。本命選択(区分2版)はシステム拡張後にこの後へ連鎖。",
+    "legacyGeneratedIds": false
+  }
+}
