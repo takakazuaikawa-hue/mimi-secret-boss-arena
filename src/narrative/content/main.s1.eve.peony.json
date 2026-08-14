@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s1.eve.peony",
+  "kind": "opening",
+  "title": "前夜、ピオニーと",
+  "summary": "決勝前夜の祭りを、本命と回る。慎重になるほど壊れる人と、壊れない夜",
+  "ownership": {
+    "arcId": "main.stage1"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 890,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "前夜祭の夜店通り",
+    "assets": [
+      {
+        "id": "main.s1.eve.peony.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-casino-cafe-night.png",
+        "alt": "前夜祭の夜の街の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s1.eve.peony.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s1.eve.peony.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.eve.peony.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s1.eve.peony.node.line.001",
+      "lineId": "main.s1.eve.peony.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "前夜祭を、ピオニーと二人で回ることになった。彼女は集合場所に、そうっと、そうっと歩いてきた。慎重に。——石畳が、一歩ごとに、みしっと沈んだ。慎重になるほど壊れるのは、チームの全員が知っている。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.eve.peony.node.line.002",
+      "lineId": "main.s1.eve.peony.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「今夜は、なにも壊さない」と、彼女は宣言した。宣言した手が、緊張で夜店の柱を掴み、柱が飴のように曲がった。屋台のおやじは動じなかった。「うちは補強済みだ。祭りだからな」。この街の祭り、備えが厚い。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.eve.peony.node.line.003",
+      "lineId": "main.s1.eve.peony.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "型抜きの屋台の前で、彼女の足が止まった。薄い砂糖菓子を、針で削る遊び。……この世でいちばん、彼女に向いていない遊びである。「やる」。目が、本気だった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.eve.peony.node.line.004",
+      "lineId": "main.s1.eve.peony.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "一枚目、粉になった。二枚目、粉になった。三枚目——彼女は息を止め、指先だけの力で、針を動かした。周りに人垣ができ、誰も声を出さない。祭りの喧騒の真ん中に、小さな静けさの島ができていた。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.eve.peony.node.line.005",
+      "lineId": "main.s1.eve.peony.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "抜けた。花の形が、欠けずに、抜けた。人垣が、わっと沸いた。彼女は型抜きの花を両手のひらに載せて、世界でいちばん壊れやすい宝物みたいに見つめていた。「……壊さなかった」。壊しませんでした。ちゃんと、見てました。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.eve.peony.node.line.006",
+      "lineId": "main.s1.eve.peony.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "帰り道、彼女は型抜きの花を私にくれた。「明日、全力を出す。全力の私は、たぶん、いろいろ壊す。……でも」。彼女は自分の手を見た。「壊さない力も、あるって、今日わかった」。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.eve.peony.node.line.007",
+      "lineId": "main.s1.eve.peony.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "型抜きの花は、手帳のいちばん厚い頁に、そっと挟んだ。押し花ならぬ、押し砂糖。明日の決勝で何が壊れても、これだけは、壊れない場所にある。",
+      "emotion": "tender"
+    },
+    {
+      "type": "effect",
+      "id": "main.s1.eve.peony.node.effect.001",
+      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+    },
+    {
+      "type": "end",
+      "id": "main.s1.eve.peony.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "本命前夜シーン(ピオニー)。登記モチーフ(慎重になるほど壊れる・寸止めの繊細)のみ使用、個別アーク進行に非依存。週25の本命選択から連鎖再生される。",
+    "legacyGeneratedIds": false
+  }
+}

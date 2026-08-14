@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s1.eve.gidonozeaas",
+  "kind": "opening",
+  "title": "前夜、ギドノゼアースと",
+  "summary": "決勝前夜の祭りを、本命と回る。パフェと、待つことの名人",
+  "ownership": {
+    "arcId": "main.stage1"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 890,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "前夜祭の夜店通り",
+    "assets": [
+      {
+        "id": "main.s1.eve.gidonozeaas.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-casino-cafe-night.png",
+        "alt": "前夜祭の夜の街の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s1.eve.gidonozeaas.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s1.eve.gidonozeaas.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.eve.gidonozeaas.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s1.eve.gidonozeaas.node.line.001",
+      "lineId": "main.s1.eve.gidonozeaas.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "前夜祭の夜店通りを、ギドノゼアースと二人で歩くことになった。誘ったのは私だ。誘っておいて、今、緊張している。魔王と縁日。語呂だけは、妙に良い。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.eve.gidonozeaas.node.line.002",
+      "lineId": "main.s1.eve.gidonozeaas.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "彼は夜店を一軒ずつ、真剣に食べ歩いた。りんご飴「87点。飴の厚みに哲学がある」。焼き菓子「72点。焼き目は満点、余熱で減点」。食レポの星が、夜店通りに落ちていく。点を付けられた店主たちが、なぜか全員誇らしげである。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.eve.gidonozeaas.node.line.003",
+      "lineId": "main.s1.eve.gidonozeaas.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "通りの外れに、小さな甘味の屋台があった。品書きの端に「祭り限定・ミニパフェ」。彼の足が、ぴたりと止まる。……この人のパフェへの想いは、チームの全員が知っている。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.eve.gidonozeaas.node.line.004",
+      "lineId": "main.s1.eve.gidonozeaas.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「並ぶぞ」。行列は、長かった。「待てます」と彼は言った。「三百年待った身だ。この行列は、まばたきのようなものだ」。まばたきの間に、私たちは決勝の話を一度もせず、くだらない話を二十個した。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.eve.gidonozeaas.node.line.005",
+      "lineId": "main.s1.eve.gidonozeaas.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ミニパフェは、二人で分けても三口ぶんしかなかった。彼は一口を長く長く味わってから、静かに言った。「98点」。過去最高点らしい。「減点の2点は?」と聞くと、彼はスプーンを置いた。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.eve.gidonozeaas.node.line.006",
+      "lineId": "main.s1.eve.gidonozeaas.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「明日が来てしまうことだ」。……祭りの終わりを惜しむ言い方で、この人はたまに、ずるい。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.eve.gidonozeaas.node.line.007",
+      "lineId": "main.s1.eve.gidonozeaas.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "帰り道、彼は言った。「監督。明日、私は全力を出す。全力の私は、たぶん、少しうるさい」。知っています。「……見ていてくれるか」。見ています。監督席から、ずっと。それが仕事で——仕事じゃなくても、見ている。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.eve.gidonozeaas.node.line.008",
+      "lineId": "main.s1.eve.gidonozeaas.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "別れ際、彼は満足そうに頷いた。「今夜は99点だ」。パフェより高い。減点の1点は聞かないでおいた。聞いたら、明日に差し支える気がしたからだ。",
+      "emotion": "tender"
+    },
+    {
+      "type": "effect",
+      "id": "main.s1.eve.gidonozeaas.node.effect.001",
+      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+    },
+    {
+      "type": "end",
+      "id": "main.s1.eve.gidonozeaas.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "本命前夜シーン(ギドノ)。登記モチーフ(食レポ採点・パフェ・「待てます」)のみ使用、個別アーク進行に非依存。週25の本命選択から連鎖再生される。",
+    "legacyGeneratedIds": false
+  }
+}

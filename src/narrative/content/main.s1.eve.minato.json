@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s1.eve.minato",
+  "kind": "opening",
+  "title": "前夜、ミナトと",
+  "summary": "決勝前夜の祭りを、本命と回る。選べない人の、選んだ一つ",
+  "ownership": {
+    "arcId": "main.stage1"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 890,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "前夜祭の夜店通り",
+    "assets": [
+      {
+        "id": "main.s1.eve.minato.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-casino-cafe-night.png",
+        "alt": "前夜祭の夜の街の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s1.eve.minato.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s1.eve.minato.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.eve.minato.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s1.eve.minato.node.line.001",
+      "lineId": "main.s1.eve.minato.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "前夜祭を、ミナトと二人で回ることになった。元勇者と縁日。彼は屋台の並びを見渡して、開口一番、真剣に言った。「……多いな。選択肢が」。始まった。この人の、いつもの戦いが。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.eve.minato.node.line.002",
+      "lineId": "main.s1.eve.minato.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "焼きそばか、串焼きか。彼は真顔で五分悩んだ。世界の命運を割り振ってきた人は、夕飯の命運を割り振れない。日替わり定食が選べないのは、チームの全員が知っている。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.eve.minato.node.line.003",
+      "lineId": "main.s1.eve.minato.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「両方にしましょう」と言ったら、彼は雷に打たれた顔をした。「その手が……あったのか」。あったんです。四百年の冒険で誰も教えてくれなかったらしい。両方は、いつだって正解である。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.eve.minato.node.line.004",
+      "lineId": "main.s1.eve.minato.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "射的の屋台で、彼は一度だけ本気の目をした。構えが、綺麗すぎた。屋台のおやじが息を呑み、通行人が足を止め、彼は——そっと銃を置いた。「大人げないので」。景品の兎は、私が外して外して、おやじの温情でもらった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.eve.minato.node.line.005",
+      "lineId": "main.s1.eve.minato.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "橋の上で、火の消えた提灯を見ながら、彼はぽつりと言った。「祭りは、終わるのがいいんだ。終わるって分かってるものは、ちゃんと大事にできる」。……役目を終えた人の言葉は、たまに、深いところに落ちる。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.eve.minato.node.line.006",
+      "lineId": "main.s1.eve.minato.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「明日の決勝は、終わっても、終わらないんだろう?」と彼は続けた。「続きがある。この職場は、そこがいい」。選べない人が、この職場を選んでくれたことを、私は今夜、初めてちゃんと嬉しいと思った。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.eve.minato.node.line.007",
+      "lineId": "main.s1.eve.minato.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "別れ際、彼は少し迷ってから(五分)、兎のぬいぐるみを指さした。「それ、名前を付けていいか」。どうぞ。「……考えておく」。決まるのは、たぶん来週だ。楽しみに待つことにする。",
+      "emotion": "tender"
+    },
+    {
+      "type": "effect",
+      "id": "main.s1.eve.minato.node.effect.001",
+      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+    },
+    {
+      "type": "end",
+      "id": "main.s1.eve.minato.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "本命前夜シーン(ミナト)。登記モチーフ(選べない・役目を終えた勇者)のみ使用、個別アーク進行に非依存。週25の本命選択から連鎖再生される。",
+    "legacyGeneratedIds": false
+  }
+}

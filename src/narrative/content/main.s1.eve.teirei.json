@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s1.eve.teirei",
+  "kind": "opening",
+  "title": "前夜、丁零と",
+  "summary": "決勝前夜の祭りを、本命と回る。曖昧語を実行する人との、正確な夜",
+  "ownership": {
+    "arcId": "main.stage1"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 890,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "前夜祭の夜店通り",
+    "assets": [
+      {
+        "id": "main.s1.eve.teirei.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-casino-cafe-night.png",
+        "alt": "前夜祭の夜の街の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s1.eve.teirei.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s1.eve.teirei.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.eve.teirei.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s1.eve.teirei.node.line.001",
+      "lineId": "main.s1.eve.teirei.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "前夜祭を、丁零と二人で回ることになった。誘い文句は気をつけて選んだ。「一緒に祭りを楽しみましょう」——曖昧語を、この人は文字どおり実行する。案の定、彼女は頷いた。「了解。楽しむを、実行する」。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.eve.teirei.node.line.002",
+      "lineId": "main.s1.eve.teirei.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "実行は、正確だった。りんご飴を「甘味・摂取」。金魚すくいを「対象・捕獲(三秒)」。屋台のくじを「確率・試行」。祭りの全項目を、上から順に、一つずつ。……途中から、周りの子どもたちが列を作って真似を始めた。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.eve.teirei.node.line.003",
+      "lineId": "main.s1.eve.teirei.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "綿あめの屋台で、事件が起きた。彼女が綿あめを持ったまま、動かなくなったのだ。「……これは、食べ物の形状ではない」。雲です。食べられる雲。彼女は雲を三度観察して、それから、とても小さくかじった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.eve.teirei.node.line.004",
+      "lineId": "main.s1.eve.teirei.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "首が、十五度、傾いた。彼女の最大級の驚きである。「消えた。口の中で。甘さだけ残して」。それが綿あめです。「……もう一口、実行する」。どうぞどうぞ。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.eve.teirei.node.line.005",
+      "lineId": "main.s1.eve.teirei.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "帰りがけ、灯りの少ない道で、彼女は言った。「本日の記録。楽しむ、を実行した。実行結果——」。そこで、少し止まった。「——成功。ただし、理由欄は、空欄のまま提出する」。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.eve.teirei.node.line.006",
+      "lineId": "main.s1.eve.teirei.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "理由欄は空欄のまま。彼女がいちばん大事なものをそう書くのを、私は知っている。空欄は、書けないのではなく、書かないのだ。私は「受理します」とだけ言った。受付の言葉が、こんな夜に役に立つ。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.eve.teirei.node.line.007",
+      "lineId": "main.s1.eve.teirei.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "別れ際、彼女は明日の決勝について一言だけ。「明日の命令を、予約する。——見ていて、と言ってほしい」。見ていてください。「了解。実行する」。……いちばん正確で、いちばん優しい返事だった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "effect",
+      "id": "main.s1.eve.teirei.node.effect.001",
+      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+    },
+    {
+      "type": "end",
+      "id": "main.s1.eve.teirei.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "本命前夜シーン(丁零)。登記モチーフ(曖昧語の文字どおり実行・理由欄空欄・十五度傾く首)のみ使用、個別アーク進行に非依存。週25の本命選択から連鎖再生される。",
+    "legacyGeneratedIds": false
+  }
+}

@@ -15,6 +15,7 @@ import { weeklyNarrativeLines } from "../data/weeklyNarratives";
 import { legacyCharacterNarrativeBlockById } from "../narrative/characterBlocks";
 import {
   legacyOpeningNarrativeBlockById,
+  mainStageOneEveBlocks,
   mainStageOneWeeklyBlocks,
   mainStageThreeEpisodeBlocks,
   mainStageTwoEpisodeBlocks,
@@ -905,6 +906,14 @@ export const resolveCurrentEvent = (
     }
   }
 
+  if (!narrativeBlock && choice?.honmeiFighterId) {
+    run.honmeiFighterId = choice.honmeiFighterId;
+    const honmeiFlag = `honmei:${choice.honmeiFighterId}`;
+    if (!run.flags.includes(honmeiFlag)) {
+      run.flags.push(honmeiFlag);
+    }
+  }
+
   const fighterName = event.fighterId
     ? fighterNameById.get(event.fighterId)
     : undefined;
@@ -1131,6 +1140,40 @@ export const maybeCreateCastIntroductionFollowup = (
   };
 };
 
+// 第4週(初心者大会の週)、加入済みが3人未満なら、既に出会った(encountered)が
+// 未加入の主軸の join場面を、一人ずつ続けて再生する。docs/MIMI_COMMON_STORY_ARC.md
+// Scene 6「大会だけなら協力する者へ頼める形」の最小実装で、join場面自体が本人との
+// 対話・選択を経るため「meetだけで自動加入」の禁止には抵触しない。
+// roster⊆recruited の前提は変えない(暫定ヘルパー概念は導入しない)。
+// 加入が3人に達するか、頼める相手がいなくなったら連鎖を止める(無限ループ防止)。
+export const maybeCreateOpeningCupRosterFollowup = (
+  source: RunState,
+): RunState => {
+  if (source.currentEvent) return source;
+  if (source.week !== 4) return source;
+  if (availableRosterIds(source).length >= 3) return source;
+  const stageNumber = source.campaignStage ?? 1;
+  const stageDefinition = campaignStages[stageNumber - 1];
+  const nextPendingId = stageDefinition?.mainFighterIds.find((id) => {
+    const state = source.fighters[id];
+    return (
+      state?.encountered &&
+      !state.recruited &&
+      !source.flags.includes(`recruitment-declined:${id}`)
+    );
+  });
+  if (!nextPendingId) return source;
+  const scene = sceneForStage(
+    nextPendingId,
+    source.fighters[nextPendingId].storyStage,
+  );
+  if (!scene) return source;
+  return {
+    ...source,
+    currentEvent: weeklyEvent(scene, "work", nextPendingId, false, source.week),
+  };
+};
+
 export const maybeCreateLiberationFollowup = (
   source: RunState,
 ): RunState => {
@@ -1185,6 +1228,73 @@ export const maybeCreateLiberationFollowup = (
         ),
       },
     ),
+  };
+};
+
+// 決勝前夜(週25)、本命を一人選ぶ。乙女ゲーム文法の「本命」選択で、
+// 選んだ相手との前夜シーン(mainStageOneEveBlocks)へ続く。一度きり(once-per-run)。
+// 現状は第一勤務週(1周目)の週25にだけ固定する。通常の週次選択(selectWeeklyEvent)
+// からは発火しない(mainStoryEpisodes に載せていないため)。
+const HONMEI_SELECT_SCENE_ID = "main.s1.honmei-select";
+const HONMEI_WEEK = 25;
+
+const buildHonmeiSelectScene = (
+  candidateIds: readonly string[],
+): CharacterScene => ({
+  id: HONMEI_SELECT_SCENE_ID,
+  title: "前夜祭、誰と回る?",
+  location: "前夜祭の夜店通り",
+  actions: ["work", "play", "rest", "search"],
+  background: "/assets/story/bg-casino-cafe-night.png",
+  lines: [
+    {
+      kind: "thought",
+      text: "決勝前夜、通りには屋台の明かりが一列に並んだ。今夜だけは監督の采配も指示書もいらない。誰と一緒にこの夜店通りを歩くか、それだけを決めればよかった。",
+    },
+  ],
+  choices: candidateIds.map((id) => {
+    const name = fighterNameById.get(id) ?? id;
+    return {
+      label: name,
+      result: `${name}を誘って、前夜祭の夜店通りへ向かった。`,
+      trust: 0,
+      ownership: 0,
+      tone: "tender" as const,
+      honmeiFighterId: id,
+    };
+  }),
+});
+
+export const maybeCreateHonmeiFollowup = (source: RunState): RunState => {
+  if (source.currentEvent) return source;
+  if ((source.campaignStage ?? 1) !== 1) return source;
+  if (source.week !== HONMEI_WEEK) return source;
+
+  if (source.honmeiFighterId) {
+    const eveBlock = mainStageOneEveBlocks.get(source.honmeiFighterId);
+    if (!eveBlock || source.eventHistory.includes(eveBlock.id)) return source;
+    return {
+      ...source,
+      currentEvent: weeklyEventFromNarrativeBlock(
+        eveBlock,
+        "work",
+        source.honmeiFighterId,
+        false,
+      ),
+    };
+  }
+
+  if (source.eventHistory.includes(HONMEI_SELECT_SCENE_ID)) return source;
+
+  const stageDefinition = campaignStages[(source.campaignStage ?? 1) - 1];
+  const candidateIds = (stageDefinition?.mainFighterIds ?? []).filter(
+    (id) => source.fighters[id]?.recruited,
+  );
+  if (candidateIds.length === 0) return source;
+
+  return {
+    ...source,
+    currentEvent: weeklyEvent(buildHonmeiSelectScene(candidateIds), "work"),
   };
 };
 

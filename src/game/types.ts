@@ -108,6 +108,8 @@ export interface SceneChoice {
   condition?: Condition;
   liberationDecision?: "release" | "retain";
   recruitmentDecision?: "join" | "defer" | "decline";
+  // 決勝前夜(週25)の本命選択でのみ使う。選ばれた人物IDを記録する。
+  honmeiFighterId?: string;
   tone?: ChoiceTone;
   intent?: string;
   promise?: string;
@@ -499,6 +501,9 @@ export interface RunState {
   // 前の勤務週区分から持ち越した仲間。出場枠は使うが、
   // 「この周で新しく出会う人数」の勘定からは外す(新しい5人と会えるように)。
   carriedIds?: string[];
+  // 決勝前夜(週25)に選んだ本命の人物ID。前夜シーンの分岐とエンディング判定が参照する。
+  // 旧セーブには存在しないため省略可(省略時は前夜選択が未実施として扱われる)。
+  honmeiFighterId?: string;
 }
 
 // 周回を跨いで持ち越す仲間の状態(クリア後の世界では仲間だけが積み重なる)

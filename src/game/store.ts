@@ -13,7 +13,9 @@ import {
   createInitialProfile,
   createRun,
   maybeCreateOpeningOwnershipFollowup,
+  maybeCreateOpeningCupRosterFollowup,
   maybeCreateCastIntroductionFollowup,
+  maybeCreateHonmeiFollowup,
   maybeCreateLiberationFollowup,
   maybeCreateMainStoryFollowup,
   nextCampaignWeek,
@@ -260,14 +262,23 @@ export const useGameStore = create<GameStore>()(
             wasLiberation || openingFollowup.currentEvent
               ? openingFollowup
               : maybeCreateLiberationFollowup(openingFollowup);
-          // メインストーリー終了直後は、橋先の個別場面へ連続再生する。
-          const afterMainStory = afterLiberation.currentEvent
+          // 決勝前夜(週25)は、解放の機会のあとに本命を選ぶ。
+          const afterHonmei = afterLiberation.currentEvent
             ? afterLiberation
-            : maybeCreateMainStoryFollowup(afterLiberation);
+            : maybeCreateHonmeiFollowup(afterLiberation);
+          // メインストーリー終了直後は、橋先の個別場面へ連続再生する。
+          const afterMainStory = afterHonmei.currentEvent
+            ? afterHonmei
+            : maybeCreateMainStoryFollowup(afterHonmei);
           // 週3のメイン話のあとは、その区分の主軸で未遭遇の全員と続けて顔合わせする。
-          const next = afterMainStory.currentEvent
+          const afterCastIntroduction = afterMainStory.currentEvent
             ? afterMainStory
             : maybeCreateCastIntroductionFollowup(afterMainStory);
+          // 週4(初心者大会)で加入が3人未満なら、出会い済みの主軸へ順に
+          // 出場だけの協力を頼む(Scene 6の最小実装)。
+          const next = afterCastIntroduction.currentEvent
+            ? afterCastIntroduction
+            : maybeCreateOpeningCupRosterFollowup(afterCastIntroduction);
           followup = Boolean(next.currentEvent);
           return { run: next };
         });

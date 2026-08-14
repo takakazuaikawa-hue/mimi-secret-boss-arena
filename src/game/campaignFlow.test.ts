@@ -4,11 +4,14 @@ import {
   unlockedCampaignStage,
 } from "../data/campaignStages";
 import {
+  availableRosterIds,
   chooseWeeklyAction,
   createRun,
   maybeCreateCastIntroductionFollowup,
+  maybeCreateHonmeiFollowup,
   maybeCreateLiberationFollowup,
   maybeCreateMainStoryFollowup,
+  maybeCreateOpeningCupRosterFollowup,
   maybeCreateOpeningOwnershipFollowup,
   nextCampaignWeek,
   resolveCurrentEvent,
@@ -99,12 +102,18 @@ const continueChain = (source: RunState): RunState => {
   const afterLiberation = opening.currentEvent
     ? opening
     : maybeCreateLiberationFollowup(opening);
-  const afterMainStory = afterLiberation.currentEvent
+  const afterHonmei = afterLiberation.currentEvent
     ? afterLiberation
-    : maybeCreateMainStoryFollowup(afterLiberation);
-  return afterMainStory.currentEvent
+    : maybeCreateHonmeiFollowup(afterLiberation);
+  const afterMainStory = afterHonmei.currentEvent
+    ? afterHonmei
+    : maybeCreateMainStoryFollowup(afterHonmei);
+  const afterCastIntroduction = afterMainStory.currentEvent
     ? afterMainStory
     : maybeCreateCastIntroductionFollowup(afterMainStory);
+  return afterCastIntroduction.currentEvent
+    ? afterCastIntroduction
+    : maybeCreateOpeningCupRosterFollowup(afterCastIntroduction);
 };
 
 // 1週ぶんを最後まで再生し、再生されたイベントIDを返す
@@ -115,7 +124,7 @@ const playWeek = (
   const played: string[] = [];
   let run = chooseWeeklyAction(source, action);
   let guard = 0;
-  while (run.currentEvent && guard < 12) {
+  while (run.currentEvent && guard < 20) {
     played.push(run.currentEvent.scene.id);
     run = resolveCurrentEvent(run, 0);
     run = continueChain(run);
@@ -224,6 +233,45 @@ describe("キャンペーン進行の実流", () => {
     }
   });
 
+  it("週4(初心者大会)終了時点で、加入済みが3人以上になる(出場者不足バグの回帰)", () => {
+    let run = createRun("normal", "flow-opening-cup-roster-stage1", {
+      campaignStage: campaignStages[0],
+    });
+    for (let week = 1; week <= 4; week += 1) {
+      const result = playWeek(run, week % 2 === 0 ? "search" : "work");
+      run = nextCampaignWeek(result.run);
+    }
+    expect(availableRosterIds(run).length).toBeGreaterThanOrEqual(3);
+  });
+
+  it("2周目・3周目は持ち越し仲間だけで週4時点の加入3人以上を満たす", () => {
+    for (const stageIndex of [1, 2] as const) {
+      const carried = campaignStages
+        .filter((candidate) => candidate.stage < campaignStages[stageIndex].stage)
+        .flatMap((candidate) => candidate.mainFighterIds)
+        .map((id) => ({
+          id,
+          trust: 70,
+          ownership: 10,
+          storyStage: 7,
+          liberated: false,
+        }));
+      let run = createRun(
+        "normal",
+        `flow-opening-cup-roster-stage${stageIndex + 1}`,
+        {
+          campaignStage: campaignStages[stageIndex],
+          carriedAllies: carried,
+        },
+      );
+      for (let week = 1; week <= 4; week += 1) {
+        const result = playWeek(run, week % 2 === 0 ? "search" : "work");
+        run = nextCampaignWeek(result.run);
+      }
+      expect(availableRosterIds(run).length).toBeGreaterThanOrEqual(3);
+    }
+  });
+
   it("2周目: 新しい主軸5人と出会える", () => {
     const carried = campaignStages[0].mainFighterIds.map((id) => ({
       id,
@@ -246,5 +294,50 @@ describe("キャンペーン進行の実流", () => {
       (id) => run.fighters[id].encountered,
     );
     expect(encountered.length).toBeGreaterThanOrEqual(3);
+  });
+});
+
+describe("決勝前夜(週25)の本命選択", () => {
+  const playToWeek25 = (seed: string) => {
+    let run = createRun("normal", seed, {
+      campaignStage: campaignStages[0],
+    });
+    const all: string[] = [];
+    for (let week = 1; week <= 25; week += 1) {
+      const result = playWeek(run, week % 2 === 0 ? "search" : "work");
+      all.push(...result.played);
+      run = nextCampaignWeek(result.run);
+    }
+    return { run, all };
+  };
+
+  it("週25で本命選択が一度だけ再生され、選んだ相手の前夜シーンへ続く", () => {
+    const { run, all } = playToWeek25("flow-honmei-stage1");
+    expect(all.filter((id) => id === "main.s1.honmei-select")).toHaveLength(
+      1,
+    );
+    expect(run.honmeiFighterId).toBeTruthy();
+    expect(run.flags).toContain(`honmei:${run.honmeiFighterId}`);
+    const eveId = `main.s1.eve.${run.honmeiFighterId}`;
+    expect(all.filter((id) => id === eveId)).toHaveLength(1);
+  });
+
+  it("翌週(週26)まで進めても、本命選択・前夜シーンは再び発火しない", () => {
+    const { run, all } = playToWeek25("flow-honmei-once-stage1");
+    const eveId = `main.s1.eve.${run.honmeiFighterId}`;
+    const result26 = playWeek(run, "work");
+    const combined = [...all, ...result26.played];
+    expect(
+      combined.filter((id) => id === "main.s1.honmei-select"),
+    ).toHaveLength(1);
+    expect(combined.filter((id) => id === eveId)).toHaveLength(1);
+  });
+
+  it("本命選択の選択肢は、その時点で加入済みの主軸に限られる", () => {
+    const { run } = playToWeek25("flow-honmei-candidates-stage1");
+    expect(
+      campaignStages[0].mainFighterIds.includes(run.honmeiFighterId ?? ""),
+    ).toBe(true);
+    expect(run.fighters[run.honmeiFighterId ?? ""]?.recruited).toBe(true);
   });
 });

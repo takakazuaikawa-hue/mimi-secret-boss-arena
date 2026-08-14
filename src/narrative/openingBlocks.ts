@@ -1,4 +1,9 @@
-﻿import mainStageOneWeek01Source from "./content/main.s1.w01.json";
+﻿import mainStageOneEveGidonoSource from "./content/main.s1.eve.gidonozeaas.json";
+import mainStageOneEveMinatoSource from "./content/main.s1.eve.minato.json";
+import mainStageOneEveTeireiSource from "./content/main.s1.eve.teirei.json";
+import mainStageOneEvePeonySource from "./content/main.s1.eve.peony.json";
+import mainStageOneEveUshiroSource from "./content/main.s1.eve.ushiro.json";
+import mainStageOneWeek01Source from "./content/main.s1.w01.json";
 import mainStageOneWeek02Source from "./content/main.s1.w02.json";
 import mainStageOneWeek03Source from "./content/main.s1.w03.json";
 import mainStageOneWeek06Source from "./content/main.s1.w06.json";
@@ -88,6 +93,20 @@ export const mainStageOneWeeklyBlocks = [
   mainStageOneWeek07Source,
 ].map((source) => narrativeEventBlockSchema.parse(source));
 
+// 本命の前夜シーン(週25の本命選択から連鎖再生)。人物IDで引く。
+export const mainStageOneEveBlocks = new Map(
+  [
+    ["gidonozeaas", mainStageOneEveGidonoSource],
+    ["minato", mainStageOneEveMinatoSource],
+    ["teirei", mainStageOneEveTeireiSource],
+    ["peony", mainStageOneEvePeonySource],
+    ["ushiro", mainStageOneEveUshiroSource],
+  ].map(([fighterId, source]) => [
+    fighterId as string,
+    narrativeEventBlockSchema.parse(source),
+  ]),
+);
+
 export const openingOwnershipBlock = narrativeEventBlockSchema.parse(
   openingOwnershipSource,
 );
@@ -100,6 +119,7 @@ export const legacyOpeningNarrativeBlocks: NarrativeEventBlock[] = [
   openingOwnershipBlock,
   openingHotSpringBlock,
   ...mainStageOneWeeklyBlocks,
+  ...mainStageOneEveBlocks.values(),
   ...mainStageTwoEpisodeBlocks,
   ...mainStageThreeEpisodeBlocks,
 ];

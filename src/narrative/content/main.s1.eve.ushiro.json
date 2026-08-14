@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s1.eve.ushiro",
+  "kind": "opening",
+  "title": "前夜、うしろと",
+  "summary": "決勝前夜の祭りを、本命と回る。背後の人との、三秒の正面",
+  "ownership": {
+    "arcId": "main.stage1"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 890,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "前夜祭の夜店通り",
+    "assets": [
+      {
+        "id": "main.s1.eve.ushiro.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-casino-cafe-night.png",
+        "alt": "前夜祭の夜の街の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s1.eve.ushiro.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s1.eve.ushiro.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.eve.ushiro.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s1.eve.ushiro.node.line.001",
+      "lineId": "main.s1.eve.ushiro.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "前夜祭を、うしろと回ることになった。「二人で」と言うべきか、少し迷う。彼はいつも、私の背後にいる。振り向いても、背後にいる。並んで歩くという概念に、今夜、初めて挑戦してもらう。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.eve.ushiro.node.line.002",
+      "lineId": "main.s1.eve.ushiro.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "挑戦は、三歩で終わった。気づけば背後にいる。「並ぶのは、落ち着かない」と、うしろの声が言う。分かりました。では今夜は、背中で会話する祭りにしましょう。私が前、あなたがうしろ。定位置で行く。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.eve.ushiro.node.line.003",
+      "lineId": "main.s1.eve.ushiro.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "定位置は、思ったより快適だった。りんご飴を買うと、背後から手が伸びて受け取る。人混みでは、背中がぶつからない。夜店の写真屋の前を通ったら、店主が叫んだ。「お客さん、うしろの人も写ってるよ! 全部の写真に!」。知ってます。百二十七枚、全部に。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.eve.ushiro.node.line.004",
+      "lineId": "main.s1.eve.ushiro.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "花火の残りが、二、三発だけ上がる夜だった。光が開くたび、石畳に影が伸びる。私の影の隣に、もう一つの影。……影は、並んでいた。本人は背後でも、影は隣に並ぶらしい。ずるい並び方である。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.eve.ushiro.node.line.005",
+      "lineId": "main.s1.eve.ushiro.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "帰り道の橋の上で、うしろの声が言った。「明日、決勝だ」。はい。「おれは、背中を守るのが仕事だ。……だから、監督は、前だけ見ていればいい」。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.eve.ushiro.node.line.006",
+      "lineId": "main.s1.eve.ushiro.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "振り向かずに、ありがとうございますと言った。返事の代わりに、提灯の灯りがひとつ、ふっと揺れた。照れているのだと思う。背後の気配で分かるくらいには、私もこの定位置に慣れた。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.eve.ushiro.node.line.007",
+      "lineId": "main.s1.eve.ushiro.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "別れ際——三秒だけ、彼は正面に立った。三秒。まっすぐ目が合って、「明日、勝とう」とだけ言って、また背後に戻った。三秒の正面は、この人の最大級だ。私は今夜の三秒を、手帳に書かずに、覚えておくことにした。",
+      "emotion": "tender"
+    },
+    {
+      "type": "effect",
+      "id": "main.s1.eve.ushiro.node.effect.001",
+      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+    },
+    {
+      "type": "end",
+      "id": "main.s1.eve.ushiro.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "本命前夜シーン(うしろ)。登記モチーフ(背後への写り込み・写真127・三秒だけの正面)のみ使用、個別アーク進行に非依存。週25の本命選択から連鎖再生される。",
+    "legacyGeneratedIds": false
+  }
+}
