@@ -17,7 +17,7 @@ import {
   legacyOpeningNarrativeBlockById,
   mainStageOneEveBlocks,
   mainStageOneWeeklyBlocks,
-  mainStageThreeEpisodeBlocks,
+  mainStageThreeWeeklyBlocks,
   mainStageTwoWeeklyBlocks,
   openingHotSpringBlock,
   openingOwnershipBlock,
@@ -1107,11 +1107,13 @@ const mainStoryEpisodes: ReadonlyArray<{
   { stage: 2, week: 25, block: mainStageTwoWeeklyBlocks[24] },
   { stage: 2, week: 26, block: mainStageTwoWeeklyBlocks[25] },
   // 第三区分「祭りの準備週間」
-  { stage: 3, week: 1, block: mainStageThreeEpisodeBlocks[0] },
-  { stage: 3, week: 2, block: mainStageThreeEpisodeBlocks[1] },
-  { stage: 3, week: 3, block: mainStageThreeEpisodeBlocks[2] },
-  { stage: 3, week: 6, block: mainStageThreeEpisodeBlocks[3] },
-  { stage: 3, week: 7, block: mainStageThreeEpisodeBlocks[4] },
+  { stage: 3, week: 1, block: mainStageThreeWeeklyBlocks[0] },
+  { stage: 3, week: 2, block: mainStageThreeWeeklyBlocks[1] },
+  { stage: 3, week: 3, block: mainStageThreeWeeklyBlocks[2] },
+  { stage: 3, week: 4, block: mainStageThreeWeeklyBlocks[3] },
+  { stage: 3, week: 5, block: mainStageThreeWeeklyBlocks[4] },
+  { stage: 3, week: 6, block: mainStageThreeWeeklyBlocks[5] },
+  { stage: 3, week: 7, block: mainStageThreeWeeklyBlocks[6] },
 ];
 
 // メインストーリーの直後に、その週の人物・世界の場面を続けて再生する(二段再生)。

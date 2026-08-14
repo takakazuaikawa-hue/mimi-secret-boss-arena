@@ -39,11 +39,13 @@ import mainStageTwoWeek23Source from "./content/main.s2.w23.json";
 import mainStageTwoWeek24Source from "./content/main.s2.w24.json";
 import mainStageTwoWeek25Source from "./content/main.s2.w25.json";
 import mainStageTwoWeek26Source from "./content/main.s2.w26.json";
-import mainStageThreeEp1Source from "./content/main.s3.ep1.json";
-import mainStageThreeEp2Source from "./content/main.s3.ep2.json";
-import mainStageThreeEp3Source from "./content/main.s3.ep3.json";
-import mainStageThreeEp4Source from "./content/main.s3.ep4.json";
-import mainStageThreeEp5Source from "./content/main.s3.ep5.json";
+import mainStageThreeWeek01Source from "./content/main.s3.w01.json";
+import mainStageThreeWeek02Source from "./content/main.s3.w02.json";
+import mainStageThreeWeek03Source from "./content/main.s3.w03.json";
+import mainStageThreeWeek04Source from "./content/main.s3.w04.json";
+import mainStageThreeWeek05Source from "./content/main.s3.w05.json";
+import mainStageThreeWeek06Source from "./content/main.s3.w06.json";
+import mainStageThreeWeek07Source from "./content/main.s3.w07.json";
 import mainStageOneWeek04Source from "./content/main.s1.w04.json";
 import mainStageOneWeek05Source from "./content/main.s1.w05.json";
 import mainStageOneWeek08Source from "./content/main.s1.w08.json";
@@ -111,12 +113,16 @@ export const mainStageTwoWeeklyBlocks = [
   mainStageTwoWeek26Source,
 ].map((source) => narrativeEventBlockSchema.parse(source));
 
-export const mainStageThreeEpisodeBlocks = [
-  mainStageThreeEp1Source,
-  mainStageThreeEp2Source,
-  mainStageThreeEp3Source,
-  mainStageThreeEp4Source,
-  mainStageThreeEp5Source,
+// 第三区分の週替わりメイン本体。添字0=週1、添字1=週2、…(週8以降は執筆済み次第追加)。
+// エンジンの mainStoryEpisodes が添字で参照するため、途中挿入はしないこと。
+export const mainStageThreeWeeklyBlocks = [
+  mainStageThreeWeek01Source,
+  mainStageThreeWeek02Source,
+  mainStageThreeWeek03Source,
+  mainStageThreeWeek04Source,
+  mainStageThreeWeek05Source,
+  mainStageThreeWeek06Source,
+  mainStageThreeWeek07Source,
 ].map((source) => narrativeEventBlockSchema.parse(source));
 
 // 週替わりメインの本体。末尾5つ(添字21〜25)は週1・2・3・6・7ぶん。
@@ -178,7 +184,7 @@ export const legacyOpeningNarrativeBlocks: NarrativeEventBlock[] = [
   ...mainStageOneWeeklyBlocks,
   ...mainStageOneEveBlocks.values(),
   ...mainStageTwoWeeklyBlocks,
-  ...mainStageThreeEpisodeBlocks,
+  ...mainStageThreeWeeklyBlocks,
 ];
 
 export const legacyOpeningNarrativeBlockById = new Map(

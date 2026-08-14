@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s3.w04",
+  "kind": "opening",
+  "title": "三度目の招待状",
+  "summary": "温泉と同じ封筒で、必要悪委員会の名前が届く",
+  "ownership": {
+    "arcId": "main.stage3"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "従業員食堂(まかない)",
+    "assets": [
+      {
+        "id": "main.s3.w04.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-employee-cafeteria-day-v1.png",
+        "alt": "従業員食堂の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s3.w04.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s3.w04.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.w04.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w04.node.line.001",
+      "lineId": "main.s3.w04.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "まかないは、今日も揚げ物の音がしている。盆の隅に、郵便の束。一番上の封筒は、開けなくても分かる。三年連続三回目——初心者大会のご招待である。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w04.node.line.002",
+      "lineId": "main.s3.w04.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "今日の用は、出場の返事を書くこと。三度目ともなれば、悩まない。うちには今年、初陣の子たちがいる。初心者大会は、初心者のための大会。順当である。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w04.node.line.003",
+      "lineId": "main.s3.w04.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "封を切ると、様式まで去年と同じだった。賞品の欄も同じ。「優勝: 温泉旅行(一泊)」。仲間が遠くから叫ぶ。「今年も、卵のやつ!」。行く前から、旅程が決まっていく。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w04.node.line.004",
+      "lineId": "main.s3.w04.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "二通目も、同じ形の封筒だった。また招待かと開いたら、違う。お役所の紙——魔法ギルドからの、照会の回答だ。重大なお知らせを、温泉と同じ封筒で送らないでほしい。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w04.node.line.005",
+      "lineId": "main.s3.w04.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "回答は、一行だけだった。「当該登録は、必要悪委員会の裁定に基づく」。……必要悪。悪と名乗る委員会が、あるのか。名乗った上で、必要だと言い張る役所が。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w04.node.line.006",
+      "lineId": "main.s3.w04.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ギルドは、判を押しただけ。つまり、書かせた手は、さらに上にいる。一枚の紙に、ずいぶん大勢だ。逆に言えば——それだけの手間を掛けて、私を「持ち物」にした理由が、どこかにある。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w04.node.line.007",
+      "lineId": "main.s3.w04.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "回答の末尾に、続きがあった。「裁定書の閲覧を希望する場合、様式に従い、腕前の確認を行う」。書類の不備を、砂の上で確かめる役所。この世界のお役所仕事は、私の管轄と相性が良すぎる。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w04.node.line.008",
+      "lineId": "main.s3.w04.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "笑ってから、背筋が伸びた。返事を二通、続けて書く。一通は大会へ——「出ます」。一通はギルドへ——「確認、受けて立ちます」。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w04.node.line.009",
+      "lineId": "main.s3.w04.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "投函の帰り、大会告知の前で、初陣の子たちの名前を探した。載っている。ちゃんと、街の掲示に載っている。私の名前より、確かな字で。",
+      "emotion": "tender"
+    },
+    {
+      "type": "choice",
+      "id": "main.s3.w04.node.choice.001",
+      "choices": [
+        {
+          "id": "main.s3.w04.choice.001",
+          "label": "今週は、初陣の支度に付きっきりになる",
+          "result": "委員会の紙は、手帳の硬い頁へ一週間しまった。練習場で、初陣の子たちの型を最初から見る。三度目の初心者大会で、初めて分かることがある。初日の砂は、誰にとっても一度きりだ。まかないのおばちゃんが弁当を余分に包んだ。「初陣の週は、うちも三度目だからね」。",
+          "intent": "新しい一歩を、ちゃんと見届ける",
+          "promise": "チームの足元が固まる代わりに、委員会調べは一週止まる",
+          "memory": "初陣週の、余分に包まれた弁当",
+          "tone": "pragmatic",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "goto": "main.s3.w04.node.end.001"
+        },
+        {
+          "id": "main.s3.w04.choice.002",
+          "label": "大会と委員会調べ、二正面で行く",
+          "result": "昼は練習場、夜は資料の山。ノノさんが夜番に付き合って、必要悪委員会の載っている古い名鑑を探してくれた。見つかったのは名前だけ。所在地の欄は「非公開」。「非公開って、悪の書き方ですよ」「名乗ってますからね、悪と」。夜食の湯気の向こうで、調べは一歩だけ進んだ。",
+          "intent": "攻め手を止めない",
+          "promise": "調べが進む代わりに、寝不足の一週間になる",
+          "memory": "名鑑の「所在地: 非公開」の一行",
+          "tone": "heroic",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "goto": "main.s3.w04.node.end.001"
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "main.s3.w04.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "3周目・週4(大会週。招待状の様式美三度目+敵の層が一枚開く)。Q=この街を引き受けるか / value=名前 -→0(反撃の手掛かり) / turn=行6(判の上の手=手間を掛けた理由がある) / hook=次に会う理由(中)/post-hook / try=はい、しかし / game=同じ封筒(招待→温泉→お役所の重大事) / carry=ギルドの判(週2) / open=腕前の確認とは何か(答え=週8審理試合) / newterm=必要悪委員会(裁定の出所として同ノードで機能提示)",
+    "legacyGeneratedIds": false
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s3.w01",
+  "kind": "opening",
+  "title": "三度目の、第一週",
+  "summary": "倒したはずの垂れ幕が、また掛かっている朝",
+  "ownership": {
+    "arcId": "main.stage3"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "闘技場 正面受付",
+    "assets": [
+      {
+        "id": "main.s3.w01.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-arena-reception.png",
+        "alt": "闘技場の正面受付の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s3.w01.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s3.w01.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.w01.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w01.node.line.001",
+      "lineId": "main.s3.w01.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "朝の受付は、去年と同じ洗剤の匂いがした。鞄の中で、手帳がいつもより重い。二年分の暦が挟まっているからだ。開くと、新しい頁に新しい暦——「記録外勤務週・第一週」。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w01.node.line.002",
+      "lineId": "main.s3.w01.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "今日の用は、三年目の初日を始める、それだけだ。会社は倒した。ルールは全部壊した。だから今年は、静かな一年のはずだった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w01.node.line.003",
+      "lineId": "main.s3.w01.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "受付の窓を開けて、手が止まった。正面に、あの垂れ幕が掛かっている。「アルデバラン社・再演企画室」。倒しましたよね? 私、確かに、勝ちましたよね?",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w01.node.line.004",
+      "lineId": "main.s3.w01.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "規定集を確かめた。赤線が、一本も無い。六本引いたはずの線が、紙ごと新品に戻っている。二回優勝した監督ですよ、私。宛先の分からない抗議を、とりあえず今日の判に込めて押した。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w01.node.line.005",
+      "lineId": "main.s3.w01.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ただ、今年の巻き戻しは、あちこちほつれていた。掲示板の初日の顔ぶれは、一枚足りない。窓口では、挨拶の相手を取り違えるお客さんが続く。台本どおりに回っていない。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w01.node.line.006",
+      "lineId": "main.s3.w01.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "まかないで、仲間が首をかしげた。「献立は一年目に戻っとる。だが隣の常連は、三年目の注文をした」。世界は巻き戻っている。しかし、巻き戻りきれない人が、年々増えている。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w01.node.line.007",
+      "lineId": "main.s3.w01.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "極めつけは、垂れ幕の会社だった。窓口の社員さんが、まっさらの顔で笑う。「新規のご契約ですか」。一年争った相手が、私を知らない。——会社も、覚えていない側。倒した相手は、そこに、いなかった。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w01.node.line.008",
+      "lineId": "main.s3.w01.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "腹の底が一度冷えて、それから、可笑しくなってきた。息を整えて、窓口に言い直す。「いいえ。——古いご縁の者です」。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w01.node.line.009",
+      "lineId": "main.s3.w01.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "帰りぎわ、経理の戸口で足が止まった。誰の指図でもなく、口が動く。「私の登録票を、見せてください」。",
+      "emotion": "tension"
+    },
+    {
+      "type": "choice",
+      "id": "main.s3.w01.node.choice.001",
+      "choices": [
+        {
+          "id": "main.s3.w01.choice.001",
+          "label": "登録票の開示を、その場で申し込む",
+          "result": "言った勢いのまま、申込の紙をもらった。窓口の人は新品の顔なのに、手続きだけはよどみない。「開示は、書庫でのお立ち会いになります」。書き終えた指は少し震えていたが、字は、まっすぐ書けた。後ろでノノさんが小さく頷く。「今年は、初日から攻めるんですね」。",
+          "intent": "自分の謎から、目を逸らさない",
+          "promise": "真相へ最短で近づく代わりに、静かな一年は初日で終わる",
+          "memory": "開示申込の控えが、手帳の硬い頁に挟まった",
+          "tone": "heroic",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "goto": "main.s3.w01.node.end.001"
+        },
+        {
+          "id": "main.s3.w01.choice.002",
+          "label": "先に、街と仲間の無事を一回りする",
+          "result": "申込は明日にして、街を一周した。湯屋も賭場も屋台も、初日の顔で開いている。ほつれの数を、手帳に付けて回った。挨拶違い三件、足りない貼り紙二枚。数えるほどに、確かになる。世界は、巻き戻しをしくじり始めている。仲間が笑った。「監督、休みの日の目じゃないですよ、それ」。",
+          "intent": "足元を確かめてから、謎に向かう",
+          "promise": "ほつれの見取り図が手に入る代わりに、開示は一日遅れる",
+          "memory": "ほつれの勘定が、手帳の隅に付いた",
+          "tone": "pragmatic",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "goto": "main.s3.w01.node.end.001"
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "main.s3.w01.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "3周目・週1(愕然二段+ほつれの増分シグナル)。Q=この街を引き受けるか / value=自由 +→- / turn=行6-7(再演のほつれ→会社も登場人物) / hook=決断の直前(小)/climactic / try=いいえ、しかも / game=巻き戻しのほつれ(貼り紙→挨拶違い→会社が私を知らない) / carry=手帳(二年分の暦)・規定集 / open=誰が世界を巻き戻すのか(答え=週19/26)・登録票に何が書いてあるか(答え=週2) / newterm=記録外勤務週(暦の名として)",
+    "legacyGeneratedIds": false
+  }
+}

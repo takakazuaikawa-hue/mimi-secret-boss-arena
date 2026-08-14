@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s3.w06",
+  "kind": "opening",
+  "title": "空欄の判",
+  "summary": "ギルドの出張窓口。四百年ものの受付簿に、押されていない判があった",
+  "ownership": {
+    "arcId": "main.stage3"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "闘技場 正面受付(ギルド出張窓口)",
+    "assets": [
+      {
+        "id": "main.s3.w06.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-arena-reception.png",
+        "alt": "闘技場の正面受付の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s3.w06.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s3.w06.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.w06.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w06.node.line.001",
+      "lineId": "main.s3.w06.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "週の初め、受付の脇に、小さな机がひとつ増えていた。朱肉の匂いがする。立て札に「魔法ギルド出張窓口」。——受けて立つと返事をしたら、向こうから来た。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w06.node.line.002",
+      "lineId": "main.s3.w06.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "今日の用は、閲覧の申請一枚と、腕前の確認とやらの段取りだ。役所仕事なら、こちらは書類の街で三年鍛えた監督である。負ける気はしない。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w06.node.line.003",
+      "lineId": "main.s3.w06.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "係の人は、抱えるほど厚い受付簿を机に据えた。「様式八十八の三。指の腹で、三箇所なぞってください」。なぞると、紙が私の名前を覚えた。便利だが、その魔法は他のことに使ってほしい。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w06.node.line.004",
+      "lineId": "main.s3.w06.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「では、控えと照合します」。係の人が簿面を繰り、私の登録の頁を出す。判、判、判。ギルドの仕事は判の列で出来ている。「うちの判、委員会の判、それから、女神さまの承認の判が——」。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w06.node.line.005",
+      "lineId": "main.s3.w06.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "指が、止まった。「……あれ」。係の人は頁を近づけ、遠ざけ、裏まで返した。承認の欄が、白い。四百年ものの受付簿の、私の頁の、そこだけ判が無い。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w06.node.line.006",
+      "lineId": "main.s3.w06.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "判を押しただけの役所に、押していない判があった。つまりこの登録は、役所の目で見ても、揃っていない。私を持ち物にした紙は——紙としても、欠けているのだ。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w06.node.line.007",
+      "lineId": "main.s3.w06.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "係の人は、みるみる青くなった。「これは、上に聞かないと」。机の上が大急ぎで畳まれていく。「窓口は、いったん閉めます!」。立て札が裏返り、「調査中」になった。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w06.node.line.008",
+      "lineId": "main.s3.w06.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "待って、と言う間もない。伸ばした手は、畳まれた机の風だけ掴んだ。朱肉の匂いが、廊下の向こうへ遠ざかっていく。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w06.node.line.009",
+      "lineId": "main.s3.w06.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "受付の窓から、ノノさんがおそるおそる聞いた。「……進んだんですか? 今の」。分からない。進んだ気もするし、扉が一枚、増えた気もする。",
+      "emotion": "tension"
+    },
+    {
+      "type": "choice",
+      "id": "main.s3.w06.node.choice.001",
+      "choices": [
+        {
+          "id": "main.s3.w06.choice.001",
+          "label": "調査中の札を信じて、正式の返事を待つ",
+          "result": "攻めどきに見えても、崩すのは向こうの様式でだ。窓口の跡に、伝言板を一枚立てた。「再開の折は、ご一報を。監督」。翌朝、伝言板の裏に小さな返事が挟まっていた。「必ず。——係」。役所の中に、約束を守りたい人がいる。それが分かっただけで、待つ甲斐はある。",
+          "intent": "相手の土俵の礼儀で勝つ",
+          "promise": "役所の中に味方の芽が残る代わりに、真相は向こうの都合で遅れる",
+          "memory": "伝言板の裏の「必ず。——係」",
+          "tone": "pragmatic",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "goto": "main.s3.w06.node.end.001"
+        },
+        {
+          "id": "main.s3.w06.choice.002",
+          "label": "待たない。記録室の司書に相談する",
+          "result": "扉が閉まったら、別の扉だ。記録室に駆け込むと、司書さんは話の途中で棚に向かった。「承認の判の欠けた登録……前例を探しましょう。四百年ぶんありますけど」。梯子が軋み、古い紙の匂いが降ってくる。夜までかかって、前例は見つからなかった。無いことが、一つの答えだった。",
+          "intent": "閉まった扉の隣を探す",
+          "promise": "前例の無さという武器を得る代わりに、ギルドの心証は少し硬くなる",
+          "memory": "司書さんの「前例、無いですね」の一言",
+          "tone": "heroic",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "goto": "main.s3.w06.node.end.001"
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "main.s3.w06.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "3周目・週6(幕1末の大: 手続きの瑕疵発見→窓口封鎖)。Q=この街を引き受けるか / value=正当性 -→+(紙が欠けている) / turn=行6(役所の目で見ても揃っていない登録) / hook=保留された返事(大)/climactic / try=いいえ、しかも / game=判の列のお役所魔法(なぞる紙→判の列→列が欠ける) / carry=「受けて立ちます」の返事(週4) / open=空欄の判の顛末(答え=週7写しの漏洩→週24裁判) / newterm=女神の承認(判の列の一つとして同ノードで機能提示)",
+    "legacyGeneratedIds": false
+  }
+}

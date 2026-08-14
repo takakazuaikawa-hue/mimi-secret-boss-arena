@@ -1,0 +1,137 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s3.w07",
+  "kind": "opening",
+  "title": "落とし物の写し",
+  "summary": "差出人不明の拾得物。裁定書の写しと、あの検印",
+  "ownership": {
+    "arcId": "main.stage3"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "遺失物窓口",
+    "assets": [
+      {
+        "id": "main.s3.w07.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-lost-property-counter-v1.png",
+        "alt": "遺失物窓口の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s3.w07.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s3.w07.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.w07.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w07.node.line.001",
+      "lineId": "main.s3.w07.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "遺失物の窓口から、呼び出しが来た。「お心当たりの品が届いています」。心当たりは、無い。無いが、この街の呼び出しを断ると、後で面白いことになるのは、三年で学んでいる。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w07.node.line.002",
+      "lineId": "main.s3.w07.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "窓口のおじさんが、包みをひとつ出した。「拾得物。差出人、不明」。結び目から、うっすら朱肉の匂いがした。……差出人、だいたい分かってしまうのですが。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w07.node.line.003",
+      "lineId": "main.s3.w07.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "中身は、紙の束の写しだった。表題、「裁定書(写)」。頭に、必要悪委員会の名前。閉まった窓口の向こうの誰かが、規則の隙間を通して、これを「落として」くれたのだ。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w07.node.line.004",
+      "lineId": "main.s3.w07.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "読んだ。理由の欄に、こうある。「女神不在期における、無主物の暫定管理のため」。……無主物。物。私、荷物としてこの世界に受け付けられていたらしい。せめて壊れ物の扱いを希望する。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w07.node.line.005",
+      "lineId": "main.s3.w07.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "委員会の言い分は、筋だけは通っていた。承認する女神さまが、留守だった。誰かが預からないと、来た人が迷子になる。だから預かった——四百年前から、そういう決まりで回してきたと。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w07.node.line.006",
+      "lineId": "main.s3.w07.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "預かる、が、いつから「所有する」になったのだろう。迷子札のつもりの紙が、人を三年、持ち物にしていた。決まりは古びると、意味だけが先に死ぬ。赤線を六本引いた私は、それを知っている。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w07.node.line.007",
+      "lineId": "main.s3.w07.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "最後の頁の、検印の欄で手が止まった。古い判の横に、新しい判がひとつ。「回収対象: ミミ様(無形)」。——いつか、どこかで見た言葉だ。あのときは、笑い話だった。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w07.node.line.008",
+      "lineId": "main.s3.w07.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "指先が冷えた。それでも、写しは丁寧に畳んだ。手帳のいちばん硬い頁が、また一枚、厚くなる。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w07.node.line.009",
+      "lineId": "main.s3.w07.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "おじさんが帳面を差し出した。「受け取りの署名を」。ペンを持って、一拍、止まる。私の名前は、いま、誰のものとして書けばいいのだろう。",
+      "emotion": "tension"
+    },
+    {
+      "type": "effect",
+      "id": "main.s3.w07.node.effect.001",
+      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+    },
+    {
+      "type": "end",
+      "id": "main.s3.w07.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "3周目・週7(裁定書の全文=敵の理の初提示+1周目w25「緊急回収リスト: ミミ様(無形)」の意味反転の入口。意味はまだ伏せる)。Q=この街を引き受けるか / value=正当性 +→-(回収の予兆) / turn=行6(預かるが所有に化けた=決まりの意味の死) / hook=閃き(中)/post-point / try=はい、しかし / game=お役所の隙間(拾得物→差出人不明→朱肉の匂い) / carry=閉まった窓口・朱肉の匂い(週6) / open=回収対象(無形)とは何か(答え=週10予告→週20執行) / newterm=なし(裁定書・委員会は既出。無主物は一般語として同ノードで作用提示)",
+    "legacyGeneratedIds": false
+  }
+}

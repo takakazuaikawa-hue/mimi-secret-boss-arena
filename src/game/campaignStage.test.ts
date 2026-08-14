@@ -133,7 +133,7 @@ describe("三段階キャンペーン構造", () => {
       campaignStage: campaignStages[2],
     });
     const s3main = chooseWeeklyAction(stage3, "work");
-    expect(s3main.currentEvent?.scene.id).toBe("main.s3.ep1");
+    expect(s3main.currentEvent?.scene.id).toBe("main.s3.w01");
     const s3resolved = {
       ...resolveCurrentEvent(s3main, 0),
       lastEventOutcome: undefined,

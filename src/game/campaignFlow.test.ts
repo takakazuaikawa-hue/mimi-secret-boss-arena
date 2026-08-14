@@ -25,7 +25,7 @@ import type { RunState } from "./types";
 import { legacyCharacterNarrativeBlockById } from "../narrative/characterBlocks";
 import {
   mainStageOneWeeklyBlocks,
-  mainStageThreeEpisodeBlocks,
+  mainStageThreeWeeklyBlocks,
   mainStageTwoWeeklyBlocks,
 } from "../narrative/openingBlocks";
 import { asEventId } from "../narrative/schema";
@@ -93,11 +93,11 @@ const mainEpisodeBridges = [
   bridge("s2.w03", mainStageTwoWeeklyBlocks[2], "shahar"),
   bridge("s2.w04", mainStageTwoWeeklyBlocks[3], "sazanami"),
   bridge("s2.w05", mainStageTwoWeeklyBlocks[4], "cassim-bell"),
-  bridge("s3.ep1", mainStageThreeEpisodeBlocks[0], "wolf-nine"),
-  bridge("s3.ep2", mainStageThreeEpisodeBlocks[1], "marian"),
-  bridge("s3.ep3", mainStageThreeEpisodeBlocks[2], "room-seventeen"),
-  bridge("s3.ep4", mainStageThreeEpisodeBlocks[3], "rinne"),
-  bridge("s3.ep5", mainStageThreeEpisodeBlocks[4], "mumyo"),
+  bridge("s3.w01", mainStageThreeWeeklyBlocks[0], "wolf-nine"),
+  bridge("s3.w02", mainStageThreeWeeklyBlocks[1], "marian"),
+  bridge("s3.w03", mainStageThreeWeeklyBlocks[2], "room-seventeen"),
+  bridge("s3.w04", mainStageThreeWeeklyBlocks[3], "rinne"),
+  bridge("s3.w05", mainStageThreeWeeklyBlocks[4], "mumyo"),
 ];
 
 // store.continueEvent と同じ followup 連鎖を再現する

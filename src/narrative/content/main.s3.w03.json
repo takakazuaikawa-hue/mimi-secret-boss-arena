@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s3.w03",
+  "kind": "opening",
+  "title": "三度目の顔合わせ",
+  "summary": "今年の五人の発表。名簿の所有者欄だけ、巻き戻っていない",
+  "ownership": {
+    "arcId": "main.stage3"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "噴水広場(顔ぶれ発表)",
+    "assets": [
+      {
+        "id": "main.s3.w03.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-fountain-plaza-day-v1.png",
+        "alt": "噴水広場の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s3.w03.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s3.w03.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.w03.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w03.node.line.001",
+      "lineId": "main.s3.w03.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "噴水広場は、水の音と、綿飴の焦げる匂い。今年の顔ぶれ発表の日は、もう街の年中行事だ。歩くたび、手帳の硬い頁で、先日の写しが、かさりと鳴る。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w03.node.line.002",
+      "lineId": "main.s3.w03.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "今日の用は、今年の五人の顔ぶれ。去年、砂の上で本気をぶつけ合った相手たちだ。対戦相手としてなら、癖まで知っている。人としては——まだ、何も知らない。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w03.node.line.003",
+      "lineId": "main.s3.w03.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "発表の前から、仕事を振られた。「監督! 五人の紹介文、一言ずつ!」。三年目ともなると、顔合わせの仕切りは私の係になっているのだ。いつ決まったのかは、誰も知らない。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w03.node.line.004",
+      "lineId": "main.s3.w03.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "常連たちは、今年も予想合戦だった。「監督が最初に口説くのは、どの子か」。倍率まで付いている。胴元さん、それは賭けにしていい題材ではない。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w03.node.line.005",
+      "lineId": "main.s3.w03.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "壇に五人が並び、名簿が貼り出された。どよめきが、半拍遅れて来る。所有者の欄が、五人とも「本人」。規定集の赤線は全部消えたのに、この欄だけ、去年のままだ。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w03.node.line.006",
+      "lineId": "main.s3.w03.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "巻き戻る世界と、巻き戻らない五人。——去年の優勝は、消されていなかった。台帳にも、上書きできない場所があるのだ。私の判より、よほど強い判が、五人の胸の内に押してある。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w03.node.line.007",
+      "lineId": "main.s3.w03.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "締めの挨拶で、狼の九番がマイクを短く握った。「今年の九戦目は、全部、結果が分からない」。客席が、いい声で沸いた。去年、一緒に勝ち取った台詞である。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w03.node.line.008",
+      "lineId": "main.s3.w03.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "胸の奥が勝手にあたたまって、手が先に手帳を開いた。紹介文の下書きを、書き直す。もっと、いい言葉があるはずだ。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w03.node.line.009",
+      "lineId": "main.s3.w03.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "書きながら、ふと、ペンが止まる。五人の欄は、戻らない。なら——なぜ私の欄は、いまだに「会社」のままなのだろう。",
+      "emotion": "tension"
+    },
+    {
+      "type": "choice",
+      "id": "main.s3.w03.node.choice.001",
+      "choices": [
+        {
+          "id": "main.s3.w03.choice.001",
+          "label": "去年の礼を、こちらから言いに行く",
+          "result": "紹介文の余白に、五人への礼の言葉を足した。壇を降りる列へ、遠くから頭を下げる。届いたかどうかは分からない。ただ、救護の人が一瞬こちらを向いて、目礼が返ってきた——気がする。常連が騒いだ。「監督が先に動いたぞ! 倍率どうなる!」。だから、賭けにしないでください。",
+          "intent": "勝負より先に、感謝を渡す",
+          "promise": "近づく口実ができる代わりに、街の噂の的になる",
+          "memory": "紹介文の余白の、五人への礼の言葉",
+          "tone": "heroic",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "goto": "main.s3.w03.node.end.001"
+        },
+        {
+          "id": "main.s3.w03.choice.002",
+          "label": "礼は砂の上で。まず初戦の支度に戻る",
+          "result": "言葉は、練習場で返すことにした。うちの面々を集めて、初戦の組み立てを一から。「監督、発表の日くらい休みましょうよ」「休むのは、勝ってからです」。窓の外を、発表帰りの客が流れていく。今年の噂話が、砂の匂いより先に街へ広がっていった。",
+          "intent": "気持ちは、勝負の質で示す",
+          "promise": "支度が一歩進む代わりに、口実は向こう任せになる",
+          "memory": "発表の日に組んだ、初戦の第一案",
+          "tone": "pragmatic",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "goto": "main.s3.w03.node.end.001"
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "main.s3.w03.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "3周目・週3(顔合わせ。出会いの専有権遵守: 遠景+公開の一言のみ、個人対話なし)。Q=この街を引き受けるか / value=絆 0→+ / turn=行6(台帳にも上書きできない場所がある=去年は消えていない) / hook=閃き(小)/post-point / try=はい、しかし / game=年中行事化した顔合わせ(紹介文係→倍率→賭けるな) / carry=写し(週2) / open=なぜ私の欄だけ戻らないのか(答え=週15の二軸開示) / newterm=なし",
+    "legacyGeneratedIds": false
+  }
+}
