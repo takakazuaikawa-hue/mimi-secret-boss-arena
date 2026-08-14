@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s2.w11",
+  "kind": "opening",
+  "title": "エキストラ募集",
+  "summary": "滅亡ショーの再演練習。自分の避難を演技指導される街",
+  "ownership": {
+    "arcId": "main.stage2"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "噴水広場(再演練習場)",
+    "assets": [
+      {
+        "id": "main.s2.w11.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-fountain-plaza-day-v1.png",
+        "alt": "再演練習場になった噴水広場の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s2.w11.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s2.w11.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.w11.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w11.node.line.001",
+      "lineId": "main.s2.w11.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "広場に、貼り紙が出た。「世界滅亡ショー・エキストラ大募集(日当・弁当つき)」。滅亡の、エキストラ。字面だけで眩暈のする求人を、この街は「弁当つき」の四文字で読んでしまう。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w11.node.line.002",
+      "lineId": "main.s2.w11.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "練習は、広場で公開でやっていた。演出係が拡声器で叫ぶ。「避難の皆さーん、もっと慌てて! 去年はもっと必死でしたよね!?」。……去年、本当に必死だった人たちに向かって、である。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w11.node.line.003",
+      "lineId": "main.s2.w11.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "剣士さんが、いた。エキストラの列で、自分の避難を演技指導されていた。「おじいさん、そこはもっと絶望的に!」「……わしは去年、絶望はしとらんのじゃが」「台本では絶望です!」。台本では、絶望。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w11.node.line.004",
+      "lineId": "main.s2.w11.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "笑って見ていられたのは、そこまでだった。演出係が次の場面を告げる。「はい次ー、『英雄たちの覚醒』! 代役の皆さん、屋上セットへ!」。——うちの三人の、あの一斉解放が、代役で再現されていく。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w11.node.line.005",
+      "lineId": "main.s2.w11.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "代役さんたちは、上手かった。構えの角度も、合図の間も、よく研究してある。ただ一つだけ、どうしても再現できていないものがある。あの日の三人は——**楽しそうだった**。台本は、楽しさを書き起こせない。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w11.node.line.006",
+      "lineId": "main.s2.w11.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "見学の輪の中で、誰かがぽつりと言った。「……なんか、違うよなあ」。周りが、静かに頷いた。街は弁当で釣られはするが、目は誤魔化されない。この「なんか違う」の集積が、いつか大きな声になる。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w11.node.line.007",
+      "lineId": "main.s2.w11.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "帰りぎわ、演出係に呼び止められた。「あ! 本物の監督さん! よかったら本番、ご本人役で出ません? 説得力が段違いなので!」。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w11.node.line.008",
+      "lineId": "main.s2.w11.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "お断りします。私の役は、私が今年やるので。——言ってから、自分の言葉に気づく。そうか。再演に勝つ方法は、ひとつしかない。**今年の本物を、去年より面白くすること**だ。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w11.node.line.009",
+      "lineId": "main.s2.w11.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "手帳に書いた。「敵は台本。武器は、次がどうなるか誰も知らない試合」。書き終えて、次の大会の貼り紙を見上げた。契約者リーグ——審理の季節が、また来る。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "effect",
+      "id": "main.s2.w11.node.effect.001",
+      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+    },
+    {
+      "type": "end",
+      "id": "main.s2.w11.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "2周目・週11(9行・選択肢なし)。笑いの底に薄い怒り(台本では絶望です!)。「台本は楽しさを書き起こせない」=打倒の武器の発見。週12契約者リーグへの橋。",
+    "legacyGeneratedIds": false
+  }
+}

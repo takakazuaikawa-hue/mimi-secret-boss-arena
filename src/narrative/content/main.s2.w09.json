@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s2.w09",
+  "kind": "opening",
+  "title": "最初の赤線と、二年目の花火",
+  "summary": "規定集に引かれた一本目の赤線。祝祭の浜と、花火を収録する者たち",
+  "ownership": {
+    "arcId": "main.stage2"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "浜辺(海の花火大会・二年目)",
+    "assets": [
+      {
+        "id": "main.s2.w09.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-observation-deck-night.png",
+        "alt": "夜の海辺と花火の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s2.w09.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s2.w09.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.w09.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w09.node.line.001",
+      "lineId": "main.s2.w09.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "第九戦のあと、あの規定は、もう立っていられなかった。書き直された挑戦状。満員の賭け札。場内が見てしまった、台本に無い死闘。——理由は、三つもあれば十分だった。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w09.node.line.002",
+      "lineId": "main.s2.w09.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "週明けの受付で、儀式をした。規定集の当該の巻を開き、「台本試合規定」の条文に——赤いインクで、まっすぐ一本。私の手で引いた。事務員の線引きは、狂わない。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w09.node.line.003",
+      "lineId": "main.s2.w09.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ノノさんが、受付の掲示板に正式の紙を貼った。「当該規定、運用停止のお知らせ」。貼り終えて、彼女は小さく拍手をした。「規定が正しく死ぬところ、初めて見ました」。正式が、いちばん強いのだ。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w09.node.line.004",
+      "lineId": "main.s2.w09.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "街は、その赤線一本を、さっそく祭りの口実にした。折よく海の花火大会の週である。「赤線記念!」と屋台が勝手に銘打ち、意味の分からない祝祭の熱が浜へ流れ込んだ。この街の祝い方は、いつも理屈が後から来る。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w09.node.line.005",
+      "lineId": "main.s2.w09.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "浜は、去年と同じで、去年と違った。人魚の花火は今年も海の中で開き、音のない花火は今年も音を想像させた。花火師の口上だけ、一言増えていた。「今年は一輪多いよ! めでたい理由が、ひとつ多いんでね!」",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w09.node.line.006",
+      "lineId": "main.s2.w09.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "人混みの向こうに、狼の目の人がいた。焼きとうもろこしを片手に、空を見上げている。初めて「結果を知らない九戦目」を終えた人の顔は、祭りの灯りの下で、ずいぶん若く見えた。目が合って、互いに、小さく会釈だけした。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w09.node.line.007",
+      "lineId": "main.s2.w09.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "——浜の端に、無粋な一角があった。三脚と、収録機材と、白い手袋。再演企画室が、花火を録っている。祭りの歓声も、花火師の口上も、機材は等しく吸い込んでいく。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w09.node.line.008",
+      "lineId": "main.s2.w09.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "係員の手元の台帳が、ちらりと見えた。「素材: 祝祭(使用予定: 新企画)」。……新企画。祭りまで素材にする会社の、次の企画とは何だろう。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w09.node.line.009",
+      "lineId": "main.s2.w09.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "大玉が上がる。歓声の中で、私は懐の規定集の写しに触れた。赤線、一本。残り、五本。——祭りの夜に数える線の本数は、悪くない酔い方をする。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "effect",
+      "id": "main.s2.w09.node.effect.001",
+      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+    },
+    {
+      "type": "end",
+      "id": "main.s2.w09.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "2周目・週9(9行・選択肢なし)。赤線一本目の儀式(勝敗ロバスト: 挑戦状+賭け札+死闘の露見の三点で成立)。祭事=花火二年目の差分。引き=「素材: 祝祭(新企画)」→週10発表会へ。",
+    "legacyGeneratedIds": false
+  }
+}

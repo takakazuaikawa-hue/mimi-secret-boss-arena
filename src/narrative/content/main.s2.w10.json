@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s2.w10",
+  "kind": "opening",
+  "title": "新企画発表会",
+  "summary": "会社が公表する目玉興行——世界滅亡ショー(再演)",
+  "ownership": {
+    "arcId": "main.stage2"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "闘技場 大広間(発表会場)",
+    "assets": [
+      {
+        "id": "main.s2.w10.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-central-atrium-photo-studio-day-v1.png",
+        "alt": "発表会場になった大広間の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s2.w10.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s2.w10.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.w10.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w10.node.line.001",
+      "lineId": "main.s2.w10.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "興行関係者あての招待状で、大広間へ呼ばれた。演台と、白い幕と、そろいの手袋の社員たち。会社の、新企画発表会である。嫌な予感は、招待状の時点で満席だった。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w10.node.line.002",
+      "lineId": "main.s2.w10.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "登壇したのは、再演企画室の室長だった。声のいい人だった。声のいい人が、良くないことを言うときの、あの落ち着きで、彼は切り出した。「昨年、最大の動員を記録した興行は、何だったでしょうか」。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w10.node.line.003",
+      "lineId": "main.s2.w10.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「——滅亡です」。白い幕に、映像が映った。割れた空。避難の列。そして、屋上で封を解く、うちの三人と、私の号令。……あの日だ。あの日が、録られていた。あの置き忘れの機材は、忘れ物ではなかったのだ。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w10.node.line.004",
+      "lineId": "main.s2.w10.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「本年より、毎年の目玉興行として再演いたします。演題——**世界滅亡ショー**」。会場の半分が拍手をした。半分は、しなかった。街が、まっぷたつに割れる音がした。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w10.node.line.005",
+      "lineId": "main.s2.w10.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "観たい人の気持ちも、分かってしまうのが悔しい。あれは、確かに、すごい夜だった。すごい夜だったからこそ——切り売りされていいものでは、ない。私たちが守った日を、毎年の演目にされてたまるか。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w10.node.line.006",
+      "lineId": "main.s2.w10.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "質疑の時間に、手を挙げた。「あの日、避難所で、誰が何を守ったか——それも台本に書けますか」。室長は、たじろぎもせず、悪びれもせず、声のいいまま答えた。「演出で、補います」。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w10.node.line.007",
+      "lineId": "main.s2.w10.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "演出で、補う。この一言で、私はこの企画の敵になると決めた。冷たい怒りが、また一段、深いところで冷えた。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w10.node.line.008",
+      "lineId": "main.s2.w10.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "配られた資料の隅に、小さな一行があった。「協賛: 物語資産管理部/素材提供: **台帳**」。……素材提供、台帳。台帳は、部署の名前ではない。帳面が、素材を提供する?",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w10.node.line.009",
+      "lineId": "main.s2.w10.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "分からない一行は、控えるに限る。手帳に写して、線を一本引いた。赤ではない。まだ、鉛筆の線。赤線は、壊すと決めた条文にしか、引かない。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "choice",
+      "id": "main.s2.w10.node.choice.001",
+      "choices": [
+        {
+          "id": "main.s2.w10.choice.001",
+          "label": "その場で、反対を表明する",
+          "result": "「滅亡ショーに、反対します。あの日を守った当事者として」。会場がざわめき、記者の鉛筆が一斉に走った。室長は声のいいまま「ご意見として承ります」と流したが、翌日の街の号外は、私の言葉の方を大きく刷った。「守った側は、反対している」。世論という土俵に、最初の旗が立った。会社はこれで、こちらを潰しに来るだろう。来ればいい。旗は、立てるために立てた。",
+          "intent": "当事者の反対を、公の記録に残す",
+          "promise": "世論の旗が立つ代わりに、会社の標的として名指しされる",
+          "memory": "号外の見出し「守った側は、反対している」が街に残った",
+          "tone": "defiant",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "goto": "main.s2.w10.node.end.001"
+        },
+        {
+          "id": "main.s2.w10.choice.002",
+          "label": "黙って、資料を全部持ち帰る",
+          "result": "拍手も反対もせず、配布資料を一部残らず持ち帰った。企画書、収支予測、上演権の根拠規定、そして「素材提供: 台帳」の一行。夜、ノノさんと二人で全頁を検めた。敵の企画書ほど、よい教科書はない。壊すべき根拠規定の目星が三つ付き、うち一つは——次の契約者リーグの週に、ちょうど審理できる筋だった。旗はまだ立てない。旗より先に、土台を掘る。",
+          "intent": "感情より先に、敵の設計図を手に入れる",
+          "promise": "打倒の道筋が具体になる代わりに、反対の旗は後日になる",
+          "memory": "企画書一式の控えが、帳場の金庫に加わった",
+          "tone": "pragmatic",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "goto": "main.s2.w10.node.end.001"
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "main.s2.w10.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "2周目・週10(9行+選択)。悪の頂点=世界滅亡ショーの公表。1周目ポストクレジット(収録機材)の全面回収。室長「演出で、補います」が悪の顔。引き=「素材提供: 台帳」(中点への種、鉛筆の線)。",
+    "legacyGeneratedIds": false
+  }
+}

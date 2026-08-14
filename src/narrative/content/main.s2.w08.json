@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s2.w08",
+  "kind": "opening",
+  "title": "九つ目の勝負",
+  "summary": "九種目の大会の朝。書かれた結果と、書き直される挑戦状",
+  "ownership": {
+    "arcId": "main.stage2"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "中央闘技場(九種目仕様)",
+    "assets": [
+      {
+        "id": "main.s2.w08.asset.background.001",
+        "kind": "background",
+        "path": "/assets/arena-daylight.png",
+        "alt": "九種目仕様の闘技場の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s2.w08.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s2.w08.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.w08.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w08.node.line.001",
+      "lineId": "main.s2.w08.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "大会の朝の会場は、見たことのない支度になっていた。砂場の隅に綱引きの綱。本部席の横に早食いの膳。照明の下に、にらめっこ用の向かい合わせの台。——九種目仕様である。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w08.node.line.002",
+      "lineId": "main.s2.w08.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "段取りは、八つの前座種目と、九つ目の本戦。台本の原本は帳場の金庫に、写しは私の懐にある。今日は、書いてある結果を、砂の上で破りに来た。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w08.node.line.003",
+      "lineId": "main.s2.w08.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "前座は、朝から祭りだった。綱引きは会場の半分を巻き込んで引き分け、早食いはうちの誰かが屋台三つ分を空にし、にらめっこは観客まで参加して場内が変な顔だらけになった。挑んできた側は、全種目、本気で楽しそうだった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w08.node.line.004",
+      "lineId": "main.s2.w08.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "九戦目の前、相手方の主が、うちの控室に来た。狼の目をした人だった。彼は挨拶の代わりに、静かに言った。「九つ目の勝負は——いつも、結果を先に知っているんだ」。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w08.node.line.005",
+      "lineId": "main.s2.w08.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "知っているのだ、この人も。自分の九戦目が、いつも台本で終わることを。八つの種目をあんなに本気で遊ぶのは——九つ目だけ、遊べないからだ。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w08.node.line.006",
+      "lineId": "main.s2.w08.line.006",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "この台本、うちが試合で破ります。あなたの九戦目を——賭けても、結果の分からない試合にします。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w08.node.line.007",
+      "lineId": "main.s2.w08.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "懐の写しを見せた。狼の目が、ゆっくり見開かれて——それから、笑った。彼はその場で紙を借り、新しい挑戦状を書いた。九通目の書き直し。末尾の一行——「勝敗: **未定**」。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w08.node.line.008",
+      "lineId": "main.s2.w08.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "本部席で、再演企画室の係員が進行台本を掲げて何か言っている。だが、その声はもう届かない。書き直された挑戦状が場内に掲示された瞬間、客席が沸騰したからだ。ガヤ氏が叫ぶ。「第九戦——結果は、誰も知りませんッ!」",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w08.node.line.009",
+      "lineId": "main.s2.w08.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "券売のおじさんの窓口に、行列ができていく。結果の分からない試合にしか、賭けは成立しない。この行列こそが、台本興行への一番の反対票である。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w08.node.line.010",
+      "lineId": "main.s2.w08.line.010",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "入場口の札が裏返る。懐の写しを、一度だけ強く押さえた。——さあ、破りに行こう。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "choice",
+      "id": "main.s2.w08.node.choice.001",
+      "choices": [
+        {
+          "id": "main.s2.w08.choice.001",
+          "label": "台本の存在を、場内に公表して戦う",
+          "result": "「みなさんにお知らせします。この試合には——会社の進行台本が、ありました」。写しを頭上に掲げた。場内が一拍静まり、それから、地鳴りが来た。怒りと、笑いと、「見せてみろ!」の大合唱。ガヤ氏が写しを読み上げるたび、ブーイングと爆笑が交互に起きる。台本は、公開された時点でもう台本ではない。ただの、恥ずかしい紙である。会社の観覧席が、静かに空いていった。",
+          "intent": "悪事を、隠さず白日の下で壊す",
+          "promise": "世論が完全に味方する代わりに、会社との全面戦争が始まる",
+          "memory": "写しを掲げたミミの姿が、街の語り草になった",
+          "tone": "defiant",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "goto": "main.s2.w08.node.end.001"
+        },
+        {
+          "id": "main.s2.w08.choice.002",
+          "label": "黙って、ただ勝ちに行く",
+          "result": "公表はしない。証拠は、使いどきを選ぶ武器だ。かわりに、今日の試合そのもので語る。台本に無い攻めを、台本に無い順番で、台本に無い熱で。観客は理由を知らないまま「今日は何かが違う」とざわめき、再演企画室の係員だけが、進行表と砂の上を見比べて青くなっていく。恥ずかしい紙は、金庫で眠らせておく。決勝までの、切り札として。",
+          "intent": "証拠を温存し、試合の中身で規定を殺す",
+          "promise": "切り札が残る代わりに、世論の爆発は先送りになる",
+          "memory": "金庫の台本が、決勝への切り札として眠っている",
+          "tone": "pragmatic",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "goto": "main.s2.w08.node.end.001"
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "main.s2.w08.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "2周目・週8大会週(10行+選択)。打倒アーク第一戦。ヴォルフの登記モチーフ(挑戦状・全種目化)公開範囲のみ、個別の危機(九戦目の台本興行の封筒)は先食いせず「台本で終わる九戦目」の事実まで。赤線の儀式は週9冒頭で回収(勝敗ロバスト規則)。",
+    "legacyGeneratedIds": false
+  }
+}
