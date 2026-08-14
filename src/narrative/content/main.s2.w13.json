@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s2.w13",
+  "kind": "opening",
+  "title": "壊すルールの一覧",
+  "summary": "中点。台帳の正体と、接ぎ木の悪法群。「全部、優勝で消します」",
+  "ownership": {
+    "arcId": "main.stage2"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "記録室 最深部",
+    "assets": [
+      {
+        "id": "main.s2.w13.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-contract-archive-v2.png",
+        "alt": "記録室最深部の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s2.w13.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s2.w13.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.w13.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w13.node.line.001",
+      "lineId": "main.s2.w13.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "週明け、赤線の二本目を引いた。審理の記録と、街の世論と、私用予定欄の白さ。あの規定も、もう立っていられなかった。街の救護席に、初めて「休憩中」の札が出た日——街は、少しだけ優しくなった気がした。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w13.node.line.002",
+      "lineId": "main.s2.w13.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "そして今週、私は宿題を果たしに来た。発表会の資料の、あの一行——「素材提供: 台帳」。記録室の司書さんに一行を見せると、彼女は眼鏡の奥で少し目を細め、「……いらっしゃい。最深部へ」と言った。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w13.node.line.003",
+      "lineId": "main.s2.w13.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "最深部の台は、一冊の帳面のためだけにあった。分厚くて、古くて、今も頁が増え続けている帳面。司書さんが言う。「台帳です。この街の興行の、全部の記録——と、いうことに、なっています」。なっています、の言い方が、少し濁った。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w13.node.line.004",
+      "lineId": "main.s2.w13.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "最初の頁は、手書きだった。柿落としの年の字。「一度きりの物語は、終われば閉場する。——閉じないために、再演を選ぶ」。それが、始まりだった。誰かが、閉場から街を守るために、繰り返すことを選んだのだ。起源には、理があった。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w13.node.line.005",
+      "lineId": "main.s2.w13.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "だが、頁をめくるほど、字が変わっていく。資産条項。台本試合規定。常時稼働条項。名入れ販売。出口の廃止。——守るための再演に、人を縛る条文が、後から後から接ぎ木されている。幹は生きるためでも、接ぎ木は、搾るためだ。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w13.node.line.006",
+      "lineId": "main.s2.w13.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "分かった。うちの敵は「再演そのもの」ではない。再演を口実に育った、**接ぎ木の悪法群**だ。なら、やることは決まっている。事務員は、条文と戦える。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w13.node.line.007",
+      "lineId": "main.s2.w13.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "控えの紙に、壊すべき条文を書き出した。六条。うち二条には、もう赤線が引いてある。残り、四つ。夜、控室の壁にその一覧を貼り出して、私は全員の前で言った。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w13.node.line.008",
+      "lineId": "main.s2.w13.line.008",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "全部——優勝で、消します。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w13.node.line.009",
+      "lineId": "main.s2.w13.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "返事は、言葉ではなかった。指の封が、こつ、こつ、と鳴った。壁の一覧の前に、全員が順番に立って、自分の壊したい条文を一つずつ、指で叩いていった。うちの控室に、打倒の作戦図が掛かった夜である。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w13.node.line.010",
+      "lineId": "main.s2.w13.line.010",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ただ、一つだけ。六条目「台帳による再演の強制」の条文番号を、規定集で引こうとして——手が止まった。**無い**。三十八巻のどこにも、その条文が存在しない。再演だけは、規定ですらないのだ。……では、あれは、誰が決めている?",
+      "emotion": "tension"
+    },
+    {
+      "type": "choice",
+      "id": "main.s2.w13.node.choice.001",
+      "choices": [
+        {
+          "id": "main.s2.w13.choice.001",
+          "label": "一覧を、街にも公開する",
+          "result": "作戦図の写しを、受付の掲示板に貼った。「うちが壊す予定の条文一覧(進捗: 二/六)」。ノノさんが公式の枠線を付けてくれたので、妙に正式な顔の宣戦布告になった。街の反応は早かった。一覧の前に人だかりができ、条文ごとに応援の署名が集まり始める。三条目の欄には誰かが花を添えた。壊す予定の条文に花が供えられる街。……うちの街は、やっぱり少し変で、とても頼もしい。",
+          "intent": "打倒を、街全体の物語にする",
+          "promise": "世論が味方する代わりに、会社は残り四条を全力で守りに来る",
+          "memory": "進捗二/六の一覧が、受付の掲示板で育ち始めた",
+          "tone": "heroic",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "goto": "main.s2.w13.node.end.001"
+        },
+        {
+          "id": "main.s2.w13.choice.002",
+          "label": "うちの控室だけの、作戦図にする",
+          "result": "一覧は、控室の壁だけに留めた。壊す順番を悟られれば、守りも固まる。作戦図は毎朝全員で確認し、赤線が増えるたび、誰かがこっそり線の横に小さな印を彫った。静かな打倒には、静かな打倒の良さがある——会社は、うちがどこから来るか、最後まで読めない。ただし六条目の「条文が存在しない」件だけは、全員で共有した。存在しない敵の話は、全員で覚えておくに限る。",
+          "intent": "手の内を伏せて、確実に一つずつ消す",
+          "promise": "奇襲が効く代わりに、街の応援は結果でしか集められない",
+          "memory": "控室の作戦図に、彫り印が増えていく",
+          "tone": "pragmatic",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "goto": "main.s2.w13.node.end.001"
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "main.s2.w13.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "2周目・週13中点(10行+選択)。台帳の正体(起源の理と接ぎ木の悪)。打倒宣言「全部、優勝で消します」。引き=六条目の条文が存在しない(3周目の愕然への種。再演は規定ですらない)。",
+    "legacyGeneratedIds": false
+  }
+}

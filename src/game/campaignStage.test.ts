@@ -122,7 +122,7 @@ describe("三段階キャンペーン構造", () => {
       campaignStage: campaignStages[1],
     });
     const s2main = chooseWeeklyAction(stage2, "work");
-    expect(s2main.currentEvent?.scene.id).toBe("main.s2.ep1");
+    expect(s2main.currentEvent?.scene.id).toBe("main.s2.w01");
     const s2resolved = {
       ...resolveCurrentEvent(s2main, 0),
       lastEventOutcome: undefined,

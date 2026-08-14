@@ -145,6 +145,28 @@ for (let step = 0; step < 9000; step++) {
     }
   }
 
+  // 結果画面(outcome-cinematic): 実際の「続ける」ボタンは advance-area より DOM 順で
+  // 後にあるため、汎用の「最初のボタン」フォールバックだと advance-area を無限に
+  // 叩き続けて止まる。続けるボタンを最優先で探し、無ければ advance-area を叩く。
+  const outcomeContinue = page.locator(".outcome-cinematic__continue").first();
+  if (await outcomeContinue.isVisible().catch(() => false)) {
+    actionTag = "outcome-continue";
+    await outcomeContinue.click().catch(() => {});
+    continue;
+  }
+  const outcomeRevealAll = page.locator(".outcome-cinematic__reveal-all").first();
+  if (await outcomeRevealAll.isVisible().catch(() => false)) {
+    actionTag = "outcome-reveal-all";
+    await outcomeRevealAll.click().catch(() => {});
+    continue;
+  }
+  const outcomeAdvance = page.locator(".outcome-cinematic__advance-area").first();
+  if (await outcomeAdvance.isVisible().catch(() => false)) {
+    actionTag = "outcome-advance";
+    await outcomeAdvance.click().catch(() => {});
+    continue;
+  }
+
   const instantResult = page.getByRole("button", { name: /即時結果/ }).first();
   if (await instantResult.isVisible().catch(() => false)) {
     actionTag = "battle-instant-result";
@@ -302,6 +324,21 @@ if (week5SavedState) {
 
     if (eveSceneSeen) break; // 前夜シーンまで確認できたら終了
 
+    const outcomeContinue2 = page.locator(".outcome-cinematic__continue").first();
+    if (await outcomeContinue2.isVisible().catch(() => false)) {
+      await outcomeContinue2.click().catch(() => {});
+      continue;
+    }
+    const outcomeRevealAll2 = page.locator(".outcome-cinematic__reveal-all").first();
+    if (await outcomeRevealAll2.isVisible().catch(() => false)) {
+      await outcomeRevealAll2.click().catch(() => {});
+      continue;
+    }
+    const outcomeAdvance2 = page.locator(".outcome-cinematic__advance-area").first();
+    if (await outcomeAdvance2.isVisible().catch(() => false)) {
+      await outcomeAdvance2.click().catch(() => {});
+      continue;
+    }
     const ticket = page.locator(".week-action-ticket").first();
     if (await ticket.isVisible().catch(() => false)) {
       await ticket.click().catch(() => {});

@@ -26,7 +26,7 @@ import { legacyCharacterNarrativeBlockById } from "../narrative/characterBlocks"
 import {
   mainStageOneWeeklyBlocks,
   mainStageThreeEpisodeBlocks,
-  mainStageTwoEpisodeBlocks,
+  mainStageTwoWeeklyBlocks,
 } from "../narrative/openingBlocks";
 import { asEventId } from "../narrative/schema";
 
@@ -88,11 +88,11 @@ const mainEpisodeBridges = [
   bridge("s1.w03", mainStageOneWeeklyBlocks[23], "teirei"),
   bridge("s1.w06", mainStageOneWeeklyBlocks[24], "peony"),
   bridge("s1.w07", mainStageOneWeeklyBlocks[25], "ushiro"),
-  bridge("s2.ep1", mainStageTwoEpisodeBlocks[0], "amara"),
-  bridge("s2.ep2", mainStageTwoEpisodeBlocks[1], "night-eater"),
-  bridge("s2.ep3", mainStageTwoEpisodeBlocks[2], "shahar"),
-  bridge("s2.ep4", mainStageTwoEpisodeBlocks[3], "sazanami"),
-  bridge("s2.ep5", mainStageTwoEpisodeBlocks[4], "cassim-bell"),
+  bridge("s2.w01", mainStageTwoWeeklyBlocks[0], "amara"),
+  bridge("s2.w02", mainStageTwoWeeklyBlocks[1], "night-eater"),
+  bridge("s2.w03", mainStageTwoWeeklyBlocks[2], "shahar"),
+  bridge("s2.w04", mainStageTwoWeeklyBlocks[3], "sazanami"),
+  bridge("s2.w05", mainStageTwoWeeklyBlocks[4], "cassim-bell"),
   bridge("s3.ep1", mainStageThreeEpisodeBlocks[0], "wolf-nine"),
   bridge("s3.ep2", mainStageThreeEpisodeBlocks[1], "marian"),
   bridge("s3.ep3", mainStageThreeEpisodeBlocks[2], "room-seventeen"),
