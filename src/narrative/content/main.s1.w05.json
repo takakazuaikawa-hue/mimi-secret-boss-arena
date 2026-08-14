@@ -135,32 +135,9 @@
       "emotion": "tension"
     },
     {
-      "type": "choice",
-      "id": "main.s1.w05.node.choice.001",
-      "choices": [
-        {
-          "id": "main.s1.w05.choice.001",
-          "label": "今夜は仕事の話を、禁止にします",
-          "result": "禁止令は、湯船三つぶんは守られた。最初に破ったのは私だ。うっかり「次の対戦表が」と口にして、罰として大福を一個食べさせられた。罰がおいしいのは、この職場のいいところだと思う。仕事を忘れる練習は、全員へたくそだった。へたくそ同士、笑いながら夜が更けた。",
-          "intent": "今夜だけは、全員をただの湯治客にする",
-          "promise": "休みが本物になる代わりに、決めごとを最初に破るのは自分",
-          "memory": "罰の大福一個ぶん、監督の禁止令は破られた記録が残った",
-          "tone": "wild",
-          "effects": [{ "type": "sharedPoints", "amount": 2 }],
-          "goto": "main.s1.w05.node.end.001"
-        },
-        {
-          "id": "main.s1.w05.choice.002",
-          "label": "宴会の最後に、三分だけ相談させて",
-          "result": "三分の相談は、きっかり三分で祭りに飲まれた。それでも三分ぶんの実りはあった。「最上級でも、やることは同じ」と誰かが言い、全員がうなずいたのだ。相手が強くなるだけ。うちが強いのは、もう知っている。手帳の隅にそう書いて、私は宴会へ戻った。",
-          "intent": "湯の勢いを借りて、次の覚悟だけ揃える",
-          "promise": "方針が一言で揃う代わりに、休みに仕事が三分だけ混ざる",
-          "memory": "「やることは同じ」の一言が、手帳の隅に残っている",
-          "tone": "pragmatic",
-          "effects": [{ "type": "sharedPoints", "amount": 2 }],
-          "goto": "main.s1.w05.node.end.001"
-        }
-      ]
+      "type": "effect",
+      "id": "main.s1.w05.node.effect.001",
+      "effects": [{ "type": "sharedPoints", "amount": 2 }]
     },
     {
       "type": "end",
@@ -171,7 +148,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "週5(増量版11行)。仕組み学習=ランクの階段と七段飛ばしの異常。宿の中は既存温泉イベントの領分のため暖簾の前で切る。引き=恥の予兆(もう知られている)。",
+    "authorNote": "週5(増量版11行)。仕組み学習=ランクの階段と七段飛ばしの異常。宿の中は既存温泉イベントの領分のため暖簾の前で切る。引き=恥の予兆(もう知られている)。選択肢は撤去(判断週ではないため)。",
     "legacyGeneratedIds": false
   }
 }

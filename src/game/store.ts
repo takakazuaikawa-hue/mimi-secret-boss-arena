@@ -13,6 +13,7 @@ import {
   createInitialProfile,
   createRun,
   maybeCreateOpeningOwnershipFollowup,
+  maybeCreateCastIntroductionFollowup,
   maybeCreateLiberationFollowup,
   maybeCreateMainStoryFollowup,
   nextCampaignWeek,
@@ -260,9 +261,13 @@ export const useGameStore = create<GameStore>()(
               ? openingFollowup
               : maybeCreateLiberationFollowup(openingFollowup);
           // メインストーリー終了直後は、橋先の個別場面へ連続再生する。
-          const next = afterLiberation.currentEvent
+          const afterMainStory = afterLiberation.currentEvent
             ? afterLiberation
             : maybeCreateMainStoryFollowup(afterLiberation);
+          // 週3のメイン話のあとは、その区分の主軸で未遭遇の全員と続けて顔合わせする。
+          const next = afterMainStory.currentEvent
+            ? afterMainStory
+            : maybeCreateCastIntroductionFollowup(afterMainStory);
           followup = Boolean(next.currentEvent);
           return { run: next };
         });

@@ -6,6 +6,7 @@ import {
 import {
   chooseWeeklyAction,
   createRun,
+  maybeCreateCastIntroductionFollowup,
   maybeCreateLiberationFollowup,
   maybeCreateMainStoryFollowup,
   maybeCreateOpeningOwnershipFollowup,
@@ -98,9 +99,12 @@ const continueChain = (source: RunState): RunState => {
   const afterLiberation = opening.currentEvent
     ? opening
     : maybeCreateLiberationFollowup(opening);
-  return afterLiberation.currentEvent
+  const afterMainStory = afterLiberation.currentEvent
     ? afterLiberation
     : maybeCreateMainStoryFollowup(afterLiberation);
+  return afterMainStory.currentEvent
+    ? afterMainStory
+    : maybeCreateCastIntroductionFollowup(afterMainStory);
 };
 
 // 1週ぶんを最後まで再生し、再生されたイベントIDを返す
@@ -179,6 +183,45 @@ describe("キャンペーン進行の実流", () => {
     ).toBe(3);
     // 完走した場合は従来どおり進む
     expect(unlockedCampaignStage({ completedRuns: 1 })).toBe(2);
+  });
+
+  it("週3終了時点で、その区分の主軸5人が全員 encountered=true になる(出場者不足バグの回帰)", () => {
+    let run = createRun("normal", "flow-cast-intro-stage1", {
+      campaignStage: campaignStages[0],
+    });
+    for (let week = 1; week <= 3; week += 1) {
+      const result = playWeek(run, week % 2 === 0 ? "search" : "work");
+      run = nextCampaignWeek(result.run);
+    }
+    for (const id of campaignStages[0].mainFighterIds) {
+      expect(run.fighters[id].encountered).toBe(true);
+    }
+  });
+
+  it("2周目・3周目でも、週3終了時点でその区分の主軸5人が全員 encountered=true になる", () => {
+    for (const stageIndex of [1, 2] as const) {
+      const carried = campaignStages
+        .filter((candidate) => candidate.stage < campaignStages[stageIndex].stage)
+        .flatMap((candidate) => candidate.mainFighterIds)
+        .map((id) => ({
+          id,
+          trust: 70,
+          ownership: 10,
+          storyStage: 7,
+          liberated: false,
+        }));
+      let run = createRun("normal", `flow-cast-intro-stage${stageIndex + 1}`, {
+        campaignStage: campaignStages[stageIndex],
+        carriedAllies: carried,
+      });
+      for (let week = 1; week <= 3; week += 1) {
+        const result = playWeek(run, week % 2 === 0 ? "search" : "work");
+        run = nextCampaignWeek(result.run);
+      }
+      for (const id of campaignStages[stageIndex].mainFighterIds) {
+        expect(run.fighters[id].encountered).toBe(true);
+      }
+    }
   });
 
   it("2周目: 新しい主軸5人と出会える", () => {

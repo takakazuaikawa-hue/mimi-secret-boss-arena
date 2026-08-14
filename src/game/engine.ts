@@ -1094,6 +1094,43 @@ export const maybeCreateMainStoryFollowup = (
   return selectWeeklyEvent(source, action);
 };
 
+// 週3のメイン話のあと、その区分の主軸のうち未遭遇の全員と、続けて顔合わせする。
+// 加入(join)は自動化しない(正典で禁止)。ここは出会い(meet)だけを保証し、
+// 第4週の初心者大会までに全員と面識がある状態を作る。1人ずつ、
+// continueEvent の連鎖で呼ばれるたびに次の未遭遇者を返す。
+export const maybeCreateCastIntroductionFollowup = (
+  source: RunState,
+): RunState => {
+  if (source.currentEvent) return source;
+  if (source.week !== 3) return source;
+  const stageNumber = source.campaignStage ?? 1;
+  const week3Episode = mainStoryEpisodes.find(
+    (episode) => episode.stage === stageNumber && episode.week === 3,
+  );
+  if (!week3Episode || !source.eventHistory.includes(week3Episode.block.id)) {
+    return source;
+  }
+  const stageDefinition = campaignStages[stageNumber - 1];
+  const nextUnmetId = stageDefinition?.mainFighterIds.find(
+    (id) => !source.fighters[id]?.encountered,
+  );
+  if (!nextUnmetId) return source;
+  const fighter = fighterDefinitions.find(
+    (entry) => entry.id === nextUnmetId,
+  );
+  if (!fighter) return source;
+  return {
+    ...source,
+    currentEvent: weeklyEvent(
+      fighter.scenes.meet,
+      "work",
+      nextUnmetId,
+      false,
+      source.week,
+    ),
+  };
+};
+
 export const maybeCreateLiberationFollowup = (
   source: RunState,
 ): RunState => {

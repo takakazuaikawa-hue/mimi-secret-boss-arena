@@ -144,32 +144,9 @@
       "emotion": "tension"
     },
     {
-      "type": "choice",
-      "id": "main.s1.w07.node.choice.001",
-      "choices": [
-        {
-          "id": "main.s1.w07.choice.001",
-          "label": "対戦表を書き写して帰る",
-          "result": "「の海」の正体は、書き写している途中で分かった。相手の名前は、紙の幅に収まっていなかっただけだ。正式名は長い。長いが、最後まで書くと、ひとつの意味になる。——海そのもの、と。書き写した手が、少し冷たくなった。それでも手帳に挟んだ。知らない相手より、長い名前の相手のほうがいい。名前は、覚えれば済む。",
-          "intent": "次の相手を、先に知っておく",
-          "promise": "備えが早く始まる代わりに、相手の正体を先に背負う",
-          "memory": "手帳に「海そのもの」の名が挟まっている",
-          "tone": "pragmatic",
-          "effects": [{ "type": "sharedPoints", "amount": 2 }],
-          "goto": "main.s1.w07.node.end.001"
-        },
-        {
-          "id": "main.s1.w07.choice.002",
-          "label": "今日は手帳の重さだけ、持って帰る",
-          "result": "対戦表は、明日でいい。今日は希望欄の束が主役だ。寮に帰って、留め紐を新しいのに替えた。太い紐は不格好で、頼もしい。枕元に置くと、手帳はもう、書類の束には見えなかった。名簿でも、帳簿でもない。しいて言えば——うちの、はじまりの記録だ。",
-          "intent": "今日の実りを、今日のまま持ち帰る",
-          "promise": "チームの土台が固まる代わりに、次の相手を知るのは明日になる",
-          "memory": "太い留め紐の手帳が「はじまりの記録」と呼ばれ始める",
-          "tone": "tender",
-          "effects": [{ "type": "sharedPoints", "amount": 2 }],
-          "goto": "main.s1.w07.node.end.001"
-        }
-      ]
+      "type": "effect",
+      "id": "main.s1.w07.node.effect.001",
+      "effects": [{ "type": "sharedPoints", "amount": 2 }]
     },
     {
       "type": "end",
@@ -180,7 +157,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "週7(増量版12行)。仕組み学習=希望を聞くと強くなる(信頼・育成)+賭けの熱気の正体という世界法則を一粒。引き=半分の啓示(「の海」=週8さざなみ戦)。",
+    "authorNote": "週7(増量版12行)。仕組み学習=希望を聞くと強くなる(信頼・育成)+賭けの熱気の正体という世界法則を一粒。引き=半分の啓示(「の海」=週8さざなみ戦)。選択肢は撤去(判断週ではないため)。",
     "legacyGeneratedIds": false
   }
 }
