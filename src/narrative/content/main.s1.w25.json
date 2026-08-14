@@ -2,37 +2,26 @@
   "schemaVersion": 1,
   "id": "main.s1.w25",
   "kind": "opening",
-  "title": "眠らない街と、明日の砂",
-  "summary": "決勝前夜、誰も寝ない。ミミは会場をひとりで見に行く",
+  "title": "何年もちますか",
+  "summary": "決勝前夜の祭り。空から降りてきた王者の、ひとつの問い",
   "ownership": {
     "arcId": "main.stage1"
   },
   "trigger": {
-    "actions": [
-      "work",
-      "play",
-      "rest",
-      "search"
-    ],
-    "when": {
-      "all": [],
-      "any": [],
-      "none": []
-    },
-    "repeat": {
-      "mode": "once-per-run"
-    },
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
     "priority": 900,
     "weight": 1
   },
   "presentation": {
-    "location": "決勝前夜の場外通りと闘技場",
+    "location": "夜の展望デッキ(前夜祭)",
     "assets": [
       {
         "id": "main.s1.w25.asset.background.001",
         "kind": "background",
         "path": "/assets/story/bg-observation-deck-night.png",
-        "alt": "決勝前夜の場外通りと闘技場の背景"
+        "alt": "夜の展望デッキの背景"
       }
     ]
   },
@@ -40,18 +29,12 @@
     {
       "type": "direction",
       "id": "main.s1.w25.node.direction.001",
-      "command": {
-        "type": "background",
-        "assetId": "main.s1.w25.asset.background.001",
-        "transition": "dissolve"
-      }
+      "command": { "type": "background", "assetId": "main.s1.w25.asset.background.001", "transition": "dissolve" }
     },
     {
       "type": "direction",
       "id": "main.s1.w25.node.direction.002",
-      "command": {
-        "type": "clearSprites"
-      }
+      "command": { "type": "clearSprites" }
     },
     {
       "type": "line",
@@ -59,7 +42,7 @@
       "lineId": "main.s1.w25.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "深夜零時、私は「本日の営業は終了です」と札を裏返した。裏返した瞬間、屋台のおやじさんが鍋を三つ足した。「終了ってのは、朝までって意味だろ」。違います。と言おうとして、行列を見たら違わなかった。",
+      "text": "決勝の前夜、街は祭りになった。復興した街の、最初の祭りでもある。提灯、屋台、揚げ物の湯気。滅亡から五週間の街とは、誰も思わないだろう。",
       "emotion": "comic"
     },
     {
@@ -68,18 +51,16 @@
       "lineId": "main.s1.w25.line.002",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "券売のおじさんの窓口を閉めに行くと、シャッターの下から手が出てきて私の袖をつかんだ。「寝てる間に買いに来る客がいるんだ」。後ろで幽霊のご夫妻が新聞を二部抱えて頷いた。まさにその代表格だった。",
-      "emotion": "comic"
+      "text": "うちの選手たちは、屋台を三軒完売させた。規格外の食欲に、屋台のおやじたちの悲鳴と万歳が同時に出る。明日の決勝の相手の話は、誰もしない。しないことで、全員が考えているのが分かる。"
     },
     {
       "type": "line",
       "id": "main.s1.w25.node.line.003",
       "lineId": "main.s1.w25.line.003",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "あの、明日が決勝なんですけど。寝る人、この街にいます？",
-      "emotion": "comic"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "決勝の相手、シャハル。空の王者。最古の竜。会場の上を一周した、あの翼の主だ。街の賭け札は、正直だった。倍率は、うちに厳しい。厳しいほど、燃える人たちの街でもある。",
+      "emotion": "tension"
     },
     {
       "type": "line",
@@ -87,8 +68,8 @@
       "lineId": "main.s1.w25.line.004",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私が中庭の灯りを落としに行くと、経理課チームがそろばんを弾いていた。弾いているのは賭け金の集計ではなく、指の速さの練習だった。法被の背中が汗で濃くなっている。玉の音が、虫の声を全部押しのけて庭を占領した。",
-      "emotion": "comic"
+      "text": "宴の輪を少し外れて、展望デッキで夜風に当たった。手帳を開く。第一週からの頁を、ぱらぱらと戻る。一行ズレた判。三つの扉。希望欄。特訓。滅亡。復興。……よく来たものだ、ここまで。",
+      "emotion": "tender"
     },
     {
       "type": "line",
@@ -96,8 +77,8 @@
       "lineId": "main.s1.w25.line.005",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "警備隊長に「巡回、代わりましょうか」と声をかけたら、詠まれた。「眠らねば　明日が来ぬまま　勝てるかも」。五七五は合っている。中身が合っていない。隊長は満足そうな顔で次の角へ消えていった。",
-      "emotion": "comic"
+      "text": "夜空の星が、一列、消えた。消えたのではなく——隠れたのだ。大きな翼の影に。風が、デッキの提灯を全部揺らして、それが、降りてきた。",
+      "emotion": "tension"
     },
     {
       "type": "line",
@@ -105,8 +86,8 @@
       "lineId": "main.s1.w25.line.006",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "放送室へ寄って「そろそろ静かめに」と頼んだ。お姉さんは涼やかな声で子守唄を流してくれた。歌詞は落城の場面だった。客席のあちこちから拍手が起きて、結局、誰ひとり寝なかった。",
-      "emotion": "comic"
+      "text": "シャハル。間近で見る空の王者は、静かで、大きくて、夜そのものより夜だった。王者は名乗らなかった。私も、名乗らなかった。お互い、知っているからだ。",
+      "emotion": "tension"
     },
     {
       "type": "line",
@@ -114,18 +95,17 @@
       "lineId": "main.s1.w25.line.007",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "両替所の鍵を閉めに行くと、竜の紳士が椅子から動かなかった。「明朝の卵を、今夜のうちに固めで頼んでおいた」。眠らないんですかと聞くと、「明日は瞬きも惜しい」と答えて、そのあと律儀に瞬きした。",
-      "emotion": "tender"
+      "text": "王者は、ひとつだけ聞いた。「あなたのチームは——**何年、もちますか**」。",
+      "emotion": "revelation"
     },
     {
       "type": "line",
       "id": "main.s1.w25.node.line.008",
       "lineId": "main.s1.w25.line.008",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "私、ちょっと見てきます。明日、私が立つ場所を",
-      "emotion": "resolve"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "何年。竜の時間の単位だ。何千年を生きる王者が、できたばかりの、うちのちいさなチームに、年数を聞いている。馬鹿にする響きは、無かった。本当に、知りたい声だった。",
+      "emotion": "tension"
     },
     {
       "type": "line",
@@ -133,8 +113,17 @@
       "lineId": "main.s1.w25.line.009",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "リングの上には誰もいなくて、砂だけが平らにならしてあった。真ん中に立って手を叩いたら、音が四方の壁から四回返ってきた。客のいない場所が、こんなに返事をするとは思わなかった。上の通路で、誰かが小さく叩き返した。",
+      "text": "私は、答えた。何と答えたかは——明日の試合で、見せることにする。",
       "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w25.node.line.010",
+      "lineId": "main.s1.w25.line.010",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "王者は翼を広げた。飛び立つ間際、独り言が夜風に残った。「……四百年ぶりです。**明日が楽しみで、眠れそうにないのは**」。星が、一列ずつ、戻ってくる。私は宴の輪へ走った。監督が寝不足では、話にならないからだ。",
+      "emotion": "tender"
     },
     {
       "type": "choice",
@@ -142,34 +131,24 @@
       "choices": [
         {
           "id": "main.s1.w25.choice.001",
-          "label": "屋台に夜食を頼む",
-          "result": "屋台のおやじさんに「夜食を人数分」と頼んだら、鍋がまた二つ増えた。決勝前夜定食と名づけられた丼が、寝ない客と寝られない職員へ順に配られていく。経理課チームはそろばんを置き、警備隊長は一句詠んでから食べた。食べ終えた全員が、なぜか余計に目を覚ました。屋台の行列は、朝まで一度も縮まなかった。",
-          "intent": "眠れぬ夜を腹で支える",
-          "promise": "決勝当日、屋台も客席も同じ丼の話で沸き、声援が厚くなる",
-          "memory": "屋台のおやじさんが「鍋を五つ並べた夜」として今も語り草にしている",
-          "tone": "comic",
-          "effects": [
-            {
-              "type": "sharedPoints",
-              "amount": 3
-            }
-          ],
+          "label": "宴に戻って、明日の朝食の約束をする",
+          "result": "デッキから戻った私は、明日の話を、ひとつだけした。「決勝の朝、全員で朝ごはんを食べましょう。まかないの、いつもの席で」。試合の話ではなく、朝食の話。三人は一瞬きょとんとして、それから、いい顔で頷いた。大一番の前夜に要るのは、作戦より、明日もいつも通りが続くという約束だ。宴はもうひと山盛り上がって、綺麗に終わった。",
+          "intent": "決勝を、特別ではなく続きの一日にする",
+          "promise": "平常心が保てる代わりに、悲壮な決起はうちには無い",
+          "memory": "決勝の朝の朝食の約束が、チームの儀式になりそうだ",
+          "tone": "tender",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
           "goto": "main.s1.w25.node.end.001"
         },
         {
           "id": "main.s1.w25.choice.002",
-          "label": "ひとりで砂に残る",
-          "result": "砂の真ん中に残って、明日の立ち位置を足で確かめた。上の通路から降りてきたのは遺失物窓口の局員さんで、盆に紙吹雪を一枚のせていた。去年の決勝で落ちて、まだ誰も取りに来ないという。私が受け取ると、局員さんは深く礼をして帰り、翌朝の会場には、紙吹雪が箱ごと届いていた。",
-          "intent": "明日の足場を体で覚える",
-          "promise": "決勝で迷わず動けるようになり、合図が一拍早く出せる",
-          "memory": "局員さんが「紙吹雪を受け取った職員」として名を控えている",
-          "tone": "tender",
-          "effects": [
-            {
-              "type": "sharedPoints",
-              "amount": 1
-            }
-          ],
+          "label": "手帳に、王者への答えを書いておく",
+          "result": "宴に戻る前に、デッキの灯りで手帳を開いた。「何年もちますか」の問いの下に、私の答えを書く。書いた答えは、誰にも見せない。明日、砂の上で見せるものを、先に言葉にしておくのは、験担ぎというより、事務員の性分だ。書き終えた頁を閉じると、手帳がいつもより、ほんの少し温かい気がした。育つ手帳は、いい手帳である。",
+          "intent": "明日見せる答えを、自分の中で先に固める",
+          "promise": "覚悟が言葉になる代わりに、答え合わせの重さも決まる",
+          "memory": "誰にも見せない答えの頁が、手帳に一枚増えた",
+          "tone": "pragmatic",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
           "goto": "main.s1.w25.node.end.001"
         }
       ]
@@ -182,8 +161,8 @@
   ],
   "debug": {
     "status": "review",
-    "sourceDocument": "docs/MAIN_STORY_STAGE1_PLAN.md",
-    "authorNote": "第25週。この闘技場の一シーズンを追うメインストーリー。人物の場面は別枠で再生される。",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "週25最大の山(10行)。シャハルの「何年もちますか」(登記ギャグ)を場外の一問として。ミミの答えは書かない(プレイヤーに答えさせる)。「四百年ぶり」が王者側の飢えを一行で。",
     "legacyGeneratedIds": false
   }
 }

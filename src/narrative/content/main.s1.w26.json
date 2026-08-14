@@ -2,37 +2,26 @@
   "schemaVersion": 1,
   "id": "main.s1.w26",
   "kind": "opening",
-  "title": "決勝当日、七つの空の下",
-  "summary": "決勝の開場準備。七つの世界の席を同じ屋根の下に並べる",
+  "title": "決勝、空の王者",
+  "summary": "復興した闘技場の決勝の朝。制御された全開と、続きの一日",
   "ownership": {
     "arcId": "main.stage1"
   },
   "trigger": {
-    "actions": [
-      "work",
-      "play",
-      "rest",
-      "search"
-    ],
-    "when": {
-      "all": [],
-      "any": [],
-      "none": []
-    },
-    "repeat": {
-      "mode": "once-per-run"
-    },
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
     "priority": 900,
     "weight": 1
   },
   "presentation": {
-    "location": "決勝会場の観客席",
+    "location": "再建なった中央闘技場(決勝)",
     "assets": [
       {
         "id": "main.s1.w26.asset.background.001",
         "kind": "background",
-        "path": "/assets/story/bg-central-atrium-photo-studio-day-v1.png",
-        "alt": "決勝会場の観客席の背景"
+        "path": "/assets/arena-daylight.png",
+        "alt": "決勝当日の闘技場の背景"
       }
     ]
   },
@@ -40,18 +29,12 @@
     {
       "type": "direction",
       "id": "main.s1.w26.node.direction.001",
-      "command": {
-        "type": "background",
-        "assetId": "main.s1.w26.asset.background.001",
-        "transition": "dissolve"
-      }
+      "command": { "type": "background", "assetId": "main.s1.w26.asset.background.001", "transition": "dissolve" }
     },
     {
       "type": "direction",
       "id": "main.s1.w26.node.direction.002",
-      "command": {
-        "type": "clearSprites"
-      }
+      "command": { "type": "clearSprites" }
     },
     {
       "type": "line",
@@ -59,8 +42,8 @@
       "lineId": "main.s1.w26.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "決勝当日。正面扉が開くまで一時間。七つの世界のうち六つは、そもそも扉を使わない。私は座席点検の札を首から下げて、まず水路の栓をひねった。通路がざぶんと満ちて、海底王国のお客様が三十名、泳ぎこんで席に着く。座り方が全員横向きだった。券売のおじさんが賭け札を油紙で包み直しながら、「今日だけは濡らせん」と唸った。",
-      "emotion": "comic"
+      "text": "決勝の朝は、まかないの匂いで始まった。約束どおり、いつもの席で、全員で朝ごはん。三人はよく食べ、私は緊張で、味噌汁を三杯飲んだ。いつも通りが、いちばん強い。",
+      "emotion": "tender"
     },
     {
       "type": "line",
@@ -68,8 +51,7 @@
       "lineId": "main.s1.w26.line.002",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "次は上空席。天空城のお客様は天窓から降りてきて、椅子を使わない。私が「この高さでお願いします!」と旗を振ると、四十名がその線にぴたりと浮かんで整列した。真下の湯気席へ「熱、上へ行きます」と声をかけたら、雲上修道院の一行が湯をもう一段張った。上から「いい湯加減ですね」、下から「上、影になってます」。開場前から近所付き合いが始まった。",
-      "emotion": "comic"
+      "text": "闘技場は、こけら落とし以来という満員だった。瓦礫を積み直した壁の席まで、人と竜と幽霊でぎっしり。趣意書の額の前には、写しを求める行列ができている。"
     },
     {
       "type": "line",
@@ -77,17 +59,16 @@
       "lineId": "main.s1.w26.line.003",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "灰よけ席では、灰の王都のお客様が灰ごと来場した。私が油紙の傘を配ると、湯気席から「こちらへ流れます」と苦情が来る。傘を斜め二十度に倒したら、灰は湯気に当たって落ち、通路に灰の道ができた。食堂のおばちゃんが箒で掃いて袋に詰め、「これ、畑の肥料になるのよ」と持って帰った。",
-      "emotion": "comic"
+      "text": "客席に、知った顔が全部あった。マダム、計測係くん、仲居さん、遺失物窓口のお姉さん、三本目の剣のおじいさん(膝に剣)。最前列には白ひげの剣士さん。腰の剣が——今日は、高く、澄んだ音で鳴っていた。",
+      "emotion": "tender"
     },
     {
       "type": "line",
       "id": "main.s1.w26.node.line.004",
       "lineId": "main.s1.w26.line.004",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "水は下! 風は上! 灰は斜め二十度! 湯気はその間! ——よし、四つ入りました。残り三つ!",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ライバルたちも来ていた。泡文字が空中に「けっしょう 100てんを みにきた」。満点は出さない海が、満点を口にした。闇は照明係を買って出て、法廷の人は「本日は傍聴です」と最上段に座った。",
       "emotion": "comic"
     },
     {
@@ -96,8 +77,8 @@
       "lineId": "main.s1.w26.line.005",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "耐熱席の最前列に席札を置くと、竜の紳士が首を下げた。「本日はモーニングを控えました。卵は固めが好みでしてね、興奮すると火が出る」。隣の暗がりへ「こちら、定員はございません」と札を置いたら、魔王城跡地からの影が七百名、きれいに折り重なって収まった。警備隊長が三度数え直し、あきらめて一句詠んだ。字余りだった。",
-      "emotion": "comic"
+      "text": "会社の観覧席にも、席札が出ていた。「物語資産管理部」。今日は、視察の顔ぶれが多い。構わない。見たいなら、見ていけばいい。うちの帳簿も、うちの全力も、磨き上げてある。",
+      "emotion": "tension"
     },
     {
       "type": "line",
@@ -105,18 +86,17 @@
       "lineId": "main.s1.w26.line.006",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私が放送室へ「開場五分前です」と伝えると、館内放送のお姉さんが涼やかな声で読み上げた。「東の階段、満潮につき閉鎖。西の回廊、灰の降下量、平年並み。上空席のお客様は、下の湯気にご慈悲を」。抑揚は完全に軍記物だった。扉の外では、地上のお客様だけが、ふつうに列に並んで、ふつうに弁当を広げて待っている。",
-      "emotion": "comic"
+      "text": "空が、翳った。翼だ。シャハルが、会場の真上でゆっくり旋回して、砂場の向こう側に降りた。着地の風で、場内の旗が一斉に鳴る。四百年、眠れないほど楽しみにされた決勝が、いま、形になった。",
+      "emotion": "tension"
     },
     {
       "type": "line",
       "id": "main.s1.w26.node.line.007",
       "lineId": "main.s1.w26.line.007",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "……六つぶんの空が、もう一枚に重なってる。あとは、ふつうの扉から入ってくるお客様だけ。私、この会場の席順、ぜんぶ言えるようになっちゃった。",
-      "emotion": "tender"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "控室で、最後の確認をした。合図はひとつ。解くのは、見せるため。壊すためじゃない。三人は頷いて、それぞれの封を、そっと撫でた。四百年の自制が、今日は誇りの形をしている。",
+      "emotion": "resolve"
     },
     {
       "type": "line",
@@ -124,7 +104,35 @@
       "lineId": "main.s1.w26.line.008",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "開場五分前。私は正面扉の前に立って、閂に手をかけた。背中で水がゆれ、風が回り、湯気が上がり、灰が斜めに落ちる。六つぶんの音が、扉一枚の裏で重なっている。閂が指の下でひとつ鳴った。外で、弁当の蓋がいっせいに閉じた。",
+      "text": "ガヤ氏の声が、割れんばかりに響いた。「復興選手権、決勝! 空の王者に挑むは——この街の、続きを作った者たち!」。言い直しの無い、まっすぐな前説だった。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w26.node.line.009",
+      "lineId": "main.s1.w26.line.009",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "ゆうべの問いに、お答えします。うちのチームは——何年でも。続きが、ある限り!",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w26.node.line.010",
+      "lineId": "main.s1.w26.line.010",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "砂場の向こうで、王者の目が細くなった。笑ったのだと、分かった。入場口の札が裏返る。第一週、一行ズレた判から始まった二十六週の、いちばん先の光へ——うちの三人が、歩き出す。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w26.node.line.011",
+      "lineId": "main.s1.w26.line.011",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "監督席に立つ。深呼吸、ひとつ。フロア長の立ち方、腹から出す声、育つ手帳。私がこの街で覚えた全部を、この一戦に持ってきた。——さあ、決勝を、始めましょう。",
       "emotion": "resolve"
     },
     {
@@ -133,34 +141,24 @@
       "choices": [
         {
           "id": "main.s1.w26.choice.001",
-          "label": "席の作法を、貼り出す",
-          "result": "私は開場五分前に、七つの世界の席の作法を一枚に書いて、どの席からも見える中央の柱へ貼った。水は静かに、風は列を崩さず、灰は斜め二十度、湯気は譲り合い、影は重ならない、火は席で吐かない、地上はふつうに。すると客が他人の欄まで読み始めた。竜の紳士が海底流の会釈を練習し、海底のお客様が油紙の傘を斜めに構える。全員が隣の世界の作法を間違えて使い出し、扉を開ける前の会場が、もう祭りになった。",
-          "intent": "七つの作法を一枚に並べる",
-          "promise": "隣の世界の作法を覚えた客が、支度を手伝ってくれる。",
-          "memory": "海底流の会釈を練習した竜の紳士が、掲示の文面を覚えている。",
-          "tone": "pragmatic",
-          "effects": [
-            {
-              "type": "sharedPoints",
-              "amount": 3
-            }
-          ],
+          "label": "最初の指示は「楽しんで!」",
+          "result": "監督としての最初の号令は、作戦ではなかった。「楽しんで!」。三人が、そろって笑うのが背中で分かった。四百年ぶりに全力を出せる相手と、全力を観たい満員の客席と、全力を許す監督。そろうものが全部そろった砂場で、楽しむなというほうが無理である。王者の翼が大きく開き、場内の歓声が、屋根を持ち上げるかと思った。",
+          "intent": "この決勝を、全員の祝祭として開ける",
+          "promise": "全員が最高の顔で戦える代わりに、監督の作戦は後回しになる",
+          "memory": "決勝の第一声「楽しんで!」が、この街の語り草になる",
+          "tone": "wild",
+          "effects": [{ "type": "sharedPoints", "amount": 3 }],
           "goto": "main.s1.w26.node.end.001"
         },
         {
           "id": "main.s1.w26.choice.002",
-          "label": "銅鑼を七度、鳴らす",
-          "result": "銅鑼は一つしかない。私は撞木を担いで、七回鳴らした。竜の谷の二拍、海底の長い一打、天空の高い一打、修道院の三つ刻み、灰の王都の重い一打、跡地の無音(振り上げて止める)、そして地上のふつうの一打。無音の番で客席が全部静まり、次の一打で場内の全員が立った。海底のお客様だけが、立てずにいっせいに浮いた。最後の一打は扉の外まで届いて、地上の列がひとつ前に詰まった。",
-          "intent": "七つの世界へ同時に合図する",
-          "promise": "七つの世界が同じ拍で動き、会場が一つになる。",
-          "memory": "無音の一打で息を止めた瞬間を、七つの世界の客が覚えている。",
-          "tone": "heroic",
-          "effects": [
-            {
-              "type": "sharedPoints",
-              "amount": 2
-            }
-          ],
+          "label": "最初の指示は「いつも通り!」",
+          "result": "「いつも通り!」。決勝だからと、特別なことは何もしない。朝ごはんを食べて、合図を確かめて、いつもの並びで立つ。それがうちの二十六週で作った型だ。王者を前に平常運転のチームを見て、客席がかえってどよめいた。「あれは、強い者の顔だ」と、最前列の剣士さんが呟いたのが、あとで実況に拾われていた。",
+          "intent": "二十六週で作った型を、そのまま出す",
+          "promise": "崩れない戦いができる代わりに、爆発力は流れ次第になる",
+          "memory": "「いつも通り」で王者に向かった決勝が、記録に残る",
+          "tone": "pragmatic",
+          "effects": [{ "type": "sharedPoints", "amount": 3 }],
           "goto": "main.s1.w26.node.end.001"
         }
       ]
@@ -173,8 +171,8 @@
   ],
   "debug": {
     "status": "review",
-    "sourceDocument": "docs/MAIN_STORY_STAGE1_PLAN.md",
-    "authorNote": "第26週。この闘技場の一シーズンを追うメインストーリー。人物の場面は別枠で再生される。",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "週26決勝(11行)。全登場人物の客席集結(週1〜25の回収)。剣の音が「高く澄んだ音」=週1の対。ミミの答え=「何年でも。続きがある限り」。試合とエピローグ/エンディング三段は実装側(台本エンディング設計)。",
     "legacyGeneratedIds": false
   }
 }

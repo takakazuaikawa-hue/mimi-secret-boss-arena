@@ -1,0 +1,269 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s1.w01",
+  "kind": "opening",
+  "title": "ポイント五倍の日",
+  "summary": "派遣一日目。初めて見る興行と、世界を三度救った常連のポイントカード",
+  "ownership": {
+    "arcId": "main.stage1"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "闘技場 正面受付",
+    "assets": [
+      {
+        "id": "main.s1.w01.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-arena-reception.png",
+        "alt": "闘技場の正面受付の背景"
+      },
+      {
+        "id": "main.s1.w01.asset.background.002",
+        "kind": "background",
+        "path": "/assets/arena-daylight.png",
+        "alt": "昼の闘技場の客席と砂場"
+      },
+      {
+        "id": "main.s1.w01.asset.outcome.001",
+        "kind": "still",
+        "path": "/assets/story/events/main-s1-ep1-outcome-tender-v1.png",
+        "alt": "受付で即答して、名簿のいちばん上に名前が載るミミ",
+        "focusX": 50,
+        "focusY": 46,
+        "gallery": {
+          "title": "即答の署名",
+          "chapter": "第1週 / ポイント五倍の日",
+          "caption": "引き受けます、と即答した夕方。責任者の三文字が、知らない名簿のいちばん上に載った。",
+          "unlock": "on-choice",
+          "choiceId": "main.s1.w01.choice.001"
+        }
+      },
+      {
+        "id": "main.s1.w01.asset.outcome.002",
+        "kind": "still",
+        "path": "/assets/story/events/main-s1-ep1-outcome-defiant-v1.png",
+        "alt": "名簿に鉛筆書きで名前を残して帰るミミ",
+        "focusX": 50,
+        "focusY": 46,
+        "gallery": {
+          "title": "鉛筆書きの名前",
+          "chapter": "第1週 / ポイント五倍の日",
+          "caption": "考えさせてください、と返した夜。名簿には鉛筆の細い字で、消えない気のする名前が残った。",
+          "unlock": "on-choice",
+          "choiceId": "main.s1.w01.choice.002"
+        }
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s1.w01.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s1.w01.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.w01.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w01.node.line.001",
+      "lineId": "main.s1.w01.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "開場前の闘技場は、石の冷たさと、揚げ油の匂いがした。天井が高くて、足音がよく響く。受付台は、うちのカジノの台より低い。名札の紐が、首にちくちくする。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w01.node.line.002",
+      "lineId": "main.s1.w01.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "派遣票には「闘技場の臨時接客・一日」。仕事は三つ聞いている。給仕、受付の手つだい、倉庫の数かぞえ。夕方にはカジノへ帰って、いつもの台に立つ。それだけの一日の、はずだ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w01.node.line.003",
+      "lineId": "main.s1.w01.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "受付のノノさんは、挨拶の途中で時計を見た。「ミミさんですね! 受付のノノです。よろしくお願いします。あ、開場五分前なので——走りますよ」。走った。初日の廊下は、長い。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w01.node.line.004",
+      "lineId": "main.s1.w01.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "すれ違う人が、みんな会釈をくれた。鎧の人、司書っぽい人、頭に王冠の跡がある人。挨拶のたび、名札をちらりと見られる。新入りは、匂いで分かるらしい。",
+      "emotion": "comic"
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.w01.node.direction.003",
+      "command": { "type": "background", "assetId": "main.s1.w01.asset.background.002", "transition": "dissolve" }
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w01.node.line.005",
+      "lineId": "main.s1.w01.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "最初の仕事は、客席への給仕だった。扉を開けたとたん、地鳴りみたいな歓声。砂の上では、鎧の巨人と炎の狼が打ち合っている。本物の試合だ。トレーの上で、果実水が波打った。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w01.node.line.006",
+      "lineId": "main.s1.w01.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "お客さんは全員、紙の札を握っていた。銅鑼が鳴って決着すると、右半分が万歳して、左半分が札をちぎって空へ投げた。紙吹雪は、悔しさの形らしい。つまりここは——強い人の試合に、みんなでお金を賭ける場所だ。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w01.node.line.007",
+      "lineId": "main.s1.w01.line.007",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "お客様、こぼれます! 万歳は、お飲み物を置いてからです!",
+      "emotion": "comic"
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.w01.node.direction.004",
+      "command": { "type": "background", "assetId": "main.s1.w01.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w01.node.line.008",
+      "lineId": "main.s1.w01.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "受付へ戻ると、白ひげの剣士さんが並んでいた。腰の剣が、鞘の中で低く鳴りつづけている。「世界を三度すくった者だが」「はい」「ポイント五倍は、今日かね」。今日です。判を押した。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w01.node.line.009",
+      "lineId": "main.s1.w01.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "五倍の判を押しながら、考えないようにした。三度って、なんですか。世界って、どの世界ですか。考え出すと、判がずれる。接客の鉄則——手が動いている間は、心は驚かない。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w01.node.line.010",
+      "lineId": "main.s1.w01.line.010",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "次のお客様は、頭が三つある犬のかただった。三つの口が、べつべつの飲み物を頼む。お会計は一つでいいらしい。どの口が払うかで五分もめて、真ん中が払った。伝説って、細かい。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w01.node.line.011",
+      "lineId": "main.s1.w01.line.011",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "お昼、門の外にバスが停まった。行き先の札に「魔王城あと地・日帰り」。……行く場所なんだ、魔王城。ほろぼすんじゃなくて。ノノさんが言い添えた。「いいところですよ。売店の『城壁のかけら』、無限に出てくるんです」。在庫の仕組みは、聞かないことにした。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w01.node.line.012",
+      "lineId": "main.s1.w01.line.012",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "午後、疑問が限界になった。強そうな人ほど、観客席で拍手をしている。あんなに強いなら、試合をすればいいのに。聞くと、ノノさんはにこにこ答えた。「お客様はみなさん、お強いんですよ。強くて——お暇なんです」。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w01.node.line.013",
+      "lineId": "main.s1.w01.line.013",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "それで、あの剣の音の正体がわかった。鳴っていたんじゃない。鳴らす場面が、もう来ないのだ。強いままで、終わった人たち。この街の観客席には、物語の続きが座っている。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w01.node.line.014",
+      "lineId": "main.s1.w01.line.014",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "夕方は、払い戻しの行列も手伝った。配当の計算は、カジノのチップ交換とまるで同じだ。接客歴半年、こういう時だけ胸を張れる。締めまでに伝説を四十人さばいて、最後の判は今日いちばん、いい音がした。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w01.node.line.015",
+      "lineId": "main.s1.w01.line.015",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "くたくたで、少しだけ、楽しかった。兎の耳の片方が折れていて、鏡の前で直す。明日はカジノへ帰れる、と思う。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w01.node.line.016",
+      "lineId": "main.s1.w01.line.016",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "帰りぎわ、ノノさんが手帳を出した。「このあと引き継ぎの立ち会いがあるんです。現場責任者の欄、ミミさんでお願いしますね」。……せきにんしゃ?",
+      "emotion": "tension"
+    },
+    {
+      "type": "choice",
+      "id": "main.s1.w01.node.choice.001",
+      "choices": [
+        {
+          "id": "main.s1.w01.choice.001",
+          "label": "引き受けます、と即答する",
+          "result": "「助かります!」。ノノさんの字は、丸くて大きい。責任者、の三文字が、知らない名簿のいちばん上に載った。載ってから、下の行の多さに気づく。この名簿、何の名簿ですか。「このあとのお楽しみです」。楽しみって言った、いま。私は接客用の笑顔で、笑い返しておいた。",
+          "intent": "頼られた仕事を、その場で受ける",
+          "promise": "話が早く進む代わりに、知らない名簿の一番上に名前が残る",
+          "memory": "ノノさんが、即答の速さを覚えている",
+          "tone": "heroic",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "goto": "main.s1.w01.node.end.001"
+        },
+        {
+          "id": "main.s1.w01.choice.002",
+          "label": "少しだけ、考えさせてくださいと返す",
+          "result": "ノノさんは怒らなかった。「では、鉛筆で書いておきますね」。消せる書き方のはずなのに、消えない気がする字だった。窓の外で、兎の耳が夜風にゆれる。考える、と言った時点で、半分引き受けている。接客歴半年。自分のことも、ちょっとは分かってきている。",
+          "intent": "カジノの日常へ帰る道を、まだ閉じない",
+          "promise": "退路を残す代わりに、返事はもう半分済んでいる",
+          "memory": "名簿に、鉛筆書きの名前が残っている",
+          "tone": "pragmatic",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "goto": "main.s1.w01.node.end.001"
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "main.s1.w01.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "週1ティーザー(増量版16行)。仕組み学習=興行と賭けの構造(給仕と払い戻しの実務で)。一遊び=伝説の肩書×実務の細かさ(剣士→三つ首犬→四十人さばく外し)。引き=保留された返事。",
+    "legacyGeneratedIds": false
+  }
+}

@@ -2,37 +2,26 @@
   "schemaVersion": 1,
   "id": "main.s1.w10",
   "kind": "opening",
-  "title": "七つの世界のまかない",
-  "summary": "食堂の応援で、七つの世界のまかない争奪戦が起きる",
+  "title": "黒い封筒は、よそのチームに",
+  "summary": "掲示板前で見た黒い角封筒と、うちに届いた白い封筒",
   "ownership": {
     "arcId": "main.stage1"
   },
   "trigger": {
-    "actions": [
-      "work",
-      "play",
-      "rest",
-      "search"
-    ],
-    "when": {
-      "all": [],
-      "any": [],
-      "none": []
-    },
-    "repeat": {
-      "mode": "once-per-run"
-    },
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
     "priority": 900,
     "weight": 1
   },
   "presentation": {
-    "location": "闘技場地下の従業員食堂",
+    "location": "闘技場 正面受付",
     "assets": [
       {
         "id": "main.s1.w10.asset.background.001",
         "kind": "background",
-        "path": "/assets/story/bg-employee-cafeteria-day-v1.png",
-        "alt": "闘技場地下の従業員食堂の背景"
+        "path": "/assets/story/bg-arena-reception.png",
+        "alt": "闘技場の正面受付の背景"
       }
     ]
   },
@@ -40,18 +29,12 @@
     {
       "type": "direction",
       "id": "main.s1.w10.node.direction.001",
-      "command": {
-        "type": "background",
-        "assetId": "main.s1.w10.asset.background.001",
-        "transition": "dissolve"
-      }
+      "command": { "type": "background", "assetId": "main.s1.w10.asset.background.001", "transition": "dissolve" }
     },
     {
       "type": "direction",
       "id": "main.s1.w10.node.direction.002",
-      "command": {
-        "type": "clearSprites"
-      }
+      "command": { "type": "clearSprites" }
     },
     {
       "type": "line",
@@ -59,8 +42,8 @@
       "lineId": "main.s1.w10.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私が配膳の台車を押して食堂の扉を開けた途端、竜の紳士が首を伸ばして息を吐いた。鉄板の卵が一斉に固まり、二十人分の目玉焼きが同時に焼き上がった。「固めで」と紳士が言った。もう固かった。",
-      "emotion": "comic"
+      "text": "朝の掲示板前で、それを見た。よそのチームの監督さんが、配達人から封筒を受け取っている。黒い、角封筒。角がぴんと立って、封に赤い蝋。",
+      "emotion": "tension"
     },
     {
       "type": "line",
@@ -68,18 +51,16 @@
       "lineId": "main.s1.w10.line.002",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私が皿を配って回ると、幽霊のご夫妻が鉄板へ顔を寄せて湯気を吸い込んだ。皿の数は減らないのに、匂いだけが先に無くなった。おばちゃんが玉杓子で鍋の縁を叩く。「匂いの分も勘定に入れな」",
-      "emotion": "comic"
+      "text": "受け取った監督さんの顔から、順番に色が引いていくのが、遠目にも分かった。周りの人たちが、すっと目をそらす。そらし方が、慣れていた。"
     },
     {
       "type": "line",
       "id": "main.s1.w10.node.line.003",
       "lineId": "main.s1.w10.line.003",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "雲上修道院のお客さまには霞をお出しします。濃さはいかがいたしましょう",
-      "emotion": "comic"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ノノさんが、小声で言った。「あれが来たら、大体——選手が、いなくなるんです」。いなくなる? 回収? 移籍? 聞き返す前に、ノノさんは仕事の顔に戻ってしまった。受付の人が仕事の顔に戻るのは、聞くな、の合図である。",
+      "emotion": "tension"
     },
     {
       "type": "line",
@@ -87,7 +68,7 @@
       "lineId": "main.s1.w10.line.004",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "巡礼が「薄めで」と答えた瞬間、海底王国の使者が卓を叩いた。「塩気が足りん」私が味噌汁の椀を差し出すと、使者はその上で自分の袖をぎゅっと絞った。汁が潮の匂いになり、隣の卓で経理課チームのそろばんが白く粉を吹いた。",
+      "text": "かわりに、うちの郵便受けを、全員でそっと確認しに行った。白い封筒が、一通だけ。全員の息が、そろって漏れた。安堵のため息は、種族が違っても同じ音がするらしい。",
       "emotion": "comic"
     },
     {
@@ -96,8 +77,8 @@
       "lineId": "main.s1.w10.line.005",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私が最後の一山になった焼きそばへ箸を入れ、二つに分けようとした。灰の王都の門番と、魔王城跡地の土木作業員が、左右から同時に箸を伸ばす。従業員も客も、食堂中の箸が止まった。私は台車の陰へ下がった。",
-      "emotion": "tension"
+      "text": "白い封筒の中身は、「資産価値予備調査のお知らせ」。読める字しか書いていないのに、意味の分からない文書というものが、世の中にはある。",
+      "emotion": "comic"
     },
     {
       "type": "line",
@@ -105,18 +86,17 @@
       "lineId": "main.s1.w10.line.006",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私が銅鑼へ手を伸ばすより早く、おばちゃんが玉杓子でそれを叩いた。「うちの机で腕相撲はやめな。先週、脚が折れた」代わりに空の大鍋を二人の間へ置く。「担いで三十秒。先に下ろした方が運ぶ側だ」門番と作業員が鍋の耳をつかんだ。館内放送のお姉さんが涼やかな声で「両雄、鍋を挟んで相見えたり」と読み上げた。",
-      "emotion": "comic"
+      "text": "ノノさんに見せると、めずらしく眉が困った形になった。「会社が、おたくの帳簿を見に来ます、というお知らせです。最上級ですから……注目されてるんですね」。",
+      "emotion": "tension"
     },
     {
       "type": "line",
       "id": "main.s1.w10.node.line.007",
       "lineId": "main.s1.w10.line.007",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "勝った人が大盛りですか",
-      "emotion": "comic"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "帳簿なら見せられる。うちの帳簿は、希望欄が自慢だ。そう言うと、ノノさんは少しだけ笑って——それから、笑いを引っ込めた。「会社が見るのは、たぶん、希望欄じゃないです」。",
+      "emotion": "revelation"
     },
     {
       "type": "line",
@@ -124,8 +104,8 @@
       "lineId": "main.s1.w10.line.008",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "おばちゃんは寸胴を覗いたまま答えた。「両方大盛りだよ。腹が減ってる奴が二人いるだけさ」三十秒、鍋は床に着かなかった。二人は鍋を下ろし、同じ高さに盛られた皿を並んで啜った。",
-      "emotion": "comic"
+      "text": "じゃあ、何を見るのか。答えの代わりに、掲示板の向こうを、黒い封筒の監督さんが、うつむいて歩いていった。誰も、声をかけなかった。かけない街なのではなく、かけられない朝なのだと思う。",
+      "emotion": "tender"
     },
     {
       "type": "line",
@@ -133,7 +113,16 @@
       "lineId": "main.s1.w10.line.009",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私が空の大鍋を洗い場へ運ぼうとすると、おばちゃんはそれを私の腕へ押し戻した。「来週は千人分だ。仕込みから入りな」抱え直した拍子に、鍋の底で何かが低く鳴った。覗き込むと、銅鑼が沈んでいた。おばちゃんは玉杓子で私の背中を押す。「鳴らすのはあんただよ」",
+      "text": "午後は、普通に働いた。判を押して、行列を捌いて、まかないを食べた。普通に働けることが、今日はなんだか、ありがたかった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w10.node.line.010",
+      "lineId": "main.s1.w10.line.010",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "締めの前、手帳の負債の頁をもう一度開いた。数字は、変わらない。変わらない数字の下に、私は小さく書き足した。「希望欄は、渡さない」。",
       "emotion": "resolve"
     },
     {
@@ -142,34 +131,24 @@
       "choices": [
         {
           "id": "main.s1.w10.choice.001",
-          "label": "塩の壺を担いで走る",
-          "result": "私が塩の壺を抱えて海底王国の使者の卓へ走ると、使者は蓋も開けず壺ごと汁椀へ沈めた。椀の中が海になった。竜の紳士が味見に一口舐め、遠慮がちに火を吐く。立ちのぼった湯気が屋根裏まで届き、幽霊のご夫妻が二人そろって満腹の顔で降りてきた。おばちゃんは帳面に書き足した。「匂いの客が一番安上がりだ」",
-          "intent": "まず腹の不満を先に消す",
-          "promise": "七つの世界分の味付けを回す度胸",
-          "memory": "食堂のおばちゃんが、壺ごと汁椀へ沈められた塩を覚えている",
-          "tone": "pragmatic",
-          "effects": [
-            {
-              "type": "sharedPoints",
-              "amount": 2
-            }
-          ],
+          "label": "調査の日程を、こちらから指定する",
+          "result": "受け身は性に合わない。「予備調査、うちは今週でも結構です」と返信を書いた。ノノさんが目を丸くする。「日程を指定した監督さん、初めて見ました」。指定したところで、見られる帳簿は同じだ。それでも、待つのと迎えるのとでは、姿勢が違う。返信の控えを手帳に挟むと、隣の頁の「希望欄は、渡さない」が、少しだけ頼もしく見えた。",
+          "intent": "見られる側ではなく、迎える側に立つ",
+          "promise": "主導権の形が残る代わりに、準備の時間は短くなる",
+          "memory": "日程を指定してきた監督、として会社側に記録が残る",
+          "tone": "defiant",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
           "goto": "main.s1.w10.node.end.001"
         },
         {
           "id": "main.s1.w10.choice.002",
-          "label": "空の大鍋をもう一つ運び出す",
-          "result": "私が空の大鍋をもう一つ担いで運び込むと、おばちゃんが玉杓子で銅鑼を三つ叩いた。鍋担ぎが二組同時に始まり、灰の王都の門番と魔王城跡地の作業員は三十秒で肩を並べた。列は倍に伸びたのに、大皿の減りは半分になった。券売のおじさんがいつの間にか勝敗の札を売っていて、警備隊長は一句詠んでいる途中で鍋を落とした。",
-          "intent": "揉め事を全部試合へ流す",
-          "promise": "食堂の混雑を銅鑼一つで裁く手際",
-          "memory": "券売のおじさんが、まかない賭けの初日を覚えている",
-          "tone": "wild",
-          "effects": [
-            {
-              "type": "sharedPoints",
-              "amount": 3
-            }
-          ],
+          "label": "調査の前に、帳簿を磨き上げる",
+          "result": "その夜から、帳簿の大掃除を始めた。数字の突き合わせ、控えの整理、頁の順番。事務は、私の庭である。磨き上がった帳簿は、我ながら美しかった。ノノさんが感嘆した。「これ、受付の見本にしたいです」。どうぞ。見られて困る帳簿より、見せたくなる帳簿の方が、きっと強い。負債の数字は変わらないが、並べ方は変えられる。",
+          "intent": "見られる前提で、足元を固める",
+          "promise": "帳簿に隙が無くなる代わりに、数字そのものは変わらない",
+          "memory": "見本になった帳簿の評判が、受付から静かに広がる",
+          "tone": "pragmatic",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
           "goto": "main.s1.w10.node.end.001"
         }
       ]
@@ -182,8 +161,8 @@
   ],
   "debug": {
     "status": "review",
-    "sourceDocument": "docs/MAIN_STORY_STAGE1_PLAN.md",
-    "authorNote": "第10週。この闘技場の一シーズンを追うメインストーリー。人物の場面は別枠で再生される。",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "週10(10行)。中心対立のリマインダー。黒角封筒は遠景一度だけ(キャラ個別の危機の書式と共通)。仕組み学習=会社と資産管理の目線の存在。白封筒=事務段階の区別。",
     "legacyGeneratedIds": false
   }
 }

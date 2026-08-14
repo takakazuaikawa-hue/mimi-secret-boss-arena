@@ -1,0 +1,177 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s1.w06",
+  "kind": "opening",
+  "title": "規定により、訂正できません",
+  "summary": "勝ちすぎたので、辞められない。四百年ぶりの珍事として祝われる",
+  "ownership": {
+    "arcId": "main.stage1"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "闘技場 正面受付",
+    "assets": [
+      {
+        "id": "main.s1.w06.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-arena-reception.png",
+        "alt": "闘技場の正面受付の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s1.w06.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s1.w06.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.w06.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w06.node.line.001",
+      "lineId": "main.s1.w06.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "休み明けの受付は、判子の音がよく響く。私の机にも、封筒がひとつ届いていた。赤い社印。片道五日の、返事が来たのだ。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w06.node.line.002",
+      "lineId": "main.s1.w06.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "中身は分かっている。名義訂正、受理。それで私は派遣に戻る。温泉で心も決めてきた。ちゃんと引き継いで、綺麗に戻ろう、と。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w06.node.line.003",
+      "lineId": "main.s1.w06.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「名義変更の申請は、保留します」。……ほりゅう。理由の欄を三度読んだ。「最上級ランク在籍中の名義変更は、興行保全規定により認められません」。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w06.node.line.004",
+      "lineId": "main.s1.w06.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "つまり、こうだ。うちが勝ちすぎて最上級に上がったので、辞められない。私は書類を持ったまま、受付の台に、静かにおでこを付けた。台は冷たくて、少しだけ気持ちよかった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w06.node.line.005",
+      "lineId": "main.s1.w06.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「オーナーさん、台が凹みます」。凹みません。凹んでいるのは、私です。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w06.node.line.006",
+      "lineId": "main.s1.w06.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "続けて二通目。「最上級所属チームには、興行義務が発生します」。大会は四週ごと。あいだの三週は準備と育成に——と、手引きまで付いた一覧が、二十六週ぶん几帳面に印字されていた。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w06.node.line.007",
+      "lineId": "main.s1.w06.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ノノさんに両方見せた。彼女は二通を見比べて、輝くような笑顔で言った。「はい! すごいことです! 最上級で辞められなくなった方、この街で四百年ぶりです!」。喜ばれてしまった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w06.node.line.008",
+      "lineId": "main.s1.w06.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "四百年ぶり。その響きに職員さんたちが集まってきて、拍手が起きた。おめでたい話として。回覧板が回り、どこかで銅鑼まで鳴った。私の「戻る」は、拍手の中で静かに遠くなった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w06.node.line.009",
+      "lineId": "main.s1.w06.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "マダムまで噂を聞いて駆けつけて、目を潤ませた。「四百年ぶりですって? やっぱり、似合うのよ」。だから、似合うとかじゃないんですよ、マダム。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w06.node.line.010",
+      "lineId": "main.s1.w06.line.010",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "悔しいのに、拍手に手を振ってしまった。接客歴半年の反射である。振りながら、考えた。戻れないなら——ここで、どう立つか。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w06.node.line.011",
+      "lineId": "main.s1.w06.line.011",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "手帳に、新しい欄が開いていた。「興行義務: 残り26週」。二十六。私は初めて、その数字を自分の予定として見た。",
+      "emotion": "tension"
+    },
+    {
+      "type": "choice",
+      "id": "main.s1.w06.node.choice.001",
+      "choices": [
+        {
+          "id": "main.s1.w06.choice.001",
+          "label": "二十六週、やり切る前提で組み直す",
+          "result": "手帳の一頁目に、二十六個の枠を書いた。書いてしまえば、ただの予定表である。予定表は、埋めれば減る。カジノで学んだ持論だ——番号を振れば、化け物も行列になる。ノノさんが横から金の付箋をくれた。「大会の週です」。付箋は七枚あった。七回。うちは、あと七回も試合をするらしい。",
+          "intent": "戻れない前提を、予定表に変えて引き受ける",
+          "promise": "腹が据わる代わりに、二十六週の枠が全部自分の予定になる",
+          "memory": "金の付箋七枚が、大会の週を先に教えている",
+          "tone": "heroic",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "goto": "main.s1.w06.node.end.001"
+        },
+        {
+          "id": "main.s1.w06.choice.002",
+          "label": "並行して、規定の例外も探してもらう",
+          "result": "「例外規定は、あります」とノノさんが言った。「ただし審査は本社で、片道五日の書類が、たぶん三往復です」。往復十五日が三回。指を折って数えて、やめた。それでも申請は出した。出した控えを手帳に挟むと、手帳が少しだけ厚くなった。厚くなる手帳は、悪くない。",
+          "intent": "やり切る覚悟と、戻る道の両方を持っておく",
+          "promise": "退路の申請が生きる代わりに、答えはずっと先になる",
+          "memory": "例外申請の控えが、手帳に挟まったままになる",
+          "tone": "pragmatic",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "goto": "main.s1.w06.node.end.001"
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "main.s1.w06.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "週6・幕一の引き(増量版11行)。仕組み学習=興行義務と26週シーズン(大会は四週ごと=ゲームのループ説明)。悲報が祝賀に反転する転。選択Bは週14の伏線。",
+    "legacyGeneratedIds": false
+  }
+}

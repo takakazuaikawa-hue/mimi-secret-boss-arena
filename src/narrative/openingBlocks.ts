@@ -1,8 +1,8 @@
-﻿import mainStageOneEpisodeOneSource from "./content/main.s1.ep1.json";
-import mainStageOneEpisodeTwoSource from "./content/main.s1.ep2.json";
-import mainStageOneEpisodeThreeSource from "./content/main.s1.ep3.json";
-import mainStageOneEpisodeFourSource from "./content/main.s1.ep4.json";
-import mainStageOneEpisodeFiveSource from "./content/main.s1.ep5.json";
+﻿import mainStageOneWeek01Source from "./content/main.s1.w01.json";
+import mainStageOneWeek02Source from "./content/main.s1.w02.json";
+import mainStageOneWeek03Source from "./content/main.s1.w03.json";
+import mainStageOneWeek06Source from "./content/main.s1.w06.json";
+import mainStageOneWeek07Source from "./content/main.s1.w07.json";
 import mainStageTwoEp1Source from "./content/main.s2.ep1.json";
 import mainStageTwoEp2Source from "./content/main.s2.ep2.json";
 import mainStageTwoEp3Source from "./content/main.s2.ep3.json";
@@ -41,26 +41,6 @@ import {
   type NarrativeEventBlock,
 } from "./schema";
 
-export const mainStageOneEpisodeOneBlock = narrativeEventBlockSchema.parse(
-  mainStageOneEpisodeOneSource,
-);
-
-export const mainStageOneEpisodeTwoBlock = narrativeEventBlockSchema.parse(
-  mainStageOneEpisodeTwoSource,
-);
-
-export const mainStageOneEpisodeThreeBlock = narrativeEventBlockSchema.parse(
-  mainStageOneEpisodeThreeSource,
-);
-
-export const mainStageOneEpisodeFourBlock = narrativeEventBlockSchema.parse(
-  mainStageOneEpisodeFourSource,
-);
-
-export const mainStageOneEpisodeFiveBlock = narrativeEventBlockSchema.parse(
-  mainStageOneEpisodeFiveSource,
-);
-
 export const mainStageTwoEpisodeBlocks = [
   mainStageTwoEp1Source,
   mainStageTwoEp2Source,
@@ -77,6 +57,8 @@ export const mainStageThreeEpisodeBlocks = [
   mainStageThreeEp5Source,
 ].map((source) => narrativeEventBlockSchema.parse(source));
 
+// 週替わりメインの本体。末尾5つ(添字21〜25)は週1・2・3・6・7ぶん。
+// 添字はエンジンの mainStoryEpisodes が参照するため、途中挿入はしないこと。
 export const mainStageOneWeeklyBlocks = [
   mainStageOneWeek04Source,
   mainStageOneWeek05Source,
@@ -99,6 +81,11 @@ export const mainStageOneWeeklyBlocks = [
   mainStageOneWeek24Source,
   mainStageOneWeek25Source,
   mainStageOneWeek26Source,
+  mainStageOneWeek01Source,
+  mainStageOneWeek02Source,
+  mainStageOneWeek03Source,
+  mainStageOneWeek06Source,
+  mainStageOneWeek07Source,
 ].map((source) => narrativeEventBlockSchema.parse(source));
 
 export const openingOwnershipBlock = narrativeEventBlockSchema.parse(
@@ -112,11 +99,6 @@ export const openingHotSpringBlock = narrativeEventBlockSchema.parse(
 export const legacyOpeningNarrativeBlocks: NarrativeEventBlock[] = [
   openingOwnershipBlock,
   openingHotSpringBlock,
-  mainStageOneEpisodeOneBlock,
-  mainStageOneEpisodeTwoBlock,
-  mainStageOneEpisodeThreeBlock,
-  mainStageOneEpisodeFourBlock,
-  mainStageOneEpisodeFiveBlock,
   ...mainStageOneWeeklyBlocks,
   ...mainStageTwoEpisodeBlocks,
   ...mainStageThreeEpisodeBlocks,

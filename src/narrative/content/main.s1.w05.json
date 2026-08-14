@@ -2,37 +2,26 @@
   "schemaVersion": 1,
   "id": "main.s1.w05",
   "kind": "opening",
-  "title": "湯の作法、七通り",
-  "summary": "勝利報酬の温泉で、ミミが初めて休む",
+  "title": "速達は、湯より速い",
+  "summary": "温泉への道中。最上級への異常昇格が、山道まで追いかけてくる",
   "ownership": {
     "arcId": "main.stage1"
   },
   "trigger": {
-    "actions": [
-      "work",
-      "play",
-      "rest",
-      "search"
-    ],
-    "when": {
-      "all": [],
-      "any": [],
-      "none": []
-    },
-    "repeat": {
-      "mode": "once-per-run"
-    },
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
     "priority": 900,
     "weight": 1
   },
   "presentation": {
-    "location": "七辻温泉 大浴場と縁側",
+    "location": "温泉旅館「鏡見の湯」門前",
     "assets": [
       {
         "id": "main.s1.w05.asset.background.001",
         "kind": "background",
         "path": "/assets/story/bg-hot-spring-ryokan.png",
-        "alt": "七辻温泉 大浴場と縁側の背景"
+        "alt": "温泉旅館の門前の背景"
       }
     ]
   },
@@ -40,18 +29,12 @@
     {
       "type": "direction",
       "id": "main.s1.w05.node.direction.001",
-      "command": {
-        "type": "background",
-        "assetId": "main.s1.w05.asset.background.001",
-        "transition": "dissolve"
-      }
+      "command": { "type": "background", "assetId": "main.s1.w05.asset.background.001", "transition": "dissolve" }
     },
     {
       "type": "direction",
       "id": "main.s1.w05.node.direction.002",
-      "command": {
-        "type": "clearSprites"
-      }
+      "command": { "type": "clearSprites" }
     },
     {
       "type": "line",
@@ -59,18 +42,16 @@
       "lineId": "main.s1.w05.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ミミが暖簾をくぐると、仲居さんが番号札を七枚まとめて突き出した。「竜のお客様は釜場、幽霊のお客様は三階の湯気、人魚のお客様は塩を足した二番湯、雲上のお客様は湯上がりの縁側、灰の王都のお客様は打たせ湯、魔王城跡地のお客様は水風呂でございます」息継ぎが一度もなかった。",
+      "text": "山道のバスは、硫黄の匂いが先に来た。膝の上に、大会の白い封筒。隣の席から通路まで、うちの選手がぎゅうぎゅうに詰まっている。",
       "emotion": "comic"
     },
     {
       "type": "line",
       "id": "main.s1.w05.node.line.002",
       "lineId": "main.s1.w05.line.002",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "あの、私の札はどこですか",
-      "emotion": "comic"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "行き先は温泉旅館「鏡見の湯」。賞品として、あるいは商店会の押し切りとして、旅は決まった。今日の目標はひとつだけ。仕事を、忘れる。"
     },
     {
       "type": "line",
@@ -78,8 +59,8 @@
       "lineId": "main.s1.w05.line.003",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "仲居さんは手元に残った七枚目を、見もせずに差し出した。「お客様は、何もしないお部屋でございます」ミミの手から札が落ちた。拾ったのは遺失物窓口の局員さんで、その場で台帳を開いた。休みの日まで台帳を持ち歩いていた。",
-      "emotion": "comic"
+      "text": "忘れさせてくれなかった。出発直前、速達が私を追いかけてきたのだ。差出人、闘技場計測室。「貴チームの測定値、計測上限を超過。規定により、ランクを最上級へ訂正します」。",
+      "emotion": "tension"
     },
     {
       "type": "line",
@@ -87,8 +68,8 @@
       "lineId": "main.s1.w05.line.004",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ミミが釜場を覗くと、竜の紳士が尻尾の先だけを湯に浸けていた。「今日は四十二度で承っている」紳士は湯気の向こうで言った。「卵は固めが好みだが、湯は柔らかめでね」釜焚きが三人がかりで温度計を読んでいた。",
-      "emotion": "comic"
+      "text": "最上級。同封のランク表を見る。銅、鉄、銀、金、竜金——そして最上級。普通は一段ずつ、何年もかけて上がる階段らしい。うちは初戦で、七段飛ばした。",
+      "emotion": "revelation"
     },
     {
       "type": "line",
@@ -96,7 +77,7 @@
       "lineId": "main.s1.w05.line.005",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ミミが三階へ上がって手を振ると、湯気の層に浮かんだ幽霊のご夫妻が振り返した。奥さんが新聞を二部たたんで枕にする。ご主人が「湯加減は上々」と言った瞬間、湯気がひとまわり濃くなり、ミミの前髪がぺたりと寝た。",
+      "text": "バスの中で、回し読みが始まった。選手たちは妙に嬉しそうだ。「最上級」「ほう、最上級」「ふふ。最上級」。単語の響きだけで三回楽しめる人たちである。私だけが、要項の「義務」の頁を探していた。",
       "emotion": "comic"
     },
     {
@@ -105,18 +86,17 @@
       "lineId": "main.s1.w05.line.006",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ミミが二番湯を覗くと、人魚の客が塩の壺を抱えて唸っていた。「真水は薄い」仲居さんが壺ごと湯へ落とした。湯が海になった。縁側の警備隊長が一句詠む。「湯けむりや 塩壺ひとつ 海となる」経理課チームが法被のまま拍手し、そろばんが濡れた。",
+      "text": "同封の選手証は顔写真入りで、つやつやの金縁だった。派遣の名札より立派な身分証を、私は人生で初めて持った。持ちたかった形とは、ちょっと違う。",
       "emotion": "comic"
     },
     {
       "type": "line",
       "id": "main.s1.w05.node.line.007",
       "lineId": "main.s1.w05.line.007",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "休むって、具体的には何をすればいいんでしょう",
-      "emotion": "tender"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "車窓が山に変わる頃、気づいた。この速達、宛名が「監督 ミミ様」だ。暫定でも、代理でもなく。誰かの書き間違いだ。書き間違いのはずなのに、封筒を、捨てられない。",
+      "emotion": "revelation"
     },
     {
       "type": "line",
@@ -124,8 +104,8 @@
       "lineId": "main.s1.w05.line.008",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "仲居さんはミミを縁側に座らせ、何も渡さなかった。隣の雲上の客が目を閉じている。「湯よりも、この風がいいのです」と言ったきり動かない。ミミも真似して目を閉じた。三十秒で寝た。仲居さんが襖を静かに閉めた。",
-      "emotion": "tender"
+      "text": "隣の席から、ひょいと封筒を覗かれた。「監督、と書いてあるな」「見ないでください」「事実ではないか」「事実じゃないんです、まだ」。——まだ、と言ってから、まだって何だ、と自分で思った。",
+      "emotion": "comic"
     },
     {
       "type": "line",
@@ -133,8 +113,26 @@
       "lineId": "main.s1.w05.line.009",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "帰りのバスにミミが乗り込むと、誰も予約していない座席が一つ増えていた。「毎年ございます」仲居さんはそう言って、その席に湯上がりの牛乳を一本置いた。山を下りきったとき、瓶は倒れないまま空になっていた。",
-      "emotion": "comic"
+      "text": "宿が見えた。谷あいに灯り、湯気が立っている。門前の効能書きに、大きな筆文字。「すべての疲れに効く」。すべて。……名義の疲れにも、効くだろうか。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w05.node.line.010",
+      "lineId": "main.s1.w05.line.010",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "バスを降りると、山の空気が冷たくて、湯の匂いが濃かった。肩の力が、勝手に抜けていく。今日はもう、手帳を開かない。開かないったら、開かない。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w05.node.line.011",
+      "lineId": "main.s1.w05.line.011",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "暖簾の前で、仲居さんが深々と頭を下げた。「お待ちしておりました——最上級の皆さま。お布団、上等なのに替えておきました。最上級ですので」。……もう知られているし、ランクで布団が変わる宿だった。",
+      "emotion": "tension"
     },
     {
       "type": "choice",
@@ -142,34 +140,24 @@
       "choices": [
         {
           "id": "main.s1.w05.choice.001",
-          "label": "もう一度目を閉じる",
-          "result": "ミミが縁側で目を閉じ直すと、雲上の客が風の向きを一度だけ変えてくれた。仲居さんは通りすがりに膝掛けを置き、何も言わずに行った。三十分後、そろばんの音で目が覚めた。「休憩、きっちり三十分でした」と経理課の主任が言った。廊下の端では、竜の紳士が尻尾で人払いをしていた。",
-          "intent": "休むを最後までやり切る",
-          "promise": "縁側の三十分と、廊下で人払いをする竜の尻尾",
-          "memory": "仲居さんが、膝掛けの下で寝ていた新人の寝顔を覚えている",
-          "tone": "tender",
-          "effects": [
-            {
-              "type": "sharedPoints",
-              "amount": 2
-            }
-          ],
+          "label": "今夜は仕事の話を、禁止にします",
+          "result": "禁止令は、湯船三つぶんは守られた。最初に破ったのは私だ。うっかり「次の対戦表が」と口にして、罰として大福を一個食べさせられた。罰がおいしいのは、この職場のいいところだと思う。仕事を忘れる練習は、全員へたくそだった。へたくそ同士、笑いながら夜が更けた。",
+          "intent": "今夜だけは、全員をただの湯治客にする",
+          "promise": "休みが本物になる代わりに、決めごとを最初に破るのは自分",
+          "memory": "罰の大福一個ぶん、監督の禁止令は破られた記録が残った",
+          "tone": "wild",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
           "goto": "main.s1.w05.node.end.001"
         },
         {
           "id": "main.s1.w05.choice.002",
-          "label": "仲居さんを手伝う",
-          "result": "ミミが盆を持つと、仲居さんは盆を取り上げ、代わりに牛乳を持たせた。「これを飲み干すまでがお仕事です」ミミが飲む間に、竜の紳士がひと息で湯を四十三度へ上げ、人魚が塩を足し、幽霊のご夫妻が湯気を濃くした。七つの世界が勝手に回った。飲み干したミミに、仲居さんは二本目を持たせた。仕事は終わらなかった。",
-          "intent": "働く癖のまま現場へ出る",
-          "promise": "湯場の全員が持ち場を回す手際と、牛乳二本",
-          "memory": "仲居さんが、盆を取り上げても諦めなかった新人を覚えている",
-          "tone": "comic",
-          "effects": [
-            {
-              "type": "sharedPoints",
-              "amount": 3
-            }
-          ],
+          "label": "宴会の最後に、三分だけ相談させて",
+          "result": "三分の相談は、きっかり三分で祭りに飲まれた。それでも三分ぶんの実りはあった。「最上級でも、やることは同じ」と誰かが言い、全員がうなずいたのだ。相手が強くなるだけ。うちが強いのは、もう知っている。手帳の隅にそう書いて、私は宴会へ戻った。",
+          "intent": "湯の勢いを借りて、次の覚悟だけ揃える",
+          "promise": "方針が一言で揃う代わりに、休みに仕事が三分だけ混ざる",
+          "memory": "「やることは同じ」の一言が、手帳の隅に残っている",
+          "tone": "pragmatic",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
           "goto": "main.s1.w05.node.end.001"
         }
       ]
@@ -182,8 +170,8 @@
   ],
   "debug": {
     "status": "review",
-    "sourceDocument": "docs/MAIN_STORY_STAGE1_PLAN.md",
-    "authorNote": "第5週。この闘技場の一シーズンを追うメインストーリー。人物の場面は別枠で再生される。",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "週5(増量版11行)。仕組み学習=ランクの階段と七段飛ばしの異常。宿の中は既存温泉イベントの領分のため暖簾の前で切る。引き=恥の予兆(もう知られている)。",
     "legacyGeneratedIds": false
   }
 }

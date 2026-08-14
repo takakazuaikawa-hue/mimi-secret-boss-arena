@@ -2,37 +2,26 @@
   "schemaVersion": 1,
   "id": "main.s1.w23",
   "kind": "opening",
-  "title": "支度という名の祭り",
-  "summary": "全部署が本気を出し、準備そのものが祭りになる",
+  "title": "瓦礫の下の、趣意書",
+  "summary": "再建祭。設立趣意書の原本が見つかり、街の合言葉になる",
   "ownership": {
     "arcId": "main.stage1"
   },
   "trigger": {
-    "actions": [
-      "work",
-      "play",
-      "rest",
-      "search"
-    ],
-    "when": {
-      "all": [],
-      "any": [],
-      "none": []
-    },
-    "repeat": {
-      "mode": "once-per-run"
-    },
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
     "priority": 900,
     "weight": 1
   },
   "presentation": {
-    "location": "闘技場の中庭",
+    "location": "噴水広場(再建祭)",
     "assets": [
       {
         "id": "main.s1.w23.asset.background.001",
         "kind": "background",
-        "path": "/assets/story/bg-loading-dock-day-v1.png",
-        "alt": "闘技場の中庭の背景"
+        "path": "/assets/story/bg-fountain-plaza-day-v1.png",
+        "alt": "再建祭の噴水広場の背景"
       }
     ]
   },
@@ -40,18 +29,12 @@
     {
       "type": "direction",
       "id": "main.s1.w23.node.direction.001",
-      "command": {
-        "type": "background",
-        "assetId": "main.s1.w23.asset.background.001",
-        "transition": "dissolve"
-      }
+      "command": { "type": "background", "assetId": "main.s1.w23.asset.background.001", "transition": "dissolve" }
     },
     {
       "type": "direction",
       "id": "main.s1.w23.node.direction.002",
-      "command": {
-        "type": "clearSprites"
-      }
+      "command": { "type": "clearSprites" }
     },
     {
       "type": "line",
@@ -59,8 +42,8 @@
       "lineId": "main.s1.w23.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "決勝週の準備表を中庭の柱に貼った。画鋲を一本刺しただけだ。それを見ていた館内放送のお姉さんが、「決勝週の支度、ここに始まる」と読み上げた。声は涼やかで、中身は完全に軍記物だった。",
-      "emotion": "comic"
+      "text": "闘技場の再建は、驚く速さで進んでいた。壁が立ち、屋根が乗り、客席の一列目が戻った。復興選手権の告知は、街の全部の掲示板に貼られている。「準決勝、そして決勝。今季の続きを、再建の場で」。",
+      "emotion": "resolve"
     },
     {
       "type": "line",
@@ -68,18 +51,16 @@
       "lineId": "main.s1.w23.line.002",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "三十分後、食堂のおばちゃんが中庭に屋台を三十軒建てていた。木槌の音が拍子になって、両替所の竜の紳士がそれに合わせて足を踏んでいる。「卵は固めで焼きます」とおばちゃんが宣言し、竜が深くうなずいた。",
-      "emotion": "comic"
+      "text": "その日、基礎の瓦礫を運んでいた竜が、大声を上げた。「額が出たぞ! 割れてない!」。瓦礫の下から、古い額縁が、一枚。埃を払うと、手書きの字が現れた。"
     },
     {
       "type": "line",
       "id": "main.s1.w23.node.line.003",
       "lineId": "main.s1.w23.line.003",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "三十軒って、どこから出てきたんですか",
-      "emotion": "comic"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「設立趣意書」。冒頭の一行を、私は声に出して読んだ。読みながら、手が少し震えた。——**「当場は、物語を終えた者たちが、続きを生きるための場所である」**。",
+      "emotion": "revelation"
     },
     {
       "type": "line",
@@ -87,8 +68,8 @@
       "lineId": "main.s1.w23.line.004",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「倉庫」。おばちゃんは一言で片づけた。倉庫の扉はまだ開いていて、中から幟がどんどん生えてくる。幽霊のご夫妻が新聞を二部抱えたまま、幟の列を数えていた。二部目は数え直し用らしい。",
-      "emotion": "comic"
+      "text": "広場が、静かになった。木槌の音が止み、誰もが額を見ていた。終わった者たちが、続きを生きるための場所。それを、いちばん必要としている人たちが、いま、この広場で梁を担いでいる。",
+      "emotion": "tender"
     },
     {
       "type": "line",
@@ -96,8 +77,8 @@
       "lineId": "main.s1.w23.line.005",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "警備隊長が中庭を横切り、私の前で止まった。「準備表、拝見しました」。右手を上げると、隊員二十人の槍が一斉に傾いて、傾いたまま止まる。「隊列演舞、名は『銅鑼を待つ』」。隊長が一句詠んだ。「銅鑼待つや 槍二十本 汗の粒」。隊員が石突きで拍子を取った。",
-      "emotion": "comic"
+      "text": "沈黙を破ったのは、剣士さんだった。「……ふむ。では、続きをやらねばのう」。木槌の音が、再開した。さっきより、速く、明るく。趣意書の一行は、その日のうちに街の合言葉になった。",
+      "emotion": "tender"
     },
     {
       "type": "line",
@@ -105,17 +86,16 @@
       "lineId": "main.s1.w23.line.006",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "経理課チームが法被姿で現れ、壁に板を打ちつけはじめた。そろばんが縦に百二十個並んでいる。玉を弾くと文字が浮かぶ。手作りの電光掲示板だ。課長が最下段を一つ弾くと『本日 大入』と浮かび、まだ誰もいない中庭が拍手した。課長はそこで手を止め、私に場所を空けた。「上の段は、貼り紙をした人が弾く決まりでして」",
+      "text": "会社の言う「資産管理」は、この一行の上に、後から被さった運用にすぎない。原本は、こう言っている。ここは倉庫ではなく、続きのための場所だと。額は、再建した正面玄関の、いちばん目立つ壁に掛けられることが即決された。",
       "emotion": "revelation"
     },
     {
       "type": "line",
       "id": "main.s1.w23.node.line.007",
       "lineId": "main.s1.w23.line.007",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "これ、準備ですよね。もう本番みたいなんですけど",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "祭りの準備は、そのまま加速した。土産物屋が勝手に「ミミのチーム」復興記念商品を作り、アルデバラン社の正規ライセンス窓口と、大人げない縄張り争いを始めた。うちのチーム、いつの間に商品になったのか。",
       "emotion": "comic"
     },
     {
@@ -124,8 +104,8 @@
       "lineId": "main.s1.w23.line.008",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "券売のおじさんが賭け札を刷りながら答えた。「準備が一番売れる」。刷りたての札には『どの部署が一番派手か』と書いてある。胴元の欄に私の名前があった。聞いていない。",
-      "emotion": "comic"
+      "text": "夕方、組み合わせが発表された。準決勝の相手は——カシム・ベル。完璧な窓口業務で知られる、あの受付の伝説。勝てば決勝。決勝の相手は、空の王者・シャハル。",
+      "emotion": "tension"
     },
     {
       "type": "line",
@@ -133,8 +113,17 @@
       "lineId": "main.s1.w23.line.009",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "中庭の隅で、局員さんが遺失物の箱を抱えていた。私が覗き込んだ瞬間、箱の中で銅鑼が一度だけ鳴った。局員さんと目が合う。二人とも、まだ箱に手を入れていない。",
+      "text": "控室(仮設)で、三人が組み合わせ表を囲んでいた。誰も何も言わない。言わないが、指先の封が、こつ、こつ、と鳴っている。特訓の続きが、したくてたまらない音だ。",
       "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w23.node.line.010",
+      "lineId": "main.s1.w23.line.010",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "手帳の白かった予定表に、私は二つの枠を書き込んだ。「準決勝」。「決勝」。書き終えて、額の一行を思い出す。続きを生きるための場所。——うちの続きは、この二枠だ。",
+      "emotion": "resolve"
     },
     {
       "type": "choice",
@@ -142,34 +131,24 @@
       "choices": [
         {
           "id": "main.s1.w23.choice.001",
-          "label": "屋台の味見を引き受ける",
-          "result": "私が一軒目の串を齧った瞬間、おばちゃんが手を挙げた。「味見係、決定」。二軒目から三十軒目までが一斉に串を突き出す。端から順に齧った。二十七軒目には竜の紳士が並んでいて、自分の卵を差し出してきた。固めだった。おいしかった。残り三軒は明日に回してもらう。翌朝、屋台の看板全部に『味見済』の焼き印が入っていた。誰が入れたのかは、誰も言わない。",
-          "intent": "祭りの味を先に確かめる",
-          "promise": "全屋台の味が私の舌で揃い、客足が伸びる",
-          "memory": "食堂のおばちゃんが、味見係は私だと決めている",
-          "tone": "comic",
-          "effects": [
-            {
-              "type": "sharedPoints",
-              "amount": 2
-            }
-          ],
+          "label": "趣意書の除幕を、祭りの目玉にする",
+          "result": "額の掛け直しを、こっそりやるのはもったいない。除幕式を祭りの初日に据え、幕引きの綱は、街でいちばん長く生きている常連客に頼んだ。除幕の瞬間、広場は歓声ではなく、深い、長い拍手に包まれた。読める者が読めない者に読んで聞かせ、翻訳が七つの言語で波のように広がっていく。あの一行は、もう誰の持ち物でもない。街の言葉になった。",
+          "intent": "見つけた原点を、街全体の記憶にする",
+          "promise": "街の結束が固まる代わりに、会社は原点の公開を面白く思わない",
+          "memory": "七つの言語で読み上げられた趣意書の除幕式が語り草になる",
+          "tone": "heroic",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
           "goto": "main.s1.w23.node.end.001"
         },
         {
           "id": "main.s1.w23.choice.002",
-          "label": "電光掲示板の上の段を弾く",
-          "result": "私が上の段の玉を三つ弾いた。板に『決勝週まで あと七日』と浮かび、中庭が沸いた。調子に乗って四つ目を弾いたら『帰りに雨』と出た。頼んでいない天気予報だ。五分後、本当に降った。警備隊長が槍を傾けて雨を受け、隊員二十人が同じ角度に傾いた。傘の代わりだと言い張っている。掲示板は今も、雨の日だけ勝手に玉が動く。",
-          "intent": "経理課の発明に乗ってみる",
-          "promise": "街中が掲示板を見上げ、決勝週の熱が上がる",
-          "memory": "経理課チームが、上の段の初弾を弾いたのは私だと記録した",
-          "tone": "wild",
-          "effects": [
-            {
-              "type": "sharedPoints",
-              "amount": 3
-            }
-          ],
+          "label": "原本の写しを取り、公証をもらっておく",
+          "result": "美しい話の裏で、事務員は手を動かす。原本の写しを三部作り、日付と公証をもらい、一部を帳場の金庫へ、一部を手帳へ、一部をノノさんへ預けた。原本は飾るもの、写しは戦うものだ。「上演への異議申立権」の隣に、この一行が並ぶと——うちの書類の束は、もう、ただの束ではない。小さな法典である。",
+          "intent": "原点を、いつでも根拠にできる形にする",
+          "promise": "戦える写しが残る代わりに、祭りの華やぎは一歩譲る",
+          "memory": "公証つきの趣意書の写しが、三箇所に分散保管された",
+          "tone": "pragmatic",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
           "goto": "main.s1.w23.node.end.001"
         }
       ]
@@ -182,8 +161,8 @@
   ],
   "debug": {
     "status": "review",
-    "sourceDocument": "docs/MAIN_STORY_STAGE1_PLAN.md",
-    "authorNote": "第23週。この闘技場の一シーズンを追うメインストーリー。人物の場面は別枠で再生される。",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "週23(10行)。Q1の明言=趣意書(滅亡直後に読むことで最重になる配置)。組み合わせ発表=準決勝カシム・ベル/決勝シャハル。「柿落とし予定欄の空欄」は週24で拾う。",
     "legacyGeneratedIds": false
   }
 }

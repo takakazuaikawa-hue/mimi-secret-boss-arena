@@ -2,37 +2,26 @@
   "schemaVersion": 1,
   "id": "main.s1.w17",
   "kind": "opening",
-  "title": "七本の箒と七つの汚れ",
-  "summary": "世界ごとに違う汚れを、世界別の道具で落とす大掃除",
+  "title": "声掛け、〇円",
+  "summary": "資産価値査定。目に映る全部に値段がつく一日",
   "ownership": {
     "arcId": "main.stage1"
   },
   "trigger": {
-    "actions": [
-      "work",
-      "play",
-      "rest",
-      "search"
-    ],
-    "when": {
-      "all": [],
-      "any": [],
-      "none": []
-    },
-    "repeat": {
-      "mode": "once-per-run"
-    },
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
     "priority": 900,
     "weight": 1
   },
   "presentation": {
-    "location": "闘技場 本館の廊下と客席",
+    "location": "計測工房(特訓場)",
     "assets": [
       {
         "id": "main.s1.w17.asset.background.001",
         "kind": "background",
-        "path": "/assets/story/bg-employee-corridor-no-seventeenth-door-v1.png",
-        "alt": "闘技場 本館の廊下と客席の背景"
+        "path": "/assets/story/bg-measurement-workshop-v1.png",
+        "alt": "計測工房の背景"
       }
     ]
   },
@@ -40,18 +29,12 @@
     {
       "type": "direction",
       "id": "main.s1.w17.node.direction.001",
-      "command": {
-        "type": "background",
-        "assetId": "main.s1.w17.asset.background.001",
-        "transition": "dissolve"
-      }
+      "command": { "type": "background", "assetId": "main.s1.w17.asset.background.001", "transition": "dissolve" }
     },
     {
       "type": "direction",
       "id": "main.s1.w17.node.direction.002",
-      "command": {
-        "type": "clearSprites"
-      }
+      "command": { "type": "clearSprites" }
     },
     {
       "type": "line",
@@ -59,8 +42,8 @@
       "lineId": "main.s1.w17.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "大掃除の朝、私が物置の扉を開けたら、箒が七本まとめて倒れてきた。柄が鉄のもの、柄が貝殻のもの、柄に湯たんぽを括りつけたもの。世界の数だけ道具があって、世界の数だけ私の腰が鳴った。",
-      "emotion": "comic"
+      "text": "査定官は、予告どおりの朝に来た。白い封筒と同じ色の手袋をして、鞄から値札の束を出した。文字どおりの、値札の束を。",
+      "emotion": "tension"
     },
     {
       "type": "line",
@@ -68,17 +51,15 @@
       "lineId": "main.s1.w17.line.002",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "まず一階の廊下を掃いた。掃くたびに床から金の粉が舞い上がって、私の睫毛まで金になった。券売のおじさんが飛んできて、私の顔を見るなり両手を合わせて拝んだ。その後ろから、卵を固めで平らげた竜の紳士が歩いてくる。",
-      "emotion": "comic"
+      "text": "「資産価値査定を開始します。通常業務をお続けください」。通常業務を続けた。続ける私たちの横で、査定官は目に映る全部に、すいすいと値札を付けていった。"
     },
     {
       "type": "line",
       "id": "main.s1.w17.node.line.003",
       "lineId": "main.s1.w17.line.003",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "紳士さま、廊下がぴかぴかなのは嬉しいんですけど、これ全部、紳士さまから落ちてます",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "中古の備品三点に、思ったより高い値。壁の亀裂に、マイナスの値。計測係くんの改造計測器に「評価不能(壊れているため)」。壊れていません。上限を、超えているだけです。",
       "emotion": "comic"
     },
     {
@@ -87,8 +68,8 @@
       "lineId": "main.s1.w17.line.004",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私が床を指差すと、竜の紳士は品よく首を傾げ、玄関先で三度身震いした。金の粉が一気に降って、床が絨毯になった。経理課チームが法被の袖をまくってそろばんを弾き、粉の山の上で「今月の備品費、これで賄えます」と叫んだ。",
-      "emotion": "comic"
+      "text": "特訓の見学中、査定官は選手たちに、いちばん高い値を付けた。桁が多すぎて、読み上げたガヤ氏(なぜかいる)が咳き込んだほどの値だ。値札を付けられた本人たちは、微妙な顔をしていた。高くても、値札は値札である。",
+      "emotion": "tension"
     },
     {
       "type": "line",
@@ -96,7 +77,7 @@
       "lineId": "main.s1.w17.line.005",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私が貝殻の柄の刷毛で客席を撫でると、白いものが樽ひとつ分たまった。海底王国のお客が乾いたあとに残していく塩だ。食堂のおばちゃんが樽ごと担いで厨房へ消え、十分後、館内に味噌汁の匂いが充満した。",
+      "text": "私の監督指示には、こう付いた。「声掛け: 〇円(無形資産・評価不能)」。〇円。無形。分かってはいたが、紙に書かれると、微妙に傷つく。",
       "emotion": "comic"
     },
     {
@@ -105,8 +86,8 @@
       "lineId": "main.s1.w17.line.006",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私が鉄の柄の箒を東側の客席へ入れると、灰の王都のお客が落とした灰は掃くそばから固まって、一段まるごと石畳になった。西側では天空城のお客の忘れていった雲の切れ端が座面に居座っていて、押しても叩いても動かない。私が上に乗ったら、私ごと三十センチ浮いた。下を通りかかった局員さんが、遺失物の札に「浮いている職員」と書き足した。",
-      "emotion": "comic"
+      "text": "「比較として申し上げますが」と、査定官は手帳をめくった。「会社の管理運用チームは、査定が不要です。管理された資産に、査定は要りませんから」。これまで戦ってきたライバルたちの顔が、ちらりと浮かんだ。あの人たちは、査定すら、されないのか。",
+      "emotion": "revelation"
     },
     {
       "type": "line",
@@ -114,18 +95,17 @@
       "lineId": "main.s1.w17.line.007",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私が湯たんぽ付きの箒を階段の手すりへ押し当てると、霜がぱきぱき鳴って解けた。解けた端から幽霊のご夫妻が上がってきて、新聞を二部抱えたまま手すりを二人で握り直す。手すりはまた白くなった。警備隊長が下から一句詠んだ。「霜柱 二人分だけ 温めて」",
-      "emotion": "tender"
+      "text": "夕方、査定官は帳簿を検めた。磨き上げた帳簿だ。彼は頁を三往復して、初めて手を止めた。「……この、希望欄というのは」。うちの自慢です。「査定項目に、ありません」。でしょうね。無いなら、作ってください。",
+      "emotion": "comic"
     },
     {
       "type": "line",
       "id": "main.s1.w17.node.line.008",
       "lineId": "main.s1.w17.line.008",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "待って、羽根が逃げます。雲上の羽根って、掃くと上に行くんですけど！",
-      "emotion": "comic"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "査定官は答えず、結論の欄に判を押して帰った。写しが受付に残された。「当チームは、資産としての管理を推奨する」。",
+      "emotion": "tension"
     },
     {
       "type": "line",
@@ -133,8 +113,8 @@
       "lineId": "main.s1.w17.line.009",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私が箒を振るたび、羽根は天井へ避難した。館内放送のお姉さんが涼やかに「羽根は歌に集まります」と告げ、そのまま軍記物の一節を読み上げた。羽根は放送席へ一斉に集合し、お姉さんは首まで埋まったまま原稿を読み続けた。",
-      "emotion": "comic"
+      "text": "管理を、推奨する。短い一行の温度が、妙に低い。ノノさんが写しを預かりながら、静かに言った。「推奨は、命令の一歩手前の言葉です。……次は、たぶん、案が来ます」。",
+      "emotion": "tension"
     },
     {
       "type": "line",
@@ -142,8 +122,8 @@
       "lineId": "main.s1.w17.line.010",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私が最後のひと掃きを終えると、正面玄関から闘技場の中央まで、泥の足跡が一列に残っていた。まだ乾いていない。券売のおじさんは十秒で賭け札を刷り、私の手に一枚握らせた。「足跡の主。当たったらみんなで飲む」",
-      "emotion": "comic"
+      "text": "その夜、控室の値札を全部はがして回った。はがした値札は、束にして帳場の引き出しへ。人と道具の値段は預かっておく。付けるのも、外すのも、うちで決める。",
+      "emotion": "resolve"
     },
     {
       "type": "choice",
@@ -151,34 +131,24 @@
       "choices": [
         {
           "id": "main.s1.w17.choice.001",
-          "label": "金の粉を両替所へ運ぶ",
-          "result": "私が金の粉を樽に集めて両替所へ運ぶと、計りの針は一周して戻った。局員さんが飛んできて樽に「落とし主の判明した落とし物」と札を貼り、そこへ当の竜の紳士が現れて、「それは私のものだ、買い取ろう」と言い出した。自分の粉を自分で買う紳士に、経理課のそろばんが三回鳴って、今月の備品費が浮いた。翌朝、来月の掃除当番の一番上に、紳士の名が金の粉で書かれていた。",
-          "intent": "集めた粉を館の益に変える",
-          "promise": "備品費が浮き、竜の紳士が掃除の側へ回りはじめる",
-          "memory": "竜の紳士が、自分の粉を自分で買った朝を覚えている",
-          "tone": "pragmatic",
-          "effects": [
-            {
-              "type": "sharedPoints",
-              "amount": 2
-            }
-          ],
+          "label": "はがした値札で、焚き火を囲む",
+          "result": "冗談半分で「燃やします?」と聞いたら、全員が真顔で頷いたので、裏庭で小さな焚き火になった。値札は、よく燃えた。桁の多い値札ほど、よく燃えた。火を囲む顔ぶれは静かで、少しだけ晴れやかだった。「〇円の声掛け、いつでもどうぞ」と誰かが言い、私は無形資産らしく、大きな声で返事をした。",
+          "intent": "値札の夜を、笑って燃やして締める",
+          "promise": "チームの空気が晴れる代わりに、査定書の写しだけは残る",
+          "memory": "裏庭の小さな焚き火を、全員が覚えている",
+          "tone": "wild",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
           "goto": "main.s1.w17.node.end.001"
         },
         {
           "id": "main.s1.w17.choice.002",
-          "label": "羽根の山からお姉さんを掘る",
-          "result": "私が羽根の山へ腕を突っ込んで館内放送のお姉さんを掘り出すと、お姉さんは埋まったまま一行も読み飛ばしていなかった。掘り出した一拍あと、お姉さんの声が館内に追いついて「よくぞ参られた」と響き、客席の全員が拍手した。その風で羽根がもう一度舞い上がり、掃除は振り出しに戻った。お姉さんは涼しい顔で次の一節を読んだ。",
-          "intent": "埋まった同僚を先に助ける",
-          "promise": "放送が途切れず、客席がひとつの拍手になる",
-          "memory": "館内放送のお姉さんが、自分を掘り出した手を覚えている",
-          "tone": "comic",
-          "effects": [
-            {
-              "type": "sharedPoints",
-              "amount": 3
-            }
-          ],
+          "label": "査定書の写しを、規定と突き合わせる",
+          "result": "「推奨」の根拠規定を、ノノさんと二人で洗った。管理推奨の発動条件、拒否の手続き、期限。夜半までかかったが、分かったことが一つある——推奨の段階では、こちらに拒否権がある。次に来る「案」を、断る道は規定の中にちゃんとあった。ノノさんが伸びをして言った。「正式が、いちばん強いんです」。頼もしい呪文である。",
+          "intent": "次の一手が来る前に、断る道を確かめる",
+          "promise": "備えができる代わりに、会社の本気も見えてくる",
+          "memory": "「推奨の段階では拒否権がある」の控えが手帳に入った",
+          "tone": "pragmatic",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
           "goto": "main.s1.w17.node.end.001"
         }
       ]
@@ -191,8 +161,8 @@
   ],
   "debug": {
     "status": "review",
-    "sourceDocument": "docs/MAIN_STORY_STAGE1_PLAN.md",
-    "authorNote": "第17週。この闘技場の一シーズンを追うメインストーリー。人物の場面は別枠で再生される。",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "週17(10行)。仕組み学習=会社の目線(資産査定)。管理運用チーム=ライバルたちは査定すらされない、の種。「推奨は命令の一歩手前」が週18への時計。値札はがしが小さな反撃。",
     "legacyGeneratedIds": false
   }
 }

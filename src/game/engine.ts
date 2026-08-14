@@ -15,11 +15,6 @@ import { weeklyNarrativeLines } from "../data/weeklyNarratives";
 import { legacyCharacterNarrativeBlockById } from "../narrative/characterBlocks";
 import {
   legacyOpeningNarrativeBlockById,
-  mainStageOneEpisodeFiveBlock,
-  mainStageOneEpisodeFourBlock,
-  mainStageOneEpisodeOneBlock,
-  mainStageOneEpisodeThreeBlock,
-  mainStageOneEpisodeTwoBlock,
   mainStageOneWeeklyBlocks,
   mainStageThreeEpisodeBlocks,
   mainStageTwoEpisodeBlocks,
@@ -1045,17 +1040,17 @@ export const maybeCreateOpeningOwnershipFollowup = (
 const mainStoryEpisodes: ReadonlyArray<{
   stage: 1 | 2 | 3;
   week: number;
-  block: typeof mainStageOneEpisodeOneBlock;
+  block: (typeof mainStageOneWeeklyBlocks)[number];
 }> = [
-  { stage: 1, week: 1, block: mainStageOneEpisodeOneBlock },
-  { stage: 1, week: 2, block: mainStageOneEpisodeTwoBlock },
-  { stage: 1, week: 3, block: mainStageOneEpisodeThreeBlock },
-  { stage: 1, week: 6, block: mainStageOneEpisodeFourBlock },
-  { stage: 1, week: 7, block: mainStageOneEpisodeFiveBlock },
+  // 台本正本: docs/MAIN_STORY_SCRIPT.md。週1〜7は改稿済み(幕零+幕一)。
+  // 週5のメインは道中で暖簾の前まで。宿の中は既存の温泉イベントが担う(重複防止)。
+  { stage: 1, week: 1, block: mainStageOneWeeklyBlocks[21] },
+  { stage: 1, week: 2, block: mainStageOneWeeklyBlocks[22] },
+  { stage: 1, week: 3, block: mainStageOneWeeklyBlocks[23] },
+  { stage: 1, week: 6, block: mainStageOneWeeklyBlocks[24] },
+  { stage: 1, week: 7, block: mainStageOneWeeklyBlocks[25] },
   { stage: 1, week: 4, block: mainStageOneWeeklyBlocks[0] },
-  // 第5週は既存の温泉旅行イベントが物語を担う週。ここへメインを置くと
-  // 温泉の話が二本続けて流れるため、メインは置かない
-  // (未使用の main.s1.w05 は書き直して別の週へ回す。docs/MAIN_STORY_ISSUES.md)
+  { stage: 1, week: 5, block: mainStageOneWeeklyBlocks[1] },
   { stage: 1, week: 8, block: mainStageOneWeeklyBlocks[2] },
   { stage: 1, week: 9, block: mainStageOneWeeklyBlocks[3] },
   { stage: 1, week: 10, block: mainStageOneWeeklyBlocks[4] },

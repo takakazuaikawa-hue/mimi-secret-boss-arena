@@ -93,9 +93,9 @@ describe("三段階キャンペーン構造", () => {
       campaignStage: campaignStages[0],
     });
     const withMain = chooseWeeklyAction(run, "work");
-    expect(withMain.currentEvent?.scene.id).toBe("main.s1.ep1");
+    expect(withMain.currentEvent?.scene.id).toBe("main.s1.w01");
     const resolved = resolveCurrentEvent(withMain, 0);
-    expect(resolved.eventHistory).toContain("main.s1.ep1");
+    expect(resolved.eventHistory).toContain("main.s1.w01");
     const cleared = { ...resolved, lastEventOutcome: undefined };
     const followup = maybeCreateMainStoryFollowup(cleared);
     expect(followup.currentEvent?.fighterId).toBe("gidonozeaas");
@@ -107,14 +107,14 @@ describe("三段階キャンペーン構造", () => {
     });
     const week2 = { ...base, week: 2 };
     const withMain = chooseWeeklyAction(week2, "work");
-    expect(withMain.currentEvent?.scene.id).toBe("main.s1.ep2");
+    expect(withMain.currentEvent?.scene.id).toBe("main.s1.w02");
     // メインは特定の人物の前座ではない(橋渡しを持たない)
     expect(withMain.currentEvent?.fighterId).toBeUndefined();
     const resolved = resolveCurrentEvent(withMain, 0);
     const cleared = { ...resolved, lastEventOutcome: undefined };
     const followup = maybeCreateMainStoryFollowup(cleared);
     expect(followup.currentEvent).toBeTruthy();
-    expect(followup.currentEvent?.scene.id).not.toBe("main.s1.ep2");
+    expect(followup.currentEvent?.scene.id).not.toBe("main.s1.w02");
   });
 
   it("二段再生: 区分2・3でも、その区分のメインが先に再生される", () => {

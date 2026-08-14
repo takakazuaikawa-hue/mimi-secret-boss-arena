@@ -1,0 +1,186 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s1.w07",
+  "kind": "opening",
+  "title": "希望欄から埋める",
+  "summary": "所有の欄より先に、本人の希望の欄を埋める。監督の初仕事のやり直し",
+  "ownership": {
+    "arcId": "main.stage1"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "従業員相談室",
+    "assets": [
+      {
+        "id": "main.s1.w07.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-employee-consultation-room-v1.png",
+        "alt": "従業員相談室の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s1.w07.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s1.w07.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.w07.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w07.node.line.001",
+      "lineId": "main.s1.w07.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "相談室の長机に、手帳と、聞き取り用の紙を並べた。インクは新しくした。今日は、監督の初仕事を、やり直す日だ。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w07.node.line.002",
+      "lineId": "main.s1.w07.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "決めたことはひとつ。所有の欄より先に、本人の希望の欄を埋める。契約でどう動かせるかは、その後でいい。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w07.node.line.003",
+      "lineId": "main.s1.w07.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "一人目の希望は、長かった。記入欄が三行で尽き、裏面に続き、別紙に達した。希望というより、長い長い年月の積み残しだった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w07.node.line.004",
+      "lineId": "main.s1.w07.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "途中で気づいたが、希望を聞かれた側は、聞かれながらどんどん姿勢が良くなる。長生きの人の背筋が伸びる音を、私はこの日、初めて聞いた。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w07.node.line.005",
+      "lineId": "main.s1.w07.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "二人目の希望は、短すぎた。「特になし」。そのまま書くと、なぜか手が止まる。私は欄外に小さく書き足した。「(継続して聞き取り)」。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w07.node.line.006",
+      "lineId": "main.s1.w07.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "三人目は、希望より先に条件を出してきた。「昼寝の時間は、死守する」。書いた。大きく書いた。守れる希望から守るのが、うちの方針である。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w07.node.line.007",
+      "lineId": "main.s1.w07.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "聞き取りの合間に、負債の頁を開いた。照会中だった数字が、数字になっていた。桁を、三回数えた。三回とも、同じ桁だった。多い方に。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w07.node.line.008",
+      "lineId": "main.s1.w07.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "それでも不思議と、怖くなかった。希望欄の束が、隣にあるからだ。負債は数字で、希望は文字だ。文字は、書けば増える。私にも、増やせる側のものだ。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w07.node.line.009",
+      "lineId": "main.s1.w07.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "夕方、計測係くんが、おずおずと再計測に来た。「す、数値、上がってます。何も、してないのに」。何かは、した。希望を聞いた。——それだけで強くなる人たちと、私は働いている。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w07.node.line.010",
+      "lineId": "main.s1.w07.line.010",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ノノさんが小声で教えてくれた。「信じてもらうと強くなるの、この街の人たち、昔からなんです。だから賭けが、あんなに熱いんですけどね」。……この街の賭けの熱気の正体、いま少し、分かってしまった気がする。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w07.node.line.011",
+      "lineId": "main.s1.w07.line.011",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "聞き取りの束で手帳は倍の厚さになり、留め紐が閉まらない。ノノさんが太い紐をくれた。「育つ手帳は、いい手帳です」。鞄が重い。今度は、嫌な重さじゃなかった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w07.node.line.012",
+      "lineId": "main.s1.w07.line.012",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "帰りぎわ、掲示板に新しい貼り紙が出た。「最上級リーグ 対戦表(改)」。うちの初戦の相手の欄に、長い名前がある。紙の幅に収まらず、読めたのは最後の二文字だけ——「の海」。",
+      "emotion": "tension"
+    },
+    {
+      "type": "choice",
+      "id": "main.s1.w07.node.choice.001",
+      "choices": [
+        {
+          "id": "main.s1.w07.choice.001",
+          "label": "対戦表を書き写して帰る",
+          "result": "「の海」の正体は、書き写している途中で分かった。相手の名前は、紙の幅に収まっていなかっただけだ。正式名は長い。長いが、最後まで書くと、ひとつの意味になる。——海そのもの、と。書き写した手が、少し冷たくなった。それでも手帳に挟んだ。知らない相手より、長い名前の相手のほうがいい。名前は、覚えれば済む。",
+          "intent": "次の相手を、先に知っておく",
+          "promise": "備えが早く始まる代わりに、相手の正体を先に背負う",
+          "memory": "手帳に「海そのもの」の名が挟まっている",
+          "tone": "pragmatic",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "goto": "main.s1.w07.node.end.001"
+        },
+        {
+          "id": "main.s1.w07.choice.002",
+          "label": "今日は手帳の重さだけ、持って帰る",
+          "result": "対戦表は、明日でいい。今日は希望欄の束が主役だ。寮に帰って、留め紐を新しいのに替えた。太い紐は不格好で、頼もしい。枕元に置くと、手帳はもう、書類の束には見えなかった。名簿でも、帳簿でもない。しいて言えば——うちの、はじまりの記録だ。",
+          "intent": "今日の実りを、今日のまま持ち帰る",
+          "promise": "チームの土台が固まる代わりに、次の相手を知るのは明日になる",
+          "memory": "太い留め紐の手帳が「はじまりの記録」と呼ばれ始める",
+          "tone": "tender",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "goto": "main.s1.w07.node.end.001"
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "main.s1.w07.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "週7(増量版12行)。仕組み学習=希望を聞くと強くなる(信頼・育成)+賭けの熱気の正体という世界法則を一粒。引き=半分の啓示(「の海」=週8さざなみ戦)。",
+    "legacyGeneratedIds": false
+  }
+}

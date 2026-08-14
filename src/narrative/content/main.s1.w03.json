@@ -1,0 +1,206 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s1.w03",
+  "kind": "opening",
+  "title": "八つ裂き大福と招待状",
+  "summary": "詫びの銘菓は血の色で美味。空振りの質問と、温泉つきの招待状",
+  "ownership": {
+    "arcId": "main.stage1"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "カジノカフェ",
+    "assets": [
+      {
+        "id": "main.s1.w03.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-casino-cafe-morning.png",
+        "alt": "朝のカジノカフェの背景"
+      },
+      {
+        "id": "main.s1.w03.asset.background.002",
+        "kind": "background",
+        "path": "/assets/story/bg-arena-reception.png",
+        "alt": "闘技場の正面受付の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s1.w03.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s1.w03.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.w03.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w03.node.line.001",
+      "lineId": "main.s1.w03.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "朝のカフェは、豆を挽く音と湯気でできている。約束どおりマダムが来た。風呂敷の包みから、甘い匂いと——かすかに、不穏な赤。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w03.node.line.002",
+      "lineId": "main.s1.w03.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "今日の私の目当ては、詫びより情報だ。名義のこと、選手のこと、負債のこと。聞きたいことを三つ、ゆうべ紙に書いてきた。準備は接客の基本である。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w03.node.line.003",
+      "lineId": "main.s1.w03.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "包みが開く。コロシアム銘菓「八つ裂き大福」。割った断面から、血のように赤い苺ソースがとろりと垂れた。隣の席の白ひげの剣士さんが、反射で抜刀した。——鳴らす場面、あったじゃないですか。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w03.node.line.004",
+      "lineId": "main.s1.w03.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「あらあら、ごめんなさいねえ。これ、見た目だけなのよ」。一口食べる。……悔しい。上品で、おいしい。二個目に手が出た自分への言い訳を、まだ考えている。剣士さんも、納刀して二個食べた。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w03.node.line.005",
+      "lineId": "main.s1.w03.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "質問一つ目、この闘技場は何ですか。「大きい賭場よねえ」。二つ目、オーナー権とは。「立派な鍵よねえ」。三つ目、負債について。「あら、あるの?」。……空振り、三つ。マダムは権利の細部を、本人も知らないのだ。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w03.node.line.006",
+      "lineId": "main.s1.w03.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「だって、宝くじで当たったんですもの」。当たるんだ、闘技場。この街の宝くじ、景品の桁がおかしい。メモした紙に、答えの代わりに大福のソースが一滴落ちた。今日の収穫、以上。",
+      "emotion": "comic"
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.w03.node.direction.003",
+      "command": { "type": "background", "assetId": "main.s1.w03.asset.background.002", "transition": "dissolve" }
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w03.node.line.007",
+      "lineId": "main.s1.w03.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "収穫ゼロで受付へ戻ると、ノノさんが登録窓口で一枚の紙を出して待っていた。「オーナーさん、これだけは先に」。選手登録票。真ん中に、大きく「本人署名」の欄がある。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w03.node.line.008",
+      "lineId": "main.s1.w03.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「この署名が無いと、どんな伝説でも出場できません。オーナーにできるのは、お願いするところまでです」。つまり、口説くのだ。権利で人は動かせない。——動かせない方で、少し安心した。動かせてしまう方が、怖い。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w03.node.line.009",
+      "lineId": "main.s1.w03.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "そこへ受付から封書——「初心者大会のご招待(暫定オーナー様向け)。参加は任意。優勝賞品——温泉旅行(二泊)」。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w03.node.line.010",
+      "lineId": "main.s1.w03.line.010",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "温泉。二泊。湯。ここ数日の疲れが、その二文字に全部吸い寄せられた。気づけば私は、参加要項を三回読んでいた。三回とも、賞品の欄からだった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w03.node.line.011",
+      "lineId": "main.s1.w03.line.011",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「初心者大会、いいですよ。相手は普通のモンスターですし、操作を覚えるための大会ですから。……あの、オーナーさん、目が真剣です」。真剣にもなる。湯である。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w03.node.line.012",
+      "lineId": "main.s1.w03.line.012",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "出よう。出たい。でも選手が三人要る。私がこの街で知り合った顔ぶれは、まだ数えるほどで——全員、明らかに、普通じゃない。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w03.node.line.013",
+      "lineId": "main.s1.w03.line.013",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "それでも頼みに行くと決めて、大福の残りを包み直した。差し入れは、交渉の基本である。カジノで覚えた、数少ない正しい知識だ。よし。——口説くぞ、伝説。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "choice",
+      "id": "main.s1.w03.node.choice.001",
+      "choices": [
+        {
+          "id": "main.s1.w03.choice.001",
+          "label": "温泉に行きたいんです、と正直に頼む",
+          "result": "正直は、この街で意外と強かった。「温泉のために戦う……新しい」と、頼んだ相手は妙に感心した。動機を飾らない監督、として私はその日のうちに少し有名になった。飾らなかっただけなのだが、有名の理由は選べない。帰り道、差し入れ用の大福が一個減っていた。交渉は成立、ということでいいと思う。",
+          "intent": "動機を飾らず、そのまま渡す",
+          "promise": "正直さが顔になる代わりに、目的が温泉だと街に知れ渡る",
+          "memory": "「温泉のために戦う」という評判が、先に歩き出している",
+          "tone": "wild",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "goto": "main.s1.w03.node.end.001"
+        },
+        {
+          "id": "main.s1.w03.choice.002",
+          "label": "お仕事として、条件から聞いて回る",
+          "result": "条件から聞くと、面接みたいになった。希望の出場数、苦手なこと、呼ばれたい名前。手帳に書き取るうち、頼む側と頼まれる側の線がゆるんでいく。「条件を先に聞かれたのは、初めてだ」と相手が言った。長く生きた人の初めてを、一つ引き受けてしまった。責任は、たぶん温泉より重い。",
+          "intent": "本人の条件を先に聞き、選べる形で頼む",
+          "promise": "信頼の土台ができる代わりに、聞いた条件には責任が生まれる",
+          "memory": "「条件を先に聞かれたのは初めて」という言葉が残っている",
+          "tone": "pragmatic",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "goto": "main.s1.w03.node.end.001"
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "main.s1.w03.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "週3(増量版13行)。仕組み学習=選手登録は本人署名(勧誘の作法。週22の遠い根)。三つの質問の空振り→窓口の一枚で答が出る構成。剣士の抜刀=週1の天丼。",
+    "legacyGeneratedIds": false
+  }
+}

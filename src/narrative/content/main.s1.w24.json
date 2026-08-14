@@ -2,37 +2,26 @@
   "schemaVersion": 1,
   "id": "main.s1.w24",
   "kind": "opening",
-  "title": "水鏡と鐘とのろし",
-  "summary": "準決勝を七つの世界へ同時中継し、速度差で館内が沸く",
+  "title": "準決勝、完璧な窓口",
+  "summary": "再建こけら興行。完璧な進行と、初めて美しく決まる解放",
   "ownership": {
     "arcId": "main.stage1"
   },
   "trigger": {
-    "actions": [
-      "work",
-      "play",
-      "rest",
-      "search"
-    ],
-    "when": {
-      "all": [],
-      "any": [],
-      "none": []
-    },
-    "repeat": {
-      "mode": "once-per-run"
-    },
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
     "priority": 900,
     "weight": 1
   },
   "presentation": {
-    "location": "闘技場の中継台",
+    "location": "再建なった中央闘技場",
     "assets": [
       {
         "id": "main.s1.w24.asset.background.001",
         "kind": "background",
         "path": "/assets/arena-daylight.png",
-        "alt": "闘技場の中継台の背景"
+        "alt": "再建された闘技場の背景"
       }
     ]
   },
@@ -40,18 +29,12 @@
     {
       "type": "direction",
       "id": "main.s1.w24.node.direction.001",
-      "command": {
-        "type": "background",
-        "assetId": "main.s1.w24.asset.background.001",
-        "transition": "dissolve"
-      }
+      "command": { "type": "background", "assetId": "main.s1.w24.asset.background.001", "transition": "dissolve" }
     },
     {
       "type": "direction",
       "id": "main.s1.w24.node.direction.002",
-      "command": {
-        "type": "clearSprites"
-      }
+      "command": { "type": "clearSprites" }
     },
     {
       "type": "line",
@@ -59,18 +42,16 @@
       "lineId": "main.s1.w24.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "中継台の桶を覗き込んだら、海水の水面に海底王国の客席が映った。向こうの三千人がいっせいにこちらへ手を振り、その勢いで桶の水が波打って、私の前髪がびしょ濡れになった。",
-      "emotion": "comic"
+      "text": "再建なった闘技場は、新しい木と、古い砂の匂いがした。壁の一部は瓦礫を積み直したままで、それがかえって、誇らしい。復興選手権・準決勝。こけら興行の朝である。",
+      "emotion": "resolve"
     },
     {
       "type": "line",
       "id": "main.s1.w24.node.line.002",
       "lineId": "main.s1.w24.line.002",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "顔を出しただけで挨拶が返ってくるの、こっちにも心の準備が要るんですけど",
-      "emotion": "comic"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "正面玄関では、趣意書の額が客を迎えている。客席は満員。滅亡から一か月経っていない街の、満員である。この街の人たちは、続きを観に来るためなら、瓦礫の上にも座る。"
     },
     {
       "type": "line",
@@ -78,7 +59,7 @@
       "lineId": "main.s1.w24.line.003",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "続いて鐘の紐を引いた。三十秒遅れて、雲の上から万歳が降ってきた。しかもそれは前の試合の点数に対する万歳で、雲上の修道士たちは今ごろ昨日の逆転を喜んでいた。",
+      "text": "相手のカシム・ベル隊の進行は、噂どおり完璧だった。入場は定刻ちょうど。整列は定規のよう。控室の使い方まで美しく、備品はすべて元の位置に直されていた。窓口業務の伝説は、試合まで窓口業務のように運ぶ。",
       "emotion": "comic"
     },
     {
@@ -87,7 +68,7 @@
       "lineId": "main.s1.w24.line.004",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "最後に湿った生木の束へ火をつけた。煙が立った瞬間、竜の谷から「勝ち」ののろしが返ってきた。試合はまだ始まってもいない。中継台の下から首を伸ばした竜の紳士が「気の早い連中で」と笑い、両替所の窓口へ戻ってモーニングの卵を固めで頼んだ。",
+      "text": "対するうちの整列は、いつもどおり三者三様で、係員さんに苦笑された。いいのだ。うちは整列で勝負していない。今日は、特訓の答え合わせの日である。",
       "emotion": "comic"
     },
     {
@@ -96,8 +77,8 @@
       "lineId": "main.s1.w24.line.005",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私が銅鑼を鳴らすと、準決勝が動き出した。三つの中継が別々の速さで走り、館内には歓声が三回に分けて押し寄せてくる。経理課チームが法被の袖をまくり、そろばんで時差の計算を始めた。",
-      "emotion": "tension"
+      "text": "入場前の仮設控室で、最後のリハーサルをした。合図——指先。合図——手首。……止まらない。震えない。暴発しない。週16に照明を全部割った半開が、静かな光の輪郭だけを残して、ぴたりと制御された。",
+      "emotion": "revelation"
     },
     {
       "type": "line",
@@ -105,18 +86,17 @@
       "lineId": "main.s1.w24.line.006",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私が煙の当番へ「まだ上げないで」と手を振ると、のろし係はその手ぶりを合図と読んで「勝ち」を上げた。竜の谷いっぱいに杯が掲げられる。台の下では、場外へ落ちかけた選手が片手で床の縁をつかみ、相手を投げ返したところだった。試合はまだ続いている。",
-      "emotion": "tension"
+      "text": "「……週20で、覚えたんだ」と、一人が言った。「全開を。あれをやったら、半開は、怖くなくなった」。世界を救った日の全力が、興行の技術になって帰ってきた。遠回りみたいで、これが最短だったのだ。",
+      "emotion": "revelation"
     },
     {
       "type": "line",
       "id": "main.s1.w24.node.line.007",
       "lineId": "main.s1.w24.line.007",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "四つ目の形を作ります。誰か、毛布を貸してください",
-      "emotion": "resolve"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "計測係くんが、新しい計測器を抱えて駆け込んできた。「じょ、上限の上、作ってきました! 目盛りの名前も付けました!」。見ると、従来の上限の上に、手書きの新しい段。段の名前は——「みたことない」。計測器の目盛りとして、正しすぎる。",
+      "emotion": "comic"
     },
     {
       "type": "line",
@@ -124,8 +104,27 @@
       "lineId": "main.s1.w24.line.008",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "煙を毛布で三度切って「まだ」の形を送ると、竜の谷の祝杯がぴたりと止まった。決勝の相手が決まったころ、食堂のおばちゃんが厨房から私の背丈ほどの鍋を引きずってきて、「七つ分だよ」と言った。",
-      "emotion": "comic"
+      "text": "ガヤ氏の前説が響く。「再建こけら興行、準決勝! 復興の立役者たち、ついに競技へ帰還!」。今回は、言い直しが無かった。うちは、注目される側になったのだ。今のうちだけ、なんて誰にも言わせない。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w24.node.line.009",
+      "lineId": "main.s1.w24.line.009",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "今日は、見せましょう。壊す全力じゃなくて——見せる全力を!",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w24.node.line.010",
+      "lineId": "main.s1.w24.line.010",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "入場口の札が裏返る。趣意書の額の前を通って、三人が光の中へ歩き出す。観客席のどこかで、泡がひとつ、文字を作って弾けた。「たのしみ」。",
+      "emotion": "tension"
     },
     {
       "type": "choice",
@@ -133,34 +132,24 @@
       "choices": [
         {
           "id": "main.s1.w24.choice.001",
-          "label": "鐘の速さにそろえる",
-          "result": "三つの中継を、いちばん遅い雲上の鐘に合わせた。水鏡は三十秒待たされ、のろしは火をつけたまま待機になった。そして鐘が鳴った瞬間、七つの世界が同時に沸き、館内の空気がどんと沈んで天井の埃が落ちた。ただ、暇を持て余したのろし係が待ち時間に形を練習してしまい、翌朝には合図が三十通りに増えて、誰にも読めなくなった。",
-          "intent": "七つの世界を同時に沸かせる",
-          "promise": "世界がそろって沸く一瞬と、のろし係の新作三十通り",
-          "memory": "のろし係が、待たされた三十秒を練習に使ったと覚えている",
-          "tone": "pragmatic",
-          "effects": [
-            {
-              "type": "sharedPoints",
-              "amount": 2
-            }
-          ],
+          "label": "解放は、試合の流れが求めた瞬間だけ",
+          "result": "「切り札は、物語の要る場面で切る。ずっと出しっぱなしは、切り札じゃありません」。興行の呼吸で戦う、と決めた。溜めて、溜めて、会場全体が息を呑んだ一拍で、光を見せる。カシム・ベルの完璧な進行が、その一拍を最高の舞台に整えてくれるのが、皮肉で、ありがたい。完璧な窓口と、うちの見せ場づくり。準決勝は、興行として満点の形に組み上がっていく。",
+          "intent": "解放を、興行の見せ場として演出する",
+          "promise": "会場の熱が最大化する代わりに、我慢の時間も長くなる",
+          "memory": "「切り札は物語の要る場面で」が、うちの興行哲学になった",
+          "tone": "heroic",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
           "goto": "main.s1.w24.node.end.001"
         },
         {
           "id": "main.s1.w24.choice.002",
-          "label": "時差ごと見せ物にする",
-          "result": "ずれたまま流した。海底は無音の水鏡に自前の実況をつけ、雲上は前の試合の点で万歳を続け、竜の谷は途中でもう祝杯を始めた。すると客席で「どの世界がいちばん早く喜ぶか」の賭けが立ち、券売のおじさんが慌てて札を刷り足した。売り上げは入場料を上回り、警備隊長が「よろこびの届く速さもばらばらよ」と詠んだ。",
-          "intent": "速度差そのものを娯楽にする",
-          "promise": "七つの世界ぶんの喜びの波と、刷り足された新しい賭け札",
-          "memory": "券売のおじさんが、刷り足した札の枚数を覚えている",
+          "label": "冒頭から、堂々と半開で行く",
+          "result": "「隠しません。最初から、半開で行きましょう。うちの特訓を、全部見てもらう」。開幕から、三人の輪郭が淡く光った。客席がどよめき、計測係くんの新しい目盛りが、早速「みたことない」を指した。隠し球のない試合は、正面からの試合になる。カシム・ベルの完璧な進行と、うちの正面きった全力。これはこれで、興行として一番誠実な形かもしれない。",
+          "intent": "特訓の成果を、正面から全部見せる",
+          "promise": "誠実さが伝わる代わりに、決勝への隠し球は無くなる",
+          "memory": "新目盛り「みたことない」の初計測が記録された",
           "tone": "wild",
-          "effects": [
-            {
-              "type": "sharedPoints",
-              "amount": 3
-            }
-          ],
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
           "goto": "main.s1.w24.node.end.001"
         }
       ]
@@ -173,8 +162,8 @@
   ],
   "debug": {
     "status": "review",
-    "sourceDocument": "docs/MAIN_STORY_STAGE1_PLAN.md",
-    "authorNote": "第24週。この闘技場の一シーズンを追うメインストーリー。人物の場面は別枠で再生される。",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "週24準決勝(10行)。ライバル=カシム・ベル(完璧な窓口進行)。解放が「見せる全力」へ昇華(週20の全開経験が根拠)。計測器の新目盛り「みたことない」。試合本体はゲーム側。",
     "legacyGeneratedIds": false
   }
 }

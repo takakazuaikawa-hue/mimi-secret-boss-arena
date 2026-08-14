@@ -2,37 +2,26 @@
   "schemaVersion": 1,
   "id": "main.s1.w13",
   "kind": "opening",
-  "title": "濡れる本、沈む棚",
-  "summary": "世界別の本が棚を壊し、分類法を作り直す",
+  "title": "封印、解いてみましょう",
+  "summary": "中点。全力を出しても大丈夫な場所を、監督が作ると宣言する",
   "ownership": {
     "arcId": "main.stage1"
   },
   "trigger": {
-    "actions": [
-      "work",
-      "play",
-      "rest",
-      "search"
-    ],
-    "when": {
-      "all": [],
-      "any": [],
-      "none": []
-    },
-    "repeat": {
-      "mode": "once-per-run"
-    },
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
     "priority": 900,
     "weight": 1
   },
   "presentation": {
-    "location": "闘技場 図書室",
+    "location": "計測工房(臨時特訓場)",
     "assets": [
       {
         "id": "main.s1.w13.asset.background.001",
         "kind": "background",
-        "path": "/assets/story/bg-contract-archive-v2.png",
-        "alt": "闘技場 図書室の背景"
+        "path": "/assets/story/bg-measurement-workshop-v1.png",
+        "alt": "計測工房の背景"
       }
     ]
   },
@@ -40,18 +29,12 @@
     {
       "type": "direction",
       "id": "main.s1.w13.node.direction.001",
-      "command": {
-        "type": "background",
-        "assetId": "main.s1.w13.asset.background.001",
-        "transition": "dissolve"
-      }
+      "command": { "type": "background", "assetId": "main.s1.w13.asset.background.001", "transition": "dissolve" }
     },
     {
       "type": "direction",
       "id": "main.s1.w13.node.direction.002",
-      "command": {
-        "type": "clearSprites"
-      }
+      "command": { "type": "clearSprites" }
     },
     {
       "type": "line",
@@ -59,8 +42,8 @@
       "lineId": "main.s1.w13.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "図書室の扉を開けた私を、潮の匂いがどっと押し戻した。海底王国の棚が夜のあいだに膨らんで、通路の半分を占領していた。",
-      "emotion": "comic"
+      "text": "審理の日から、あの一言が刺さったままだった。全員が、全力を封じたまま勝とうとしている。夜、手帳の希望欄の束を読み返して、気づいてしまった。誰の欄にも、書いていないことがある。",
+      "emotion": "tension"
     },
     {
       "type": "line",
@@ -68,27 +51,26 @@
       "lineId": "main.s1.w13.line.002",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "濡れた一冊を抜くと、床にぼたぼた水が落ちた。押さえた指は三秒でふやけて、梅干しの皮になった。局員さんが黙って乾いた手ぬぐいを差し出す。「遺失物窓口より、こちらのほうが行方不明が多いんです」",
-      "emotion": "comic"
+      "text": "「全力を出したい」。誰も、書いていない。書けないのだ。出せば会場が壊れ、相手が保たず、街が困る。この人たちの本来の領域は、契約と、長い長い自制で封じられている。"
     },
     {
       "type": "line",
       "id": "main.s1.w13.node.line.003",
       "lineId": "main.s1.w13.line.003",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "では五十音順で並べますね。ええと、あ行の海底の本が……あ、字が泳いで、題名がどこかへ行きました",
-      "emotion": "comic"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "朝、全員を計測工房に集めた。計測係くんも呼んだ(呼んだ時点で、彼はもう震えていた)。私は監督として、たぶん、この街の誰も言わなかったことを言う。",
+      "emotion": "tension"
     },
     {
       "type": "line",
       "id": "main.s1.w13.node.line.004",
       "lineId": "main.s1.w13.line.004",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "雲上修道院の詩集を持ち上げたら、薄すぎて向こうの警備隊長の顔がくっきり透けた。隊長は詩集越しに一句詠んだ。「薄すぎて 隣の詩まで 読めました」",
-      "emotion": "comic"
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "全力、出しましょうよ。——出しても大丈夫な場所を、私が作りますから。",
+      "emotion": "resolve"
     },
     {
       "type": "line",
@@ -96,8 +78,8 @@
       "lineId": "main.s1.w13.line.005",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "竜の谷の一冊を棚へ戻した途端、板がめきりと鳴って床が三寸沈んだ。経理課チームが法被のまま駆け上がり、そろばんで沈み具合を弾いて告げた。「あと二冊で、下の階が図書室になります」",
-      "emotion": "comic"
+      "text": "沈黙が、長かった。長い沈黙のあと、一人が聞いた。「……本気か、監督」。本気です。「壊れるぞ、いろいろ」。壊れない工夫をするのが、監督の仕事です。たぶん。今日からは。",
+      "emotion": "tension"
     },
     {
       "type": "line",
@@ -105,18 +87,17 @@
       "lineId": "main.s1.w13.line.006",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "灰の王都の伝記を開くと、読んだ行から順に灰が立った。三行で机に小山ができ、食堂のおばちゃんが鍋を抱えて現れた。「その灰、磨きに最高なのよ」。山ごと持って帰られた。",
+      "text": "特訓が始まった。まず「少しだけ」解く練習から。一人目が指先だけ封を緩めた瞬間、工房の壁に亀裂が走った。二人目で、屋根の一部が消えた。三人目で、計測係くんの記録板の感想欄が更新された。「こわい」。",
       "emotion": "comic"
     },
     {
       "type": "line",
       "id": "main.s1.w13.node.line.007",
       "lineId": "main.s1.w13.line.007",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "分かりました。この図書室、著者でも題でも分けられません。分けるなら――読むと何が起きるかで分けます",
-      "emotion": "resolve"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "それでも、誰の顔も、輝いていた。指先だけの解放で、四百年ぶりの深呼吸をしたみたいな顔。この顔を見られただけで、壁の修理代は安い。安くはないが、安いことにする。",
+      "emotion": "tender"
     },
     {
       "type": "line",
@@ -124,7 +105,34 @@
       "lineId": "main.s1.w13.line.008",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "館内放送のお姉さんが涼やかに読み上げた。「図書室、本日より新たな陣立て。濡れる、透ける、沈む、灰が出る。四つの陣、みだりに攻め入るべからず」。頷いた竜の紳士が、いちばん奥の棚を指した。「では、開くと客が増える棚は、どちらへ入れますかな」",
+      "text": "解放の合図も決めた。監督の私が声で出す、うち専用の符丁。名前は私が付けた。全員が三秒黙って、それから吹き出した。ダサいらしい。ダサくて、格好いいと思う。採用。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w13.node.line.009",
+      "lineId": "main.s1.w13.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "夕方までに分かったこと。封印は、一気には解けない。指先、手首、肩——と、順番に慣らしていくしかない。時間がかかる。かかっていい。うちには、まだ週がある。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w13.node.line.010",
+      "lineId": "main.s1.w13.line.010",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "帰り際、計測係くんがおずおずと言った。「あの、計測器、上限の上を作り直してきます。き、記録できないのは、係として悔しいので」。震えながら悔しがる人は、もう仲間である。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w13.node.line.011",
+      "lineId": "main.s1.w13.line.011",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "手帳の新しい頁に、書いた。「特訓、開始。目標: 全力を、興行に」。書き終えて、気づく。私はもう、名義を返す日のことを、何日も考えていない。",
       "emotion": "revelation"
     },
     {
@@ -133,34 +141,24 @@
       "choices": [
         {
           "id": "main.s1.w13.choice.001",
-          "label": "四つの部屋に住み分ける",
-          "result": "濡れる部屋の床に排水溝を掘り、沈む部屋は最初から一階へ移し、灰の部屋は食堂の隣に置いた。おばちゃんは毎朝、鍋を抱えて灰を汲みに来る。ところが透ける部屋だけは壁まで透けて、隣の帳簿室が丸見えになった。経理課が慌てて竜の谷の分厚い帳簿を並べ、目隠しにした。その重みで、床がまた三寸沈んだ。",
-          "intent": "本の性質どおりに部屋を分ける",
-          "promise": "手がふやけない読書と、灰の行き先",
-          "memory": "食堂のおばちゃんが、毎朝の灰の汲み場所として覚えている",
+          "label": "一人ずつ、順番に解いていく",
+          "result": "焦らない。一人ずつ、指先から。工房の壁の修理代と相談しながら、番号を振って順番に進めることにした。番号を振れば、化け物も行列になる——カジノで学んだ持論は、特訓にも効いた。順番待ちの間、先に解いた者が次の者へコツを教え始める。教える側の顔が、また少し誇らしい。うちの特訓場に、小さな師弟が生まれていく。",
+          "intent": "安全第一で、確実に慣らしていく",
+          "promise": "事故が減る代わりに、全員が揃うのは先になる",
+          "memory": "特訓の順番表が、工房の壁に貼られている",
           "tone": "pragmatic",
-          "effects": [
-            {
-              "type": "sharedPoints",
-              "amount": 2
-            }
-          ],
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
           "goto": "main.s1.w13.node.end.001"
         },
         {
           "id": "main.s1.w13.choice.002",
-          "label": "棚の順番は試合で決める",
-          "result": "銅鑼が鳴り、図書室の真ん中で本の重さ比べが始まった。竜の谷の一冊は卓を割り、雲上の詩集は警備隊長の息で飛び、海底の本は自分の水で滑って場外へ落ちた。券売のおじさんは三十秒で賭け札を刷り上げ、判定は隊長が務めた。順番はきれいに決まった。決まった順に並べたら、重い順に棚が端から全部沈んだ。",
-          "intent": "揉める棚は試合で決着させる",
-          "promise": "判定つきの並び順と、刷りたての賭け札",
-          "memory": "券売のおじさんが、図書室でも札が売れた日として覚えている",
+          "label": "全員同時に、少しずつ解いていく",
+          "result": "「一人で解くから怖いんです。全員で、少しずつ」。せーの、で全員が指先の封を緩めた。工房の空気が一度に重くなり、窓が全部たわみ、計測係くんが避難した。無茶だった。無茶だったが——全員の顔が、互いを見て笑っていた。怖さは、割り勘にすると軽くなるらしい。修理代も割り勘にしたいところだが、それは監督持ちである。",
+          "intent": "怖さを、チーム全員で割り勘にする",
+          "promise": "結束が固まる代わりに、修理代がかさむ",
+          "memory": "「せーの」の掛け声が、特訓の始まりの合図になった",
           "tone": "wild",
-          "effects": [
-            {
-              "type": "sharedPoints",
-              "amount": 3
-            }
-          ],
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
           "goto": "main.s1.w13.node.end.001"
         }
       ]
@@ -173,8 +171,8 @@
   ],
   "debug": {
     "status": "review",
-    "sourceDocument": "docs/MAIN_STORY_STAGE1_PLAN.md",
-    "authorNote": "第13週。この闘技場の一シーズンを追うメインストーリー。人物の場面は別枠で再生される。",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "週13中点(11行)。封印解放アーク開始(ユーザー決定)。解放三段の一段目。中点の不可逆=「全力を見たい側に立つ」+名義を考えなくなっている自覚。合図の名称は本文で伏せたまま(お楽しみ)。",
     "legacyGeneratedIds": false
   }
 }

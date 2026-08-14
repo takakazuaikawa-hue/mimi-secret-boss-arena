@@ -2,37 +2,26 @@
   "schemaVersion": 1,
   "id": "main.s1.w04",
   "kind": "opening",
-  "title": "初陣、七通りの歓声",
-  "summary": "初の公式戦。応援の作法が世界ごとに違い、最前列が水没する",
+  "title": "大会の朝、大福を配る",
+  "summary": "初心者大会の朝。監督席と、三歩下がる相手と、四十人分のお返し",
   "ownership": {
     "arcId": "main.stage1"
   },
   "trigger": {
-    "actions": [
-      "work",
-      "play",
-      "rest",
-      "search"
-    ],
-    "when": {
-      "all": [],
-      "any": [],
-      "none": []
-    },
-    "repeat": {
-      "mode": "once-per-run"
-    },
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
     "priority": 900,
     "weight": 1
   },
   "presentation": {
-    "location": "中央闘技場 第一試合場",
+    "location": "中央闘技場 控室",
     "assets": [
       {
         "id": "main.s1.w04.asset.background.001",
         "kind": "background",
         "path": "/assets/arena-daylight.png",
-        "alt": "中央闘技場 第一試合場の背景"
+        "alt": "大会当日の闘技場の背景"
       }
     ]
   },
@@ -40,18 +29,12 @@
     {
       "type": "direction",
       "id": "main.s1.w04.node.direction.001",
-      "command": {
-        "type": "background",
-        "assetId": "main.s1.w04.asset.background.001",
-        "transition": "dissolve"
-      }
+      "command": { "type": "background", "assetId": "main.s1.w04.asset.background.001", "transition": "dissolve" }
     },
     {
       "type": "direction",
       "id": "main.s1.w04.node.direction.002",
-      "command": {
-        "type": "clearSprites"
-      }
+      "command": { "type": "clearSprites" }
     },
     {
       "type": "line",
@@ -59,8 +42,8 @@
       "lineId": "main.s1.w04.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私が選手入場口の札を「出場」へ裏返した瞬間、竜席が一斉に火を噴いた。歓声だった。天井の散水装置がそれを火事と判断して放水し、二階席が全員ずぶ濡れになった。",
-      "emotion": "comic"
+      "text": "大会の朝の控室は、砂と石鹸の匂いがした。壁が薄くて、客席のざわめきが床から伝わってくる。膝が少し笑っている。私のだ。",
+      "emotion": "tension"
     },
     {
       "type": "line",
@@ -68,17 +51,15 @@
       "lineId": "main.s1.w04.line.002",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私が最前列へ手を伸ばして握手を求めると、幽霊のご夫妻の手は私の手をすり抜けた。代わりに、膝の上の新聞が二部そろって同じ間で三度めくれた。これが拍手だと気づくのに、私は三秒かかった。",
-      "emotion": "comic"
+      "text": "今日は初心者大会。相手は普通のモンスターで、目的は操作に慣れること、と要項にある。目標は優勝、そして温泉。全員でそう決めた。……決めたのは、主に私だ。"
     },
     {
       "type": "line",
       "id": "main.s1.w04.node.line.003",
       "lineId": "main.s1.w04.line.003",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "ありがとうございます! 今、たぶんすごく拍手されてます!",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "差し入れに、八つ裂き大福を配った。初見の面々が三様の悲鳴を上げ、二口目で全員黙った。控室の緊張が、赤いソースと一緒に切れた。",
       "emotion": "comic"
     },
     {
@@ -87,7 +68,7 @@
       "lineId": "main.s1.w04.line.004",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私が手を振り返すと、人魚の応援団が返礼に水柱を上げた。最前列が水没した。券売のおじさんが浮き輪を配って回りながら叫んだ。「賭け札は防水ですのでご安心を!」実際、防水だった。",
+      "text": "計測係くんが力量測定に来た。うちの選手を一人測るたび、記録板を持つ手の震えが大きくなる。三人目で、彼は板を裏返して抱きしめた。感想欄が見えた。「でかい」。",
       "emotion": "comic"
     },
     {
@@ -96,7 +77,7 @@
       "lineId": "main.s1.w04.line.005",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私が雲上修道院の一団へ会釈すると、一団は無音のまま祈り返した。同時に、私の靴紐がひとりでに固く結ばれた。ありがたい。ほどけない。",
+      "text": "「あ、あの、計測器の上限って、超えて、いいものなんでしょうか」。知りません。私が聞きたい。計測係くんは震える手で、とりあえず上限の目盛りの外に、小さく点を打った。",
       "emotion": "comic"
     },
     {
@@ -105,7 +86,7 @@
       "lineId": "main.s1.w04.line.006",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私が砂へ一歩出ると、館内放送のお姉さんが七世界同時通訳を始めた。私の名は人魚語で「はじめて水を知る者」になり、灰の王都では軍記物の一節に化け、竜語では「初陣」が「初焼き」と訳された。竜席が全員、卵を固めでと注文した。",
+      "text": "係員さんが、砂の外の一段高い席へ案内してくれた。「監督席です。監督は、戦いません。ここから声で指示を出します」。声で。声だけで?「はい。よく通る監督が、強い監督です」。私はこっそり、咳払いをした。",
       "emotion": "comic"
     },
     {
@@ -114,18 +95,17 @@
       "lineId": "main.s1.w04.line.007",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私が「今のは褒められてますか」と聞くと、警備隊長は答えの代わりに一句詠んだ。「初陣や 火にも水にも 礼を言う」。名札の誤植以来、隊長の返事はぜんぶ十七音でできている。褒められたことにした。",
-      "emotion": "comic"
+      "text": "監督席からは、砂場の全部が見えた。ここから三人の背中を見て、声を届かせる。——カジノのフロア長が、台の全部を見ている立ち位置と同じだ。そう思ったら、少しだけ、膝が静かになった。",
+      "emotion": "revelation"
     },
     {
       "type": "line",
       "id": "main.s1.w04.node.line.008",
       "lineId": "main.s1.w04.line.008",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "……賭け札に私の名前が刷ってある。昨日まで私、両替所でチップを数える側だったのに",
-      "emotion": "resolve"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "要項の申込人の欄には、経理課の判と桃色の付箋——「出場は節税です」。うちの初陣、経理の都合で始まっていた。壁の向こうではガヤ氏の前説。「本日の注目は——新規のみなさん!」。一拍あった言い直しだった。",
+      "emotion": "comic"
     },
     {
       "type": "line",
@@ -133,8 +113,45 @@
       "lineId": "main.s1.w04.line.009",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "銅鑼が鳴った。私が砂へ二歩目を置いた瞬間、七つの世界が七通りのやり方で私の名前を呼んだ。火と、水と、無音と、軍記物で。三歩目を出したら、たぶん天井が落ちる。",
+      "text": "整列の号令。うちの三人が並ぶと、相手側の普通のモンスターの列が、目に見えて三歩下がった。主催の係員が小声で聞いてきた。「あの……本当に、初心者ですか」。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w04.node.line.010",
+      "lineId": "main.s1.w04.line.010",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "初心者です。監督が。",
       "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w04.node.line.011",
+      "lineId": "main.s1.w04.line.011",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私は名簿を胸に抱え直して、背筋を伸ばした。半年の接客で覚えた、いちばん堂々として見える立ち方だ。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w04.node.line.012",
+      "lineId": "main.s1.w04.line.012",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "客席から、ぱらぱらと拍手が来た。最前列に、あの白ひげの剣士さんがいた。腰の剣は、今日は静かだった。観に来てくれたのだ。——四十人分の判子の、たぶん、お返しに。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w04.node.line.013",
+      "lineId": "main.s1.w04.line.013",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "入場口の札が、係員の手で「出場」へ裏返る。ゲートの向こうで、光が待っている。",
+      "emotion": "tension"
     },
     {
       "type": "choice",
@@ -142,34 +159,24 @@
       "choices": [
         {
           "id": "main.s1.w04.choice.001",
-          "label": "七つ全部に返す",
-          "result": "私は火に手を振り、無音の拍手には無音でお辞儀を返し、水柱には濡れたまま両手で万歳を返し、祈りには祈り返した。竜が照れて天井を焦がし、幽霊のご夫妻は新聞を三部に増やし、人魚は最前列をもう一列沈めた。館内放送のお姉さんが「新人職員、七つの世界へ同時に礼を返す」と読み上げ、券売のおじさんはその場で私の勝率に倍率をつけた。よく売れた。",
-          "intent": "どの世界も置き去りにしない",
-          "promise": "七つの世界の常連が、私の名前と礼の形を覚える",
-          "memory": "幽霊のご夫妻が、返ってきたお辞儀の角度を覚えている",
-          "tone": "heroic",
-          "effects": [
-            {
-              "type": "sharedPoints",
-              "amount": 3
-            }
-          ],
+          "label": "勝ちましょう、じゃなくて——温泉、行きましょう!",
+          "result": "三人が、そろって噴き出した。緊張の糸が、いい方向へ切れる音がした。ゲートの外まで聞こえていたらしく、実況のガヤ氏が拾って場内へ流した。「新規チーム、目標は温泉!」。客席が沸き、賭け札が動き、券売のおじさんが叫んだ。「温泉に単勝!」。何の単勝だ。私たちは笑ったまま、光の中へ入場した。",
+          "intent": "気負いを笑いに変えて、送り出す",
+          "promise": "チームの緊張が解ける代わりに、目標が場内放送で公表される",
+          "memory": "ガヤ氏が「目標は温泉」を実況の持ちネタにする",
+          "tone": "wild",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
           "goto": "main.s1.w04.node.end.001"
         },
         {
           "id": "main.s1.w04.choice.002",
-          "label": "先に浮き輪を投げる",
-          "result": "私は入場を三十秒だけ止めて、最前列へ浮き輪を投げた。経理課チームがそろばんを筏にして漕ぎ出し、食堂のおばちゃんが濡れた客へ熱い汁物を配って回った。人魚の応援団は恐縮して水位を膝まで下げ、この試合場の応援は膝までと決まった。私の初出場は三十秒遅れ、規則が一つ増え、客席の全員が私に汁物を勧めてきた。",
-          "intent": "客を沈めたまま入場しない",
-          "promise": "この試合場に、応援の水位は膝までという決まりが残る",
-          "memory": "人魚の応援団長が、遅らせた三十秒を借りだと思っている",
-          "tone": "pragmatic",
-          "effects": [
-            {
-              "type": "sharedPoints",
-              "amount": 2
-            }
-          ],
+          "label": "全員で、無事に帰りましょう",
+          "result": "派手な言葉より、それがいちばん効いた。三人の目が、順番に私を見た。勝ち負けの前に、帰る場所の話をする監督は、たぶんこの砂の上では珍しい。「無事に、ね」と誰かが復唱して、うちの入場は静かに始まった。静かな入場は、あとで実況に「王者の風格」と誤解された。誤解は、否定しないでおく。",
+          "intent": "勝敗より先に、全員が帰ることを約束する",
+          "promise": "信頼の芯ができる代わりに、場内の期待値が勝手に上がる",
+          "memory": "「無事に、ね」という復唱が、チームの合言葉になり始める",
+          "tone": "tender",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
           "goto": "main.s1.w04.node.end.001"
         }
       ]
@@ -182,8 +189,8 @@
   ],
   "debug": {
     "status": "review",
-    "sourceDocument": "docs/MAIN_STORY_STAGE1_PLAN.md",
-    "authorNote": "第4週。この闘技場の一シーズンを追うメインストーリー。人物の場面は別枠で再生される。",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "週4大会週(増量版13行)。仕組み学習=監督席と声の指示(戦闘UIの対応)、計測とランクの入口。剣士の観戦=週1の実務が客席の絆に返る回収。試合本体はゲームが担う。",
     "legacyGeneratedIds": false
   }
 }

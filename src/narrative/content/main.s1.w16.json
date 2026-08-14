@@ -2,37 +2,26 @@
   "schemaVersion": 1,
   "id": "main.s1.w16",
   "kind": "opening",
-  "title": "第四戦、客席で同窓会",
-  "summary": "元魔王軍との第四戦が客席の同窓会に乗っ取られる",
+  "title": "黄金ジャックポット杯、開演前",
+  "summary": "夜の賭け興行。リハーサルの暴発と、闇の主の食レポ",
   "ownership": {
     "arcId": "main.stage1"
   },
   "trigger": {
-    "actions": [
-      "work",
-      "play",
-      "rest",
-      "search"
-    ],
-    "when": {
-      "all": [],
-      "any": [],
-      "none": []
-    },
-    "repeat": {
-      "mode": "once-per-run"
-    },
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
     "priority": 900,
     "weight": 1
   },
   "presentation": {
-    "location": "闘技場・第二競技場",
+    "location": "夜のカジノカフェ(集合場所)",
     "assets": [
       {
         "id": "main.s1.w16.asset.background.001",
         "kind": "background",
-        "path": "/assets/arena-daylight.png",
-        "alt": "闘技場・第二競技場の背景"
+        "path": "/assets/story/bg-casino-cafe-night.png",
+        "alt": "夜のカジノカフェの背景"
       }
     ]
   },
@@ -40,18 +29,12 @@
     {
       "type": "direction",
       "id": "main.s1.w16.node.direction.001",
-      "command": {
-        "type": "background",
-        "assetId": "main.s1.w16.asset.background.001",
-        "transition": "dissolve"
-      }
+      "command": { "type": "background", "assetId": "main.s1.w16.asset.background.001", "transition": "dissolve" }
     },
     {
       "type": "direction",
       "id": "main.s1.w16.node.direction.002",
-      "command": {
-        "type": "clearSprites"
-      }
+      "command": { "type": "clearSprites" }
     },
     {
       "type": "line",
@@ -59,8 +42,8 @@
       "lineId": "main.s1.w16.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "入場札を配り終えた私の背中で、三列目が総立ちになった。元魔王軍混成チームの旗を見たらしい。つられて五列目も立った。こちらは元勇者一行だった。両方とも同じ顔で「うわあ」と言った。",
-      "emotion": "comic"
+      "text": "黄金ジャックポット杯は、夜に開く大会だ。集合場所のカジノカフェには、揚げたてのポテトと、興奮した客の匂い。今夜は資金の懸かった、賭け興行である。",
+      "emotion": "tension"
     },
     {
       "type": "line",
@@ -68,18 +51,16 @@
       "lineId": "main.s1.w16.line.002",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私は席を指して「お席へどうぞ」と手を振った。三列目が手を振り返した。五列目も振り返した。館内放送のお姉さんが「第四戦、開幕。両軍、時をこえて相まみえる」と読み上げ、銅鑼が鳴った。誰も座らなかった。三列目と五列目は通路の真ん中で握手していた。",
-      "emotion": "comic"
+      "text": "賭け興行の仕組みを、ノノさんが窓口で教えてくれた。「観客が試合に賭けて、動いたお金の一部が、賞金の山になります。だから盛り上がる試合ほど、賞金が育つんです」。つまり今夜は、面白さが直接お金になる夜だ。"
     },
     {
       "type": "line",
       "id": "main.s1.w16.node.line.003",
       "lineId": "main.s1.w16.line.003",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "あの、試合は下です。下でやってます",
-      "emotion": "comic"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "相手は「夜を食べるもの」。名前のとおりの存在で、会場へ向かう道すがら、街灯の明かりが一列ずつ、ぱくりぱくりと消えていった。食べられているのだ、夜が。",
+      "emotion": "tension"
     },
     {
       "type": "line",
@@ -87,7 +68,7 @@
       "lineId": "main.s1.w16.line.004",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私が指した先で、元幹部の斧が空を切った。お姉さんは斧を追わなかった。「左通路にて再会。元勇者一行の弓使い、当時十六歳、現在は乾物屋。相手は当時の門番、現在も門番」。客席が拍手した。斧を振った選手まで拍手した。",
+      "text": "暗がりから、批評の声がした。「この街灯、出汁が浅い。星二つ」。……食べた上に、採点している。闇の主の食レポは、設備に厳しい。",
       "emotion": "comic"
     },
     {
@@ -96,8 +77,8 @@
       "lineId": "main.s1.w16.line.005",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私は券売のおじさんに「賭け札、売れてますか」と聞きに行った。札束は一枚も減っていなかった。代わりに横から「同窓会の会費はここで払えるか」と聞かれた。おじさんは少し考え、賭け札の裏に「会費」と書いて売りはじめた。私の後ろに行列ができた。",
-      "emotion": "comic"
+      "text": "控室で、最後の調整をした。特訓の成果——封印を「手首まで」解く練習の、初の実戦前リハーサル。合図を出す。一人目、成功。二人目、成功。三人目で——暴発した。",
+      "emotion": "tension"
     },
     {
       "type": "line",
@@ -105,8 +86,8 @@
       "lineId": "main.s1.w16.line.006",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私は通路を空けようと「順番にお願いします」と声を張った。返事の代わりに、食堂のおばちゃんが大鍋を押してきて通路を塞いだ。「立ち話は腹が減る」。元魔王軍の副官が並び、元勇者一行の僧侶が並び、二人の間に竜の紳士が割り込んだ。紳士は「卵は固めで」と言った。おばちゃんは「今日は豚汁だよ」と言った。",
-      "emotion": "tender"
+      "text": "控室の照明が全部割れて、扉が廊下の向こうまで飛んだ。幸い、けが人はゼロ。真っ暗になった控室で、誰かが言った。「……半分だけ解く方が、難しいな」。全開より、半開が難しい。封印とは、そういうものらしい。",
+      "emotion": "comic"
     },
     {
       "type": "line",
@@ -114,26 +95,35 @@
       "lineId": "main.s1.w16.line.007",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私は勝敗の掲示板を抱えて通路を下りた。銅鑼はもう鳴り終わっていた。私が掲示を出すより先に、お姉さんが「本日の再会、二十二組」と読み上げた。歓声はそちらで上がった。私は勝敗表を持ったまま、通路に立っていた。",
+      "text": "暗闇の向こうから、拍手が一つ聞こえた。夜を食べるものだった。「今の暴発、コクがあった。星四つ」。敵に褒められた。複雑だが、悪い気はしない。",
       "emotion": "comic"
     },
     {
       "type": "line",
       "id": "main.s1.w16.node.line.008",
       "lineId": "main.s1.w16.line.008",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "……勝ったの、どっちでした?",
-      "emotion": "comic"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "入場前、会社の観覧席が目に入った。今夜は席札が出ている。「物語資産管理部」。予備調査の、本隊のお出ましらしい。帳簿は磨いてある。希望欄は、渡さない。",
+      "emotion": "tension"
     },
     {
       "type": "line",
       "id": "main.s1.w16.node.line.009",
       "lineId": "main.s1.w16.line.009",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "リハーサルの失敗は、本番の成功の親戚です。いきましょう——引き分けなら、両方勝ちです!",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w16.node.line.010",
+      "lineId": "main.s1.w16.line.010",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私が勝敗表を下ろすと、警備隊長が名札を直しながら一句詠んだ。「銅鑼鳴りて　昔の敵と　汁すする」。その隣で元幹部が私の袖を引いた。「来週、こっちの分もやりたい。会場、空いてるか」。空いていた。空きすぎていた。",
+      "text": "「両方勝ちとは何だ」と場内がざわつき、胴元が頭を抱えるのが見えた。カジノの流儀は、闘技場でも物議を醸すらしい。銅鑼が鳴る。夜の大会が、始まる。",
       "emotion": "comic"
     },
     {
@@ -142,34 +132,24 @@
       "choices": [
         {
           "id": "main.s1.w16.choice.001",
-          "label": "控室を同窓会に貸す",
-          "result": "私が「第三控室、空いてます」と言った瞬間、三列目と五列目が同時に走った。控室は十分で満席になり、廊下まで人が溢れ、経理課チームが法被のまま椅子を運んだ。会計は券売のおじさんの会費札で回った。翌朝、遺失物窓口に片手剣が七本届いた。どれも持ち主が名乗り出なかった。",
-          "intent": "再会に場所を与える",
-          "promise": "闘技場が世界中の同窓会場として名を上げる",
-          "memory": "元幹部と元勇者一行が、控室を開けた新人の顔を覚えている",
-          "tone": "comic",
-          "effects": [
-            {
-              "type": "sharedPoints",
-              "amount": 3
-            }
-          ],
+          "label": "今夜は封印に触れず、確実に戦う",
+          "result": "「暴発の直後です。今夜は、いつもの戦い方で」。無理をしない判断は、地味で、正しい。三人は少し残念そうに、それでも頷いた。観覧席の資産管理部には、いつも通りのうちだけが見える。それでいい。切り札は、見せる日を選べるうちが切り札だ。手帳に書く。「半開の特訓、続行。本番投入は、まだ」。",
+          "intent": "暴発直後の無理をせず、足元で勝負する",
+          "promise": "安全に戦える代わりに、切り札の実戦データは持ち越し",
+          "memory": "「切り札は見せる日を選ぶ」が監督の口癖に加わった",
+          "tone": "pragmatic",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
           "goto": "main.s1.w16.node.end.001"
         },
         {
           "id": "main.s1.w16.choice.002",
-          "label": "勝敗だけは掲げる",
-          "result": "私は勝敗表を高く掲げ、「第四戦、判定は引き分けです」と叫んだ。客席が静まり、それから元幹部が「引き分けか」と笑い、元勇者一行の弓使いが「あの時もそうだった」と笑った。二人は握手したまま豚汁の列へ戻っていった。掲示板の前に残ったのは私と、律儀に記録を書き写す経理課チームだけだった。",
-          "intent": "試合の結果だけは守る",
-          "promise": "勝敗を必ず出す職員として記録の信用が残る",
-          "memory": "経理課チームが、引き分けを掲げた新人の律儀さを覚えている",
-          "tone": "pragmatic",
-          "effects": [
-            {
-              "type": "sharedPoints",
-              "amount": 2
-            }
-          ],
+          "label": "一瞬だけ、指先の解放を試合で試す",
+          "result": "「一瞬だけ。指先だけ。合図で開けて、合図で閉じます」。夜の会場は、切り札の初披露にちょうどいい暗さだった。たとえ小さく光っただけでも、賭け場の空気は正直だ——どよめきが波になり、賞金の山がひとまわり育つ音がした。夜を食べるものの声が、暗がりから届いた。「今の一瞬、香りが良い。星、保留」。保留。次を見たい、の意味だと受け取った。",
+          "intent": "実戦の空気の中で、解放の一歩目を刻む",
+          "promise": "実戦データが取れる代わりに、会社の目にも一瞬映る",
+          "memory": "夜の会場の「星、保留」が、次への宿題になった",
+          "tone": "wild",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
           "goto": "main.s1.w16.node.end.001"
         }
       ]
@@ -182,8 +162,8 @@
   ],
   "debug": {
     "status": "review",
-    "sourceDocument": "docs/MAIN_STORY_STAGE1_PLAN.md",
-    "authorNote": "第16週。この闘技場の一シーズンを追うメインストーリー。人物の場面は別枠で再生される。",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "週16大会週(10行)。ライバル=夜を食べるもの(登記ギャグ: 食レポ採点)。仕組み学習=賭け興行(盛り上がり=賞金)。解放三段の二段目=リハ暴発(半開は全開より難しい)。資産管理部の席札。",
     "legacyGeneratedIds": false
   }
 }

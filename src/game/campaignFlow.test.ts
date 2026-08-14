@@ -15,11 +15,7 @@ import {
 import type { RunState } from "./types";
 import { legacyCharacterNarrativeBlockById } from "../narrative/characterBlocks";
 import {
-  mainStageOneEpisodeFiveBlock,
-  mainStageOneEpisodeFourBlock,
-  mainStageOneEpisodeOneBlock,
-  mainStageOneEpisodeThreeBlock,
-  mainStageOneEpisodeTwoBlock,
+  mainStageOneWeeklyBlocks,
   mainStageThreeEpisodeBlocks,
   mainStageTwoEpisodeBlocks,
 } from "../narrative/openingBlocks";
@@ -78,11 +74,11 @@ const bridge = (
 });
 
 const mainEpisodeBridges = [
-  bridge("s1.ep1", mainStageOneEpisodeOneBlock, "gidonozeaas"),
-  bridge("s1.ep2", mainStageOneEpisodeTwoBlock, "minato"),
-  bridge("s1.ep3", mainStageOneEpisodeThreeBlock, "teirei"),
-  bridge("s1.ep4", mainStageOneEpisodeFourBlock, "peony"),
-  bridge("s1.ep5", mainStageOneEpisodeFiveBlock, "ushiro"),
+  bridge("s1.w01", mainStageOneWeeklyBlocks[21], "gidonozeaas"),
+  bridge("s1.w02", mainStageOneWeeklyBlocks[22], "minato"),
+  bridge("s1.w03", mainStageOneWeeklyBlocks[23], "teirei"),
+  bridge("s1.w06", mainStageOneWeeklyBlocks[24], "peony"),
+  bridge("s1.w07", mainStageOneWeeklyBlocks[25], "ushiro"),
   bridge("s2.ep1", mainStageTwoEpisodeBlocks[0], "amara"),
   bridge("s2.ep2", mainStageTwoEpisodeBlocks[1], "night-eater"),
   bridge("s2.ep3", mainStageTwoEpisodeBlocks[2], "shahar"),
@@ -149,7 +145,7 @@ describe("キャンペーン進行の実流", () => {
       campaignStage: campaignStages[0],
     });
     const { played } = playWeek(run);
-    expect(played.filter((id) => id === "main.s1.ep1")).toHaveLength(1);
+    expect(played.filter((id) => id === "main.s1.w01")).toHaveLength(1);
     expect(played.filter((id) => id === "gidonozeaas.meet")).toHaveLength(1);
   });
 

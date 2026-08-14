@@ -2,37 +2,26 @@
   "schemaVersion": 1,
   "id": "main.s1.w11",
   "kind": "opening",
-  "title": "宛先のない棚",
-  "summary": "郵便受取所の応援で、届かない手紙の宛先を継ぐ",
+  "title": "英雄の剣(三本目)",
+  "summary": "遺失物窓口。役目を終えた道具たちと、鎖付きの棚",
   "ownership": {
     "arcId": "main.stage1"
   },
   "trigger": {
-    "actions": [
-      "work",
-      "play",
-      "rest",
-      "search"
-    ],
-    "when": {
-      "all": [],
-      "any": [],
-      "none": []
-    },
-    "repeat": {
-      "mode": "once-per-run"
-    },
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
     "priority": 900,
     "weight": 1
   },
   "presentation": {
-    "location": "郵便受取所",
+    "location": "遺失物窓口",
     "assets": [
       {
         "id": "main.s1.w11.asset.background.001",
         "kind": "background",
         "path": "/assets/story/bg-lost-property-counter-v1.png",
-        "alt": "郵便受取所の背景"
+        "alt": "遺失物窓口の背景"
       }
     ]
   },
@@ -40,18 +29,12 @@
     {
       "type": "direction",
       "id": "main.s1.w11.node.direction.001",
-      "command": {
-        "type": "background",
-        "assetId": "main.s1.w11.asset.background.001",
-        "transition": "dissolve"
-      }
+      "command": { "type": "background", "assetId": "main.s1.w11.asset.background.001", "transition": "dissolve" }
     },
     {
       "type": "direction",
       "id": "main.s1.w11.node.direction.002",
-      "command": {
-        "type": "clearSprites"
-      }
+      "command": { "type": "clearSprites" }
     },
     {
       "type": "line",
@@ -59,18 +42,16 @@
       "lineId": "main.s1.w11.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "郵便受取所の応援初日、私は屋根へ上げられて受け網を渡された。遺失物窓口と掛け持ちの局員さんが「天空郵便の刻限です」と言った三秒後、空から木箱が落ちてきた。受けた。腕が痺れた。開けたら羽根枕だった。",
+      "text": "調査を控えて、備品台帳の照合に遺失物窓口へ行った。扉を開けると、油と、古い金属の匂い。窓口の棚は、まぶしいくらいの光り物だらけだった。",
       "emotion": "comic"
     },
     {
       "type": "line",
       "id": "main.s1.w11.node.line.002",
       "lineId": "main.s1.w11.line.002",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "あの、天空郵便って、投げてるんですか",
-      "emotion": "comic"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "聖剣、宝珠、竜の笛。返却された神器のたぐいが、番号札を付けて棚に眠っている。伝説の道具の、落とし物窓口。うちの備品も、元はこの棚の出身が多いらしい。"
     },
     {
       "type": "line",
@@ -78,7 +59,7 @@
       "lineId": "main.s1.w11.line.003",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "局員さんは首を振った。「手を離しているだけです。下は必ず地上ですから」。言い終わる前に二箱目が来て、受け網が縦に裂けた。三箱目は食堂のおばちゃんが鍋の蓋で弾き、屋根の上で二回転して止まった。",
+      "text": "受け取りの先客がいた。おじいさんが、係のお姉さんに札を出す。「英雄の剣(三本目)じゃ」「二本目は先月お渡ししましたね」「二本目までは、息子がのう」。名刀の家系、というものがあるらしい。",
       "emotion": "comic"
     },
     {
@@ -87,7 +68,7 @@
       "lineId": "main.s1.w11.line.004",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "屋根から降りて窓口に立つと、潮の便が着いていた。私が持ち上げようとしたら、蝋で固めた封に貝が七つ張りついていて、端を蟹が掴んで離さない。局員さんが「海底王国から潮に乗って三日、そちらが配達員です」と麩を差し出すと、蟹は麩を抱えて帰っていった。",
+      "text": "検索台で「聖剣」と引くと、該当が十四件出た。世界に、十四本。多いのか少ないのか、基準の分からない数字を、私は今日も一つ覚えた。",
       "emotion": "comic"
     },
     {
@@ -96,17 +77,16 @@
       "lineId": "main.s1.w11.line.005",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "空いた棚へ潮の便を並べようとしたら、局員さんに止められた。「そこは灰の王都行きです」。棚は手紙で満杯だった。私が一通抜いた拍子に上の段が雪崩れて、二十通が足の甲に落ちた。拾って表を見ると、宛名はどれも「灰の王都」で終わっていた。名前がない。",
-      "emotion": "comic"
+      "text": "「物語が終わると、道具は役目を失くしますから」。係のお姉さんが、棚を撫でながら教えてくれた。「行き場のない道具は、ここへ流れ着くんです」。——道具も、終わるのだ。人と、同じに。",
+      "emotion": "revelation"
     },
     {
       "type": "line",
       "id": "main.s1.w11.node.line.006",
       "lineId": "main.s1.w11.line.006",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "届かないのに、みんな出すんですか",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "うちの台帳と突き合わせて、貸出可能の備品を三点、引き取った。装備は買うか、ここで縁を結ぶか、の二本立てらしい。道具は、使う人がいれば、まだ終わらない。うちの倉庫は、そういう意味では現役だ。",
       "emotion": "tender"
     },
     {
@@ -115,8 +95,8 @@
       "lineId": "main.s1.w11.line.007",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "局員さんは崩れた手紙を拾い、私の手に載せた。「読みます。読んだ人が宛先になる決まりです」。封筒の隅には、あとから足した名前が小さく入っていた。棚から別の一通を抜いても、また同じ名前だった。机の下に、書いた返事の控えが樽で二つ。八年分だという。",
-      "emotion": "revelation"
+      "text": "帰りかけて、奥の棚に気づいた。他の棚と違って、鎖が掛かっている。札には——「長期保管: 物語資産管理部預かり」。",
+      "emotion": "tension"
     },
     {
       "type": "line",
@@ -124,8 +104,8 @@
       "lineId": "main.s1.w11.line.008",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私が一通読んで返事を書き始めると、警備隊長が肩越しに覗いて余白へ俳句を足した。局員さんは眉一つ動かさず「加筆は自由です」と言い、樽の底から糊を出した。俳句は季語が二つ入っていた。",
-      "emotion": "comic"
+      "text": "係のお姉さんは、その棚の話だけ、しなかった。窓口の人が話さないのは、聞くな、の合図である。この街、合図が多い。",
+      "emotion": "tension"
     },
     {
       "type": "line",
@@ -133,7 +113,16 @@
       "lineId": "main.s1.w11.line.009",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私が書き上げた返事を出した翌朝、窓口の受け箱に私宛の一通があった。宛名は「郵便受取所　ミミ」。差出人の欄には、灰の王都。局員さんは新しい樽を足元へ置いて言った。「返事はお早めに」",
+      "text": "持ち帰った備品を磨いて、控室の棚に並べた。選手たちが順に手に取って、重さと相性を確かめていく。道具と人の、再就職先。うちは、そういう職場でありたい。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w11.node.line.010",
+      "lineId": "main.s1.w11.line.010",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "手帳に、新しい行が増えた。「装備: 三点(中古・現役)」。中古で、現役。うちのチームらしい書き方だと、我ながら思う。",
       "emotion": "comic"
     },
     {
@@ -142,34 +131,24 @@
       "choices": [
         {
           "id": "main.s1.w11.choice.001",
-          "label": "灰の王都行きを読み上げる",
-          "result": "私が窓口で一通読み上げると、聞きに来た客が列を作った。券売のおじさんが横に台を出し、「返事が来るか来ないか」の札を売り始めた。売り上げは全部、切手代に化けた。局員さんは控えの樽を三つへ増やし、館内放送のお姉さんが「本日の読み上げ、第一便」と軍記物の声で告げた。読み上げ係は、その日から私になった。",
-          "intent": "届かない手紙に耳をつくる",
-          "promise": "読み上げに客がつき、切手代の寄付が集まる",
-          "memory": "券売のおじさんが、読み上げの日に賭けの台を出すようになる",
+          "label": "三本目の剣のおじいさんに、観戦券を渡す",
+          "result": "「よかったら、うちの試合を観に来てください」。おじいさんは券を両手で受け取って、深く頷いた。「三本目はな、わしの剣じゃ。振る場面が、もう無いと思っとった」。次の試合の日、最前列に、磨き上げた剣を膝に置いた姿があった。振らなくても、剣は連れてこられる。観客席は、そういう席でもあるのだ。",
+          "intent": "道具と持ち主に、観る場面を渡す",
+          "promise": "客席に味方が増える代わりに、期待も一人分増える",
+          "memory": "膝に剣を置いた最前列の常連が、また一人増えた",
           "tone": "tender",
-          "effects": [
-            {
-              "type": "sharedPoints",
-              "amount": 2
-            }
-          ],
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
           "goto": "main.s1.w11.node.end.001"
         },
         {
           "id": "main.s1.w11.choice.002",
-          "label": "天空郵便に混ぜて落とす",
-          "result": "私は灰の王都行きを一束、天空郵便の箱へ混ぜた。天空城は手を離すだけなので、束はどこかの地上へ着く。三日後、束は闘技場の屋根に戻ってきた。受けたのは食堂のおばちゃんの鍋の蓋。中の一通に、見覚えのない筆跡の付箋が挟まっていた。「読んだ。次は卵を固めで」。竜の紳士は自分ではないと言い張った。",
-          "intent": "宛先のない束を空へ出す",
-          "promise": "落とした先から、付箋の返事が一枚戻ってくる",
-          "memory": "竜の紳士が、卵は固めという注文を根に持ち続ける",
-          "tone": "wild",
-          "effects": [
-            {
-              "type": "sharedPoints",
-              "amount": 3
-            }
-          ],
+          "label": "鎖付きの棚の番号を、手帳に控える",
+          "result": "聞くな、の合図は受け取った。受け取った上で、棚の端に見えた保管番号だけ、手帳に写した。「長期保管・第〇〇棚」。何が入っているかは知らない。知らないものの番号を控えるのは、事務員の悪い癖で、いい癖だ。ライセンス札の写しの隣に並べると、手帳のその頁だけ、少し温度が低い気がした。",
+          "intent": "触れない場所の、位置だけ覚えておく",
+          "promise": "いつか繋がる控えが増える代わりに、頁の冷たさも増える",
+          "memory": "鎖付きの棚の番号が、手帳に写されている",
+          "tone": "pragmatic",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
           "goto": "main.s1.w11.node.end.001"
         }
       ]
@@ -182,8 +161,8 @@
   ],
   "debug": {
     "status": "review",
-    "sourceDocument": "docs/MAIN_STORY_STAGE1_PLAN.md",
-    "authorNote": "第11週。この闘技場の一シーズンを追うメインストーリー。人物の場面は別枠で再生される。",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "週11遊び週(10行)。仕組み学習=装備の世界内意味(遺失物窓口との縁・購入との二本立て)。Q1手掛かり(道具も終わる)+資産管理部の棚(遠景)。遺失物窓口は正典の共有設備。",
     "legacyGeneratedIds": false
   }
 }

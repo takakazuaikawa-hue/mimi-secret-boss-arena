@@ -2,37 +2,26 @@
   "schemaVersion": 1,
   "id": "main.s1.w18",
   "kind": "opening",
-  "title": "給料日、七通りの払い",
-  "summary": "七つの世界ぶんの給料を一日でさばく",
+  "title": "美しい綴じ方の、管理案",
+  "summary": "会社案の提示。裁量が一枚ずつ剥がされ、規定集三十八巻が届く",
   "ownership": {
     "arcId": "main.stage1"
   },
   "trigger": {
-    "actions": [
-      "work",
-      "play",
-      "rest",
-      "search"
-    ],
-    "when": {
-      "all": [],
-      "any": [],
-      "none": []
-    },
-    "repeat": {
-      "mode": "once-per-run"
-    },
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
     "priority": 900,
     "weight": 1
   },
   "presentation": {
-    "location": "両替所前の給与窓口",
+    "location": "契約保管庫",
     "assets": [
       {
         "id": "main.s1.w18.asset.background.001",
         "kind": "background",
-        "path": "/assets/story/bg-employee-consultation-room-v1.png",
-        "alt": "両替所前の給与窓口の背景"
+        "path": "/assets/story/bg-contract-archive-v2.png",
+        "alt": "契約保管庫の背景"
       }
     ]
   },
@@ -40,18 +29,12 @@
     {
       "type": "direction",
       "id": "main.s1.w18.node.direction.001",
-      "command": {
-        "type": "background",
-        "assetId": "main.s1.w18.asset.background.001",
-        "transition": "dissolve"
-      }
+      "command": { "type": "background", "assetId": "main.s1.w18.asset.background.001", "transition": "dissolve" }
     },
     {
       "type": "direction",
       "id": "main.s1.w18.node.direction.002",
-      "command": {
-        "type": "clearSprites"
-      }
+      "command": { "type": "clearSprites" }
     },
     {
       "type": "line",
@@ -59,18 +42,16 @@
       "lineId": "main.s1.w18.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "給料日の朝、両替所の前に列ができていた。私が最後尾に並ぶと、前にいた竜の紳士が振り返って「現物でお願いします」と言った。意味が分かる前に、経理課が台車で羊を二十頭運んできた。列が羊で埋まった。",
-      "emotion": "comic"
+      "text": "ノノさんの予言どおり、「案」は来た。分厚い冊子で、表題は「チーム運営適正化のご提案」。中身を一言でいえば——選手契約を会社預かりに一本化し、監督は会社が任命する、という案だった。",
+      "emotion": "tension"
     },
     {
       "type": "line",
       "id": "main.s1.w18.node.line.002",
       "lineId": "main.s1.w18.line.002",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "「あの、羊がお給料なんですか」「竜の谷は羊が通貨なんですよ」そろばんの音が返ってきた。「一頭で銀貨三枚。今日の相場は強気です」羊が一頭、私の靴を舐めた。",
-      "emotion": "comic"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "つまり、うちのチームを、会社のチームにする案である。私の欄は、無い。希望欄も、無い。あるのは「効率」「保全」「最適化」の三語が、頁ごとに姿を変えて並ぶだけだ。"
     },
     {
       "type": "line",
@@ -78,7 +59,7 @@
       "lineId": "main.s1.w18.line.003",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "幽霊のご夫妻の番が来た。口座がないので、支払いは供物になる。私が言われるまま饅頭を二つ台に置くと、湯気だけがすうっと消えた。奥さんが満足そうに新聞を二部たたみ、領収の印が誰の手も借りずに紙へ落ちた。",
+      "text": "悔しいことが、一つだけあった。綴じ方が、美しい。角がそろい、紐の結びが完璧で、頁割りに一切の無駄がない。事務員として、腕の良さだけは認めざるを得ない。腕の良い人たちが、こういう案を作るのだ。",
       "emotion": "comic"
     },
     {
@@ -87,8 +68,8 @@
       "lineId": "main.s1.w18.line.004",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "雲上修道院の分は祈祷券だった。私が枚数を数えて渡すと、受け取った修道士がその場で祈りはじめ、天井の照明が全部ついた。券の裏には「一枚につき三分」と書いてある。きっかり三分で祈りが止み、照明も落ちた。経理課が「時間内です」とうなずき、数え終えて余った六枚を私の手に押しつけた。「預かっててください」",
-      "emotion": "comic"
+      "text": "案には「回答期限」の欄があった。所有者グランプリの、前の週。会社は、大会の前に決めたいらしい。試合の外で。",
+      "emotion": "tension"
     },
     {
       "type": "line",
@@ -96,26 +77,26 @@
       "lineId": "main.s1.w18.line.005",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "海底王国は真珠払い。海水を張った桶が運ばれ、中の大きな貝が一粒ずつ真珠を吐く。数えるのは私の役目だった。九粒目で貝が黙ったので殻を二回叩いたら、十粒目が飛んで警備隊長の額に当たった。隊長は額を押さえたまま俳句を詠んだ。",
-      "emotion": "comic"
+      "text": "控室で、案の要点を全員に説明した。隠す選択肢は、最初から無かった。うちは希望欄のチームだ。聞き終えた三人は、怒るでも慌てるでもなく、順番に私を見た。「監督は、どうしたい」。",
+      "emotion": "tension"
     },
     {
       "type": "line",
       "id": "main.s1.w18.node.line.006",
       "lineId": "main.s1.w18.line.006",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "私が天空城の分を窓口へ置いた瞬間、札が三枚そろって天井へ飛んだ。跳び上がって捕まえ、灰の王都の焼き印つきの札を重しに載せる。焼き印がまだ熱くて、天空城の札に王都の紋が写った。紋のついた札はどっちのものか、二人がもめだす。券売のおじさんが銅鑼を鳴らし、腕相撲三十秒で決着した。負けた方が笑って羊を一頭足す。経理課の七台のそろばんが同時に鳴った。地上の客だけが硬貨をじゃらりと出して、誰も振り向かなかった。",
-      "emotion": "comic"
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "断ります。ただし、断り方は——正式に、いきます。",
+      "emotion": "resolve"
     },
     {
       "type": "line",
       "id": "main.s1.w18.node.line.007",
       "lineId": "main.s1.w18.line.007",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "「私の分は、どの世界のお金ですか」と聞いたら、袋が出てきた。開けると、羊一頭の引換券、真珠が三粒、祈祷券が一枚、それと饅頭の残りが入っている。「全部を少しずつ、が新人枠でして」私の初給料は、七つの世界の詰め合わせだった。",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "正式に断るには、根拠がいる。会社の案は規定の言葉で書かれている。なら、こちらも規定の言葉で返すしかない。ノノさんに相談すると、彼女は目を輝かせて、台車を取りに走った。",
       "emotion": "comic"
     },
     {
@@ -124,8 +105,26 @@
       "lineId": "main.s1.w18.line.008",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私が食堂で真珠を一粒出すと、おばちゃんは「真珠じゃ釣りが出ないよ」と笑った。券売のおじさんも「祈祷券で賭け札は売れん」と首を振る。結局、私は羊の引換券を食堂へ預けて、日替わりを三十日ぶん先に食べることにした。羊は引き換えられないまま、私の後ろをついて歩いている。名前をつけたら、もう食堂には出せない。",
-      "emotion": "tender"
+      "text": "戻ってきた台車の上には、興行規定集、全三十八巻。「正式が、いちばん強いんです」。頼もしい。頼もしいが、三十八巻。積むと、私の背より高い。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w18.node.line.009",
+      "lineId": "main.s1.w18.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「読みましょう」と言ったのは、選手の一人だった。「四百年、暇だった。読書は得意だ」。もう一人が頷き、三人目が眼鏡(伊達)を取り出した。規定集読破隊、ここに結成。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w18.node.line.010",
+      "lineId": "main.s1.w18.line.010",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "夜、保管庫の灯りの下で、第一巻が開かれた。回答期限まで、二週間。ページをめくる音だけが、静かに続く。この音が、うちの反撃の始まりの音である。",
+      "emotion": "resolve"
     },
     {
       "type": "choice",
@@ -133,34 +132,24 @@
       "choices": [
         {
           "id": "main.s1.w18.choice.001",
-          "label": "真珠を売って羊を飼う",
-          "result": "私が真珠三粒を券売のおじさんの窓口へ置いて「羊の餌代に替えてください」と言うと、おじさんは真珠を釣り銭箱へ落として銅貨を山で押し返した。横から竜の紳士が「餌なら谷の一等地の草だ」と口を出す。翌朝、闘技場の裏庭に草が一区画できていた。羊は昼までに丸くなり、経理課が「資産に計上します」とそろばんを鳴らす。私の初給料は、草になった。",
-          "intent": "羊を手放さずに養う",
-          "promise": "裏庭に草地ができ、羊が台帳に載る",
-          "memory": "竜の紳士が、谷の一等地の草を新人へ回した日を覚えている",
-          "tone": "tender",
-          "effects": [
-            {
-              "type": "sharedPoints",
-              "amount": 2
-            }
-          ],
+          "label": "読む係と要約する係に分ける",
+          "result": "三十八巻を人数で割り、読む係、要約する係、要約を疑う係に分けた。疑う係は私だ。事務員は、書いてあることより、書いてないことを探す係が向いている。初日の成果は、要約十二枚と、あくび四十回と、「第七巻はほぼ献立の話」という発見だった。献立? 「昔の興行は炊き出し込みだったんです」とノノさん。規定集、奥が深い。",
+          "intent": "組織戦で、二週間を最大に使う",
+          "promise": "網羅が進む代わりに、献立の巻まで読むことになる",
+          "memory": "「第七巻はほぼ献立」という発見が語り草になる",
+          "tone": "pragmatic",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
           "goto": "main.s1.w18.node.end.001"
         },
         {
           "id": "main.s1.w18.choice.002",
-          "label": "祈祷券を一枚残らず使う",
-          "result": "私が預かった六枚に自分の一枚を足して窓口へ返すと、修道士が七人並んで同時に祈りはじめた。照明という照明がつき、館内放送のお姉さんが軍記物の調子で「光、満つ」と読み上げる。きっかり二十一分後、全部が一斉に落ちた。暗闇で誰かが「もう一回」と言い、拍手が起きる。経理課だけが「電気代までは祈祷券に入っていません」と青くなった。",
-          "intent": "七つの祈りを一度に見る",
-          "promise": "二十一分ぶん、館内の照明が同時に点く",
-          "memory": "館内放送のお姉さんが「光、満つ」の一節を覚えている",
-          "tone": "wild",
-          "effects": [
-            {
-              "type": "sharedPoints",
-              "amount": 3
-            }
-          ],
+          "label": "古い版から先に読む",
+          "result": "新しい規定は、会社が書いた。なら、会社より古い規定に、会社の知らない言葉があるはずだ。書庫の奥から、初版に近い巻を引っ張り出す。紙は茶色く、字は手書きで、綴じ紐はほろほろだった。ノノさんが息を呑む。「これ、開場のころの……」。古い頁の匂いは、埃と、少しの砂。この闘技場が何のために建ったのか、その言葉に、近づいている気がした。",
+          "intent": "会社より古い言葉を、先に押さえる",
+          "promise": "強い根拠に近づく代わりに、読める字が少ない",
+          "memory": "開場のころの古い巻が、机の真ん中に置かれている",
+          "tone": "defiant",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
           "goto": "main.s1.w18.node.end.001"
         }
       ]
@@ -173,8 +162,8 @@
   ],
   "debug": {
     "status": "review",
-    "sourceDocument": "docs/MAIN_STORY_STAGE1_PLAN.md",
-    "authorNote": "第18週。この闘技場の一シーズンを追うメインストーリー。人物の場面は別枠で再生される。",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "週18(10行)。会社案の提示(§6週20の前段)。手続きドラマにせず「規定集読破隊」の熱血コメディへ変換。回答期限=週20への時計。規定集38巻は週19・22の武器。",
     "legacyGeneratedIds": false
   }
 }

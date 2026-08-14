@@ -2,37 +2,26 @@
   "schemaVersion": 1,
   "id": "main.s1.w22",
   "kind": "opening",
-  "title": "値切りは三十秒で",
-  "summary": "値切りが全部試合になる買い出しの日",
+  "title": "書類不備",
+  "summary": "四度目の復興と、本人同意欄の空白。選手たちが帰ってくる",
   "ownership": {
     "arcId": "main.stage1"
   },
   "trigger": {
-    "actions": [
-      "work",
-      "play",
-      "rest",
-      "search"
-    ],
-    "when": {
-      "all": [],
-      "any": [],
-      "none": []
-    },
-    "repeat": {
-      "mode": "once-per-run"
-    },
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
     "priority": 900,
     "weight": 1
   },
   "presentation": {
-    "location": "闘技場裏門の七世界市場",
+    "location": "搬入口(復興の資材置き場)",
     "assets": [
       {
         "id": "main.s1.w22.asset.background.001",
         "kind": "background",
-        "path": "/assets/story/bg-fountain-plaza-day-v1.png",
-        "alt": "闘技場裏門の七世界市場の背景"
+        "path": "/assets/story/bg-loading-dock-day-v1.png",
+        "alt": "資材の集まる搬入口の背景"
       }
     ]
   },
@@ -40,18 +29,12 @@
     {
       "type": "direction",
       "id": "main.s1.w22.node.direction.001",
-      "command": {
-        "type": "background",
-        "assetId": "main.s1.w22.asset.background.001",
-        "transition": "dissolve"
-      }
+      "command": { "type": "background", "assetId": "main.s1.w22.asset.background.001", "transition": "dissolve" }
     },
     {
       "type": "direction",
       "id": "main.s1.w22.node.direction.002",
-      "command": {
-        "type": "clearSprites"
-      }
+      "command": { "type": "clearSprites" }
     },
     {
       "type": "line",
@@ -59,7 +42,7 @@
       "lineId": "main.s1.w22.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "買い出しの朝、券売のおじさんが私に籠を六つ重ねて渡した。「持てるだけでいい」と言いながら、七つ目を上に乗せた。",
+      "text": "復興は、木槌の音で始まった。四度目の復興は、恐ろしく手際が良い。資材は搬入口に山と積まれ、竜が梁を運び、幽霊が壁の中の配線を直す。得意分野が、みんな滅亡向きにできている。",
       "emotion": "comic"
     },
     {
@@ -68,18 +51,16 @@
       "lineId": "main.s1.w22.line.002",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "裏門をくぐった私が籠を抱え直して立ち止まると、市場の売り子が一斉に立ち上がった。菓子屋が焼きたての段をこっちへ押し出し、塩売りが桶を叩き、霞漬け屋が壺の蓋を開けて匂いを扇いでくる。七種類の言語の呼び声が、全部私一人に向かってきた。まだ朝が早くて、客は私しかいなかった。",
-      "emotion": "comic"
+      "text": "私は避難所の「なんでも受付」から、復興の帳場へ横滑りした。資材の台帳、人手の割り振り、弁当の数。事務は、どこの世界でも復興の心臓である。気づけば私の判子が、街で二番目に忙しい。"
     },
     {
       "type": "line",
       "id": "main.s1.w22.node.line.003",
       "lineId": "main.s1.w22.line.003",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "すみません、霞漬け、二壺でいくら──",
-      "emotion": "comic"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "そこへ、会社の係員が来た。木槌の音の中で、澄ました声。「資産の完全回収と、興行の廃止手続きを進めます。関係書類です」。滅亡のどさくさで、うちを畳む気だ。",
+      "emotion": "tension"
     },
     {
       "type": "line",
@@ -87,8 +68,8 @@
       "lineId": "main.s1.w22.line.004",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私が値を聞き終わる前に、隣の台から銅鑼が鳴った。漬物屋のおばあさんが袖をまくる。「腕相撲、三十秒。勝ったら一割引き」。市場の全員が振り返り、私の籠を誰かが預かってくれた。段取りが良すぎる。",
-      "emotion": "comic"
+      "text": "書類の束を、ノノさんが完璧に正式な手つきで検めた。一枚。二枚。三枚目で、彼女の指が止まる。「……こちらの回収書類、選手ごとの『本人同意欄』が、全員ぶん、空欄です」。",
+      "emotion": "revelation"
     },
     {
       "type": "line",
@@ -96,8 +77,8 @@
       "lineId": "main.s1.w22.line.005",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私は負けた。二十八秒。それでも見物人が拍手して、おばあさんは「粘ったから」と一割の半分だけ引いてくれた。値切り交渉が試合で、観客が審判で、負けても少しは引かれる。この市場、賭場より賭場だ。",
-      "emotion": "comic"
+      "text": "係員は事も無げに答えた。「資産に同意は不要ですので」。——第3週の登録窓口を、思い出す。この署名が無いと、どんな伝説でも出場できません。出場に要る同意が、回収には要らないなんて話が、あるものか。",
+      "emotion": "tension"
     },
     {
       "type": "line",
@@ -105,18 +86,17 @@
       "lineId": "main.s1.w22.line.006",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私が籠を持ち上げると、両隣から声が飛んだ。塩売りは「一息で塩の名を十言えたら二割」、炭屋は「息止め勝負」、菓子屋は「味見の言い当て」。通りかかった警備隊長が、値切りの列を見て一句詠んだ。「銅鑼鳴るや 値も客も揺れ 汗をかく」。誰も上手いとは言わなかった。",
-      "emotion": "comic"
+      "text": "ノノさんが、帳場の引き出しから書式を出した。週19の夜なべで整えた、あの書式。「古い興行規定に基づく、異議申立の様式です。申立人の欄は——ご本人が、書きます」。",
+      "emotion": "resolve"
     },
     {
       "type": "line",
       "id": "main.s1.w22.node.line.007",
       "lineId": "main.s1.w22.line.007",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "わかりました。全部やります。荷物、置く場所ください",
-      "emotion": "resolve"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "翌日、収容施設から知らせが届いた。回収書類への署名を、三人全員が拒否。付記の一文が、検閲を通って届いた。「当方の職場は、現在再建中のため」。——うちの職場、まだ再建中なので。三人とも、同じ理由を書いたらしい。",
+      "emotion": "revelation"
     },
     {
       "type": "line",
@@ -124,7 +104,7 @@
       "lineId": "main.s1.w22.line.008",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "市場が沸いた。幽霊のご夫妻が新聞を二部広げて日陰を作り、経理課チームがそろばんを構えて割引の累計を弾き始める。私はまだ何も買っていないのに、応援団だけが完成していた。",
+      "text": "本人の署名なし。異議申立あり。ノノさんは差し戻しの理由欄に、美しい字で四文字を書いた。「**書類不備**」。会社が、世界でいちばん言われたくない四文字である。",
       "emotion": "comic"
     },
     {
@@ -133,8 +113,26 @@
       "lineId": "main.s1.w22.line.009",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "さて、どの台から崩そう。籠の重さより、勝ち筋の方が気になってきた。",
-      "emotion": "comic"
+      "text": "三日後、三人が帰ってきた。搬入口の坂を、大股で上ってくる。おかえりなさい、の代わりに、私は台帳を掲げた。「再建、人手が足りてません!」。三人は笑って、腕まくりをした。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w22.node.line.010",
+      "lineId": "main.s1.w22.line.010",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "気づけば、あの人たちも来ていた。海が基礎の水平を測り、闇が夜勤を全部引き受け、法廷の人が資材の権利関係を三分で捌く。回収に応じなかったのは、うちだけではなかったのだ。——2周目で会うことになる五人の、これが最初の横顔だった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w22.node.line.011",
+      "lineId": "main.s1.w22.line.011",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "夕暮れ、瓦礫の山の上で、誰かが言った。「中止になった今季——決勝だけでも、やらないか」。木槌の音が、一瞬止まった。それから、賛成の声が、四方から上がった。土俵は、試合へ戻ってきた。",
+      "emotion": "resolve"
     },
     {
       "type": "choice",
@@ -142,34 +140,24 @@
       "choices": [
         {
           "id": "main.s1.w22.choice.001",
-          "label": "炭の値切りを引き受ける",
-          "result": "私は竜の谷の炭屋の前で袖をまくった。種目は「息止め」。炭火の前で長く耐えたほうが勝ち。三十年焼き続けた顔の主人を前に、私は三十秒で吹き出した。すると隣の竜の紳士が「代打を」と言って静かに息を吸い、そのまま四分黙った。主人が先に咳き込んだ。炭は半値になり、おまけに火起こし用の杉皮が付いた。竜の紳士は「肺は資産です」と言って、また卵の固さの話に戻った。籠はまだ半分空いていて、市場の奥でもう次の銅鑼が鳴った。",
-          "intent": "力ずくで安く買う",
-          "promise": "上等の炭が半値と杉皮のおまけ",
-          "memory": "炭屋は、竜が四分黙った日として覚えている",
-          "tone": "wild",
-          "effects": [
-            {
-              "type": "sharedPoints",
-              "amount": 3
-            }
-          ],
+          "label": "復興選手権の開催届を、うちが出す",
+          "result": "言い出しっぺの法則、というものがある。誰の主催でもないなら、うちが出す。開催届の主催者欄に、私は自分の名前を書いた。ノノさんが受理印を構えて、一拍置いた。「……この判、押したら、正式ですよ」。押してください。正式が、いちばん強いんでしょう。判の音は、木槌の音によく似ていた。街の再建と、興行の再開が、同じ音で進んでいく。",
+          "intent": "誰のものでもない大会を、うちの名前で立てる",
+          "promise": "興行の旗が立つ代わりに、成功も失敗も主催者のものになる",
+          "memory": "復興選手権の主催者欄に、ミミの名前が入っている",
+          "tone": "heroic",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
           "goto": "main.s1.w22.node.end.001"
         },
         {
           "id": "main.s1.w22.choice.002",
-          "label": "焼き菓子の味見で挑む",
-          "result": "私は灰の王都の菓子屋に、味見勝負を申し込んだ。種目は「言い当て」。目隠しで焼き菓子の産地を当てる。菓子屋は三つ当てた。私は五つ当てた。全部、食堂のおばちゃんの弁当で食べた味だった。菓子屋は肩を落とし、それから急に嬉しそうになって、割れた端を袋いっぱいに詰めてくれた。「賄いの味を覚えてる客は、いい客だ」。私は袋を荷物の一番上に置いた。角を曲がるまでに二枚食べた。この袋が闘技場まで持つかどうかは、まだ私にもわからない。",
-          "intent": "舌で勝って親しくなる",
-          "promise": "割れ菓子ひと袋と菓子屋の顔なじみ",
-          "memory": "菓子屋は、賄いの味で勝った新人を覚えている",
-          "tone": "tender",
-          "effects": [
-            {
-              "type": "sharedPoints",
-              "amount": 2
-            }
-          ],
+          "label": "街の共同主催の形に整える",
+          "result": "旗は、みんなで持つ方が倒れにくい。開催届の主催者欄を「復興商店会・有志一同」とし、うちは事務局に回った。名を残さない代わりに、実務は全部うちだ。それでいい。判子と台帳は、私の得意分野である。共同主催の告知が貼り出された日、街のあちこちの店先に、手作りの協賛の札が下がり始めた。旗は、増えるほど強い。",
+          "intent": "街全体の祭りとして、興行を立て直す",
+          "promise": "支えが厚くなる代わりに、決定はいちいち合議になる",
+          "memory": "店先の手作り協賛札が、少しずつ増えていく",
+          "tone": "pragmatic",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
           "goto": "main.s1.w22.node.end.001"
         }
       ]
@@ -182,8 +170,8 @@
   ],
   "debug": {
     "status": "review",
-    "sourceDocument": "docs/MAIN_STORY_STAGE1_PLAN.md",
-    "authorNote": "第22週。この闘技場の一シーズンを追うメインストーリー。人物の場面は別枠で再生される。",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "週22反転(11行)。回収=本人同意欄の空白(週3の学習の回収)+週19の異議書式+「書類不備」。三人帰還とライバル五人の横顔。「決勝だけでもやろう」で週23-26へ。",
     "legacyGeneratedIds": false
   }
 }

@@ -2,37 +2,26 @@
   "schemaVersion": 1,
   "id": "main.s1.w20",
   "kind": "opening",
-  "title": "満員、通路まで客席",
-  "summary": "街中の客が押し寄せ、通路も天井も客席になる",
+  "title": "世界滅亡、阻止興行(四度目)",
+  "summary": "大会の朝、空が割れる。全力、出してください。責任は監督が取ります",
   "ownership": {
     "arcId": "main.stage1"
   },
   "trigger": {
-    "actions": [
-      "work",
-      "play",
-      "rest",
-      "search"
-    ],
-    "when": {
-      "all": [],
-      "any": [],
-      "none": []
-    },
-    "repeat": {
-      "mode": "once-per-run"
-    },
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
     "priority": 900,
     "weight": 1
   },
   "presentation": {
-    "location": "闘技場 本会場",
+    "location": "闘技場 屋上(割れた空の下)",
     "assets": [
       {
         "id": "main.s1.w20.asset.background.001",
         "kind": "background",
-        "path": "/assets/arena-daylight.png",
-        "alt": "闘技場 本会場の背景"
+        "path": "/assets/story/bg-arena-rooftop-sunset-v1.png",
+        "alt": "異変の空の下の闘技場屋上の背景"
       }
     ]
   },
@@ -40,18 +29,12 @@
     {
       "type": "direction",
       "id": "main.s1.w20.node.direction.001",
-      "command": {
-        "type": "background",
-        "assetId": "main.s1.w20.asset.background.001",
-        "transition": "dissolve"
-      }
+      "command": { "type": "background", "assetId": "main.s1.w20.asset.background.001", "transition": "dissolve" }
     },
     {
       "type": "direction",
       "id": "main.s1.w20.node.direction.002",
-      "command": {
-        "type": "clearSprites"
-      }
+      "command": { "type": "clearSprites" }
     },
     {
       "type": "line",
@@ -59,8 +42,8 @@
       "lineId": "main.s1.w20.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "開場三十分前に鍵を開けたら、扉が外から膨らんでいた。押し返した私の隣で、券売のおじさんが空の札箱を掲げた。「今日は竜の谷と海底王国が、水路の件で腕相撲だ。札は朝の内に売り切れた。四十年やって初めてだ」",
-      "emotion": "comic"
+      "text": "所有者グランプリの朝は、空の音で始まった。がらす、と何かの割れる音。見上げると、空に、ひびが入っていた。ひびの向こうは、色のない色をしていた。",
+      "emotion": "tension"
     },
     {
       "type": "line",
@@ -68,17 +51,15 @@
       "lineId": "main.s1.w20.line.002",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私は「順に詰めてお座りください」と叫んだ。席が埋まり、通路が埋まり、階段まで埋まった。警備隊長が拡声器を構えて俳句を詠んだ。「満ちてなお 客の来たりて 息を吸え」。誰も動けないので、全員が素直に息を吸った。会場が一回り小さくなった。",
-      "emotion": "comic"
+      "text": "「世界滅亡ですね」と、ノノさんが言った。私の悲鳴より、避難放送より、先に。「四度目です。手順、掲示しておきますね」。手順が、あるのか。"
     },
     {
       "type": "line",
       "id": "main.s1.w20.node.line.003",
       "lineId": "main.s1.w20.line.003",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "通路は避難経路です! 座らないでください! ……あの、私の足の上で寝ないで!",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "街の避難は、恐ろしく手際が良かった。荷物は一人一つ、竜は年寄りを乗せる係、幽霊は壁を抜けて伝令係。常連客の剣士さんが、避難の列から空を見上げて呟いた。「ふむ。今回のは、大きいのう」。",
       "emotion": "comic"
     },
     {
@@ -87,8 +68,8 @@
       "lineId": "main.s1.w20.line.004",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私が天井を指して「あそこは席ではありません」と言った。言い終わる前に、天空城の客が梁へ足を引っ掛けて逆さに並んだ。海底王国の一行は演出用の水槽へ入り、内側から硝子を叩いた。拍手の代わりらしい。",
-      "emotion": "comic"
+      "text": "大会は、中止。掲示板に貼り紙が出て、その上から会社の告知が重ねられた。「全資産の緊急回収と保護収容を開始します」。ひびの下でも、会社は会社の言葉で喋る。",
+      "emotion": "tension"
     },
     {
       "type": "line",
@@ -96,8 +77,8 @@
       "lineId": "main.s1.w20.line.005",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私は札の売上を数えに券売所へ回った。帳面が閉じない。街中の賭け札が今日の腕相撲へ集まりすぎていた。経理課チームが法被のまま駆けつけ、そろばんを四挺つないで一本の橋にした。玉の音が屋根まで届き、客がそれに合わせて手拍子を始めた。",
-      "emotion": "comic"
+      "text": "ひびから、終わりが降り始めた。名前の分からない、大きくて暗いもの。街の端の時計台が、音もなく飲まれて消えた。誰かが止めなければ、順番に、全部ああなる。",
+      "emotion": "tension"
     },
     {
       "type": "line",
@@ -105,27 +86,27 @@
       "lineId": "main.s1.w20.line.006",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私が「飲食は場外の屋台で」と案内したら、屋台の方が場内へ引っ越してきた。串焼きも氷菓も、台車ごと階段を上ってくる。食堂のおばちゃんが三段目に鍋を据え、煮込みの器が客の頭上を渡っていった。一杯もこぼれない。こぼした客は、その場で腕相撲になるからだ。",
-      "emotion": "comic"
+      "text": "うちの三人は、避難の列に、いなかった。屋上にいた。空を見上げて、静かに、指の封を確かめていた。振り向いた目が、私に聞いていた。——出して、いいのか。",
+      "emotion": "tension"
     },
     {
       "type": "line",
       "id": "main.s1.w20.node.line.007",
       "lineId": "main.s1.w20.line.007",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "私は竜の紳士に「立ち見でもよろしいですか」と尋ねた。紳士が立った瞬間、後ろ三十列の視界が消えた。紳士はすぐ正座した。正座しても大きかったので、その一角の客は結局、竜を椅子にして座った。紳士は文句も言わず、卵を固めで注文した。",
-      "emotion": "comic"
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "全力、出してください。壊れた分は、あとで全部直します。——責任は、監督が取ります!",
+      "emotion": "resolve"
     },
     {
       "type": "line",
       "id": "main.s1.w20.node.line.008",
       "lineId": "main.s1.w20.line.008",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "今の放送、聞きましたか! 『後方へ流れよ』って、それ突撃の合図です! ……あ、綺麗に整列した。みなさん、なんでそっちは従うんですか",
-      "emotion": "comic"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "合図を、出した。特訓で決めた、うち専用のダサくて格好いい符丁を、屋上いっぱいの声で。三人の封が——肩まで、一気に、開いた。",
+      "emotion": "revelation"
     },
     {
       "type": "line",
@@ -133,7 +114,43 @@
       "lineId": "main.s1.w20.line.009",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私は入口へ戻り、両手で扉を押さえて「本日は満員です」と宣言した。銅鑼が鳴った。会場が一斉に息を止めて、静かになった。その静けさの底で、私の手のひらの下から、扉が控えめに三度叩かれた。まだ外に、誰かいる。",
+      "text": "その先の時間を、私は一生忘れないと思う。本来の領域、というものを初めて見た。空のひびに向かって立つ三人は、大きくて、まぶしくて——世界の危機だというのに、全員、どこか楽しそうだった。初めて全力を出せた人の顔は、ああいう顔をしている。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w20.node.line.010",
+      "lineId": "main.s1.w20.line.010",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "気づけば、避難したはずのライバルたちも戻っていた。海が波で街を包み、闇が「このひび、味が濃い」と言いながらひびを食べ、法廷の小槌が異常な音の全部に静粛を命じた。ガヤ氏は避難所から勝手に中継し、避難所で視聴率が出た。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w20.node.line.011",
+      "lineId": "main.s1.w20.line.011",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "夕方——空の、ひびが、閉じた。世界は、救われた。常連客の剣士さんが避難所で頷いたそうだ。「うん。今回のは、早かった」。四度目の滅亡は、史上最短で終わった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w20.node.line.012",
+      "lineId": "main.s1.w20.line.012",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "そして、夜。半壊した闘技場の前で、私たちは会社の通告を受け取った。「無認可の全力解放は、契約違反です。資産の緊急回収を、開始します」。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w20.node.line.013",
+      "lineId": "main.s1.w20.line.013",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "世界を救った代償が、チームの解体。三人は保護収容の名目で連れられ、控室の名札が外された。私の手の中には、割れた瓦礫と、手帳だけが残った。手帳の「登録選手」の頁だけが、まだ、三人の名前を保っていた。",
       "emotion": "tension"
     },
     {
@@ -142,34 +159,24 @@
       "choices": [
         {
           "id": "main.s1.w20.choice.001",
-          "label": "天井を正式な客席にする",
-          "result": "私は逆さ吊りの一角を「天井席」と名付け、券売のおじさんに札を刷らせた。値は普通席の半分。売り出して七秒で完売した。私は規則を一つ足した。帽子と小銭は下で預かる。預け損ねた帽子が一つだけ落ちて、真下の竜の紳士の頭へ綺麗に着地した。紳士は返さずに被って観戦した。返却は試合の後になった。",
-          "intent": "入れない客を入れる",
-          "promise": "客席が二百増え、天井が会場の名物になる",
-          "memory": "券売のおじさんが、七秒で売り切れた札の話を繰り返す",
-          "tone": "pragmatic",
-          "effects": [
-            {
-              "type": "sharedPoints",
-              "amount": 2
-            }
-          ],
+          "label": "連行の間際、全員と目を合わせて頷く",
+          "result": "言葉は、間に合わなかった。かわりに、一人ずつ、目を合わせて頷いた。三人とも、頷き返してきた。心配の顔ではなかった。監督を信じる顔でも、正確には、なかった。——次の指示を待つ、現役の選手の顔だった。連行の列が角を曲がって消えるまで、私は背筋を伸ばして立っていた。うちの解散は、まだ、誰も認めていない。",
+          "intent": "言葉より確かな約束を、目で交わす",
+          "promise": "チームの芯は切れない代わりに、今夜できることは何もない",
+          "memory": "連行の間際の三つの頷きを、全員が覚えている",
+          "tone": "heroic",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
           "goto": "main.s1.w20.node.end.001"
         },
         {
           "id": "main.s1.w20.choice.002",
-          "label": "扉の外の街へ実況を流す",
-          "result": "私は館内放送のお姉さんに頼み、実況を扉の外へ流してもらった。軍記物の声が通りを走り、屋根を越え、両替所の行列まで届いた。街の人たちは道端に座り込み、見えない試合を声だけで見た。銅鑼が鳴るたび通りが揺れた。翌朝、沿道の店から苦情が来た。内容は「うるさい」ではなく「もう一度やれ」だった。",
-          "intent": "入れなかった客へ届ける",
-          "promise": "会場に入れない街の人まで同じ試合を共有する",
-          "memory": "館内放送のお姉さんが、通りを揺らした自分の声を誇る",
-          "tone": "heroic",
-          "effects": [
-            {
-              "type": "sharedPoints",
-              "amount": 3
-            }
-          ],
+          "label": "回収通告の受領印を、押さずに返す",
+          "result": "差し出された受領書に、私は判を押さなかった。「受領していません。受け取っていないものは、受け取っていないので」。係員は困った顔で、押印欄が空白のまま書類を持ち帰った。空白は、事務の世界ではとても大きい。回収は始まってしまったが、完了はしていない——私の判が、まだどこにも、押されていないからだ。",
+          "intent": "事務の武器で、最後の一線を守る",
+          "promise": "手続きの穴が残る代わりに、会社を本気にさせる",
+          "memory": "押されなかった受領印が、回収手続きの棘になっている",
+          "tone": "defiant",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
           "goto": "main.s1.w20.node.end.001"
         }
       ]
@@ -182,8 +189,8 @@
   ],
   "debug": {
     "status": "review",
-    "sourceDocument": "docs/MAIN_STORY_STAGE1_PLAN.md",
-    "authorNote": "第20週。この闘技場の一シーズンを追うメインストーリー。人物の場面は別枠で再生される。",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "週20どん底(13行)。滅亡阻止のコメディ大戦(ユーザー決定)。解放三段の三段目=肩まで一斉解放。世界は救い、代償にチーム解体。滅亡の原因は説明しない(後周の種)。ライバル共闘の初回。",
     "legacyGeneratedIds": false
   }
 }

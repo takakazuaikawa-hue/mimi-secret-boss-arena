@@ -1,0 +1,206 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s1.w02",
+  "kind": "opening",
+  "title": "翌朝、名前が変わっている",
+  "summary": "引継ぎ事故の翌朝。三つの扉と、勝手に点くオーナー手帳",
+  "ownership": {
+    "arcId": "main.stage1"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "闘技場 正面受付",
+    "assets": [
+      {
+        "id": "main.s1.w02.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-arena-reception.png",
+        "alt": "闘技場の正面受付の背景"
+      },
+      {
+        "id": "main.s1.w02.asset.background.002",
+        "kind": "background",
+        "path": "/assets/story/bg-contract-archive-v2.png",
+        "alt": "帳場と契約保管庫の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s1.w02.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s1.w02.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.w02.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w02.node.line.001",
+      "lineId": "main.s1.w02.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "翌朝の受付は、インクと紙の匂いが濃かった。昨日の名札の隣に、真鍮の鍵がひと組。札の名前は、私。鍵の名前も、私。夜のうちに、世界の書類が私に追いついてしまった。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w02.node.line.002",
+      "lineId": "main.s1.w02.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ゆうべの立ち会いを、何度も思い返す。マダムの返却手続き、「現場代理人」の欄、私の署名。三人とも、違う意味だと思っていた。誰も悪くない。悪くないのに、名義だけが動いた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w02.node.line.003",
+      "lineId": "main.s1.w02.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「おはようございます、オーナーさん!」。やめてほしい。その呼び方は心臓に悪い。「今日、訂正しますからね」。宣言すると、ノノさんは「はい!」と気持ちのいい返事をして、小さく付け足した。「……訂正の書式、本社取り寄せなんですけど」。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w02.node.line.004",
+      "lineId": "main.s1.w02.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "マダムが朝一番で来た。「ごめんなさいねえ」と差し出されたパンフの表紙に、大きな金文字。『アットホームな闘技場経営権』。アットホームの根拠は、どこにも書いていない。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w02.node.line.005",
+      "lineId": "main.s1.w02.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「宝くじの景品でねえ、返そうとしたら、こんなことに。……でもあなた、意外と似合うと思うのよ」。似合うとかじゃ、ないんですよ、マダム。",
+      "emotion": "comic"
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.w02.node.direction.003",
+      "command": { "type": "background", "assetId": "main.s1.w02.asset.background.002", "transition": "dissolve" }
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w02.node.line.006",
+      "lineId": "main.s1.w02.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "書式を待つあいだ、ノノさんが「まず現場を見ましょう」と鍵の束を鳴らした。オーナーの管轄を、実物で教えてくれるらしい。一つ目の扉——選手の控室。長椅子と、砂の匂い。今は、誰もいない。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w02.node.line.007",
+      "lineId": "main.s1.w02.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "二つ目、帳場。そろばんと、分厚い台帳。「お金の出入りは、ぜんぶここです」。台帳の最後の頁に、見なかったことにしたい太さの数字の欄があった。見なかったことにした。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w02.node.line.008",
+      "lineId": "main.s1.w02.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "三つ目、登録窓口。「選手をここで登録して、初めて興行に出られます」。つまりこの三つの扉が、オーナーの仕事の全部だ。選手がいて、お金が回って、登録して、試合に出す。……あれ。意外と、分かる構造だぞ。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w02.node.line.009",
+      "lineId": "main.s1.w02.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "戻って、訂正の書式。三枚で、完璧だった。完璧すぎて、提出先の欄にこうある。「アルデバラン本社(片道五日)」。受理は早くて数週間。私の派遣は、一日の予定だった。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w02.node.line.010",
+      "lineId": "main.s1.w02.line.010",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "帰り際、鞄の中で手帳が勝手に点いた。今日開けた扉の順に、頁が増えている。「控室」「帳場」「登録窓口——登録選手: 〇名」。〇名。選手がいなければ、興行はできない。つまり私の最初の仕事は、これらしい。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w02.node.line.011",
+      "lineId": "main.s1.w02.line.011",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "負債の頁だけ、数字の代わりに「照会中」とある。ノノさんいわく「数字になるまで、誰にも分かりません」。この職場、分からないことだけ正式だ。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w02.node.line.012",
+      "lineId": "main.s1.w02.line.012",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "帰り道、鍵が鞄の中で重かった。金物の重さではない気がする。気のせいだと思うことにして、二回失敗した。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w02.node.line.013",
+      "lineId": "main.s1.w02.line.013",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "寮の枕元で、手帳がもう一度光った。「明日の予定: 詫びの来客(甘味あり)」。……甘味?",
+      "emotion": "tension"
+    },
+    {
+      "type": "choice",
+      "id": "main.s1.w02.node.choice.001",
+      "choices": [
+        {
+          "id": "main.s1.w02.choice.001",
+          "label": "訂正が通るまで、全部ちゃんとやる",
+          "result": "宣言を聞いたノノさんが、棚から分厚い綴りを三冊おろしてきた。「では、こちらが本日の分です」。ちゃんとやる、の範囲が思ったより広い。それでも一冊目の表紙に「選手名簿(仮)」とあるのを見て、少しだけ背筋が伸びた。名前しか知らない誰かの帳面は、ちゃんとした人が持つべきだ。今だけは、それが私らしい。",
+          "intent": "預かっている間の仕事に、手を抜かない",
+          "promise": "信用が積み上がる代わりに、仕事の範囲がどんどん広がる",
+          "memory": "ノノさんが、三冊の綴りを渡した朝を覚えている",
+          "tone": "heroic",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "goto": "main.s1.w02.node.end.001"
+        },
+        {
+          "id": "main.s1.w02.choice.002",
+          "label": "最低限だけ、と線を引く",
+          "result": "「最低限で結構です」とノノさんは請け合った。そのうえで、最低限の一覧を美しい字で書いてくれた。二十行あった。この職場の最低限は、最低限ではない。それでも、一覧の外の仕事を断る言い訳ができたのは大きい。線は引けた。引いた線の内側が、思ったよりにぎやかなだけだ。",
+          "intent": "帰る前提を崩さず、預かり仕事に線を引く",
+          "promise": "身を守る線が引ける代わりに、線の内側だけで二十行ある",
+          "memory": "美しい字の「最低限一覧」が、手帳に挟まっている",
+          "tone": "pragmatic",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "goto": "main.s1.w02.node.end.001"
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "main.s1.w02.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "週2(増量版13行)。仕組み学習=オーナー権の中身を三つの扉(控室・帳場・登録窓口)の実物で。手帳=業務の目次(UIの段階開放の作中対応)。引き=半分の啓示(甘味?)。",
+    "legacyGeneratedIds": false
+  }
+}

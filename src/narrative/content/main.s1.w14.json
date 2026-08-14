@@ -2,37 +2,26 @@
   "schemaVersion": 1,
   "id": "main.s1.w14",
   "kind": "opening",
-  "title": "夜の部、開場",
-  "summary": "夜勤初日。客が総入れ替わる夜",
+  "title": "戻れるのに、戻らない",
+  "summary": "名義の例外承認が、いまさら下りる。ミミは申請を取り下げる",
   "ownership": {
     "arcId": "main.stage1"
   },
   "trigger": {
-    "actions": [
-      "work",
-      "play",
-      "rest",
-      "search"
-    ],
-    "when": {
-      "all": [],
-      "any": [],
-      "none": []
-    },
-    "repeat": {
-      "mode": "once-per-run"
-    },
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
     "priority": 900,
     "weight": 1
   },
   "presentation": {
-    "location": "闘技場・深夜の正面ロビー",
+    "location": "闘技場 正面受付",
     "assets": [
       {
         "id": "main.s1.w14.asset.background.001",
         "kind": "background",
-        "path": "/assets/story/bg-observation-deck-night.png",
-        "alt": "闘技場・深夜の正面ロビーの背景"
+        "path": "/assets/story/bg-arena-reception.png",
+        "alt": "闘技場の正面受付の背景"
       }
     ]
   },
@@ -40,18 +29,12 @@
     {
       "type": "direction",
       "id": "main.s1.w14.node.direction.001",
-      "command": {
-        "type": "background",
-        "assetId": "main.s1.w14.asset.background.001",
-        "transition": "dissolve"
-      }
+      "command": { "type": "background", "assetId": "main.s1.w14.asset.background.001", "transition": "dissolve" }
     },
     {
       "type": "direction",
       "id": "main.s1.w14.node.direction.002",
-      "command": {
-        "type": "clearSprites"
-      }
+      "command": { "type": "clearSprites" }
     },
     {
       "type": "line",
@@ -59,8 +42,8 @@
       "lineId": "main.s1.w14.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "深夜零時。受付の札を「夜の部」へ裏返した。裏返す音より早く、正面扉が七つ同時に開いた。蹄、下駄、車輪、裸足。床を鳴らす音が、一度に四種類へ増えた。",
-      "emotion": "comic"
+      "text": "特訓の筋肉痛(見ているだけなのに、なぜか私も)が残る朝、受付に封筒が届いていた。赤い社印。片道五日の距離を、また誰かが運んできたのだ。",
+      "emotion": "tension"
     },
     {
       "type": "line",
@@ -68,18 +51,16 @@
       "lineId": "main.s1.w14.line.002",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "先頭は毛皮の帽子の団体だった。私が「こんばんは」と頭を下げたら、十二人が声をそろえて「おはよう」と返した。灰の王都は時差で、向こうはいま昼の三時らしい。挨拶が正面から衝突した。",
-      "emotion": "comic"
+      "text": "「名義変更申請の件、例外審査の結果——承認」。……承認。読み間違いかと思って、三度読んだ。最上級在籍のまま、名義を元へ戻せる。私は、いつでも、派遣の日常へ帰れる。"
     },
     {
       "type": "line",
       "id": "main.s1.w14.node.line.003",
       "lineId": "main.s1.w14.line.003",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "では両方で。おはようございまして、こんばんは",
-      "emotion": "comic"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "望んでいたはずの紙が、手の中で、妙に軽かった。第一週の私なら、この場で万歳をしていた。あの頃の私に、ちゃんと万歳をさせてあげたい気持ちと、今の私の気持ちは、別の場所にある。",
+      "emotion": "tender"
     },
     {
       "type": "line",
@@ -87,8 +68,8 @@
       "lineId": "main.s1.w14.line.004",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "言い切った途端、商人が全員手帳を開いた。「これが噂の、昼のバニーだ」。頁に貼られた私の似顔絵は、耳が実物より二割長い。券売のおじさんの絵だ。あの人は私の耳を、必ず二割増しで描く。",
-      "emotion": "comic"
+      "text": "承認書には、手続きの期限があった。「三十日以内に、名義返還の手続きを行うこと」。三十日。指を折る。三十日後は——ちょうど、特訓の成果を初めて試合で試す頃だ。",
+      "emotion": "tension"
     },
     {
       "type": "line",
@@ -96,8 +77,8 @@
       "lineId": "main.s1.w14.line.005",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "絵の礼を言いに寄って、ついでに夜の札の違いを聞いた。券売のおじさんは帽子のつばを持ち上げ、売り場の灯りを消した。真っ暗になった台の上で、賭け札の数字だけが青く光る。後ろの行列が一斉に「おお」と言って、三人ほど余分に買っていった。",
-      "emotion": "revelation"
+      "text": "昼、控室を覗いた。指先の封を解く練習をしている背中が三つ。壁の亀裂は増えたが、笑い声も増えた。あの背中は、名義がマダムに戻ったら、誰が見るのだろう。",
+      "emotion": "tender"
     },
     {
       "type": "line",
@@ -105,8 +86,8 @@
       "lineId": "main.s1.w14.line.006",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "幽霊のご夫妻へ新聞を二部そろえて渡すと、奥さんが声に出して読み始めた。夜は文字がよく見えるのだそうだ。旦那さんが頷くたび、椅子は少しも軋まず、ロビーの温度だけが下がっていった。",
-      "emotion": "tender"
+      "text": "夕方まで、私は承認書を胸ポケットに入れて働いた。紙一枚ぶん、ずっと胸が重かった。重さの正体を、締めの時間に、やっと認めた。——私は、戻りたくないのだ。",
+      "emotion": "revelation"
     },
     {
       "type": "line",
@@ -114,8 +95,8 @@
       "lineId": "main.s1.w14.line.007",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "寒いので、私はロビーの窓を順に閉めて回った。三つ目を閉めた途端、館内放送のお姉さんの声が降ってきた。「夜の部、開場。眠らぬ客、五百。眠れぬ客、三。後者には毛布を配る」。毛布は本当に運ばれてきた。三枚だけ、盆に載せて恭しく。",
-      "emotion": "comic"
+      "text": "受付の窓口で、取り下げの用紙をもらった。ノノさんは何も聞かずに、黙って書式を出してくれた。受付の人が何も聞かないのは、ぜんぶ分かっている、の合図である。",
+      "emotion": "tender"
     },
     {
       "type": "line",
@@ -124,7 +105,7 @@
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "三枚なら私が配ります。眠れないの、どちら様ですか",
+      "text": "取り下げます。私、この名義で——やりたいことが、できました。",
       "emotion": "resolve"
     },
     {
@@ -133,8 +114,26 @@
       "lineId": "main.s1.w14.line.009",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "手を挙げたのは竜の紳士だった。私が毛布を膝へ掛けた瞬間、夜行性の客たちが揃って息を止める。隣の席の誰かが私の袖を引いて、小声で言った。「寝かせるな。この人、寝ると三日起きない」",
-      "emotion": "tension"
+      "text": "取り下げの理由欄は、三行しかなかった。やりたいこと(全員の全力を、興行にすること)を書いたら、収まらなかった。別紙を付けた。事務員人生で初めて、理由欄に別紙を付けた。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w14.node.line.010",
+      "lineId": "main.s1.w14.line.010",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "書き終えると、ノノさんが判子置きをすっと差し出した。私は自分の判を、まっすぐ押した。第一週の、一行ズレた判の、やり直しみたいに。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w14.node.line.011",
+      "lineId": "main.s1.w14.line.011",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "受け取ったノノさんが、初めて、敬語を少しだけ崩した。「……ようこそ、オーナー」。それから慌てて言い直した。「ようこそ、でいいんですよね? 今さらですけど」。今さらです。でも、嬉しいです。",
+      "emotion": "tender"
     },
     {
       "type": "choice",
@@ -142,34 +141,24 @@
       "choices": [
         {
           "id": "main.s1.w14.choice.001",
-          "label": "夜の常連を全員覚える",
-          "result": "毛布を配って回りながら、一人ずつ名前を聞いた。灰の王都の商人が十二人、雲上修道院の徹夜組が四人、海底王国の貝殻売りが一人。最後に全員を言い当てたら、館内放送のお姉さんが即興で読み上げた。「夜の部、名を持つ者、十七。以上、記録に残す」。翌朝、その十七人分の似顔絵が掲示板に貼られていた。全員、耳が二割長かった。",
-          "intent": "夜の顔ぶれを覚えきる",
-          "promise": "夜の常連十七人が、私を名前で呼ぶようになる",
-          "memory": "灰の王都の商人が、手帳の似顔絵を一枚増やしている",
-          "tone": "pragmatic",
-          "effects": [
-            {
-              "type": "sharedPoints",
-              "amount": 2
-            }
-          ],
+          "label": "マダムに、取り下げを直接報告する",
+          "result": "マダムは話を聞き終えると、ハンカチを出して、豪快に鼻をかんだ。「だから言ったのよ、似合うって」。今回ばかりは、言い返せなかった。彼女は風呂敷から八つ裂き大福を出し(常備しているらしい)、二人で一個ずつ食べた。「前のオーナーとして、ひとつだけ助言。——困ったら、宝くじよ」。助言の役には立たないが、味は覚えておこうと思った。",
+          "intent": "名義の前の持ち主に、筋を通す",
+          "promise": "マダムが正式に味方になる代わりに、大福の常備を知ってしまう",
+          "memory": "「だから言ったのよ」を、マダムは一生擦ってくる",
+          "tone": "tender",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
           "goto": "main.s1.w14.node.end.001"
         },
         {
           "id": "main.s1.w14.choice.002",
-          "label": "竜の紳士を寝かせない",
-          "result": "膝の毛布をそっと剥がして、両替所の椅子へ座り直してもらい、熱いお茶を差し出した。「起きていてください。夜の分の卵、まだ固まってません」。紳士は目を丸くして、それから三十秒だけ静かに笑った。夜行性の客たちが拍手する。おかげで紳士は朝まで起きていて、食堂のおばちゃんは卵を百二十個、固茹でにする羽目になった。",
-          "intent": "紳士を朝まで起こしておく",
-          "promise": "夜行性の客たちが、私の頼みを一度は聞いてくれる",
-          "memory": "竜の紳士が、固茹で卵百二十個の借りを覚えている",
-          "tone": "comic",
-          "effects": [
-            {
-              "type": "sharedPoints",
-              "amount": 3
-            }
-          ],
+          "label": "選手たちには、まだ言わないでおく",
+          "result": "取り下げのことは、胸に仕舞った。恩に着せる話でも、宣言する話でもない。私が勝手に決めた、私の話だ。それでも翌朝、控室の空気が少しだけ柔らかい気がした。ノノさんは口が堅い。堅いが、受付の「おはようございます、オーナー」の声が、昨日までより一段明るかった。……ばれている気がする。この職場、合図が多いから。",
+          "intent": "自分の決断を、静かに持っておく",
+          "promise": "誰にも貸しを作らない代わりに、たぶん全員に気づかれる",
+          "memory": "言わなかった決断が、チームの空気にだけ残った",
+          "tone": "pragmatic",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
           "goto": "main.s1.w14.node.end.001"
         }
       ]
@@ -182,8 +171,8 @@
   ],
   "debug": {
     "status": "review",
-    "sourceDocument": "docs/MAIN_STORY_STAGE1_PLAN.md",
-    "authorNote": "第14週。この闘技場の一シーズンを追うメインストーリー。人物の場面は別枠で再生される。",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "週14(11行)。正典§3中盤「権利を返すだけでは解決しないと悟る」。戻れるのに戻らない=感情の不可逆。週1の一行ズレた判のやり直しの画。週6の例外審査が回収される(選択に依存しない書き方)。",
     "legacyGeneratedIds": false
   }
 }

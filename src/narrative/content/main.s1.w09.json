@@ -2,37 +2,26 @@
   "schemaVersion": 1,
   "id": "main.s1.w09",
   "kind": "opening",
-  "title": "為替板は褒めると上がる",
-  "summary": "両替所の応援。板の機嫌と焦げの読み方を覚える",
+  "title": "魔王城あと地・日帰り",
+  "summary": "休日の観光。転んだ石の行列と、ライセンス商品の小さな札",
   "ownership": {
     "arcId": "main.stage1"
   },
   "trigger": {
-    "actions": [
-      "work",
-      "play",
-      "rest",
-      "search"
-    ],
-    "when": {
-      "all": [],
-      "any": [],
-      "none": []
-    },
-    "repeat": {
-      "mode": "once-per-run"
-    },
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
     "priority": 900,
     "weight": 1
   },
   "presentation": {
-    "location": "闘技場・両替所",
+    "location": "魔王城跡地(観光地)",
     "assets": [
       {
         "id": "main.s1.w09.asset.background.001",
         "kind": "background",
-        "path": "/assets/story/bg-arena-reception.png",
-        "alt": "闘技場・両替所の背景"
+        "path": "/assets/story/bg-fountain-plaza-day-v1.png",
+        "alt": "出発前の噴水広場の背景"
       }
     ]
   },
@@ -40,18 +29,12 @@
     {
       "type": "direction",
       "id": "main.s1.w09.node.direction.001",
-      "command": {
-        "type": "background",
-        "assetId": "main.s1.w09.asset.background.001",
-        "transition": "dissolve"
-      }
+      "command": { "type": "background", "assetId": "main.s1.w09.asset.background.001", "transition": "dissolve" }
     },
     {
       "type": "direction",
       "id": "main.s1.w09.node.direction.002",
-      "command": {
-        "type": "clearSprites"
-      }
+      "command": { "type": "clearSprites" }
     },
     {
       "type": "line",
@@ -59,7 +42,7 @@
       "lineId": "main.s1.w09.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "窓口の札を「開」に裏返した瞬間、為替板の札が一斉にめくれた。パタパタパタ、と拍手みたいな音が鳴って、竜の鱗が三枚ぶん値上がりした。",
+      "text": "休みの日。噴水広場のバス乗り場は、日向の匂いがした。行き先は例の観光地——魔王城あと地、日帰り。うちの選手も何人か付いてきた。私服が、新鮮である。",
       "emotion": "comic"
     },
     {
@@ -68,17 +51,15 @@
       "lineId": "main.s1.w09.line.002",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "券売のおじさんが横から言う。「板は生きとる。褒めると上がる、疑うと下がる」。試しに板をじっと疑ってやったら、雲上の祈祷券がすとんと落ちた。おじさんは「な」とだけ言った。",
-      "emotion": "comic"
+      "text": "先週の海戦の話題は、まだ街に漂っていた。すれ違う人が「あ、四十二点の」と私を指す。点数で呼ばれる監督、それが私だ。次はもっと上の数字で呼ばれたい。"
     },
     {
       "type": "line",
       "id": "main.s1.w09.node.line.003",
       "lineId": "main.s1.w09.line.003",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "褒めると上がるって、それもう相場じゃなくて機嫌ですよね",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "跡地は、思ったより跡地だった。崩れた城壁、焦げた玉座、そして年間三万人。「勇者が最初に転んだ石」に行列ができていて、みんな順番に転んでいた。参加型の観光である。",
       "emotion": "comic"
     },
     {
@@ -87,7 +68,7 @@
       "lineId": "main.s1.w09.line.004",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私がそう言った途端、板の一段目がくるりと回って「機嫌」と表示した。列のお客が全員そこを見た。海底のお客は真珠を握りしめ、雲上の修道士は祈祷券に息を吹きかけて磨きはじめた。",
+      "text": "売店の棚は充実していた。「城壁のかけら(本物・無限に出ます)」「魔王の湯呑み(復刻)」「玉座クッション(座り心地・当時のまま)」。在庫の仕組みは、今日も聞かないことにした。",
       "emotion": "comic"
     },
     {
@@ -96,8 +77,8 @@
       "lineId": "main.s1.w09.line.005",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "列の先頭は竜の紳士。鱗を一枚、指ではじいて窓口に置く。「本日は固めで」。私が「それは食堂の窓口です」と鱗を秤に載せた途端、板が「卵」の欄を新設した。固めが二段上がって、後ろの海底のお客まで「では私も固めで」と言い出した。",
-      "emotion": "comic"
+      "text": "連れの選手の一人が、棚の前で足を止めた。長い、足止めだった。自分の世界の、終わった場所を思い出す横顔に見えた。私は声をかけず、隣に立って、同じ棚を見た。",
+      "emotion": "tender"
     },
     {
       "type": "line",
@@ -105,18 +86,17 @@
       "lineId": "main.s1.w09.line.006",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "次は灰の王都のご老人。焼け残った硬貨を、焦げた面を上にして置く。私が焦げを数えはじめると、おじさんが手を叩いた。「そこだ。灰は焦げの数で値が決まる。三つ焦げは強い」",
-      "emotion": "revelation"
+      "text": "気を取り直して、名物の串を食べた。「魔王団子(八つ裂き大福の姉妹品)」。断面から赤い餡。この街の菓子業界、物騒な名前しか付けられない縛りでもあるのだろうか。",
+      "emotion": "comic"
     },
     {
       "type": "line",
       "id": "main.s1.w09.node.line.007",
       "lineId": "main.s1.w09.line.007",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "焦げが多いほど高いんですか",
-      "emotion": "tender"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "帰りぎわ、棚の隅で手が止まった。小さな札が下がっている。「アルデバラン社ライセンス商品」。……勇者の物語の、ライセンス?",
+      "emotion": "tension"
     },
     {
       "type": "line",
@@ -124,8 +104,8 @@
       "lineId": "main.s1.w09.line.008",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「生き延びた証だからな」。私が三つ焦げを一番高い値で読み上げると、列の全員が拍手した。硬貨の持ち主は胸を張り、板はその拍手のぶんだけ灰の王都を押し上げた。おじさんが横で、また「な」と言った。",
-      "emotion": "tender"
+      "text": "売店のおばちゃんは、明るく教えてくれた。「終わったお話はね、ぜんぶ会社さんの持ち物なんだって。うちは使用料を払って売ってるのよ。ほら、領収書」。領収書は、本物だった。",
+      "emotion": "revelation"
     },
     {
       "type": "line",
@@ -133,8 +113,26 @@
       "lineId": "main.s1.w09.line.009",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "閉店間際、板が突然すべての欄を白紙にして、一行だけ表示した。「本日の最高値、両替所職員ミミ」。竜の紳士が、静かに列の最後尾へ並び直した。",
+      "text": "終わった話は、会社の持ち物。妙な言い方だ。物語って、持ち物になるんだろうか。考えかけたところで団子の二本目が来たので、やめた。考えごとは、団子に勝てない。",
       "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w09.node.line.010",
+      "lineId": "main.s1.w09.line.010",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "帰りのバスで、選手たちはよく眠っていた。窓の外を、崩れた城壁がゆっくり流れていく。観光は、成功ということでいいと思う。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w09.node.line.011",
+      "lineId": "main.s1.w09.line.011",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "寮に着くと、手帳が点いていた。「今週の追記: 来客予定(帳簿関連)」。……観光の余韻、短い。",
+      "emotion": "tension"
     },
     {
       "type": "choice",
@@ -142,34 +140,24 @@
       "choices": [
         {
           "id": "main.s1.w09.choice.001",
-          "label": "為替板を全力で褒める",
-          "result": "私が板に向かって「今日の並び、完璧です」と言い切ると、板は全欄を一段ずつ持ち上げ、最後に自分の縁を金色に光らせた。列が沸いて、海底のお客が真珠を二粒も余計に出した。券売のおじさんは「褒めすぎだ、明日の朝は必ず下がる」と言いながら、板にこっそり会釈して帰っていった。",
-          "intent": "相場の機嫌を味方につける",
-          "promise": "両替所ごと沸かせる、褒め上手の看板",
-          "memory": "板を全力で褒めた新人の声を、為替板と券売のおじさんが覚えている。",
-          "tone": "comic",
-          "effects": [
-            {
-              "type": "sharedPoints",
-              "amount": 3
-            }
-          ],
+          "label": "お土産を、留守番の全員に配る",
+          "result": "城壁のかけらを人数分と、魔王団子を二箱買って帰った。留守番組の反応は三種類——懐かしがる人、笑う人、かけらを指で弾いて強度を確かめる人。「本物だな」と誰かが言った。本物の廃墟が土産物になる街で、うちは明日も興行をする。配り終えた頃には、観光の話がそのまま夜の宴会になっていた。",
+          "intent": "休日の実りを、チーム全員に分ける",
+          "promise": "チームの空気が温まる代わりに、財布が軽くなる",
+          "memory": "城壁のかけらが、控室の棚に人数分並んでいる",
+          "tone": "tender",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
           "goto": "main.s1.w09.node.end.001"
         },
         {
           "id": "main.s1.w09.choice.002",
-          "label": "焦げの読み方を覚える",
-          "result": "私が焦げ面の数え方を帳面に書き取ると、灰の王都のご老人は硬貨を三枚並べ、焦げの向きまで教えてくれた。覚えたての手つきで読み上げたら、後ろの客が慌てて自分の硬貨を袖で磨きはじめ、焦げが薄くなって値を落とした。ご老人は帰りぎわ、いちばん黒い一枚を私の手に握らせて言った。「これは値がつかん。持っとけ」",
-          "intent": "レートを自分の目で読む",
-          "promise": "焦げの数で値を読む目と、値のつかない一枚",
-          "memory": "焦げを正しく数えた新人の手つきを、灰の王都のご老人が覚えている。",
+          "label": "ライセンスの札のことを、手帳に控える",
+          "result": "「アルデバラン社ライセンス商品」。札の文言を、そのまま手帳に書き写した。終わった物語は、会社の持ち物——売店の領収書の写しまで、おばちゃんに頼んで一枚もらった。何に使うかは、まだ分からない。分からないものを控えておくのは、事務員の本能である。手帳の隅で、その一行だけが妙に冷たい色をしていた。",
+          "intent": "気になった一行を、証拠ごと残しておく",
+          "promise": "いつか効く控えが残る代わりに、休日に仕事が一滴混ざる",
+          "memory": "ライセンス札の写しが、手帳に挟まっている",
           "tone": "pragmatic",
-          "effects": [
-            {
-              "type": "sharedPoints",
-              "amount": 2
-            }
-          ],
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
           "goto": "main.s1.w09.node.end.001"
         }
       ]
@@ -182,8 +170,8 @@
   ],
   "debug": {
     "status": "review",
-    "sourceDocument": "docs/MAIN_STORY_STAGE1_PLAN.md",
-    "authorNote": "第9週。この闘技場の一シーズンを追うメインストーリー。人物の場面は別枠で再生される。",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "週9(11行)。仕組み学習=終わった物語が観光資源であること+Q2の種一粒(ライセンス札)。ここで止めて深掘りしない。背景は跡地の専用絵が無いため出発の広場で代用(要アセット)。",
     "legacyGeneratedIds": false
   }
 }

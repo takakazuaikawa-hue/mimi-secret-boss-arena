@@ -31,7 +31,7 @@ describe("メインストーリーの発火(ストア経由)", () => {
     useGameStore.getState().chooseAction("work");
     const played = playUntilIdle();
 
-    expect(played[0]).toBe("main.s1.ep1");
+    expect(played[0]).toBe("main.s1.w01");
     expect(played).toContain("gidonozeaas.meet");
     expect(played.filter((id) => id === "gidonozeaas.meet")).toHaveLength(1);
   });
@@ -46,6 +46,6 @@ describe("メインストーリーの発火(ストア経由)", () => {
 
     useGameStore.getState().chooseAction("work");
     const played = playUntilIdle();
-    expect(played[0]).toBe("main.s1.ep1");
+    expect(played[0]).toBe("main.s1.w01");
   });
 });

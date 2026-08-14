@@ -2,37 +2,26 @@
   "schemaVersion": 1,
   "id": "main.s1.w19",
   "kind": "opening",
-  "title": "苦情窓口、番号札三十七枚",
-  "summary": "苦情窓口の応援で、世界ごとに違う怒り方へ手が届くようになる",
+  "title": "古い版にだけ、ある一条",
+  "summary": "規定集読破合宿。上演への異議申立権と、迫る回答期限",
   "ownership": {
     "arcId": "main.stage1"
   },
   "trigger": {
-    "actions": [
-      "work",
-      "play",
-      "rest",
-      "search"
-    ],
-    "when": {
-      "all": [],
-      "any": [],
-      "none": []
-    },
-    "repeat": {
-      "mode": "once-per-run"
-    },
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
     "priority": 900,
     "weight": 1
   },
   "presentation": {
-    "location": "闘技場 苦情受付窓口",
+    "location": "従業員食堂(合宿所)",
     "assets": [
       {
         "id": "main.s1.w19.asset.background.001",
         "kind": "background",
-        "path": "/assets/story/bg-employee-consultation-room-v1.png",
-        "alt": "闘技場 苦情受付窓口の背景"
+        "path": "/assets/story/bg-employee-cafeteria-day-v1.png",
+        "alt": "従業員食堂の背景"
       }
     ]
   },
@@ -40,18 +29,12 @@
     {
       "type": "direction",
       "id": "main.s1.w19.node.direction.001",
-      "command": {
-        "type": "background",
-        "assetId": "main.s1.w19.asset.background.001",
-        "transition": "dissolve"
-      }
+      "command": { "type": "background", "assetId": "main.s1.w19.asset.background.001", "transition": "dissolve" }
     },
     {
       "type": "direction",
       "id": "main.s1.w19.node.direction.002",
-      "command": {
-        "type": "clearSprites"
-      }
+      "command": { "type": "clearSprites" }
     },
     {
       "type": "line",
@@ -59,7 +42,7 @@
       "lineId": "main.s1.w19.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ミミが苦情窓口の椅子に座った瞬間、番号札の機械が三十七枚を一気に吐き出した。紙の帯が床を這い、列は両替所を回り込んで食堂の湯気の中まで伸びる。局員さんが遺失物窓口から顔を出し、「今日は空いている方ですよ」と言って引っ込んだ。",
+      "text": "読破合宿は、食堂に移った。理由は単純で、まかないに近いからだ。読む係、要約する係、疑う係、そして食べる係(全員が兼任)。",
       "emotion": "comic"
     },
     {
@@ -68,18 +51,16 @@
       "lineId": "main.s1.w19.line.002",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ミミが一番を呼ぶと、竜の紳士が静かに前へ出た。声は落ち着いたままなのに、鼻先から湯気が一筋のぼり、窓口のガラスが白く曇っていく。苦情はひとつ、今朝のモーニングの卵が頼んだ固めではなく半熟だったこと。警備隊長が後ろで「湯気立つや 紳士の怒り 朝の卵」と詠み、手帳に書き足した。",
-      "emotion": "comic"
+      "text": "規格外の読書風景は、いちいち規格外だった。頁をめくる風圧で要約の紙が飛び、白熱した議論で湯呑みが三回沸騰した。食堂のおばちゃんは動じない。「昔から、揉め事はここでやるんだよ」。"
     },
     {
       "type": "line",
       "id": "main.s1.w19.node.line.003",
       "lineId": "main.s1.w19.line.003",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "固めで、と伺っています。三十秒で持ってきます",
-      "emotion": "resolve"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "会社案の弱点は、少しずつ見えてきた。「推奨」には拒否権がある。「任命」には同意がいる。だが、どれも決定打ではない。会社は、拒否されたら次の手を出せる側だ。こちらには、盤面をひっくり返す一枚が要る。",
+      "emotion": "tension"
     },
     {
       "type": "line",
@@ -87,8 +68,8 @@
       "lineId": "main.s1.w19.line.004",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ミミが食堂へ叫ぶと、おばちゃんが玉杓子で鍋の縁を銅鑼みたいに打った。数えて三十秒、固ゆで卵が皿ごと窓口を滑ってくる。竜の紳士の湯気がぴたりと止まり、曇ったガラスに指で丸が一つ描かれた。合格の丸だった。",
-      "emotion": "comic"
+      "text": "窓の外では、街が所有者グランプリの支度を始めていた。会社主催の大会。勝者には「編成裁量の保全」。つまり会社は、試合の場まで用意して、そこで決めようと言っている。……用意された土俵、というのが引っかかる。",
+      "emotion": "tension"
     },
     {
       "type": "line",
@@ -96,8 +77,8 @@
       "lineId": "main.s1.w19.line.005",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ミミが二番を呼ぶと、幽霊のご夫妻が並んで立ち、窓口の温度がすとんと落ちた。ミミの吐く息が白くなり、台帳のインクが凍って字が書けない。苦情は朝刊が一部しか届かなかったこと。ミミが二部目を差し出した途端に霜が溶け、机に小さな水たまりができ、経理課チームがそろばんで水位を弾き始めた。",
-      "emotion": "comic"
+      "text": "三日目の夜、古い版を読んでいた選手が、ふいに手を止めた。「……監督。これを」。差し出された頁は茶色く、手書きの字が並んでいた。",
+      "emotion": "tension"
     },
     {
       "type": "line",
@@ -105,8 +86,8 @@
       "lineId": "main.s1.w19.line.006",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ミミが三番を呼ぶと、人魚は怒りを歌にして返してきた。低い旋律が窓口を震わせ、券売のおじさんが理由もわからず泣き出し、賭け札の束が湿ってくっつく。ミミが拍子を取って手を叩くと、館内放送のお姉さんが軍記物の節で唱和した。人魚は目を丸くし、歌の二番へ入る手前で怒りを忘れて帰った。",
-      "emotion": "comic"
+      "text": "「選手は、自らの物語の上演について、異議を申し立てる権利を有する」。——上演。試合、ではなく。物語の、上演。",
+      "emotion": "revelation"
     },
     {
       "type": "line",
@@ -114,18 +95,17 @@
       "lineId": "main.s1.w19.line.007",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ミミが四番を呼ぶと、雲上修道院の客は何も言わずに立ち尽くした。ミミは書類を伏せ、椅子を横へ引いて、同じ方を向いたまま黙って立つ。館内放送の軍記物がその三分だけ止まり、館が丸ごと息をひそめた。客は深く一礼して帰り、机の上に押し花が一枚だけ残っていた。",
-      "emotion": "tender"
+      "text": "妙な言葉選びだ。闘技場の規定なのに、試合と書かず、上演と書いてある。書いた人は、この場所を——舞台だと、思っていたのだろうか。疑問は湧いたが、今は使い道が先だ。この一条は、選手本人の権利。会社が何を決めようと、本人が異議を出せる。",
+      "emotion": "revelation"
     },
     {
       "type": "line",
       "id": "main.s1.w19.node.line.008",
       "lineId": "main.s1.w19.line.008",
-      "speakerId": "mimi",
-      "speakerName": "ミミ",
-      "mode": "dialogue",
-      "text": "棚を空けます。卵の鍋と朝刊の予備、こっち側へ",
-      "emotion": "resolve"
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ノノさんが写しを取り、条番号を確かめ、現行版と突き合わせた。「現行版では……削除されていません。**忘れられているだけ**です」。削除されていない規定は、生きている規定である。",
+      "emotion": "revelation"
     },
     {
       "type": "line",
@@ -133,8 +113,8 @@
       "lineId": "main.s1.w19.line.009",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ミミが窓口の内側へ鍋と新聞を積み上げると、番号札の機械が息を吹き返し、残りの札を全部いっぺんに吐き出した。列の後ろから経理課チームが法被の袖をまくって現れ、そろばんを構えて「二人でやりましょう」と言う。三十七枚は日暮れ前に消えた。",
-      "emotion": "comic"
+      "text": "食堂に、静かな熱が満ちた。誰も万歳はしなかった。かわりに、全員がもう一度、自分の巻に戻った。武器は一つ見つかった。二つ目を探す顔で。",
+      "emotion": "resolve"
     },
     {
       "type": "line",
@@ -142,8 +122,8 @@
       "lineId": "main.s1.w19.line.010",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ミミが窓口の札を裏返して閉めると、ガラスがもう一度白く曇った。帰りぎわに竜の紳士が息を吹きかけていったらしく、爪で書かれた一行が浮かんでくる。「明日は妻を連れて参ります」。ミミは厨房へ走り、卵を二十個、固めでゆでておいてほしいと頼んだ。",
-      "emotion": "comic"
+      "text": "解散間際、ノノさんがカレンダーに丸を付けた。回答期限まで、あと一週間。丸の隣の週が、所有者グランプリ。——決戦の週まで、あと少し。",
+      "emotion": "tension"
     },
     {
       "type": "choice",
@@ -151,34 +131,24 @@
       "choices": [
         {
           "id": "main.s1.w19.choice.001",
-          "label": "怒りの見分け方を貼る",
-          "result": "ミミが対応表を壁へ貼った翌朝、客は読んで自分の列を選び始め、行列は半分の長さになった。湯気なら卵、霜なら朝刊の二部目、歌なら合いの手、沈黙なら相席。経理課チームがそろばんで待ち時間を計り、平均が三分縮んだと大声で発表する。竜の紳士は表の前で腕を組み、「私は湯気など出しません」と言いながら、静かに湯気を出した。",
-          "intent": "怒りの形を客へ翻訳する",
-          "promise": "行列が半分になり、怒りの見分け方が館の共有物になる",
-          "memory": "警備隊長が対応表を書き写し、控室の壁へ俳句付きで貼っている",
+          "label": "異議申立の書式を、今夜のうちに整えておく",
+          "result": "見つけた武器は、抜ける形にしておいてこそ武器だ。古い一条を根拠にした異議申立の書式を、ノノさんと夜なべで起こした。申立人の欄は空欄のまま——書くのは、本人たちだ。書き上がった書式を見て、ノノさんが言った。「美しい書式です。会社のより、美しいです」。事務員二人の、最大級の戦闘準備が整った。",
+          "intent": "武器を、いつでも抜ける形にしておく",
+          "promise": "備えが完成する代わりに、使う日が本当に来てしまいそうな予感も固まる",
+          "memory": "申立人欄が空欄の書式が、帳場の引き出しに眠っている",
           "tone": "pragmatic",
-          "effects": [
-            {
-              "type": "sharedPoints",
-              "amount": 2
-            }
-          ],
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
           "goto": "main.s1.w19.node.end.001"
         },
         {
           "id": "main.s1.w19.choice.002",
-          "label": "苦情を試合で片づける",
-          "result": "ミミが銅鑼を鳴らすと、苦情の列がそのまま対戦表になった。人魚と幽霊の奥さんが三十秒の腕相撲をやる。奥さんの手が三度すり抜け、四度目に人魚が尾で押さえてようやく成立した。勝った方の苦情から片づけ、負けた側も潔く拍手する。券売のおじさんが即席で賭け札を刷り、当てた客が全員で食堂へ流れていく。窓口の前に残ったのは、順番待ちの列ではなく応援の輪だった。",
-          "intent": "苦情を闘技場の流儀で片づける",
-          "promise": "苦情が見世物に変わり、待つ人が応援する側へ回る",
-          "memory": "券売のおじさんが即席の賭け札を刷った日として覚えている",
+          "label": "「上演」の言葉の出どころを探す",
+          "result": "気になる言葉は、放っておけない。古い版の奥付を調べると、起草者の欄は掠れて読めなかったが、序文の一行だけが残っていた。「当場の一戦一戦は、誰かの物語の続きである」。試合ではなく、上演。選手ではなく、物語。この闘技場を建てた誰かは、最初から、そういう場所のつもりで建てたのだ。答えではなく、問いが増えた。いい問いは、手帳にしまっておく。",
+          "intent": "武器の由来を、言葉の根まで辿る",
+          "promise": "世界の芯に近づく代わりに、今夜の実務は進まない",
+          "memory": "序文「一戦一戦は、誰かの物語の続き」が手帳に写された",
           "tone": "wild",
-          "effects": [
-            {
-              "type": "sharedPoints",
-              "amount": 3
-            }
-          ],
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
           "goto": "main.s1.w19.node.end.001"
         }
       ]
@@ -191,8 +161,8 @@
   ],
   "debug": {
     "status": "review",
-    "sourceDocument": "docs/MAIN_STORY_STAGE1_PLAN.md",
-    "authorNote": "第19週。この闘技場の一シーズンを追うメインストーリー。人物の場面は別枠で再生される。",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "週19(10行)。仕組み学習=規定という武器(削除されていない=生きている)。「上演」の一語がQ1/Q3への遠い糸(趣意書の先触れ)。回答期限とグランプリの時計を明示。週22の書式伏線。",
     "legacyGeneratedIds": false
   }
 }
