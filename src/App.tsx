@@ -6838,8 +6838,34 @@ function EndingScreen({ onTitle, onArchive }: { onTitle: () => void; onArchive: 
       : run.route === "domination" && profile.unlockedRoutes.includes("chaos")
         ? routeNames.chaos
         : undefined;
+  // 区分2・3は勝敗で専用の幕引きを持つ(台本: 新作の夜明け/再演の夜/初演のアンコール)。
+  const wonFinal =
+    run.endingType === "grand" ||
+    run.endingType === "rebuild" ||
+    run.endingType === "company";
+  const stageCopy =
+    run.campaignStage === 2 && run.endingType !== "grand" && run.week === 26
+      ? wonFinal
+        ? {
+            kicker: "二年目の決着",
+            title: "新作の夜明け",
+            text: "決勝にも、動員対決にも勝った。客の入らなかった滅亡ショーは、そのまま幕を開けられずに終わった。最後の赤線は、台帳そのものに引いてある。配役の欄から「代役」の文字が消えた、最初の朝である。",
+          }
+        : {
+            kicker: "二年目の幕",
+            title: "再演の夜",
+            text: "動員対決に敗れて、滅亡ショーは満員で上演された。赤線を引いた条文が、一本ずつ、元へ戻っていく。それでも——仲間と、信頼と、悔しさは消えない。手帳の最後の頁に、こう書いた。「また、第一週から」。",
+          }
+      : run.campaignStage === 3 && !wonFinal && run.week === 26
+        ? {
+            kicker: "三年目の幕",
+            title: "初演のアンコール",
+            text: "台帳の最後の頁は、まだ閉じなかった。柿落としは、次の記録外第一週へ持ち越しである。名簿も、演目帳も、百の名前も消えない。——幕は、また上がる。",
+          }
+        : undefined;
   const copy =
-    run.endingType === "grand"
+    stageCopy ??
+    (run.endingType === "grand"
       ? {
           kicker: "四百年目の、ほんものの初日",
           title: "柿落とし、十五幕",
@@ -6861,7 +6887,7 @@ function EndingScreen({ onTitle, onArchive }: { onTitle: () => void; onArchive: 
             kicker: "SEASON CLOSED",
             title: "今期の派遣は、ここで終了",
             text: "勝てなかった試合も、出会いも消えない。完成しなかったチームを、そのまま殿堂へ残した。",
-          };
+          });
 
   return (
     <main className="ending-screen">
@@ -6873,6 +6899,27 @@ function EndingScreen({ onTitle, onArchive }: { onTitle: () => void; onArchive: 
           <p>{copy.text}</p>
         </section>
         <section className="ending-record" aria-label="今回の周回記録">
+        {run.campaignStage === 2 && run.week === 26 && run.endingType !== "grand" && (
+          <section className="ending-castroll" aria-label="配役">
+            <h2>配役</h2>
+            <ul>
+              {run.roster.map((id) => (
+                <li key={id}>
+                  <span>{fighterDefinitions.find((f) => f.id === id)?.name ?? id}</span>
+                  <b className={wonFinal ? "is-self" : "is-stand-in"}>
+                    {wonFinal ? "本人" : "代役"}
+                  </b>
+                </li>
+              ))}
+              <li>
+                <span>興行主 ミミ</span>
+                <b className={wonFinal ? "is-self" : "is-stand-in"}>
+                  {wonFinal ? "本人" : "代役"}
+                </b>
+              </li>
+            </ul>
+          </section>
+        )}
         {run.endingType === "grand" && (
           <section className="grand-finale">
             <div className="grand-finale__charter">

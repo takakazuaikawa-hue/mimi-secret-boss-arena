@@ -15498,6 +15498,42 @@ h3 {
   border: 2px dashed rgba(214, 158, 46, 0.55);
 }
 
+/* 2周目エンディングの配役スタッフロール(本人/代役) */
+.ending-castroll {
+  display: grid;
+  gap: 8px;
+  padding: 16px 18px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 2px solid rgba(120, 120, 140, 0.3);
+}
+.ending-castroll h2 {
+  margin: 0;
+  font-size: 15px;
+}
+.ending-castroll ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 5px;
+}
+.ending-castroll li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 14px;
+  border-bottom: 1px dashed rgba(120, 120, 140, 0.25);
+  padding-bottom: 4px;
+}
+.ending-castroll b.is-self {
+  color: #a8641b;
+}
+.ending-castroll b.is-stand-in {
+  color: #6b7280;
+  font-weight: 600;
+}
+
 /* 勤務週区分の選択(タイトルの興行選択シート内) */
 
 .stage-picker {
