@@ -17,8 +17,8 @@ Chrome 自動運転で1件ずつ送信し、生成画像を `public/assets/story
 
 ## 第1陣(20枚)
 
-**進捗(2026-08-15)**: #1〜#10 生成済み。scratchpadに保存名どおり格納、採否確認待ち。
-`public/assets/story/events/` への配置と物語JSONへの組み込みは採用確定後。
+**進捗(2026-08-16)**: **第1陣20枚すべて生成完了**。scratchpadに保存名どおり格納、
+採否確認待ち。`public/assets/story/events/` への配置と物語JSONへの組み込みは採用確定後。
 生成手順はスキル `chatgpt-image-gen`(~/.claude/skills)として登記済み。
 
 | # | 保存名 | 出典 | 場所 | 添付(キャラ / 絵柄見本) | 個別プロンプト |
