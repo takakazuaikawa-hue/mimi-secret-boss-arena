@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s3.w08",
+  "kind": "opening",
+  "title": "腕前の確認",
+  "summary": "計量の工房で量られて、役所の砂の部署と向き合う",
+  "ownership": {
+    "arcId": "main.stage3"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "計量の工房",
+    "assets": [
+      {
+        "id": "main.s3.w08.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-measurement-workshop-v1.png",
+        "alt": "計量の工房の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s3.w08.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s3.w08.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.w08.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w08.node.line.001",
+      "lineId": "main.s3.w08.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "計量の工房に、うち全員で呼び出された。油と、砥石の匂いの部屋である。入り口で、判子の役所の腕章が待っていた。あの立て札の、続きだ。「本日は、腕前の確認に、ご協力を」。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w08.node.line.002",
+      "lineId": "main.s3.w08.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "今日の用は、確認とやらを受けて、堂々と勝つ算段を立てることだ。帳面の続きが見たければ、砂の上で勝て。そういう約束である。順番どおり、まずは量られる。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w08.node.line.003",
+      "lineId": "main.s3.w08.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "確認は、真面目に変だった。握力を測る。跳んで届く高さを測る。「怒ったときに壊す物の数」を申告させられる。うちのいちばん大きい子の申告では、係の人の筆が三回止まった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w08.node.line.004",
+      "lineId": "main.s3.w08.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "見物も集まってきた。工房の窓に、常連の顔が鈴なりである。「おい、次は何を測るんだ」「たぶん礼儀」「そりゃミミさんとこの勝ちだ」。確認が、興行になっていく。この街は、何でも興行にする。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w08.node.line.005",
+      "lineId": "main.s3.w08.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "測り終えて、係の人が帳面を閉じた。「結構です。では、正式に——うちの、砂の部署と」。腕章の後ろから、影が五つ、進み出た。判子の役所にも、砂の上を歩く足があるのだ。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w08.node.line.006",
+      "lineId": "main.s3.w08.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "並んだ五人は、意外なほど、いい構えをしていた。四百年、判を守り続けてきた腕である。仲間がぼそりと言う。「ミミさん、あれは飾りの構えじゃないです」。望むところが、二段くらい上がった。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w08.node.line.007",
+      "lineId": "main.s3.w08.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "帰りぎわ、係の人が小声で付け足した。「……あの帳面は、読まれるべきだと、私も思っています。ですから——手加減は、いたしません」。良い役所である。敵ながら、判の押し方がまっすぐだ。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w08.node.line.008",
+      "lineId": "main.s3.w08.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "道すがら、初陣の子が聞いた。「勝ったら、帳面の続きが読めるんですよね」「読めます。それから、たぶん——」。言いかけて、やめた。欲張りは、勝ってからにする。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w08.node.line.009",
+      "lineId": "main.s3.w08.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "夕方には、賭場の板に新しい枠が立っていた。「役所 対 ミミさんとこ。四百年目の初勝負」。窓の鈴なりは、まだ減っていない。",
+      "emotion": "tension"
+    },
+    {
+      "type": "choice",
+      "id": "main.s3.w08.node.choice.001",
+      "choices": [
+        {
+          "id": "main.s3.w08.choice.001",
+          "label": "相手の型を、係の人に正面から聞く",
+          "result": "聞きに行ったら、本当に教えてくれた。「様式ですので」。四百年ぶんの型の名前を、夕方まで。書き取って分かったこと——向こうの型は、崩れない。うちの型は、崩して作る。ノートは埋まったのに、腕が鳴るばかりだった。正面から聞いた甲斐は、たぶん、礼儀の点で付く。",
+          "intent": "堂々と調べて、堂々と勝つ",
+          "promise": "相手の全部が分かる代わりに、こちらの狙いも顔に出る",
+          "memory": "係の人が教えた、崩れない型の名前の列",
+          "tone": "pragmatic",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "goto": "main.s3.w08.node.end.001"
+        },
+        {
+          "id": "main.s3.w08.choice.002",
+          "label": "手の内は当日の楽しみ。うちの型だけ磨く",
+          "result": "「相手の手の内は、当日のお楽しみに取っておきましょう」。練習場で、うちの型だけを磨いた。初陣の子の踏み込みが、一晩で半歩伸びる。夜、窓の外に白手袋がひとり。ポラリスさんが、練習の灯りを遠くから見ていた。膝の帳面は——開いていなかった。",
+          "intent": "読み合いより、仕上がりで勝つ",
+          "promise": "腕は上がる代わりに、当日の初見に賭けることになる",
+          "memory": "開かれなかった、白手袋の帳面",
+          "tone": "heroic",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "goto": "main.s3.w08.node.end.001"
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "main.s3.w08.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "3周目・週8(大会週。審理試合一戦目=判子の役所の砂の部署。大会週のメインは入場前まで)。Q=この街を引き受けるか / value=敬意 0→+(敵の品位) / turn=行6(役所は本物の腕を持つ) / hook=未決着の勝負(中)/pre-point / try=はい、しかし / game=真面目に変な計量(握力→壊す物の数→筆が三回止まる) / carry=立て札(週7) / open=勝負の行方(答え=週9冒頭で両立回収) / newterm=なし",
+    "legacyGeneratedIds": false
+  }
+}

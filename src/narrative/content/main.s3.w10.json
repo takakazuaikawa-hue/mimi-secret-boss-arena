@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s3.w10",
+  "kind": "opening",
+  "title": "値札の街",
+  "summary": "数えごとが街へ出て、焼き餅屋の鉄板に値段が付く",
+  "ownership": {
+    "arcId": "main.stage3"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "噴水広場(屋台通り)",
+    "assets": [
+      {
+        "id": "main.s3.w10.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-fountain-plaza-day-v1.png",
+        "alt": "噴水広場の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s3.w10.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s3.w10.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.w10.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w10.node.line.001",
+      "lineId": "main.s3.w10.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "広場の屋台に、見慣れない札が下がっていた。小さくて、白い。焼き餅屋の鉄板に、一枚。「什器一号」。……数えごとが、街へ出てきたのだ。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w10.node.line.002",
+      "lineId": "main.s3.w10.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "今日の用は、札の正体の確かめだ。うちを数え終えた白手袋の一団が、今週は街を数えている。予定では、数えられるのは私と、うちの店の話だったはずである。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w10.node.line.003",
+      "lineId": "main.s3.w10.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "焼き餅屋のおばちゃんは、最初、面白がっていた。「うちの鉄板が台帳に載るのかい! 出世だね!」。二枚目の札で、笑いが止まる。そこには、こう書いてあった。「参考の値: 銀貨三枚」。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w10.node.line.004",
+      "lineId": "main.s3.w10.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "値段が、付いたのだ。四十年焼いてきた鉄板に、銀貨三枚。おばちゃんの顔から、祭りが消えた。「……あたしの鉄板は、売り物じゃないよ」。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w10.node.line.005",
+      "lineId": "main.s3.w10.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ポラリスさんを、広場で捕まえた。「街まで数えるんですか」「棚卸しですので。どこまで数えるかは、私が決めることではありません」。それから、ほんの少しだけ、声が低くなった。「——数えなければ、守れないものも、あります」。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w10.node.line.006",
+      "lineId": "main.s3.w10.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "言い分は、分かる。分かるが——値札は、付いた瞬間に、物の顔を変えてしまう。私は知っている。私も、値札の側から、この世界に入った口だから。おばちゃんの鉄板と私の登録の紙は、同じ顔をしていた。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w10.node.line.007",
+      "lineId": "main.s3.w10.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "夕方には、広場の空気が変わっていた。札を付けられた店同士が、寄り合いを始めたのである。「うちは什器じゃない」「うちも」「ミミさんとこは、どう戦ってるんだい」。——聞かれる側に、なった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w10.node.line.008",
+      "lineId": "main.s3.w10.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "答えた。「砂の上で、言い分を通してます。あと、湯で噂を集めてます」。真面目に答えたのに、笑いが起きた。それでいい。笑っているうちは、街は負けていない。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w10.node.line.009",
+      "lineId": "main.s3.w10.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "帰りぎわ、賭場の板に新しい枠が立った。「街の言い分、通るか通らぬか」。うちの勝負が、うちだけの勝負では、なくなってきた。おまけにもらった焼き餅一枚が、その証である。",
+      "emotion": "tender"
+    },
+    {
+      "type": "choice",
+      "id": "main.s3.w10.node.choice.001",
+      "choices": [
+        {
+          "id": "main.s3.w10.choice.001",
+          "label": "値札には、値札で返す",
+          "result": "翌朝、おばちゃんが銀貨三枚を、白手袋の受付に叩きつけた。「あたしの鉄板、あたしが買うよ!」。役所は前例を探して三十分固まり、結局、受け取った。夕方には「自分の物を、自分で買い戻す」が街の流行になった。負けん気の街である。ポラリスさんの帳面に、新しい頁が増えたらしい。題は——「本日、想定外、多数」。",
+          "intent": "向こうの様式ごと、街の遊びにしてしまう",
+          "promise": "街の心が折れない代わりに、役所は次の手を硬くしてくる",
+          "memory": "銀貨三枚で買い戻された、四十年物の鉄板",
+          "tone": "heroic",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "goto": "main.s3.w10.node.end.001"
+        },
+        {
+          "id": "main.s3.w10.choice.002",
+          "label": "札の書式の、穴を探す",
+          "result": "ノノさんと、札を十枚ほど写して見比べた。あった。札の隅に「持ち主の言い分」を書く欄が、小さくある。書き込まれた札は、聞き取りが済むまで数に入れられない——そういう決まりらしい。翌日から、街中の言い分欄が埋まった。「売り物じゃない」「これは嫁入り道具」「触るな」。数えごとが、見事に渋滞し始めた。",
+          "intent": "静かに、向こうの決まりで向こうを縛る",
+          "promise": "数えごとが遅れる代わりに、街の怒りは表に出にくくなる",
+          "memory": "言い分欄で渋滞した、白い札の列",
+          "tone": "pragmatic",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "goto": "main.s3.w10.node.end.001"
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "main.s3.w10.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "3周目・週10(値札の街。ミミの問題が街の問題へ=後の百人の連署の土壌。敵の理も一拍)。Q=この街を引き受けるか / value=連帯 0→+(聞かれる側になった) / turn=行6(鉄板と登録の紙は同じ顔) / hook=次に会う理由(小)/post-hook / try=いいえ、しかも(街まで数えられる) / game=値札(出世だね→銀貨三枚→祭りが消える) / carry=白手袋の帳面(週8)・焼き餅屋(週1) / open=街の言い分の行方(答え=週12・22) / newterm=なし(什器は札の引用内)",
+    "legacyGeneratedIds": false
+  }
+}

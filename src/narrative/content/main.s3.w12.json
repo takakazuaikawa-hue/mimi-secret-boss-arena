@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s3.w12",
+  "kind": "opening",
+  "title": "白手袋の本隊",
+  "summary": "日付を守るために、敵が勝ち筋を教えに来る",
+  "ownership": {
+    "arcId": "main.stage3"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "賭場のカフェ",
+    "assets": [
+      {
+        "id": "main.s3.w12.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-casino-cafe-day-v1.png",
+        "alt": "賭場のカフェの背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s3.w12.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s3.w12.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.w12.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w12.node.line.001",
+      "lineId": "main.s3.w12.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "賭場のカフェは、朝から人だかりだった。豆を挽く匂いに、噂のざわめき。板の前の新しい枠——「対・白手袋の本隊」。うちの次の相手は、回収局そのものらしい。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w12.node.line.002",
+      "lineId": "main.s3.w12.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "今日の用は、その勝負の意味の確かめだ。すると、当のポラリスさんが、自分から店に現れた。「上が、執り納めの前倒しを言い出しました」。……日付は年度の末日。そういう約束だったはずである。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w12.node.line.003",
+      "lineId": "main.s3.w12.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "理由も、律儀に教えてくれた。「説明の会の、あの空欄以来……上は、急いでいます」。隠したい側は、いつも早口になる。四百年の役所も、例外ではないらしい。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w12.node.line.004",
+      "lineId": "main.s3.w12.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「前倒しを、止める方法は」「あります」。帳面が、一頁めくられた。「私どもの本隊に、砂の上で勝つこと。腕前の帳面が新しくなれば、上は日付を動かせません。——決まりですので」。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w12.node.line.005",
+      "lineId": "main.s3.w12.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "つまりこの人は、敵の姿のまま、勝ち筋を教えに来たのだ。「……いいんですか、それを教えて」「決まりの説明は、職務です」。真顔だった。真顔のまま、茶を一杯だけ頼んだ。いつもの、一杯だけ。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w12.node.line.006",
+      "lineId": "main.s3.w12.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "分かってきた。この人は、私の敵というより——**日付と決まりの側の人**なのだ。日付を守るためなら、こちらの勝ちにも力を貸す。敵の真ん中に、まっすぐな芯が一本、立っている。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w12.node.line.007",
+      "lineId": "main.s3.w12.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "板の倍率は、今度ばかりは割れていた。「白手袋の本隊は強いぞ」「だが、街の言い分が乗ってる」。常連たちの財布も、真剣勝負である。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w12.node.line.008",
+      "lineId": "main.s3.w12.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "練習場で、仲間に伝えた。「相手は、白手袋の本隊。勝てば、約束の日付が守られます」。返事は、砂を蹴る音だった。うちの返事は、だいたいそれで足りる。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w12.node.line.009",
+      "lineId": "main.s3.w12.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "帰りぎわ、店の前でポラリスさんとすれ違った。会釈のあと、一言だけ。「——良い茶でした」。次に会うのは、砂の上である。",
+      "emotion": "tension"
+    },
+    {
+      "type": "choice",
+      "id": "main.s3.w12.node.choice.001",
+      "choices": [
+        {
+          "id": "main.s3.w12.choice.001",
+          "label": "四百年の型には、三年の型で",
+          "result": "うちの三年間を、素直に全部ぶつける支度をした。初陣の子には初陣の役があり、大きい子には大きい役がある。総ざらいの練習は、いつのまにか祭りの予行みたいになった。夜、窓の外に白手袋がひとり。今夜も遠くから、練習の灯りを見ている。帳面は、やっぱり開いていなかった。",
+          "intent": "積んできたものを、そのまま見せる",
+          "promise": "仕上がりは最高になる代わりに、奇手は仕込まない",
+          "memory": "祭りの予行みたいになった、総ざらいの練習",
+          "tone": "heroic",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "goto": "main.s3.w12.node.end.001"
+        },
+        {
+          "id": "main.s3.w12.choice.002",
+          "label": "崩れない型が苦手なものを、集める",
+          "result": "役所の型は、崩れないのが強み。なら、崩れない型が苦手なものを集めればいい。うちの悪戯の帳面——祭りの椅子取りの間合い、屋台の駆け引き、賭場の読み合い。ノノさんが清書して、表紙に題を書いた。「非・型どおり戦術集 第一版」。役所に見つかったら、たぶん没収される。",
+          "intent": "型の外から、型を揺らす",
+          "promise": "番狂わせの芽が育つ代わりに、外せば型負けの危険がある",
+          "memory": "表紙に題の付いた、悪戯の帳面",
+          "tone": "pragmatic",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "goto": "main.s3.w12.node.end.001"
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "main.s3.w12.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "3周目・週12(大会週。対回収局本隊=前倒し阻止。敵が勝ち筋を教える=日付と決まりの側の人、の人物確立)。Q=この街を引き受けるか / value=日付 -→守れる筋 / turn=行6(敵ではなく日付の側の人) / hook=未決着の勝負(中)/pre-point / try=はい、しかし / game=律儀の可笑しさ(自分で知らせに来る→勝ち筋も職務→茶一杯) / carry=空欄の騒ぎ(週6)・茶一杯(週4B) / open=勝負の行方(答え=週13冒頭で両立回収) / newterm=なし",
+    "legacyGeneratedIds": false
+  }
+}

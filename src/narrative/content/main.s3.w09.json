@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s3.w09",
+  "kind": "opening",
+  "title": "拍手が先に来る花火",
+  "summary": "三年目の花火大会と、写しの隅の「期限」",
+  "ownership": {
+    "arcId": "main.stage3"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "夜の展望席(花火大会)",
+    "assets": [
+      {
+        "id": "main.s3.w09.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-observation-deck-night.png",
+        "alt": "夜の展望席の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s3.w09.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s3.w09.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.w09.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w09.node.line.001",
+      "lineId": "main.s3.w09.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "夜の展望席には、火薬の匂いが先に届く。花火大会、三年目である。膝の上には、あの帳面の続きの写し。砂の上の言い分は、ちゃんと通った。読む権利は、うちの手の中にある。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w09.node.line.002",
+      "lineId": "main.s3.w09.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "今日の用は、骨休めと、写しの続きを少し。……のはずが、一発目で手が止まった。観客の拍手が、花火より先に、鳴ったのである。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w09.node.line.003",
+      "lineId": "main.s3.w09.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「今年も来るぞ、あの大玉!」。ドン。「ほら来た!」。皆さん、覚えているのだ。去年と一昨年の花火を。だから拍手が、開く前に来る。花火師さん泣かせの、気の早い客席である。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w09.node.line.004",
+      "lineId": "main.s3.w09.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "仲間が笑った。「初めの年は、みんな、初めて見る顔だったのにな」。そうか。覚えている人が増えるほど、祭りは初めてじゃなくなる。代わりに——「おかえり」の顔に、なっていく。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w09.node.line.005",
+      "lineId": "main.s3.w09.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "花火師さんも、意地を見せた。終盤、誰も拍手を先打ちできない一発が上がる。見たことのない、新作である。長い耳みたいな二本の光が、夜空でぴんと跳ねた。……あれ。あの形、どこかで。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w09.node.line.006",
+      "lineId": "main.s3.w09.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "客席が、今夜いちばん沸いた。誰も知らない花火にだけ、拍手は遅れて、大きく来る。新しいものは、強い。去年の決勝で学んだことを、夜空がもう一度言った。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w09.node.line.007",
+      "lineId": "main.s3.w09.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "静かになった席で、写しをめくっていたノノさんが、ふと言った。「ミミさん、ここ」。指の先、預かりの決まりの但し書き。「期限: 女神の帰還まで」。……この預かり、期限つきだったのだ。四百年、切れないままの期限が。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w09.node.line.008",
+      "lineId": "main.s3.w09.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "期限のある預かりを、期限が来ないからと、持ち物にした。四百年の正体は、たぶん、それだ。花火の照り返しで、写しの紙が、赤くなったり青くなったりした。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w09.node.line.009",
+      "lineId": "main.s3.w09.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "最後の一発が消えても、拍手だけが長く残った。覚えている拍手は、長い。その長さのぶんだけ、この街は変わり始めている。——返してもらう支度、続けましょうか。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "effect",
+      "id": "main.s3.w09.node.effect.001",
+      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+    },
+    {
+      "type": "end",
+      "id": "main.s3.w09.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "3周目・週9(大会翌週。勝敗両立回収=「言い分は通った」。世界の覚醒を拍手の先打ちで、新作の強さを兎耳花火で)。Q=この街を引き受けるか / value=時間 -→+(期限の発見) / turn=行7-8(預かりは期限つきだった) / hook=閃き(中)/post-point / try=はい、しかし / game=気の早い拍手(先打ち→おかえりの顔→新作だけ遅れて大きい) / carry=写し(週7)・勝負(週8) / open=兎耳の花火は誰の注文か(答え=週23祭)・女神の帰還という期限(答え=週24審理) / newterm=なし",
+    "legacyGeneratedIds": false
+  }
+}

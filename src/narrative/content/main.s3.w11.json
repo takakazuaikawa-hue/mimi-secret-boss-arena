@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s3.w11",
+  "kind": "opening",
+  "title": "来た口の見分け方",
+  "summary": "要るのは百の名前。確かな見分け方は、湯だけだった",
+  "ownership": {
+    "arcId": "main.stage3"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "記録室",
+    "assets": [
+      {
+        "id": "main.s3.w11.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-contract-archive.png",
+        "alt": "記録室の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s3.w11.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s3.w11.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.w11.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w11.node.line.001",
+      "lineId": "main.s3.w11.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "記録室は、今日も古い紙の匂いがする。司書さんに、湯の噂の裏取りを頼んでいたのだ。梯子の上から、答えが降ってきた。「ありました。空から来た人たちが束で名を書けば、判の無い取り決めは覆せる。ちゃんと、決まりの本に載っています」。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w11.node.line.002",
+      "lineId": "main.s3.w11.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "今日の用は、その「束」の作り方だ。決まりの本いわく、要る名前は——百。……百人。三年かけて、私が確かめられた同類は、仲居さんひとりである。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w11.node.line.003",
+      "lineId": "main.s3.w11.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「見分け方は、あるんですか」「諸説あります」。司書さんが、古い覚え書きを広げた。来た口は、初物の食べ方が変。来た口は、雨の日に空を見る。来た口は、値札に敏感。……最後のは、身に覚えがある。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w11.node.line.004",
+      "lineId": "main.s3.w11.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "試しに、覚え書きの見分け方を、うちの面々で検証してみた。いちばん大きい子が初物を丸呑みして、「変」の判定が出た。生まれも育ちもこの世界の子で、ある。……この見分け方、当てにならない。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w11.node.line.005",
+      "lineId": "main.s3.w11.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "結局、確かなのは一つだけだった。湯である。湯の中でなら、何を話しても大丈夫——あの決まりは、来た口たちが長い年月で作った、合言葉だったのだ。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w11.node.line.006",
+      "lineId": "main.s3.w11.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "そうか、と手帳の上で手が止まる。仲居さんの「同じ口の人を探すなら、湯を訪ねなさい」。あれは、宿の宣伝ではなかった。——道順、だったのだ。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w11.node.line.007",
+      "lineId": "main.s3.w11.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "司書さんが、地図を広げてくれた。この世界の、湯の場所。街に三つ、山に五つ、砂漠にひとつ、海の底に——海の底? 「あります。良い湯だそうです」。……この世界、湯にだけは本気である。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w11.node.line.008",
+      "lineId": "main.s3.w11.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "百の名前。十の湯。締めの日まで、大会の合間に回り切れるか。手帳の頁が、初めて足りなく見えた。それが、少し嬉しい。白紙の目標欄の面影は、もう無い。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w11.node.line.009",
+      "lineId": "main.s3.w11.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "まずは近場から、である。街のいちばん古い湯の暖簾を、仲間とくぐった。番台のおじいさんが、こちらを見て、にっこり笑った。「——三年ぶりだね、お客さん」。……三年ぶり? 私、この湯は、初めてです。",
+      "emotion": "tension"
+    },
+    {
+      "type": "effect",
+      "id": "main.s3.w11.node.effect.001",
+      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+    },
+    {
+      "type": "end",
+      "id": "main.s3.w11.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "3周目・週11(連署の要件=百の名前、見分け方コメディ、湯の道順)。Q=この街を引き受けるか / value=目処 -→+(道順が付いた) / turn=行6(湯を訪ねなさい=道順だった) / hook=保留された返事(中)/post-point / try=はい、しかし / game=見分け方の検証(諸説→大きい子で誤判定→湯だけ確か) / carry=湯の噂(週5)・「湯で噂を集めてます」(週10) / open=番台の「三年ぶり」の意味(答え=週14: 来た日にこの湯へ運ばれていた) / newterm=なし",
+    "legacyGeneratedIds": false
+  }
+}
