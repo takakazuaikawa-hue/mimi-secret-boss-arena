@@ -1120,6 +1120,12 @@ const mainStoryEpisodes: ReadonlyArray<{
   { stage: 3, week: 11, block: mainStageThreeWeeklyBlocks[10] },
   { stage: 3, week: 12, block: mainStageThreeWeeklyBlocks[11] },
   { stage: 3, week: 13, block: mainStageThreeWeeklyBlocks[12] },
+  { stage: 3, week: 14, block: mainStageThreeWeeklyBlocks[13] },
+  { stage: 3, week: 15, block: mainStageThreeWeeklyBlocks[14] },
+  { stage: 3, week: 16, block: mainStageThreeWeeklyBlocks[15] },
+  { stage: 3, week: 17, block: mainStageThreeWeeklyBlocks[16] },
+  { stage: 3, week: 18, block: mainStageThreeWeeklyBlocks[17] },
+  { stage: 3, week: 19, block: mainStageThreeWeeklyBlocks[18] },
 ];
 
 // メインストーリーの直後に、その週の人物・世界の場面を続けて再生する(二段再生)。

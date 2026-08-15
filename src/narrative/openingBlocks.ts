@@ -52,6 +52,12 @@ import mainStageThreeWeek10Source from "./content/main.s3.w10.json";
 import mainStageThreeWeek11Source from "./content/main.s3.w11.json";
 import mainStageThreeWeek12Source from "./content/main.s3.w12.json";
 import mainStageThreeWeek13Source from "./content/main.s3.w13.json";
+import mainStageThreeWeek14Source from "./content/main.s3.w14.json";
+import mainStageThreeWeek15Source from "./content/main.s3.w15.json";
+import mainStageThreeWeek16Source from "./content/main.s3.w16.json";
+import mainStageThreeWeek17Source from "./content/main.s3.w17.json";
+import mainStageThreeWeek18Source from "./content/main.s3.w18.json";
+import mainStageThreeWeek19Source from "./content/main.s3.w19.json";
 import mainStageOneWeek04Source from "./content/main.s1.w04.json";
 import mainStageOneWeek05Source from "./content/main.s1.w05.json";
 import mainStageOneWeek08Source from "./content/main.s1.w08.json";
@@ -135,6 +141,12 @@ export const mainStageThreeWeeklyBlocks = [
   mainStageThreeWeek11Source,
   mainStageThreeWeek12Source,
   mainStageThreeWeek13Source,
+  mainStageThreeWeek14Source,
+  mainStageThreeWeek15Source,
+  mainStageThreeWeek16Source,
+  mainStageThreeWeek17Source,
+  mainStageThreeWeek18Source,
+  mainStageThreeWeek19Source,
 ].map((source) => narrativeEventBlockSchema.parse(source));
 
 // 週替わりメインの本体。末尾5つ(添字21〜25)は週1・2・3・6・7ぶん。

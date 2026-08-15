@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s3.w17",
+  "kind": "opening",
+  "title": "謝酒祭、三年目",
+  "summary": "火酒の夜、数えている人の聞き方をする人がいた",
+  "ownership": {
+    "arcId": "main.stage3"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "夜のカジノカフェ(謝酒祭)",
+    "assets": [
+      {
+        "id": "main.s3.w17.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-casino-cafe-night.png",
+        "alt": "夜のカジノカフェの背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s3.w17.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s3.w17.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.w17.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w17.node.line.001",
+      "lineId": "main.s3.w17.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "謝酒祭の夜は、街ぜんぶが火酒の匂いになる。三年目ともなると、査定官さんの席がうちの隣に置かれるのは、もう決まりごとだ。「今年も、断れませんよ」「存じてます」。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w17.node.line.002",
+      "lineId": "main.s3.w17.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "今日の用は、お祭りの義理を果たすこと。それから、できれば聞き耳である。祭りの夜は、いろんなものが、ゆるむ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w17.node.line.003",
+      "lineId": "main.s3.w17.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "今年は、新顔の席があった。白手袋の一団の、非番の人たちである。ポラリスさんは、いない。「うちの局長は、非番でも非番の顔をしないので」と、部下の人が笑った。役所にも、宴会の顔があるらしい。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w17.node.line.004",
+      "lineId": "main.s3.w17.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "もう一つの新顔は、会社の席だった。端に、あの室長がいる。杯は、進んでいないように見えた。進んでいないのに——夜が更けるほど、目だけが、酔った人のそれになっていく。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w17.node.line.005",
+      "lineId": "main.s3.w17.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "席が流れて、たまたま隣になった。祭りの夜の、決まりごとみたいな偶然である。室長は、杯を見たまま、ぽつりと言った。「……この祭り、四百と何回目か、ご存じですか」。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w17.node.line.006",
+      "lineId": "main.s3.w17.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "数えている人の、聞き方だった。「さあ。私は、三回目です」「三回目、ですか」。杯が、少しだけ傾く。「——いい数字だ。まだ、疲れない数字です」。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w17.node.line.007",
+      "lineId": "main.s3.w17.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "それ以上は、聞かなかった。祭りの夜に、人の帳面を開かせるものではない。代わりに、一つだけ渡した。「今度、湯にでも。……良い湯、知ってるんです」。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w17.node.line.008",
+      "lineId": "main.s3.w17.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "室長は、杯を置いて、初めてまっすぐこちらを見た。長い間があった。「——考えて、おきます」。考えておく、は、この街では脈のある返事である。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w17.node.line.009",
+      "lineId": "main.s3.w17.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "帰り道、夜空を見上げた。雨も降っていないのに、少し離れた角で、室長も同じ空を見ていた。……あの覚え書き、やっぱり当たっているのかもしれない。",
+      "emotion": "tension"
+    },
+    {
+      "type": "effect",
+      "id": "main.s3.w17.node.effect.001",
+      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+    },
+    {
+      "type": "end",
+      "id": "main.s3.w17.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "3周目・週17(謝酒祭。室長の一滴=「四百と何回目か」を数えている人の聞き方。空を見る癖で覚え書きが答え合わせ。湯への誘い=週22の百人目の種)。Q=この街を引き受けるか / value=橋 0→+(考えておきます) / turn=行6(数えている人の聞き方) / hook=保留された返事(中)/post-point / try=はい、しかし / game=祭りの決まりごと(査定官の隣席→非番の顔→決まりごとみたいな偶然) / carry=室長の口走り(週16)・空を見る癖(週15) / open=室長は湯に来るか(答え=週22) / newterm=なし",
+    "legacyGeneratedIds": false
+  }
+}

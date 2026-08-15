@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s3.w15",
+  "kind": "opening",
+  "title": "雨、三年目",
+  "summary": "去年の問いの、答え合わせをする定席",
+  "ownership": {
+    "arcId": "main.stage3"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "閉店後のカジノカフェ(雨)",
+    "assets": [
+      {
+        "id": "main.s3.w15.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-casino-cafe-rain.png",
+        "alt": "雨のカジノカフェの背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s3.w15.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s3.w15.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.w15.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w15.node.line.001",
+      "lineId": "main.s3.w15.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "朝から太い雨で、掲示板に「本日、全興行休止」。三年目の体は、傘を差すより先に、あの店へ向く。閉店後のカジノカフェ、窓際の定席である。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w15.node.line.002",
+      "lineId": "main.s3.w15.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "今日の用は、無い。雨の日は、無いのが用である。定席で名簿を広げ、集まった名前をただ眺める。仲居さん。番台のおじいさん。山の湯の、笛吹きの湯守さん。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w15.node.line.003",
+      "lineId": "main.s3.w15.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "窓の外を、傘が流れていく。去年の雨の日を、思い出した。この席で、なぜ私は覚えているのだろうと、湯気に問うた日のことだ。あのときは、答えを雨の音に流した。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w15.node.line.004",
+      "lineId": "main.s3.w15.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "今年は、答えを持っている。私が覚えているのは、空から来た口だから。うちの面々が覚えているのは、物語をおしまいまで生き切った人たちだから。同じ「覚えている」でも、通ってきた道が違う。別々の道から、この店の同じ席に来たのだ。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w15.node.line.005",
+      "lineId": "main.s3.w15.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "試しに、隣で茶を飲む仲間に聞いてみた。「巻き戻る朝って、怖くないですか」「怖くないですよ。覚えてるもん、こっちは」。強い。……この強さに、三年間、ずっと守られてきたのだと思う。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w15.node.line.006",
+      "lineId": "main.s3.w15.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "逆に、聞かれた。「ミミさんは、怖くないんですか」。少し考えて、正直に答える。「前は、変だなあ、だけでした。今年は——取り返す途中なので、忙しくて、怖がる暇がないです」。笑われた。それでいい。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w15.node.line.007",
+      "lineId": "main.s3.w15.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "雨が上がる前に、名簿の頁を数えた。まだ、道半ば。裁きの日までの暦を、指で折る。大会、湯、大会、湯。……予定表が去年より楽しそうなのは、なぜだろう。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w15.node.line.008",
+      "lineId": "main.s3.w15.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "店を出るとき、雨あがりの空を、つい見上げた。雨の日に、空を見る癖。——あの覚え書き、当たっているのかもしれない。",
+      "emotion": "tension"
+    },
+    {
+      "type": "effect",
+      "id": "main.s3.w15.node.effect.001",
+      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+    },
+    {
+      "type": "end",
+      "id": "main.s3.w15.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "3周目・週15(静の週。s2w15「なぜ覚えているのか」の答え合わせ=二軸を暮らしの言葉で。空を見る癖の自覚が週17の解読の下拵え)。Q=この街を引き受けるか / value=理解 +(答えを持って同じ席に) / turn=行4(同じ「覚えている」でも道が違う) / hook=閃き(小)/post-hook / try=はい、しかし / game=雨の定席の様式(用が無いのが用→去年の問い→今年の答え) / carry=名簿(週14) / open=空を見る癖の人は他に(答え=週17室長) / newterm=なし",
+    "legacyGeneratedIds": false
+  }
+}
