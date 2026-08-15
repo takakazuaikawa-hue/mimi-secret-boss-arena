@@ -22,6 +22,12 @@
         "kind": "background",
         "path": "/assets/story/bg-casino-cafe-night.png",
         "alt": "前夜祭の夜の街の背景"
+      },
+      {
+        "id": "main.s1.eve.peony.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/events/peony-eve.png",
+        "alt": "型抜きに指先だけで挑む、成功直前の静寂"
       }
     ]
   },
@@ -62,6 +68,11 @@
       "mode": "thought",
       "text": "型抜きの屋台の前で、彼女の足が止まった。薄い砂糖菓子を、針で削る遊び。……この世でいちばん、彼女に向いていない遊びである。「やる」。目が、本気だった。",
       "emotion": "comic"
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.eve.peony.node.direction.003",
+      "command": { "type": "still", "assetId": "main.s1.eve.peony.asset.still.001" }
     },
     {
       "type": "line",

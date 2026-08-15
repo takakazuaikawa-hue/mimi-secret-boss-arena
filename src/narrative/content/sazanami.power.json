@@ -32,6 +32,12 @@
         "kind": "background",
         "path": "/assets/story/bg-observation-deck-night.png",
         "alt": "地下貯水槽の背景"
+      },
+      {
+        "id": "sazanami.power.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/events/sazanami-power.png",
+        "alt": "水中の小部屋で心臓の音を「速い」と指摘される瞬間"
       }
     ]
   },
@@ -150,6 +156,14 @@
       "speakerName": "さざなみ",
       "mode": "dialogue",
       "text": "息は、私が持つ。……あなたは今、海の中で、一番安全な場所にいる。"
+    },
+    {
+      "type": "direction",
+      "id": "sazanami.power.node.direction.003",
+      "command": {
+        "type": "still",
+        "assetId": "sazanami.power.asset.still.001"
+      }
     },
     {
       "type": "line",

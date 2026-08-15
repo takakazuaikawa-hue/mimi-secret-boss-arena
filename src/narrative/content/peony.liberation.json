@@ -30,6 +30,12 @@
         "kind": "still",
         "path": "/assets/story/events/peony-liberation.png",
         "alt": "解放の夜の一枚絵"
+      },
+      {
+        "id": "peony.liberation.asset.still.002",
+        "kind": "still",
+        "path": "/assets/story/events/peony-liberation-v2.png",
+        "alt": "両腕が作った夜空のドームの中、月明かりの五分間"
       }
     ]
   },
@@ -92,6 +98,11 @@
       "speakerName": "ピオニー",
       "mode": "dialogue",
       "text": "さいごに、ひとつだけ。……いまから五ふんだけ、まもらせて。"
+    },
+    {
+      "type": "direction",
+      "id": "peony.liberation.node.direction.004",
+      "command": { "type": "still", "assetId": "peony.liberation.asset.still.002" }
     },
     {
       "type": "line",

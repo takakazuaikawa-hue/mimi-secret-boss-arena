@@ -22,6 +22,12 @@
         "kind": "background",
         "path": "/assets/story/bg-casino-cafe-night.png",
         "alt": "前夜祭の夜の街の背景"
+      },
+      {
+        "id": "main.s1.eve.minato.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/events/minato-eve.png",
+        "alt": "火の消えた提灯の橋で、祭りの終わりを語る横顔"
       }
     ]
   },
@@ -71,6 +77,11 @@
       "mode": "thought",
       "text": "射的の屋台で、彼は一度だけ本気の目をした。構えが、綺麗すぎた。屋台のおやじが息を呑み、通行人が足を止め、彼は——そっと銃を置いた。「大人げないので」。景品の兎は、私が外して外して、おやじの温情でもらった。",
       "emotion": "comic"
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.eve.minato.node.direction.003",
+      "command": { "type": "still", "assetId": "main.s1.eve.minato.asset.still.001" }
     },
     {
       "type": "line",

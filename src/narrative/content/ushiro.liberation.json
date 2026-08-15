@@ -30,6 +30,12 @@
         "kind": "still",
         "path": "/assets/story/events/ushiro-liberation.png",
         "alt": "解放の夜の一枚絵"
+      },
+      {
+        "id": "ushiro.liberation.asset.still.002",
+        "kind": "still",
+        "path": "/assets/story/events/ushiro-liberation-v2.png",
+        "alt": "三秒だけ正面に立ち、初めて目が合う瞬間"
       }
     ]
   },
@@ -103,6 +109,11 @@
       "emotion": "tension"
     },
     {
+      "type": "direction",
+      "id": "ushiro.liberation.node.direction.004",
+      "command": { "type": "still", "assetId": "ushiro.liberation.asset.still.002" }
+    },
+    {
       "type": "line",
       "id": "ushiro.liberation.node.line.007",
       "lineId": "ushiro.liberation.line.007",
@@ -135,7 +146,7 @@
       "lineId": "ushiro.liberation.line.010",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "締めの形を、決める。",
+      "text": "締めくくりは、珍しく、振り返って決めたい夜だった。",
       "emotion": "resolve"
     },
     {

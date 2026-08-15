@@ -33,6 +33,12 @@
         "kind": "background",
         "path": "/assets/story/bg-observation-deck-night.png",
         "alt": "閉店後のルーレットの背景"
+      },
+      {
+        "id": "rinne.power.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/events/rinne-power.png",
+        "alt": "コインが縁で立ち、リンネが本物の笑いを見せる"
       }
     ]
   },
@@ -115,6 +121,14 @@
       "mode": "thought",
       "text": "軌道の光が、少し揺れた。彼女は勝つためではなく、私を怖がらせないために、ずっと力を絞っていた。それを知ってしまったら、逃げる選択肢は、私の中の確率表から消えた。",
       "emotion": "tender"
+    },
+    {
+      "type": "direction",
+      "id": "rinne.power.node.direction.003",
+      "command": {
+        "type": "still",
+        "assetId": "rinne.power.asset.still.001"
+      }
     },
     {
       "type": "line",

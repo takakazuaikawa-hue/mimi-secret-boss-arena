@@ -24,6 +24,12 @@
         "kind": "background",
         "path": "/assets/story/bg-observation-deck-night.png",
         "alt": "夜の廃棄物保管区の背景"
+      },
+      {
+        "id": "teirei.power.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/events/teirei-power.png",
+        "alt": "照準が一本だけミミの足元を丸く囲う"
       }
     ]
   },
@@ -126,6 +132,11 @@
       "speakerName": "丁零",
       "mode": "dialogue",
       "text": "標的リストは、戦争終結時に全消去。現在は——非標的リストだけが、あります。守る対象の一覧です。読み上げ、しますか。"
+    },
+    {
+      "type": "direction",
+      "id": "teirei.power.node.direction.003",
+      "command": { "type": "still", "assetId": "teirei.power.asset.still.001" }
     },
     {
       "type": "line",

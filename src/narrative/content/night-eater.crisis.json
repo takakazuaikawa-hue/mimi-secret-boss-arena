@@ -35,6 +35,12 @@
         "kind": "background",
         "path": "/assets/story/bg-contract-archive-v2.png",
         "alt": "契約保管庫の背景"
+      },
+      {
+        "id": "night-eater.crisis.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/events/night-eater-crisis.png",
+        "alt": "外套の内側に引き込まれ「今夜いちばんの味だった」と囁かれる瞬間"
       }
     ]
   },
@@ -171,6 +177,14 @@
       "speakerName": "夜を食べるもの",
       "mode": "dialogue",
       "text": "…………予定の、ある夜。"
+    },
+    {
+      "type": "direction",
+      "id": "night-eater.crisis.node.direction.003",
+      "command": {
+        "type": "still",
+        "assetId": "night-eater.crisis.asset.still.001"
+      }
     },
     {
       "type": "line",

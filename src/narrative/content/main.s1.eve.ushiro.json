@@ -22,6 +22,12 @@
         "kind": "background",
         "path": "/assets/story/bg-casino-cafe-night.png",
         "alt": "前夜祭の夜の街の背景"
+      },
+      {
+        "id": "main.s1.eve.ushiro.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/events/ushiro-eve.png",
+        "alt": "花火の下、二人分の影が並ぶ"
       }
     ]
   },
@@ -62,6 +68,11 @@
       "mode": "thought",
       "text": "定位置は、思ったより快適だった。りんご飴を買うと、背後から手が伸びて受け取る。人混みでは、背中がぶつからない。夜店の写真屋の前を通ったら、店主が叫んだ。「お客さん、うしろの人も写ってるよ! 全部の写真に!」。知ってます。百二十七枚、全部に。",
       "emotion": "comic"
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.eve.ushiro.node.direction.003",
+      "command": { "type": "still", "assetId": "main.s1.eve.ushiro.asset.still.001" }
     },
     {
       "type": "line",

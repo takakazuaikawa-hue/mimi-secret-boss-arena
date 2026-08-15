@@ -30,6 +30,12 @@
         "kind": "still",
         "path": "/assets/story/events/wolf-nine-liberation.png",
         "alt": "解放の夜の一枚絵"
+      },
+      {
+        "id": "wolf-nine.liberation.asset.still.002",
+        "kind": "still",
+        "path": "/assets/story/events/wolf-nine-liberation-v2.png",
+        "alt": "九戦目の挑戦状を差し出す瞬間"
       }
     ]
   },
@@ -83,6 +89,11 @@
       "speakerName": "ヴォルフ・ナイン",
       "mode": "dialogue",
       "text": "それでだ。自由になった記念に、渡すものがある。……受け取れ。"
+    },
+    {
+      "type": "direction",
+      "id": "wolf-nine.liberation.node.direction.004",
+      "command": { "type": "still", "assetId": "wolf-nine.liberation.asset.still.002" }
     },
     {
       "type": "line",

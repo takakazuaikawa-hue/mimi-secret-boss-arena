@@ -35,6 +35,12 @@
         "kind": "background",
         "path": "/assets/story/bg-casino-cafe-night.png",
         "alt": "夜の所有者名簿室の背景"
+      },
+      {
+        "id": "mumyo.liberation.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/events/mumyo-liberation.png",
+        "alt": "浮いたペンが「私」の一文字を刻む瞬間"
       }
     ]
   },
@@ -80,6 +86,14 @@
       "command": {
         "type": "effect",
         "effectId": "flash"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "mumyo.liberation.node.direction.003",
+      "command": {
+        "type": "still",
+        "assetId": "mumyo.liberation.asset.still.001"
       }
     },
     {
@@ -133,7 +147,7 @@
       "lineId": "mumyo.liberation.line.009",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "書庫の夜気の中で、耳の先だけが熱かった。世界を十四回救った剣の、十五回目の物語の一行目に、どうやら私は立ち会っている。締めの形を決めて、今日は帰ろう。",
+      "text": "書庫の夜気の中で、耳の先だけが熱かった。世界を十四回救った剣の、十五回目の物語の一行目に、どうやら私は立ち会っている。一行目の終わり方くらいは、二人で選ばせてもらう。",
       "emotion": "resolve"
     },
     {

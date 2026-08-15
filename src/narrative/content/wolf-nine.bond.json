@@ -17,13 +17,13 @@
     "weight": 1
   },
   "presentation": {
-    "location": "練習場",
+    "location": "従業員食堂(朝食)",
     "assets": [
       {
         "id": "wolf-nine.bond.asset.background.001",
         "kind": "background",
-        "path": "/assets/story/bg-casino-cafe-rain.png",
-        "alt": "雨の朝の食堂の背景"
+        "path": "/assets/story/bg-employee-cafeteria-day-v1.png",
+        "alt": "朝の従業員食堂の背景"
       }
     ]
   },
@@ -39,7 +39,7 @@
       "lineId": "wolf-nine.bond.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "雨の朝、チームの朝食会。ヴォルフ・ナインが加わってから、うちの食卓は変わった。何がって、全部が種目になった。"
+      "text": "大会の翌朝、チームの朝食会。ヴォルフ・ナインが加わってから、うちの食卓は変わった。何がって、全部が種目になった。"
     },
     {
       "type": "line",

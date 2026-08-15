@@ -32,6 +32,12 @@
         "kind": "background",
         "path": "/assets/story/bg-observation-deck-night.png",
         "alt": "存在しない地下階の背景"
+      },
+      {
+        "id": "cassim-bell.power.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/events/cassim-bell-power.png",
+        "alt": "手をつないだまま扉の向こうを確かめる瞬間"
       }
     ]
   },
@@ -168,6 +174,14 @@
       "speakerName": "ミミ",
       "mode": "dialogue",
       "text": "……手、つないだままでいいなら。一緒に確かめます。"
+    },
+    {
+      "type": "direction",
+      "id": "cassim-bell.power.node.direction.003",
+      "command": {
+        "type": "still",
+        "assetId": "cassim-bell.power.asset.still.001"
+      }
     },
     {
       "type": "line",

@@ -35,6 +35,12 @@
         "kind": "background",
         "path": "/assets/story/bg-casino-cafe-night.png",
         "alt": "夜の屋上庭園の背景"
+      },
+      {
+        "id": "shahar.liberation.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/events/shahar-liberation.png",
+        "alt": "鱗の髪飾りが髪に留まり月光を反射する瞬間"
       }
     ]
   },
@@ -126,6 +132,14 @@
       "speakerName": "シャハル",
       "mode": "dialogue",
       "text": "ええ。登録の消えた鱗は、ただの私物です。私物は、贈れる。……四百年で、いちばん小さく編んだ一枚です。"
+    },
+    {
+      "type": "direction",
+      "id": "shahar.liberation.node.direction.003",
+      "command": {
+        "type": "still",
+        "assetId": "shahar.liberation.asset.still.001"
+      }
     },
     {
       "type": "line",

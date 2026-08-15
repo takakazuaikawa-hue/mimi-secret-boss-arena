@@ -24,6 +24,12 @@
         "kind": "background",
         "path": "/assets/story/bg-casino-cafe-rain.png",
         "alt": "雨の礼拝スペースの背景"
+      },
+      {
+        "id": "marian.bond.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/events/marian-bond.png",
+        "alt": "治さない時間に、まっすぐ顔を見つめられる瞬間"
       }
     ]
   },
@@ -121,6 +127,11 @@
       "speakerName": "マリアン",
       "mode": "dialogue",
       "text": "ミミさん。……今日の練習の、お礼に。一つ、白状します。私は、治さない時間が、少しだけ、好きになり始めています。治している間、私は傷しか見ていない。治さない間は——相手の顔を、見ていられるので。"
+    },
+    {
+      "type": "direction",
+      "id": "marian.bond.node.direction.002",
+      "command": { "type": "still", "assetId": "marian.bond.asset.still.001" }
     },
     {
       "type": "line",

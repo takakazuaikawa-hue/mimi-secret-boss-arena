@@ -41,6 +41,12 @@
         "kind": "still",
         "path": "/assets/story/events/cassim-bell-liberation.png",
         "alt": "解放の夜の一枚絵"
+      },
+      {
+        "id": "cassim-bell.liberation.asset.still.002",
+        "kind": "still",
+        "path": "/assets/story/events/cassim-bell-liberation-v2.png",
+        "alt": "「これから、あなたと」と告げる瞬間"
       }
     ]
   },
@@ -149,6 +155,14 @@
       "speakerName": "ミミ",
       "mode": "dialogue",
       "text": "……お礼って、何をくれるんですか。"
+    },
+    {
+      "type": "direction",
+      "id": "cassim-bell.liberation.node.direction.004",
+      "command": {
+        "type": "still",
+        "assetId": "cassim-bell.liberation.asset.still.002"
+      }
     },
     {
       "type": "line",

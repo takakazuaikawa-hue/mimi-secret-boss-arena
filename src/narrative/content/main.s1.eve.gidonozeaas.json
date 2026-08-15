@@ -22,6 +22,12 @@
         "kind": "background",
         "path": "/assets/story/bg-casino-cafe-night.png",
         "alt": "前夜祭の夜の街の背景"
+      },
+      {
+        "id": "main.s1.eve.gidonozeaas.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/events/gidonozeaas-eve.png",
+        "alt": "帰り道、魔王が真顔で見ていてくれるかと問う"
       }
     ]
   },
@@ -89,6 +95,11 @@
       "mode": "thought",
       "text": "「明日が来てしまうことだ」。……祭りの終わりを惜しむ言い方で、この人はたまに、ずるい。",
       "emotion": "tender"
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.eve.gidonozeaas.node.direction.003",
+      "command": { "type": "still", "assetId": "main.s1.eve.gidonozeaas.asset.still.001" }
     },
     {
       "type": "line",

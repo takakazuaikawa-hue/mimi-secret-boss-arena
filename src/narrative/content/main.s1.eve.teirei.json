@@ -22,6 +22,12 @@
         "kind": "background",
         "path": "/assets/story/bg-casino-cafe-night.png",
         "alt": "前夜祭の夜の街の背景"
+      },
+      {
+        "id": "main.s1.eve.teirei.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/events/teirei-eve.png",
+        "alt": "灯りの少ない道で「見ていて、と言ってほしい」と告げる"
       }
     ]
   },
@@ -89,6 +95,11 @@
       "mode": "thought",
       "text": "理由欄は空欄のまま。彼女がいちばん大事なものをそう書くのを、私は知っている。空欄は、書けないのではなく、書かないのだ。私は「受理します」とだけ言った。受付の言葉が、こんな夜に役に立つ。",
       "emotion": "tender"
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.eve.teirei.node.direction.003",
+      "command": { "type": "still", "assetId": "main.s1.eve.teirei.asset.still.001" }
     },
     {
       "type": "line",

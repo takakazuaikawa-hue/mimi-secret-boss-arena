@@ -41,6 +41,12 @@
         "kind": "still",
         "path": "/assets/story/events/rinne-liberation.png",
         "alt": "契約の外側のイベント一枚絵"
+      },
+      {
+        "id": "rinne.liberation.asset.still.002",
+        "kind": "still",
+        "path": "/assets/story/events/rinne-liberation-v2.png",
+        "alt": "頬杖をつき、答えを見ないままミミの言葉を待つ顔"
       }
     ]
   },
@@ -107,6 +113,14 @@
       "text": "契約が、外れた。……変なの。未来は一個も増えてないはずなのに、増えた気がする。選んでいい未来が、増えたからかな。"
     },
     {
+      "type": "direction",
+      "id": "rinne.liberation.node.direction.004",
+      "command": {
+        "type": "still",
+        "assetId": "rinne.liberation.asset.still.002"
+      }
+    },
+    {
       "type": "line",
       "id": "rinne.liberation.node.line.005",
       "lineId": "rinne.liberation.line.005",
@@ -148,7 +162,7 @@
       "lineId": "rinne.liberation.line.009",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "別れの挨拶をした。それなのに、足音は二つとも同じ出口へ向かっていた。契約ではなく、本人の歩幅で。締めの形を決めて、今日は帰ろう。",
+      "text": "別れの挨拶をした。それなのに、足音は二つとも同じ出口へ向かっていた。契約ではなく、本人の歩幅で。今夜の締めは、コインを投げずに決める。",
       "emotion": "resolve"
     },
     {

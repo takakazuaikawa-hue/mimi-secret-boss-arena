@@ -24,6 +24,12 @@
         "kind": "background",
         "path": "/assets/story/bg-observation-deck-night.png",
         "alt": "夜の無人の決闘場の背景"
+      },
+      {
+        "id": "wolf-nine.power.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/events/wolf-nine-power.png",
+        "alt": "白旗の下、「困る」と言いながら困っていない顔"
       }
     ]
   },
@@ -99,6 +105,11 @@
       "mode": "thought",
       "text": "八年間、白いままの旗。彼の強さの一番深いところは、この空白だった。決闘とは、二人で作るもの。型とは、相手からの贈り物。だから九つ目は、一人では永遠に作れない。",
       "emotion": "revelation"
+    },
+    {
+      "type": "direction",
+      "id": "wolf-nine.power.node.direction.003",
+      "command": { "type": "still", "assetId": "wolf-nine.power.asset.still.001" }
     },
     {
       "type": "line",
