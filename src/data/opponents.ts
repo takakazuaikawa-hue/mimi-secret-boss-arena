@@ -214,6 +214,16 @@ const dedicatedMatchOpponents: Record<string, BattleFighterDefinition[]> = {
     dedicatedOpponent({ id: "finale-belze", name: "灰冠ベルゼ", role: "攻撃", color: "#702438", accent: "#f26961", traitName: "灰の戴冠", traitText: "長引くほど攻撃と魔力が増していく。", ai: "aggressive", element: "flame", weak: "tide", basic: "灰冠打ち", signature: "王都焼却宣言", utility: "灰の鼓舞" }),
     dedicatedOpponent({ id: "finale-nox", name: "規約喰らいノクス", role: "妨害", color: "#251b35", accent: "#8fe0d1", traitName: "白紙追補", traitText: "書かれた対策を食べ、味方の動きを鈍らせる。", ai: "tricky", element: "gale", weak: "star", basic: "条文噛み", signature: "第零条・全部無効", utility: "追補の黒霧" }),
   ],
+  "finale-legends": [
+    dedicatedOpponent({ id: "legend-hundred-arm", name: "百腕王バルガ", role: "攻撃", color: "#7a5a1a", accent: "#f2d06b", traitName: "全盛期再現", traitText: "三ターンごとに全盛期の型を解放する。", ai: "aggressive", element: "flame", weak: "tide", basic: "百腕連打", signature: "全盛期・百手の嵐", utility: "型の再現" }),
+    dedicatedOpponent({ id: "legend-mirror-saint", name: "鏡聖アルミラ", role: "万能", color: "#9a8a3a", accent: "#eef4ff", traitName: "記録の型", traitText: "受けた技の型を映し、同じ形で返す。", ai: "steady", element: "star", weak: "gale", basic: "鏡合わせ", signature: "四百年の残光", utility: "型写し" }),
+    dedicatedOpponent({ id: "legend-unfallen", name: "不倒王ガドル", role: "守備", color: "#6b5a2a", accent: "#9ee6d8", traitName: "不倒の記録", traitText: "崩れた記録が無いため、守りが極端に固い。", ai: "careful", element: "tide", weak: "flame", basic: "不動受け", signature: "無敗の構え", utility: "根張り" }),
+  ],
+  "finale-first-troupe": [
+    dedicatedOpponent({ id: "first-troupe-lead", name: "初演の座長", role: "万能", color: "#4a3a6a", accent: "#efc65a", traitName: "始まりの型", traitText: "三ターンごとに、すべての型の最初の形を解放する。", ai: "steady", element: "star", weak: "gale", basic: "開幕の一手", signature: "東西東西・初演の口上", utility: "間の支配" }),
+    dedicatedOpponent({ id: "first-troupe-blade", name: "初演の立役", role: "攻撃", color: "#5a2a4a", accent: "#f26961", traitName: "初踏の歩法", traitText: "誰も見たことのない古い歩法で間合いを詰める。", ai: "aggressive", element: "gale", weak: "star", basic: "初太刀", signature: "最初の舞台の一閃", utility: "歩法崩し" }),
+    dedicatedOpponent({ id: "first-troupe-chorus", name: "初演の囃子", role: "支援", color: "#3a4a6a", accent: "#8fe0d1", traitName: "拍子外し", traitText: "囃子の間で敵の呼吸を外し、味方の型を整える。", ai: "tricky", element: "tide", weak: "flame", basic: "拍子打ち", signature: "四百年目の乱拍子", utility: "間直し" }),
+  ],
   "assessment-1": [
     dedicatedOpponent({ id: "audit-north-pen", name: "北塔・赤ペン主任", role: "妨害", color: "#276d69", accent: "#f26d6d", traitName: "先行採点", traitText: "開幕から減点札の障壁を展開する。", ai: "tricky", element: "star", weak: "flame", basic: "赤線引き", signature: "要改善・三連印", utility: "減点札" }),
     dedicatedOpponent({ id: "audit-north-file", name: "北塔・書類騎士", role: "守備", color: "#327f78", accent: "#f1d47b", traitName: "添付資料", traitText: "厚い資料を盾にして前列を守る。", ai: "careful", element: "tide", weak: "gale", basic: "書類束打ち", signature: "別紙百枚の壁", utility: "添付防壁" }),

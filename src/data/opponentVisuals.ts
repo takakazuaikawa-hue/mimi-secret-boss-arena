@@ -65,6 +65,8 @@ const dedicatedVisualRoles: Record<string, keyof typeof fallbackOpponentVisuals>
   "owner-regalia": "mystic", "owner-ordo": "striker", "owner-seal": "guard",
   "star-alpha": "striker", "star-beta": "guard", "star-gamma": "mystic",
   "finale-virgo": "guard", "finale-belze": "striker", "finale-nox": "mystic",
+  "legend-hundred-arm": "striker", "legend-mirror-saint": "mystic", "legend-unfallen": "guard",
+  "first-troupe-lead": "mystic", "first-troupe-blade": "striker", "first-troupe-chorus": "guard",
   "audit-north-pen": "mystic", "audit-north-file": "guard", "audit-north-clock": "striker",
   "audit-west-smile": "guard", "audit-west-arrow": "striker", "audit-west-note": "mystic",
   "audit-center-chief": "guard", "audit-center-form": "mystic", "audit-center-stamp": "striker",

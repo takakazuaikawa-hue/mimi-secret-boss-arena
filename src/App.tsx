@@ -6821,6 +6821,12 @@ function BattleScreen({
 function EndingScreen({ onTitle, onArchive }: { onTitle: () => void; onArchive: () => void }) {
   const run = useGameStore((state) => state.run);
   const profile = useGameStore((state) => state.profile);
+  const recordGrandChoice = useGameStore((state) => state.recordGrandChoice);
+  const [penChoice, setPenChoice] = useState<"rest" | "close" | "share">();
+  const choosePen = (choice: "rest" | "close" | "share") => {
+    setPenChoice(choice);
+    recordGrandChoice(choice);
+  };
   if (!run?.ended) return null;
   const liberated = run.roster.filter((id) => run.fighters[id].liberated);
   const hallEntry =
@@ -6835,9 +6841,9 @@ function EndingScreen({ onTitle, onArchive }: { onTitle: () => void; onArchive: 
   const copy =
     run.endingType === "grand"
       ? {
-          kicker: "THE GRAND REOPENING",
+          kicker: "四百年目の、ほんものの初日",
           title: "柿落とし、十五幕",
-          text: "再建した闘技場の柿落とし。歴代の周回で自由になった全員が、今日は自分の新作を一幕ずつ持って集まった。会社が企画した再演は、一幕もない。物語資産管理部の席も、用意していない。",
+          text: "新しい闘技場の柿落とし。歴代の周回で自由になった全員が、今日は自分の新作を一幕ずつ持って集まった。誰かの台本の再演は、一幕もない。",
         }
       : run.endingType === "rebuild"
       ? {
@@ -6870,7 +6876,6 @@ function EndingScreen({ onTitle, onArchive }: { onTitle: () => void; onArchive: 
         {run.endingType === "grand" && (
           <section className="grand-finale">
             <div className="grand-finale__charter">
-              <span>OPENING PROGRAM</span>
               <h2>柿落とし・演目表</h2>
               <ol>
                 {openingProgram.map((entry) => (
@@ -6882,7 +6887,6 @@ function EndingScreen({ onTitle, onArchive }: { onTitle: () => void; onArchive: 
               </ol>
             </div>
             <div className="grand-finale__cast">
-              <span>ROLL CALL</span>
               <h2>開場前の点呼</h2>
               {fighterDefinitions.map((fighter) => (
                 <article key={fighter.id}>
@@ -6895,7 +6899,16 @@ function EndingScreen({ onTitle, onArchive }: { onTitle: () => void; onArchive: 
               ))}
             </div>
             <div className="grand-finale__final-article">
-              <span>THE FINAL ACT</span>
+              <span>開演前</span>
+              <p>
+                開演の前に、記録室へ寄った。返しそびれていた閲覧札を、棚へ戻すためである。掛け直した札の隣で、あの四百年物の飴色の札が、灯りを受けて揺れた。掠れた字を、指でなぞる。——読めた。額の裏の手紙に、無かった名前。世界の続きを借りたまま、返せなくなった人の名前だ。
+              </p>
+              <p>
+                台帳の最後の頁を開いて、四百年ぶんの空白に、その名前を、ひとつ書き足した。この世界の全部を書いて、自分の名前だけ書かなかった人。あなたの柿落としに、今夜、続きができましたよ。
+              </p>
+            </div>
+            <div className="grand-finale__final-article">
+              <span>大取り</span>
               <p>
                 前口上が終わると、十五人が同時にこちらを見た。演目表の大取りだけが、まだ空欄で残っている。差し出されたペンは、一本。「最後の一幕は、興行主が書くものです」。
               </p>
@@ -6904,6 +6917,41 @@ function EndingScreen({ onTitle, onArchive }: { onTitle: () => void; onArchive: 
                 <strong>{finalAct.title}</strong>
                 <small>{finalAct.author}</small>
               </blockquote>
+            </div>
+            <div className="grand-finale__final-article grand-pen">
+              <span>最後の一筆</span>
+              <p>
+                幕が下りても、台帳のペンは、まだ机に残っている。この世界の続きは、誰が書くのか。四百年目の夜の、いちばん最後の決めごとである。
+              </p>
+              {!penChoice ? (
+                <div className="grand-pen__choices">
+                  <button onClick={() => choosePen("rest")}>
+                    <strong>ペンを、置く</strong>
+                    <small>物語は完結のまま、そっと眠らせる</small>
+                  </button>
+                  <button onClick={() => choosePen("close")}>
+                    <strong>台帳を、閉じる</strong>
+                    <small>続きの保証を手放して、初めての明日へ</small>
+                  </button>
+                  <button onClick={() => choosePen("share")}>
+                    <strong>ペンを、みんなへ</strong>
+                    <small>演目帳が、新しい台帳になる</small>
+                  </button>
+                </div>
+              ) : (
+                <div className="grand-pen__epilogue">
+                  <p>
+                    {penChoice === "rest"
+                      ? "ペンは、記録室のいちばん静かな棚に納めた。四百年がんばった物語は、完結の栄誉のまま眠っていい。世界の続きは、台帳の外で——それぞれの明日が、勝手に続けていく。"
+                      : penChoice === "close"
+                        ? "台帳は、読み終えた本として、静かに閉じた。明日から、この世界に決まった続きは無い。無い、ということの眩しさに、客席がもう一度沸いた。初めての明日は、全員が初心者である。"
+                        : "ペンは、一本では足りなかった。翌朝から、記録室の窓口に長い列ができた。演目帳が、新しい台帳になる。続きは、その週を生きる人が、その週のぶんだけ書く。世界は、書かれる場所から、書く場所になった。"}
+                  </p>
+                  <p className="grand-pen__postcard">
+                    数日後、記録室に葉書が一枚届いた。差出人の欄には、金色の判がひとつ——承認の判である。文面は、一言だけ。「よきにはからえ」。四百年遅れの承認は、額に入れて、新しい受付に飾ることにした。
+                  </p>
+                </div>
+              )}
             </div>
           </section>
         )}

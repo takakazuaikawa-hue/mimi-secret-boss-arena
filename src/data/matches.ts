@@ -226,6 +226,72 @@ export const officialMatches: MatchDefinition[] = [
       "運営側さえ止められない最後の出場者。大魔王が呼吸するたび、観客席の契約印が一枚ずつ燃えていく。大会規約にはまだ対処法が印刷されておらず、係員は白紙の追補を配りながら避難している。",
     final: true,
   },
+  {
+    id: "finale-legends",
+    name: "決勝・新作対再演",
+    week: 26,
+    opponentName: "歴代王者選抜(台帳再現)",
+    opponentColor: "#8a6d1f",
+    difficulty: 1.58,
+    prize: 20000,
+    roundsOnWin: 0,
+    opponentIds: ["legend-hundred-arm", "legend-mirror-saint", "legend-unfallen"],
+    battleRule: "uncontrolled-finale",
+    battleFeature: {
+      name: "全盛期の再現",
+      summary: "第3・第6ターンに全盛期の型を解放する。記録どおりの完璧な連携で来る。",
+    },
+    enemyCues: {
+      attack: [
+        { gesture: "百腕王の拳が、四百年前の型のまま振り上がる", line: "記録のとおりに、参る" },
+        { gesture: "鏡聖の刃が客席の歓声を映して走る", line: "この歓声も、覚えがある" },
+      ],
+      guard: [
+        { gesture: "不倒王が一歩も引かず、砂に根を張る", line: "この構え、破った者は記録に無い" },
+        { gesture: "三人の型が寸分の狂いなく重なる", line: "完璧とは、こういうものだ" },
+      ],
+      skill: [
+        { gesture: "三人の全盛期が、同時に燃え上がる", line: "全盛期とは、いつでも今のことだ" },
+        { gesture: "四百年ぶんの優勝の口上が、砂の上に響く", line: "諸君、これが頂点の型である" },
+      ],
+    },
+    story:
+      "台帳が選び抜いた、四百年の優勝者たちの全盛期の再現。型も口上も栄光も、記録のままに完璧である。ただし、今夜の夜風に何を思うかだけは、どこにも記録されていない。",
+    final: true,
+  },
+  {
+    id: "finale-first-troupe",
+    name: "決勝・柿落とし興行",
+    week: 26,
+    opponentName: "初演の一座(台帳最終頁)",
+    opponentColor: "#5a4a7a",
+    difficulty: 1.58,
+    prize: 20000,
+    roundsOnWin: 0,
+    opponentIds: ["first-troupe-lead", "first-troupe-blade", "first-troupe-chorus"],
+    battleRule: "uncontrolled-finale",
+    battleFeature: {
+      name: "最初の舞台の型",
+      summary: "第3・第6ターンに四百年前の初演の型を解放する。すべての型の、いちばん古い形で来る。",
+    },
+    enemyCues: {
+      attack: [
+        { gesture: "座長の構えが、すべての型の始まりの形を取る", line: "これが、最初の一手です" },
+        { gesture: "立役の足が、誰も踏んだことのない歩法で砂を踏む", line: "この砂は、私たちが最初に踏んだ" },
+      ],
+      guard: [
+        { gesture: "囃子の拍子が、攻め手の呼吸とずれて響く", line: "間は、こちらのものです" },
+        { gesture: "一座が舞台の立ち位置のまま守りにつく", line: "幕は、まだ下ろさせません" },
+      ],
+      skill: [
+        { gesture: "四百年前の開幕口上が、新しい会場に朗々と響く", line: "東西、東西——" },
+        { gesture: "三人の影が、最初の舞台の絵姿と重なる", line: "ご覧あれ、これが初演" },
+      ],
+    },
+    story:
+      "台帳の最終頁が立てた、最後の演目。四百年前、この闘技場の最初の舞台に立った一座の再現である。すべての型のいちばん古い形を使う。倒し合いではなく、受け渡しの一戦。",
+    final: true,
+  },
 ];
 
 export const dominationAssessmentMatches: MatchDefinition[] = [
@@ -398,10 +464,27 @@ export const matchesForRoute = (route: "normal" | "domination" | "chaos") =>
       )
     : officialMatches;
 
+/** 週26決勝の区分別ID。区分未指定・区分1は従来の最終興行を使う。 */
+const finaleMatchIdForStage = (campaignStage?: 1 | 2 | 3) =>
+  campaignStage === 2
+    ? "finale-legends"
+    : campaignStage === 3
+      ? "finale-first-troupe"
+      : "last-demon-king";
+
 export const matchForWeek = (
   week: number,
   route: "normal" | "domination" | "chaos" = "normal",
-) => matchesForRoute(route).find((match) => match.week === week);
+  campaignStage?: 1 | 2 | 3,
+) => {
+  const matches = matchesForRoute(route);
+  if (week === 26) {
+    const finaleId = finaleMatchIdForStage(campaignStage);
+    const finale = matches.find((match) => match.id === finaleId);
+    if (finale) return finale;
+  }
+  return matches.find((match) => match.week === week);
+};
 
 export const parseBonusMatchId = (id: string) => {
   if (!id.startsWith("bonus:")) return undefined;

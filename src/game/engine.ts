@@ -1379,7 +1379,7 @@ export const nextCampaignWeek = (source: RunState): RunState => {
 };
 
 export const nextMatchId = (run: RunState) =>
-  matchForWeek(run.week, run.route)?.id;
+  matchForWeek(run.week, run.route, run.campaignStage)?.id;
 
 export const setFocusFighter = (
   source: RunState,

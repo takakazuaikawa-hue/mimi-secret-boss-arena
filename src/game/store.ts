@@ -86,6 +86,7 @@ interface GameStore {
   resolveSpectatorMatch: () => void;
   dismissSpectatorMatch: () => void;
   settleBattle: () => { bonus: boolean; ended: boolean; won: boolean };
+  recordGrandChoice: (choice: "rest" | "close" | "share") => void;
   retireRun: () => void;
   setSkipExplanations: (value: boolean) => void;
   setSoundEnabled: (value: boolean) => void;
@@ -724,6 +725,19 @@ export const useGameStore = create<GameStore>()(
         set((state) => {
           if (!state.run) return {};
           return finishRun(state.run, state.profile, "retired");
+        }),
+      // 真エンディングの最終選択(台帳のペンの行き先)。周回を跨いで
+      // seenEvents に残し、後続コンテンツの反応に使う。保存形式は不変。
+      recordGrandChoice: (choice) =>
+        set((state) => {
+          const id = `grand.pen.${choice}`;
+          if (state.profile.seenEvents.includes(id)) return {};
+          return {
+            profile: {
+              ...state.profile,
+              seenEvents: [...state.profile.seenEvents, id],
+            },
+          };
         }),
       setSkipExplanations: (value) =>
         set((state) => ({
