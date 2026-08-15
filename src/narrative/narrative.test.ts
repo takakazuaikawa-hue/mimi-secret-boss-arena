@@ -107,8 +107,8 @@ describe("narrative block migration", () => {
   it("adapts every existing CharacterScene exactly once", () => {
     const expectedCount =
       // opening: 所有権移譲・温泉旅行・メイン各区分の全話・本命前夜5話
-      // (第三区分は週1〜22まで配線済み。旧ep1〜5は撤去)
-      81 +
+      // (第三区分は全26話配線済み。旧ep1〜5は撤去)
+      85 +
       fighterDefinitions.length * 7 +
       Object.values(ambientEvents).flat().length +
       Object.values(routeEvents).flatMap((scenes) => scenes ?? []).length;

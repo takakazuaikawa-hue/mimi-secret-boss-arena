@@ -17,6 +17,10 @@ Chrome 自動運転で1件ずつ送信し、生成画像を `public/assets/story
 
 ## 第1陣(20枚)
 
+**進捗(2026-08-15)**: #1〜#10 生成済み。scratchpadに保存名どおり格納、採否確認待ち。
+`public/assets/story/events/` への配置と物語JSONへの組み込みは採用確定後。
+生成手順はスキル `chatgpt-image-gen`(~/.claude/skills)として登記済み。
+
 | # | 保存名 | 出典 | 場所 | 添付(キャラ / 絵柄見本) | 個別プロンプト |
 |---|---|---|---|---|---|
 | 1 | gidonozeaas-eve | main.s1.eve.gidonozeaas | 前夜祭の夜店通り | gidono-sealed-neutral.png / bg-casino-cafe-night.png | 提灯の連なる祭りの夜店通りの帰り道、人気のない角。魔王が食べかけのミニパフェを片手に立ち止まり、真顔でまっすぐこちらを見る。「見ていてくれるか」と問う直前の目。提灯の暖色光が横顔に落ち、背景の祭りの光はぼかす。 |

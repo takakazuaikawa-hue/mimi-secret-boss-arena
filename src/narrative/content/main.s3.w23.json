@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s3.w23",
+  "kind": "opening",
+  "title": "こけら払い",
+  "summary": "棟木が上がり、祝いに名前が付く。演目帳は十五幕まで埋まった",
+  "ownership": {
+    "arcId": "main.stage3"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "闘技場 正面(上棟の祭り)",
+    "assets": [
+      {
+        "id": "main.s3.w23.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-arena-reception.png",
+        "alt": "闘技場の正面の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s3.w23.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s3.w23.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.w23.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w23.node.line.001",
+      "lineId": "main.s3.w23.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "新しい闘技場の骨組みが、空に立った。上棟の朝である。削りたての木の香りが、街の角まで届いている。膝の上には、祝いの帳面——今日、この祝いに、名前を付けることになっている。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w23.node.line.002",
+      "lineId": "main.s3.w23.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "今日の用は、上棟の祭りと、帳面の白紙を埋めること。裁きの日は、もう明後日の距離にある。その前に、祝いの形だけは決めておきたい。勝つ気の支度、である。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w23.node.line.003",
+      "lineId": "main.s3.w23.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "棟木が上がると、大工さんたちが屋根から、木の削り屑をざあっと払い落とした。「こけら払いだよ」と、棟梁さん。「屋根のこけらを払って、はじめて建物は仕上がる。で、最初の興行を『柿落とし』って言うのさ」。……その言葉が、帳面の白紙の上に、音を立てて落ちてきた。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w23.node.line.004",
+      "lineId": "main.s3.w23.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "決まった。祝いの名前は——柿落とし。四百年目の、新しい闘技場の、最初の興行である。帳面に書き込むと、覗いていた仲間から声が飛んだ。「演目は?」「誰が出るんです?」。全員です。一人一幕、十五幕。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w23.node.line.005",
+      "lineId": "main.s3.w23.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "言った先から、帳面は奪い合いになった。「あたし、歌います」「俺は型の披露」「私は、お客と腕相撲」。演目帳は夕方までに十五幕、埋まった。大取りだけが、空白のまま残る。「ミミさんは?」「私は——当日までに、考えます」。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w23.node.line.006",
+      "lineId": "main.s3.w23.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "日暮れに、花火師さんが一発だけ上げてくれた。あの、長い耳の新作である。「注文主、聞いてないかい? あんたのとこの全員だよ。去年の秋から、こつこつ積み立ててさ」。……そうでしたか。道理であの花火、まっすぐこちらを向いて跳ねたわけである。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w23.node.line.007",
+      "lineId": "main.s3.w23.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "屋根から払われた木屑は、街のみんなで掃き集めた。掃きながら、分かってくる。柿落としとは、建てた人たちの手を、最後にもう一度みんなで動かす儀式なのだ。祝いは、始まる前から、もう始まっている。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w23.node.line.008",
+      "lineId": "main.s3.w23.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "帰りぎわ、旧会場の壁に、新しい貼り紙が出た。「四百年目の審理——旧会場、最後の興行として執り行う」。裁きが、興行になった。この街らしいと言えば、これほどらしいこともない。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w23.node.line.009",
+      "lineId": "main.s3.w23.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "板には、もう枠が立っている。「ミミさんの言い分、いよいよ本審。通るか通らぬか」。倍率は、見なかった。見なくても——客席が満員になることだけは、分かっている。",
+      "emotion": "tension"
+    },
+    {
+      "type": "effect",
+      "id": "main.s3.w23.node.effect.001",
+      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+    },
+    {
+      "type": "end",
+      "id": "main.s3.w23.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "3周目・週23(上棟祭。柿落としの語源を棟梁の口と街の手作業で。演目帳十五幕が埋まり大取りだけ空白。兎耳花火の注文主=仲間たち(週9の回収))。Q=この街を引き受けるか / value=祝い 白紙→名前が付いた / turn=行7(柿落とし=みんなの手の儀式) / hook=未決着の勝負(中)/pre-point / try=はい、そして / game=演目帳の奪い合い(歌→型→腕相撲→大取りだけ空白) / carry=祝いの帳面(週13)・裁きの日(週22繰り上げ) / open=大取りの中身(答え=週25方角→週26)・本審の行方(答え=週24) / newterm=なし(こけら=棟梁の台詞内で語源提示)",
+    "legacyGeneratedIds": false
+  }
+}

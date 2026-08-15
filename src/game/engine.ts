@@ -1129,6 +1129,10 @@ const mainStoryEpisodes: ReadonlyArray<{
   { stage: 3, week: 20, block: mainStageThreeWeeklyBlocks[19] },
   { stage: 3, week: 21, block: mainStageThreeWeeklyBlocks[20] },
   { stage: 3, week: 22, block: mainStageThreeWeeklyBlocks[21] },
+  { stage: 3, week: 23, block: mainStageThreeWeeklyBlocks[22] },
+  { stage: 3, week: 24, block: mainStageThreeWeeklyBlocks[23] },
+  { stage: 3, week: 25, block: mainStageThreeWeeklyBlocks[24] },
+  { stage: 3, week: 26, block: mainStageThreeWeeklyBlocks[25] },
 ];
 
 // メインストーリーの直後に、その週の人物・世界の場面を続けて再生する(二段再生)。
