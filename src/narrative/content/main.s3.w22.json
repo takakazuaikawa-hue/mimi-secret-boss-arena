@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s3.w22",
+  "kind": "opening",
+  "title": "百人目の署名",
+  "summary": "湯の中で、疑うのをやめた人が、最後にもう一度だけ疑う",
+  "ownership": {
+    "arcId": "main.stage3"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "街いちばん古い湯",
+    "assets": [
+      {
+        "id": "main.s3.w22.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-hot-spring-ryokan.png",
+        "alt": "古い湯屋の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s3.w22.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s3.w22.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.w22.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w22.node.line.001",
+      "lineId": "main.s3.w22.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "湯けむりの中に、その人は、本当に来た。街いちばん古い湯の、いちばん熱い浴槽の縁に、会社の室長が、律儀な姿勢で浸かっている。「……考えて、おきました」。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w22.node.line.002",
+      "lineId": "main.s3.w22.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "今日の用は、待つことだった。見えない私に会えるのは、湯の人たちだけ。だから名簿の最後の一枠は、湯で待つと決めていた。来るか来ないかは、あの人の帳面の話である。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w22.node.line.003",
+      "lineId": "main.s3.w22.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "室長は、湯の中で、ゆっくり話した。「私は——数えるのを、やめられない口です。この祭りが何回目か。この暦が何巡目か。数えて、数えて、疲れて。あるとき決めたんです。疑うのを、やめようと」。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w22.node.line.004",
+      "lineId": "main.s3.w22.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「同じ一年を、良い再演にする側に回れば、数は、ただの仕事になる。……そうやって、私は会社の人間になりました。長く、なりました」。湯気の向こうの背中は、三年よりは、ずっと重い年月の形をしていた。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w22.node.line.005",
+      "lineId": "main.s3.w22.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「あなたを見ていると、思い出す。数えるのが、怖くなかったころを。——去年の決勝は、良い興行だった。覚えていますよ。全部」。……やっぱり。「脇が締まった」の人である。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w22.node.line.006",
+      "lineId": "main.s3.w22.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私は、名簿を差し出した。言葉は、選ばなかった。「百人目を、お願いします」。室長は長いこと名簿を見て、手を拭いて、筆を取った。「——最後に、もう一度だけ、疑います」。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w22.node.line.007",
+      "lineId": "main.s3.w22.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "百の名前が、揃った。その瞬間の音を、私はたぶん、生涯忘れない。何も、鳴らなかったのだ。湯の音だけがして——帰り道、焼き餅屋のおばちゃんと、目が合った。「おや、ミミさん。今日は早いね」。見えて、いる。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w22.node.line.008",
+      "lineId": "main.s3.w22.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "夕方には、ポラリスさんが受付に来ていた。「当事者百名の連署は、封より強い。決まりです」。少しだけ、走って来た息だった。「裁きの日も、繰り上げられます。ご希望は」「祝いの支度がありますから——早いほうで」。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w22.node.line.009",
+      "lineId": "main.s3.w22.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "板の前で、常連たちが騒いでいた。「ミミさんの枠、動いたぞ!」「戻ってきたのか!」。……ただいま、です。倍率は、聞かないでおいた。",
+      "emotion": "comic"
+    },
+    {
+      "type": "choice",
+      "id": "main.s3.w22.node.choice.001",
+      "choices": [
+        {
+          "id": "main.s3.w22.choice.001",
+          "label": "百人へ、祝いの招待状を書く",
+          "result": "百枚の招待状を、夜なべで書いた。宛名は、湯で会った顔を思い出しながら、一枚ずつ。人魚さんの一枚は、防水の貝紙にした。ノノさんが横で袋詰めをしながら言う。「祝いの中身、まだ白紙ですけど、いいんですか」「席が埋まれば、中身は決まります」。興行の順序としては、正しいはずである。",
+          "intent": "名前をくれた全員に、席で返す",
+          "promise": "祝いの客席が固まる代わりに、寝る時間が一晩消える",
+          "memory": "貝紙の一枚を含む、百枚の招待状",
+          "tone": "heroic",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "goto": "main.s3.w22.node.end.001"
+        },
+        {
+          "id": "main.s3.w22.choice.002",
+          "label": "まず、街へ「ただいま」を配って回る",
+          "result": "見える身体で、街をもう一回り。「ただいま」を、焼き餅屋から順に配って歩いた。「おかえり!」「どこ行ってたんだい」「ちょっと、遠くに」。噓ではない。列の最後で、剣士さんが火酒を掲げた。「よう分からんが、めでたい日じゃな!」。よく分からなくて、めでたい。この街の得意技である。",
+          "intent": "戻った足で、街の空気を確かめる",
+          "promise": "街の熱が戻る代わりに、招待状は明日回しになる",
+          "memory": "「よう分からんが、めでたい日じゃな!」",
+          "tone": "pragmatic",
+          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "goto": "main.s3.w22.node.end.001"
+        }
+      ]
+    },
+    {
+      "type": "end",
+      "id": "main.s3.w22.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "3周目・週22(反転。百人目=室長。「最後に、もう一度だけ、疑います」。連署>封の様式で復元、裁きの日は週24へ繰り上げ(執り納めの日=年度末は柿落としの夜に転用)。Q=この街を引き受けるか / value=束 99→100・街 -→+(ただいま) / turn=行7(百が揃った音=無音、そして見えている) / hook=次に会う理由(中)/post-point / try=はい、そして(週20からTry切替: 3周目は週20で急へ) / game=律儀の続き(考えておきました→律儀な姿勢の入浴→筆の前の手拭き) / carry=湯への誘い(週17)・名簿99(週18)・室長だけ見えた(週21) / open=裁きの日の中身(答え=週24) / newterm=なし",
+    "legacyGeneratedIds": false
+  }
+}

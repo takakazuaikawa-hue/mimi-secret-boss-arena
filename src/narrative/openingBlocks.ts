@@ -58,6 +58,9 @@ import mainStageThreeWeek16Source from "./content/main.s3.w16.json";
 import mainStageThreeWeek17Source from "./content/main.s3.w17.json";
 import mainStageThreeWeek18Source from "./content/main.s3.w18.json";
 import mainStageThreeWeek19Source from "./content/main.s3.w19.json";
+import mainStageThreeWeek20Source from "./content/main.s3.w20.json";
+import mainStageThreeWeek21Source from "./content/main.s3.w21.json";
+import mainStageThreeWeek22Source from "./content/main.s3.w22.json";
 import mainStageOneWeek04Source from "./content/main.s1.w04.json";
 import mainStageOneWeek05Source from "./content/main.s1.w05.json";
 import mainStageOneWeek08Source from "./content/main.s1.w08.json";
@@ -147,6 +150,9 @@ export const mainStageThreeWeeklyBlocks = [
   mainStageThreeWeek17Source,
   mainStageThreeWeek18Source,
   mainStageThreeWeek19Source,
+  mainStageThreeWeek20Source,
+  mainStageThreeWeek21Source,
+  mainStageThreeWeek22Source,
 ].map((source) => narrativeEventBlockSchema.parse(source));
 
 // 週替わりメインの本体。末尾5つ(添字21〜25)は週1・2・3・6・7ぶん。

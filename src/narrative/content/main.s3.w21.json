@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s3.w21",
+  "kind": "opening",
+  "title": "見えない一週間",
+  "summary": "人の目は素通りするのに、街の習慣が私を覚えている",
+  "ownership": {
+    "arcId": "main.stage3"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 900,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "従業員食堂(まかない)",
+    "assets": [
+      {
+        "id": "main.s3.w21.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-employee-cafeteria-day-v1.png",
+        "alt": "従業員食堂の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s3.w21.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s3.w21.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.w21.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w21.node.line.001",
+      "lineId": "main.s3.w21.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "見えなくなって、最初の朝は、静かだった。まかないに降りると、私の席に、湯気の立つ椀が置いてある。いつも通りの、私のぶんが。おばちゃんには、私が見えない。見えないのに——手が、覚えているのだ。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w21.node.line.002",
+      "lineId": "main.s3.w21.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "今日の用は、見えないなりに、支度を続けることだ。裁きの日は近い。名簿の清書、祝いの帳面、勝ちの記録の綴じ直し。手は動く。手を止めたら、この静けさに負ける。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w21.node.line.003",
+      "lineId": "main.s3.w21.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "街に出ると、見えないことの、妙な景色が見えてきた。賭場の板に、私の枠がまだ残っている。「ミミさんの言い分、通るか通らぬか」。倍率は、今日も少しずつ動く。誰が賭けているのか、皆はもう覚えていないのに——名前だけが、消えていない。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w21.node.line.004",
+      "lineId": "main.s3.w21.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "焼き餅の列では、常連さんが首をかしげていた。「なんで俺、二枚買ったんだ?」。おまけの一枚を誰にあげるつもりだったのか、思い出せない顔である。……すみません。それ、たぶん私のぶんです。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w21.node.line.005",
+      "lineId": "main.s3.w21.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "記録室では、司書さん(来た口である)が、いつも通りに迎えてくれた。それから、閲覧札の棚を指す。「外しませんよ、ミミさんの札は。決まりに、外せとは書いてないので」。私の札は、今日も棚に挂かっている。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w21.node.line.006",
+      "lineId": "main.s3.w21.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "その隣に、ずいぶん古い札が一枚あるのに、初めて気づいた。木が飴色で、字が掠れている。「これは?」「さあ。私が来たときには、もう。——四百年、返しに来ない人が、いるんですよ」。……どこかで、聞いた話である。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w21.node.line.007",
+      "lineId": "main.s3.w21.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "夕方、涙が出そうになって、やめた。悲しいから、ではない。逆である。人の目は素通りするのに——席が、椀が、板の枠が、札が、私を覚えている。この街の習慣という習慣が、私の形に、凹んでいるのだ。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w21.node.line.008",
+      "lineId": "main.s3.w21.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "夜、祝いの帳面を開くと、覚えのない字が増えていた。仲間の字。ノノさんの字。大工さんの字。「舞台の寸法、決まりました」「幕の布、良いのが入ります」。見えない一週間のあいだも、祝いは、みんなの手で進んでいる。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w21.node.line.009",
+      "lineId": "main.s3.w21.line.009",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "帰り道の人混みで、一人だけ、私を避けて歩いた人がいた。避けた——ということは、見えている。振り向くと、街灯の下で、会社の室長が、小さく会釈をした。",
+      "emotion": "tension"
+    },
+    {
+      "type": "effect",
+      "id": "main.s3.w21.node.effect.001",
+      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+    },
+    {
+      "type": "end",
+      "id": "main.s3.w21.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "3周目・週21(世界の覚醒の山場。台詞でなく習慣で描く——椀・板の枠・閲覧札。四百年物の札の一拍=説明しない(答え=週26)。引き=室長だけが見えている=来た口の証明、告白なしで)。Q=この街を引き受けるか / value=孤独 -→+(習慣が覚えている) / turn=行7(街の習慣が私の形に凹んでいる) / hook=閃き(大)/post-point / try=いいえ、しかし(見えないが、忘れられていない) / game=見えない景色(動く倍率→二枚買った謎→外されない札) / carry=封(週20)・祝いの帳面 / open=四百年の札の主(答え=週26)・室長には見える(答え=週22) / newterm=なし",
+    "legacyGeneratedIds": false
+  }
+}
