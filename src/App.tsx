@@ -1795,10 +1795,17 @@ function WeekScreen({
         ? `新しい出会い 約${Math.round(previewRecruitment.chance * 100)}%`
         : "日常イベントが起こる";
   const scenePath = `/assets/ui/weekly-hub/${previewAction}.webp`;
+  // 三年目・見えない一週間。街の側からミミが見えないあいだ、
+  // 世界の色と賑わいだけが薄くなる(文字の説明は置かない)。
+  const unseenWeek = run.campaignStage === 3 && run.week === 21;
 
   return (
     <>
-    <main className={`week-hub week-hub--${previewAction}`}>
+    <main
+      className={`week-hub week-hub--${previewAction}${
+        unseenWeek ? " week-hub--unseen" : ""
+      }`}
+    >
       <AnimatePresence initial={false}>
         <motion.img
           key={scenePath}

@@ -15498,6 +15498,23 @@ h3 {
   border: 2px dashed rgba(214, 158, 46, 0.55);
 }
 
+/* 三年目・見えない一週間。街の色と賑わいだけが薄くなる */
+.week-hub--unseen .week-hub__scene {
+  filter: saturate(0.35) brightness(0.88);
+  transition: filter 0.6s ease;
+}
+.week-hub--unseen .week-hub__shade {
+  background: linear-gradient(
+    180deg,
+    rgba(18, 20, 32, 0.42),
+    rgba(18, 20, 32, 0.58)
+  );
+}
+.week-hub--unseen .week-hub__sparkles i {
+  animation-play-state: paused;
+  opacity: 0.18;
+}
+
 /* 2周目エンディングの配役スタッフロール(本人/代役) */
 .ending-castroll {
   display: grid;
