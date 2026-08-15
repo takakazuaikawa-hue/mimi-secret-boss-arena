@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s3.eve.wolf-nine",
+  "kind": "opening",
+  "title": "前夜、九つ目の誘い",
+  "summary": "柿落とし前夜の夜店を八種目。九つ目だけ、挑戦状ではなかった",
+  "ownership": {
+    "arcId": "main.stage3"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 890,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "前夜祭の夜店通り",
+    "assets": [
+      {
+        "id": "main.s3.eve.wolf-nine.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-casino-cafe-night.png",
+        "alt": "前夜祭の夜の街の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s3.eve.wolf-nine.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s3.eve.wolf-nine.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.eve.wolf-nine.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.wolf-nine.node.line.001",
+      "lineId": "main.s3.eve.wolf-nine.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "前夜祭を、九番の狼と回ることになった。誘われ方が、彼らしかった。夕方、うちの郵便受けに挑戦状が八通。「夜店・全八種目。受けるか」。……受けます。受けますけど、八通は多い。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.wolf-nine.node.line.002",
+      "lineId": "main.s3.eve.wolf-nine.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "一種目め、射的。二種目め、型抜き。三種目め、綿飴の早食い(彼の圧勝)。焼き餅屋のおばちゃんが囃す。「今夜は決闘かい!」「祭りです!」。どっちも、半分正解である。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.wolf-nine.node.line.003",
+      "lineId": "main.s3.eve.wolf-nine.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "彼は、勝負のたびに律儀に礼をする。去年まで、九戦目の結果は先に決められていた人だ。「結果の分からない勝負は、ぜんぶ、ごちそうだ」。だから今夜の八種目は、八皿の宴なのだった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.wolf-nine.node.line.004",
+      "lineId": "main.s3.eve.wolf-nine.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "四つ勝って、四つ負けた。通算、四対四。夜店の通りの端まで来て、私は気づいた。「九種目めは?」。挑戦状は、八通しか来ていない。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.wolf-nine.node.line.005",
+      "lineId": "main.s3.eve.wolf-nine.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "狼は、耳の後ろを掻いた。強い人が、勝負以外で見せる仕草だった。「九つ目は……挑戦状に、書けなかった」。書けない種目が、あるんですか。「ある。勝ち負けが、無いやつだ」。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.wolf-nine.node.line.006",
+      "lineId": "main.s3.eve.wolf-nine.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "彼は、まっすぐ立ち直して、言った。「ミミ。明日の柿落としが終わったら——次の祭りも、俺と回ってくれ」。……九つ目は、挑戦ではなく、約束だった。初めて、名前で呼ばれた夜に。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.wolf-nine.node.line.007",
+      "lineId": "main.s3.eve.wolf-nine.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "返事は、彼の流儀で返すことにした。人差し指を立てて、宣言する。「受けて立ちます。ただし、次の祭りの一種目めは、私が選びます」。狼の尻尾が、正直に一回転した。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.wolf-nine.node.line.008",
+      "lineId": "main.s3.eve.wolf-nine.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "帰り道、彼は九通目の封筒をくれた。中身は、白紙だった。「次の挑戦状は、二人で書く」。……白紙の紙が、こんなに嬉しい夜も、ある。",
+      "emotion": "tender"
+    },
+    {
+      "type": "effect",
+      "id": "main.s3.eve.wolf-nine.node.effect.001",
+      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+    },
+    {
+      "type": "end",
+      "id": "main.s3.eve.wolf-nine.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "3周目・本命前夜(ヴォルフ・ナイン)。九通の挑戦状の様式美(meet「宛先不明、八通」の回収)。九つ目=勝ち負けの無い約束。呼び方の一段=名前呼び。白紙の九通目=続きは二人で書く(シーズン主題との共鳴)。",
+    "legacyGeneratedIds": false
+  }
+}

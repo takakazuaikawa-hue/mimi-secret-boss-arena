@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s2.eve.sazanami",
+  "kind": "opening",
+  "title": "前夜、採点不能",
+  "summary": "何でも採点する泡文字が、明日だけは点を付けない",
+  "ownership": {
+    "arcId": "main.stage2"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 890,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "前夜祭の夜店通り(水槽の散歩)",
+    "assets": [
+      {
+        "id": "main.s2.eve.sazanami.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-casino-cafe-night.png",
+        "alt": "前夜祭の夜の街の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s2.eve.sazanami.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s2.eve.sazanami.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.eve.sazanami.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.sazanami.node.line.001",
+      "lineId": "main.s2.eve.sazanami.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "前夜祭を、さざなみと回ることになった。さざなみは、携帯水槽で歩く。水槽の中から、泡の文字で会話する人である。屋台を通るたび、泡がぽこぽこと立つ。「たこ焼き 六十八点」「りんご飴 七十一点」。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.sazanami.node.line.002",
+      "lineId": "main.s2.eve.sazanami.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "採点は、彼女の愛情表現である。辛口なのは、ちゃんと見ている証拠。ちなみに私の去年の弁当は四十二点だった。今年は六十点まで上がった。伸び代を褒める流儀なのだ、と信じている。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.sazanami.node.line.003",
+      "lineId": "main.s2.eve.sazanami.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "金魚すくいの屋台で、恒例の対決をした。私のポイは三秒で破れ、彼女は水槽の中から視線だけで金魚を誘導して、おじさんに出禁を言い渡された。「水の民の反則です」。ごもっともである。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.sazanami.node.line.004",
+      "lineId": "main.s2.eve.sazanami.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "通りの外れの噴水に、水槽を浸けて、休憩にした。夜の水面が、祭りの灯りを砕いて揺れる。泡が、静かに立った。「あした の しあい こわい?」。……少し、と答えた。水の人に、嘘は通じない。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.sazanami.node.line.005",
+      "lineId": "main.s2.eve.sazanami.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "泡が、ゆっくり続けた。「れきだい おうじゃ みんな みた」。四百年、海からこの街の興行を見てきた人である。「かんぺき だった。てんすう つけやすかった」。完璧は、採点しやすい。……なるほど。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.sazanami.node.line.006",
+      "lineId": "main.s2.eve.sazanami.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「でも ミミ の あした は」。泡が、一度ぜんぶ消えて、それから、大きな一文が浮かんだ。「さいてん ふのう」。……不能? 「みたこと ない ものは てん が つけられない」。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.sazanami.node.line.007",
+      "lineId": "main.s2.eve.sazanami.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "何でも採点する人の、採点不能。それは、この人の辞書で、いちばん上等の点数である。泡が照れたように小さく続けた。「よんひゃくねん で はじめて」。……四百年ぶんの、白紙の採点表をもらってしまった。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.sazanami.node.line.008",
+      "lineId": "main.s2.eve.sazanami.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "帰り道、水槽の水面に、最後の泡が立った。「あした うみ から おうえん する。なみ が たかかったら それ わたし」。……明日の会場、少し、潮の匂いがするかもしれない。",
+      "emotion": "tender"
+    },
+    {
+      "type": "effect",
+      "id": "main.s2.eve.sazanami.node.effect.001",
+      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+    },
+    {
+      "type": "end",
+      "id": "main.s2.eve.sazanami.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "2周目・本命前夜(さざなみ)。採点の様式美(meet四十二点→六十点)+金魚すくい対決(bond)の天丼。「採点不能」=見たことのないもの=新作への最高評価(決勝の主題と共鳴)。",
+    "legacyGeneratedIds": false
+  }
+}

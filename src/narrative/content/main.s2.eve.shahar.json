@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s2.eve.shahar",
+  "kind": "opening",
+  "title": "前夜、雲の上の三分間",
+  "summary": "鱗のエレベーターで夜空の上へ。明日の空の、作り方",
+  "ownership": {
+    "arcId": "main.stage2"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 890,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "夜の展望席(屋上)",
+    "assets": [
+      {
+        "id": "main.s2.eve.shahar.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-observation-deck-night.png",
+        "alt": "夜の展望席の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s2.eve.shahar.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s2.eve.shahar.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.eve.shahar.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.shahar.node.line.001",
+      "lineId": "main.s2.eve.shahar.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "待ち合わせは、屋上だった。シャハルの待ち合わせは、いつも高い場所である。着くと、銀白の鱗が一枚、床に置いてあった。「乗って」。……この鱗、エレベーターなのである。世界でいちばん贅沢な。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.shahar.node.line.002",
+      "lineId": "main.s2.eve.shahar.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "鱗は、音もなく夜空を昇った。祭りの提灯が、下でひと繋がりの光の川になる。雲を一枚抜けたところで、止まった。ここが、彼女の言う「良い席」である。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.shahar.node.line.003",
+      "lineId": "main.s2.eve.shahar.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "古竜の本体は、雲の向こうで、静かに息をしていた。息のたび、雲の形が変わる。「身じろぎ一つで、三県の天気が変わるんですよね」と言ったら、少し得意げな気配がした。「今夜は、行儀よくしてる」。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.shahar.node.line.004",
+      "lineId": "main.s2.eve.shahar.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「明日の空の話を、しに来た」。シャハルは、雲の海を指した。「あの雲を、朝までに、南へ動かす。そうすると、決勝の刻限に、会場の真上だけ、晴れる」。……天気の、仕込みである。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.shahar.node.line.005",
+      "lineId": "main.s2.eve.shahar.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「観客が、空を見上げる興行にしたいの。あなたの明日は——空まで含めて、新作だから」。四百年生きた竜が、一晩かけて、たった三分の晴れ間を作る。規模のおかしい応援を、私は今、受けている。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.shahar.node.line.006",
+      "lineId": "main.s2.eve.shahar.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "お礼の言葉を探していたら、先に聞かれた。「ミミ。怖い?」。名前の呼び方が、風のように軽かった。……少し。「ん。私も、初めて人前で飛んだ日は、怖かった」。四百年前の話を、昨日のことみたいに言う。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.shahar.node.line.007",
+      "lineId": "main.s2.eve.shahar.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「でも、飛んだら、分かった。見てる人がいると、空は、落ちる場所じゃなくて、舞台になる」。だから明日、と彼女は言った。「空を見上げる暇があったら、それは私の合図。——胸を張って」。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.shahar.node.line.008",
+      "lineId": "main.s2.eve.shahar.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "鱗が、ゆっくり降りていく。光の川が、近づいてくる。降り立つ寸前、頬に、あたたかい風が一度だけ吹いた。竜の、おやすみの言い方である。",
+      "emotion": "tender"
+    },
+    {
+      "type": "effect",
+      "id": "main.s2.eve.shahar.node.effect.001",
+      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+    },
+    {
+      "type": "end",
+      "id": "main.s2.eve.shahar.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "2周目・本命前夜(シャハル)。鱗のエレベーター(bond)+天気を変える身じろぎ(meet)の集大成=決勝の刻限だけ晴らす仕込み。空=舞台、の四百年の経験談。呼び方の一段=名前呼び。",
+    "legacyGeneratedIds": false
+  }
+}

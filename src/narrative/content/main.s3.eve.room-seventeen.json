@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s3.eve.room-seventeen",
+  "kind": "opening",
+  "title": "前夜、今夜だけの特等席",
+  "summary": "祭りの喧騒の裏に、扉が一枚。部屋からの、初めての招待",
+  "ownership": {
+    "arcId": "main.stage3"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 890,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "十七号室の扉の前(前夜)",
+    "assets": [
+      {
+        "id": "main.s3.eve.room-seventeen.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-employee-corridor-seventeenth-door-v1.png",
+        "alt": "十七号室の扉のある廊下の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s3.eve.room-seventeen.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s3.eve.room-seventeen.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.eve.room-seventeen.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.room-seventeen.node.line.001",
+      "lineId": "main.s3.eve.room-seventeen.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "前夜祭の帰り、廊下に、あるはずのない扉があった。真鍮の「17」の札が、提灯の色に照れている。……祭りの晩に、向こうから出てくるのは、珍しい。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.room-seventeen.node.line.002",
+      "lineId": "main.s3.eve.room-seventeen.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ノックの前に、扉が開いた。中は——百階建てのもてなしでは、なかった。小さな部屋に、椅子が一脚。窓が一枚。それだけである。窓の外に、前夜祭の灯りが一望で広がっていた。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.room-seventeen.node.line.003",
+      "lineId": "main.s3.eve.room-seventeen.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "机の上に、部屋の字で置き手紙があった。「今夜だけの、特等席です。祭りは、歩いて疲れるものでもあるので」。……一日中、祝いの支度で歩き回っていたのを、見られていたらしい。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.room-seventeen.node.line.004",
+      "lineId": "main.s3.eve.room-seventeen.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "椅子に座ると、部屋がかすかに、良い温度になった。出口の扉は——開けっぱなしである。閉めましょうか、と聞いたら、壁の木目が少し揺れた。「開けておくのが、うちの自慢なので」。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.room-seventeen.node.line.005",
+      "lineId": "main.s3.eve.room-seventeen.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "去年まで、出口を取り上げられていた部屋だ。誰かを閉じ込めるしかなかった部屋が、いまは、開けっぱなしの扉を自慢にしている。窓の外で、花火が一輪、試し打ちで上がった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.room-seventeen.node.line.006",
+      "lineId": "main.s3.eve.room-seventeen.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「ミミさん」。部屋の声が、窓の桟をこつんと鳴らした。「明日、新しい闘技場が開きます。……私は、古い建物です。新しい子に、お客を取られてしまうでしょうか」。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.room-seventeen.node.line.007",
+      "lineId": "main.s3.eve.room-seventeen.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "即答した。「取られません。だって私、疲れた日は、結局ここへ来ます」。壁の木目が、今度は大きく波打った。部屋の照れ方としては、最大級である。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.room-seventeen.node.line.008",
+      "lineId": "main.s3.eve.room-seventeen.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "帰りぎわ、扉の外から「また来ます」の札を掛けた。いつもの儀式である。札の裏に、今夜は部屋の字が足されていた。「いつでも、どうぞ。あなたの部屋より」。……宛名の無い手紙より、ずっと強い一行だった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "effect",
+      "id": "main.s3.eve.room-seventeen.node.effect.001",
+      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+    },
+    {
+      "type": "end",
+      "id": "main.s3.eve.room-seventeen.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "3周目・本命前夜(十七号室)。百階建てのもてなし(meet)→椅子一脚と窓一枚への成長。開けっぱなしの扉=出口の自由(2周目赤線四本目)の私的な誇り。「また来ます」の札(epilogue)の返礼。新旧の建物の嫉妬をコメディ一拍で。",
+    "legacyGeneratedIds": false
+  }
+}

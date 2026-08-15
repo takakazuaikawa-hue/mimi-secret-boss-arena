@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s3.eve.mumyo",
+  "kind": "opening",
+  "title": "前夜、名の無い人の名前",
+  "summary": "名を売られていた剣と、名前を取り戻した人の、静かな夜",
+  "ownership": {
+    "arcId": "main.stage3"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 890,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "夜の展望席(前夜)",
+    "assets": [
+      {
+        "id": "main.s3.eve.mumyo.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-observation-deck-night.png",
+        "alt": "夜の展望席の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s3.eve.mumyo.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s3.eve.mumyo.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.eve.mumyo.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.mumyo.node.line.001",
+      "lineId": "main.s3.eve.mumyo.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "祭りの音から少し離れた展望席に、その人は立っていた。無銘である。剣は、持っていない。散歩の日は持たないと決めた人の、決めたとおりの手ぶらだった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.mumyo.node.line.002",
+      "lineId": "main.s3.eve.mumyo.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "並んで、祭りの灯りを見下ろした。急かさないのが、この人と過ごす作法である。沈黙が三つぶん過ぎて、先に口を開いたのは、珍しく向こうだった。「今日、裁きの場で、あなたの欄が戻るのを見た」。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.mumyo.node.line.003",
+      "lineId": "main.s3.eve.mumyo.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「私の欄も、去年、あなたが取り戻した。名入れ販売——私の名を、値札にして売る決まりを、あなたが壊した」。淡々とした声だ。淡々としたまま、彼の言葉は、いつも一番深いところを通る。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.mumyo.node.line.004",
+      "lineId": "main.s3.eve.mumyo.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ずっと、聞きたかったことを聞いてみた。「名前、新しく持ちたいと、思ったことはありますか」。売られない名前を、自分で選び直す自由も、いまの彼にはあるはずだった。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.mumyo.node.line.005",
+      "lineId": "main.s3.eve.mumyo.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "無銘は、少し考えて、首を振った。「無銘のままでいい。……銘が無い、ではなく。無銘、という名を、私はもう、持っている」。誰かに付けられた空白が、自分で選んだ名前に変わった瞬間だった。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.mumyo.node.line.006",
+      "lineId": "main.s3.eve.mumyo.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「それにな、ミミ」。名前で、呼ばれた。この人の声が、私の名を通ると、名前は少しだけ重くなる。良い重さである。「名は、呼ぶ者がいて、初めて名になる。あなたが呼ぶなら、無銘は良い名だ」。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.mumyo.node.line.007",
+      "lineId": "main.s3.eve.mumyo.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "明日の大取りで、私は、四百年呼ばれなかった名前を一つ、呼びに行く。その話をしたら、無銘は深く頷いた。「良い演目だ。……呼ばれなかった名の重さなら、私が、いちばん知っている」。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.mumyo.node.line.008",
+      "lineId": "main.s3.eve.mumyo.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "帰りぎわ、彼は夜空に向かって、居合の形だけを一度、抜かずに払った。「明日のぶんの、素振りだ」。……剣を持たない日の素振りは、祈りに、よく似ていた。",
+      "emotion": "tender"
+    },
+    {
+      "type": "effect",
+      "id": "main.s3.eve.mumyo.node.effect.001",
+      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+    },
+    {
+      "type": "end",
+      "id": "main.s3.eve.mumyo.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "3周目・本命前夜(無銘)。名入れ販売(2周目赤線五本目)の被害者と、名前を取り戻した人の対話。「無銘という名を持っている」=空白を選んだ名に変える(シーズン主題・大取りの名前回収と最強の共鳴)。呼び方の一段=名前呼び。抜かない素振り=bond「剣を持たずに散歩」の系譜。",
+    "legacyGeneratedIds": false
+  }
+}

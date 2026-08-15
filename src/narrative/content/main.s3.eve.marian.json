@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s3.eve.marian",
+  "kind": "opening",
+  "title": "前夜、治さない手",
+  "summary": "冷えた指先を、治す力で温めない人",
+  "ownership": {
+    "arcId": "main.stage3"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 890,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "前夜祭の夜店通り(外れのベンチ)",
+    "assets": [
+      {
+        "id": "main.s3.eve.marian.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-casino-cafe-night.png",
+        "alt": "前夜祭の夜の街の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s3.eve.marian.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s3.eve.marian.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.eve.marian.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.marian.node.line.001",
+      "lineId": "main.s3.eve.marian.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "前夜祭を、救護のマリアンと回ることになった。回る、と言っても、彼女の歩みはゆっくりだ。屋台のたびに、火傷しそうな子どもと、転びそうな酔客を、目だけで数えている。癖である。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.marian.node.line.002",
+      "lineId": "main.s3.eve.marian.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "去年まで、休むことを許されなかった人だ。今年の彼女は、休止札を胸に下げて、堂々と祭りを歩いている。「今夜は、非番です」。三回目に言うときが、いちばん嬉しそうだった。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.marian.node.line.003",
+      "lineId": "main.s3.eve.marian.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "りんご飴を半分こして、通りの外れのベンチに座った。夜風が、思ったより冷たい。明日の柿落としの話をするうち、私の指先が、少しずつ冷えていった。緊張は、いつも指から来る。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.marian.node.line.004",
+      "lineId": "main.s3.eve.marian.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "マリアンは、めざとい。「手、冷えてますね」。彼女の手のひらが、光りかけて——止まった。一度。二度。三度目で、光は完全に消えた。治さない練習の、成果である。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.marian.node.line.005",
+      "lineId": "main.s3.eve.marian.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "代わりに、彼女はただ、私の手を両手で包んだ。「緊張は、怪我じゃないので。治しません」。……ぬくもりだけが、ゆっくり移ってくる。力を使えば一瞬のことを、彼女はわざわざ、時間をかけてやる。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.marian.node.line.006",
+      "lineId": "main.s3.eve.marian.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「治すとね、ミミ。無かったことに、なっちゃうんです」。初めて、名前だけで呼ばれた。「明日の緊張は、無かったことにしたくないでしょう? 大事な日の、証拠だから」。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.marian.node.line.007",
+      "lineId": "main.s3.eve.marian.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "はい、と返事をしたら、少し声が湿った。それも治さないでもらえるのが、今夜は、ありがたい。二人ぶんの息が白くなって、夜店の灯りの中へ混ざっていく。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.marian.node.line.008",
+      "lineId": "main.s3.eve.marian.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "別れぎわ、彼女は休止札を裏返して見せた。裏に、小さな字。「明日は、特等席で観ます」。……救護席ではなく、特等席。それが、どれだけ大きな進歩か、私は知っている。",
+      "emotion": "tender"
+    },
+    {
+      "type": "effect",
+      "id": "main.s3.eve.marian.node.effect.001",
+      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+    },
+    {
+      "type": "end",
+      "id": "main.s3.eve.marian.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "3周目・本命前夜(マリアン)。bond「治さない練習」の三回止めの回収+休止札(2周目の赤線二本目)の私的な使い方。治さない=無かったことにしない、が主題。呼び方の一段=名前だけで呼ぶ。",
+    "legacyGeneratedIds": false
+  }
+}

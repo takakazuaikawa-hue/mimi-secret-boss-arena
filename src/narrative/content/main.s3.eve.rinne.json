@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s3.eve.rinne",
+  "kind": "opening",
+  "title": "前夜、賭けない人",
+  "summary": "百発百中だった人が、夜店で一度も当てずに、一つだけ口にした賭け",
+  "ownership": {
+    "arcId": "main.stage3"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 890,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "前夜祭の夜店通り(射的の屋台)",
+    "assets": [
+      {
+        "id": "main.s3.eve.rinne.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-casino-cafe-night.png",
+        "alt": "前夜祭の夜の街の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s3.eve.rinne.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s3.eve.rinne.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.eve.rinne.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.rinne.node.line.001",
+      "lineId": "main.s3.eve.rinne.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "前夜祭を、リンネと回ることになった。待ち合わせの目印は、「いちばん行列の短い屋台」。彼女がいると、賭け事の屋台は商売にならないからである。的中固定を、壊した側と壊された側の、両方を知る人だ。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.rinne.node.line.002",
+      "lineId": "main.s3.eve.rinne.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "射的の屋台で、彼女はコルクを九発、撃った。九発とも、外した。景品の兎の置物の、耳のすれすれを、九回。屋台のおじさんが唸る。「あんた、外すほうが難しいだろ、それ」。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.rinne.node.line.003",
+      "lineId": "main.s3.eve.rinne.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「外れる自由って、練習が要るんですよ」。リンネは、空の的を眺めて笑った。当たりしか引けなかった人の、これは、リハビリなのだ。九発の外れは、九発ぶんの自由である。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.rinne.node.line.004",
+      "lineId": "main.s3.eve.rinne.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "十発目を、彼女は私に握らせた。「ミミさんの番」。撃った。外れた。私のは、練習でなく実力である。二人で、変な清々しさで笑った。景品は、取れていないのに。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.rinne.node.line.005",
+      "lineId": "main.s3.eve.rinne.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "帰り道、彼女は空のコインを一枚、指で回した。裏も表も無い、あの音のいいコインである。「昔は、これで全部決めてました。当たると分かってる賭けだけ、してたので」。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.rinne.node.line.006",
+      "lineId": "main.s3.eve.rinne.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「でも、今夜は、当たるか分からない賭けを一つだけ、します」。コインが、夜空で一回転した。「ミミ。明日の柿落としの後も、あなたの隣は、面白いほうに賭けます」。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.rinne.node.line.007",
+      "lineId": "main.s3.eve.rinne.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "受け止めたコインを、彼女は開かなかった。「結果は、見ません。外れても、賭け直すので」。……賭博師の口説き文句としては、たぶん、世界一誠実である。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.rinne.node.line.008",
+      "lineId": "main.s3.eve.rinne.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "別れぎわ、屋台のおじさんが走ってきて、兎の置物を押し付けていった。「九回も耳を撫でられたら、もうあんたらのもんだよ」。……当てずに景品を取る人の隣に、いると、こうなる。",
+      "emotion": "comic"
+    },
+    {
+      "type": "effect",
+      "id": "main.s3.eve.rinne.node.effect.001",
+      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+    },
+    {
+      "type": "end",
+      "id": "main.s3.eve.rinne.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "3周目・本命前夜(リンネ)。bond「当てない射的」の様式の続き+外れる自由(2周目赤線三本目)のリハビリとしての外し。空のコイン(meet)の再登場。賭けない人の一つだけの賭け=結果を見ない賭け。呼び方の一段=名前呼び。",
+    "legacyGeneratedIds": false
+  }
+}

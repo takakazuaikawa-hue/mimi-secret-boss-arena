@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s2.eve.amara",
+  "kind": "opening",
+  "title": "前夜、判決の出ない法廷",
+  "summary": "路上のチョーク法廷で、明日の決勝が審理される",
+  "ownership": {
+    "arcId": "main.stage2"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 890,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "前夜祭の夜店通り(石畳の広場)",
+    "assets": [
+      {
+        "id": "main.s2.eve.amara.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-casino-cafe-night.png",
+        "alt": "前夜祭の夜の街の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s2.eve.amara.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s2.eve.amara.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.eve.amara.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.amara.node.line.001",
+      "lineId": "main.s2.eve.amara.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "前夜祭を、アマラと回ることになった。回り始めて三分で、石畳に白いチョークの線が引かれた。「開廷します」。……祭りの真ん中で、路上法廷である。この人のデートは、だいたい裁判になる。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.amara.node.line.002",
+      "lineId": "main.s2.eve.amara.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "本日の被告は、「明日の決勝の緊張」。原告は、私。傍聴席は、りんご飴を持った通行人の皆さん。裁判長のチョークが、慣れた手つきで証言台の四角を描いた。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.amara.node.line.003",
+      "lineId": "main.s2.eve.amara.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「証人ミミさん。明日の相手を、述べてください」。四百年の歴代王者の、全盛期の再現です。「怖いですか」。……はい。正直に言うと、傍聴席から「わかるよ!」と声が飛んだ。良い法廷である。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.amara.node.line.004",
+      "lineId": "main.s2.eve.amara.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "アマラは、重々しく頷いて、チョークで大きく書いた。「証拠一。この人は、怖くても出る」。証拠二、九つの封蝋。証拠三、赤線五本。……私の一年が、石畳の上に、証拠品として並んでいく。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.amara.node.line.005",
+      "lineId": "main.s2.eve.amara.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「では、判決」。傍聴席が、静まった。アマラはチョークを置いて、初めて裁判長の顔をやめた。「——判決は、出しません。続きが見たいので」。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.amara.node.line.006",
+      "lineId": "main.s2.eve.amara.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "彼女は昔、裁く側として、たくさんの終わりを言い渡してきた人だ。その人が、終わりを言い渡さない練習をしている。「ミミさんの明日は、判決より、続きのほうが面白いから」。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.amara.node.line.007",
+      "lineId": "main.s2.eve.amara.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "閉廷の代わりに、二人でチョークの線を消して回った。消しながら、アマラが小声で言う。「一つだけ、先に言い渡しておきます。明日、何が起きても——両者勝訴。あなたと、あなたの一年に」。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.amara.node.line.008",
+      "lineId": "main.s2.eve.amara.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "帰り道、手のひらにチョークの粉が残っていた。白い粉を、払わずに帰った。今夜の判決文の、かけらである。",
+      "emotion": "tender"
+    },
+    {
+      "type": "effect",
+      "id": "main.s2.eve.amara.node.effect.001",
+      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+    },
+    {
+      "type": "end",
+      "id": "main.s2.eve.amara.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "2周目・本命前夜(アマラ)。落書き裁判(epilogue)+両者勝訴(bond)の様式の集大成。判決を出さない=続きが見たい、が彼女の成長。証拠品=2周目の歩み(封蝋・赤線)。",
+    "legacyGeneratedIds": false
+  }
+}

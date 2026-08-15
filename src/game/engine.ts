@@ -17,7 +17,9 @@ import {
   legacyOpeningNarrativeBlockById,
   mainStageOneEveBlocks,
   mainStageOneWeeklyBlocks,
+  mainStageThreeEveBlocks,
   mainStageThreeWeeklyBlocks,
+  mainStageTwoEveBlocks,
   mainStageTwoWeeklyBlocks,
   openingHotSpringBlock,
   openingOwnershipBlock,
@@ -27,7 +29,7 @@ import {
   resolveNarrativeBlock,
   weeklyEventFromNarrativeBlock,
 } from "../narrative/runtime";
-import { asEventId } from "../narrative/schema";
+import { asEventId, type NarrativeEventBlock } from "../narrative/schema";
 import { legacyWorldNarrativeBlockById } from "../narrative/worldBlocks";
 import type {
   CarriedAllyState,
@@ -1277,13 +1279,24 @@ export const maybeCreateLiberationFollowup = (
 // 選んだ相手との前夜シーン(mainStageOneEveBlocks)へ続く。一度きり(once-per-run)。
 // 現状は第一勤務週(1周目)の週25にだけ固定する。通常の週次選択(selectWeeklyEvent)
 // からは発火しない(mainStoryEpisodes に載せていないため)。
-const HONMEI_SELECT_SCENE_ID = "main.s1.honmei-select";
+const honmeiSelectSceneId = (stage: number) => `main.s${stage}.honmei-select`;
 const HONMEI_WEEK = 25;
+
+// 区分ごとの前夜シーン台帳。週25の本命選択から連鎖再生する。
+const honmeiEveBlocksByStage: ReadonlyMap<
+  number,
+  ReadonlyMap<string, NarrativeEventBlock>
+> = new Map([
+  [1, mainStageOneEveBlocks],
+  [2, mainStageTwoEveBlocks],
+  [3, mainStageThreeEveBlocks],
+]);
 
 const buildHonmeiSelectScene = (
   candidateIds: readonly string[],
+  stage: number,
 ): CharacterScene => ({
-  id: HONMEI_SELECT_SCENE_ID,
+  id: honmeiSelectSceneId(stage),
   title: "前夜祭、誰と回る?",
   location: "前夜祭の夜店通り",
   actions: ["work", "play", "rest", "search"],
@@ -1309,11 +1322,13 @@ const buildHonmeiSelectScene = (
 
 export const maybeCreateHonmeiFollowup = (source: RunState): RunState => {
   if (source.currentEvent) return source;
-  if ((source.campaignStage ?? 1) !== 1) return source;
   if (source.week !== HONMEI_WEEK) return source;
+  const stage = source.campaignStage ?? 1;
+  const eveBlocks = honmeiEveBlocksByStage.get(stage);
+  if (!eveBlocks) return source;
 
   if (source.honmeiFighterId) {
-    const eveBlock = mainStageOneEveBlocks.get(source.honmeiFighterId);
+    const eveBlock = eveBlocks.get(source.honmeiFighterId);
     if (!eveBlock || source.eventHistory.includes(eveBlock.id)) return source;
     return {
       ...source,
@@ -1326,7 +1341,7 @@ export const maybeCreateHonmeiFollowup = (source: RunState): RunState => {
     };
   }
 
-  if (source.eventHistory.includes(HONMEI_SELECT_SCENE_ID)) return source;
+  if (source.eventHistory.includes(honmeiSelectSceneId(stage))) return source;
 
   const stageDefinition = campaignStages[(source.campaignStage ?? 1) - 1];
   const candidateIds = (stageDefinition?.mainFighterIds ?? []).filter(
@@ -1336,7 +1351,7 @@ export const maybeCreateHonmeiFollowup = (source: RunState): RunState => {
 
   return {
     ...source,
-    currentEvent: weeklyEvent(buildHonmeiSelectScene(candidateIds), "work"),
+    currentEvent: weeklyEvent(buildHonmeiSelectScene(candidateIds, stage), "work"),
   };
 };
 

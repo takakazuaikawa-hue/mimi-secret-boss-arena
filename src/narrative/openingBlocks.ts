@@ -65,6 +65,16 @@ import mainStageThreeWeek23Source from "./content/main.s3.w23.json";
 import mainStageThreeWeek24Source from "./content/main.s3.w24.json";
 import mainStageThreeWeek25Source from "./content/main.s3.w25.json";
 import mainStageThreeWeek26Source from "./content/main.s3.w26.json";
+import mainStageTwoEveAmaraSource from "./content/main.s2.eve.amara.json";
+import mainStageTwoEveNightEaterSource from "./content/main.s2.eve.night-eater.json";
+import mainStageTwoEveShaharSource from "./content/main.s2.eve.shahar.json";
+import mainStageTwoEveSazanamiSource from "./content/main.s2.eve.sazanami.json";
+import mainStageTwoEveCassimBellSource from "./content/main.s2.eve.cassim-bell.json";
+import mainStageThreeEveWolfNineSource from "./content/main.s3.eve.wolf-nine.json";
+import mainStageThreeEveMarianSource from "./content/main.s3.eve.marian.json";
+import mainStageThreeEveRoomSeventeenSource from "./content/main.s3.eve.room-seventeen.json";
+import mainStageThreeEveRinneSource from "./content/main.s3.eve.rinne.json";
+import mainStageThreeEveMumyoSource from "./content/main.s3.eve.mumyo.json";
 import mainStageOneWeek04Source from "./content/main.s1.w04.json";
 import mainStageOneWeek05Source from "./content/main.s1.w05.json";
 import mainStageOneWeek08Source from "./content/main.s1.w08.json";
@@ -208,6 +218,33 @@ export const mainStageOneEveBlocks = new Map(
   ]),
 );
 
+// 二・三区分の本命前夜シーン(週25の本命選択から連鎖再生)。人物IDで引く。
+export const mainStageTwoEveBlocks = new Map(
+  [
+    ["amara", mainStageTwoEveAmaraSource],
+    ["night-eater", mainStageTwoEveNightEaterSource],
+    ["shahar", mainStageTwoEveShaharSource],
+    ["sazanami", mainStageTwoEveSazanamiSource],
+    ["cassim-bell", mainStageTwoEveCassimBellSource],
+  ].map(([fighterId, source]) => [
+    fighterId as string,
+    narrativeEventBlockSchema.parse(source),
+  ]),
+);
+
+export const mainStageThreeEveBlocks = new Map(
+  [
+    ["wolf-nine", mainStageThreeEveWolfNineSource],
+    ["marian", mainStageThreeEveMarianSource],
+    ["room-seventeen", mainStageThreeEveRoomSeventeenSource],
+    ["rinne", mainStageThreeEveRinneSource],
+    ["mumyo", mainStageThreeEveMumyoSource],
+  ].map(([fighterId, source]) => [
+    fighterId as string,
+    narrativeEventBlockSchema.parse(source),
+  ]),
+);
+
 export const openingOwnershipBlock = narrativeEventBlockSchema.parse(
   openingOwnershipSource,
 );
@@ -222,7 +259,9 @@ export const legacyOpeningNarrativeBlocks: NarrativeEventBlock[] = [
   ...mainStageOneWeeklyBlocks,
   ...mainStageOneEveBlocks.values(),
   ...mainStageTwoWeeklyBlocks,
+  ...mainStageTwoEveBlocks.values(),
   ...mainStageThreeWeeklyBlocks,
+  ...mainStageThreeEveBlocks.values(),
 ];
 
 export const legacyOpeningNarrativeBlockById = new Map(

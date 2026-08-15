@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "id": "main.s2.eve.cassim-bell",
+  "kind": "opening",
+  "title": "前夜、残り一分",
+  "summary": "十五分の休止の、最後の一分の使い道",
+  "ownership": {
+    "arcId": "main.stage2"
+  },
+  "trigger": {
+    "actions": ["work", "play", "rest", "search"],
+    "when": { "all": [], "any": [], "none": [] },
+    "repeat": { "mode": "once-per-run" },
+    "priority": 890,
+    "weight": 1
+  },
+  "presentation": {
+    "location": "無限遺失物保管庫(夜)",
+    "assets": [
+      {
+        "id": "main.s2.eve.cassim-bell.asset.background.001",
+        "kind": "background",
+        "path": "/assets/story/bg-lost-property-counter-v1.png",
+        "alt": "遺失物窓口の背景"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "type": "direction",
+      "id": "main.s2.eve.cassim-bell.node.direction.001",
+      "command": { "type": "background", "assetId": "main.s2.eve.cassim-bell.asset.background.001", "transition": "dissolve" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.eve.cassim-bell.node.direction.002",
+      "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.cassim-bell.node.line.001",
+      "lineId": "main.s2.eve.cassim-bell.line.001",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "前夜祭の晩も、無限遺失物保管庫の窓口は開いていた。祭りは、落とし物の書き入れ時である。カシム・ベルは、今夜も窓口にいた。いたが——去年までと、決定的に違うことが一つある。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.cassim-bell.node.line.002",
+      "lineId": "main.s2.eve.cassim-bell.line.002",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "窓口の脇に、砂時計が置いてあるのだ。休止札と、対の道具である。「十五分の休止を、取るようになったんです」。七十二時間、働き続けていた人の、これは革命だった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.cassim-bell.node.line.003",
+      "lineId": "main.s2.eve.cassim-bell.line.003",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「ちょうど、次の休止です。ご一緒に」。砂時計が、返された。保管庫の奥、七世界の落とし物の谷の縁に、二人ぶんの椅子。巨大竜の靴が、今夜も良い衝立になっている。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.cassim-bell.node.line.004",
+      "lineId": "main.s2.eve.cassim-bell.line.004",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "十五分の中身は、贅沢だった。紅茶が二杯。明日の決勝の話が三分。くだらない話が五分。沈黙が四分——この人との沈黙は、保管庫の棚みたいに、静かで、整っていて、居心地がいい。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.cassim-bell.node.line.005",
+      "lineId": "main.s2.eve.cassim-bell.line.005",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "残り、二分。彼は紅茶を置いて、居住まいを正した。「ミミさん。私の十五分には、決まりがあります。十四分は、誰と過ごしてもいい。……最後の一分だけは、非公開、という決まりです」。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.cassim-bell.node.line.006",
+      "lineId": "main.s2.eve.cassim-bell.line.006",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "残り、一分。彼は、窓口係の白手袋を、初めて外した。素手が、私の手を、そっと包んだ。「非公開の一分は——これからも、あなたのぶんです」。砂時計の砂が、静かに落ちていく。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.cassim-bell.node.line.007",
+      "lineId": "main.s2.eve.cassim-bell.line.007",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "砂が落ちきって、彼は手袋を戻し、窓口係の顔に帰った。「明日、勝っても負けても、ここへ。落とし物も、拾い物も、勝敗も——受け付けますので」。……この窓口、何でも受け付けすぎである。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.cassim-bell.node.line.008",
+      "lineId": "main.s2.eve.cassim-bell.line.008",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "帰り道、手のひらに、まだ一分ぶんのぬくもりが残っていた。落とし物にしないように、ポケットに入れて、帰った。",
+      "emotion": "tender"
+    },
+    {
+      "type": "effect",
+      "id": "main.s2.eve.cassim-bell.node.effect.001",
+      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+    },
+    {
+      "type": "end",
+      "id": "main.s2.eve.cassim-bell.node.end.001",
+      "mode": "return-to-week"
+    }
+  ],
+  "debug": {
+    "status": "review",
+    "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
+    "authorNote": "2周目・本命前夜(カシム・ベル)。七十二時間労働(meet)→休止札(赤線二本目)の実り=砂時計の十五分。epilogue「残り一分」の意味をここで確定(非公開の一分=あなたのぶん)。谷のピクニック(bond)の場所の再訪。",
+    "legacyGeneratedIds": false
+  }
+}
