@@ -64,6 +64,7 @@ import { characterVisuals } from "./data/characterVisuals";
 import {
   finalAct,
   grandFinaleLines,
+  grandHonmeiLines,
   openingProgram,
   unlockedProgramActs,
 } from "./data/openingProgram";
@@ -6972,6 +6973,24 @@ function EndingScreen({ onTitle, onArchive }: { onTitle: () => void; onArchive: 
                 <small>{finalAct.author}</small>
               </blockquote>
             </div>
+            {run.honmeiFighterId && grandHonmeiLines[run.honmeiFighterId] && (
+              <div className="grand-finale__final-article grand-honmei">
+                <span>袖の、もう一人</span>
+                <p>
+                  幕が上がる直前、袖でペンを握り直した手に、もう一つの手が重なった。
+                </p>
+                <blockquote>
+                  <strong>
+                    {fighterDefinitions.find((f) => f.id === run.honmeiFighterId)?.name ??
+                      run.honmeiFighterId}
+                  </strong>
+                  <small>{grandHonmeiLines[run.honmeiFighterId]}</small>
+                </blockquote>
+                <p>
+                  客席から見れば、大取りは一人。袖から見れば——二人だった。
+                </p>
+              </div>
+            )}
             <div className="grand-finale__final-article grand-pen">
               <span>最後の一筆</span>
               <p>

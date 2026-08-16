@@ -15515,6 +15515,13 @@ h3 {
   opacity: 0.18;
 }
 
+/* 真エンディング・袖の本命(名前を呼ぶ一言は本文サイズで) */
+.grand-honmei blockquote small {
+  font-size: 14.5px;
+  color: inherit;
+  line-height: 1.7;
+}
+
 /* 2周目エンディングの配役スタッフロール(本人/代役) */
 .ending-castroll {
   display: grid;

@@ -153,6 +153,26 @@ export const grandFinaleLines: Record<string, string> = {
   mumyo: "本日、有給休暇。……最高の使い道が、見つかったので。",
 };
 
+// 大取りの幕が上がる直前、舞台袖で本命だけが隣に立ち、名前で呼ぶ。
+// 「全員に台詞、一人にカメラ」のカメラ側。各人、前夜シーンで確立した声と呼び方で。
+export const grandHonmeiLines: Record<string, string> = {
+  gidonozeaas: "ミミ。今夜は100点だ。……減点は、もう探さない。",
+  minato: "ミミさん。次の依頼です。最後の一幕——隣で、どうぞ。",
+  teirei: "ミミ。自己命令、実行します。隣にいる。理由は、空欄のまま。",
+  peony: "ミミ。こわさないよ、今夜は。……手だけ、つよく、にぎる。",
+  ushiro: "ミミは、前だけ見ていればいい。うしろと——隣は、おれがいる。",
+  amara: "ミミさん。判決を先に言い渡します。——両者、主役。",
+  "night-eater": "ミミさん。今夜いちばんの光は、食べずに取っておきました。……あなたの目の、それです。",
+  shahar: "ミミ。空は晴らしておいた。胸を、張って。",
+  sazanami: "みみ さいてん ふのう。だから となり で みる。",
+  "cassim-bell": "ミミさん。ここからの一分は——非公開に、しましょう。",
+  "wolf-nine": "ミミ。九つ目の種目だ。名前は、次の祭りまでに二人で決めよう。",
+  marian: "ミミ。手、冷えてませんね。今夜は治すものが何もない。……良い夜です。",
+  "room-seventeen": "ミミさん。帰りの扉は、舞台袖に出してあります。今夜は、私があなたの楽屋です。",
+  rinne: "ミミ。この続きには、ぜんぶ賭けてある。……見ないで、賭けた。",
+  mumyo: "ミミ。呼んでくれ。今夜の私の銘は、あなたの隣だ。",
+};
+
 export const programActsByFighter = (fighterId: string): ProgramAct[] =>
   openingProgram.filter((entry) => entry.fighterId === fighterId);
 

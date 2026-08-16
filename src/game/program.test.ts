@@ -3,6 +3,7 @@ import { fighterDefinitions } from "../data/characters";
 import {
   finalAct,
   grandFinaleLines,
+  grandHonmeiLines,
   isProgramComplete,
   openingProgram,
   unlockedProgramActs,
@@ -26,6 +27,13 @@ describe("opening program (真エンディング基盤)", () => {
   it("has a grand finale line for every fighter", () => {
     for (const id of allIds) {
       expect(grandFinaleLines[id], id).toBeTruthy();
+    }
+  });
+
+  it("has a honmei curtain-call line for every fighter", () => {
+    // 週25の本命は全区分の主軸=全15人から選ばれ得るため、袖の一言も全員ぶん要る
+    for (const id of allIds) {
+      expect(grandHonmeiLines[id], id).toBeTruthy();
     }
   });
 
