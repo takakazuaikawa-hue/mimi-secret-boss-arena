@@ -35,6 +35,12 @@
         "kind": "background",
         "path": "/assets/story/bg-contract-archive-v2.png",
         "alt": "契約保管庫の背景"
+      },
+      {
+        "id": "shahar.crisis.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/events/shahar-crisis-v2.png",
+        "alt": "雲が屋上の高さまで下り、竜の目線がミミと同じ高さに来る瞬間"
       }
     ]
   },
@@ -152,6 +158,14 @@
       "mode": "thought",
       "text": "言い切ってから、自分の言葉の重さに気づいた。私はあの夜を、限定だと思っている。限定色の傘と、同じくらい。……いや、比べものにならないくらい。",
       "emotion": "tension"
+    },
+    {
+      "type": "direction",
+      "id": "shahar.crisis.node.direction.003",
+      "command": {
+        "type": "still",
+        "assetId": "shahar.crisis.asset.still.001"
+      }
     },
     {
       "type": "line",

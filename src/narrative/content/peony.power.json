@@ -24,6 +24,12 @@
         "kind": "background",
         "path": "/assets/story/bg-observation-deck-night.png",
         "alt": "夜の旧城壁展示区の背景"
+      },
+      {
+        "id": "peony.power.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/events/peony-power-v2.png",
+        "alt": "泣きそうな顔のピオニーを、ミミが「もらっていいですよね」と受け止める"
       }
     ]
   },
@@ -90,6 +96,11 @@
       "mode": "thought",
       "text": "振り向いたピオニーの顔が、泣きそうだった。全力を出すたび、この顔をしてきたのだろう。すごい、と言われるより先に、ごめんなさい、を用意している顔。",
       "emotion": "tension"
+    },
+    {
+      "type": "direction",
+      "id": "peony.power.node.direction.003",
+      "command": { "type": "still", "assetId": "peony.power.asset.still.001" }
     },
     {
       "type": "line",

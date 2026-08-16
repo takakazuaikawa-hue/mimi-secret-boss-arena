@@ -44,6 +44,12 @@
         "kind": "still",
         "path": "/assets/story/events/cassim-bell-epilogue-last-minute-reward-v1.png",
         "alt": "七つの扉を金鎖で閉じ、布をかけた受付ベルと砂時計のそばで過ごす最後の一分の一枚絵"
+      },
+      {
+        "id": "cassim-bell.epilogue.asset.still.003",
+        "kind": "still",
+        "path": "/assets/story/events/cassim-bell-epilogue-v2.png",
+        "alt": "扉に鎖、ベルに布をかけ、二人だけの非公開の一分を過ごす一枚絵"
       }
     ]
   },
@@ -123,6 +129,14 @@
       "command": {
         "type": "still",
         "assetId": "cassim-bell.epilogue.asset.still.002"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "cassim-bell.epilogue.node.direction.005",
+      "command": {
+        "type": "still",
+        "assetId": "cassim-bell.epilogue.asset.still.003"
       }
     },
     {

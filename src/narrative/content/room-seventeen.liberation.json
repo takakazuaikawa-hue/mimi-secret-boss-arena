@@ -30,6 +30,12 @@
         "kind": "still",
         "path": "/assets/story/events/room-seventeen-liberation.png",
         "alt": "解放の夜の一枚絵"
+      },
+      {
+        "id": "room-seventeen.liberation.asset.still.002",
+        "kind": "still",
+        "path": "/assets/story/events/room-seventeen-liberation-v2.png",
+        "alt": "癖のノックに、待っていたかのように扉が開く瞬間"
       }
     ]
   },
@@ -83,6 +89,11 @@
       "speakerName": "十七号室",
       "mode": "dialogue",
       "text": "……不思議です。鍵穴がなくなったのに、閉じた気が、しません。むしろ——今、初めて、ちゃんと開けられる気がします。開けるかどうかを、私が決められるので。"
+    },
+    {
+      "type": "direction",
+      "id": "room-seventeen.liberation.node.direction.004",
+      "command": { "type": "still", "assetId": "room-seventeen.liberation.asset.still.002" }
     },
     {
       "type": "line",

@@ -51,6 +51,12 @@
         "kind": "sprite",
         "path": "/assets/story/gidono-unsealed-soft.png",
         "alt": "やわらいだ表情の解封ギドノゼアース"
+      },
+      {
+        "id": "gidonozeaas.power.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/events/gidonozeaas-power-v2.png",
+        "alt": "展望台で、彼が小さな鍵をミミの手のひらへ載せる"
       }
     ]
   },
@@ -246,6 +252,14 @@
         "actorId": "gidonozeaas",
         "slot": "right",
         "scale": "tall"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "gidonozeaas.power.node.direction.006",
+      "command": {
+        "type": "still",
+        "assetId": "gidonozeaas.power.asset.still.001"
       }
     },
     {

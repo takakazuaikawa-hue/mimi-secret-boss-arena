@@ -33,6 +33,12 @@
         "kind": "background",
         "path": "/assets/story/bg-observation-deck-night.png",
         "alt": "夜の会場の背景"
+      },
+      {
+        "id": "night-eater.power.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/events/night-eater-power-v2.png",
+        "alt": "暗闇の中、衣擦れまで聞き分ける耳で二人の呼吸が合っていく瞬間"
       }
     ]
   },
@@ -124,6 +130,14 @@
       "speakerName": "夜を食べるもの",
       "mode": "dialogue",
       "text": "ええ。私の本気は、ひとりぼっちの技なの。……ずっと、そうだった。"
+    },
+    {
+      "type": "direction",
+      "id": "night-eater.power.node.direction.003",
+      "command": {
+        "type": "still",
+        "assetId": "night-eater.power.asset.still.001"
+      }
     },
     {
       "type": "line",

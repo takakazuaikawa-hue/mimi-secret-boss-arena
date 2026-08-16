@@ -38,6 +38,12 @@
         "kind": "background",
         "path": "/assets/story/bg-casino-cafe-rain.png",
         "alt": "雨の賭場の背景"
+      },
+      {
+        "id": "rinne.bond.asset.still.002",
+        "kind": "still",
+        "path": "/assets/story/events/rinne-bond-v2.png",
+        "alt": "兎のぬいぐるみを受け取る手が少し遅れる、夜市の甘い間"
       }
     ]
   },
@@ -107,6 +113,11 @@
         "type": "effect",
         "effectId": "pulse"
       }
+    },
+    {
+      "type": "direction",
+      "id": "rinne.bond.node.direction.004",
+      "command": { "type": "still", "assetId": "rinne.bond.asset.still.002" }
     },
     {
       "type": "line",

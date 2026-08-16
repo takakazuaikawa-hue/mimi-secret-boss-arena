@@ -35,6 +35,12 @@
         "kind": "background",
         "path": "/assets/story/bg-contract-archive-v2.png",
         "alt": "契約保管庫の背景"
+      },
+      {
+        "id": "rinne.crisis.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/events/rinne-crisis-v2.png",
+        "alt": "長い沈黙のあと、リンネが作り笑いではなく本物の笑いを見せる一枚絵"
       }
     ]
   },
@@ -92,6 +98,14 @@
       "speakerName": "ミミ",
       "mode": "dialogue",
       "text": "リンネさん。勝つ未来しかない世界のあなたは、夜市でくじを引いて、ドキドキできますか。"
+    },
+    {
+      "type": "direction",
+      "id": "rinne.crisis.node.direction.003",
+      "command": {
+        "type": "still",
+        "assetId": "rinne.crisis.asset.still.001"
+      }
     },
     {
       "type": "line",

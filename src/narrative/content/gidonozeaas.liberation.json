@@ -41,6 +41,12 @@
         "kind": "sprite",
         "path": "/assets/story/gidono-unsealed-soft.png",
         "alt": "やわらいだ表情の解封ギドノゼアース"
+      },
+      {
+        "id": "gidonozeaas.liberation.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/events/gidonozeaas-liberation-v2.png",
+        "alt": "解除届に判を押し、契約の光が静かにほどける"
       }
     ]
   },
@@ -135,6 +141,14 @@
       "mode": "thought",
       "text": "だからこの人は、行列が好きだったのだ。列の中でだけ、災害ではなく「順番待ちの一人」でいられたから。",
       "emotion": "revelation"
+    },
+    {
+      "type": "direction",
+      "id": "gidonozeaas.liberation.node.direction.003",
+      "command": {
+        "type": "still",
+        "assetId": "gidonozeaas.liberation.asset.still.001"
+      }
     },
     {
       "type": "line",

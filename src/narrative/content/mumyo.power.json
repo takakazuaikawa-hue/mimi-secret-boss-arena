@@ -32,6 +32,12 @@
         "kind": "background",
         "path": "/assets/story/bg-observation-deck-night.png",
         "alt": "所有者名簿室の背景"
+      },
+      {
+        "id": "mumyo.power.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/events/mumyo-power-v2.png",
+        "alt": "刃を一寸だけ抜き、十四の最終決戦の幻影を見せる瞬間"
       }
     ]
   },
@@ -86,6 +92,14 @@
       "command": {
         "type": "effect",
         "effectId": "flash"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "mumyo.power.node.direction.003",
+      "command": {
+        "type": "still",
+        "assetId": "mumyo.power.asset.still.001"
       }
     },
     {

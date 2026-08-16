@@ -35,6 +35,12 @@
         "kind": "background",
         "path": "/assets/story/bg-contract-archive-v2.png",
         "alt": "契約保管庫の背景"
+      },
+      {
+        "id": "sazanami.crisis.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/events/sazanami-crisis-v2.png",
+        "alt": "海が水の腕でそっと指輪を差し出し、五十年前に落とした人へ返す瞬間"
       }
     ]
   },
@@ -189,6 +195,14 @@
       "mode": "thought",
       "text": "海の記憶と、陸の足。週末の闘技場ロビーが、臨時の「海の遺失物返却所」になった。ノノさんが受付を買って出て、写真と証言を突き合わせ、一つずつ持ち主を探していく。",
       "emotion": "resolve"
+    },
+    {
+      "type": "direction",
+      "id": "sazanami.crisis.node.direction.003",
+      "command": {
+        "type": "still",
+        "assetId": "sazanami.crisis.asset.still.001"
+      }
     },
     {
       "type": "line",

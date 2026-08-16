@@ -24,6 +24,12 @@
         "kind": "background",
         "path": "/assets/story/bg-employee-entrance.png",
         "alt": "礼拝スペースの背景"
+      },
+      {
+        "id": "marian.join.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/events/marian-join-v2.png",
+        "alt": "冷たい指三本が手首に触れ、静かな診断の一分間が流れる瞬間"
       }
     ]
   },
@@ -49,6 +55,11 @@
       "speakerName": "マリアン",
       "mode": "dialogue",
       "text": "契約の前に、一つだけ。……あなたの脈を、測らせてください。診断は、契約より先です。"
+    },
+    {
+      "type": "direction",
+      "id": "marian.join.node.direction.002",
+      "command": { "type": "still", "assetId": "marian.join.asset.still.001" }
     },
     {
       "type": "line",

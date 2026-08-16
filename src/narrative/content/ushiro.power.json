@@ -30,6 +30,12 @@
         "kind": "background",
         "path": "/assets/story/bg-observation-deck-night.png",
         "alt": "鏡のない部屋の背景"
+      },
+      {
+        "id": "ushiro.power.asset.still.002",
+        "kind": "still",
+        "path": "/assets/story/events/ushiro-power-v2.png",
+        "alt": "百二十七人の中から本体を指差し「あなたです」と告げ、目が合う瞬間"
       }
     ]
   },
@@ -110,6 +116,11 @@
       "mode": "thought",
       "text": "百二十七人は、完全に同じ見た目だった。姿勢も、影の濃さも、ピースの角度も。私は部屋を一周して、二周目の途中で、足を止めた。",
       "emotion": "tension"
+    },
+    {
+      "type": "direction",
+      "id": "ushiro.power.node.direction.004",
+      "command": { "type": "still", "assetId": "ushiro.power.asset.still.002" }
     },
     {
       "type": "line",

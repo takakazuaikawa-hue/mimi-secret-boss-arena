@@ -17,9 +17,36 @@ Chrome 自動運転で1件ずつ送信し、生成画像を `public/assets/story
 
 ## 第1陣(20枚)
 
-**進捗(2026-08-16)**: **第1陣20枚すべて生成完了**。scratchpadに保存名どおり格納、
-採否確認待ち。`public/assets/story/events/` への配置と物語JSONへの組み込みは採用確定後。
-生成手順はスキル `chatgpt-image-gen`(~/.claude/skills)として登記済み。
+**進捗(2026-08-16 更新)**: **通算37枚を生成・配置・配線まで完了。**
+`public/assets/story/events/` へ配置し、対応する物語JSONの山場に still ノードとして配線済み
+(すべて追加のみ・削除ゼロ、narrative+content テスト35件合格、参照画像の実在も検査済み)。
+既存同名ファイルとの衝突を避けるため、新規分の一部は `-v2.png` 命名。
+生成手順はスキル `chatgpt-image-gen`(~/.claude/skills)に登記(安全フィルタ回避策を含む)。
+
+### 生成済み一覧(キャラ×段階)
+
+| キャラ | 生成した段階 |
+|---|---|
+| ギドノゼアース | eve, liberation |
+| ミナト | eve |
+| ピオニー | eve, power, liberation |
+| 丁零 | eve, bond, power, liberation |
+| うしろ | eve, power, liberation |
+| リンネ | bond, crisis, power, liberation |
+| ヴォルフ・ナイン | bond, power, liberation |
+| カシム・ベル | bond, power, liberation, epilogue |
+| さざなみ | crisis, power |
+| マリアン | bond, join |
+| 夜を食べるもの | crisis, power |
+| シャハル | crisis, liberation |
+| 無銘 | power, liberation |
+| 十七号室 | power, liberation |
+| アマラ | bond |
+
+### 未着手(次の候補)
+
+ミナトの power/crisis/bond/liberation、テイレイ(丁零とは別人)の各段階、
+アマラの crisis 以降、各キャラの meet/join/epilogue の残り。
 
 | # | 保存名 | 出典 | 場所 | 添付(キャラ / 絵柄見本) | 個別プロンプト |
 |---|---|---|---|---|---|

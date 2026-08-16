@@ -38,6 +38,12 @@
         "kind": "still",
         "path": "/assets/story/events/minato-power.png",
         "alt": "武器に囲まれたミナトの一枚絵"
+      },
+      {
+        "id": "minato.power.asset.still.002",
+        "kind": "still",
+        "path": "/assets/story/events/minato-power-v2.png",
+        "alt": "四十七本の神器が一斉に空へ昇り、花柄の短剣だけが一本残る一枚絵"
       }
     ]
   },
@@ -135,6 +141,14 @@
       "command": {
         "type": "effect",
         "effectId": "flash"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "minato.power.node.direction.005",
+      "command": {
+        "type": "still",
+        "assetId": "minato.power.asset.still.002"
       }
     },
     {

@@ -24,6 +24,12 @@
         "kind": "background",
         "path": "/assets/story/bg-employee-cafeteria-day-v1.png",
         "alt": "朝の従業員食堂の背景"
+      },
+      {
+        "id": "wolf-nine.bond.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/events/wolf-nine-bond-v2.png",
+        "alt": "じゃんけんがあいこを重ねる食卓で、しみじみと語るヴォルフ・ナイン"
       }
     ]
   },
@@ -103,6 +109,11 @@
       "mode": "thought",
       "text": "延長戦という名のおかわり。つまり、決着を明日に持ち越して、今日はもう一枚ずつ食べる。八敗の狼の辞書に、「持ち越し」という楽しい負け方が増えていた。",
       "emotion": "tender"
+    },
+    {
+      "type": "direction",
+      "id": "wolf-nine.bond.node.direction.002",
+      "command": { "type": "still", "assetId": "wolf-nine.bond.asset.still.001" }
     },
     {
       "type": "line",

@@ -39,6 +39,12 @@
         "kind": "background",
         "path": "/assets/story/bg-hot-spring-ryokan.png",
         "alt": "温泉旅館の背景"
+      },
+      {
+        "id": "amara.bond.asset.still.002",
+        "kind": "still",
+        "path": "/assets/story/events/amara-bond-v2.png",
+        "alt": "停電の暗闇、月明かりがアマラの横顔を照らす瞬間"
       }
     ]
   },
@@ -260,6 +266,11 @@
       "speakerName": "アマラ",
       "mode": "dialogue",
       "text": "……控訴します。……いえ。記録に残します。「本日の勝負、両者勝訴」と。"
+    },
+    {
+      "type": "direction",
+      "id": "amara.bond.node.direction.004",
+      "command": { "type": "still", "assetId": "amara.bond.asset.still.002" }
     },
     {
       "type": "line",
