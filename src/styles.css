@@ -15515,6 +15515,113 @@ h3 {
   opacity: 0.18;
 }
 
+/* 売店(装備の買い物)。店構えの絵+おばちゃんの吹き出し+値札の棚 */
+.shop-stall {
+  display: grid;
+  gap: 10px;
+}
+.shop-stall__front {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  min-height: 118px;
+  background: linear-gradient(135deg, #f7e3b8, #e8b96b);
+}
+.shop-stall__art {
+  display: block;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  object-position: center 35%;
+}
+.shop-stall__art.is-missing {
+  display: none;
+}
+.shop-stall__bubble {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 8px;
+  background: rgba(255, 253, 246, 0.94);
+  border: 2px solid rgba(176, 116, 26, 0.55);
+  border-radius: 12px;
+  padding: 8px 12px;
+}
+.shop-stall__bubble strong {
+  display: block;
+  font-size: 11.5px;
+  color: #a8641b;
+}
+.shop-stall__bubble p {
+  margin: 2px 0 0;
+  font-size: 13.5px;
+  line-height: 1.55;
+}
+.shop-stall__shelf {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(128px, 1fr));
+  gap: 8px;
+}
+.shop-stall__tag {
+  display: grid;
+  gap: 2px;
+  text-align: left;
+  padding: 9px 11px;
+  border-radius: 10px;
+  border: 2px solid rgba(176, 116, 26, 0.35);
+  background: rgba(255, 253, 246, 0.9);
+  cursor: pointer;
+  font: inherit;
+  transition: transform 0.12s ease, border-color 0.12s ease;
+}
+.shop-stall__tag:hover {
+  transform: translateY(-1px);
+}
+.shop-stall__tag.is-picked {
+  border-color: #b0741a;
+  background: #fff;
+}
+.shop-stall__tag.is-equipped {
+  border-style: dashed;
+}
+.shop-stall__tag strong {
+  font-size: 13.5px;
+}
+.shop-stall__tag em {
+  font-style: normal;
+  font-size: 12.5px;
+  color: #a8641b;
+  font-weight: 700;
+}
+.shop-stall__tag small {
+  font-size: 11px;
+  color: #8a7a63;
+}
+.shop-stall__counter {
+  display: grid;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 2px solid rgba(176, 116, 26, 0.35);
+  background: rgba(255, 253, 246, 0.92);
+}
+.shop-stall__counter > div:first-child {
+  display: grid;
+  gap: 2px;
+}
+.shop-stall__counter strong {
+  font-size: 14.5px;
+}
+.shop-stall__counter span {
+  font-size: 12.5px;
+  color: #6a5c46;
+}
+.shop-stall__actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
 /* 真エンディング・袖の本命(名前を呼ぶ一言は本文サイズで) */
 .grand-honmei blockquote small {
   font-size: 14.5px;

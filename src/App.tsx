@@ -76,7 +76,7 @@ import { opponentVisuals } from "./data/opponentVisuals";
 import {
   battleOpponentById,
 } from "./data/opponents";
-import { itemById, itemDefinitions } from "./data/items";
+import { itemById, itemDefinitions, stallKeeperTalk } from "./data/items";
 import {
   getMatchDefinition,
   matchForWeek,
@@ -3223,6 +3223,11 @@ function ManagementScreen({
         : "fighter",
   );
   const [tab, setTab] = useState<"growth" | "shop">("growth");
+  // 売店: 手に取っている品と、おばちゃんの機嫌(台詞の出し分け)
+  const [pickedItemId, setPickedItemId] = useState<string>();
+  const [stallMood, setStallMood] = useState<
+    "greet" | "sold" | "broke" | "back"
+  >("greet");
   if (!run) return null;
   if (run.ownershipStage === "provisional" && run.roster.length === 0) {
     return (
@@ -3785,7 +3790,37 @@ function ManagementScreen({
               </div>
             </div>
           ) : (
-            <div className="shop-panel">
+            <div className="shop-panel shop-stall">
+              <div className="shop-stall__front">
+                <img
+                  src="/assets/story/bg-souvenir-stall.png"
+                  alt="興行街の売店"
+                  className="shop-stall__art"
+                  onError={(event) => {
+                    event.currentTarget.classList.add("is-missing");
+                  }}
+                />
+                <div className="shop-stall__bubble">
+                  <strong>売店のお姉さん</strong>
+                  <p>
+                    {(() => {
+                      const picked = pickedItemId
+                        ? itemById.get(pickedItemId)
+                        : undefined;
+                      if (stallMood === "sold") return stallKeeperTalk.sold;
+                      if (stallMood === "broke") return stallKeeperTalk.broke;
+                      if (stallMood === "back") return stallKeeperTalk.back;
+                      if (picked) {
+                        const ownedPicked = run.inventory[picked.id] ?? 0;
+                        return ownedPicked > 0
+                          ? stallKeeperTalk.equip
+                          : picked.pitch;
+                      }
+                      return stallKeeperTalk.greet;
+                    })()}
+                  </p>
+                </div>
+              </div>
               <div className="equipped-line">
                 <Shield size={18} />
                 装備中: {selectedItem?.name ?? "なし"}
@@ -3797,24 +3832,53 @@ function ManagementScreen({
                   </button>
                 )}
               </div>
-              <div className="shop-list">
+              <div className="shop-stall__shelf" role="list">
                 {itemDefinitions.map((item) => {
                   const owned = run.inventory[item.id] ?? 0;
-                  const available =
-                    owned -
-                    Object.values(run.fighters).filter(
-                      (state) =>
-                        state.id !== selectedId &&
-                        state.equippedItemId === item.id,
-                    ).length;
                   return (
-                    <div className="shop-item" key={item.id}>
-                      <div>
-                        <strong>{item.name}</strong>
-                        <span>{item.note}</span>
-                      </div>
-                      <small>所持 {owned}</small>
-                      {fighterState.equippedItemId === item.id ? (
+                    <button
+                      key={item.id}
+                      role="listitem"
+                      className={`shop-stall__tag${
+                        pickedItemId === item.id ? " is-picked" : ""
+                      }${
+                        fighterState.equippedItemId === item.id
+                          ? " is-equipped"
+                          : ""
+                      }`}
+                      onClick={() => {
+                        setPickedItemId(item.id);
+                        setStallMood("greet");
+                      }}
+                    >
+                      <strong>{item.name}</strong>
+                      <em>{money(item.cost)}</em>
+                      {owned > 0 && <small>所持 {owned}</small>}
+                    </button>
+                  );
+                })}
+              </div>
+              {(() => {
+                const picked = pickedItemId
+                  ? itemById.get(pickedItemId)
+                  : undefined;
+                if (!picked) return null;
+                const owned = run.inventory[picked.id] ?? 0;
+                const available =
+                  owned -
+                  Object.values(run.fighters).filter(
+                    (state) =>
+                      state.id !== selectedId &&
+                      state.equippedItemId === picked.id,
+                  ).length;
+                return (
+                  <div className="shop-stall__counter">
+                    <div>
+                      <strong>{picked.name}</strong>
+                      <span>{picked.note}</span>
+                    </div>
+                    <div className="shop-stall__actions">
+                      {fighterState.equippedItemId === picked.id ? (
                         <button
                           className="secondary-button secondary-button--small"
                           disabled
@@ -3825,28 +3889,44 @@ function ManagementScreen({
                       ) : available > 0 ? (
                         <button
                           className="secondary-button secondary-button--small"
-                          onClick={() => equipItem(selectedId, item.id)}
+                          onClick={() => {
+                            equipItem(selectedId, picked.id);
+                            setStallMood("sold");
+                          }}
                         >
-                          装備
+                          着けていく
                         </button>
                       ) : (
                         <button
                           className="secondary-button secondary-button--small"
-                          disabled={run.money < item.cost}
                           onClick={() => {
-                            if (buyItem(item.id)) {
-                              equipItem(selectedId, item.id);
+                            if (run.money < picked.cost) {
+                              setStallMood("broke");
+                              return;
+                            }
+                            if (buyItem(picked.id)) {
+                              equipItem(selectedId, picked.id);
+                              setStallMood("sold");
                               playSound("reward", profile.soundEnabled);
                             }
                           }}
                         >
-                          購入 {money(item.cost)}
+                          買う {money(picked.cost)}
                         </button>
                       )}
+                      <button
+                        className="secondary-button secondary-button--small"
+                        onClick={() => {
+                          setPickedItemId(undefined);
+                          setStallMood("back");
+                        }}
+                      >
+                        棚に戻す
+                      </button>
                     </div>
-                  );
-                })}
-              </div>
+                  </div>
+                );
+              })()}
             </div>
           )}
         </section>
