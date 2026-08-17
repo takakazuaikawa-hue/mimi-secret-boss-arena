@@ -35,6 +35,12 @@
         "kind": "background",
         "path": "/assets/story/bg-casino-cafe-night.png",
         "alt": "夜のカジノカフェの背景"
+      },
+      {
+        "id": "amara.liberation.asset.still.001",
+        "kind": "still",
+        "path": "/assets/story/events/amara-liberation-twoshot.png",
+        "alt": "訴状の原告欄に自分の名前を見つける瞬間"
       }
     ]
   },
@@ -171,6 +177,14 @@
       "speakerName": "アマラ",
       "mode": "dialogue",
       "text": "弁護人ですから。訴状は、書き直してあります。——原告欄を、共同原告へ変更しました。"
+    },
+    {
+      "type": "direction",
+      "id": "amara.liberation.node.direction.003",
+      "command": {
+        "type": "still",
+        "assetId": "amara.liberation.asset.still.001"
+      }
     },
     {
       "type": "line",

@@ -41,6 +41,12 @@
         "kind": "still",
         "path": "/assets/story/events/night-eater-crisis.png",
         "alt": "外套の内側に引き込まれ「今夜いちばんの味だった」と囁かれる瞬間"
+      },
+      {
+        "id": "night-eater.crisis.asset.still.002",
+        "kind": "still",
+        "path": "/assets/story/events/night-eater-crisis-twoshot.png",
+        "alt": "震える声で「今夜いちばんの味だった」と囁かれる瞬間"
       }
     ]
   },
@@ -194,6 +200,14 @@
       "mode": "thought",
       "text": "暗闇の中、外套の内側に、そっと引き込まれた。真夏の夜の温度。耳元の声は、少しだけ震えていて、それでもいつものソムリエの口調に戻ろうとしていた。",
       "emotion": "tender"
+    },
+    {
+      "type": "direction",
+      "id": "night-eater.crisis.node.direction.004",
+      "command": {
+        "type": "still",
+        "assetId": "night-eater.crisis.asset.still.002"
+      }
     },
     {
       "type": "line",

@@ -38,6 +38,12 @@
         "kind": "still",
         "path": "/assets/story/events/sazanami-power.png",
         "alt": "水中の小部屋で心臓の音を「速い」と指摘される瞬間"
+      },
+      {
+        "id": "sazanami.power.asset.still.002",
+        "kind": "still",
+        "path": "/assets/story/events/sazanami-power-twoshot.png",
+        "alt": "水中の小部屋で心臓の音を「速い」と指摘される瞬間"
       }
     ]
   },
@@ -163,6 +169,14 @@
       "command": {
         "type": "still",
         "assetId": "sazanami.power.asset.still.001"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "sazanami.power.node.direction.004",
+      "command": {
+        "type": "still",
+        "assetId": "sazanami.power.asset.still.002"
       }
     },
     {

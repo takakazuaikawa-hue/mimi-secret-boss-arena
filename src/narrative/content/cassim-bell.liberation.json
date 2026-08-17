@@ -47,6 +47,12 @@
         "kind": "still",
         "path": "/assets/story/events/cassim-bell-liberation-v2.png",
         "alt": "「これから、あなたと」と告げる瞬間"
+      },
+      {
+        "id": "cassim-bell.liberation.asset.still.003",
+        "kind": "still",
+        "path": "/assets/story/events/cassim-bell-wallpin.png",
+        "alt": "「これから、あなたと」と告げる、より距離の近い瞬間"
       }
     ]
   },
@@ -162,6 +168,14 @@
       "command": {
         "type": "still",
         "assetId": "cassim-bell.liberation.asset.still.002"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "cassim-bell.liberation.node.direction.005",
+      "command": {
+        "type": "still",
+        "assetId": "cassim-bell.liberation.asset.still.003"
       }
     },
     {

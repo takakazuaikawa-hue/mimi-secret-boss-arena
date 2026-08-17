@@ -41,6 +41,12 @@
         "kind": "still",
         "path": "/assets/story/events/shahar-liberation.png",
         "alt": "鱗の髪飾りが髪に留まり月光を反射する瞬間"
+      },
+      {
+        "id": "shahar.liberation.asset.still.002",
+        "kind": "still",
+        "path": "/assets/story/events/shahar-liberation-twoshot.png",
+        "alt": "鱗の髪飾りが髪に留まり月光を反射する瞬間"
       }
     ]
   },
@@ -139,6 +145,14 @@
       "command": {
         "type": "still",
         "assetId": "shahar.liberation.asset.still.001"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "shahar.liberation.node.direction.004",
+      "command": {
+        "type": "still",
+        "assetId": "shahar.liberation.asset.still.002"
       }
     },
     {
