@@ -126,7 +126,7 @@
       "lineId": "main.s3.w12.line.003a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "理由も、律儀に教えてくれた。「説明の会の、あの空欄以来……上は、急いでいます」"
+      "text": "理由も、律儀に教えてくれた。"
     },
     {
       "type": "line",
@@ -134,7 +134,15 @@
       "lineId": "main.s3.w12.line.003b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "隠したい側は、いつも早口になる。四百年の役所も、例外じゃないらしい。",
+      "text": "「説明の会の、あの空欄以来……上は、急いでいます」隠したい側は、いつも早口になる。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w12.node.line.003c",
+      "lineId": "main.s3.w12.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "四百年の役所も、例外じゃないらしい。",
       "emotion": "comic"
     },
     {
@@ -143,7 +151,7 @@
       "lineId": "main.s3.w12.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「前倒しを、止める方法は」「あります」"
+      "text": "「前倒しを、止める方法は」「あります」帳面が、一頁めくられた。"
     },
     {
       "type": "line",
@@ -151,7 +159,7 @@
       "lineId": "main.s3.w12.line.004b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "帳面が、一頁めくられた。「私どもの本隊に、砂の上で勝つこと」"
+      "text": "「私どもの本隊に、砂の上で勝つこと」"
     },
     {
       "type": "line",
@@ -168,7 +176,7 @@
       "lineId": "main.s3.w12.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "つまりこの人は、敵の姿のまま、勝ち筋を教えに来た。「……いいんですか、それを教えて」"
+      "text": "つまりこの人は、敵の姿のまま、勝ち筋を教えに来た。"
     },
     {
       "type": "line",
@@ -176,7 +184,7 @@
       "lineId": "main.s3.w12.line.005b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「決まりの説明は、職務です」真顔だった。"
+      "text": "「……いいんですか、それを教えて」「決まりの説明は、職務です」真顔だった。"
     },
     {
       "type": "line",
@@ -247,7 +255,7 @@
       "lineId": "main.s3.w12.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "練習場で、仲間に伝えた。「相手は、白手袋の本隊。勝てば、日付が守られます」"
+      "text": "練習場で、仲間に伝えた。"
     },
     {
       "type": "line",
@@ -255,7 +263,15 @@
       "lineId": "main.s3.w12.line.008b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "返事は、砂を蹴る音だった。それで、だいたい足りる。",
+      "text": "「相手は、白手袋の本隊。勝てば、日付が守られます」返事は、砂を蹴る音だった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w12.node.line.008c",
+      "lineId": "main.s3.w12.line.008c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "それで、だいたい足りる。",
       "emotion": "resolve"
     },
     {

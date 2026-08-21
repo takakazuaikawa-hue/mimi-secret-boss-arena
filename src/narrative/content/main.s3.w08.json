@@ -142,7 +142,7 @@
       "lineId": "main.s3.w08.line.003b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "跳んで届く高さも測る。「怒ったときに壊す物の数」"
+      "text": "跳んで届く高さも測る。「怒ったときに壊す物の数」を、申告させられた。"
     },
     {
       "type": "line",
@@ -150,7 +150,7 @@
       "lineId": "main.s3.w08.line.003c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "を、申告させられた。いちばん大きい子の申告で、係の人の筆が三回止まった。",
+      "text": "いちばん大きい子の申告で、係の人の筆が三回止まった。",
       "emotion": "comic"
     },
     {
@@ -175,15 +175,7 @@
       "lineId": "main.s3.w08.line.004c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「そりゃミミさんとこの勝ちだ」"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.w08.node.line.004d",
-      "lineId": "main.s3.w08.line.004d",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "確認が、興行になっていく。この街は、何でも興行にする。",
+      "text": "「そりゃミミさんとこの勝ちだ」確認が、興行になっていく。この街は、何でも興行にする。",
       "emotion": "comic"
     },
     {
@@ -212,20 +204,12 @@
       "lineId": "main.s3.w08.line.005b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「結構です。では、正式に——うちの、砂の部署と」"
+      "text": "「結構です。では、正式に——うちの、砂の部署と」腕章の後ろから、影が五つ、進み出た。"
     },
     {
       "type": "line",
       "id": "main.s3.w08.node.line.005c",
       "lineId": "main.s3.w08.line.005c",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "腕章の後ろから、影が五つ、進み出た。"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.w08.node.line.005d",
-      "lineId": "main.s3.w08.line.005d",
       "speakerId": "narrator",
       "mode": "thought",
       "text": "……影の気配に、耳が、ぴんと立った。判子の役所にも、砂を歩く足が、あった。",
@@ -237,7 +221,7 @@
       "lineId": "main.s3.w08.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "並んだ五人は、思いのほか、いい構えだった。"
+      "text": "並んだ五人は、思いのほか、いい構えだった。四百年、判を守ってきた腕。"
     },
     {
       "type": "line",
@@ -245,7 +229,7 @@
       "lineId": "main.s3.w08.line.006b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "四百年、判を守ってきた腕。伊達ではない。"
+      "text": "伊達ではない。仲間がぼそり。"
     },
     {
       "type": "line",
@@ -253,7 +237,7 @@
       "lineId": "main.s3.w08.line.006c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "仲間がぼそり。「ミミさん、あれは飾りの構えじゃないです」"
+      "text": "「ミミさん、あれは飾りの構えじゃないです」名前を呼ばれて、耳の先が、ちょっと熱い。"
     },
     {
       "type": "line",
@@ -261,7 +245,7 @@
       "lineId": "main.s3.w08.line.006d",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "名前を呼ばれて、耳の先が、ちょっと熱い。望むところが、二段くらい、上がった。",
+      "text": "望むところが、二段くらい、上がった。",
       "emotion": "revelation"
     },
     {
@@ -286,15 +270,7 @@
       "lineId": "main.s3.w08.line.007c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「ですから——手加減は、いたしません」"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.w08.node.line.007d",
-      "lineId": "main.s3.w08.line.007d",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "良い役所さんだ。敵ながら、判の押し方が、まっすぐ。",
+      "text": "「ですから——手加減は、いたしません」良い役所さんだ。敵ながら、判の押し方が、まっすぐ。",
       "emotion": "tender"
     },
     {
@@ -311,15 +287,7 @@
       "lineId": "main.s3.w08.line.008b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「読めます。それから、たぶん——」"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.w08.node.line.008c",
-      "lineId": "main.s3.w08.line.008c",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "言いかけて、やめた。欲張りは、勝ってから。",
+      "text": "「読めます。それから、たぶん——」言いかけて、やめた。欲張りは、勝ってから。",
       "emotion": "resolve"
     },
     {
@@ -328,7 +296,7 @@
       "lineId": "main.s3.w08.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "夕方には、賭場の板に、新しい枠。「役所 対 ミミさんとこ。四百年目の初勝負」"
+      "text": "夕方には、賭場の板に、新しい枠。"
     },
     {
       "type": "line",
@@ -336,7 +304,7 @@
       "lineId": "main.s3.w08.line.009b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "窓の鈴なりは、まだ減っていない。",
+      "text": "「役所 対 ミミさんとこ。四百年目の初勝負」窓の鈴なりは、まだ減っていない。",
       "emotion": "tension"
     },
     {

@@ -113,7 +113,7 @@
       "lineId": "main.s3.w25.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "書き出すと、こうなる。昼は決勝、相手は「初演の一座」"
+      "text": "書き出すと、こうなる。昼は決勝、相手は「初演の一座」だ。"
     },
     {
       "type": "line",
@@ -121,20 +121,12 @@
       "lineId": "main.s3.w25.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "だ。四百年前、この闘技場の最初の舞台に立った人たちの再現だ。"
+      "text": "四百年前、この闘技場の最初の舞台に立った人たちの再現だ。台帳が立てる、最後の演目らしい。"
     },
     {
       "type": "line",
       "id": "main.s3.w25.node.line.002c",
       "lineId": "main.s3.w25.line.002c",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "台帳が立てる、最後の演目らしい。"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.w25.node.line.002d",
-      "lineId": "main.s3.w25.line.002d",
       "speakerId": "narrator",
       "mode": "thought",
       "text": "夜は、柿落とし十五幕。大取りの欄は、まだ空白。"
@@ -214,23 +206,7 @@
       "lineId": "main.s3.w25.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "並んで砂を均しながら、聞いてみた。耳が、少しだけ傾いた。"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.w25.node.line.005b",
-      "lineId": "main.s3.w25.line.005b",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "「大取り、何をやると思います?」「ミミさんの、やりたいことでしょう」"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.w25.node.line.005c",
-      "lineId": "main.s3.w25.line.005c",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "それが分からないから聞いているのだが、まあ——その通りだ。",
+      "text": "「ミミさんの、やりたいことでしょう」それが分からないから聞いているのだが、まあ——その通りだ。",
       "emotion": "comic"
     },
     {
@@ -300,23 +276,7 @@
       "lineId": "main.s3.w25.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "宴に戻って、明日の話をひとつだけした。"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.w25.node.line.008b",
-      "lineId": "main.s3.w25.line.008b",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "「決勝の朝、全員で朝ごはんを食べましょう。まかないの、いつもの席で」"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.w25.node.line.008c",
-      "lineId": "main.s3.w25.line.008c",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "三年目も、この約束から始める。大一番の前夜に要るのは、いつも通りが続くという約束だ。",
+      "text": "大一番の前夜に要るのは、いつも通りが続くという約束だ。",
       "emotion": "tender"
     },
     {

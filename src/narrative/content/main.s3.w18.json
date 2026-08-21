@@ -162,7 +162,7 @@
       "lineId": "main.s3.w18.line.004b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "湯守は無口な人魚さんで、名を書く代わりに、鱗を一枚くれた。「署名の代わりだそうです」"
+      "text": "湯守は無口な人魚さんで、名を書く代わりに、鱗を一枚くれた。"
     },
     {
       "type": "line",
@@ -170,7 +170,7 @@
       "lineId": "main.s3.w18.line.004c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "と、通訳の貝が言った。……名簿に、鱗の頁ができた。",
+      "text": "「署名の代わりだそうです」と、通訳の貝が言った。……名簿に、鱗の頁ができた。",
       "emotion": "comic"
     },
     {
@@ -285,7 +285,7 @@
       "lineId": "main.s3.w18.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "荷ほどきをしながら、ノノさんが言った。「来ますかね」"
+      "text": "荷ほどきをしながら、ノノさんが言った。"
     },
     {
       "type": "line",
@@ -293,7 +293,7 @@
       "lineId": "main.s3.w18.line.009b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「来ます」根拠は、無い。"
+      "text": "「来ますかね」「来ます」根拠は、無い。"
     },
     {
       "type": "line",

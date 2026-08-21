@@ -90,30 +90,6 @@
       "lineId": "main.s1.eve.teirei.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "実行は、正確だった。りんご飴を「甘味・摂取」"
-    },
-    {
-      "type": "line",
-      "id": "main.s1.eve.teirei.node.line.002b",
-      "lineId": "main.s1.eve.teirei.line.002b",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "金魚すくいを「対象・捕獲(三秒)」屋台のくじを「確率・試行」"
-    },
-    {
-      "type": "line",
-      "id": "main.s1.eve.teirei.node.line.002c",
-      "lineId": "main.s1.eve.teirei.line.002c",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "見ている私の耳が、つい、忙しく動いた。祭りの全項目を、上から順に、一つずつ。"
-    },
-    {
-      "type": "line",
-      "id": "main.s1.eve.teirei.node.line.002d",
-      "lineId": "main.s1.eve.teirei.line.002d",
-      "speakerId": "narrator",
-      "mode": "thought",
       "text": "……途中から、周りの子どもたちが列を作って真似を始めた。",
       "emotion": "comic"
     },
@@ -181,7 +157,7 @@
       "lineId": "main.s1.eve.teirei.line.005b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「本日の記録。楽しむ、を実行した。実行結果——」"
+      "text": "「本日の記録。楽しむ、を実行した。実行結果——」そこで、少し止まった。"
     },
     {
       "type": "line",
@@ -189,7 +165,7 @@
       "lineId": "main.s1.eve.teirei.line.005c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "そこで、少し止まった。「——成功。ただし、理由欄は、空欄のまま提出する」",
+      "text": "「——成功。ただし、理由欄は、空欄のまま提出する」",
       "emotion": "revelation"
     },
     {
@@ -206,7 +182,7 @@
       "lineId": "main.s1.eve.teirei.line.006b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "空欄は、書けないのではなく、書かないのだ。私は「受理します」"
+      "text": "空欄は、書けないのではなく、書かないのだ。"
     },
     {
       "type": "line",
@@ -214,7 +190,7 @@
       "lineId": "main.s1.eve.teirei.line.006c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "とだけ言った。受付の言葉が、こんな夜に役に立つ。"
+      "text": "私は「受理します」とだけ言った。受付の言葉が、こんな夜に役に立つ。"
     },
     {
       "type": "direction",
@@ -238,7 +214,7 @@
       "lineId": "main.s1.eve.teirei.line.007b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「明日の命令を、予約する。——見ていて、と言ってほしい」"
+      "text": "「明日の命令を、予約する。——見ていて、と言ってほしい」見ていてください。"
     },
     {
       "type": "line",
@@ -246,15 +222,7 @@
       "lineId": "main.s1.eve.teirei.line.007c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "見ていてください。「了解。実行する」"
-    },
-    {
-      "type": "line",
-      "id": "main.s1.eve.teirei.node.line.007d",
-      "lineId": "main.s1.eve.teirei.line.007d",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "……いちばん正確で、いちばん優しい返事だった。"
+      "text": "「了解。実行する」……いちばん正確で、いちばん優しい返事だった。"
     },
     {
       "type": "effect",

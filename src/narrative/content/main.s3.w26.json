@@ -167,7 +167,7 @@
       "lineId": "main.s3.w26.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "入場口の掲示は、短かった。「決勝——初演の一座」"
+      "text": "入場口の掲示は、短かった。「決勝——初演の一座」とだけ、あった。"
     },
     {
       "type": "line",
@@ -175,15 +175,7 @@
       "lineId": "main.s3.w26.line.004b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "とだけ、あった。四百年前の、最初の舞台の人たちの再現だ。"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.w26.node.line.004c",
-      "lineId": "main.s3.w26.line.004c",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "台帳の最後の頁が立てた、最後の演目だ。",
+      "text": "四百年前の、最初の舞台の人たちの再現だ。台帳の最後の頁が立てた、最後の演目だ。",
       "emotion": "tension"
     },
     {
@@ -225,23 +217,7 @@
       "lineId": "main.s3.w26.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "口上が終わって、私は、こう返した。"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.w26.node.line.006b",
-      "lineId": "main.s3.w26.line.006b",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "「——ようこそ、新しい闘技場へ。あなたたちが建てた場所の、四百年目です」"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.w26.node.line.006c",
-      "lineId": "main.s3.w26.line.006c",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "座長格の人の目が、記録に無いはずの目が、一度だけ、瞬いた。",
+      "text": "「——ようこそ、新しい闘技場へ。あなたたちが建てた場所の、四百年目です」座長格の人の目が、記録に無いはずの目が、一度だけ、瞬いた。",
       "emotion": "revelation"
     },
     {

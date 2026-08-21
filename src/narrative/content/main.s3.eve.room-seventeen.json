@@ -201,20 +201,12 @@
       "lineId": "main.s3.eve.room-seventeen.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「ミミさん」部屋の声が、窓の桟をこつんと鳴らした。"
+      "text": "「ミミさん」部屋の声が、窓の桟をこつんと鳴らした。「明日、新しい闘技場が開きます」"
     },
     {
       "type": "line",
       "id": "main.s3.eve.room-seventeen.node.line.006b",
       "lineId": "main.s3.eve.room-seventeen.line.006b",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "「明日、新しい闘技場が開きます」"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.eve.room-seventeen.node.line.006c",
-      "lineId": "main.s3.eve.room-seventeen.line.006c",
       "speakerId": "narrator",
       "mode": "thought",
       "text": "「……私は、古い建物です。新しい子に、お客を取られてしまうでしょうか」",
@@ -234,7 +226,7 @@
       "lineId": "main.s3.eve.room-seventeen.line.007b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「だって私、疲れた日は、結局ここへ来ます」"
+      "text": "「だって私、疲れた日は、結局ここへ来ます」壁の木目が、今度は大きく波打った。"
     },
     {
       "type": "line",
@@ -242,7 +234,7 @@
       "lineId": "main.s3.eve.room-seventeen.line.007c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "壁の木目が、今度は大きく波打った。部屋の照れ方としては、最大級なのだ。",
+      "text": "部屋の照れ方としては、最大級なのだ。",
       "emotion": "tender"
     },
     {
@@ -251,7 +243,7 @@
       "lineId": "main.s3.eve.room-seventeen.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "帰りぎわ、扉の外から「また来ます」の札を掛けた。"
+      "text": "帰りぎわ、扉の外から「また来ます」の札を掛けた。いつもの儀式だ。"
     },
     {
       "type": "line",
@@ -259,20 +251,12 @@
       "lineId": "main.s3.eve.room-seventeen.line.008b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "いつもの儀式だ。札の裏に、今夜は部屋の字が足されていた。"
+      "text": "札の裏に、今夜は部屋の字が足されていた。「いつでも、どうぞ。あなたの部屋より」"
     },
     {
       "type": "line",
       "id": "main.s3.eve.room-seventeen.node.line.008c",
       "lineId": "main.s3.eve.room-seventeen.line.008c",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "「いつでも、どうぞ。あなたの部屋より」"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.eve.room-seventeen.node.line.008d",
-      "lineId": "main.s3.eve.room-seventeen.line.008d",
       "speakerId": "narrator",
       "mode": "thought",
       "text": "……宛名の無い手紙より、ずっと強い一行だった。",

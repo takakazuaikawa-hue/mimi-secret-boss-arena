@@ -126,7 +126,7 @@
       "lineId": "main.s3.w10.line.003a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "おばちゃんは、最初、面白がっていた。「うちの鉄板が台帳に載るのかい! 出世だね!」"
+      "text": "おばちゃんは、最初、面白がっていた。"
     },
     {
       "type": "line",
@@ -134,7 +134,15 @@
       "lineId": "main.s3.w10.line.003b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "二枚目の札で、笑いが止まる。「参考の値: 銀貨三枚」",
+      "text": "「うちの鉄板が台帳に載るのかい! 出世だね!」二枚目の札で、笑いが止まる。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w10.node.line.003c",
+      "lineId": "main.s3.w10.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「参考の値: 銀貨三枚」",
       "emotion": "comic"
     },
     {
@@ -168,7 +176,7 @@
       "lineId": "main.s3.w10.line.005b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「棚卸しですので」「どこまで数えるかは、私が決めることでは」"
+      "text": "「棚卸しですので」「どこまで数えるかは、私が決めることでは」声が、ほんの少し低くなった。"
     },
     {
       "type": "line",
@@ -176,7 +184,7 @@
       "lineId": "main.s3.w10.line.005c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "声が、ほんの少し低くなった。「——数えなければ、守れないものも、あります」",
+      "text": "「——数えなければ、守れないものも、あります」",
       "emotion": "tension"
     },
     {
@@ -280,7 +288,7 @@
       "lineId": "main.s3.w10.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "帰りぎわ、賭場の板に、新しい枠。「街の言い分、通るか通らぬか」"
+      "text": "帰りぎわ、賭場の板に、新しい枠。"
     },
     {
       "type": "line",
@@ -288,7 +296,15 @@
       "lineId": "main.s3.w10.line.009b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "うちの勝負が、うちだけの勝負じゃ、なくなってきた。もらった焼き餅一枚が、その証だ。",
+      "text": "「街の言い分、通るか通らぬか」うちの勝負が、うちだけの勝負じゃ、なくなってきた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w10.node.line.009c",
+      "lineId": "main.s3.w10.line.009c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "もらった焼き餅一枚が、その証だ。",
       "emotion": "tender"
     },
     {

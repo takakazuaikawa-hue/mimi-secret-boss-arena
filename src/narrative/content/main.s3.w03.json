@@ -126,7 +126,7 @@
       "lineId": "main.s3.w03.line.003a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "発表前から、仕事を振られた。「監督! 五人の紹介文、一言ずつ!」"
+      "text": "発表前から、仕事を振られた。"
     },
     {
       "type": "line",
@@ -134,7 +134,15 @@
       "lineId": "main.s3.w03.line.003b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "三年目の今、顔合わせの仕切りは私の係らしい。いつ決まったのか、誰も知らない。",
+      "text": "「監督! 五人の紹介文、一言ずつ!」三年目の今、顔合わせの仕切りは私の係らしい。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w03.node.line.003c",
+      "lineId": "main.s3.w03.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "いつ決まったのか、誰も知らない。",
       "emotion": "comic"
     },
     {
@@ -143,7 +151,7 @@
       "lineId": "main.s3.w03.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "常連さんたちは、今年も予想合戦だった。「監督が最初に口説くのは、どの子か」"
+      "text": "常連さんたちは、今年も予想合戦だった。"
     },
     {
       "type": "line",
@@ -151,7 +159,15 @@
       "lineId": "main.s3.w03.line.004b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "倍率まで、付いている。胴元さん、それは賭けにしないでください。",
+      "text": "「監督が最初に口説くのは、どの子か」倍率まで、付いている。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w03.node.line.004c",
+      "lineId": "main.s3.w03.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "胴元さん、それは賭けにしないでください。",
       "emotion": "comic"
     },
     {
@@ -180,7 +196,7 @@
       "lineId": "main.s3.w03.line.005b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "どよめきが、半拍遅れて来た。名簿の「持ち主」"
+      "text": "どよめきが、半拍遅れて来た。"
     },
     {
       "type": "line",
@@ -188,7 +204,7 @@
       "lineId": "main.s3.w03.line.005c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "欄が、五人とも「本人」去年、勝つたびに取り返した、あの欄だ。"
+      "text": "名簿の「持ち主」欄が、五人とも「本人」去年、勝つたびに取り返した、あの欄だ。"
     },
     {
       "type": "line",
@@ -222,7 +238,7 @@
       "lineId": "main.s3.w03.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "締めの挨拶で、狼の九番がマイクを握った。「今年の九戦目は、全部、結果が分からない」"
+      "text": "締めの挨拶で、狼の九番がマイクを握った。"
     },
     {
       "type": "line",
@@ -230,7 +246,15 @@
       "lineId": "main.s3.w03.line.007b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "客席が、いい声で沸いた。去年、一緒に勝ち取った台詞だ。",
+      "text": "「今年の九戦目は、全部、結果が分からない」客席が、いい声で沸いた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w03.node.line.007c",
+      "lineId": "main.s3.w03.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "去年、一緒に勝ち取った台詞だ。",
       "emotion": "tender"
     },
     {

@@ -142,7 +142,7 @@
       "lineId": "main.s3.w20.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "封をされると、どうなるのか。「巻き戻る側の人々から、見えなくなります。裁きの日まで」"
+      "text": "封をされると、どうなるのか。"
     },
     {
       "type": "line",
@@ -150,7 +150,7 @@
       "lineId": "main.s3.w20.line.004b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "街から、私が消えるのだ。祭りからも、賭場の板の前からも、焼き餅の列からも。"
+      "text": "「巻き戻る側の人々から、見えなくなります。裁きの日まで」街から、私が消えるのだ。"
     },
     {
       "type": "line",
@@ -158,7 +158,7 @@
       "lineId": "main.s3.w20.line.004c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "……正直に言えば、少し、怖い。",
+      "text": "祭りからも、賭場の板の前からも、焼き餅の列からも。……正直に言えば、少し、怖い。",
       "emotion": "tension"
     },
     {
@@ -275,7 +275,7 @@
       "lineId": "main.s3.w20.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ポラリスさんが帳面を閉じて、深く一礼した。「——裁きの日に、お会いします」"
+      "text": "ポラリスさんが帳面を閉じて、深く一礼した。"
     },
     {
       "type": "line",
@@ -283,7 +283,15 @@
       "lineId": "main.s3.w20.line.009b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "見えない私に、まっすぐ礼をする人が、敵の側に一人いる。……今夜は、それだけを貯金にする。",
+      "text": "「——裁きの日に、お会いします」見えない私に、まっすぐ礼をする人が、敵の側に一人いる。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w20.node.line.009c",
+      "lineId": "main.s3.w20.line.009c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……今夜は、それだけを貯金にする。",
       "emotion": "resolve"
     },
     {

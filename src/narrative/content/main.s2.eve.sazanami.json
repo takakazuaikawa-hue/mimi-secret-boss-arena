@@ -184,7 +184,7 @@
       "lineId": "main.s2.eve.sazanami.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "泡が、ゆっくり続けた。「れきだい おうじゃ みんな みた」"
+      "text": "泡が、ゆっくり続けた。"
     },
     {
       "type": "line",
@@ -192,7 +192,7 @@
       "lineId": "main.s2.eve.sazanami.line.005b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "四百年、海からこの街の興行を見てきた人だ。「かんぺき だった。てんすう つけやすかった」"
+      "text": "「れきだい おうじゃ みんな みた」四百年、海からこの街の興行を見てきた人だ。"
     },
     {
       "type": "line",
@@ -200,7 +200,7 @@
       "lineId": "main.s2.eve.sazanami.line.005c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "完璧は、採点しやすい。……なるほど。",
+      "text": "「かんぺき だった。てんすう つけやすかった」完璧は、採点しやすい。……なるほど。",
       "emotion": "tension"
     },
     {
@@ -209,7 +209,7 @@
       "lineId": "main.s2.eve.sazanami.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「でも ミミ の あした は」"
+      "text": "「でも ミミ の あした は」泡が、一度ぜんぶ消えて、それから、大きな一文が浮かんだ。"
     },
     {
       "type": "line",
@@ -217,15 +217,7 @@
       "lineId": "main.s2.eve.sazanami.line.006b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "泡が、一度ぜんぶ消えて、それから、大きな一文が浮かんだ。「さいてん ふのう」"
-    },
-    {
-      "type": "line",
-      "id": "main.s2.eve.sazanami.node.line.006c",
-      "lineId": "main.s2.eve.sazanami.line.006c",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "……不能? 「みたこと ない ものは てん が つけられない」",
+      "text": "「さいてん ふのう」……不能? 「みたこと ない ものは てん が つけられない」",
       "emotion": "revelation"
     },
     {

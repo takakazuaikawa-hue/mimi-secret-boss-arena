@@ -101,7 +101,7 @@
       "lineId": "main.s3.w24.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "今日、取りに来たものは、一つだけ。私の欄だ。"
+      "text": "今日、取りに来たものは、一つだけ。私の欄だ。鞄には名簿と、勝ちの記録と、写しの束。"
     },
     {
       "type": "line",
@@ -109,7 +109,7 @@
       "lineId": "main.s3.w24.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "鞄には名簿と、勝ちの記録と、写しの束。それから、三年ぶんの、この街での暮らし。"
+      "text": "それから、三年ぶんの、この街での暮らし。"
     },
     {
       "type": "line",
@@ -142,7 +142,7 @@
       "lineId": "main.s3.w24.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "先に、向こうの言い分。「預かりは、世界を回すための、正しい決まりでした」"
+      "text": "先に、向こうの言い分。"
     },
     {
       "type": "line",
@@ -150,7 +150,7 @@
       "lineId": "main.s3.w24.line.004b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "こちらは、二枚で返す。一枚——承認の欄は、空欄のままだ。"
+      "text": "「預かりは、世界を回すための、正しい決まりでした」こちらは、二枚で返す。"
     },
     {
       "type": "line",
@@ -158,7 +158,7 @@
       "lineId": "main.s3.w24.line.004c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "会場の皆が、もう見ている。二枚——但し書きには「女神の帰還まで」"
+      "text": "一枚——承認の欄は、空欄のままだ。会場の皆が、もう見ている。"
     },
     {
       "type": "line",
@@ -166,7 +166,7 @@
       "lineId": "main.s3.w24.line.004d",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "とあった。預かりは、期限つきだ。",
+      "text": "二枚——但し書きには「女神の帰還まで」とあった。預かりは、期限つきだ。",
       "emotion": "tension"
     },
     {
@@ -175,39 +175,7 @@
       "lineId": "main.s3.w24.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "三枚目は、紙ではなかった。湯の、貸し借りの帳面だ。"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.w24.node.line.005b",
-      "lineId": "main.s3.w24.line.005b",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "番台のおじいさんが、証言の席でゆっくり開いた。"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.w24.node.line.005c",
-      "lineId": "main.s3.w24.line.005c",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "「この子が来た晩、うちはタオルを一本、貸した。所有より先に、貸し借りがあった」"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.w24.node.line.005d",
-      "lineId": "main.s3.w24.line.005d",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "「——この街は最初っから、この子を客として迎えとるんだ」"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.w24.node.line.005e",
-      "lineId": "main.s3.w24.line.005e",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "会場が、今日いちばん静かになった。",
+      "text": "「——この街は最初っから、この子を客として迎えとるんだ」会場が、今日いちばん静かになった。",
       "emotion": "revelation"
     },
     {
@@ -257,7 +225,7 @@
       "lineId": "main.s3.w24.line.007b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「承認なき裁定は、当事者百名の連署をもって、破棄する」"
+      "text": "「承認なき裁定は、当事者百名の連署をもって、破棄する」一拍おいて、人間の言葉が続いた。"
     },
     {
       "type": "line",
@@ -265,15 +233,7 @@
       "lineId": "main.s3.w24.line.007c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "一拍おいて、人間の言葉が続いた。「——お嬢さん。よく集めなさった」"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.w24.node.line.007d",
-      "lineId": "main.s3.w24.line.007d",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "「四百年、誰もやらなかったことです」",
+      "text": "「——お嬢さん。よく集めなさった」「四百年、誰もやらなかったことです」",
       "emotion": "revelation"
     },
     {
@@ -365,7 +325,7 @@
       "lineId": "main.s3.w24.line.011b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「では、結びの興行を。この裁きの締めは、この街の作法で」"
+      "text": "「では、結びの興行を。この裁きの締めは、この街の作法で」準決勝の入場口が、光っている。"
     },
     {
       "type": "line",
@@ -373,7 +333,7 @@
       "lineId": "main.s3.w24.line.011c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "準決勝の入場口が、光っている。今日の砂は、私の砂だ。",
+      "text": "今日の砂は、私の砂だ。",
       "emotion": "resolve"
     },
     {

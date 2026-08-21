@@ -110,31 +110,7 @@
       "lineId": "main.s3.w02.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「転生協議会・必要悪委員会・回収局より参りました。ポラリスと申します」"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.w02.node.line.002b",
-      "lineId": "main.s3.w02.line.002b",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "名乗り、長くないですか。まだ続くんですか。"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.w02.node.line.002c",
-      "lineId": "main.s3.w02.line.002c",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "先週の、黒い封蝋の差出人だった。"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.w02.node.line.002d",
-      "lineId": "main.s3.w02.line.002d",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "今週の用は、向こうから来た。たぶん、大丈夫。"
+      "text": "たぶん、大丈夫。"
     },
     {
       "type": "direction",
@@ -187,7 +163,7 @@
       "lineId": "main.s3.w02.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "常連さんたちは、もう楽しみ始めていた。"
+      "text": "常連さんたちは、もう楽しみ始めていた。「うちの闘技場、ぜんぶでいくつあるんだ?」"
     },
     {
       "type": "line",
@@ -195,7 +171,7 @@
       "lineId": "main.s3.w02.line.004b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「うちの闘技場、ぜんぶでいくつあるんだ?」「胴元! 総数当てで一口!」"
+      "text": "「胴元! 総数当てで一口!」数える側は真顔、数えられる側はお祭り。"
     },
     {
       "type": "line",
@@ -203,7 +179,7 @@
       "lineId": "main.s3.w02.line.004c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "数える側は真顔、数えられる側はお祭り。ポラリスさんの眉が、少しだけ動いた。",
+      "text": "ポラリスさんの眉が、少しだけ動いた。",
       "emotion": "comic"
     },
     {
@@ -232,7 +208,7 @@
       "lineId": "main.s3.w02.line.005b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「——以上、かたちある品、七百二十一点」「ならびに、かたちの無いもの、一点」"
+      "text": "「——以上、かたちある品、七百二十一点」"
     },
     {
       "type": "line",
@@ -240,7 +216,7 @@
       "lineId": "main.s3.w02.line.005c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "かたちの無いもの? え、何ですかそれ。"
+      "text": "「ならびに、かたちの無いもの、一点」かたちの無いもの? え、何ですかそれ。"
     },
     {
       "type": "line",
@@ -282,7 +258,7 @@
       "lineId": "main.s3.w02.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "息を吸って、言った。「私は、私のものです」"
+      "text": "息を吸って、言った。「私は、私のものです」ポラリスさんは、咎めなかった。"
     },
     {
       "type": "line",
@@ -290,15 +266,7 @@
       "lineId": "main.s3.w02.line.007b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ポラリスさんは、咎めなかった。代わりに、静かに帳面を閉じた。"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.w02.node.line.007c",
-      "lineId": "main.s3.w02.line.007c",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "「では、異議をどうぞ。この街の作法で——砂の上で」",
+      "text": "代わりに、静かに帳面を閉じた。「では、異議をどうぞ。この街の作法で——砂の上で」",
       "emotion": "tension"
     },
     {
@@ -332,7 +300,7 @@
       "lineId": "main.s3.w02.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "白手袋の一団は、同じ礼をして帰った。"
+      "text": "白手袋の一団は、同じ礼をして帰った。貼り紙の隅に、日付だけが残る。"
     },
     {
       "type": "line",
@@ -340,7 +308,7 @@
       "lineId": "main.s3.w02.line.009b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "貼り紙の隅に、日付だけが残る。「執り納め: 年度の末日」"
+      "text": "「執り納め: 年度の末日」見送りながら、ぽつりと口から出た。"
     },
     {
       "type": "line",
@@ -348,20 +316,12 @@
       "lineId": "main.s3.w02.line.009c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "見送りながら、ぽつりと口から出た。「この世界の続きって、誰が書くんでしょうね」"
+      "text": "「この世界の続きって、誰が書くんでしょうね」仲間が、即答した。「ミミさんでしょ」"
     },
     {
       "type": "line",
       "id": "main.s3.w02.node.line.009d",
       "lineId": "main.s3.w02.line.009d",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "仲間が、即答した。「ミミさんでしょ」"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.w02.node.line.009e",
-      "lineId": "main.s3.w02.line.009e",
       "speakerId": "narrator",
       "mode": "thought",
       "text": "……いや、そんな軽く。耳が、ちょっと熱い。",

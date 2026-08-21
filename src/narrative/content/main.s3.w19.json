@@ -98,15 +98,7 @@
       "lineId": "main.s3.w19.line.001c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "大工さんが二人がかりで持ち上げて、「おっ」と声を出した。"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.w19.node.line.001d",
-      "lineId": "main.s3.w19.line.001d",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "……裏に、もう一枚、紙がある。",
+      "text": "大工さんが二人がかりで持ち上げて、「おっ」と声を出した。……裏に、もう一枚、紙がある。",
       "emotion": "tension"
     },
     {
@@ -230,7 +222,7 @@
       "lineId": "main.s3.w19.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "仲間が、そっと覗き込んだ。「……誰が、書いたんです?」"
+      "text": "仲間が、そっと覗き込んだ。"
     },
     {
       "type": "line",
@@ -238,7 +230,15 @@
       "lineId": "main.s3.w19.line.006b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "手紙を、裏まで返す——文字は、日付と本文だけ。……署名だけが、無いんだ。",
+      "text": "「……誰が、書いたんです?」手紙を、裏まで返す——文字は、日付と本文だけ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w19.node.line.006c",
+      "lineId": "main.s3.w19.line.006c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……署名だけが、無いんだ。",
       "emotion": "tension"
     },
     {

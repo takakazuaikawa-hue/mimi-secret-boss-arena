@@ -144,20 +144,12 @@
       "lineId": "main.s3.w09.line.003a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「今年も来るぞ、あの大玉!」ドン。"
+      "text": "「今年も来るぞ、あの大玉!」ドン。「ほら来た!」みんな、覚えているのだ。"
     },
     {
       "type": "line",
       "id": "main.s3.w09.node.line.003b",
       "lineId": "main.s3.w09.line.003b",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "「ほら来た!」みんな、覚えているのだ。"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.w09.node.line.003c",
-      "lineId": "main.s3.w09.line.003c",
       "speakerId": "narrator",
       "mode": "thought",
       "text": "だから拍手が、開く前に来る。花火師さん泣かせの、気の早い客席だ。",
@@ -169,7 +161,7 @@
       "lineId": "main.s3.w09.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "仲間が笑った。「初めの年は、みんな初めて見る顔だったのにな」"
+      "text": "仲間が笑った。「初めの年は、みんな初めて見る顔だったのにな」そうか。"
     },
     {
       "type": "line",
@@ -177,7 +169,7 @@
       "lineId": "main.s3.w09.line.004b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "そうか。覚える人が増えるほど、祭りは初めてじゃなくなる。"
+      "text": "覚える人が増えるほど、祭りは初めてじゃなくなる。"
     },
     {
       "type": "line",
@@ -248,7 +240,7 @@
       "lineId": "main.s3.w09.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "静かな席で、ノノさんが、ふと言った。「ミミさん、ここ」"
+      "text": "静かな席で、ノノさんが、ふと言った。"
     },
     {
       "type": "line",
@@ -256,7 +248,7 @@
       "lineId": "main.s3.w09.line.007b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "指の先、預かりの決まりの、但し書き。「期限: 女神の帰還まで」"
+      "text": "「ミミさん、ここ」指の先、預かりの決まりの、但し書き。「期限: 女神の帰還まで」"
     },
     {
       "type": "line",

@@ -137,7 +137,7 @@
       "lineId": "main.s3.w17.line.003b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ポラリスさんは、いない。「うちの局長は、非番でも非番の顔をしないので」"
+      "text": "ポラリスさんは、いない。"
     },
     {
       "type": "line",
@@ -145,7 +145,15 @@
       "lineId": "main.s3.w17.line.003c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "部下の人が、笑った。……役所にも、宴会の顔があるらしい。",
+      "text": "「うちの局長は、非番でも非番の顔をしないので」部下の人が、笑った。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w17.node.line.003d",
+      "lineId": "main.s3.w17.line.003d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……役所にも、宴会の顔があるらしい。",
       "emotion": "comic"
     },
     {
@@ -226,15 +234,7 @@
       "lineId": "main.s3.w17.line.006b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「三回目、ですか」って、杯が少しだけ、傾いた。"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.w17.node.line.006c",
-      "lineId": "main.s3.w17.line.006c",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "「——いい数字だ。まだ、疲れない数字です」",
+      "text": "「三回目、ですか」って、杯が少しだけ、傾いた。「——いい数字だ。まだ、疲れない数字です」",
       "emotion": "revelation"
     },
     {
@@ -251,7 +251,7 @@
       "lineId": "main.s3.w17.line.007b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "代わりに、一つだけ渡した。「今度、湯にでも。良い湯、知ってるんです」"
+      "text": "代わりに、一つだけ渡した。"
     },
     {
       "type": "line",
@@ -259,7 +259,7 @@
       "lineId": "main.s3.w17.line.007c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "言ってから、耳の先が、じんわり熱くなった。",
+      "text": "「今度、湯にでも。良い湯、知ってるんです」言ってから、耳の先が、じんわり熱くなった。",
       "emotion": "tender"
     },
     {

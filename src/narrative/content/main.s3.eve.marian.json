@@ -143,20 +143,12 @@
       "lineId": "main.s3.eve.marian.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "マリアンは、めざとい。「手、冷えてますね」"
+      "text": "マリアンは、めざとい。「手、冷えてますね」彼女の手のひらが、光りかけて——止まった。"
     },
     {
       "type": "line",
       "id": "main.s3.eve.marian.node.line.004b",
       "lineId": "main.s3.eve.marian.line.004b",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "彼女の手のひらが、光りかけて——止まった。"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.eve.marian.node.line.004c",
-      "lineId": "main.s3.eve.marian.line.004c",
       "speakerId": "narrator",
       "mode": "thought",
       "text": "一度、二度、三度目で、光は完全に消えた。治さない練習の、成果なのだ。",
@@ -193,7 +185,7 @@
       "lineId": "main.s3.eve.marian.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「治すとね、ミミ。無かったことに、なっちゃうんです」"
+      "text": "「治すとね、ミミ。無かったことに、なっちゃうんです」初めて、名前だけで呼ばれた。"
     },
     {
       "type": "line",
@@ -201,7 +193,7 @@
       "lineId": "main.s3.eve.marian.line.006b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "初めて、名前だけで呼ばれた。耳が、きゅっと熱くなる。"
+      "text": "耳が、きゅっと熱くなる。「明日の緊張は、無かったことにしたくないでしょう?」"
     },
     {
       "type": "line",
@@ -209,7 +201,7 @@
       "lineId": "main.s3.eve.marian.line.006c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「明日の緊張は、無かったことにしたくないでしょう?」「大事な日の、証拠だから」",
+      "text": "「大事な日の、証拠だから」",
       "emotion": "revelation"
     },
     {

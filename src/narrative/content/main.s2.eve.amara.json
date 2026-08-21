@@ -101,20 +101,12 @@
       "lineId": "main.s2.eve.amara.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "本日の被告は「明日の決勝の緊張」原告は、私。"
+      "text": "本日の被告は「明日の決勝の緊張」原告は、私。傍聴席は、りんご飴を持った通行人の皆さん。"
     },
     {
       "type": "line",
       "id": "main.s2.eve.amara.node.line.002b",
       "lineId": "main.s2.eve.amara.line.002b",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "傍聴席は、りんご飴を持った通行人の皆さん。"
-    },
-    {
-      "type": "line",
-      "id": "main.s2.eve.amara.node.line.002c",
-      "lineId": "main.s2.eve.amara.line.002c",
       "speakerId": "narrator",
       "mode": "thought",
       "text": "裁判長のチョークが、慣れた手つきで証言台の四角を描いた。",
@@ -134,7 +126,7 @@
       "lineId": "main.s2.eve.amara.line.003b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "……台帳が選び抜いた、四百年ぶんの全盛期。「怖いですか」"
+      "text": "……台帳が選び抜いた、四百年ぶんの全盛期。「怖いですか」耳が、正直に、へなっと倒れた。"
     },
     {
       "type": "line",
@@ -142,23 +134,7 @@
       "lineId": "main.s2.eve.amara.line.003c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "耳が、正直に、へなっと倒れた。……はい。"
-    },
-    {
-      "type": "line",
-      "id": "main.s2.eve.amara.node.line.003d",
-      "lineId": "main.s2.eve.amara.line.003d",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "正直に言うと、傍聴席から「わかるよ」と声が飛んだ。"
-    },
-    {
-      "type": "line",
-      "id": "main.s2.eve.amara.node.line.003e",
-      "lineId": "main.s2.eve.amara.line.003e",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "良い法廷だ。",
+      "text": "……はい。正直に言うと、傍聴席から「わかるよ」と声が飛んだ。良い法廷だ。",
       "emotion": "comic"
     },
     {
@@ -167,7 +143,7 @@
       "lineId": "main.s2.eve.amara.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "アマラは、重々しく頷いて、チョークで大きく書いた。「証拠一。この人は、怖くても出る」"
+      "text": "アマラは、重々しく頷いて、チョークで大きく書いた。"
     },
     {
       "type": "line",
@@ -175,7 +151,7 @@
       "lineId": "main.s2.eve.amara.line.004b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "証拠二、九つの封蝋。証拠三、赤線五本。"
+      "text": "「証拠一。この人は、怖くても出る」証拠二、九つの封蝋。証拠三、赤線五本。"
     },
     {
       "type": "line",
@@ -192,20 +168,12 @@
       "lineId": "main.s2.eve.amara.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「では、判決」傍聴席が、静まった。"
+      "text": "「では、判決」傍聴席が、静まった。アマラはチョークを置いて、初めて裁判長の顔をやめた。"
     },
     {
       "type": "line",
       "id": "main.s2.eve.amara.node.line.005b",
       "lineId": "main.s2.eve.amara.line.005b",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "アマラはチョークを置いて、初めて裁判長の顔をやめた。"
-    },
-    {
-      "type": "line",
-      "id": "main.s2.eve.amara.node.line.005c",
-      "lineId": "main.s2.eve.amara.line.005c",
       "speakerId": "narrator",
       "mode": "thought",
       "text": "「——判決は、出しません。続きが見たいので」",

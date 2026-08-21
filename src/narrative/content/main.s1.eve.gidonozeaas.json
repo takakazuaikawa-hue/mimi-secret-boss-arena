@@ -82,23 +82,7 @@
       "lineId": "main.s1.eve.gidonozeaas.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "彼は夜店を、一軒ずつ真剣に食べ歩いた。りんご飴に「87点。飴の厚みに哲学がある」"
-    },
-    {
-      "type": "line",
-      "id": "main.s1.eve.gidonozeaas.node.line.002b",
-      "lineId": "main.s1.eve.gidonozeaas.line.002b",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "焼き菓子に「72点。焼き目は満点、余熱で減点」"
-    },
-    {
-      "type": "line",
-      "id": "main.s1.eve.gidonozeaas.node.line.002c",
-      "lineId": "main.s1.eve.gidonozeaas.line.002c",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "食レポの星が、夜店通りに落ちていく。店主たちは、なぜか誇らしげだった。",
+      "text": "店主たちは、なぜか誇らしげだった。",
       "emotion": "comic"
     },
     {
@@ -132,31 +116,7 @@
       "lineId": "main.s1.eve.gidonozeaas.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "行列は、長かった。「並ぶぞ」"
-    },
-    {
-      "type": "line",
-      "id": "main.s1.eve.gidonozeaas.node.line.004b",
-      "lineId": "main.s1.eve.gidonozeaas.line.004b",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "「待てます」と、彼は言った。"
-    },
-    {
-      "type": "line",
-      "id": "main.s1.eve.gidonozeaas.node.line.004c",
-      "lineId": "main.s1.eve.gidonozeaas.line.004c",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "「三百年待った身だ。この行列は、まばたきのようなものだ」"
-    },
-    {
-      "type": "line",
-      "id": "main.s1.eve.gidonozeaas.node.line.004d",
-      "lineId": "main.s1.eve.gidonozeaas.line.004d",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "まばたきの間に、私たちは決勝の話を一度もせず、くだらない話を二十個した。",
+      "text": "「三百年待った身だ。この行列は、まばたきのようなものだ」まばたきの間に、私たちは決勝の話を一度もせず、くだらない話を二十個した。",
       "emotion": "tender"
     },
     {
@@ -165,7 +125,7 @@
       "lineId": "main.s1.eve.gidonozeaas.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ミニパフェは、二人で分けても三口ぶんしかなかった。"
+      "text": "ミニパフェは、二人で分けても三口ぶんしかなかった。彼は一口を、長く長く味わった。"
     },
     {
       "type": "line",
@@ -173,7 +133,7 @@
       "lineId": "main.s1.eve.gidonozeaas.line.005b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "彼は一口を、長く長く味わった。それから、静かに言った。"
+      "text": "それから、静かに言った。「98点」"
     },
     {
       "type": "line",
@@ -181,15 +141,7 @@
       "lineId": "main.s1.eve.gidonozeaas.line.005c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「98点」……過去最高点、らしい。"
-    },
-    {
-      "type": "line",
-      "id": "main.s1.eve.gidonozeaas.node.line.005d",
-      "lineId": "main.s1.eve.gidonozeaas.line.005d",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "「減点の2点は?」と聞くと、彼はスプーンを置いた。",
+      "text": "……過去最高点、らしい。「減点の2点は?」と聞くと、彼はスプーンを置いた。",
       "emotion": "tender"
     },
     {
@@ -231,7 +183,7 @@
       "lineId": "main.s1.eve.gidonozeaas.line.007b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「全力の私は、たぶん、少しうるさい」"
+      "text": "「全力の私は、たぶん、少しうるさい」名前で呼ばれて、耳が、ぴんと立った。"
     },
     {
       "type": "line",
@@ -239,7 +191,7 @@
       "lineId": "main.s1.eve.gidonozeaas.line.007c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "名前で呼ばれて、耳が、ぴんと立った。「知ってます」"
+      "text": "「知ってます」と返す声が、半拍遅れた。"
     },
     {
       "type": "line",
@@ -247,7 +199,7 @@
       "lineId": "main.s1.eve.gidonozeaas.line.007d",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "と返す声が、半拍遅れた。「……見ていてくれるか」"
+      "text": "「……見ていてくれるか」見ています、監督席から、ずっと。"
     },
     {
       "type": "line",
@@ -255,7 +207,7 @@
       "lineId": "main.s1.eve.gidonozeaas.line.007e",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "見ています、監督席から、ずっと。それが仕事で——仕事じゃなくても、見ている。",
+      "text": "それが仕事で——仕事じゃなくても、見ている。",
       "emotion": "revelation"
     },
     {

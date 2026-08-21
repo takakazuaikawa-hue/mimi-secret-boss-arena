@@ -109,7 +109,7 @@
       "lineId": "main.s2.eve.night-eater.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "消し忘れの倉庫の灯りも、一口。屋台のおじさんが「うちの余り火もどうだい」"
+      "text": "消し忘れの倉庫の灯りも、一口。屋台のおじさんが「うちの余り火もどうだい」と差し出す。"
     },
     {
       "type": "line",
@@ -117,7 +117,7 @@
       "lineId": "main.s2.eve.night-eater.line.002c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "と差し出す。この街は、彼の食事に、もうすっかり慣れている。",
+      "text": "この街は、彼の食事に、もうすっかり慣れている。",
       "emotion": "comic"
     },
     {
@@ -126,7 +126,7 @@
       "lineId": "main.s2.eve.night-eater.line.003a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "通りの果てで、彼はふと足を止めた。「ミミさん。少し、暗いところを歩きましょう」"
+      "text": "通りの果てで、彼はふと足を止めた。"
     },
     {
       "type": "line",
@@ -134,12 +134,20 @@
       "lineId": "main.s2.eve.night-eater.line.003b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "耳が一瞬、警戒するように立った。祭りの裏の、灯りのない路地だ。"
+      "text": "「ミミさん。少し、暗いところを歩きましょう」耳が一瞬、警戒するように立った。"
     },
     {
       "type": "line",
       "id": "main.s2.eve.night-eater.node.line.003c",
       "lineId": "main.s2.eve.night-eater.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "祭りの裏の、灯りのない路地だ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.night-eater.node.line.003d",
+      "lineId": "main.s2.eve.night-eater.line.003d",
       "speakerId": "narrator",
       "mode": "thought",
       "text": "……この人の誘い文句は、いつも一見、不穏で、いつも、外れない。",
@@ -151,7 +159,7 @@
       "lineId": "main.s2.eve.night-eater.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "暗い路地の真ん中で、彼は言った。「見えますか」"
+      "text": "暗い路地の真ん中で、彼は言った。「見えますか」見上げると——星だった。"
     },
     {
       "type": "line",
@@ -159,7 +167,7 @@
       "lineId": "main.s2.eve.night-eater.line.004b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "見上げると——星だった。提灯の光が届かない場所にだけ、星が満ちている。"
+      "text": "提灯の光が届かない場所にだけ、星が満ちている。"
     },
     {
       "type": "line",

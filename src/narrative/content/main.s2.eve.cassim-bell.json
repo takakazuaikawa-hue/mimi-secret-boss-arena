@@ -101,23 +101,7 @@
       "lineId": "main.s2.eve.cassim-bell.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "窓口の脇に、砂時計が置いてあるのだ。休止札と、対の道具だ。"
-    },
-    {
-      "type": "line",
-      "id": "main.s2.eve.cassim-bell.node.line.002b",
-      "lineId": "main.s2.eve.cassim-bell.line.002b",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "「十五分の休止を、取るようになったんです」"
-    },
-    {
-      "type": "line",
-      "id": "main.s2.eve.cassim-bell.node.line.002c",
-      "lineId": "main.s2.eve.cassim-bell.line.002c",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "七十二時間、働き続けていた人の、これは革命だった。",
+      "text": "「十五分の休止を、取るようになったんです」七十二時間、働き続けていた人の、これは革命だった。",
       "emotion": "tender"
     },
     {

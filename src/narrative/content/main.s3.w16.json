@@ -167,7 +167,7 @@
       "lineId": "main.s3.w16.line.004c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「……良い構えです。去年より、脇が締まった」"
+      "text": "「……良い構えです。去年より、脇が締まった」耳が、勝手にぴんと立った。"
     },
     {
       "type": "line",
@@ -175,7 +175,7 @@
       "lineId": "main.s3.w16.line.004d",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "耳が、勝手にぴんと立った。……去年、と言いましたか、いま。",
+      "text": "……去年、と言いましたか、いま。",
       "emotion": "tension"
     },
     {
@@ -184,7 +184,7 @@
       "lineId": "main.s3.w16.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "振り向いたときには、もう仕事の顔だった。「失礼。初めてお会いした気が、しないもので」"
+      "text": "振り向いたときには、もう仕事の顔だった。"
     },
     {
       "type": "line",
@@ -192,7 +192,15 @@
       "lineId": "main.s3.w16.line.005b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "そのまま、行ってしまう。まっすぐで、少し疲れた背中だった。",
+      "text": "「失礼。初めてお会いした気が、しないもので」そのまま、行ってしまう。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w16.node.line.005c",
+      "lineId": "main.s3.w16.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "まっすぐで、少し疲れた背中だった。",
       "emotion": "tension"
     },
     {
@@ -268,7 +276,7 @@
       "lineId": "main.s3.w16.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "入場の前、初陣の子が聞いた。「今日は、誰に見せて勝ちます?」"
+      "text": "入場の前、初陣の子が聞いた。"
     },
     {
       "type": "line",
@@ -276,7 +284,7 @@
       "lineId": "main.s3.w16.line.009b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "良い質問だ。——全員に、です。",
+      "text": "「今日は、誰に見せて勝ちます?」良い質問だ。——全員に、です。",
       "emotion": "resolve"
     },
     {

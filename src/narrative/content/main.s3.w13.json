@@ -134,7 +134,7 @@
       "lineId": "main.s3.w13.line.003a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "受付の若い白手袋さんが、紙を見て、目を白黒させた。"
+      "text": "受付の若い白手袋さんが、紙を見て、目を白黒させた。「え、あの、これは、その」"
     },
     {
       "type": "line",
@@ -142,7 +142,7 @@
       "lineId": "main.s3.w13.line.003b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「え、あの、これは、その」「訴えです。私の欄を、返してもらいます」"
+      "text": "「訴えです。私の欄を、返してもらいます」奥からポラリスさんが出て、紙を検めた。"
     },
     {
       "type": "line",
@@ -150,7 +150,7 @@
       "lineId": "main.s3.w13.line.003c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "奥からポラリスさんが出て、紙を検めた。長い、長い、間があった。",
+      "text": "長い、長い、間があった。",
       "emotion": "tension"
     },
     {
@@ -209,23 +209,7 @@
       "lineId": "main.s3.w13.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ポラリスさんは、五人の欄を、長いこと見ていた。新しい頁に、定規でまっすぐ、線を引いた。"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.w13.node.line.006b",
-      "lineId": "main.s3.w13.line.006b",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "「——受け付けます。裁きの場は、年度の末日です」"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.w13.node.line.006c",
-      "lineId": "main.s3.w13.line.006c",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "貼り紙の日付が、締切から、約束に変わった。",
+      "text": "「——受け付けます。裁きの場は、年度の末日です」貼り紙の日付が、締切から、約束に変わった。",
       "emotion": "revelation"
     },
     {
@@ -329,7 +313,7 @@
       "lineId": "main.s3.w13.line.010a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "祝いの帳面の一頁目に、ノノさんが小さく書き込んでいた。「間に合わせましょうね」"
+      "text": "祝いの帳面の一頁目に、ノノさんが小さく書き込んでいた。"
     },
     {
       "type": "line",
@@ -337,7 +321,7 @@
       "lineId": "main.s3.w13.line.010b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "何を、とは書いていない。なのに、伝わった。",
+      "text": "「間に合わせましょうね」何を、とは書いていない。なのに、伝わった。",
       "emotion": "tender"
     },
     {

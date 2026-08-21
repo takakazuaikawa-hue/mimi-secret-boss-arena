@@ -65,7 +65,7 @@
       "lineId": "main.s1.eve.ushiro.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "前夜祭を、うしろと回ることになった。「二人で」"
+      "text": "前夜祭を、うしろと回ることになった。「二人で」と言うべきか、少し迷う。"
     },
     {
       "type": "line",
@@ -73,7 +73,7 @@
       "lineId": "main.s1.eve.ushiro.line.001b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "と言うべきか、少し迷う。彼はいつも、私の背後にいる。"
+      "text": "彼はいつも、私の背後にいる。振り向いても、背後にいる。"
     },
     {
       "type": "line",
@@ -81,7 +81,7 @@
       "lineId": "main.s1.eve.ushiro.line.001c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "振り向いても、背後にいる。並んで歩くという概念に、今夜、初めて挑戦してもらう。",
+      "text": "並んで歩くという概念に、今夜、初めて挑戦してもらう。",
       "emotion": "comic"
     },
     {
@@ -139,15 +139,7 @@
       "lineId": "main.s1.eve.ushiro.line.003c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「お客さん、うしろの人も写ってるよ、全部の写真に」"
-    },
-    {
-      "type": "line",
-      "id": "main.s1.eve.ushiro.node.line.003d",
-      "lineId": "main.s1.eve.ushiro.line.003d",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "知ってます。百二十七枚、全部に。",
+      "text": "「お客さん、うしろの人も写ってるよ、全部の写真に」知ってます。百二十七枚、全部に。",
       "emotion": "comic"
     },
     {
@@ -189,7 +181,7 @@
       "lineId": "main.s1.eve.ushiro.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "帰り道の橋の上で、うしろの声が言った。「明日、決勝だ」"
+      "text": "帰り道の橋の上で、うしろの声が言った。「明日、決勝だ」はい。"
     },
     {
       "type": "line",
@@ -197,7 +189,7 @@
       "lineId": "main.s1.eve.ushiro.line.005b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "はい。「おれは、背中を守るのが仕事だ」「……だから、ミミは、前だけ見ていればいい」"
+      "text": "「おれは、背中を守るのが仕事だ」「……だから、ミミは、前だけ見ていればいい」"
     },
     {
       "type": "line",
@@ -246,7 +238,7 @@
       "lineId": "main.s1.eve.ushiro.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "別れ際——三秒、彼は正面に立った。まっすぐ目が合って、「明日、勝とう」"
+      "text": "別れ際——三秒、彼は正面に立った。"
     },
     {
       "type": "line",
@@ -254,7 +246,7 @@
       "lineId": "main.s1.eve.ushiro.line.007b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "と言って、また背後に戻った。三秒の正面は、この人の最大級だ。"
+      "text": "まっすぐ目が合って、「明日、勝とう」と言って、また背後に戻った。"
     },
     {
       "type": "line",
@@ -262,7 +254,7 @@
       "lineId": "main.s1.eve.ushiro.line.007c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私は今夜の三秒を、手帳に書かずに、覚えておくことにした。",
+      "text": "三秒の正面は、この人の最大級だ。私は今夜の三秒を、手帳に書かずに、覚えておくことにした。",
       "emotion": "tender"
     },
     {

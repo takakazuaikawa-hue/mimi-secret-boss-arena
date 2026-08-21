@@ -73,7 +73,7 @@
       "lineId": "main.s1.eve.minato.line.001b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "彼は屋台の並びを見渡して、真剣に言った。「……多いな。選択肢が」"
+      "text": "彼は屋台の並びを見渡して、真剣に言った。「……多いな。選択肢が」始まった。"
     },
     {
       "type": "line",
@@ -81,7 +81,7 @@
       "lineId": "main.s1.eve.minato.line.001c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "始まった。この人の、いつもの戦いに、耳がぴくりと動く。",
+      "text": "この人の、いつもの戦いに、耳がぴくりと動く。",
       "emotion": "comic"
     },
     {
@@ -198,7 +198,7 @@
       "lineId": "main.s1.eve.minato.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「明日の決勝は、終わっても、終わらないんだろう?」"
+      "text": "「明日の決勝は、終わっても、終わらないんだろう?」と彼は続けた。"
     },
     {
       "type": "line",
@@ -206,7 +206,7 @@
       "lineId": "main.s1.eve.minato.line.006b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "と彼は続けた。「続きがある。この職場は、そこがいい」"
+      "text": "「続きがある。この職場は、そこがいい」選べない人が、この職場を選んでくれた。"
     },
     {
       "type": "line",
@@ -214,7 +214,7 @@
       "lineId": "main.s1.eve.minato.line.006c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "選べない人が、この職場を選んでくれた。それが今夜は、じんわり嬉しい。",
+      "text": "それが今夜は、じんわり嬉しい。",
       "emotion": "revelation"
     },
     {
@@ -231,7 +231,7 @@
       "lineId": "main.s1.eve.minato.line.007b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「それ、名前を付けていいか」どうぞ。「……考えておく」"
+      "text": "「それ、名前を付けていいか」どうぞ。"
     },
     {
       "type": "line",
@@ -239,7 +239,7 @@
       "lineId": "main.s1.eve.minato.line.007c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "決まるのは、たぶん来週だ。楽しみに待つことにする。",
+      "text": "「……考えておく」決まるのは、たぶん来週だ。楽しみに待つことにする。",
       "emotion": "tender"
     },
     {

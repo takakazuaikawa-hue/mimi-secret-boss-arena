@@ -151,15 +151,7 @@
       "lineId": "main.s3.eve.wolf-nine.line.004b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "夜店の通りの端まで来て、私は気づいた。「九種目めは?」"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.eve.wolf-nine.node.line.004c",
-      "lineId": "main.s3.eve.wolf-nine.line.004c",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "挑戦状は、八通しか来ていない。"
+      "text": "夜店の通りの端まで来て、私は気づいた。「九種目めは?」挑戦状は、八通しか来ていない。"
     },
     {
       "type": "line",
@@ -175,7 +167,7 @@
       "lineId": "main.s3.eve.wolf-nine.line.005b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「九つ目は……挑戦状に、書けなかった」"
+      "text": "「九つ目は……挑戦状に、書けなかった」書けない種目が、あるんですか。"
     },
     {
       "type": "line",
@@ -183,7 +175,7 @@
       "lineId": "main.s3.eve.wolf-nine.line.005c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "書けない種目が、あるんですか。「ある。勝ち負けが、無いやつだ」"
+      "text": "「ある。勝ち負けが、無いやつだ」"
     },
     {
       "type": "line",
@@ -216,23 +208,7 @@
       "lineId": "main.s3.eve.wolf-nine.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "返事は、彼の流儀で返すことにした。人差し指を立てて、宣言する。"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.eve.wolf-nine.node.line.007b",
-      "lineId": "main.s3.eve.wolf-nine.line.007b",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "「受けて立ちます。ただし、次の祭りの一種目めは、私が選びます」"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.eve.wolf-nine.node.line.007c",
-      "lineId": "main.s3.eve.wolf-nine.line.007c",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "狼の尻尾が、正直に一回転した。"
+      "text": "「受けて立ちます。ただし、次の祭りの一種目めは、私が選びます」狼の尻尾が、正直に一回転した。"
     },
     {
       "type": "line",

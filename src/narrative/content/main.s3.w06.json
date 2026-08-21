@@ -85,23 +85,7 @@
       "lineId": "main.s3.w06.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "受付の前に、朝から壇が組まれていた。真新しい木の匂いがする。"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.w06.node.line.001b",
-      "lineId": "main.s3.w06.line.001b",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "幕には大きく、「棚卸しについての、ご説明の会」"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.w06.node.line.001c",
-      "lineId": "main.s3.w06.line.001c",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "あの長い名前の役所、今週は街に説明したいらしい。",
+      "text": "幕には大きく、「棚卸しについての、ご説明の会」あの長い名前の役所、今週は街に説明したいらしい。",
       "emotion": "comic"
     },
     {
@@ -134,31 +118,7 @@
       "lineId": "main.s3.w06.line.003a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "壇に上がったのは、判子の役所の人だった。"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.w06.node.line.003b",
-      "lineId": "main.s3.w06.line.003b",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "魔法ギルドの係さん。分厚い帳面を抱えている。"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.w06.node.line.003c",
-      "lineId": "main.s3.w06.line.003c",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "「経緯をご説明します。四百年前の取り決めに基づき、代々判を押して参りました」"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.w06.node.line.003d",
-      "lineId": "main.s3.w06.line.003d",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "生真面目な声だ。四百年ぶんの判の名前を、本当に順に読み始めた。",
+      "text": "四百年ぶんの判の名前を、本当に順に読み始めた。",
       "emotion": "comic"
     },
     {
@@ -179,23 +139,7 @@
       "lineId": "main.s3.w06.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "客席の常連が、欠伸を始めたころだった。読み上げが、止まった。"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.w06.node.line.004b",
-      "lineId": "main.s3.w06.line.004b",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "「取り決めの、承認の欄。えー……女神さまの、判は……」"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.w06.node.line.004c",
-      "lineId": "main.s3.w06.line.004c",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "係の人は頁を、近づけ、遠ざけ、裏まで返した。「……空欄、ですね」",
+      "text": "「……空欄、ですね」",
       "emotion": "tension"
     },
     {
@@ -212,7 +156,7 @@
       "lineId": "main.s3.w06.line.005b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「押し忘れかい!」「四百年も!?」"
+      "text": "「押し忘れかい!」「四百年も!?」笑い声とどよめきが、半々に混ざる。"
     },
     {
       "type": "line",
@@ -220,7 +164,7 @@
       "lineId": "main.s3.w06.line.005c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "笑い声とどよめきが、半々に混ざる。この街の観客は、見せ場を聞き逃さない。",
+      "text": "この街の観客は、見せ場を聞き逃さない。",
       "emotion": "comic"
     },
     {
@@ -270,15 +214,7 @@
       "lineId": "main.s3.w06.line.007b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「本日の説明は、ここまでです」"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.w06.node.line.007c",
-      "lineId": "main.s3.w06.line.007c",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "顔は、変わらない。閉じさせる手が、少しだけ速かった。",
+      "text": "「本日の説明は、ここまでです」顔は、変わらない。閉じさせる手が、少しだけ速かった。",
       "emotion": "tension"
     },
     {
@@ -287,7 +223,7 @@
       "lineId": "main.s3.w06.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "解散の人波の中で、仲間が小声で言った。"
+      "text": "解散の人波の中で、仲間が小声で言った。「ミミさん、今の、見ました?」"
     },
     {
       "type": "line",
@@ -295,15 +231,7 @@
       "lineId": "main.s3.w06.line.008b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「ミミさん、今の、見ました?」「見ました。皆さんも、見ましたね」"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.w06.node.line.008c",
-      "lineId": "main.s3.w06.line.008c",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "見たのは、うちだけじゃない。街ぜんぶだ。",
+      "text": "「見ました。皆さんも、見ましたね」見たのは、うちだけじゃない。街ぜんぶだ。",
       "emotion": "resolve"
     },
     {
@@ -312,7 +240,7 @@
       "lineId": "main.s3.w06.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "翌朝、新しい掲示が出た。「当該の帳面は、調査のため、しばらくお休みします」"
+      "text": "翌朝、新しい掲示が出た。"
     },
     {
       "type": "line",
@@ -320,7 +248,7 @@
       "lineId": "main.s3.w06.line.009b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "読み下すと——隠された、ということ。でも、遅い。"
+      "text": "「当該の帳面は、調査のため、しばらくお休みします」読み下すと——隠された、ということ。"
     },
     {
       "type": "line",
@@ -328,7 +256,7 @@
       "lineId": "main.s3.w06.line.009c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "あの空欄は、もう街いちばんの見せ場だ。",
+      "text": "でも、遅い。あの空欄は、もう街いちばんの見せ場だ。",
       "emotion": "tension"
     },
     {

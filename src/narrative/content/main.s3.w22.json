@@ -134,23 +134,7 @@
       "lineId": "main.s3.w22.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「同じ一年を、良い再演にする側に回れば、数は、ただの仕事になる」"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.w22.node.line.004b",
-      "lineId": "main.s3.w22.line.004b",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "「……そうやって、私は会社の人間になりました。長く、なりました」"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.w22.node.line.004c",
-      "lineId": "main.s3.w22.line.004c",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "湯気の向こうの背中は、三年よりずっと、重い年月の形をしていた。",
+      "text": "「……そうやって、私は会社の人間になりました。長く、なりました」湯気の向こうの背中は、三年よりずっと、重い年月の形をしていた。",
       "emotion": "tender"
     },
     {
@@ -184,7 +168,7 @@
       "lineId": "main.s3.w22.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私は、名簿を差し出した。「百人目を、お願いします」"
+      "text": "私は、名簿を差し出した。「百人目を、お願いします」言葉は、選ばなかった。"
     },
     {
       "type": "line",
@@ -192,15 +176,7 @@
       "lineId": "main.s3.w22.line.006b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "言葉は、選ばなかった。室長は長いこと見て、手を拭いて、筆を取った。"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.w22.node.line.006c",
-      "lineId": "main.s3.w22.line.006c",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "「——最後に、もう一度だけ、疑います」",
+      "text": "室長は長いこと見て、手を拭いて、筆を取った。「——最後に、もう一度だけ、疑います」",
       "emotion": "resolve"
     },
     {
@@ -225,7 +201,7 @@
       "lineId": "main.s3.w22.line.007c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "——帰り道、焼き餅屋のおばちゃんと、目が合った。「おや、ミミさん。今日は早いね」"
+      "text": "——帰り道、焼き餅屋のおばちゃんと、目が合った。"
     },
     {
       "type": "line",
@@ -233,7 +209,7 @@
       "lineId": "main.s3.w22.line.007d",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "見えて、いる。耳が、かっと熱くなった。",
+      "text": "「おや、ミミさん。今日は早いね」見えて、いる。耳が、かっと熱くなった。",
       "emotion": "revelation"
     },
     {
@@ -267,7 +243,7 @@
       "lineId": "main.s3.w22.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "板の前で、常連たちが騒いでいた。"
+      "text": "板の前で、常連たちが騒いでいた。「ミミさんの枠、動いたぞ!」"
     },
     {
       "type": "line",
@@ -275,15 +251,7 @@
       "lineId": "main.s3.w22.line.009b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「ミミさんの枠、動いたぞ!」「戻ってきたのか!」"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.w22.node.line.009c",
-      "lineId": "main.s3.w22.line.009c",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "ただいま、です。倍率は、聞かないでおいた。",
+      "text": "「戻ってきたのか!」ただいま、です。倍率は、聞かないでおいた。",
       "emotion": "comic"
     },
     {

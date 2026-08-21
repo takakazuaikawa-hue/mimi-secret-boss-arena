@@ -109,15 +109,7 @@
       "lineId": "main.s2.eve.shahar.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "雲を一枚抜けたところで、止まった。"
-    },
-    {
-      "type": "line",
-      "id": "main.s2.eve.shahar.node.line.002c",
-      "lineId": "main.s2.eve.shahar.line.002c",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "ここが、彼女の言う「良い席」だ。",
+      "text": "雲を一枚抜けたところで、止まった。ここが、彼女の言う「良い席」だ。",
       "emotion": "tender"
     },
     {
@@ -134,7 +126,7 @@
       "lineId": "main.s2.eve.shahar.line.003b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「身じろぎ一つで、三県の天気が変わるんですよね」"
+      "text": "「身じろぎ一つで、三県の天気が変わるんですよね」と言ったら、少し得意げな気配がした。"
     },
     {
       "type": "line",
@@ -142,7 +134,7 @@
       "lineId": "main.s2.eve.shahar.line.003c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "と言ったら、少し得意げな気配がした。「今夜は、行儀よくしてる」",
+      "text": "「今夜は、行儀よくしてる」",
       "emotion": "comic"
     },
     {
@@ -176,22 +168,6 @@
       "lineId": "main.s2.eve.shahar.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「観客が、空を見上げる興行にしたいの。あなたの明日は——空まで含めて、新作だから」"
-    },
-    {
-      "type": "line",
-      "id": "main.s2.eve.shahar.node.line.005b",
-      "lineId": "main.s2.eve.shahar.line.005b",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "四百年生きた竜が、一晩かけて、たった三分の晴れ間を作る。"
-    },
-    {
-      "type": "line",
-      "id": "main.s2.eve.shahar.node.line.005c",
-      "lineId": "main.s2.eve.shahar.line.005c",
-      "speakerId": "narrator",
-      "mode": "thought",
       "text": "規模のおかしい応援を、私は今、受けている。",
       "emotion": "revelation"
     },
@@ -201,7 +177,7 @@
       "lineId": "main.s2.eve.shahar.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "お礼の言葉を探していたら、先に聞かれた。「ミミ。怖い?」"
+      "text": "お礼の言葉を探していたら、先に聞かれた。"
     },
     {
       "type": "line",
@@ -209,7 +185,7 @@
       "lineId": "main.s2.eve.shahar.line.006b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "名前の呼び方が、風のように軽かった。……少し。"
+      "text": "「ミミ。怖い?」名前の呼び方が、風のように軽かった。"
     },
     {
       "type": "line",
@@ -217,7 +193,7 @@
       "lineId": "main.s2.eve.shahar.line.006c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "耳が、思わず、ぴくりと動く。「ん。私も、初めて人前で飛んだ日は、怖かった」"
+      "text": "……少し。耳が、思わず、ぴくりと動く。"
     },
     {
       "type": "line",
@@ -225,7 +201,7 @@
       "lineId": "main.s2.eve.shahar.line.006d",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "四百年前の話を、昨日のことみたいに言う。",
+      "text": "「ん。私も、初めて人前で飛んだ日は、怖かった」四百年前の話を、昨日のことみたいに言う。",
       "emotion": "tender"
     },
     {

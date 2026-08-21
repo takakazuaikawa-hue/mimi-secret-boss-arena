@@ -129,7 +129,7 @@
       "lineId": "main.s3.w14.line.003a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "おじいさんが番台の下から、古い帳面を出した。湯の貸し借りの帳面らしい。"
+      "text": "おじいさんが番台の下から、古い帳面を出した。"
     },
     {
       "type": "line",
@@ -137,7 +137,7 @@
       "lineId": "main.s3.w14.line.003b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "三年前の日付を、とん、と指す。「タオル一本、貸し。未返却」"
+      "text": "湯の貸し借りの帳面らしい。三年前の日付を、とん、と指す。"
     },
     {
       "type": "line",
@@ -145,7 +145,7 @@
       "lineId": "main.s3.w14.line.003c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "借り主の欄に——耳が、先に冷えた。私の名前だった。",
+      "text": "「タオル一本、貸し。未返却」借り主の欄に——耳が、先に冷えた。私の名前だった。",
       "emotion": "tension"
     },
     {
@@ -309,20 +309,12 @@
       "lineId": "main.s3.w14.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "路地を出ると、仲間が名簿を覗いた。"
+      "text": "路地を出ると、仲間が名簿を覗いた。「二人。あと、九十八ですね」この先も、道は長い。"
     },
     {
       "type": "line",
       "id": "main.s3.w14.node.line.009b",
       "lineId": "main.s3.w14.line.009b",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "「二人。あと、九十八ですね」この先も、道は長い。"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.w14.node.line.009c",
-      "lineId": "main.s3.w14.line.009c",
       "speakerId": "narrator",
       "mode": "thought",
       "text": "長いが、湯はあと九つ。次は、山の湯だそうです。",

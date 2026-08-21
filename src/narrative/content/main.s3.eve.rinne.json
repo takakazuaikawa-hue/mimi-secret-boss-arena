@@ -76,22 +76,6 @@
       "lineId": "main.s3.eve.rinne.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "前夜祭を、リンネと回ることになった。待ち合わせの目印は、「いちばん行列の短い屋台」"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.eve.rinne.node.line.001b",
-      "lineId": "main.s3.eve.rinne.line.001b",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "彼女がいると、賭け事の屋台は商売にならない。"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.eve.rinne.node.line.001c",
-      "lineId": "main.s3.eve.rinne.line.001c",
-      "speakerId": "narrator",
-      "mode": "thought",
       "text": "的中固定を、壊した側と壊された側、両方を知る人だ。",
       "emotion": "comic"
     },
@@ -143,7 +127,7 @@
       "lineId": "main.s3.eve.rinne.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "十発目を、彼女は私に握らせた。「ミミさんの番」"
+      "text": "十発目を、彼女は私に握らせた。"
     },
     {
       "type": "line",
@@ -151,7 +135,7 @@
       "lineId": "main.s3.eve.rinne.line.004b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "撃って、外れた。私のは、練習でなく実力だ。"
+      "text": "「ミミさんの番」撃って、外れた。私のは、練習でなく実力だ。"
     },
     {
       "type": "line",

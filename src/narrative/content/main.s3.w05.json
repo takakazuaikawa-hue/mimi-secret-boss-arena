@@ -116,15 +116,7 @@
       "lineId": "main.s3.w05.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「お待ちしておりました。三度目ですね」"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.w05.node.line.002c",
-      "lineId": "main.s3.w05.line.002c",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "数えている。毎年、正しく数えている。",
+      "text": "「お待ちしておりました。三度目ですね」数えている。毎年、正しく数えている。",
       "emotion": "tension"
     },
     {
@@ -145,7 +137,7 @@
       "lineId": "main.s3.w05.line.003a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "湯に浸かって、それとなく聞いてみた。「暦が巻き戻っても、覚えているんですね」"
+      "text": "湯に浸かって、それとなく聞いてみた。"
     },
     {
       "type": "line",
@@ -153,7 +145,15 @@
       "lineId": "main.s3.w05.line.003b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "仲居さんは平然と、桶を並べる。「湯の中の話は、湯の外へ持ち出さないのが決まりです」",
+      "text": "「暦が巻き戻っても、覚えているんですね」仲居さんは平然と、桶を並べる。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w05.node.line.003c",
+      "lineId": "main.s3.w05.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「湯の中の話は、湯の外へ持ち出さないのが決まりです」",
       "emotion": "comic"
     },
     {
@@ -179,7 +179,7 @@
       "lineId": "main.s3.w05.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「お客さま、来た口でしょう」来た口? ……え。"
+      "text": "「お客さま、来た口でしょう」来た口? ……え。耳が、ぴくっと動く。"
     },
     {
       "type": "line",
@@ -187,7 +187,7 @@
       "lineId": "main.s3.w05.line.005b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "耳が、ぴくっと動く。「——空から。私も、です」"
+      "text": "「——空から。私も、です」桶を置く音が、こん、と軽く鳴った。"
     },
     {
       "type": "line",
@@ -195,7 +195,7 @@
       "lineId": "main.s3.w05.line.005c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "桶を置く音が、こん、と軽く鳴った。湯気の向こうの背中は、仕事の姿勢のまま。",
+      "text": "湯気の向こうの背中は、仕事の姿勢のまま。",
       "emotion": "revelation"
     },
     {
@@ -212,15 +212,7 @@
       "lineId": "main.s3.w05.line.006b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "同じ持病の先輩が、三年黙って湯を沸かしてた。"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.w05.node.line.006c",
-      "lineId": "main.s3.w05.line.006c",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "「三度目ですね」は、同類の挨拶だった。",
+      "text": "同じ持病の先輩が、三年黙って湯を沸かしてた。「三度目ですね」は、同類の挨拶だった。",
       "emotion": "tender"
     },
     {

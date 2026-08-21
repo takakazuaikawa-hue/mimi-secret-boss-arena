@@ -148,7 +148,7 @@
       "lineId": "main.s3.w04.line.003b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「初心者大会・あわせて・ミミさんの言い分、通るか通らぬか」"
+      "text": "「初心者大会・あわせて・ミミさんの言い分、通るか通らぬか」胴元さん、仕事が早い。"
     },
     {
       "type": "line",
@@ -156,7 +156,7 @@
       "lineId": "main.s3.w04.line.003c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "胴元さん、仕事が早い。倍率は「通る」"
+      "text": "倍率は「通る」が優勢だ。ありがたいような、荷が重いような。"
     },
     {
       "type": "line",
@@ -164,15 +164,7 @@
       "lineId": "main.s3.w04.line.003d",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "が優勢だ。"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.w04.node.line.003e",
-      "lineId": "main.s3.w04.line.003e",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "ありがたいような、荷が重いような。耳が、片方だけ下がる。",
+      "text": "耳が、片方だけ下がる。",
       "emotion": "comic"
     },
     {
@@ -305,15 +297,7 @@
       "lineId": "main.s3.w04.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "返事は、一通だけ書いた。大会へ、「出ます」"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.w04.node.line.008b",
-      "lineId": "main.s3.w04.line.008b",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "今年の返事は、それで足りる。",
+      "text": "返事は、一通だけ書いた。大会へ、「出ます」今年の返事は、それで足りる。",
       "emotion": "resolve"
     },
     {

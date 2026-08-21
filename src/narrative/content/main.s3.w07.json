@@ -85,20 +85,12 @@
       "lineId": "main.s3.w07.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "遺失物の窓口から、呼び出しが来た。"
+      "text": "遺失物の窓口から、呼び出しが来た。「お心当たりの品が届いています」心当たりは、無い。"
     },
     {
       "type": "line",
       "id": "main.s3.w07.node.line.001b",
       "lineId": "main.s3.w07.line.001b",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "「お心当たりの品が届いています」心当たりは、無い。"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.w07.node.line.001c",
-      "lineId": "main.s3.w07.line.001c",
       "speakerId": "narrator",
       "mode": "thought",
       "text": "でも、この街の呼び出しを断ると面白いことになる。三年で学んでいる。",
@@ -271,7 +263,7 @@
       "lineId": "main.s3.w07.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "仲間の一人が、お玉を置いた。「回収って。つまり、ミミさんを持っていくって、ことですか」"
+      "text": "仲間の一人が、お玉を置いた。"
     },
     {
       "type": "line",
@@ -279,7 +271,7 @@
       "lineId": "main.s3.w07.line.008b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "そういうことに、なる。鍋の周りが、一拍だけ静かになった。"
+      "text": "「回収って。つまり、ミミさんを持っていくって、ことですか」そういうことに、なる。"
     },
     {
       "type": "line",
@@ -287,7 +279,7 @@
       "lineId": "main.s3.w07.line.008c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "それから全員、同じ顔になった。"
+      "text": "鍋の周りが、一拍だけ静かになった。それから全員、同じ顔になった。"
     },
     {
       "type": "line",

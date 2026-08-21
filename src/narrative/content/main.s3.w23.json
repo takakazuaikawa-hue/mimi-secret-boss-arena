@@ -129,7 +129,7 @@
       "lineId": "main.s3.w23.line.003a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "棟木が上がると、大工さんたちが屋根から、木くずをざあっと払い落とした。「こけら払いだよ」"
+      "text": "棟木が上がると、大工さんたちが屋根から、木くずをざあっと払い落とした。"
     },
     {
       "type": "line",
@@ -137,7 +137,7 @@
       "lineId": "main.s3.w23.line.003b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "と、棟梁さん。「屋根のこけらを払って、はじめて建物は仕上がる」"
+      "text": "「こけら払いだよ」と、棟梁さん。「屋根のこけらを払って、はじめて建物は仕上がる」"
     },
     {
       "type": "line",
@@ -206,7 +206,7 @@
       "lineId": "main.s3.w23.line.005b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「俺は型の披露」「私は、お客と腕相撲」"
+      "text": "「俺は型の披露」「私は、お客と腕相撲」演目帳は夕方までに、十五幕、埋まった。"
     },
     {
       "type": "line",
@@ -214,7 +214,7 @@
       "lineId": "main.s3.w23.line.005c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "演目帳は夕方までに、十五幕、埋まった。大取りだけが、空白のまま残る。"
+      "text": "大取りだけが、空白のまま残る。"
     },
     {
       "type": "line",
@@ -289,7 +289,7 @@
       "lineId": "main.s3.w23.line.008b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「四百年目の審理——旧会場、最後の興行として執り行う」"
+      "text": "「四百年目の審理——旧会場、最後の興行として執り行う」裁きが、興行になった。"
     },
     {
       "type": "line",
@@ -297,7 +297,7 @@
       "lineId": "main.s3.w23.line.008c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "裁きが、興行になった。この街らしいと言えば、これほどらしいこともない。",
+      "text": "この街らしいと言えば、これほどらしいこともない。",
       "emotion": "comic"
     },
     {
@@ -317,7 +317,7 @@
       "lineId": "main.s3.w23.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "板には、もう枠が立っている。「ミミさんの言い分、いよいよ本審。通るか通らぬか」"
+      "text": "板には、もう枠が立っている。"
     },
     {
       "type": "line",
@@ -325,7 +325,15 @@
       "lineId": "main.s3.w23.line.009b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "倍率は、見なかった。見なくても——客席が満員になることだけは、分かっている。",
+      "text": "「ミミさんの言い分、いよいよ本審。通るか通らぬか」倍率は、見なかった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w23.node.line.009c",
+      "lineId": "main.s3.w23.line.009c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "見なくても——客席が満員になることだけは、分かっている。",
       "emotion": "tension"
     },
     {

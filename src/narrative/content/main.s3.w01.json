@@ -128,7 +128,7 @@
       "lineId": "main.s3.w01.line.001c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "垂れ幕には「祝・闘技場開き」。三年前の初日のお祭りを、街がまたやっている。"
+      "text": "垂れ幕には「祝・闘技場開き」三年前の初日のお祭りを、街がまたやっている。"
     },
     {
       "type": "line",
@@ -145,7 +145,7 @@
       "lineId": "main.s3.w01.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "手帳の暦の欄も、新しくなっていた。「記録外勤務週・第一週」。"
+      "text": "手帳の暦の欄も、新しくなっていた。"
     },
     {
       "type": "line",
@@ -153,7 +153,7 @@
       "lineId": "main.s3.w01.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "誰が付けたのか、今年も役所くさい名前。要するに、三年目が始まったってこと。"
+      "text": "「記録外勤務週・第一週」誰が付けたのか、今年も役所くさい名前。"
     },
     {
       "type": "line",
@@ -161,7 +161,7 @@
       "lineId": "main.s3.w01.line.002c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "優勝も赤線も、頁の中ではちゃんと昨日のまま。うん、大丈夫。"
+      "text": "要するに、三年目が始まったってこと。優勝も赤線も、頁の中ではちゃんと昨日のまま。"
     },
     {
       "type": "line",
@@ -169,7 +169,7 @@
       "lineId": "main.s3.w01.line.002d",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "驚くのは後回しで、朝ごはんが先。"
+      "text": "うん、大丈夫。驚くのは後回しで、朝ごはんが先。"
     },
     {
       "type": "line",
@@ -177,7 +177,7 @@
       "lineId": "main.s3.w01.line.003a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "うちの点呼は、屋台の列で済ませた。「今年も全員、覚えてまーす」。"
+      "text": "うちの点呼は、屋台の列で済ませた。「今年も全員、覚えてまーす」はい、よろしい。"
     },
     {
       "type": "line",
@@ -185,7 +185,7 @@
       "lineId": "main.s3.w01.line.003b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "はい、よろしい。慌てている人は、一人もいない。"
+      "text": "慌てている人は、一人もいない。それより焼き餅の列が長い。"
     },
     {
       "type": "line",
@@ -193,7 +193,7 @@
       "lineId": "main.s3.w01.line.003c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "それより焼き餅の列が長い。今年いちばん最初の議題は、それになった。",
+      "text": "今年いちばん最初の議題は、それになった。",
       "emotion": "comic"
     },
     {
@@ -202,7 +202,7 @@
       "lineId": "main.s3.w01.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "闘技場開きのお祭りは、一昨年も去年も、寸分違わず同じ進行だった。なのに、今年は違う。"
+      "text": "闘技場開きのお祭りは、一昨年も去年も、寸分違わず同じ進行だった。"
     },
     {
       "type": "line",
@@ -210,7 +210,7 @@
       "lineId": "main.s3.w01.line.004b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "巻き戻った人は三年前と同じ動きをする。でも、覚えている人は、もう同じには動けない。"
+      "text": "なのに、今年は違う。巻き戻った人は三年前と同じ動きをする。"
     },
     {
       "type": "line",
@@ -218,7 +218,7 @@
       "lineId": "main.s3.w01.line.004c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "パレードの先頭が、二組いる。観客が「どっちが本物か」で賭けを始めた。"
+      "text": "でも、覚えている人は、もう同じには動けない。パレードの先頭が、二組いる。"
     },
     {
       "type": "line",
@@ -226,7 +226,23 @@
       "lineId": "main.s3.w01.line.004d",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "口上を忘れた係の代わりは、三回聞いて覚えた八百屋のおばちゃん。名調子で、本職より拍手が多い。",
+      "text": "観客が「どっちが本物か」で賭けを始めた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w01.node.line.004e",
+      "lineId": "main.s3.w01.line.004e",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "口上を忘れた係の代わりは、三回聞いて覚えた八百屋のおばちゃん。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w01.node.line.004f",
+      "lineId": "main.s3.w01.line.004f",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "名調子で、本職より拍手が多い。",
       "emotion": "comic"
     },
     {
@@ -243,7 +259,7 @@
       "lineId": "main.s3.w01.line.005b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「ミミさん、今年の目標、何にします?」。……え。無い。正直に言うと、無い。"
+      "text": "「ミミさん、今年の目標、何にします?」"
     },
     {
       "type": "line",
@@ -251,12 +267,20 @@
       "lineId": "main.s3.w01.line.005c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "優勝は二回した。壊す規則は、去年ぜんぶ壊した。"
+      "text": "……え。無い。正直に言うと、無い。"
     },
     {
       "type": "line",
       "id": "main.s3.w01.node.line.005d",
       "lineId": "main.s3.w01.line.005d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "優勝は二回した。壊す規則は、去年ぜんぶ壊した。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w01.node.line.005e",
+      "lineId": "main.s3.w01.line.005e",
       "speakerId": "narrator",
       "mode": "thought",
       "text": "目標リストが、白紙。耳が、しゅんと倒れた。",
@@ -268,7 +292,7 @@
       "lineId": "main.s3.w01.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "それなら挨拶だ。私はアルデバラン社に乗り込んだ。「今年も正々堂々、興行で勝負しましょう!」。"
+      "text": "それなら挨拶だ。私はアルデバラン社に乗り込んだ。"
     },
     {
       "type": "line",
@@ -276,7 +300,7 @@
       "lineId": "main.s3.w01.line.006b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "振り向いたのは、あの室長さん。去年の決勝で、監督席を並べ合った人だ。"
+      "text": "「今年も正々堂々、興行で勝負しましょう!」振り向いたのは、あの室長さん。"
     },
     {
       "type": "line",
@@ -284,7 +308,7 @@
       "lineId": "main.s3.w01.line.006c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "その目が、まっさらだった。「……どちらさまですか」。"
+      "text": "去年の決勝で、監督席を並べ合った人だ。その目が、まっさらだった。"
     },
     {
       "type": "line",
@@ -292,7 +316,15 @@
       "lineId": "main.s3.w01.line.006d",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ずっこけた。本当に、膝から。一年争った仲でしょう!? 礼まで交わしたのに!?",
+      "text": "「……どちらさまですか」ずっこけた。本当に、膝から。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w01.node.line.006e",
+      "lineId": "main.s3.w01.line.006e",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "一年争った仲でしょう!? 礼まで交わしたのに!?",
       "emotion": "comic"
     },
     {
@@ -320,7 +352,7 @@
       "lineId": "main.s3.w01.line.007b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "……まあ、いいか! 覚えているほうが、覚えていれば。それに、今年はまた新しく知ってもらえる。"
+      "text": "……まあ、いいか! 覚えているほうが、覚えていれば。"
     },
     {
       "type": "line",
@@ -328,7 +360,15 @@
       "lineId": "main.s3.w01.line.007c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私たちは、そういうの、もう慣れっこだ。耳だけが、まだ少し、へこんでいたけれど。",
+      "text": "それに、今年はまた新しく知ってもらえる。私たちは、そういうの、もう慣れっこだ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w01.node.line.007d",
+      "lineId": "main.s3.w01.line.007d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "耳だけが、まだ少し、へこんでいたけれど。",
       "emotion": "tender"
     },
     {
@@ -345,7 +385,7 @@
       "lineId": "main.s3.w01.line.008b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「本闘技場および付属資産一式につき、四百年目の総棚卸しを執り行う」。……読み下すと、こう。"
+      "text": "「本闘技場および付属資産一式につき、四百年目の総棚卸しを執り行う」"
     },
     {
       "type": "line",
@@ -353,7 +393,7 @@
       "lineId": "main.s3.w01.line.008c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "うちの持ち物ぜんぶを、お店の在庫みたいに、数えに来る。",
+      "text": "……読み下すと、こう。うちの持ち物ぜんぶを、お店の在庫みたいに、数えに来る。",
       "emotion": "tension"
     },
     {
@@ -362,7 +402,7 @@
       "lineId": "main.s3.w01.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "しかも、四百年ぶりに。誰が? 何の権利で? 判は、聞いたことのない役所の名前。"
+      "text": "しかも、四百年ぶりに。誰が? 何の権利で?"
     },
     {
       "type": "line",
@@ -370,7 +410,7 @@
       "lineId": "main.s3.w01.line.009b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "仲間と顔を見合わせて、ほぼ同時に、同じ顔になった。耳が、ぴんと立つ。"
+      "text": "判は、聞いたことのない役所の名前。"
     },
     {
       "type": "line",
@@ -378,12 +418,20 @@
       "lineId": "main.s3.w01.line.009c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "——今年の目標、向こうから来たかも。"
+      "text": "仲間と顔を見合わせて、ほぼ同時に、同じ顔になった。耳が、ぴんと立つ。"
     },
     {
       "type": "line",
       "id": "main.s3.w01.node.line.009d",
       "lineId": "main.s3.w01.line.009d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "——今年の目標、向こうから来たかも。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w01.node.line.009e",
+      "lineId": "main.s3.w01.line.009e",
       "speakerId": "narrator",
       "mode": "thought",
       "text": "……わくわくしてるの、顔に出てますか。出てますね。はい。",

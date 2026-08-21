@@ -151,7 +151,7 @@
       "lineId": "main.s3.w21.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "焼き餅の列で、常連さんが首をかしげていた。「なんで俺、二枚買ったんだ?」"
+      "text": "焼き餅の列で、常連さんが首をかしげていた。"
     },
     {
       "type": "line",
@@ -159,7 +159,7 @@
       "lineId": "main.s3.w21.line.004b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "誰にあげる気だったか、思い出せない顔。"
+      "text": "「なんで俺、二枚買ったんだ?」誰にあげる気だったか、思い出せない顔。"
     },
     {
       "type": "line",
@@ -176,31 +176,7 @@
       "lineId": "main.s3.w21.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "記録室の司書さんは、来た口の人だ。いつもどおりに、迎えてくれた。"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.w21.node.line.005b",
-      "lineId": "main.s3.w21.line.005b",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "それから、閲覧札の棚を指す。"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.w21.node.line.005c",
-      "lineId": "main.s3.w21.line.005c",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "「外しませんよ、ミミさんの札は。決まりに、外せとは書いてないので」"
-    },
-    {
-      "type": "line",
-      "id": "main.s3.w21.node.line.005d",
-      "lineId": "main.s3.w21.line.005d",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "私の札は、今日も棚に掛かっている。",
+      "text": "「外しませんよ、ミミさんの札は。決まりに、外せとは書いてないので」私の札は、今日も棚に掛かっている。",
       "emotion": "tender"
     },
     {
@@ -259,7 +235,7 @@
       "lineId": "main.s3.w21.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "夜、祝いの帳面を開くと、覚えのない字が増えていた。仲間の字、ノノさんの字、大工さんの字。"
+      "text": "夜、祝いの帳面を開くと、覚えのない字が増えていた。"
     },
     {
       "type": "line",
@@ -267,7 +243,7 @@
       "lineId": "main.s3.w21.line.008b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「舞台の寸法、決まりました」「幕の布、良いのが入ります」"
+      "text": "仲間の字、ノノさんの字、大工さんの字。「舞台の寸法、決まりました」"
     },
     {
       "type": "line",
@@ -275,7 +251,7 @@
       "lineId": "main.s3.w21.line.008c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "見えない一週間も、祝いは、みんなの手で進んでいた。",
+      "text": "「幕の布、良いのが入ります」見えない一週間も、祝いは、みんなの手で進んでいた。",
       "emotion": "tender"
     },
     {
