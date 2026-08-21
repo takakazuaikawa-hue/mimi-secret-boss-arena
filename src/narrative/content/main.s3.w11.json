@@ -8,9 +8,20 @@
     "arcId": "main.stage3"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -22,6 +33,18 @@
         "kind": "background",
         "path": "/assets/story/bg-contract-archive.png",
         "alt": "記録室の背景"
+      },
+      {
+        "id": "main.s3.w11.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
+      },
+      {
+        "id": "main.s3.w11.asset.sprite.mimi.tsukkomi",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-tsukkomi-v1.png",
+        "alt": "驚いてツッコミを入れるミミ"
       }
     ]
   },
@@ -29,108 +52,295 @@
     {
       "type": "direction",
       "id": "main.s3.w11.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s3.w11.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s3.w11.asset.background.001",
+        "transition": "dissolve"
+      },
+      "_units": 1
     },
     {
       "type": "direction",
       "id": "main.s3.w11.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      },
+      "_units": 1
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.w11.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s3.w11.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      },
+      "_units": 1
     },
     {
       "type": "line",
-      "id": "main.s3.w11.node.line.001",
-      "lineId": "main.s3.w11.line.001",
+      "id": "main.s3.w11.node.line.001a",
+      "lineId": "main.s3.w11.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "記録室は、今日も古い紙の匂いがする。司書さんに、湯の噂の裏取りを頼んでいたのだ。梯子の上から、答えが降ってきた。「ありました。空から来た人たちが束で名を書けば、判の無い取り決めは覆せる。ちゃんと、決まりの本に載っています」。",
+      "text": "記録室は、今日も、古い紙の匂い。司書さんに、湯の噂の裏取りを、頼んでいた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w11.node.line.001b",
+      "lineId": "main.s3.w11.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "梯子の上から、答えが降ってきた。「ありました。空から来た人たちが」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w11.node.line.001c",
+      "lineId": "main.s3.w11.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「束で名を書けば、取り決めを覆せます」「決まりの本にも、ちゃんと載っています」",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s3.w11.node.line.002",
-      "lineId": "main.s3.w11.line.002",
+      "id": "main.s3.w11.node.line.002a",
+      "lineId": "main.s3.w11.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "今日の用は、その「束」の作り方だ。決まりの本いわく、要る名前は——百。……百人。三年かけて、私が確かめられた同類は、仲居さんひとりである。"
+      "text": "今日の用は、その「束」の作り方。決まりの本いわく、要る名前は——百。"
     },
     {
       "type": "line",
-      "id": "main.s3.w11.node.line.003",
-      "lineId": "main.s3.w11.line.003",
+      "id": "main.s3.w11.node.line.002b",
+      "lineId": "main.s3.w11.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「見分け方は、あるんですか」「諸説あります」。司書さんが、古い覚え書きを広げた。来た口は、初物の食べ方が変。来た口は、雨の日に空を見る。来た口は、値札に敏感。……最後のは、身に覚えがある。",
+      "text": "……百人。三年で、確かめられた同類は、仲居さんひとり。"
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.w11.node.direction.mimi.shift.001",
+      "command": {
+        "type": "show",
+        "assetId": "main.s3.w11.asset.sprite.mimi.tsukkomi",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      },
+      "_units": 1
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w11.node.line.003a",
+      "lineId": "main.s3.w11.line.003a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「見分け方は、あるんですか」「諸説あります」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w11.node.line.003b",
+      "lineId": "main.s3.w11.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "司書さんが、古い覚え書きを、広げた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w11.node.line.003c",
+      "lineId": "main.s3.w11.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "来た口は、初物の食べ方が変。雨の日に、空を見る。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w11.node.line.003d",
+      "lineId": "main.s3.w11.line.003d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "来た口は、値札に敏感。……最後のは、身に覚えがある。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s3.w11.node.line.004",
-      "lineId": "main.s3.w11.line.004",
+      "id": "main.s3.w11.node.line.004a",
+      "lineId": "main.s3.w11.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "試しに、覚え書きの見分け方を、うちの面々で検証してみた。いちばん大きい子が初物を丸呑みして、「変」の判定が出た。生まれも育ちもこの世界の子で、ある。……この見分け方、当てにならない。",
+      "text": "試しに、覚え書きの見分け方を、検証してみた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w11.node.line.004b",
+      "lineId": "main.s3.w11.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "いちばん大きい子が、初物を丸呑み。「変」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w11.node.line.004c",
+      "lineId": "main.s3.w11.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "の判定。生まれも育ちも、この世界の子だ。……この見分け方、当てにならない。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s3.w11.node.line.005",
-      "lineId": "main.s3.w11.line.005",
+      "id": "main.s3.w11.node.line.005a",
+      "lineId": "main.s3.w11.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "結局、確かなのは一つだけだった。湯である。湯の中でなら、何を話しても大丈夫——あの決まりは、来た口たちが長い年月で作った、合言葉だったのだ。",
+      "text": "結局、確かなのは、一つだけ。湯だ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w11.node.line.005b",
+      "lineId": "main.s3.w11.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "湯の中でなら、たぶん、大丈夫。何を話しても。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w11.node.line.005c",
+      "lineId": "main.s3.w11.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "——長い年月で作った、合言葉だったのだ。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s3.w11.node.line.006",
-      "lineId": "main.s3.w11.line.006",
+      "id": "main.s3.w11.node.line.006a",
+      "lineId": "main.s3.w11.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "そうか、と手帳の上で手が止まる。仲居さんの「同じ口の人を探すなら、湯を訪ねなさい」。あれは、宿の宣伝ではなかった。——道順、だったのだ。",
+      "text": "そうか。手帳の上で、手が止まる。仲居さんの「同じ口の人を探すなら、湯を訪ねなさい」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w11.node.line.006b",
+      "lineId": "main.s3.w11.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "あれは、宿の宣伝じゃない。——道順だったのだ。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s3.w11.node.line.007",
-      "lineId": "main.s3.w11.line.007",
+      "id": "main.s3.w11.node.line.007a",
+      "lineId": "main.s3.w11.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "司書さんが、地図を広げてくれた。この世界の、湯の場所。街に三つ、山に五つ、砂漠にひとつ、海の底に——海の底? 「あります。良い湯だそうです」。……この世界、湯にだけは本気である。",
-      "emotion": "comic"
+      "text": "司書さんが、地図を広げてくれた。この世界の、湯の場所。"
     },
     {
       "type": "line",
-      "id": "main.s3.w11.node.line.008",
-      "lineId": "main.s3.w11.line.008",
+      "id": "main.s3.w11.node.line.007b",
+      "lineId": "main.s3.w11.line.007b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "百の名前。十の湯。締めの日まで、大会の合間に回り切れるか。手帳の頁が、初めて足りなく見えた。それが、少し嬉しい。白紙の目標欄の面影は、もう無い。",
+      "text": "街に三つ、山に五つ、砂漠にひとつ。海の底に、ひとつ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w11.node.line.007c",
+      "lineId": "main.s3.w11.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「あります。良い湯だそうです」この世界、湯にだけは、本気だ。",
+      "emotion": "comic"
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.w11.node.direction.mimi.shift.002",
+      "command": {
+        "type": "show",
+        "assetId": "main.s3.w11.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      },
+      "_units": 1
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w11.node.line.008a",
+      "lineId": "main.s3.w11.line.008a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "百の名前。十の湯。締めの日まで、回り切れるか。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w11.node.line.008b",
+      "lineId": "main.s3.w11.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "手帳の頁が、初めて、足りなく見えた。耳が、ぴんと立つ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w11.node.line.008c",
+      "lineId": "main.s3.w11.line.008c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "それが、少し嬉しい。白紙の目標欄は、もう無い。",
       "emotion": "resolve"
     },
     {
       "type": "line",
-      "id": "main.s3.w11.node.line.009",
-      "lineId": "main.s3.w11.line.009",
+      "id": "main.s3.w11.node.line.009a",
+      "lineId": "main.s3.w11.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "まずは近場から、である。街のいちばん古い湯の暖簾を、仲間とくぐった。番台のおじいさんが、こちらを見て、にっこり笑った。「——三年ぶりだね、お客さん」。……三年ぶり? 私、この湯は、初めてです。",
+      "text": "まずは、近場から。街でいちばん古い湯の暖簾を、くぐった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w11.node.line.009b",
+      "lineId": "main.s3.w11.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "番台のおじいさんが、にっこり笑った。「三年ぶりだね、お客さん」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w11.node.line.009c",
+      "lineId": "main.s3.w11.line.009c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "え。三年ぶり? この湯は、初めてです。",
       "emotion": "tension"
     },
     {
       "type": "effect",
       "id": "main.s3.w11.node.effect.001",
-      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+      "effects": [
+        {
+          "type": "sharedPoints",
+          "amount": 2
+        }
+      ],
+      "_units": 1
     },
     {
       "type": "end",
       "id": "main.s3.w11.node.end.001",
-      "mode": "return-to-week"
+      "mode": "return-to-week",
+      "_units": 1
     }
   ],
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "3周目・週11(連署の要件=百の名前、見分け方コメディ、湯の道順)。Q=この街を引き受けるか / value=目処 -→+(道順が付いた) / turn=行6(湯を訪ねなさい=道順だった) / hook=保留された返事(中)/post-point / try=はい、しかし / game=見分け方の検証(諸説→大きい子で誤判定→湯だけ確か) / carry=湯の噂(週5)・「湯で噂を集めてます」(週10) / open=番台の「三年ぶり」の意味(答え=週14: 来た日にこの湯へ運ばれていた) / newterm=なし",
+    "authorNote": "語り口V2・二行枠で改稿。 / 3周目・週11(連署の要件=百の名前、見分け方コメディ、湯の道順)。Q=この街を引き受けるか / value=目処 -→+(道順が付いた) / turn=行6(湯を訪ねなさい=道順だった) / hook=保留された返事(中)/post-point / try=はい、しかし / game=見分け方の検証(諸説→大きい子で誤判定→湯だけ確か) / carry=湯の噂(週5)・「湯で噂を集めてます」(週10) / open=番台の「三年ぶり」の意味(答え=週14: 来た日にこの湯へ運ばれていた) / newterm=なし",
     "legacyGeneratedIds": false
   }
 }

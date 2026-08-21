@@ -8,9 +8,20 @@
     "arcId": "main.stage3"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -22,6 +33,18 @@
         "kind": "background",
         "path": "/assets/story/bg-arena-reception.png",
         "alt": "闘技場の正面受付の背景"
+      },
+      {
+        "id": "main.s3.w06.asset.sprite.mimi.tsukkomi",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-tsukkomi-v1.png",
+        "alt": "驚いてツッコミを入れるミミ"
+      },
+      {
+        "id": "main.s3.w06.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
       }
     ]
   },
@@ -29,91 +52,283 @@
     {
       "type": "direction",
       "id": "main.s3.w06.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s3.w06.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s3.w06.asset.background.001",
+        "transition": "dissolve"
+      },
+      "_units": 1
     },
     {
       "type": "direction",
       "id": "main.s3.w06.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      },
+      "_units": 1
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.w06.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s3.w06.asset.sprite.mimi.tsukkomi",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      },
+      "_units": 1
     },
     {
       "type": "line",
-      "id": "main.s3.w06.node.line.001",
-      "lineId": "main.s3.w06.line.001",
+      "id": "main.s3.w06.node.line.001a",
+      "lineId": "main.s3.w06.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "受付の前に、朝から壇が組まれていた。真新しい木の匂いがする。幕には大きく、「棚卸しについての、ご説明の会」。あの長い名前の役所は、今週、街に向かって説明がしたいらしい。",
+      "text": "受付の前に、朝から壇が組まれていた。真新しい木の匂いがする。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w06.node.line.001b",
+      "lineId": "main.s3.w06.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "幕には大きく、「棚卸しについての、ご説明の会」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w06.node.line.001c",
+      "lineId": "main.s3.w06.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "あの長い名前の役所、今週は街に説明したいらしい。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s3.w06.node.line.002",
-      "lineId": "main.s3.w06.line.002",
+      "id": "main.s3.w06.node.line.002a",
+      "lineId": "main.s3.w06.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "うちは全員で、最前列に並んだ。今日の用は、聞くことだ。向こうの言い分を、向こうの口から。文句はそのあとで言う。順番は守る店である。"
+      "text": "うちは全員で、最前列に並んだ。今日の用は、聞くこと。"
     },
     {
       "type": "line",
-      "id": "main.s3.w06.node.line.003",
-      "lineId": "main.s3.w06.line.003",
+      "id": "main.s3.w06.node.line.002b",
+      "lineId": "main.s3.w06.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "壇に上がったのは、判子の役所——魔法ギルドの係の人だった。分厚い帳面を抱えている。「経緯をご説明します。四百年前の取り決めに基づき、私どもは代々、判を押して参りました」。生真面目な声だ。四百年ぶんの判の名前を、本当に順に読み始めた。",
+      "text": "向こうの言い分を、向こうの口から。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w06.node.line.002c",
+      "lineId": "main.s3.w06.line.002c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "文句は、そのあとで言う。順番は守る店だ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w06.node.line.003a",
+      "lineId": "main.s3.w06.line.003a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "壇に上がったのは、判子の役所の人だった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w06.node.line.003b",
+      "lineId": "main.s3.w06.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "魔法ギルドの係さん。分厚い帳面を抱えている。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w06.node.line.003c",
+      "lineId": "main.s3.w06.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「経緯をご説明します。四百年前の取り決めに基づき、代々判を押して参りました」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w06.node.line.003d",
+      "lineId": "main.s3.w06.line.003d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "生真面目な声だ。四百年ぶんの判の名前を、本当に順に読み始めた。",
       "emotion": "comic"
     },
     {
+      "type": "direction",
+      "id": "main.s3.w06.node.direction.mimi.shift.001",
+      "command": {
+        "type": "show",
+        "assetId": "main.s3.w06.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      },
+      "_units": 1
+    },
+    {
       "type": "line",
-      "id": "main.s3.w06.node.line.004",
-      "lineId": "main.s3.w06.line.004",
+      "id": "main.s3.w06.node.line.004a",
+      "lineId": "main.s3.w06.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "客席の常連が欠伸を始めた、そのころだった。読み上げが、止まった。「取り決めの、承認の欄。えー……女神さまの、判は……」。係の人は頁を近づけ、遠ざけ、裏まで返した。「……空欄、ですね」。",
+      "text": "客席の常連が、欠伸を始めたころだった。読み上げが、止まった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w06.node.line.004b",
+      "lineId": "main.s3.w06.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「取り決めの、承認の欄。えー……女神さまの、判は……」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w06.node.line.004c",
+      "lineId": "main.s3.w06.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "係の人は頁を、近づけ、遠ざけ、裏まで返した。「……空欄、ですね」",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s3.w06.node.line.005",
-      "lineId": "main.s3.w06.line.005",
+      "id": "main.s3.w06.node.line.005a",
+      "lineId": "main.s3.w06.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "壇の上が、静かになった。客席は、逆だった。「押し忘れかい!」「四百年も!?」。笑い声とどよめきが半々に混ざる。この街の観客は、興行の見せ場を聞き逃さない。",
+      "text": "壇の上が、静かになった。客席は、逆だった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w06.node.line.005b",
+      "lineId": "main.s3.w06.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「押し忘れかい!」「四百年も!?」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w06.node.line.005c",
+      "lineId": "main.s3.w06.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "笑い声とどよめきが、半々に混ざる。この街の観客は、見せ場を聞き逃さない。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s3.w06.node.line.006",
-      "lineId": "main.s3.w06.line.006",
+      "id": "main.s3.w06.node.line.006a",
+      "lineId": "main.s3.w06.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "つまり、こういうことだ。私を持ち物にした四百年前の取り決めは、いちばん上の判を、もらっていない。それを、役所の帳面が、役所の壇の上で白状した。——敵の紙が、敵の見せ場で欠けたのである。",
+      "text": "つまり、こういうこと。耳が、ぴんと立つ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w06.node.line.006b",
+      "lineId": "main.s3.w06.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "四百年前の取り決めは、いちばん上の判をもらってない。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w06.node.line.006c",
+      "lineId": "main.s3.w06.line.006c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "それを、役所の帳面が、役所の壇の上で白状した。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w06.node.line.006d",
+      "lineId": "main.s3.w06.line.006d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "——敵の紙が、敵の見せ場で欠けたんだ。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s3.w06.node.line.007",
-      "lineId": "main.s3.w06.line.007",
+      "id": "main.s3.w06.node.line.007a",
+      "lineId": "main.s3.w06.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ポラリスさんが壇に上がり、静かに帳面を閉じさせた。「本日の説明は、ここまでです」。顔は、変わらない。変わらないが、閉じさせる手が、少しだけ速かった。",
+      "text": "ポラリスさんが壇に上がった。静かに、帳面を閉じさせる。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w06.node.line.007b",
+      "lineId": "main.s3.w06.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「本日の説明は、ここまでです」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w06.node.line.007c",
+      "lineId": "main.s3.w06.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "顔は、変わらない。閉じさせる手が、少しだけ速かった。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s3.w06.node.line.008",
-      "lineId": "main.s3.w06.line.008",
+      "id": "main.s3.w06.node.line.008a",
+      "lineId": "main.s3.w06.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "解散の人波の中で、仲間が小声で言った。「ミミさん、今の、見ました?」「見ました。皆さんも、見ましたね」。見たのは、うちだけではない。街ぜんぶ、である。",
+      "text": "解散の人波の中で、仲間が小声で言った。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w06.node.line.008b",
+      "lineId": "main.s3.w06.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「ミミさん、今の、見ました?」「見ました。皆さんも、見ましたね」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w06.node.line.008c",
+      "lineId": "main.s3.w06.line.008c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "見たのは、うちだけじゃない。街ぜんぶだ。",
       "emotion": "resolve"
     },
     {
       "type": "line",
-      "id": "main.s3.w06.node.line.009",
-      "lineId": "main.s3.w06.line.009",
+      "id": "main.s3.w06.node.line.009a",
+      "lineId": "main.s3.w06.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "翌朝、新しい掲示が出た。「当該の帳面は、調査のため、しばらくお休みします」。読み下すと——隠された、ということだ。でも、遅い。あの空欄は、もう街いちばんの見せ場になっている。",
+      "text": "翌朝、新しい掲示が出た。「当該の帳面は、調査のため、しばらくお休みします」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w06.node.line.009b",
+      "lineId": "main.s3.w06.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "読み下すと——隠された、ということ。でも、遅い。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w06.node.line.009c",
+      "lineId": "main.s3.w06.line.009c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "あの空欄は、もう街いちばんの見せ場だ。",
       "emotion": "tension"
     },
     {
@@ -123,37 +338,49 @@
         {
           "id": "main.s3.w06.choice.001",
           "label": "壇に上がって、ひとことだけ問う",
-          "result": "挙手をして、壇に上がらせてもらった。「一つだけ。判の無い取り決めは、誰が直すんですか」。係の人は帳面を抱えたまま、正直に答えた。「……分かりません。四百年、誰も聞かなかったので」。客席が、今日いちばん沸いた。誰も聞かなかった質問は、聞いた者のものになる。降りぎわ、ポラリスさんと目が合った。会釈は、向こうが先だった。",
+          "result": "挙手して、壇に上がらせてもらった。「判の無い取り決めは、誰が直すんですか」。「……分かりません。四百年、誰も聞かなかったので」。客席が、今日いちばん沸いた。降りぎわ、ポラリスさんと目が合う。会釈は、向こうが先だった。",
           "intent": "見せ場のうちに、問いを街の耳に残す",
           "promise": "問いが街のものになる代わりに、役所はこちらを正面の相手と見なす",
           "memory": "壇の上の問い「判の無い取り決めは、誰が直す?」",
           "tone": "heroic",
-          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
           "goto": "main.s3.w06.node.end.001"
         },
         {
           "id": "main.s3.w06.choice.002",
           "label": "騒がず、空欄の頁を手帳に写し取る",
-          "result": "騒ぎの中で、手帳に空欄の頁を写した。欄の名前、位置、前後の判の日付まで。ノノさんが横から覗く。「証拠集め、板についてきましたね」。祭り上手のこの街は、忘れっぽくもある。見せ場を紙に留めておくのは、うちの係だ。写し終えたころ、壇の幕はもう畳まれ始めていた。",
+          "result": "騒ぎの中で、手帳に空欄の頁を写した。欄の名前、位置、日付まで。「証拠集め、板についてきましたね」とノノさん。見せ場を紙に残すのは、うちの係だ。写し終えた頃、幕はもう畳まれ始めていた。",
           "intent": "見せ場を、消えない形で持ち帰る",
           "promise": "手元に証拠が残る代わりに、街の熱はその場限りになりやすい",
           "memory": "手帳に写した、承認の欄の空白",
           "tone": "pragmatic",
-          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
           "goto": "main.s3.w06.node.end.001"
         }
-      ]
+      ],
+      "_units": 1
     },
     {
       "type": "end",
       "id": "main.s3.w06.node.end.001",
-      "mode": "return-to-week"
+      "mode": "return-to-week",
+      "_units": 1
     }
   ],
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "3周目・週6全面改稿(出張窓口を廃し、公開説明会の壇上で空欄が露見する形へ。幕1末の大)。お役所語は台詞・掲示の中のみ、地の文は通訳(隠された、ということだ)。Q=この街を引き受けるか / value=正当性 -→+(敵の紙が欠けた) / turn=行6(敵の見せ場で敵の紙が欠けた) / hook=恥の予兆の裏返し+半分の啓示(大)/climactic / try=いいえ、しかも(帳面は隠される) / game=生真面目の暴走(判名の朗読→欠伸→朗読が止まる) / carry=湯の噂(週5・女神の判) / open=隠された帳面の中身(答え=週7の写し) / newterm=魔法ギルド(判子の役所、と同ノードで通訳)",
+    "authorNote": "語り口V2・二行枠で改稿。3周目・週6全面改稿(出張窓口を廃し、公開説明会の壇上で空欄が露見する形へ。幕1末の大)。お役所語は台詞・掲示の中のみ、地の文は通訳(隠された、ということだ)。Q=この街を引き受けるか / value=正当性 -→+(敵の紙が欠けた) / turn=行6(敵の見せ場で敵の紙が欠けた) / hook=恥の予兆の裏返し+半分の啓示(大)/climactic / try=いいえ、しかも(帳面は隠される) / game=生真面目の暴走(判名の朗読→欠伸→朗読が止まる) / carry=湯の噂(週5・女神の判) / open=隠された帳面の中身(答え=週7の写し) / newterm=魔法ギルド(判子の役所、と同ノードで通訳)",
     "legacyGeneratedIds": false
   }
 }

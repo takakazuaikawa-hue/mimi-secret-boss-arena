@@ -8,9 +8,20 @@
     "arcId": "main.stage3"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -22,6 +33,24 @@
         "kind": "background",
         "path": "/assets/story/bg-employee-cafeteria-day-v1.png",
         "alt": "従業員食堂の背景"
+      },
+      {
+        "id": "main.s3.w04.asset.sprite.mimi.tsukkomi",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-tsukkomi-v1.png",
+        "alt": "驚いてツッコミを入れるミミ"
+      },
+      {
+        "id": "main.s3.w04.asset.sprite.mimi.smile",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-smile-v1.png",
+        "alt": "笑顔のミミ"
+      },
+      {
+        "id": "main.s3.w04.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
       }
     ]
   },
@@ -29,91 +58,287 @@
     {
       "type": "direction",
       "id": "main.s3.w04.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s3.w04.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s3.w04.asset.background.001",
+        "transition": "dissolve"
+      },
+      "_units": 1
     },
     {
       "type": "direction",
       "id": "main.s3.w04.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      },
+      "_units": 1
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.w04.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s3.w04.asset.sprite.mimi.tsukkomi",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      },
+      "_units": 1
     },
     {
       "type": "line",
-      "id": "main.s3.w04.node.line.001",
-      "lineId": "main.s3.w04.line.001",
+      "id": "main.s3.w04.node.line.001a",
+      "lineId": "main.s3.w04.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "まかないは、今日も揚げ物の音がしている。盆の隅の郵便の一番上は、開けなくても分かる。三年連続三回目、初心者大会のご招待である。賞品の欄まで去年と同じ、温泉一泊。仲間が遠くから叫ぶ。「今年も、卵のやつ!」。",
+      "text": "まかないは、今日も揚げ物の音。盆の隅の郵便、開けなくても分かる。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w04.node.line.001b",
+      "lineId": "main.s3.w04.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "三年連続三回目、初心者大会のご招待だ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w04.node.line.001c",
+      "lineId": "main.s3.w04.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "賞品欄まで、去年と同じ温泉一泊。「今年も、卵のやつ!」",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s3.w04.node.line.002",
-      "lineId": "main.s3.w04.line.002",
+      "id": "main.s3.w04.node.line.002a",
+      "lineId": "main.s3.w04.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "今日の用は、出場の返事と、初陣の子たちの支度だ。ただ、今年の初戦は、ただの初戦ではない。文句があるなら砂の上で——先週、白手袋の人にああ言われた。勝てば、あの黒い貼り紙に大きな声で文句が言える。負ければ、声が小さくなる。"
+      "text": "今日の用は、出場の返事と初陣の支度。今年の初戦は、ただの初戦じゃない。"
     },
     {
       "type": "line",
-      "id": "main.s3.w04.node.line.003",
-      "lineId": "main.s3.w04.line.003",
+      "id": "main.s3.w04.node.line.002b",
+      "lineId": "main.s3.w04.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "街の見立ても、同じだった。賭場の板に、新しい枠が立っている。「初心者大会・あわせて・ミミさんの言い分、通るか通らぬか」。胴元さん、仕事が早い。倍率は「通る」が優勢だった。ありがたいような、荷が重いような。",
+      "text": "文句があるなら砂の上で——先週、言われた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w04.node.line.002c",
+      "lineId": "main.s3.w04.line.002c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "勝てば、大きな声で文句が言える。負ければ、小さくなる。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w04.node.line.003a",
+      "lineId": "main.s3.w04.line.003a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "街の見立ても、同じだった。賭場の板に、新しい枠が立っている。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w04.node.line.003b",
+      "lineId": "main.s3.w04.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「初心者大会・あわせて・ミミさんの言い分、通るか通らぬか」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w04.node.line.003c",
+      "lineId": "main.s3.w04.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "胴元さん、仕事が早い。倍率は「通る」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w04.node.line.003d",
+      "lineId": "main.s3.w04.line.003d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "が優勢だ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w04.node.line.003e",
+      "lineId": "main.s3.w04.line.003e",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ありがたいような、荷が重いような。耳が、片方だけ下がる。",
       "emotion": "comic"
     },
     {
+      "type": "direction",
+      "id": "main.s3.w04.node.direction.mimi.shift.001",
+      "command": {
+        "type": "show",
+        "assetId": "main.s3.w04.asset.sprite.mimi.smile",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      },
+      "_units": 1
+    },
+    {
       "type": "line",
-      "id": "main.s3.w04.node.line.004",
-      "lineId": "main.s3.w04.line.004",
+      "id": "main.s3.w04.node.line.004a",
+      "lineId": "main.s3.w04.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "練習場では、初陣の子たちが砂を蹴っていた。三年目のうちには、初日の砂が初めての子がいる。型はまだ荒い。荒いが、目が良い。去年のうちを、客席で見ていた目だ。",
+      "text": "練習場では、初陣の子たちが砂を蹴っていた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w04.node.line.004b",
+      "lineId": "main.s3.w04.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "初日の砂が初めての子がいる。型は、まだ荒い。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w04.node.line.004c",
+      "lineId": "main.s3.w04.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "荒いが、目がいい。去年のうちを、客席で見ていた目だ。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s3.w04.node.line.005",
-      "lineId": "main.s3.w04.line.005",
+      "id": "main.s3.w04.node.line.005a",
+      "lineId": "main.s3.w04.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "その客席の隅に、白手袋が座っていた。ポラリスさんである。膝の上に、帳面。観戦ではなく、書き物の姿勢だ。「見に来たんですか」「数えごとの、続きです。腕前も、数えるものですので」。……人の練習を、在庫みたいに言わないでほしい。",
+      "text": "客席の隅に、白手袋が座っていた。ポラリスさんだ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w04.node.line.005b",
+      "lineId": "main.s3.w04.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "膝の上に、帳面。観戦じゃない。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w04.node.line.005c",
+      "lineId": "main.s3.w04.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "書き物の姿勢だ。「見に来たんですか」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w04.node.line.005d",
+      "lineId": "main.s3.w04.line.005d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「数えごとの、続きです。腕前も、数えるものですので」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w04.node.line.005e",
+      "lineId": "main.s3.w04.line.005e",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……人の練習を、在庫みたいに言わないでほしい。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s3.w04.node.line.006",
-      "lineId": "main.s3.w04.line.006",
+      "id": "main.s3.w04.node.line.006a",
+      "lineId": "main.s3.w04.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "でも、おかげで分かったことがある。向こうは、うちの勝ち負けを、ちゃんと帳面に載せる気なのだ。つまり、砂の上の結果は、向こうの紙の上でも効く。あの役所とうちの店は——同じ土俵で、戦える。",
+      "text": "でも、おかげで分かったことがある。向こうは、勝ち負けを帳面に載せる気だ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w04.node.line.006b",
+      "lineId": "main.s3.w04.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "砂の上の結果は、向こうの紙にも効く。あの役所とうちの店は、同じ土俵で戦える。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s3.w04.node.line.007",
-      "lineId": "main.s3.w04.line.007",
+      "id": "main.s3.w04.node.line.007a",
+      "lineId": "main.s3.w04.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "初陣の子が、客席の白手袋をちらりと見て、それから私を見た。「ミミさん。あの人の前で、勝っていいんですよね」「もちろん。うんと派手に、どうぞ」。",
-      "emotion": "tender"
+      "text": "初陣の子が、白手袋をちらりと見た。それから、私を見た。"
     },
     {
       "type": "line",
-      "id": "main.s3.w04.node.line.008",
-      "lineId": "main.s3.w04.line.008",
+      "id": "main.s3.w04.node.line.007b",
+      "lineId": "main.s3.w04.line.007b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "返事は一通だけ書いた。大会へ、「出ます」。今年の返事は、それで足りる。",
+      "text": "「ミミさん。あの人の前で、勝っていいんですよね」「もちろん。うんと派手に、どうぞ」",
+      "emotion": "tender"
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.w04.node.direction.mimi.shift.002",
+      "command": {
+        "type": "show",
+        "assetId": "main.s3.w04.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      },
+      "_units": 1
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w04.node.line.008a",
+      "lineId": "main.s3.w04.line.008a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "返事は、一通だけ書いた。大会へ、「出ます」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w04.node.line.008b",
+      "lineId": "main.s3.w04.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "今年の返事は、それで足りる。",
       "emotion": "resolve"
     },
     {
       "type": "line",
-      "id": "main.s3.w04.node.line.009",
-      "lineId": "main.s3.w04.line.009",
+      "id": "main.s3.w04.node.line.009a",
+      "lineId": "main.s3.w04.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "投函の帰り、大会告知の前で、初陣の子たちの名前を探した。ちゃんと、街の掲示に載っている。私の名前より、確かな字で。——さて。白手袋の帳面には、今週、何と書かれるだろう。",
+      "text": "投函の帰り、大会告知の前で足を止めた。初陣の子たちの名前を探す。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w04.node.line.009b",
+      "lineId": "main.s3.w04.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ちゃんと、街の掲示に載っている。私の名前より、確かな字で。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w04.node.line.009c",
+      "lineId": "main.s3.w04.line.009c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "——さて。白手袋の帳面には、今週何と?",
       "emotion": "tension"
     },
     {
@@ -123,37 +348,49 @@
         {
           "id": "main.s3.w04.choice.001",
           "label": "今週は、初陣の支度に付きっきりになる",
-          "result": "役所のことは一週間、頭の棚に上げた。練習場で、初陣の子たちの型を最初から見る。三度目の初心者大会で、初めて分かることがある。初日の砂は、誰にとっても一度きりだ。まかないのおばちゃんが、弁当を余分に包んでくれた。「初陣の週は、うちも三度目だからね」。",
+          "result": "役所のことは、一週間頭の棚に上げた。練習場で、型を最初から見る。三度目でも、初日の砂は誰にとっても一度きりだ。おばちゃんが弁当を余分に包んでくれた。「初陣の週は、うちも三度目だからね」。",
           "intent": "新しい一歩を、ちゃんと見届ける",
           "promise": "チームの足元が固まる代わりに、役所調べは一週止まる",
           "memory": "初陣週の、余分に包まれた弁当",
           "tone": "pragmatic",
-          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
           "goto": "main.s3.w04.node.end.001"
         },
         {
           "id": "main.s3.w04.choice.002",
           "label": "観察には観察を。白手袋の仕事ぶりを見返す",
-          "result": "向こうがうちを数えるなら、こちらも向こうを数える。ノノさんと交代で、白手袋の仕事ぶりを一週間見学した。判明したこと。昼は必ず、茶を一杯だけ頼む。帳面の字は、定規で引いたようにまっすぐ。それから——うちの子の良い動きのところで、頁をめくる手が、一度だけ止まった。……あの人、興行、嫌いじゃないですね。",
+          "result": "向こうが数えるなら、こちらも数える。ノノさんと交代で、一週間見学した。昼は必ず茶を一杯だけ。字は定規で引いたよう。うちの子の良い動きで、頁をめくる手が一度だけ止まった。……嫌いじゃないですね、興行。",
           "intent": "敵の帳面のつけ方を、こちらも知る",
           "promise": "相手の人となりが見える代わりに、練習場に立つ時間は減る",
           "memory": "良い動きで一度だけ止まった、白手袋の頁",
           "tone": "heroic",
-          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
           "goto": "main.s3.w04.node.end.001"
         }
-      ]
+      ],
+      "_units": 1
     },
     {
       "type": "end",
       "id": "main.s3.w04.node.end.001",
-      "mode": "return-to-week"
+      "mode": "return-to-week",
+      "_units": 1
     }
   ],
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "3周目・週4全面改稿(大会週。ギルド郵便の筋を廃止、賭け金の提示は胴元の板=街の口で。執行官の客席常在ここから)。Q=この街を引き受けるか / value=土俵 別々→同じ(砂の結果が紙に効く) / turn=行6(役所とは同じ土俵で戦える) / hook=未決着の勝負(中)/pre-point / try=はい、しかし / game=数えごとの続き(招待状天丼一拍→鍋の次は腕前→在庫みたいに言うな) / carry=「砂の上で」(週2)・黒封蝋の貼り紙 / open=白手袋の帳面に何と書かれるか(答え=週の勝敗+週10) / newterm=なし",
+    "authorNote": "語り口V2・二行枠で改稿。3周目・週4全面改稿(大会週。ギルド郵便の筋を廃止、賭け金の提示は胴元の板=街の口で。執行官の客席常在ここから)。Q=この街を引き受けるか / value=土俵 別々→同じ(砂の結果が紙に効く) / turn=行6(役所とは同じ土俵で戦える) / hook=未決着の勝負(中)/pre-point / try=はい、しかし / game=数えごとの続き(招待状天丼一拍→鍋の次は腕前→在庫みたいに言うな) / carry=「砂の上で」(週2)・黒封蝋の貼り紙 / open=白手袋の帳面に何と書かれるか(答え=週の勝敗+週10) / newterm=なし",
     "legacyGeneratedIds": false
   }
 }

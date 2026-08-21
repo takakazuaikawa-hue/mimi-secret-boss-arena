@@ -8,9 +8,20 @@
     "arcId": "main.stage3"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -22,6 +33,24 @@
         "kind": "background",
         "path": "/assets/story/bg-hot-spring-ryokan.png",
         "alt": "温泉旅館の背景"
+      },
+      {
+        "id": "main.s3.w05.asset.sprite.mimi.smile",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-smile-v1.png",
+        "alt": "笑顔のミミ"
+      },
+      {
+        "id": "main.s3.w05.asset.sprite.mimi.tsukkomi",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-tsukkomi-v1.png",
+        "alt": "驚いてツッコミを入れるミミ"
+      },
+      {
+        "id": "main.s3.w05.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
       }
     ]
   },
@@ -29,109 +58,272 @@
     {
       "type": "direction",
       "id": "main.s3.w05.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s3.w05.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s3.w05.asset.background.001",
+        "transition": "dissolve"
+      },
+      "_units": 1
     },
     {
       "type": "direction",
       "id": "main.s3.w05.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      },
+      "_units": 1
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.w05.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s3.w05.asset.sprite.mimi.smile",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      },
+      "_units": 1
     },
     {
       "type": "line",
-      "id": "main.s3.w05.node.line.001",
-      "lineId": "main.s3.w05.line.001",
+      "id": "main.s3.w05.node.line.001a",
+      "lineId": "main.s3.w05.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "湯けむりは、硫黄と檜の匂い。大会の翌週は、湯である。勝っても負けても、砂は流すもの。三年目のうちの、決まりごとだ。",
+      "text": "湯けむりは、硫黄と檜の匂い。大会の翌週は、湯だ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w05.node.line.001b",
+      "lineId": "main.s3.w05.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "勝っても負けても、砂は流すもの。三年目のうちの、決まりごとだ。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s3.w05.node.line.002",
-      "lineId": "main.s3.w05.line.002",
+      "id": "main.s3.w05.node.line.002a",
+      "lineId": "main.s3.w05.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "今日の用は、骨休め——のはずだった。玄関で、あの仲居さんが三つ指をついた。「お待ちしておりました。三度目ですね」。数えている。この人は毎年、正しく数えている。",
+      "text": "今日の用は、骨休め——のはずだった。玄関で、あの仲居さんが三つ指をついた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w05.node.line.002b",
+      "lineId": "main.s3.w05.line.002b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「お待ちしておりました。三度目ですね」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w05.node.line.002c",
+      "lineId": "main.s3.w05.line.002c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "数えている。毎年、正しく数えている。",
       "emotion": "tension"
     },
     {
+      "type": "direction",
+      "id": "main.s3.w05.node.direction.mimi.shift.001",
+      "command": {
+        "type": "show",
+        "assetId": "main.s3.w05.asset.sprite.mimi.tsukkomi",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      },
+      "_units": 1
+    },
+    {
       "type": "line",
-      "id": "main.s3.w05.node.line.003",
-      "lineId": "main.s3.w05.line.003",
+      "id": "main.s3.w05.node.line.003a",
+      "lineId": "main.s3.w05.line.003a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "湯に浸かって、それとなく聞いてみた。「暦が巻き戻っても、覚えているんですね」。仲居さんは平然と桶を並べる。「湯の中の話は、湯の外へ持ち出さないのが決まりです」。",
+      "text": "湯に浸かって、それとなく聞いてみた。「暦が巻き戻っても、覚えているんですね」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w05.node.line.003b",
+      "lineId": "main.s3.w05.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "仲居さんは平然と、桶を並べる。「湯の中の話は、湯の外へ持ち出さないのが決まりです」",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s3.w05.node.line.004",
-      "lineId": "main.s3.w05.line.004",
+      "id": "main.s3.w05.node.line.004a",
+      "lineId": "main.s3.w05.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "だから、と仲居さんは続けた。「湯の中でなら、何を話しても大丈夫」。……この湯、そういう決まりの場所だったのか。道理で、常連さんの愚痴が深い。",
+      "text": "「湯の中でなら、何を話しても大丈夫」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w05.node.line.004b",
+      "lineId": "main.s3.w05.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……この湯、そういう決まりの場所だったのか。道理で、常連さんの愚痴が深い。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s3.w05.node.line.005",
-      "lineId": "main.s3.w05.line.005",
+      "id": "main.s3.w05.node.line.005a",
+      "lineId": "main.s3.w05.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「お客さま、来た口でしょう」。来た口。「——空から。私も、です」。桶を置く音が、こん、と軽く鳴った。湯気の向こうの背中は、仕事の姿勢のままだった。",
+      "text": "「お客さま、来た口でしょう」来た口? ……え。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w05.node.line.005b",
+      "lineId": "main.s3.w05.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "耳が、ぴくっと動く。「——空から。私も、です」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w05.node.line.005c",
+      "lineId": "main.s3.w05.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "桶を置く音が、こん、と軽く鳴った。湯気の向こうの背中は、仕事の姿勢のまま。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s3.w05.node.line.006",
-      "lineId": "main.s3.w05.line.006",
+      "id": "main.s3.w05.node.line.006a",
+      "lineId": "main.s3.w05.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "空から来た者だけが、この世界の変なところに気づける。ずっと、自分ひとりの持病だと思っていた。同じ持病の先輩が、三年のあいだ、黙って私の湯を沸かしていたのだ。「三度目ですね」は、同類の挨拶だった。",
+      "text": "空から来た者だけが、変なところに気づける。ずっと、自分ひとりの持病だと思ってた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w05.node.line.006b",
+      "lineId": "main.s3.w05.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "同じ持病の先輩が、三年黙って湯を沸かしてた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w05.node.line.006c",
+      "lineId": "main.s3.w05.line.006c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「三度目ですね」は、同類の挨拶だった。",
       "emotion": "tender"
     },
     {
+      "type": "direction",
+      "id": "main.s3.w05.node.direction.mimi.shift.002",
+      "command": {
+        "type": "show",
+        "assetId": "main.s3.w05.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      },
+      "_units": 1
+    },
+    {
       "type": "line",
-      "id": "main.s3.w05.node.line.007",
-      "lineId": "main.s3.w05.line.007",
+      "id": "main.s3.w05.node.line.007a",
+      "lineId": "main.s3.w05.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "だから、湯の中の決まりに甘えて、白手袋の数えごとの話をした。仲居さんの桶が、止まった。「回収局まで、出てきたんですか」。それから、きっぱりと言った。「——それ、勝てますよ」。",
+      "text": "湯の中の決まりに甘えて、話をした。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w05.node.line.007b",
+      "lineId": "main.s3.w05.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "白手袋の数えごとのこと。仲居さんの桶が、止まった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w05.node.line.007c",
+      "lineId": "main.s3.w05.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「回収局まで、出てきたんですか」「——それ、勝てますよ」",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s3.w05.node.line.008",
-      "lineId": "main.s3.w05.line.008",
+      "id": "main.s3.w05.node.line.008a",
+      "lineId": "main.s3.w05.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「あなたを持ち物にした取り決めは、女神さまの判が無いままでしょう。ああいうのはね、お客さま。**来た口が束になれば、ひっくり返せる**んです。湯の中では、昔からそう言われています」。",
+      "text": "「あなたを持ち物にした取り決め、女神さまの判が無いままでしょう」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w05.node.line.008b",
+      "lineId": "main.s3.w05.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「**来た口が束になれば、ひっくり返せる**んです」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w05.node.line.008c",
+      "lineId": "main.s3.w05.line.008c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「湯の中では、昔からそう言われています」",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s3.w05.node.line.009",
-      "lineId": "main.s3.w05.line.009",
+      "id": "main.s3.w05.node.line.009a",
+      "lineId": "main.s3.w05.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "束になれば、って。来た口の人たち、どこにいるんですか。聞くより先に、膳が来た。卵は、固めだった。",
+      "text": "束になれば、って。どこにいるんですか、その人たち。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w05.node.line.009b",
+      "lineId": "main.s3.w05.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "聞くより先に、膳が来た。卵は、固めだった。",
       "emotion": "comic"
     },
     {
       "type": "effect",
       "id": "main.s3.w05.node.effect.001",
-      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+      "effects": [
+        {
+          "type": "sharedPoints",
+          "amount": 2
+        }
+      ],
+      "_units": 1
     },
     {
       "type": "end",
       "id": "main.s3.w05.node.end.001",
-      "mode": "return-to-week"
+      "mode": "return-to-week",
+      "_units": 1
     }
   ],
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "3周目・週5改稿(転生者第一号=仲居さん。反撃の種を紙でなく味方の口から——「来た口が束になればひっくり返せる」。女神の判の空欄は週6の公開の場で世界も知る)。Q=この街を引き受けるか / value=孤独 -→+(同類と武器の噂) / turn=行6(「三度目ですね」=同類の挨拶) / hook=閃き(小)/post-hook / try=はい、しかし / game=湯の決まり(持ち出し禁止→何でも話せる→愚痴が深い→甘えて相談) / carry=白手袋の数えごと(週2〜4) / open=来た口はどこにいる(答え=週11見分け方→週14旅) / newterm=なし(来た口=転生者の湯言葉。同ノードで機能提示)",
+    "authorNote": "語り口V2・二行枠で改稿。3周目・週5改稿(転生者第一号=仲居さん。反撃の種を紙でなく味方の口から——「来た口が束になればひっくり返せる」。女神の判の空欄は週6の公開の場で世界も知る)。Q=この街を引き受けるか / value=孤独 -→+(同類と武器の噂) / turn=行6(「三度目ですね」=同類の挨拶) / hook=閃き(小)/post-hook / try=はい、しかし / game=湯の決まり(持ち出し禁止→何でも話せる→愚痴が深い→甘えて相談) / carry=白手袋の数えごと(週2〜4) / open=来た口はどこにいる(答え=週11見分け方→週14旅) / newterm=なし(来た口=転生者の湯言葉。同ノードで機能提示)",
     "legacyGeneratedIds": false
   }
 }

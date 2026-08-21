@@ -8,9 +8,20 @@
     "arcId": "main.stage3"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -22,6 +33,18 @@
         "kind": "background",
         "path": "/assets/story/bg-lost-property-counter-v1.png",
         "alt": "遺失物窓口の背景"
+      },
+      {
+        "id": "main.s3.w07.asset.sprite.mimi.tsukkomi",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-tsukkomi-v1.png",
+        "alt": "驚いてツッコミを入れるミミ"
+      },
+      {
+        "id": "main.s3.w07.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
       }
     ]
   },
@@ -29,108 +52,299 @@
     {
       "type": "direction",
       "id": "main.s3.w07.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s3.w07.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s3.w07.asset.background.001",
+        "transition": "dissolve"
+      },
+      "_units": 1
     },
     {
       "type": "direction",
       "id": "main.s3.w07.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      },
+      "_units": 1
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.w07.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s3.w07.asset.sprite.mimi.tsukkomi",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      },
+      "_units": 1
     },
     {
       "type": "line",
-      "id": "main.s3.w07.node.line.001",
-      "lineId": "main.s3.w07.line.001",
+      "id": "main.s3.w07.node.line.001a",
+      "lineId": "main.s3.w07.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "遺失物の窓口から、呼び出しが来た。「お心当たりの品が届いています」。心当たりは、無い。無いが、この街の呼び出しを断ると、後で面白いことになるのは、三年で学んでいる。",
+      "text": "遺失物の窓口から、呼び出しが来た。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w07.node.line.001b",
+      "lineId": "main.s3.w07.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「お心当たりの品が届いています」心当たりは、無い。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w07.node.line.001c",
+      "lineId": "main.s3.w07.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "でも、この街の呼び出しを断ると面白いことになる。三年で学んでいる。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s3.w07.node.line.002",
-      "lineId": "main.s3.w07.line.002",
+      "id": "main.s3.w07.node.line.002a",
+      "lineId": "main.s3.w07.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "窓口のおじさんが、包みをひとつ出した。「拾得物。差出人、不明」。結び目から、うっすら朱肉の匂い。……差出人、だいたい分かってしまうのですが。あの壇の上の、生真面目な係の人だ。"
+      "text": "窓口のおじさんが、包みをひとつ出した。"
     },
     {
       "type": "line",
-      "id": "main.s3.w07.node.line.003",
-      "lineId": "main.s3.w07.line.003",
+      "id": "main.s3.w07.node.line.002b",
+      "lineId": "main.s3.w07.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "中身は、紙の束の写しだった。お休み中のはずの、あの帳面の——四百年前の取り決めの、全文である。隠された中身が、規則の隙間を通って、こちら側へ「落ちて」きたのだ。役所の中に、味方がいる。",
+      "text": "「拾得物。差出人、不明」結び目から、うっすら朱肉の匂い。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w07.node.line.002c",
+      "lineId": "main.s3.w07.line.002c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……差出人、だいたい分かってしまうのですが。あの壇の上の、生真面目な係の人だ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w07.node.line.003a",
+      "lineId": "main.s3.w07.line.003a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "中身は、紙の束の写しだった。お休み中のはずの、あの帳面の——四百年前の取り決めの全文だ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w07.node.line.003b",
+      "lineId": "main.s3.w07.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "隠された中身が、規則の隙間を通って、こちらへ「落ちて」きたのだ。役所の中に、味方がいる。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s3.w07.node.line.004",
-      "lineId": "main.s3.w07.line.004",
+      "id": "main.s3.w07.node.line.004a",
+      "lineId": "main.s3.w07.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "まかないに全員を集めて、鍋を囲んで読んだ。取り決めの、理由の欄。「女神不在期における、無主物の暫定管理のため」。……無主物。持ち主のいない、物。私、荷物としてこの世界に受け付けられていたらしい。せめて壊れ物の扱いを希望する。",
-      "emotion": "comic"
+      "text": "まかないに全員を集めて、鍋を囲んで読んだ。取り決めの、理由の欄。"
     },
     {
       "type": "line",
-      "id": "main.s3.w07.node.line.005",
-      "lineId": "main.s3.w07.line.005",
+      "id": "main.s3.w07.node.line.004b",
+      "lineId": "main.s3.w07.line.004b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "言い分は、筋だけは通っていた。承認する女神さまが、留守だった。誰かが預からないと、空から来た人が迷子になる。だから、預かった。四百年前から、そういう決まりで回してきたのだ、と。",
+      "text": "「女神不在期における、無主物の暫定管理のため」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w07.node.line.004c",
+      "lineId": "main.s3.w07.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……無主物。持ち主のいない、物。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w07.node.line.004d",
+      "lineId": "main.s3.w07.line.004d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私、荷物としてこの世界に受け付けられていたらしい。せめて壊れ物の扱いを希望する。",
+      "emotion": "comic"
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.w07.node.direction.mimi.shift.001",
+      "command": {
+        "type": "show",
+        "assetId": "main.s3.w07.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      },
+      "_units": 1
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w07.node.line.005a",
+      "lineId": "main.s3.w07.line.005a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "言い分は、筋だけは通っていた。承認する女神さまが、留守だった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w07.node.line.005b",
+      "lineId": "main.s3.w07.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "誰かが預からないと、空から来た人が迷子になる。だから、預かった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w07.node.line.005c",
+      "lineId": "main.s3.w07.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "四百年、そういう決まりで回してきたのだ、と。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s3.w07.node.line.006",
-      "lineId": "main.s3.w07.line.006",
+      "id": "main.s3.w07.node.line.006a",
+      "lineId": "main.s3.w07.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "預かる、が、いつから「持ち物にする」へ化けたのだろう。迷子札のつもりの紙が、人を三年、荷物にしていた。決まりは古びると、意味だけが先に死ぬ。赤線を六本引いたうちの店は、それをよく知っている。",
+      "text": "預かる、が、いつから「持ち物にする」へ化けたのだろう。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w07.node.line.006b",
+      "lineId": "main.s3.w07.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "迷子札のつもりの紙が、人を三年、荷物にしていた。決まりは古びると、意味だけが先に死ぬ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w07.node.line.006c",
+      "lineId": "main.s3.w07.line.006c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "赤線を六本引いたうちの店は、それをよく知っている。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s3.w07.node.line.007",
-      "lineId": "main.s3.w07.line.007",
+      "id": "main.s3.w07.node.line.007a",
+      "lineId": "main.s3.w07.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "最後の頁、検印の欄で、手が止まった。古い判の横に、真新しい判がひとつ。「回収対象: ミミ様(無形)」。——いつか、どこかで見た言葉だ。あのときは、笑い話だった。",
+      "text": "最後の頁、検印の欄で、手が止まった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w07.node.line.007b",
+      "lineId": "main.s3.w07.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "古い判の横に、真新しい判がひとつ。「回収対象: ミミ様(無形)」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w07.node.line.007c",
+      "lineId": "main.s3.w07.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "——いつか、どこかで見た言葉だ。あのときは、笑い話だった。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s3.w07.node.line.008",
-      "lineId": "main.s3.w07.line.008",
+      "id": "main.s3.w07.node.line.008a",
+      "lineId": "main.s3.w07.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "仲間の一人が、お玉を置いた。「回収って。つまり、ミミさんを持っていくって、ことですか」。そういうことに、なる。鍋の周りが一拍だけ静かになって、それから全員、同じ顔になった。怒った顔、である。",
+      "text": "仲間の一人が、お玉を置いた。「回収って。つまり、ミミさんを持っていくって、ことですか」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w07.node.line.008b",
+      "lineId": "main.s3.w07.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "そういうことに、なる。鍋の周りが、一拍だけ静かになった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w07.node.line.008c",
+      "lineId": "main.s3.w07.line.008c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "それから全員、同じ顔になった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w07.node.line.008d",
+      "lineId": "main.s3.w07.line.008d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "怒った顔だ。耳が、みんな立った。",
       "emotion": "resolve"
     },
     {
       "type": "line",
-      "id": "main.s3.w07.node.line.009",
-      "lineId": "main.s3.w07.line.009",
+      "id": "main.s3.w07.node.line.009a",
+      "lineId": "main.s3.w07.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "読み終えたころ、常連さんが新しい立て札の噂を持ってきた。「帳面の続きをご覧になりたい方は、様式に従い、腕前の確認を」。読み下すと、こうだ。続きが見たければ、砂の上で勝て。——望むところ、である。",
+      "text": "読み終えたころ、常連さんが新しい立て札の噂を持ってきた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w07.node.line.009b",
+      "lineId": "main.s3.w07.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「帳面の続きをご覧になりたい方は、様式に従い、腕前の確認を」読み下すと、こうだ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w07.node.line.009c",
+      "lineId": "main.s3.w07.line.009c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "続きが見たければ、砂の上で勝て。——望むところだ。",
       "emotion": "tension"
     },
     {
       "type": "effect",
       "id": "main.s3.w07.node.effect.001",
-      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+      "effects": [
+        {
+          "type": "sharedPoints",
+          "amount": 2
+        }
+      ],
+      "_units": 1
     },
     {
       "type": "end",
       "id": "main.s3.w07.node.end.001",
-      "mode": "return-to-week"
+      "mode": "return-to-week",
+      "_units": 1
     }
   ],
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "3周目・週7改稿(遺失物の一拍→まかないの作戦会議が主舞台。敵の理と家族の怒りを同じ鍋で)。1周目w25「緊急回収リスト: ミミ様(無形)」の意味反転の入口、意味はまだ伏せる。Q=この街を引き受けるか / value=家族 +(全員の怒り)/正当性 -(回収の判) / turn=行6(預かるが持ち物にするへ化けた) / hook=未決着の勝負(中)/post-hook / try=はい、しかし / game=役所の隙間(拾得物→朱肉の匂い→落ちてきた) / carry=壇の係の人(週6)・湯の噂(週5) / open=回収の中身(答え=週10の値札→週20執行)・腕前の確認(答え=週8) / newterm=なし(無主物は一般語、同ノードで通訳)",
+    "authorNote": "語り口V2・二行枠で改稿。3周目・週7改稿(遺失物の一拍→まかないの作戦会議が主舞台。敵の理と家族の怒りを同じ鍋で)。1周目w25「緊急回収リスト: ミミ様(無形)」の意味反転の入口、意味はまだ伏せる。Q=この街を引き受けるか / value=家族 +(全員の怒り)/正当性 -(回収の判) / turn=行6(預かるが持ち物にするへ化けた) / hook=未決着の勝負(中)/post-hook / try=はい、しかし / game=役所の隙間(拾得物→朱肉の匂い→落ちてきた) / carry=壇の係の人(週6)・湯の噂(週5) / open=回収の中身(答え=週10の値札→週20執行)・腕前の確認(答え=週8) / newterm=なし(無主物は一般語、同ノードで通訳)",
     "legacyGeneratedIds": false
   }
 }

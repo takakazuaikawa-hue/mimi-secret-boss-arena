@@ -8,9 +8,20 @@
     "arcId": "main.stage3"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -47,12 +58,20 @@
     {
       "type": "direction",
       "id": "main.s3.w09.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s3.w09.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s3.w09.asset.background.001",
+        "transition": "dissolve"
+      },
+      "_units": 1
     },
     {
       "type": "direction",
       "id": "main.s3.w09.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      },
+      "_units": 1
     },
     {
       "type": "direction",
@@ -63,24 +82,49 @@
         "actorId": "mimi",
         "slot": "left",
         "scale": "tall"
-      }
+      },
+      "_units": 1
     },
     {
       "type": "line",
-      "id": "main.s3.w09.node.line.001",
-      "lineId": "main.s3.w09.line.001",
+      "id": "main.s3.w09.node.line.001a",
+      "lineId": "main.s3.w09.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "夜の展望席には、火薬の匂いが先に届く。花火大会、三年目である。膝の上には、あの帳面の続きの写し。あの審理の一戦を場内ぜんぶが見てしまって、役所はもう、閲覧を断れなくなったのだ。勝ち負けの帳面より、見せ場の記憶が強い日もある。",
+      "text": "夜の展望席に、火薬の匂いが、先に届く。花火大会、三年目。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w09.node.line.001b",
+      "lineId": "main.s3.w09.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "膝の上には、あの帳面の写し。先週の一戦を、場内ぜんぶが見てしまった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w09.node.line.001c",
+      "lineId": "main.s3.w09.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "だから役所は、もう、閲覧を断れない。勝ち負けより、見せ場の記憶が強い日も、ある。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s3.w09.node.line.002",
-      "lineId": "main.s3.w09.line.002",
+      "id": "main.s3.w09.node.line.002a",
+      "lineId": "main.s3.w09.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "今日の用は、骨休めと、写しの続きを少し。……のはずが、一発目で手が止まった。観客の拍手が、花火より先に、鳴ったのである。"
+      "text": "今日の用は、骨休めと、写しの続き。……のはずが、一発目で手が止まった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w09.node.line.002b",
+      "lineId": "main.s3.w09.line.002b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "観客の拍手が、花火より先に、鳴った。"
     },
     {
       "type": "direction",
@@ -91,42 +135,99 @@
         "actorId": "mimi",
         "slot": "left",
         "scale": "tall"
-      }
+      },
+      "_units": 1
     },
     {
       "type": "line",
-      "id": "main.s3.w09.node.line.003",
-      "lineId": "main.s3.w09.line.003",
+      "id": "main.s3.w09.node.line.003a",
+      "lineId": "main.s3.w09.line.003a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「今年も来るぞ、あの大玉!」。ドン。「ほら来た!」。皆さん、覚えているのだ。去年と一昨年の花火を。だから拍手が、開く前に来る。花火師さん泣かせの、気の早い客席である。",
+      "text": "「今年も来るぞ、あの大玉!」ドン。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w09.node.line.003b",
+      "lineId": "main.s3.w09.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「ほら来た!」みんな、覚えているのだ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w09.node.line.003c",
+      "lineId": "main.s3.w09.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "だから拍手が、開く前に来る。花火師さん泣かせの、気の早い客席だ。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s3.w09.node.line.004",
-      "lineId": "main.s3.w09.line.004",
+      "id": "main.s3.w09.node.line.004a",
+      "lineId": "main.s3.w09.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "仲間が笑った。「初めの年は、みんな、初めて見る顔だったのにな」。そうか。覚えている人が増えるほど、祭りは初めてじゃなくなる。代わりに——「おかえり」の顔に、なっていく。",
+      "text": "仲間が笑った。「初めの年は、みんな初めて見る顔だったのにな」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w09.node.line.004b",
+      "lineId": "main.s3.w09.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "そうか。覚える人が増えるほど、祭りは初めてじゃなくなる。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w09.node.line.004c",
+      "lineId": "main.s3.w09.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "代わりに——「おかえり」の顔に、なっていく。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s3.w09.node.line.005",
-      "lineId": "main.s3.w09.line.005",
+      "id": "main.s3.w09.node.line.005a",
+      "lineId": "main.s3.w09.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "花火師さんも、意地を見せた。終盤、誰も拍手を先打ちできない一発が上がる。見たことのない、新作である。長い耳みたいな二本の光が、夜空でぴんと跳ねた。……あれ。あの形、どこかで。",
+      "text": "花火師さんも、意地を見せた。終盤、誰も先打ちできない一発が、上がる。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w09.node.line.005b",
+      "lineId": "main.s3.w09.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "見たことのない、新作。長い耳みたいな、二本の光。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w09.node.line.005c",
+      "lineId": "main.s3.w09.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "夜空で、ぴんと跳ねた。……あれ。あの形、どこかで。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s3.w09.node.line.006",
-      "lineId": "main.s3.w09.line.006",
+      "id": "main.s3.w09.node.line.006a",
+      "lineId": "main.s3.w09.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "客席が、今夜いちばん沸いた。誰も知らない花火にだけ、拍手は遅れて、大きく来る。新しいものは、強い。去年の決勝で学んだことを、夜空がもう一度言った。",
+      "text": "客席が、今夜いちばん、沸いた。誰も知らない花火にだけ、拍手は遅れて、大きく来る。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w09.node.line.006b",
+      "lineId": "main.s3.w09.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "新しいものは、強い。去年の決勝と、同じだ。",
       "emotion": "revelation"
     },
     {
@@ -138,50 +239,90 @@
         "actorId": "mimi",
         "slot": "left",
         "scale": "tall"
-      }
+      },
+      "_units": 1
     },
     {
       "type": "line",
-      "id": "main.s3.w09.node.line.007",
-      "lineId": "main.s3.w09.line.007",
+      "id": "main.s3.w09.node.line.007a",
+      "lineId": "main.s3.w09.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "静かになった席で、写しをめくっていたノノさんが、ふと言った。「ミミさん、ここ」。指の先、預かりの決まりの但し書き。「期限: 女神の帰還まで」。……この預かり、期限つきだったのだ。四百年、切れないままの期限が。",
+      "text": "静かな席で、ノノさんが、ふと言った。「ミミさん、ここ」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w09.node.line.007b",
+      "lineId": "main.s3.w09.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "指の先、預かりの決まりの、但し書き。「期限: 女神の帰還まで」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w09.node.line.007c",
+      "lineId": "main.s3.w09.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……この預かり、期限つきだった。四百年、切れないままの期限が。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s3.w09.node.line.008",
-      "lineId": "main.s3.w09.line.008",
+      "id": "main.s3.w09.node.line.008a",
+      "lineId": "main.s3.w09.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "期限のある預かりを、期限が来ないからと、持ち物にした。四百年の正体は、たぶん、それだ。花火の照り返しで、写しの紙が、赤くなったり青くなったりした。",
+      "text": "期限のある預かりを、期限が来ないからと、持ち物にした。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w09.node.line.008b",
+      "lineId": "main.s3.w09.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "四百年の正体は、たぶん、それだ。花火の照り返しで、写しの紙が、赤や青に変わる。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s3.w09.node.line.009",
-      "lineId": "main.s3.w09.line.009",
+      "id": "main.s3.w09.node.line.009a",
+      "lineId": "main.s3.w09.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "最後の一発が消えても、拍手だけが長く残った。覚えている拍手は、長い。その長さのぶんだけ、この街は変わり始めている。——返してもらう支度、続けましょうか。",
+      "text": "最後の一発が消えても、拍手だけが、長く残った。覚えている拍手は、長い。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w09.node.line.009b",
+      "lineId": "main.s3.w09.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "この街は、変わり始めている。——支度を、続けましょうか。",
       "emotion": "resolve"
     },
     {
       "type": "effect",
       "id": "main.s3.w09.node.effect.001",
-      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+      "effects": [
+        {
+          "type": "sharedPoints",
+          "amount": 2
+        }
+      ],
+      "_units": 1
     },
     {
       "type": "end",
       "id": "main.s3.w09.node.end.001",
-      "mode": "return-to-week"
+      "mode": "return-to-week",
+      "_units": 1
     }
   ],
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "3周目・週9(大会翌週。勝敗両立回収=「言い分は通った」。世界の覚醒を拍手の先打ちで、新作の強さを兎耳花火で)。Q=この街を引き受けるか / value=時間 -→+(期限の発見) / turn=行7-8(預かりは期限つきだった) / hook=閃き(中)/post-point / try=はい、しかし / game=気の早い拍手(先打ち→おかえりの顔→新作だけ遅れて大きい) / carry=写し(週7)・勝負(週8) / open=兎耳の花火は誰の注文か(答え=週23祭)・女神の帰還という期限(答え=週24審理) / newterm=なし",
+    "authorNote": "語り口V2・二行枠で改稿。 / 3周目・週9(大会翌週。勝敗両立回収=「言い分は通った」。世界の覚醒を拍手の先打ちで、新作の強さを兎耳花火で)。Q=この街を引き受けるか / value=時間 -→+(期限の発見) / turn=行7-8(預かりは期限つきだった) / hook=閃き(中)/post-point / try=はい、しかし / game=気の早い拍手(先打ち→おかえりの顔→新作だけ遅れて大きい) / carry=写し(週7)・勝負(週8) / open=兎耳の花火は誰の注文か(答え=週23祭)・女神の帰還という期限(答え=週24審理) / newterm=なし",
     "legacyGeneratedIds": false
   }
 }

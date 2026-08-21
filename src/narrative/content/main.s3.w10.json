@@ -8,9 +8,20 @@
     "arcId": "main.stage3"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -22,6 +33,18 @@
         "kind": "background",
         "path": "/assets/story/bg-fountain-plaza-day-v1.png",
         "alt": "噴水広場の背景"
+      },
+      {
+        "id": "main.s3.w10.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
+      },
+      {
+        "id": "main.s3.w10.asset.sprite.mimi.smile",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-smile-v1.png",
+        "alt": "笑顔のミミ"
       }
     ]
   },
@@ -29,91 +52,243 @@
     {
       "type": "direction",
       "id": "main.s3.w10.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s3.w10.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s3.w10.asset.background.001",
+        "transition": "dissolve"
+      },
+      "_units": 1
     },
     {
       "type": "direction",
       "id": "main.s3.w10.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      },
+      "_units": 1
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.w10.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s3.w10.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      },
+      "_units": 1
     },
     {
       "type": "line",
-      "id": "main.s3.w10.node.line.001",
-      "lineId": "main.s3.w10.line.001",
+      "id": "main.s3.w10.node.line.001a",
+      "lineId": "main.s3.w10.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "広場の屋台に、見慣れない札が下がっていた。小さくて、白い。焼き餅屋の鉄板に、一枚。「什器一号」。……数えごとが、街へ出てきたのだ。",
+      "text": "広場の屋台に、見慣れない札。小さくて、白い。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w10.node.line.001b",
+      "lineId": "main.s3.w10.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "焼き餅屋の鉄板に、一枚。「什器一号」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w10.node.line.001c",
+      "lineId": "main.s3.w10.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……数えごとが、街へ出てきた。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s3.w10.node.line.002",
-      "lineId": "main.s3.w10.line.002",
+      "id": "main.s3.w10.node.line.002a",
+      "lineId": "main.s3.w10.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "今日の用は、札の正体の確かめだ。うちを数え終えた白手袋の一団が、今週は街を数えている。予定では、数えられるのは私と、うちの店の話だったはずである。"
+      "text": "今日の用は、札の正体の確かめ。白手袋の一団は、うちを数え終えて、今週は街を数えている。"
     },
     {
       "type": "line",
-      "id": "main.s3.w10.node.line.003",
-      "lineId": "main.s3.w10.line.003",
+      "id": "main.s3.w10.node.line.002b",
+      "lineId": "main.s3.w10.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "焼き餅屋のおばちゃんは、最初、面白がっていた。「うちの鉄板が台帳に載るのかい! 出世だね!」。二枚目の札で、笑いが止まる。そこには、こう書いてあった。「参考の値: 銀貨三枚」。",
+      "text": "数えられるのは、私と店の話、のはずだった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w10.node.line.003a",
+      "lineId": "main.s3.w10.line.003a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "おばちゃんは、最初、面白がっていた。「うちの鉄板が台帳に載るのかい! 出世だね!」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w10.node.line.003b",
+      "lineId": "main.s3.w10.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "二枚目の札で、笑いが止まる。「参考の値: 銀貨三枚」",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s3.w10.node.line.004",
-      "lineId": "main.s3.w10.line.004",
+      "id": "main.s3.w10.node.line.004a",
+      "lineId": "main.s3.w10.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "値段が、付いたのだ。四十年焼いてきた鉄板に、銀貨三枚。おばちゃんの顔から、祭りが消えた。「……あたしの鉄板は、売り物じゃないよ」。",
+      "text": "値段が、付いたのだ。四十年の鉄板に、銀貨三枚。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w10.node.line.004b",
+      "lineId": "main.s3.w10.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "おばちゃんの顔から、祭りが消えた。「……あたしの鉄板は、売り物じゃないよ」",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s3.w10.node.line.005",
-      "lineId": "main.s3.w10.line.005",
+      "id": "main.s3.w10.node.line.005a",
+      "lineId": "main.s3.w10.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ポラリスさんを、広場で捕まえた。「街まで数えるんですか」「棚卸しですので。どこまで数えるかは、私が決めることではありません」。それから、ほんの少しだけ、声が低くなった。「——数えなければ、守れないものも、あります」。",
+      "text": "ポラリスさんを、広場で捕まえた。「街まで数えるんですか」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w10.node.line.005b",
+      "lineId": "main.s3.w10.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「棚卸しですので」「どこまで数えるかは、私が決めることでは」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w10.node.line.005c",
+      "lineId": "main.s3.w10.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "声が、ほんの少し低くなった。「——数えなければ、守れないものも、あります」",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s3.w10.node.line.006",
-      "lineId": "main.s3.w10.line.006",
+      "id": "main.s3.w10.node.line.006a",
+      "lineId": "main.s3.w10.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "言い分は、分かる。分かるが——値札は、付いた瞬間に、物の顔を変えてしまう。私は知っている。私も、値札の側から、この世界に入った口だから。おばちゃんの鉄板と私の登録の紙は、同じ顔をしていた。",
+      "text": "言い分は、分かる。分かるが——値札は物の顔を、変えてしまう。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w10.node.line.006b",
+      "lineId": "main.s3.w10.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私も、値札の側から、この世界に入った口だ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w10.node.line.006c",
+      "lineId": "main.s3.w10.line.006c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "おばちゃんの鉄板と、私の登録の紙。同じ顔をしていた。",
       "emotion": "revelation"
     },
     {
+      "type": "direction",
+      "id": "main.s3.w10.node.direction.mimi.shift.001",
+      "command": {
+        "type": "show",
+        "assetId": "main.s3.w10.asset.sprite.mimi.smile",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      },
+      "_units": 1
+    },
+    {
       "type": "line",
-      "id": "main.s3.w10.node.line.007",
-      "lineId": "main.s3.w10.line.007",
+      "id": "main.s3.w10.node.line.007a",
+      "lineId": "main.s3.w10.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "夕方には、広場の空気が変わっていた。札を付けられた店同士が、寄り合いを始めたのである。「うちは什器じゃない」「うちも」「ミミさんとこは、どう戦ってるんだい」。——聞かれる側に、なった。",
+      "text": "夕方、広場の空気が、変わっていた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w10.node.line.007b",
+      "lineId": "main.s3.w10.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "札を付けられた店同士が、寄り合いを始めていた。「うちは什器じゃない」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w10.node.line.007c",
+      "lineId": "main.s3.w10.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「うちも」「ミミさんとこは、どう戦ってるんだい」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w10.node.line.007d",
+      "lineId": "main.s3.w10.line.007d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "——聞かれる側に、なった。耳が、ちょっと熱い。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s3.w10.node.line.008",
-      "lineId": "main.s3.w10.line.008",
+      "id": "main.s3.w10.node.line.008a",
+      "lineId": "main.s3.w10.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "答えた。「砂の上で、言い分を通してます。あと、湯で噂を集めてます」。真面目に答えたのに、笑いが起きた。それでいい。笑っているうちは、街は負けていない。",
+      "text": "答えた。「砂の上で、言い分を通してます」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w10.node.line.008b",
+      "lineId": "main.s3.w10.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「あと、湯で噂を、集めてます」真面目に答えたのに、笑いが起きた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w10.node.line.008c",
+      "lineId": "main.s3.w10.line.008c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "それでいい。笑っているうちは、街は負けていない。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s3.w10.node.line.009",
-      "lineId": "main.s3.w10.line.009",
+      "id": "main.s3.w10.node.line.009a",
+      "lineId": "main.s3.w10.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "帰りぎわ、賭場の板に新しい枠が立った。「街の言い分、通るか通らぬか」。うちの勝負が、うちだけの勝負では、なくなってきた。おまけにもらった焼き餅一枚が、その証である。",
+      "text": "帰りぎわ、賭場の板に、新しい枠。「街の言い分、通るか通らぬか」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w10.node.line.009b",
+      "lineId": "main.s3.w10.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "うちの勝負が、うちだけの勝負じゃ、なくなってきた。もらった焼き餅一枚が、その証だ。",
       "emotion": "tender"
     },
     {
@@ -123,37 +298,49 @@
         {
           "id": "main.s3.w10.choice.001",
           "label": "値札には、値札で返す",
-          "result": "翌朝、おばちゃんが銀貨三枚を、白手袋の受付に叩きつけた。「あたしの鉄板、あたしが買うよ!」。役所は前例を探して三十分固まり、結局、受け取った。夕方には「自分の物を、自分で買い戻す」が街の流行になった。負けん気の街である。ポラリスさんの帳面に、新しい頁が増えたらしい。題は——「本日、想定外、多数」。",
+          "result": "翌朝、おばちゃんが銀貨三枚を受付に叩きつけた。「あたしの鉄板、あたしが買うよ!」。役所は三十分固まり、結局受け取った。夕方には「自分の物を買い戻す」が街の流行に。負けん気の街だ。ポラリスさんの帳面に、新しい頁。題は「本日、想定外、多数」。",
           "intent": "向こうの様式ごと、街の遊びにしてしまう",
           "promise": "街の心が折れない代わりに、役所は次の手を硬くしてくる",
           "memory": "銀貨三枚で買い戻された、四十年物の鉄板",
           "tone": "heroic",
-          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
           "goto": "main.s3.w10.node.end.001"
         },
         {
           "id": "main.s3.w10.choice.002",
           "label": "札の書式の、穴を探す",
-          "result": "ノノさんと、札を十枚ほど写して見比べた。あった。札の隅に「持ち主の言い分」を書く欄が、小さくある。書き込まれた札は、聞き取りが済むまで数に入れられない——そういう決まりらしい。翌日から、街中の言い分欄が埋まった。「売り物じゃない」「これは嫁入り道具」「触るな」。数えごとが、見事に渋滞し始めた。",
+          "result": "ノノさんと札を見比べた。札の隅に「持ち主の言い分」欄が、小さくある。書けば聞き取りが済むまで数えられない決まりらしい。翌日、言い分欄が埋まった。「売り物じゃない」「嫁入り道具」。数えごとが、見事に渋滞した。",
           "intent": "静かに、向こうの決まりで向こうを縛る",
           "promise": "数えごとが遅れる代わりに、街の怒りは表に出にくくなる",
           "memory": "言い分欄で渋滞した、白い札の列",
           "tone": "pragmatic",
-          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
           "goto": "main.s3.w10.node.end.001"
         }
-      ]
+      ],
+      "_units": 1
     },
     {
       "type": "end",
       "id": "main.s3.w10.node.end.001",
-      "mode": "return-to-week"
+      "mode": "return-to-week",
+      "_units": 1
     }
   ],
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "3周目・週10(値札の街。ミミの問題が街の問題へ=後の百人の連署の土壌。敵の理も一拍)。Q=この街を引き受けるか / value=連帯 0→+(聞かれる側になった) / turn=行6(鉄板と登録の紙は同じ顔) / hook=次に会う理由(小)/post-hook / try=いいえ、しかも(街まで数えられる) / game=値札(出世だね→銀貨三枚→祭りが消える) / carry=白手袋の帳面(週8)・焼き餅屋(週1) / open=街の言い分の行方(答え=週12・22) / newterm=なし(什器は札の引用内)",
+    "authorNote": "語り口V2・二行枠で改稿。 / 3周目・週10(値札の街。ミミの問題が街の問題へ=後の百人の連署の土壌。敵の理も一拍)。Q=この街を引き受けるか / value=連帯 0→+(聞かれる側になった) / turn=行6(鉄板と登録の紙は同じ顔) / hook=次に会う理由(小)/post-hook / try=いいえ、しかも(街まで数えられる) / game=値札(出世だね→銀貨三枚→祭りが消える) / carry=白手袋の帳面(週8)・焼き餅屋(週1) / open=街の言い分の行方(答え=週12・22) / newterm=なし(什器は札の引用内)",
     "legacyGeneratedIds": false
   }
 }

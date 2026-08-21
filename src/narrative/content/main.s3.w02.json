@@ -8,9 +8,20 @@
     "arcId": "main.stage3"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -22,6 +33,18 @@
         "kind": "background",
         "path": "/assets/story/bg-arena-reception.png",
         "alt": "闘技場の正面受付の背景"
+      },
+      {
+        "id": "main.s3.w02.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
+      },
+      {
+        "id": "main.s3.w02.asset.sprite.mimi.tsukkomi",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-tsukkomi-v1.png",
+        "alt": "驚いてツッコミを入れるミミ"
       }
     ]
   },
@@ -29,108 +52,343 @@
     {
       "type": "direction",
       "id": "main.s3.w02.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s3.w02.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s3.w02.asset.background.001",
+        "transition": "dissolve"
+      },
+      "_units": 1
     },
     {
       "type": "direction",
       "id": "main.s3.w02.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      },
+      "_units": 1
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.w02.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s3.w02.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      },
+      "_units": 1
     },
     {
       "type": "line",
-      "id": "main.s3.w02.node.line.001",
-      "lineId": "main.s3.w02.line.001",
+      "id": "main.s3.w02.node.line.001a",
+      "lineId": "main.s3.w02.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "週明けの受付前に、行列ができていた。並んでいるのはお客ではなく、白手袋の一団である。先頭の一人が、深々と礼をした。物差しみたいに、まっすぐな礼だった。",
+      "text": "受付前に、行列。お客さんじゃない。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w02.node.line.001b",
+      "lineId": "main.s3.w02.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "白手袋の一団だった。耳が、ぴんと立つ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w02.node.line.001c",
+      "lineId": "main.s3.w02.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "先頭の人が、深々と礼をした。物差しみたいに、まっすぐ。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s3.w02.node.line.002",
-      "lineId": "main.s3.w02.line.002",
+      "id": "main.s3.w02.node.line.002a",
+      "lineId": "main.s3.w02.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「転生協議会・必要悪委員会・回収局より参りました。ポラリスと申します」。名乗りが、長い。先週の、あの黒い封蝋の貼り紙の差出人だった。今週の用は、こちらが決める前に、向こうから来たわけである。"
+      "text": "「転生協議会・必要悪委員会・回収局より参りました。ポラリスと申します」"
     },
     {
       "type": "line",
-      "id": "main.s3.w02.node.line.003",
-      "lineId": "main.s3.w02.line.003",
+      "id": "main.s3.w02.node.line.002b",
+      "lineId": "main.s3.w02.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "数えごとは、受付から始まった。呼び鈴、ひとつ。帳場の判子、三本。まかないの大鍋、一。白手袋は何にでも小さな札を付け、帳面に書き付けていく。仲間が目を丸くした。「ミミさん、鍋まで数えられてますよ」。",
+      "text": "名乗り、長くないですか。まだ続くんですか。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w02.node.line.002c",
+      "lineId": "main.s3.w02.line.002c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "先週の、黒い封蝋の差出人だった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w02.node.line.002d",
+      "lineId": "main.s3.w02.line.002d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "今週の用は、向こうから来た。たぶん、大丈夫。"
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.w02.node.direction.mimi.shift.001",
+      "command": {
+        "type": "show",
+        "assetId": "main.s3.w02.asset.sprite.mimi.tsukkomi",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      },
+      "_units": 1
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w02.node.line.003a",
+      "lineId": "main.s3.w02.line.003a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "数えごとは、受付から始まった。呼び鈴、ひとつ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w02.node.line.003b",
+      "lineId": "main.s3.w02.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "帳場の判子、三本。まかないの大鍋、一。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w02.node.line.003c",
+      "lineId": "main.s3.w02.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "白手袋は、何にでも小さな札を付けていく。仲間が、目を丸くした。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w02.node.line.003d",
+      "lineId": "main.s3.w02.line.003d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「ミミさん、鍋まで数えられてますよ」",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s3.w02.node.line.004",
-      "lineId": "main.s3.w02.line.004",
+      "id": "main.s3.w02.node.line.004a",
+      "lineId": "main.s3.w02.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "見物の常連たちは、早くも楽しみ始めていた。「うちの闘技場、ぜんぶでいくつあるんだ?」「胴元! 総数当てで一口!」。数える側は真顔で、数えられる側はお祭りである。ポラリスさんの眉が、ほんの少しだけ動いた。",
-      "emotion": "comic"
+      "text": "常連さんたちは、もう楽しみ始めていた。"
     },
     {
       "type": "line",
-      "id": "main.s3.w02.node.line.005",
-      "lineId": "main.s3.w02.line.005",
+      "id": "main.s3.w02.node.line.004b",
+      "lineId": "main.s3.w02.line.004b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "夕方、読み上げが最後の一件で止まった。「——以上、かたちある品、七百二十一点。ならびに、かたちの無いもの、一点」。かたちの無いもの。物じゃないのに、数えられている何かだ。ポラリスさんは帳面から顔を上げ、まっすぐ私を見た。「ミミ様。あなたです」。",
+      "text": "「うちの闘技場、ぜんぶでいくつあるんだ?」「胴元! 総数当てで一口!」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w02.node.line.004c",
+      "lineId": "main.s3.w02.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "数える側は真顔、数えられる側はお祭り。ポラリスさんの眉が、少しだけ動いた。",
+      "emotion": "comic"
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.w02.node.direction.mimi.shift.002",
+      "command": {
+        "type": "show",
+        "assetId": "main.s3.w02.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      },
+      "_units": 1
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w02.node.line.005a",
+      "lineId": "main.s3.w02.line.005a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "夕方、読み上げが止まった。最後の一件で。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w02.node.line.005b",
+      "lineId": "main.s3.w02.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「——以上、かたちある品、七百二十一点」「ならびに、かたちの無いもの、一点」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w02.node.line.005c",
+      "lineId": "main.s3.w02.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "かたちの無いもの? え、何ですかそれ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w02.node.line.005d",
+      "lineId": "main.s3.w02.line.005d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ポラリスさんが、まっすぐ私を見た。「ミミ様。あなたです」",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s3.w02.node.line.006",
-      "lineId": "main.s3.w02.line.006",
+      "id": "main.s3.w02.node.line.006a",
+      "lineId": "main.s3.w02.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「あなたの持ち主は、帳面の上では、アルデバラン社。書き込まれた日付は——あなたがこの世界へ来た、その日です」。……来た日? 引継ぎ事故より、前? つまり私は、闘技場を持つより先に、持たれていた。祭りの太鼓が、急に遠くなった。",
+      "text": "「持ち主は、帳面の上ではアルデバラン社です」「日付は——あなたが来た、その日」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w02.node.line.006b",
+      "lineId": "main.s3.w02.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……来た日? 引継ぎ事故より、前?"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w02.node.line.006c",
+      "lineId": "main.s3.w02.line.006c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "闘技場を持つより先に、持たれていた。祭りの太鼓が、急に遠くなった。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s3.w02.node.line.007",
-      "lineId": "main.s3.w02.line.007",
+      "id": "main.s3.w02.node.line.007a",
+      "lineId": "main.s3.w02.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "息を吸って、言った。「私は、私のものです」。ポラリスさんは、咎めなかった。代わりに静かに帳面を閉じた。「では、異議をどうぞ。この街の作法で構いません。——砂の上で」。",
+      "text": "息を吸って、言った。「私は、私のものです」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w02.node.line.007b",
+      "lineId": "main.s3.w02.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ポラリスさんは、咎めなかった。代わりに、静かに帳面を閉じた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w02.node.line.007c",
+      "lineId": "main.s3.w02.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「では、異議をどうぞ。この街の作法で——砂の上で」",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s3.w02.node.line.008",
-      "lineId": "main.s3.w02.line.008",
+      "id": "main.s3.w02.node.line.008a",
+      "lineId": "main.s3.w02.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "つまり、文句があるなら勝負で示せ、ということだ。それなら話が早い。うちは、そういう店である。「受けて立ちます。二回優勝した監督ですよ、私」。見物の常連から、指笛が鳴った。",
+      "text": "つまり、勝負で示せ、ということ。それなら、話が早い。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w02.node.line.008b",
+      "lineId": "main.s3.w02.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "うちは、そういう店だ。「受けて立ちます。二回優勝した監督ですよ、私」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w02.node.line.008c",
+      "lineId": "main.s3.w02.line.008c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……言っちゃった。見物の常連から、指笛が鳴った。",
       "emotion": "resolve"
     },
     {
       "type": "line",
-      "id": "main.s3.w02.node.line.009",
-      "lineId": "main.s3.w02.line.009",
+      "id": "main.s3.w02.node.line.009a",
+      "lineId": "main.s3.w02.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "白手袋の一団は、来たときと同じ礼をして引き上げた。貼り紙の隅の日付だけが残る。「執り納め: 年度の末日」。見送りながら、ぽつりと口から出た。「この世界の続きって、誰が書くんでしょうね」。仲間が即答した。「ミミさんでしょ」。……いや、そんな軽く。",
+      "text": "白手袋の一団は、同じ礼をして帰った。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w02.node.line.009b",
+      "lineId": "main.s3.w02.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "貼り紙の隅に、日付だけが残る。「執り納め: 年度の末日」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w02.node.line.009c",
+      "lineId": "main.s3.w02.line.009c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "見送りながら、ぽつりと口から出た。「この世界の続きって、誰が書くんでしょうね」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w02.node.line.009d",
+      "lineId": "main.s3.w02.line.009d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "仲間が、即答した。「ミミさんでしょ」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w02.node.line.009e",
+      "lineId": "main.s3.w02.line.009e",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……いや、そんな軽く。耳が、ちょっと熱い。",
       "emotion": "tender"
     },
     {
       "type": "effect",
       "id": "main.s3.w02.node.effect.001",
-      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+      "effects": [
+        {
+          "type": "sharedPoints",
+          "amount": 2
+        }
+      ],
+      "_units": 1
     },
     {
       "type": "end",
       "id": "main.s3.w02.node.end.001",
-      "mode": "return-to-week"
+      "mode": "return-to-week",
+      "_units": 1
     }
   ],
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "3周目・週2全面改稿(敵が砂の上に立つ回。書庫の開示を廃し、真相の入口=敵の口から公衆の面前で)。お役所語は台詞内のみ、地の文は「かたちの無いもの」「持ち主」等の暮らし語で通訳。Q=この街を引き受けるか(ミミが言い、仲間が「ミミさんでしょ」と即答する形で提示) / value=目標 来た→自分の名前が的だった / turn=行6(闘技場を持つより先に持たれていた) / hook=次に会う理由(中)/post-point / try=いいえ、しかも / game=数えごとの真顔対お祭り(鍋→総数当て→眉が動く) / carry=黒封蝋の貼り紙(週1) / open=異議=砂の上の勝負の行方(週4〜)・執り納めの日(年度末=締切の物) / newterm=ポラリス(長い名乗りごと一単位で提示。仮名・要承認)",
+    "authorNote": "語り口V2・二行枠で改稿。3周目・週2全面改稿(敵が砂の上に立つ回。書庫の開示を廃し、真相の入口=敵の口から公衆の面前で)。お役所語は台詞内のみ、地の文は「かたちの無いもの」「持ち主」等の暮らし語で通訳。Q=この街を引き受けるか(ミミが言い、仲間が「ミミさんでしょ」と即答する形で提示) / value=目標 来た→自分の名前が的だった / turn=行6(闘技場を持つより先に持たれていた) / hook=次に会う理由(中)/post-point / try=いいえ、しかも / game=数えごとの真顔対お祭り(鍋→総数当て→眉が動く) / carry=黒封蝋の貼り紙(週1) / open=異議=砂の上の勝負の行方(週4〜)・執り納めの日(年度末=締切の物) / newterm=ポラリス(長い名乗りごと一単位で提示。仮名・要承認)",
     "legacyGeneratedIds": false
   }
 }

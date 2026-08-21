@@ -8,9 +8,20 @@
     "arcId": "main.stage3"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -41,12 +52,20 @@
     {
       "type": "direction",
       "id": "main.s3.w13.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s3.w13.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s3.w13.asset.background.001",
+        "transition": "dissolve"
+      },
+      "_units": 1
     },
     {
       "type": "direction",
       "id": "main.s3.w13.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      },
+      "_units": 1
     },
     {
       "type": "direction",
@@ -57,69 +76,157 @@
         "actorId": "mimi",
         "slot": "left",
         "scale": "tall"
-      }
+      },
+      "_units": 1
     },
     {
       "type": "line",
-      "id": "main.s3.w13.node.line.001",
-      "lineId": "main.s3.w13.line.001",
+      "id": "main.s3.w13.node.line.001a",
+      "lineId": "main.s3.w13.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "白手袋の机は、今日も受付の脇にある。今日は、こちらから出向いた。鞄の中に、紙が三枚。砂の上の戦いの記録。街の寄り合いの言い分。それから、まだ薄い、湯めぐりの名簿。",
+      "text": "白手袋の机は、今日も、受付の脇。今日は、こちらから出向いた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w13.node.line.001b",
+      "lineId": "main.s3.w13.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "鞄の中に、紙が三枚。砂の上の戦いの記録。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w13.node.line.001c",
+      "lineId": "main.s3.w13.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "街の寄り合いの言い分。それから、まだ薄い、湯めぐりの名簿。",
       "emotion": "resolve"
     },
     {
       "type": "line",
-      "id": "main.s3.w13.node.line.002",
-      "lineId": "main.s3.w13.line.002",
+      "id": "main.s3.w13.node.line.002a",
+      "lineId": "main.s3.w13.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "三年目の、ちょうど折り返しの週である。数えられて、値札を付けられて、日付で脅されて。受けて立つのは、もう十分やった。今日からは、問う側に回る。四百年前の取り決めそのものに、こちらから訴えを出すのだ。"
+      "text": "三年目の、ちょうど折り返しの週。数えられて、値札を付けられて、日付で脅されて。"
     },
     {
       "type": "line",
-      "id": "main.s3.w13.node.line.003",
-      "lineId": "main.s3.w13.line.003",
+      "id": "main.s3.w13.node.line.002b",
+      "lineId": "main.s3.w13.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "受付の若い白手袋が、紙を見て目を白黒させた。「え、あの、これは、その」「訴えです。私の欄を、返してもらいます」。奥からポラリスさんが出てきて、紙を検めた。長い、長い間があった。",
+      "text": "受けて立つのは、もう十分。今日からは、問う側に回る。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w13.node.line.002c",
+      "lineId": "main.s3.w13.line.002c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "四百年前の取り決めに、こちらから訴えを出す。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w13.node.line.003a",
+      "lineId": "main.s3.w13.line.003a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "受付の若い白手袋さんが、紙を見て、目を白黒させた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w13.node.line.003b",
+      "lineId": "main.s3.w13.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「え、あの、これは、その」「訴えです。私の欄を、返してもらいます」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w13.node.line.003c",
+      "lineId": "main.s3.w13.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "奥からポラリスさんが出て、紙を検めた。長い、長い、間があった。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s3.w13.node.line.004",
-      "lineId": "main.s3.w13.line.004",
+      "id": "main.s3.w13.node.line.004a",
+      "lineId": "main.s3.w13.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「——受け付ける書式が、ありません」。無いんですか。「四百年、誰も出さなかったので」。また、それか。この役所は、誰も聞かなかったことと、誰も出さなかったことで、できている。",
+      "text": "「——受け付ける書式が、ありません」え。無いんですか。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w13.node.line.004b",
+      "lineId": "main.s3.w13.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「四百年、誰も出さなかったので」また、それか、と思う。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w13.node.line.004c",
+      "lineId": "main.s3.w13.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "この役所は、誰も聞かなかったことと、出さなかったことで、できている。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s3.w13.node.line.005",
-      "lineId": "main.s3.w13.line.005",
+      "id": "main.s3.w13.node.line.005a",
+      "lineId": "main.s3.w13.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "書式が無いなら、前例を出すまでだ。私は、去年の選手名簿を机に置いた。勝つたびに「本人」へ戻った、五人の欄。「持ち主の欄は、砂の上で取り返せる。この街が、去年、それを認めています」。",
+      "text": "書式が無いなら、前例を出すまで。去年の選手名簿を、机に置いた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w13.node.line.005b",
+      "lineId": "main.s3.w13.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "勝つたびに「本人」へ戻った、五人の欄。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w13.node.line.005c",
+      "lineId": "main.s3.w13.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「持ち主の欄は、砂の上で取り返せる。去年、街がそれを認めています」",
       "emotion": "resolve"
     },
     {
       "type": "line",
-      "id": "main.s3.w13.node.line.006",
-      "lineId": "main.s3.w13.line.006",
+      "id": "main.s3.w13.node.line.006a",
+      "lineId": "main.s3.w13.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ポラリスさんは、五人の欄を、長いこと見ていた。それから新しい頁に、定規でまっすぐ線を引いた。「——受け付けます。裁きの場は、年度の末日。執り納めと、同じ日です」。あの貼り紙の日付が、締切から、約束に変わった。",
-      "emotion": "revelation"
+      "text": "ポラリスさんは、五人の欄を、長いこと見ていた。新しい頁に、定規でまっすぐ、線を引いた。"
     },
     {
       "type": "line",
-      "id": "main.s3.w13.node.line.007",
-      "lineId": "main.s3.w13.line.007",
+      "id": "main.s3.w13.node.line.006b",
+      "lineId": "main.s3.w13.line.006b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "帰り道、仲間が祝おうとして、やめた。「ミミさん? 顔が、変です」。……気づいてしまったのだ。三年間、私は店の子たちの欄を取り返してきた。自分のために砂に立つのは、考えてみれば、初めてである。少し——怖い。",
-      "emotion": "tension"
+      "text": "「——受け付けます。裁きの場は、年度の末日です」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w13.node.line.006c",
+      "lineId": "main.s3.w13.line.006c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "貼り紙の日付が、締切から、約束に変わった。",
+      "emotion": "revelation"
     },
     {
       "type": "direction",
@@ -130,33 +237,107 @@
         "actorId": "mimi",
         "slot": "left",
         "scale": "tall"
-      }
+      },
+      "_units": 1
     },
     {
       "type": "line",
-      "id": "main.s3.w13.node.line.008",
-      "lineId": "main.s3.w13.line.008",
+      "id": "main.s3.w13.node.line.007a",
+      "lineId": "main.s3.w13.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "まかないで白状したら、笑われた。「今さらです」「うちの欄のときも、ミミさん、同じ顔でしたよ」。……そうだったか。なら、いつも通りだ。いつも通りに、勝てばいい。",
+      "text": "帰り道、仲間が、祝おうとして、やめた。「ミミさん? 顔が、変です」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w13.node.line.007b",
+      "lineId": "main.s3.w13.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……気づいてしまった。三年間、店の子の欄を取り返してきた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w13.node.line.007c",
+      "lineId": "main.s3.w13.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "自分のために砂に立つのは、考えてみれば、初めて。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w13.node.line.007d",
+      "lineId": "main.s3.w13.line.007d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "少し——怖い。耳が、しゅんと、倒れた。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w13.node.line.008a",
+      "lineId": "main.s3.w13.line.008a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "まかないで白状したら、笑われた。「今さらです」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w13.node.line.008b",
+      "lineId": "main.s3.w13.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「うちの欄のときも、ミミさん、同じ顔でしたよ」……そうだったか。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w13.node.line.008c",
+      "lineId": "main.s3.w13.line.008c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "なら、いつも通り。いつも通りに、勝てばいい。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s3.w13.node.line.009",
-      "lineId": "main.s3.w13.line.009",
+      "id": "main.s3.w13.node.line.009a",
+      "lineId": "main.s3.w13.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "夜、机に帳面を二冊、新しく並べた。一冊は、百の名前を集める名簿の清書。もう一冊は、街の寄り合いが言い出した「四百年目の闘技場に、何か大きな祝いを」の帳面。何の祝いかは、まだ白紙。ただ——裁きの日の夜が、ちょうど空いている。",
+      "text": "夜、机に帳面を二冊、新しく並べた。一冊は、百の名前を集める名簿の清書。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w13.node.line.009b",
+      "lineId": "main.s3.w13.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "もう一冊は、街の寄り合いの「四百年目に、大きな祝いを」の帳面。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w13.node.line.009c",
+      "lineId": "main.s3.w13.line.009c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "何の祝いかは、まだ白紙。裁きの日の夜が、ちょうど空いている。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s3.w13.node.line.010",
-      "lineId": "main.s3.w13.line.010",
+      "id": "main.s3.w13.node.line.010a",
+      "lineId": "main.s3.w13.line.010a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "祝いの帳面の一頁目に、ノノさんが小さく書き込んでいた。「間に合わせましょうね」。何を、とは書いていない。書いていないのに、伝わった。",
+      "text": "祝いの帳面の一頁目に、ノノさんが小さく書き込んでいた。「間に合わせましょうね」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w13.node.line.010b",
+      "lineId": "main.s3.w13.line.010b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "何を、とは書いていない。なのに、伝わった。",
       "emotion": "tender"
     },
     {
@@ -166,37 +347,49 @@
         {
           "id": "main.s3.w13.choice.001",
           "label": "後半戦は、百の名前から揃えに行く",
-          "result": "地図に、湯の印を十個打った。大会の合間を縫う旅程は、ぎっしりで、少し笑えた。仲居さんに文を出すと、返事は一行だけ。「湯は、逃げません。でも、湯冷めはしないように」。……はい、先輩。名簿の一人目の欄が、あたたかい字で埋まった。",
+          "result": "地図に、湯の印を十個打った。旅程はぎっしりで、少し笑えた。仲居さんへ文を出すと、返事は一行。「湯は逃げません。湯冷めはしないように」。はい、先輩。名簿の一人目が、あたたかい字で埋まった。",
           "intent": "裁きの日に効く束を、先に作る",
           "promise": "名前が集まる代わりに、旅の分だけ練習場を空ける",
           "memory": "湯の印が十個打たれた、旅の地図",
           "tone": "pragmatic",
-          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
           "goto": "main.s3.w13.node.end.001"
         },
         {
           "id": "main.s3.w13.choice.002",
           "label": "後半戦は、砂の上の負けなしを狙う",
-          "result": "裁きの場で効くのは、勝ちの帳面の厚さだ。練習場の壁に、残りの大会の日付を全部貼り出した。「ここから、負けなしで行きます」。宣言すると、初陣の子が手を挙げた。「ぼくの欄も、いつか、誰かの前例になりますか」。——なります。良い質問は、良い練習より効く。",
+          "result": "裁きの場で効くのは、勝ちの帳面の厚さ。残りの大会の日付を、壁に全部貼り出した。「ここから、負けなしで行きます」。初陣の子が聞いた。「ぼくの欄も、いつか前例に」。なります。良い質問は、良い練習より効く。",
           "intent": "前例の重さを、自分の手で増やす",
           "promise": "勝ちの記録が積まれる代わりに、名前集めは合間仕事になる",
           "memory": "壁に貼り出された、残りの大会の日付",
           "tone": "heroic",
-          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
           "goto": "main.s3.w13.node.end.001"
         }
-      ]
+      ],
+      "_units": 1
     },
     {
       "type": "end",
       "id": "main.s3.w13.node.end.001",
-      "mode": "return-to-week"
+      "mode": "return-to-week",
+      "_units": 1
     }
   ],
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "3周目・週13(中点)。偽の勝利=訴えの受理/鏡=自分のために立つのは初めてで怖い/認知逆転=去年の五人の欄が今年の前例(去年の戦いは今年の下準備だった)/時計=貼り紙の日付が締切から約束(裁きの日)へ。二冊のノート開帳(名簿+祝いの帳面=柿落としの種)。Q=この街を引き受けるか / turn=行6 / hook=うっかりの約束(大)/post-point / try=はい、しかし / game=書式が無い役所(目を白黒→四百年誰も→前例で作る) / carry=紙三枚(週8-12の成果) / open=祝いの中身(答え=週16改修→週26柿落とし)・百の名前(週14〜) / newterm=なし",
+    "authorNote": "語り口V2・二行枠で改稿。 / 3周目・週13(中点)。偽の勝利=訴えの受理/鏡=自分のために立つのは初めてで怖い/認知逆転=去年の五人の欄が今年の前例(去年の戦いは今年の下準備だった)/時計=貼り紙の日付が締切から約束(裁きの日)へ。二冊のノート開帳(名簿+祝いの帳面=柿落としの種)。Q=この街を引き受けるか / turn=行6 / hook=うっかりの約束(大)/post-point / try=はい、しかし / game=書式が無い役所(目を白黒→四百年誰も→前例で作る) / carry=紙三枚(週8-12の成果) / open=祝いの中身(答え=週16改修→週26柿落とし)・百の名前(週14〜) / newterm=なし",
     "legacyGeneratedIds": false
   }
 }
