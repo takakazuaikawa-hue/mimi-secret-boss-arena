@@ -8,9 +8,20 @@
     "arcId": "main.stage1"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -35,12 +46,18 @@
     {
       "type": "direction",
       "id": "main.s1.w18.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s1.w18.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s1.w18.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "direction",
       "id": "main.s1.w18.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
     },
     {
       "type": "direction",
@@ -55,52 +72,132 @@
     },
     {
       "type": "line",
-      "id": "main.s1.w18.node.line.001",
-      "lineId": "main.s1.w18.line.001",
+      "id": "main.s1.w18.node.line.001a",
+      "lineId": "main.s1.w18.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ノノさんの予言どおり、「案」は来た。分厚い冊子で、表題は「チーム運営適正化のご提案」。中身を一言でいえば——選手契約を会社預かりに一本化し、監督は会社が任命する、という案だった。",
+      "text": "ノノさんの予言どおり、「案」が届いた。分厚い冊子。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w18.node.line.001b",
+      "lineId": "main.s1.w18.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "表題は「チーム運営適正化のご提案」中身を一言でいえば——選手契約を会社預かりに。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w18.node.line.001c",
+      "lineId": "main.s1.w18.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "監督は、会社が任命する。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s1.w18.node.line.002",
-      "lineId": "main.s1.w18.line.002",
+      "id": "main.s1.w18.node.line.002a",
+      "lineId": "main.s1.w18.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "つまり、うちのチームを、会社のチームにする案である。私の欄は、無い。希望欄も、無い。あるのは「効率」「保全」「最適化」の三語が、頁ごとに姿を変えて並ぶだけだ。"
+      "text": "つまり、うちのチームを、会社のチームにする案。私の欄は、無い。"
     },
     {
       "type": "line",
-      "id": "main.s1.w18.node.line.003",
-      "lineId": "main.s1.w18.line.003",
+      "id": "main.s1.w18.node.line.002b",
+      "lineId": "main.s1.w18.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "悔しいことが、一つだけあった。綴じ方が、美しい。角がそろい、紐の結びが完璧で、頁割りに一切の無駄がない。事務員として、腕の良さだけは認めざるを得ない。腕の良い人たちが、こういう案を作るのだ。",
+      "text": "希望欄も、無い。耳が、しゅん、と垂れた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w18.node.line.002c",
+      "lineId": "main.s1.w18.line.002c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "あるのは「効率」「保全」"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w18.node.line.002d",
+      "lineId": "main.s1.w18.line.002d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「最適化」の三語。頁ごとに、姿を変えて並ぶ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w18.node.line.003a",
+      "lineId": "main.s1.w18.line.003a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "悔しいことが、一つだけあった。綴じ方が、美しい。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w18.node.line.003b",
+      "lineId": "main.s1.w18.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "角がそろい、紐の結びが完璧。頁割りにも、無駄が無い。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w18.node.line.003c",
+      "lineId": "main.s1.w18.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "事務員として、腕の良さは認めざるを得ない。腕のいい人たちが、こういう案を作るらしい。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s1.w18.node.line.004",
-      "lineId": "main.s1.w18.line.004",
+      "id": "main.s1.w18.node.line.004a",
+      "lineId": "main.s1.w18.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "案には「回答期限」の欄があった。所有者グランプリの週の、初日。会社は、大会の前に決めたいらしい。試合の外で。",
+      "text": "案には、「回答期限」の欄があった。所有者グランプリの週の、初日。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w18.node.line.004b",
+      "lineId": "main.s1.w18.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "会社は、大会の前に決めたいらしい。試合の外で。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s1.w18.node.line.005",
-      "lineId": "main.s1.w18.line.005",
+      "id": "main.s1.w18.node.line.005a",
+      "lineId": "main.s1.w18.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "控室で、案の要点を全員に説明した。隠す選択肢は、最初から無かった。うちは希望欄のチームだ。聞き終えた三人は、怒るでも慌てるでもなく、順番に私を見た。「ミミさんは、どうしたい」。",
+      "text": "控室で、案の要点を全員に説明した。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w18.node.line.005b",
+      "lineId": "main.s1.w18.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "隠す選択肢は、無かった。うちは、希望欄のチームだ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w18.node.line.005c",
+      "lineId": "main.s1.w18.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "聞き終えた三人は、順番に私を見た。「ミミさんは、どうしたい」",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s1.w18.node.line.006",
-      "lineId": "main.s1.w18.line.006",
+      "id": "main.s1.w18.node.line.006a",
+      "lineId": "main.s1.w18.line.006a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -109,44 +206,89 @@
     },
     {
       "type": "line",
-      "id": "main.s1.w18.node.line.007",
-      "lineId": "main.s1.w18.line.007",
+      "id": "main.s1.w18.node.line.007a",
+      "lineId": "main.s1.w18.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "正式に断るには、根拠がいる。会社の案は規定の言葉で書かれている。なら、こちらも規定の言葉で返すしかない。ノノさんに相談すると、彼女は目を輝かせて、台車を取りに走った。",
+      "text": "正式に断るには、根拠がいる。会社の案は、規定の言葉で書かれている。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w18.node.line.007b",
+      "lineId": "main.s1.w18.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "なら、こちらも規定の言葉で。ノノさんに相談すると、目を輝かせて台車を取りに走った。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s1.w18.node.line.008",
-      "lineId": "main.s1.w18.line.008",
+      "id": "main.s1.w18.node.line.008a",
+      "lineId": "main.s1.w18.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "戻ってきた台車の上には、興行規定集、全三十八巻。「正式が、いちばん強いんです」。頼もしい。頼もしいが、三十八巻。積むと、私の背より高い。",
+      "text": "戻ってきた台車の上に、興行規定集、全三十八巻。「正式が、いちばん強いんです」頼もしい。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w18.node.line.008b",
+      "lineId": "main.s1.w18.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "頼もしいが……三十八巻。積むと、私の背より高い。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s1.w18.node.line.009",
-      "lineId": "main.s1.w18.line.009",
+      "id": "main.s1.w18.node.line.009a",
+      "lineId": "main.s1.w18.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「読みましょう」と言ったのは、選手の一人だった。「四百年、暇だった。読書は得意だ」。もう一人が頷き、三人目が眼鏡(伊達)を取り出した。規定集読破隊、ここに結成。",
-      "emotion": "comic"
+      "text": "「読みましょう」選手の一人が言った。"
     },
     {
       "type": "line",
-      "id": "main.s1.w18.node.line.010",
-      "lineId": "main.s1.w18.line.010",
+      "id": "main.s1.w18.node.line.009b",
+      "lineId": "main.s1.w18.line.009b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "夜、保管庫の灯りの下で、第一巻が開かれた。回答期限まで、二週間。ページをめくる音だけが、静かに続く。この音が、うちの反撃の始まりの音である。",
+      "text": "「四百年、暇だった。読書は得意だ」もう一人が頷き、三人目が眼鏡(伊達)を取り出した。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w18.node.line.009c",
+      "lineId": "main.s1.w18.line.009c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "規定集読破隊、ここに結成。",
+      "emotion": "resolve"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w18.node.line.010a",
+      "lineId": "main.s1.w18.line.010a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "夜、保管庫の灯りの下で、第一巻が開かれた。回答期限まで、二週間。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w18.node.line.010b",
+      "lineId": "main.s1.w18.line.010b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ページをめくる音だけが、静かに続く。この音が、うちの反撃の、始まりの音。",
       "emotion": "resolve"
     },
     {
       "type": "effect",
       "id": "main.s1.w18.node.effect.001",
-      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+      "effects": [
+        {
+          "type": "sharedPoints",
+          "amount": 2
+        }
+      ]
     },
     {
       "type": "end",
@@ -157,7 +299,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "週18(10行)。会社案の提示(§6週20の前段)。手続きドラマにせず「規定集読破隊」の熱血コメディへ変換。回答期限=週20への時計。規定集38巻は週19・22の武器。選択肢は撤去(判断週ではないため)。",
+    "authorNote": "語り口V2・二行枠で改稿。週18(10行)。会社案の提示(§6週20の前段)。手続きドラマにせず「規定集読破隊」の熱血コメディへ変換。回答期限=週20への時計。規定集38巻は週19・22の武器。選択肢は撤去(判断週ではないため)。",
     "legacyGeneratedIds": false
   }
 }

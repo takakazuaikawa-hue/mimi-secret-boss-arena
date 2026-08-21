@@ -8,9 +8,20 @@
     "arcId": "main.stage1"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -22,6 +33,18 @@
         "kind": "background",
         "path": "/assets/story/bg-casino-cafe-rain.png",
         "alt": "雨のカジノカフェの背景"
+      },
+      {
+        "id": "main.s1.w15.asset.sprite.mimi.smile",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-smile-v1.png",
+        "alt": "笑顔のミミ"
+      },
+      {
+        "id": "main.s1.w15.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
       }
     ]
   },
@@ -29,106 +52,235 @@
     {
       "type": "direction",
       "id": "main.s1.w15.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s1.w15.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s1.w15.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "direction",
       "id": "main.s1.w15.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.w15.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s1.w15.asset.sprite.mimi.smile",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
-      "id": "main.s1.w15.node.line.001",
-      "lineId": "main.s1.w15.line.001",
+      "id": "main.s1.w15.node.line.001a",
+      "lineId": "main.s1.w15.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "朝から、太い雨だった。傘を叩く音で目が覚めて、掲示板の前で知る。「本日、全興行休止」。この街の雨は、ただの天気ではないらしい。",
+      "text": "朝から、太い雨。傘を叩く音で、目が覚めた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w15.node.line.001b",
+      "lineId": "main.s1.w15.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "掲示板の前で、知る。「本日、全興行休止」この街の雨は、ただの天気じゃないらしい。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s1.w15.node.line.002",
-      "lineId": "main.s1.w15.line.002",
+      "id": "main.s1.w15.node.line.002a",
+      "lineId": "main.s1.w15.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ノノさんが教えてくれた。「雨の日は、オッズが全部、一倍に戻るんです。倍率が流れちゃうので、賭けが成立しないんですよ」。倍率が、流れる。この街の雨は、数字を洗い流す雨なのだ。"
+      "text": "ノノさんが教えてくれた。「雨の日は、オッズが全部、一倍に戻るんです」"
     },
     {
       "type": "line",
-      "id": "main.s1.w15.node.line.003",
-      "lineId": "main.s1.w15.line.003",
+      "id": "main.s1.w15.node.line.002b",
+      "lineId": "main.s1.w15.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "賭けのない街を、私は初めて歩いた。朝市の胴元は店じまいをして、券売のおじさんは軒先で豆を煎っている。みんな、することがない顔で、することがない時間を、丁寧に過ごしていた。",
+      "text": "「倍率が流れちゃうので、賭けが成立しないんですよ」倍率が、流れる。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w15.node.line.002c",
+      "lineId": "main.s1.w15.line.002c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "数字を洗い流す雨、らしい。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w15.node.line.003a",
+      "lineId": "main.s1.w15.line.003a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "賭けのない街を、初めて歩いた。朝市の胴元は店じまいで、おじさんは軒先で豆を煎ってる。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w15.node.line.003b",
+      "lineId": "main.s1.w15.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "みんな、することがない顔で、丁寧に時間を過ごしてた。耳も、心なしか、暇そうに垂れてる。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s1.w15.node.line.004",
-      "lineId": "main.s1.w15.line.004",
+      "id": "main.s1.w15.node.line.004a",
+      "lineId": "main.s1.w15.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "雨宿りに入った閉店後のカジノカフェで、白ひげの剣士さんに会った。窓際の席で、湯気の立つ茶を前に、雨を見ていた。剣は、椅子の背に立てかけてある。",
+      "text": "雨宿りに入った、閉店後のカジノカフェ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w15.node.line.004b",
+      "lineId": "main.s1.w15.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "白ひげの剣士さんが、窓際で茶を前に、雨を見てた。剣は、椅子の背に立てかけてある。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s1.w15.node.line.005",
-      "lineId": "main.s1.w15.line.005",
+      "id": "main.s1.w15.node.line.005a",
+      "lineId": "main.s1.w15.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「監督どのか。座りなさい」。向かいに座ると、彼はぽつりと言った。「雨はいい。倍率が無いと、この街は、ただの街に戻る」。",
+      "text": "「監督どのか。座りなさい」向かいに座ると、彼はぽつり。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w15.node.line.005b",
+      "lineId": "main.s1.w15.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「雨はいい」「倍率が無いと、この街は、ただの街に戻る」",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s1.w15.node.line.006",
-      "lineId": "main.s1.w15.line.006",
+      "id": "main.s1.w15.node.line.006a",
+      "lineId": "main.s1.w15.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "三度、世界を救った話を、少しだけ聞いた。武勇伝ではなかった。「三度目が終わった朝、やることが、無くなってのう」。救い終わったあとって、暇なんだよ——と、彼は笑った。笑い方が、上手だった。上手すぎた。",
+      "text": "上手すぎた。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s1.w15.node.line.007",
-      "lineId": "main.s1.w15.line.007",
+      "id": "main.s1.w15.node.line.007a",
+      "lineId": "main.s1.w15.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「いまの悩みは、ポイントの有効期限じゃ」。深刻な顔で言うので、深刻な顔で答えた。「失効前に、ご案内を出します」。「頼む」。世界を三度救った人との、いちばん実務的な約束が結ばれた。",
+      "text": "「いまの悩みは、ポイントの有効期限じゃ」深刻な顔で言うので、深刻な顔で答えた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w15.node.line.007b",
+      "lineId": "main.s1.w15.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「失効前に、ご案内を出します」「頼む」世界を三度救った人との、いちばん実務的な約束。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s1.w15.node.line.008",
-      "lineId": "main.s1.w15.line.008",
+      "id": "main.s1.w15.node.line.008a",
+      "lineId": "main.s1.w15.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "帰りぎわ、剣士さんは窓の外を見たまま言った。「あんたのとこの興行は、観ておると——続きがある感じがして、好きじゃよ」。",
-      "emotion": "revelation"
+      "text": "帰りぎわ、剣士さんが窓の外を見たまま言った。"
     },
     {
       "type": "line",
-      "id": "main.s1.w15.node.line.009",
-      "lineId": "main.s1.w15.line.009",
+      "id": "main.s1.w15.node.line.008b",
+      "lineId": "main.s1.w15.line.008b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "続きがある感じ。傘の中で、その言葉を持って帰った。終わった人たちの街で、うちの興行は、続きの匂いがするらしい。だったら——ちゃんと、続けなければ。",
+      "text": "「あんたのとこの興行は、観ておると——」「続きがある感じがして、好きじゃよ」",
+      "emotion": "revelation"
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.w15.node.direction.mimi.shift.009",
+      "command": {
+        "type": "show",
+        "assetId": "main.s1.w15.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w15.node.line.009a",
+      "lineId": "main.s1.w15.line.009a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "続きがある感じ。傘の中で、その言葉を持ち帰った。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w15.node.line.009b",
+      "lineId": "main.s1.w15.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "終わった人たちの街で、うちの興行は、続きの匂いがするらしい。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w15.node.line.009c",
+      "lineId": "main.s1.w15.line.009c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "だったら——ちゃんと、続けなきゃ。",
       "emotion": "resolve"
     },
     {
       "type": "line",
-      "id": "main.s1.w15.node.line.010",
-      "lineId": "main.s1.w15.line.010",
+      "id": "main.s1.w15.node.line.010a",
+      "lineId": "main.s1.w15.line.010a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "寮に戻ると、雨が上がりかけていた。窓の外で、街の灯がひとつずつ点き直していく。倍率も、明日にはまた育ち始める。手帳に一行だけ書いた。「雨の日の街、好きだ」。",
+      "text": "寮に戻ると、雨が上がりかけてた。窓の外で、街の灯が点き直していく。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w15.node.line.010b",
+      "lineId": "main.s1.w15.line.010b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "倍率も、明日にはまた育ち始める。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w15.node.line.010c",
+      "lineId": "main.s1.w15.line.010c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "手帳に一行、書いた。「雨の日の街、好きだ」",
       "emotion": "tender"
     },
     {
       "type": "effect",
       "id": "main.s1.w15.node.effect.001",
-      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+      "effects": [
+        {
+          "type": "sharedPoints",
+          "amount": 2
+        }
+      ]
     },
     {
       "type": "end",
@@ -139,7 +291,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "週15(10行)。仕組み学習=雨の日はオッズが一倍(休場の世界内意味)。クリア後の哀感を剣士さんの一回で。感動は一行規定(「笑い方が上手すぎた」)。週16夜戦への静の谷。選択肢は撤去(判断週ではないため)。",
+    "authorNote": "語り口V2・二行枠で改稿。 週15(10行→二行枠28ノード)。仕組み学習=雨の日はオッズが一倍(休場の世界内意味)。クリア後の哀感を剣士さんの一回で。感動は一行規定(「笑い方が上手すぎた」)。週16夜戦への静の谷。選択肢は撤去(判断週ではないため)。",
     "legacyGeneratedIds": false
   }
 }

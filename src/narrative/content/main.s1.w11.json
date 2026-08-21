@@ -8,9 +8,20 @@
     "arcId": "main.stage1"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -20,8 +31,14 @@
       {
         "id": "main.s1.w11.asset.background.001",
         "kind": "background",
-        "path": "/assets/story/bg-observation-deck-night.png",
+        "path": "/assets/story/bg-seven-worlds-fireworks-beach-night-v1.png",
         "alt": "夜の海辺と花火の背景"
+      },
+      {
+        "id": "main.s1.w11.asset.sprite.mimi.smile",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-smile-v1.png",
+        "alt": "笑顔のミミ"
       }
     ]
   },
@@ -29,97 +46,263 @@
     {
       "type": "direction",
       "id": "main.s1.w11.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s1.w11.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s1.w11.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "direction",
       "id": "main.s1.w11.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.w11.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s1.w11.asset.sprite.mimi.smile",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
-      "id": "main.s1.w11.node.line.001",
-      "lineId": "main.s1.w11.line.001",
+      "id": "main.s1.w11.node.line.001a",
+      "lineId": "main.s1.w11.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "夕方の浜は、潮と、火薬と、焼きとうもろこしの匂いがした。海の花火大会。この日ばかりは、街がまるごと海辺へ引っ越す。闘技場も、今夜は休み。",
+      "text": "夕方の浜は、潮と火薬と、焼きとうもろこしの匂いがした。海の花火大会。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w11.node.line.001b",
+      "lineId": "main.s1.w11.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "この日だけ、街がまるごと海辺へ引っ越す。闘技場も、今夜は休み。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s1.w11.node.line.002",
-      "lineId": "main.s1.w11.line.002",
+      "id": "main.s1.w11.node.line.002a",
+      "lineId": "main.s1.w11.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "うちの面々も、私服(と呼んでいいのか分からない何か)で集合した。今日は監督業も休み。引率係だけ、ちょっとやる。"
+      "text": "うちの面々も、私服(と呼んでいいのか分からない何か)で集合した。"
     },
     {
       "type": "line",
-      "id": "main.s1.w11.node.line.003",
-      "lineId": "main.s1.w11.line.003",
+      "id": "main.s1.w11.node.line.002b",
+      "lineId": "main.s1.w11.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "この街の花火は、七世界仕様だった。人魚の花火は海の中で開く。水面の下で光の花が咲いて、波ごと光る。竜のお客様は打ち上げに参加しない。「自前があるので」と、たまに空へ火を吐く。番組表に無い花火である。",
+      "text": "今日は監督業も休み。引率係だけ、ちょっとやる。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w11.node.line.003a",
+      "lineId": "main.s1.w11.line.003a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "この街の花火は、七世界仕様だった。人魚の花火は、海の中で開く。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w11.node.line.003b",
+      "lineId": "main.s1.w11.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "水面の下で光の花が咲いて、波ごと光る。竜のお客様は、打ち上げに参加しない。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w11.node.line.003c",
+      "lineId": "main.s1.w11.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「自前があるので」と、たまに空へ火を吐く。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w11.node.line.003d",
+      "lineId": "main.s1.w11.line.003d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "番組表に無い花火、見つけちゃった。耳が、ぴんと立った。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s1.w11.node.line.004",
-      "lineId": "main.s1.w11.line.004",
+      "id": "main.s1.w11.node.line.004a",
+      "lineId": "main.s1.w11.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "幽霊のご夫妻の花火は、音がしなかった。光だけが、ゆっくり開いて、ゆっくり消える。「音は、こちらで想像するんです」とノノさん。想像した。いい音がした。",
+      "text": "幽霊のご夫妻の花火は、音がしなかった。光だけが、ゆっくり開いて、消える。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w11.node.line.004b",
+      "lineId": "main.s1.w11.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「音は、こちらで想像するんです」とノノさん。想像した。……いい音が、した。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s1.w11.node.line.005",
-      "lineId": "main.s1.w11.line.005",
+      "id": "main.s1.w11.node.line.005a",
+      "lineId": "main.s1.w11.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "夜店の並びに、見慣れた顔があった。遺失物窓口の出張市。「花火の夜は、落とし物が増えますから」と、係のお姉さん。棚には番号札つきの光り物——役目を終えた道具たちが、夜店の灯りの下だと、ただの綺麗なものに見えた。",
+      "text": "夜店の並びに、見慣れた顔があった。遺失物窓口の、出張市。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w11.node.line.005b",
+      "lineId": "main.s1.w11.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「花火の夜は、落とし物が増えますから」と、係のお姉さん。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w11.node.line.005c",
+      "lineId": "main.s1.w11.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "棚には番号札つきの光り物。灯りの下だと、ただの綺麗なものに見えた。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s1.w11.node.line.006",
-      "lineId": "main.s1.w11.line.006",
+      "id": "main.s1.w11.node.line.006a",
+      "lineId": "main.s1.w11.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "出張市で、うちの備品を三点、縁あって引き取った。装備は買うか、こうして縁を結ぶか、の二本立てらしい。隣では「英雄の剣(三本目)」のおじいさんが、剣を掲げて花火に対抗していた。剣、負けじとよく光る。",
+      "text": "出張市で、うちの備品を三点、縁あって引き取った。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w11.node.line.006b",
+      "lineId": "main.s1.w11.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "装備は買うか、こうして縁を結ぶか。二本立てらしい。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w11.node.line.006c",
+      "lineId": "main.s1.w11.line.006c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "隣では「英雄の剣(三本目)」のおじいさんが、剣を掲げて花火に対抗していた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w11.node.line.006d",
+      "lineId": "main.s1.w11.line.006d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "剣、負けじと、よく光る。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s1.w11.node.line.007",
-      "lineId": "main.s1.w11.line.007",
+      "id": "main.s1.w11.node.line.007a",
+      "lineId": "main.s1.w11.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "大玉の時間になると、海が、手伝いを始めた。大きな水柱がそっと立って、花火を空のもっと高いところまで持ち上げる。観客席で見たあの波の、祭りの顔だった。今年の花火は歴代最高、と浜のどこかで誰かが叫んだ。",
+      "text": "大玉の時間になると、海が、手伝いを始めた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w11.node.line.007b",
+      "lineId": "main.s1.w11.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "水柱がそっと立って、花火を空のもっと高いところまで持ち上げる。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w11.node.line.007c",
+      "lineId": "main.s1.w11.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "観客席で見た、あの波の、祭りの顔だった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w11.node.line.007d",
+      "lineId": "main.s1.w11.line.007d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "今年の花火は歴代最高、と浜のどこかで誰かが叫んだ。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s1.w11.node.line.008",
-      "lineId": "main.s1.w11.line.008",
+      "id": "main.s1.w11.node.line.008a",
+      "lineId": "main.s1.w11.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ふと横を見ると、うちの三人が、並んで空を見上げていた。強いとか、封印とか、契約とか、ぜんぶ置いてきた横顔だった。この横顔を見られただけで、今夜の引率係は大成功である。",
+      "text": "ふと横を見ると、うちの三人が、並んで空を見上げていた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w11.node.line.008b",
+      "lineId": "main.s1.w11.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "強いとか、封印とか、契約とか、ぜんぶ置いてきた横顔だった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w11.node.line.008c",
+      "lineId": "main.s1.w11.line.008c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "この横顔が見られただけで……今夜の引率係、大成功。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s1.w11.node.line.009",
-      "lineId": "main.s1.w11.line.009",
+      "id": "main.s1.w11.node.line.009a",
+      "lineId": "main.s1.w11.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "帰り道、砂だらけの靴で歩きながら、手帳に一行だけ書いた。「装備: 三点(縁あり)。花火: 想像した音つき」。……うちの手帳、記録簿としてどんどん駄目になっていく。いい傾向だと思う。",
+      "text": "帰り道、砂だらけの靴で歩きながら、手帳に一行だけ書いた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w11.node.line.009b",
+      "lineId": "main.s1.w11.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「装備: 三点(縁あり)。花火: 想像した音つき」"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w11.node.line.009c",
+      "lineId": "main.s1.w11.line.009c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……うちの手帳、記録簿としてどんどん駄目になっていく。いい傾向だと思う。",
       "emotion": "comic"
     },
     {
       "type": "effect",
       "id": "main.s1.w11.node.effect.001",
-      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+      "effects": [
+        {
+          "type": "sharedPoints",
+          "amount": 2
+        }
+      ]
     },
     {
       "type": "end",
@@ -130,7 +313,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "週11(9行・選択肢なし)。祭事=海の花火大会(ユーザー提案2026-08-14)。キャラ個別の乙女シーンの共有ステージとして開放。装備学習(遺失物の縁)は出張市に統合。さざなみの祭りの顔(水柱)。背景は夜景で代用(花火専用絵は要アセット)。",
+    "authorNote": "語り口V2・二行枠で改稿。週11(9行・選択肢なし)。祭事=海の花火大会(ユーザー提案2026-08-14)。キャラ個別の乙女シーンの共有ステージとして開放。装備学習(遺失物の縁)は出張市に統合。さざなみの祭りの顔(水柱)。背景は夜景で代用(花火専用絵は要アセット)。",
     "legacyGeneratedIds": false
   }
 }

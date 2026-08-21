@@ -8,9 +8,20 @@
     "arcId": "main.stage1"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -22,6 +33,12 @@
         "kind": "background",
         "path": "/assets/story/bg-fountain-plaza-day-v1.png",
         "alt": "再建祭の噴水広場の背景"
+      },
+      {
+        "id": "main.s1.w23.asset.sprite.mimi.smile",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-smile-v1.png",
+        "alt": "笑顔のミミ"
       }
     ]
   },
@@ -29,106 +46,272 @@
     {
       "type": "direction",
       "id": "main.s1.w23.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s1.w23.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s1.w23.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "direction",
       "id": "main.s1.w23.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.w23.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s1.w23.asset.sprite.mimi.smile",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
-      "id": "main.s1.w23.node.line.001",
-      "lineId": "main.s1.w23.line.001",
+      "id": "main.s1.w23.node.line.001a",
+      "lineId": "main.s1.w23.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "闘技場の再建は、驚く速さで進んでいた。壁が立ち、屋根が乗り、客席の一列目が戻った。復興選手権の告知は、街の全部の掲示板に貼られている。「準決勝、そして決勝。今季の続きを、再建の場で」。",
+      "text": "闘技場の再建は、驚く速さで進んでいた。壁が立ち、屋根が乗った。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w23.node.line.001b",
+      "lineId": "main.s1.w23.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "客席の一列目が、戻った。復興選手権の告知が、街じゅうの掲示板に貼られている。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w23.node.line.001c",
+      "lineId": "main.s1.w23.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「準決勝、そして決勝。今季の続きを」",
       "emotion": "resolve"
     },
     {
       "type": "line",
-      "id": "main.s1.w23.node.line.002",
-      "lineId": "main.s1.w23.line.002",
+      "id": "main.s1.w23.node.line.002a",
+      "lineId": "main.s1.w23.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "その日、基礎の瓦礫を運んでいた竜が、大声を上げた。「額が出たぞ! 割れてない!」。瓦礫の下から、古い額縁が、一枚。埃を払うと、手書きの字が現れた。"
+      "text": "その日、瓦礫を運んでいた竜が、大声を上げた。"
     },
     {
       "type": "line",
-      "id": "main.s1.w23.node.line.003",
-      "lineId": "main.s1.w23.line.003",
+      "id": "main.s1.w23.node.line.002b",
+      "lineId": "main.s1.w23.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「設立趣意書」。冒頭の一行を、私は声に出して読んだ。読みながら、手が少し震えた。——**「当場は、物語を終えた者たちが、続きを生きるための場所である」**。",
+      "text": "「額が出たぞ! 割れてない!」瓦礫の下から、古い額縁が一枚。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w23.node.line.002c",
+      "lineId": "main.s1.w23.line.002c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "埃を払うと、手書きの字が現れた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w23.node.line.003a",
+      "lineId": "main.s1.w23.line.003a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「設立趣意書」冒頭の一行を、声に出して読んだ。読みながら、手が少し震えた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w23.node.line.003b",
+      "lineId": "main.s1.w23.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「当場は、物語を終えた者たちが、続きを生きるための場所である」",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s1.w23.node.line.004",
-      "lineId": "main.s1.w23.line.004",
+      "id": "main.s1.w23.node.line.004a",
+      "lineId": "main.s1.w23.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "広場が、静かになった。木槌の音が止み、誰もが額を見ていた。終わった者たちが、続きを生きるための場所。それを、いちばん必要としている人たちが、いま、この広場で梁を担いでいる。",
+      "text": "広場が、静かになった。木槌の音が止み、誰もが額を見ていた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w23.node.line.004b",
+      "lineId": "main.s1.w23.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "終わった者たちが、続きを生きるための場所。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w23.node.line.004c",
+      "lineId": "main.s1.w23.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "それを、いちばん必要としている人たちが、いま、梁を担いでいる。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s1.w23.node.line.005",
-      "lineId": "main.s1.w23.line.005",
+      "id": "main.s1.w23.node.line.005a",
+      "lineId": "main.s1.w23.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "沈黙を破ったのは、剣士さんだった。「……ふむ。では、続きをやらねばのう」。木槌の音が、再開した。さっきより、速く、明るく。趣意書の一行は、その日のうちに街の合言葉になった。",
+      "text": "沈黙を破ったのは、剣士さんだった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w23.node.line.005b",
+      "lineId": "main.s1.w23.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「……ふむ。では、続きをやらねばのう」木槌の音が、再開した。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w23.node.line.005c",
+      "lineId": "main.s1.w23.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "さっきより、速く、明るく。趣意書の一行は、その日のうちに街の合言葉になった。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s1.w23.node.line.006",
-      "lineId": "main.s1.w23.line.006",
+      "id": "main.s1.w23.node.line.006a",
+      "lineId": "main.s1.w23.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "会社の言う「資産管理」は、この一行の上に、後から被さった運用にすぎない。原本は、こう言っている。ここは倉庫ではなく、続きのための場所だと。額は、再建した正面玄関の、いちばん目立つ壁に掛けられることが即決された。",
+      "text": "会社の言う「資産管理」は、趣意書の一行の上に、後から被さった運用にすぎない。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w23.node.line.006b",
+      "lineId": "main.s1.w23.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "原本は、こう言っている。闘技場は倉庫じゃなく、続きのための場所だと。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w23.node.line.006c",
+      "lineId": "main.s1.w23.line.006c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "額は、正面玄関のいちばん目立つ壁に掛けることが、即決された。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s1.w23.node.line.007",
-      "lineId": "main.s1.w23.line.007",
+      "id": "main.s1.w23.node.line.007a",
+      "lineId": "main.s1.w23.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "祭りの準備は、そのまま加速した。土産物屋が勝手に「ミミのチーム」復興記念商品を作り、アルデバラン社の正規ライセンス窓口と、大人げない縄張り争いを始めた。うちのチーム、いつの間に商品になったのか。",
+      "text": "祭りの準備は、そのまま加速した。土産物屋が勝手に復興記念商品を作った。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w23.node.line.007b",
+      "lineId": "main.s1.w23.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "正規ライセンス窓口と、大人げない縄張り争いを始めた。うちのチーム、いつの間に商品に。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s1.w23.node.line.008",
-      "lineId": "main.s1.w23.line.008",
+      "id": "main.s1.w23.node.line.008a",
+      "lineId": "main.s1.w23.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "夕方、組み合わせが発表された。準決勝の相手は——カシム・ベル。完璧な窓口業務で知られる、あの受付の伝説。勝てば決勝。決勝の相手は、空の王者・シャハル。",
+      "text": "夕方、組み合わせが発表された。準決勝の相手は——カシム・ベル。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w23.node.line.008b",
+      "lineId": "main.s1.w23.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "完璧な窓口業務で知られる、あの受付の伝説。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w23.node.line.008c",
+      "lineId": "main.s1.w23.line.008c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "勝てば決勝。決勝の相手は、空の王者・シャハル。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s1.w23.node.line.009",
-      "lineId": "main.s1.w23.line.009",
+      "id": "main.s1.w23.node.line.009a",
+      "lineId": "main.s1.w23.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "控室(仮設)で、三人が組み合わせ表を囲んでいた。誰も何も言わない。言わないが、指先の封が、こつ、こつ、と鳴っている。特訓の続きが、したくてたまらない音だ。",
+      "text": "控室で、三人が組み合わせ表を囲んでいた。誰も、何も言わない。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w23.node.line.009b",
+      "lineId": "main.s1.w23.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "指先の封が、こつ、こつ、と鳴る。耳も、そわそわしていた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w23.node.line.009c",
+      "lineId": "main.s1.w23.line.009c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "特訓の続きが、したくてたまらない音だ。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s1.w23.node.line.010",
-      "lineId": "main.s1.w23.line.010",
+      "id": "main.s1.w23.node.line.010a",
+      "lineId": "main.s1.w23.line.010a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "手帳の白かった予定表に、私は二つの枠を書き込んだ。「準決勝」。「決勝」。書き終えて、額の一行を思い出す。続きを生きるための場所。——うちの続きは、この二枠だ。",
+      "text": "白かった予定表に、二つの枠を書き込んだ。「準決勝」"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w23.node.line.010b",
+      "lineId": "main.s1.w23.line.010b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「決勝」書き終えて、額の一行を思い出す。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w23.node.line.010c",
+      "lineId": "main.s1.w23.line.010c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "続きを生きるための場所。うちの続きは、この二枠だ。",
       "emotion": "resolve"
     },
     {
       "type": "effect",
       "id": "main.s1.w23.node.effect.001",
-      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+      "effects": [
+        {
+          "type": "sharedPoints",
+          "amount": 2
+        }
+      ]
     },
     {
       "type": "end",
@@ -139,7 +322,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "週23(10行)。Q1の明言=趣意書(滅亡直後に読むことで最重になる配置)。組み合わせ発表=準決勝カシム・ベル/決勝シャハル。「柿落とし予定欄の空欄」は週24で拾う。選択肢は撤去(判断週ではないため)。",
+    "authorNote": "語り口V2・二行枠で改稿。週23(10行)。Q1の明言=趣意書(滅亡直後に読むことで最重になる配置)。組み合わせ発表=準決勝カシム・ベル/決勝シャハル。「柿落とし予定欄の空欄」は週24で拾う。選択肢は撤去(判断週ではないため)。",
     "legacyGeneratedIds": false
   }
 }

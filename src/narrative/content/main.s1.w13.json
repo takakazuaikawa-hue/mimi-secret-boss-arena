@@ -8,9 +8,20 @@
     "arcId": "main.stage1"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -22,6 +33,18 @@
         "kind": "background",
         "path": "/assets/story/bg-measurement-workshop-v1.png",
         "alt": "計測工房の背景"
+      },
+      {
+        "id": "main.s1.w13.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
+      },
+      {
+        "id": "main.s1.w13.asset.sprite.mimi.smile",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-smile-v1.png",
+        "alt": "笑顔のミミ"
       }
     ]
   },
@@ -29,110 +52,250 @@
     {
       "type": "direction",
       "id": "main.s1.w13.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s1.w13.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s1.w13.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "direction",
       "id": "main.s1.w13.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.w13.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s1.w13.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
-      "id": "main.s1.w13.node.line.001",
-      "lineId": "main.s1.w13.line.001",
+      "id": "main.s1.w13.node.line.001a",
+      "lineId": "main.s1.w13.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "審理の日から、あの一言が刺さったままだった。全員が、全力を封じたまま勝とうとしている。夜、手帳の希望欄の束を読み返して、気づいてしまった。誰の欄にも、書いていないことがある。",
+      "text": "あの一言が、まだ刺さってた。「封じたまま、勝とうとしてる」って。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w13.node.line.001b",
+      "lineId": "main.s1.w13.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "夜、手帳の希望欄を読み返して、気づいた。誰も「全力を出したい」って書いてない。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s1.w13.node.line.002",
-      "lineId": "main.s1.w13.line.002",
+      "id": "main.s1.w13.node.line.002a",
+      "lineId": "main.s1.w13.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「全力を出したい」。誰も、書いていない。書けないのだ。出せば会場が壊れ、相手が保たず、街が困る。この人たちの本来の領域は、契約と、長い長い自制で封じられている。"
+      "text": "書けないんだ、たぶん。出したら会場が壊れて、街が困る。"
     },
     {
       "type": "line",
-      "id": "main.s1.w13.node.line.003",
-      "lineId": "main.s1.w13.line.003",
+      "id": "main.s1.w13.node.line.002b",
+      "lineId": "main.s1.w13.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "朝、全員を計測工房に集めた。計測係くんも呼んだ(呼んだ時点で、彼はもう震えていた)。私は監督として、たぶん、この街の誰も言わなかったことを言う。",
+      "text": "契約と、長い自制。ずっと縛られたままの人たち。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w13.node.line.003a",
+      "lineId": "main.s1.w13.line.003a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "朝、全員を工房に集めた。計測係くんも呼んだ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w13.node.line.003b",
+      "lineId": "main.s1.w13.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "呼んだ時点で、もう震えてた。今日は、たぶん初めて言う。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s1.w13.node.line.004",
-      "lineId": "main.s1.w13.line.004",
+      "id": "main.s1.w13.node.line.004a",
+      "lineId": "main.s1.w13.line.004a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "全力、出しましょうよ。——出しても大丈夫な場所を、私が作りますから。",
-      "emotion": "resolve"
+      "text": "全力、出しましょうよ。——出しても大丈夫な場所を、私が作りますから。"
     },
     {
       "type": "line",
-      "id": "main.s1.w13.node.line.005",
-      "lineId": "main.s1.w13.line.005",
+      "id": "main.s1.w13.node.line.004b",
+      "lineId": "main.s1.w13.line.004b",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "……言っちゃった。耳の先が、熱い。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w13.node.line.005a",
+      "lineId": "main.s1.w13.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "沈黙が、長かった。長い沈黙のあと、一人が聞いた。「……本気か、ミミさん」。本気です。「壊れるぞ、いろいろ」。壊れない工夫をするのが、監督の仕事です。たぶん。今日からは。",
+      "text": "沈黙が、長かった。耳が、しゅんと倒れた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w13.node.line.005b",
+      "lineId": "main.s1.w13.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "一人が聞いた。「……本気か、ミミさん」本気です。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w13.node.line.005c",
+      "lineId": "main.s1.w13.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「壊れるぞ、いろいろ」壊れない工夫が、監督の仕事。たぶん、今日から。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s1.w13.node.line.006",
-      "lineId": "main.s1.w13.line.006",
+      "id": "main.s1.w13.node.line.006a",
+      "lineId": "main.s1.w13.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "特訓が始まった。まず「少しだけ」解く練習から。一人目が指先だけ封を緩めた瞬間、工房の壁に亀裂が走った。二人目で、屋根の一部が消えた。三人目で、計測係くんの記録板の感想欄が更新された。「こわい」。",
-      "emotion": "comic"
+      "text": "特訓開始。一人目が指先だけ緩めたら、壁に亀裂。二人目で、屋根が消えた。"
     },
     {
       "type": "line",
-      "id": "main.s1.w13.node.line.007",
-      "lineId": "main.s1.w13.line.007",
+      "id": "main.s1.w13.node.line.006b",
+      "lineId": "main.s1.w13.line.006b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "それでも、誰の顔も、輝いていた。指先だけの解放で、四百年ぶりの深呼吸をしたみたいな顔。この顔を見られただけで、壁の修理代は安い。安くはないが、安いことにする。",
+      "text": "三人目で、感想欄が変わった。計測係くんの、正直な一言。「こわい」",
+      "emotion": "comic"
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.w13.node.direction.mimi.shift.007",
+      "command": {
+        "type": "show",
+        "assetId": "main.s1.w13.asset.sprite.mimi.smile",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w13.node.line.007a",
+      "lineId": "main.s1.w13.line.007a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "それでも、みんなの顔が輝いてた。四百年ぶりの深呼吸って顔。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w13.node.line.007b",
+      "lineId": "main.s1.w13.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "この顔が見られただけで、壁の修理代は安い。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w13.node.line.007c",
+      "lineId": "main.s1.w13.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "安くは、ない。でも、安いことにする。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s1.w13.node.line.008",
-      "lineId": "main.s1.w13.line.008",
+      "id": "main.s1.w13.node.line.008a",
+      "lineId": "main.s1.w13.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "解放の合図も決めた。監督の私が声で出す、うち専用の符丁。名前は私が付けた。全員が三秒黙って、それから吹き出した。ダサいらしい。ダサくて、格好いいと思う。採用。",
+      "text": "解放の合図も、決めた。うち専用の符丁、名前は私が付けたら、全員、三秒黙った。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w13.node.line.008b",
+      "lineId": "main.s1.w13.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……ダサいらしい。それから、吹き出した。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w13.node.line.008c",
+      "lineId": "main.s1.w13.line.008c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ダサくて、格好いいと思う。採用。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s1.w13.node.line.009",
-      "lineId": "main.s1.w13.line.009",
+      "id": "main.s1.w13.node.line.009a",
+      "lineId": "main.s1.w13.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "夕方までに分かったこと。封印は、一気には解けない。指先、手首、肩——と、順番に慣らしていくしかない。時間がかかる。かかっていい。うちには、まだ週がある。",
+      "text": "夕方までに、分かったこと。封印は、一気に解けない。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w13.node.line.009b",
+      "lineId": "main.s1.w13.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "指先、手首、肩——順番に、慣らすしかない。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w13.node.line.009c",
+      "lineId": "main.s1.w13.line.009c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "時間はかかるし、かかっていい。まだ、週はある。",
       "emotion": "resolve"
     },
     {
       "type": "line",
-      "id": "main.s1.w13.node.line.010",
-      "lineId": "main.s1.w13.line.010",
+      "id": "main.s1.w13.node.line.010a",
+      "lineId": "main.s1.w13.line.010a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "帰り際、計測係くんがおずおずと言った。「あの、計測器、上限の上を作り直してきます。き、記録できないのは、係として悔しいので」。震えながら悔しがる人は、もう仲間である。",
+      "text": "「計測器の上限、作り直します。記録できないのが、悔しくて」震えながら悔しがる人は、もう仲間だ。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s1.w13.node.line.011",
-      "lineId": "main.s1.w13.line.011",
+      "id": "main.s1.w13.node.line.011a",
+      "lineId": "main.s1.w13.line.011a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "手帳の新しい頁に、書いた。「特訓、開始。目標: 全力を、興行に」。書き終えて、気づく。私はもう、名義を返す日のことを、何日も考えていない。",
+      "text": "手帳の新しい頁に、書いた。「特訓、開始。目標: 全力を、興行に」書き終えて、気づく。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w13.node.line.011b",
+      "lineId": "main.s1.w13.line.011b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "名義を返す日のこと。……もう、何日も、考えてない。",
       "emotion": "revelation"
     },
     {
@@ -142,23 +305,33 @@
         {
           "id": "main.s1.w13.choice.001",
           "label": "一人ずつ、順番に解いていく",
-          "result": "焦らない。一人ずつ、指先から。工房の壁の修理代と相談しながら、番号を振って順番に進めることにした。番号を振れば、化け物も行列になる——カジノで学んだ持論は、特訓にも効いた。順番待ちの間、先に解いた者が次の者へコツを教え始める。教える側の顔が、また少し誇らしい。うちの特訓場に、小さな師弟が生まれていく。",
+          "result": "焦らない。一人ずつ、指先から。番号を振れば、化け物も行列になる——カジノ仕込みの持論だった。待つ間に、先に解いた子が次の子へコツを教え始めた。小さな師弟が、生まれていく。",
           "intent": "安全第一で、確実に慣らしていく",
           "promise": "事故が減る代わりに、全員が揃うのは先になる",
           "memory": "特訓の順番表が、工房の壁に貼られている",
           "tone": "pragmatic",
-          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
           "goto": "main.s1.w13.node.end.001"
         },
         {
           "id": "main.s1.w13.choice.002",
           "label": "全員同時に、少しずつ解いていく",
-          "result": "「一人で解くから怖いんです。全員で、少しずつ」。せーの、で全員が指先の封を緩めた。工房の空気が一度に重くなり、窓が全部たわみ、計測係くんが避難した。無茶だった。無茶だったが——全員の顔が、互いを見て笑っていた。怖さは、割り勘にすると軽くなるらしい。修理代も割り勘にしたいところだが、それは監督持ちである。",
+          "result": "「一人だと、怖いんです。全員で、少しずつ」せーので緩めたら、窓が全部たわんで、計測係くんが避難した。無茶だった。それでも、みんな笑ってた。怖さは割り勘にすると軽い。修理代の割り勘だけは、監督が却下した。",
           "intent": "怖さを、チーム全員で割り勘にする",
           "promise": "結束が固まる代わりに、修理代がかさむ",
           "memory": "「せーの」の掛け声が、特訓の始まりの合図になった",
           "tone": "wild",
-          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
           "goto": "main.s1.w13.node.end.001"
         }
       ]
@@ -172,7 +345,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "週13中点(11行)。封印解放アーク開始(ユーザー決定)。解放三段の一段目。中点の不可逆=「全力を見たい側に立つ」+名義を考えなくなっている自覚。合図の名称は本文で伏せたまま(お楽しみ)。",
+    "authorNote": "語り口V2・二行枠で改稿。 週13中点(11行→二行枠28ノード)。封印解放アーク開始(ユーザー決定)。解放三段の一段目。中点の不可逆=「全力を見たい側に立つ」+名義を考えなくなっている自覚。合図の名称は本文で伏せたまま(お楽しみ)。",
     "legacyGeneratedIds": false
   }
 }

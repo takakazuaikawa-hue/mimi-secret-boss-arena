@@ -8,9 +8,20 @@
     "arcId": "main.stage1"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -22,6 +33,18 @@
         "kind": "background",
         "path": "/assets/story/bg-arena-reception.png",
         "alt": "闘技場の正面受付の背景"
+      },
+      {
+        "id": "main.s1.w14.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
+      },
+      {
+        "id": "main.s1.w14.asset.sprite.mimi.smile",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-smile-v1.png",
+        "alt": "笑顔のミミ"
       }
     ]
   },
@@ -29,79 +52,179 @@
     {
       "type": "direction",
       "id": "main.s1.w14.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s1.w14.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s1.w14.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "direction",
       "id": "main.s1.w14.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.w14.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s1.w14.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
-      "id": "main.s1.w14.node.line.001",
-      "lineId": "main.s1.w14.line.001",
+      "id": "main.s1.w14.node.line.001a",
+      "lineId": "main.s1.w14.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "特訓の筋肉痛(見ているだけなのに、なぜか私も)が残る朝、受付に封筒が届いていた。赤い社印。片道五日の距離を、また誰かが運んできたのだ。",
+      "text": "見てるだけなのに、なぜか私まで筋肉痛。そんな朝、受付に封筒、赤い社印。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w14.node.line.001b",
+      "lineId": "main.s1.w14.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "片道五日の距離を、また誰かが運んできた。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s1.w14.node.line.002",
-      "lineId": "main.s1.w14.line.002",
+      "id": "main.s1.w14.node.line.002a",
+      "lineId": "main.s1.w14.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「名義変更申請の件、例外審査の結果——承認」。……承認。読み間違いかと思って、三度読んだ。最上級在籍のまま、名義を元へ戻せる。私は、いつでも、派遣の日常へ帰れる。"
+      "text": "「名義変更申請の件、例外審査の結果、承認」……承認。三度、読み直した。"
     },
     {
       "type": "line",
-      "id": "main.s1.w14.node.line.003",
-      "lineId": "main.s1.w14.line.003",
+      "id": "main.s1.w14.node.line.002b",
+      "lineId": "main.s1.w14.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "望んでいたはずの紙が、手の中で、妙に軽かった。第一週の私なら、この場で万歳をしていた。あの頃の私に、ちゃんと万歳をさせてあげたい気持ちと、今の私の気持ちは、別の場所にある。",
+      "text": "最上級在籍のまま、名義を戻せる。いつでも、帰れるんだ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w14.node.line.003a",
+      "lineId": "main.s1.w14.line.003a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "望んでた紙が、手の中で、妙に軽い。第一週の私なら、その場で万歳してた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w14.node.line.003b",
+      "lineId": "main.s1.w14.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "あの頃の私に、ちゃんと万歳させてあげたい。でも、今の気持ちは別の場所にある。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s1.w14.node.line.004",
-      "lineId": "main.s1.w14.line.004",
+      "id": "main.s1.w14.node.line.004a",
+      "lineId": "main.s1.w14.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "承認書には、手続きの期限があった。「三十日以内に、名義返還の手続きを行うこと」。三十日。指を折る。三十日後は——ちょうど、特訓の成果を初めて試合で試す頃だ。",
+      "text": "承認書には、期限があった。「三十日以内に、手続きを」三十日。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w14.node.line.004b",
+      "lineId": "main.s1.w14.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "指を、折る。三十日後は——ちょうど、特訓の成果を試合で試す頃。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s1.w14.node.line.005",
-      "lineId": "main.s1.w14.line.005",
+      "id": "main.s1.w14.node.line.005a",
+      "lineId": "main.s1.w14.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "昼、控室を覗いた。指先の封を解く練習をしている背中が三つ。壁の亀裂は増えたが、笑い声も増えた。あの背中は、名義がマダムに戻ったら、誰が見るのだろう。",
+      "text": "昼、控室をのぞいた。封を解く練習をしてる、背中が三つ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w14.node.line.005b",
+      "lineId": "main.s1.w14.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "壁の亀裂は増えたけど、笑い声も増えた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w14.node.line.005c",
+      "lineId": "main.s1.w14.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "この背中、名義がマダムに戻ったら、誰が見るんだろう。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s1.w14.node.line.006",
-      "lineId": "main.s1.w14.line.006",
+      "id": "main.s1.w14.node.line.006a",
+      "lineId": "main.s1.w14.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "夕方まで、私は承認書を胸ポケットに入れて働いた。紙一枚ぶん、ずっと胸が重かった。重さの正体を、締めの時間に、やっと認めた。——私は、戻りたくないのだ。",
+      "text": "夕方まで、承認書を胸ポケットに入れて働いた。紙一枚ぶん、ずっと胸が重い。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w14.node.line.006b",
+      "lineId": "main.s1.w14.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "重さの正体を、締めの時間に、やっと認めた。——私は、戻りたくないんだ。",
       "emotion": "revelation"
     },
     {
+      "type": "direction",
+      "id": "main.s1.w14.node.direction.mimi.shift.007",
+      "command": {
+        "type": "show",
+        "assetId": "main.s1.w14.asset.sprite.mimi.smile",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
+    },
+    {
       "type": "line",
-      "id": "main.s1.w14.node.line.007",
-      "lineId": "main.s1.w14.line.007",
+      "id": "main.s1.w14.node.line.007a",
+      "lineId": "main.s1.w14.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "受付の窓口で、取り下げの用紙をもらった。ノノさんは何も聞かずに、黙って書式を出してくれた。受付の人が何も聞かないのは、ぜんぶ分かっている、の合図である。",
+      "text": "受付の窓口で、取り下げの用紙をもらった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w14.node.line.007b",
+      "lineId": "main.s1.w14.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ノノさんは何も聞かずに、黙って書式を出してくれた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w14.node.line.007c",
+      "lineId": "main.s1.w14.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "何も聞かないのは、ぜんぶ分かってる合図だ。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s1.w14.node.line.008",
-      "lineId": "main.s1.w14.line.008",
+      "id": "main.s1.w14.node.line.008a",
+      "lineId": "main.s1.w14.line.008a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -110,35 +233,88 @@
     },
     {
       "type": "line",
-      "id": "main.s1.w14.node.line.009",
-      "lineId": "main.s1.w14.line.009",
+      "id": "main.s1.w14.node.line.009a",
+      "lineId": "main.s1.w14.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "取り下げの理由欄は、三行しかなかった。やりたいこと(全員の全力を、興行にすること)を書いたら、収まらなかった。別紙を付けた。事務員人生で初めて、理由欄に別紙を付けた。",
+      "text": "取り下げの理由欄は、三行しかない。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w14.node.line.009b",
+      "lineId": "main.s1.w14.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "やりたいこと(全員の全力を、興行に)を書いたら、はみ出した。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w14.node.line.009c",
+      "lineId": "main.s1.w14.line.009c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "別紙を付けた。事務員人生、初めて。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s1.w14.node.line.010",
-      "lineId": "main.s1.w14.line.010",
+      "id": "main.s1.w14.node.line.010a",
+      "lineId": "main.s1.w14.line.010a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "書き終えると、ノノさんが判子置きをすっと差し出した。私は自分の判を、まっすぐ押した。第一週の、一行ズレた判の、やり直しみたいに。",
+      "text": "書き終えると、ノノさんが判子置きを差し出した。自分の判を、まっすぐ押した。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w14.node.line.010b",
+      "lineId": "main.s1.w14.line.010b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "第一週の、一行ズレた判の、やり直しみたいに。",
       "emotion": "resolve"
     },
     {
       "type": "line",
-      "id": "main.s1.w14.node.line.011",
-      "lineId": "main.s1.w14.line.011",
+      "id": "main.s1.w14.node.line.011a",
+      "lineId": "main.s1.w14.line.011a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "受け取ったノノさんが、初めて、敬語を少しだけ崩した。「……ようこそ、オーナー」。それから慌てて言い直した。「ようこそ、でいいんですよね? 今さらですけど」。今さらです。でも、嬉しいです。",
+      "text": "初めて、ノノさんの敬語が、少し崩れた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w14.node.line.011b",
+      "lineId": "main.s1.w14.line.011b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「……ようこそ、オーナー」それから慌てて言い直した。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w14.node.line.011c",
+      "lineId": "main.s1.w14.line.011c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「ようこそ、でいいんですよね？　今さらですけど」今さらです。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w14.node.line.011d",
+      "lineId": "main.s1.w14.line.011d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "でも、耳が熱くて、嬉しいです。",
       "emotion": "tender"
     },
     {
       "type": "effect",
       "id": "main.s1.w14.node.effect.001",
-      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+      "effects": [
+        {
+          "type": "sharedPoints",
+          "amount": 2
+        }
+      ]
     },
     {
       "type": "end",
@@ -149,7 +325,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "週14(11行)。正典§3中盤「権利を返すだけでは解決しないと悟る」。戻れるのに戻らない=感情の不可逆。週1の一行ズレた判のやり直しの画。週6の例外審査が回収される(選択に依存しない書き方)。選択肢は撤去(判断週ではないため)。",
+    "authorNote": "語り口V2・二行枠で改稿。 週14(11行→二行枠25ノード)。正典§3中盤「権利を返すだけでは解決しないと悟る」。戻れるのに戻らない=感情の不可逆。週1の一行ズレた判のやり直しの画。週6の例外審査が回収される(選択に依存しない書き方)。選択肢は撤去(判断週ではないため)。",
     "legacyGeneratedIds": false
   }
 }

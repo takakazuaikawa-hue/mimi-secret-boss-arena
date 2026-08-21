@@ -8,9 +8,20 @@
     "arcId": "main.stage1"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -20,8 +31,20 @@
       {
         "id": "main.s1.w09.asset.background.001",
         "kind": "background",
-        "path": "/assets/story/bg-fountain-plaza-day-v1.png",
+        "path": "/assets/story/bg-demon-castle-ruins-tourist-day-v1.png",
         "alt": "出発前の噴水広場の背景"
+      },
+      {
+        "id": "main.s1.w09.asset.sprite.mimi.smile",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-smile-v1.png",
+        "alt": "笑顔のミミ"
+      },
+      {
+        "id": "main.s1.w09.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
       }
     ]
   },
@@ -29,115 +52,276 @@
     {
       "type": "direction",
       "id": "main.s1.w09.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s1.w09.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s1.w09.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "direction",
       "id": "main.s1.w09.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.w09.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s1.w09.asset.sprite.mimi.smile",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
-      "id": "main.s1.w09.node.line.001",
-      "lineId": "main.s1.w09.line.001",
+      "id": "main.s1.w09.node.line.001a",
+      "lineId": "main.s1.w09.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "休みの日。噴水広場のバス乗り場は、日向の匂いがした。行き先は例の観光地——魔王城あと地、日帰り。うちの選手も何人か付いてきた。私服が、新鮮である。",
+      "text": "休みの日。噴水広場のバス乗り場、日向の匂い。行き先は例の観光地——魔王城あと地、日帰り。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w09.node.line.001b",
+      "lineId": "main.s1.w09.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "うちの選手も何人か付いてきた。私服、新鮮だ。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s1.w09.node.line.002",
-      "lineId": "main.s1.w09.line.002",
+      "id": "main.s1.w09.node.line.002a",
+      "lineId": "main.s1.w09.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "先週の海戦の話題は、まだ街に漂っていた。すれ違う人が「あ、四十二点の」と私を指す。点数で呼ばれる監督、それが私だ。次はもっと上の数字で呼ばれたい。"
+      "text": "先週の海戦の話題、まだ街に漂ってた。すれ違う人が「あ、四十二点の」と私を指す。"
     },
     {
       "type": "line",
-      "id": "main.s1.w09.node.line.003",
-      "lineId": "main.s1.w09.line.003",
+      "id": "main.s1.w09.node.line.002b",
+      "lineId": "main.s1.w09.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "跡地は、思ったより跡地だった。崩れた城壁、焦げた玉座、そして年間三万人。「勇者が最初に転んだ石」に行列ができていて、みんな順番に転んでいた。参加型の観光である。",
+      "text": "点数で呼ばれる監督、それが私。次はもっと上の数字で呼ばれたい。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w09.node.line.003a",
+      "lineId": "main.s1.w09.line.003a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "跡地は、思ったより跡地だった。崩れた城壁、焦げた玉座、そして年間三万人。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w09.node.line.003b",
+      "lineId": "main.s1.w09.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「勇者が最初に転んだ石」に行列。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w09.node.line.003c",
+      "lineId": "main.s1.w09.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "みんな、順番に転んでいた。参加型の観光らしい。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s1.w09.node.line.004",
-      "lineId": "main.s1.w09.line.004",
+      "id": "main.s1.w09.node.line.004a",
+      "lineId": "main.s1.w09.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "売店の棚は充実していた。「城壁のかけら(本物・無限に出ます)」「魔王の湯呑み(復刻)」「玉座クッション(座り心地・当時のまま)」。在庫の仕組みは、今日も聞かないことにした。",
+      "text": "売店の棚は充実していた。「城壁のかけら(本物・無限に出ます)」"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w09.node.line.004b",
+      "lineId": "main.s1.w09.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「魔王の湯呑み(復刻)」「玉座クッション(座り心地・当時のまま)」も。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w09.node.line.004c",
+      "lineId": "main.s1.w09.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "在庫の仕組み、今日も聞かないことにした。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s1.w09.node.line.005",
-      "lineId": "main.s1.w09.line.005",
+      "id": "main.s1.w09.node.line.005a",
+      "lineId": "main.s1.w09.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "連れの選手の一人が、棚の前で足を止めた。長い、足止めだった。自分の世界の、終わった場所を思い出す横顔に見えた。私は声をかけず、隣に立って、同じ棚を見た。",
+      "text": "連れの選手の一人が、棚の前で足を止めた。長い、足止めだった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w09.node.line.005b",
+      "lineId": "main.s1.w09.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "自分の世界の、終わった場所を思い出す横顔に見えた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w09.node.line.005c",
+      "lineId": "main.s1.w09.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私は声をかけず、隣に立って、同じ棚を見た。",
       "emotion": "tender"
     },
     {
+      "type": "direction",
+      "id": "main.s1.w09.node.direction.mimi.shift.007",
+      "command": {
+        "type": "show",
+        "assetId": "main.s1.w09.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
+    },
+    {
       "type": "line",
-      "id": "main.s1.w09.node.line.006",
-      "lineId": "main.s1.w09.line.006",
+      "id": "main.s1.w09.node.line.006a",
+      "lineId": "main.s1.w09.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "気を取り直して、名物の串を食べた。「魔王団子(八つ裂き大福の姉妹品)」。断面から赤い餡。この街の菓子業界、物騒な名前しか付けられない縛りでもあるのだろうか。",
+      "text": "気を取り直して、名物の串を食べた。「魔王団子(八つ裂き大福の姉妹品)」断面から赤い餡。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w09.node.line.006b",
+      "lineId": "main.s1.w09.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "この街の菓子業界、物騒な名前縛りでもあるのかも。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s1.w09.node.line.007",
-      "lineId": "main.s1.w09.line.007",
+      "id": "main.s1.w09.node.line.007a",
+      "lineId": "main.s1.w09.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "帰りぎわ、棚の隅で手が止まった。小さな札が下がっている。「アルデバラン社ライセンス商品」。……勇者の物語の、ライセンス?",
+      "text": "帰りぎわ、棚の隅で手が止まった。小さな札。「アルデバラン社ライセンス商品」"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w09.node.line.007b",
+      "lineId": "main.s1.w09.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……勇者の物語の、ライセンス?",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s1.w09.node.line.008",
-      "lineId": "main.s1.w09.line.008",
+      "id": "main.s1.w09.node.line.008a",
+      "lineId": "main.s1.w09.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "売店のおばちゃんは、明るく教えてくれた。「終わったお話はね、ぜんぶ会社さんの持ち物なんだって。うちは使用料を払って売ってるのよ。ほら、領収書」。領収書は、本物だった。",
+      "text": "売店のおばちゃんは、明るく教えてくれた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w09.node.line.008b",
+      "lineId": "main.s1.w09.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「終わったお話はね、ぜんぶ会社さんの持ち物なんだって」"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w09.node.line.008c",
+      "lineId": "main.s1.w09.line.008c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「うちは使用料を払って売ってるのよ。ほら、領収書」領収書は、本物だった。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s1.w09.node.line.009",
-      "lineId": "main.s1.w09.line.009",
+      "id": "main.s1.w09.node.line.009a",
+      "lineId": "main.s1.w09.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "終わった話は、会社の持ち物。妙な言い方だ。物語って、持ち物になるんだろうか。考えかけたところで団子の二本目が来たので、やめた。考えごとは、団子に勝てない。",
+      "text": "終わった話は、会社の持ち物。妙な言い方だ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w09.node.line.009b",
+      "lineId": "main.s1.w09.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "物語って、持ち物になるんだろうか。考えかけたところで団子の二本目。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w09.node.line.009c",
+      "lineId": "main.s1.w09.line.009c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "やめた。考えごとは、団子に勝てない。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s1.w09.node.line.010",
-      "lineId": "main.s1.w09.line.010",
+      "id": "main.s1.w09.node.line.010a",
+      "lineId": "main.s1.w09.line.010a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "帰りのバスで、選手たちはよく眠っていた。窓の外を、崩れた城壁がゆっくり流れていく。観光は、成功ということでいいと思う。",
+      "text": "帰りのバスで、選手たちはよく眠っていた。窓の外を、崩れた城壁がゆっくり流れていく。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w09.node.line.010b",
+      "lineId": "main.s1.w09.line.010b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "耳だけが、まだ観光気分のまま。観光は、成功ってことでいいと思う。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s1.w09.node.line.011",
-      "lineId": "main.s1.w09.line.011",
+      "id": "main.s1.w09.node.line.011a",
+      "lineId": "main.s1.w09.line.011a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "寮に着くと、手帳が点いていた。「今週の追記: 来客予定(帳簿関連)」。……観光の余韻、短い。",
+      "text": "寮に着くと、手帳が点いていた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w09.node.line.011b",
+      "lineId": "main.s1.w09.line.011b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「今週の追記: 来客予定(帳簿関連)」……観光の余韻、短い。",
       "emotion": "tension"
     },
     {
       "type": "effect",
       "id": "main.s1.w09.node.effect.001",
-      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+      "effects": [
+        {
+          "type": "sharedPoints",
+          "amount": 2
+        }
+      ]
     },
     {
       "type": "end",
@@ -148,7 +332,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "週9(11行)。仕組み学習=終わった物語が観光資源であること+Q2の種一粒(ライセンス札)。ここで止めて深掘りしない。背景は跡地の専用絵が無いため出発の広場で代用(要アセット)。選択肢は撤去(判断週ではないため)。",
+    "authorNote": "語り口V2・二行枠で改稿。週9(11行)。仕組み学習=終わった物語が観光資源であること+Q2の種一粒(ライセンス札)。ここで止めて深掘りしない。背景は跡地の専用絵が無いため出発の広場で代用(要アセット)。選択肢は撤去(判断週ではないため)。",
     "legacyGeneratedIds": false
   }
 }

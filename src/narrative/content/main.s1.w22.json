@@ -8,9 +8,20 @@
     "arcId": "main.stage1"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -22,6 +33,18 @@
         "kind": "background",
         "path": "/assets/story/bg-loading-dock-day-v1.png",
         "alt": "資材の集まる搬入口の背景"
+      },
+      {
+        "id": "main.s1.w22.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
+      },
+      {
+        "id": "main.s1.w22.asset.sprite.mimi.smile",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-smile-v1.png",
+        "alt": "笑顔のミミ"
       }
     ]
   },
@@ -29,109 +52,289 @@
     {
       "type": "direction",
       "id": "main.s1.w22.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s1.w22.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s1.w22.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "direction",
       "id": "main.s1.w22.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.w22.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s1.w22.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
-      "id": "main.s1.w22.node.line.001",
-      "lineId": "main.s1.w22.line.001",
+      "id": "main.s1.w22.node.line.001a",
+      "lineId": "main.s1.w22.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "復興は、木槌の音で始まった。四度目の復興は、恐ろしく手際が良い。資材は搬入口に山と積まれ、竜が梁を運び、幽霊が壁の中の配線を直す。得意分野が、みんな滅亡向きにできている。",
+      "text": "復興は、木槌の音で始まった。四度目の復興は、恐ろしく手際が良い。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w22.node.line.001b",
+      "lineId": "main.s1.w22.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "資材は搬入口に山と積まれ、竜が梁を運び、幽霊が配線を直す。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w22.node.line.001c",
+      "lineId": "main.s1.w22.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "得意分野が、みんな滅亡向きにできている。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s1.w22.node.line.002",
-      "lineId": "main.s1.w22.line.002",
+      "id": "main.s1.w22.node.line.002a",
+      "lineId": "main.s1.w22.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私は避難所の「なんでも受付」から、復興の帳場へ横滑りした。資材の台帳、人手の割り振り、弁当の数。事務は、どこの世界でも復興の心臓である。気づけば私の判子が、街で二番目に忙しい。"
+      "text": "私は避難所の「なんでも受付」から、復興の帳場へ横滑りした。"
     },
     {
       "type": "line",
-      "id": "main.s1.w22.node.line.003",
-      "lineId": "main.s1.w22.line.003",
+      "id": "main.s1.w22.node.line.002b",
+      "lineId": "main.s1.w22.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "そこへ、会社の係員が来た。木槌の音の中で、澄ました声。「資産の完全回収と、興行の廃止手続きを進めます。関係書類です」。滅亡のどさくさで、うちを畳む気だ。",
+      "text": "資材の台帳、人手の割り振り、弁当の数。事務は、どこの世界でも復興の心臓だ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w22.node.line.002c",
+      "lineId": "main.s1.w22.line.002c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "気づけば私の判子が、街で二番目に忙しい。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w22.node.line.003a",
+      "lineId": "main.s1.w22.line.003a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "そこへ、会社の係員が来た。木槌の音の中で、澄ました声。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w22.node.line.003b",
+      "lineId": "main.s1.w22.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「資産の完全回収と、興行の廃止手続きを進めます」滅亡のどさくさで、うちを畳む気だ。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s1.w22.node.line.004",
-      "lineId": "main.s1.w22.line.004",
+      "id": "main.s1.w22.node.line.004a",
+      "lineId": "main.s1.w22.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "書類の束を、ノノさんが完璧に正式な手つきで検めた。一枚。二枚。三枚目で、彼女の指が止まる。「……こちらの回収書類、選手ごとの『本人同意欄』が、全員ぶん、空欄です」。",
+      "text": "書類の束を、ノノさんが完璧な手つきで検めた。一枚、二枚。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w22.node.line.004b",
+      "lineId": "main.s1.w22.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "三枚目で、彼女の指が止まる。「……本人同意欄が、全員ぶん、空欄です」",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s1.w22.node.line.005",
-      "lineId": "main.s1.w22.line.005",
+      "id": "main.s1.w22.node.line.005a",
+      "lineId": "main.s1.w22.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "係員は事も無げに答えた。「資産に同意は不要ですので」。——第3週の登録窓口を、思い出す。この署名が無いと、どんな伝説でも出場できません。出場に要る同意が、回収には要らないなんて話が、あるものか。",
+      "text": "係員は事も無げに答えた。「資産に同意は不要ですので」第3週の登録窓口を、思い出す。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w22.node.line.005b",
+      "lineId": "main.s1.w22.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "署名が無いと、出場できないのに。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w22.node.line.005c",
+      "lineId": "main.s1.w22.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "出場に要る同意が、回収には要らないなんて。そんな話が、あるものか。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s1.w22.node.line.006",
-      "lineId": "main.s1.w22.line.006",
+      "id": "main.s1.w22.node.line.006a",
+      "lineId": "main.s1.w22.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ノノさんが、帳場の引き出しから書式を出した。週19の夜なべで整えた、あの書式。「古い興行規定に基づく、異議申立の様式です。申立人の欄は——ご本人が、書きます」。",
+      "text": "ノノさんが、帳場の引き出しから書式を出した。週19の夜なべで整えた、あの書式。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w22.node.line.006b",
+      "lineId": "main.s1.w22.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「古い興行規定に基づく、異議申立の様式です。申立人の欄は、ご本人が書きます」",
       "emotion": "resolve"
     },
     {
       "type": "line",
-      "id": "main.s1.w22.node.line.007",
-      "lineId": "main.s1.w22.line.007",
+      "id": "main.s1.w22.node.line.007a",
+      "lineId": "main.s1.w22.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "翌日、収容施設から知らせが届いた。回収書類への署名を、三人全員が拒否。付記の一文が、検閲を通って届いた。「当方の職場は、現在再建中のため」。——うちの職場、まだ再建中なので。三人とも、同じ理由を書いたらしい。",
+      "text": "翌日、収容施設から知らせが届いた。三人全員が、署名を拒否。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w22.node.line.007b",
+      "lineId": "main.s1.w22.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "付記の一文が、検閲を通って届いた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w22.node.line.007c",
+      "lineId": "main.s1.w22.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「当方の職場は、現在再建中のため」うちの職場、まだ再建中。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w22.node.line.007d",
+      "lineId": "main.s1.w22.line.007d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "三人とも、同じ理由を書いたらしい。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s1.w22.node.line.008",
-      "lineId": "main.s1.w22.line.008",
+      "id": "main.s1.w22.node.line.008a",
+      "lineId": "main.s1.w22.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "本人の署名なし。異議申立あり。ノノさんは差し戻しの理由欄に、美しい字で四文字を書いた。「**書類不備**」。会社が、世界でいちばん言われたくない四文字である。",
+      "text": "本人の署名なし、異議申立あり。ノノさんは理由欄に、美しい字を書いた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w22.node.line.008b",
+      "lineId": "main.s1.w22.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「書類不備」会社が、世界でいちばん言われたくない四文字。",
       "emotion": "comic"
     },
     {
+      "type": "direction",
+      "id": "main.s1.w22.node.direction.mimi.shift.009",
+      "command": {
+        "type": "show",
+        "assetId": "main.s1.w22.asset.sprite.mimi.smile",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
+    },
+    {
       "type": "line",
-      "id": "main.s1.w22.node.line.009",
-      "lineId": "main.s1.w22.line.009",
+      "id": "main.s1.w22.node.line.009a",
+      "lineId": "main.s1.w22.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "三日後、三人が帰ってきた。搬入口の坂を、大股で上ってくる。おかえりなさい、の代わりに、私は台帳を掲げた。「再建、人手が足りてません!」。三人は笑って、腕まくりをした。",
+      "text": "三日後、三人が帰ってきた。搬入口の坂を、大股で上ってくる。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w22.node.line.009b",
+      "lineId": "main.s1.w22.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「おかえりなさい」の代わりに、台帳を掲げた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w22.node.line.009c",
+      "lineId": "main.s1.w22.line.009c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「再建、人手が足りてません!」三人は笑って、腕まくりをした。耳が、ぴんと立つのが見えた。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s1.w22.node.line.010",
-      "lineId": "main.s1.w22.line.010",
+      "id": "main.s1.w22.node.line.010a",
+      "lineId": "main.s1.w22.line.010a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "気づけば、あの人たちも来ていた。海が基礎の水平を測り、闇が夜勤を全部引き受け、法廷の人が資材の権利関係を三分で捌く。回収に応じなかったのは、うちだけではなかったのだ。——2周目で会うことになる五人の、これが最初の横顔だった。",
+      "text": "気づけば、あの人たちも来ていた。海が基礎の水平を測り、闇が夜勤を全部引き受けた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w22.node.line.010b",
+      "lineId": "main.s1.w22.line.010b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "法廷の人が、資材の権利関係を三分で捌く。回収に応じなかったのは、うちだけじゃなかった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w22.node.line.010c",
+      "lineId": "main.s1.w22.line.010c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "——2周目で会う五人の、最初の横顔だった。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s1.w22.node.line.011",
-      "lineId": "main.s1.w22.line.011",
+      "id": "main.s1.w22.node.line.011a",
+      "lineId": "main.s1.w22.line.011a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "夕暮れ、瓦礫の山の上で、誰かが言った。「中止になった今季——決勝だけでも、やらないか」。木槌の音が、一瞬止まった。それから、賛成の声が、四方から上がった。土俵は、試合へ戻ってきた。",
+      "text": "夕暮れ、瓦礫の山の上で、誰かが言った。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w22.node.line.011b",
+      "lineId": "main.s1.w22.line.011b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「決勝だけでも、やらないか」木槌の音が、一瞬止まった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w22.node.line.011c",
+      "lineId": "main.s1.w22.line.011c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "それから、賛成の声が、四方から上がった。土俵は、試合へ戻ってきた。",
       "emotion": "resolve"
     },
     {
@@ -141,23 +344,33 @@
         {
           "id": "main.s1.w22.choice.001",
           "label": "復興選手権の開催届を、うちが出す",
-          "result": "言い出しっぺの法則、というものがある。誰の主催でもないなら、うちが出す。開催届の主催者欄に、私は自分の名前を書いた。ノノさんが受理印を構えて、一拍置いた。「……この判、押したら、正式ですよ」。押してください。正式が、いちばん強いんでしょう。判の音は、木槌の音によく似ていた。街の再建と、興行の再開が、同じ音で進んでいく。",
+          "result": "言い出しっぺの法則。主催者欄に、自分の名前を書いた。ノノさんが一拍置く。「この判、押したら正式ですよ」押してください。正式が、いちばん強いので。",
           "intent": "誰のものでもない大会を、うちの名前で立てる",
           "promise": "興行の旗が立つ代わりに、成功も失敗も主催者のものになる",
           "memory": "復興選手権の主催者欄に、ミミの名前が入っている",
           "tone": "heroic",
-          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
           "goto": "main.s1.w22.node.end.001"
         },
         {
           "id": "main.s1.w22.choice.002",
           "label": "街の共同主催の形に整える",
-          "result": "旗は、みんなで持つ方が倒れにくい。開催届の主催者欄を「復興商店会・有志一同」とし、うちは事務局に回った。名を残さない代わりに、実務は全部うちだ。それでいい。判子と台帳は、私の得意分野である。共同主催の告知が貼り出された日、街のあちこちの店先に、手作りの協賛の札が下がり始めた。旗は、増えるほど強い。",
+          "result": "旗は、みんなで持つ方が倒れにくい。主催者欄は「復興商店会・有志一同」、うちは事務局に回った。判子と台帳は、得意分野だから。店先に、手作りの協賛札が増えていく。",
           "intent": "街全体の祭りとして、興行を立て直す",
           "promise": "支えが厚くなる代わりに、決定はいちいち合議になる",
           "memory": "店先の手作り協賛札が、少しずつ増えていく",
           "tone": "pragmatic",
-          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
           "goto": "main.s1.w22.node.end.001"
         }
       ]
@@ -171,7 +384,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "週22反転(11行)。回収=本人同意欄の空白(週3の学習の回収)+週19の異議書式+「書類不備」。三人帰還とライバル五人の横顔。「決勝だけでもやろう」で週23-26へ。",
+    "authorNote": "語り口V2・二行枠で改稿。週22反転(11行)。回収=本人同意欄の空白(週3の学習の回収)+週19の異議書式+「書類不備」。三人帰還とライバル五人の横顔。「決勝だけでもやろう」で週23-26へ。",
     "legacyGeneratedIds": false
   }
 }

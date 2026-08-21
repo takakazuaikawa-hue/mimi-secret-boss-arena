@@ -8,9 +8,20 @@
     "arcId": "main.stage1"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -22,6 +33,18 @@
         "kind": "background",
         "path": "/assets/story/bg-employee-cafeteria-day-v1.png",
         "alt": "避難所になった食堂の背景"
+      },
+      {
+        "id": "main.s1.w21.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
+      },
+      {
+        "id": "main.s1.w21.asset.sprite.mimi.smile",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-smile-v1.png",
+        "alt": "笑顔のミミ"
       }
     ]
   },
@@ -29,97 +52,226 @@
     {
       "type": "direction",
       "id": "main.s1.w21.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s1.w21.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s1.w21.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "direction",
       "id": "main.s1.w21.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.w21.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s1.w21.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
-      "id": "main.s1.w21.node.line.001",
-      "lineId": "main.s1.w21.line.001",
+      "id": "main.s1.w21.node.line.001a",
+      "lineId": "main.s1.w21.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "避難所の朝は、毛布と、味噌汁の匂いがする。半壊した闘技場は立ち入り禁止で、私の受付台は、瓦礫の下だ。",
+      "text": "避難所の朝は、毛布と、味噌汁の匂いがする。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w21.node.line.001b",
+      "lineId": "main.s1.w21.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "半壊した闘技場は、立ち入り禁止。私の受付台は、瓦礫の下だ。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s1.w21.node.line.002",
-      "lineId": "main.s1.w21.line.002",
+      "id": "main.s1.w21.node.line.002a",
+      "lineId": "main.s1.w21.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "チームは、遠くの収容施設にいる。面会の申請は「検討中」の判を押されて返ってきた。検討中。照会中の親戚だ。この会社の言葉は、待たせるときだけ豊かになる。"
+      "text": "チームは、遠くの収容施設にいる。面会の申請は、「検討中」の判を押されて返ってきた。"
     },
     {
       "type": "line",
-      "id": "main.s1.w21.node.line.003",
-      "lineId": "main.s1.w21.line.003",
+      "id": "main.s1.w21.node.line.002b",
+      "lineId": "main.s1.w21.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "世界は、救われた。街の人は毛布の列で笑い合っている。救った本人たちだけが、ここにいない。誰も悪気なく「よかったねえ」と言い、私はそのたび、うまく笑えなかった。",
+      "text": "検討中。この会社の言葉は、待たせるときだけ豊かになる。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w21.node.line.003a",
+      "lineId": "main.s1.w21.line.003a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "世界は、救われた。街の人は、毛布の列で笑い合っている。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w21.node.line.003b",
+      "lineId": "main.s1.w21.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "救った本人たちだけが、ここにいない。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w21.node.line.003c",
+      "lineId": "main.s1.w21.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "誰も悪気なく「よかったねえ」と言う。そのたび、うまく笑えなかった。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s1.w21.node.line.004",
-      "lineId": "main.s1.w21.line.004",
+      "id": "main.s1.w21.node.line.004a",
+      "lineId": "main.s1.w21.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "手帳を開いても、書くことがない。予定の欄が、白い。白い予定表というものが、こんなに重いとは知らなかった。",
+      "text": "手帳を開いても、書くことがない。予定の欄が、白い。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w21.node.line.004b",
+      "lineId": "main.s1.w21.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "白い予定表が、こんなに重いとは知らなかった。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s1.w21.node.line.005",
-      "lineId": "main.s1.w21.line.005",
+      "id": "main.s1.w21.node.line.005a",
+      "lineId": "main.s1.w21.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "マダムが、見舞いに来た。「宝くじ、また買ってきたわ。次は当てないでね」。的外れで、優しい。菓子折りは今回も八つ裂き大福で、避難所のどこかで初見の悲鳴が上がった。悲鳴のあと、少しだけ、場が明るくなった。",
+      "text": "マダムが、見舞いに来た。「宝くじ、また買ってきたわ。次は当てないでね」的外れで、優しい。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w21.node.line.005b",
+      "lineId": "main.s1.w21.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "菓子折りは、今回も八つ裂き大福だった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w21.node.line.005c",
+      "lineId": "main.s1.w21.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "避難所のどこかで悲鳴が上がって、少しだけ場が明るくなった。",
       "emotion": "comic"
     },
     {
+      "type": "direction",
+      "id": "main.s1.w21.node.direction.mimi.shift.006",
+      "command": {
+        "type": "show",
+        "assetId": "main.s1.w21.asset.sprite.mimi.smile",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
+    },
+    {
       "type": "line",
-      "id": "main.s1.w21.node.line.006",
-      "lineId": "main.s1.w21.line.006",
+      "id": "main.s1.w21.node.line.006a",
+      "lineId": "main.s1.w21.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "午後、ノノさんを見つけた。避難所の隅で、拾った板を組んで、小さな受付台を作っていた。「受付が無いと、困る人が出ますから」。この人は、世界が半分壊れても、正式なままだ。",
+      "text": "午後、ノノさんを見つけた。拾った板で、小さな受付台を作っていた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w21.node.line.006b",
+      "lineId": "main.s1.w21.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「受付が無いと、困る人が出ますから」この人は、世界が半分壊れても、正式なままだ。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s1.w21.node.line.007",
-      "lineId": "main.s1.w21.line.007",
+      "id": "main.s1.w21.node.line.007a",
+      "lineId": "main.s1.w21.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "炊き出しの列で、剣士さんの隣になった。彼は椀を受け取りながら、世間話の声で言った。「滅亡はの、毎回、誰かが立て直すんじゃよ」。",
+      "text": "炊き出しの列で、剣士さんの隣になった。椀を受け取りながら、世間話の声で言った。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w21.node.line.007b",
+      "lineId": "main.s1.w21.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「滅亡はの、毎回、誰かが立て直すんじゃよ」",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s1.w21.node.line.008",
-      "lineId": "main.s1.w21.line.008",
+      "id": "main.s1.w21.node.line.008a",
+      "lineId": "main.s1.w21.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「一度目は勇者が。二度目は王様が。三度目は——ふむ、忘れた。とにかく、誰かがやる」。そこで彼は椀をすすり、私を横目で見た。「……今回は、誰かのう」。",
+      "text": "「一度目は勇者が。二度目は王様が。三度目は——忘れた」"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w21.node.line.008b",
+      "lineId": "main.s1.w21.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「とにかく、誰かがやる」椀をすすり、横目で私を見た。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w21.node.line.008c",
+      "lineId": "main.s1.w21.line.008c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「……今回は、誰かのう」耳が、ぴくりと動いた。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s1.w21.node.line.009",
-      "lineId": "main.s1.w21.line.009",
+      "id": "main.s1.w21.node.line.009a",
+      "lineId": "main.s1.w21.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "誰か。私は椀の味噌汁を、ゆっくり飲み干した。白い予定表と、瓦礫の受付台と、収容施設の三人。やることの無い一週間の底で、やることの形が、ぼんやり見え始めていた。",
+      "text": "誰か。味噌汁を、ゆっくり飲み干した。白い予定表と、瓦礫の受付台と、収容施設の三人。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w21.node.line.009b",
+      "lineId": "main.s1.w21.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "やることの無い一週間の底で、やることの形が、ぼんやり見え始めていた。",
       "emotion": "resolve"
     },
     {
       "type": "effect",
       "id": "main.s1.w21.node.effect.001",
-      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+      "effects": [
+        {
+          "type": "sharedPoints",
+          "amount": 2
+        }
+      ]
     },
     {
       "type": "end",
@@ -130,7 +282,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "週21嘆き週(9行+選択)。笑いは大福悲鳴とマダムの的外れの優しさだけに絞る。剣士さんの「今回は、誰かのう」が反転の引き金。進捗の道標を置かなくてよい週(構成設計どおり)。選択肢は撤去(判断週ではないため)。",
+    "authorNote": "語り口V2・二行枠で改稿。週21嘆き週(9行+選択)。笑いは大福悲鳴とマダムの的外れの優しさだけに絞る。剣士さんの「今回は、誰かのう」が反転の引き金。進捗の道標を置かなくてよい週(構成設計どおり)。選択肢は撤去(判断週ではないため)。",
     "legacyGeneratedIds": false
   }
 }

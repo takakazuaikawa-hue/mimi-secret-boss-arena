@@ -8,9 +8,20 @@
     "arcId": "main.stage1"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -22,6 +33,18 @@
         "kind": "background",
         "path": "/assets/story/bg-observation-deck-night.png",
         "alt": "夜の展望デッキの背景"
+      },
+      {
+        "id": "main.s1.w25.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
+      },
+      {
+        "id": "main.s1.w25.asset.sprite.mimi.smile",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-smile-v1.png",
+        "alt": "笑顔のミミ"
       }
     ]
   },
@@ -29,115 +52,252 @@
     {
       "type": "direction",
       "id": "main.s1.w25.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s1.w25.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s1.w25.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "direction",
       "id": "main.s1.w25.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.w25.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s1.w25.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
-      "id": "main.s1.w25.node.line.001",
-      "lineId": "main.s1.w25.line.001",
+      "id": "main.s1.w25.node.line.001a",
+      "lineId": "main.s1.w25.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "決勝の前夜、街は祭りになった。復興した街の、最初の祭りでもある。提灯、屋台、揚げ物の湯気。滅亡から五週間の街とは、誰も思わないだろう。",
+      "text": "決勝の前夜、街は祭りになった。復興した街の、最初の祭り。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w25.node.line.001b",
+      "lineId": "main.s1.w25.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "提灯、屋台、揚げ物の湯気。滅亡から五週間の街とは、誰も思わないだろう。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s1.w25.node.line.002",
-      "lineId": "main.s1.w25.line.002",
+      "id": "main.s1.w25.node.line.002a",
+      "lineId": "main.s1.w25.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "うちの選手たちは、屋台を三軒完売させた。規格外の食欲に、屋台のおやじたちの悲鳴と万歳が同時に出る。明日の決勝の相手の話は、誰もしない。しないことで、全員が考えているのが分かる。"
+      "text": "うちの選手たちは、屋台を三軒、完売させた。"
     },
     {
       "type": "line",
-      "id": "main.s1.w25.node.line.003",
-      "lineId": "main.s1.w25.line.003",
+      "id": "main.s1.w25.node.line.002b",
+      "lineId": "main.s1.w25.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "決勝の相手、シャハル。空の王者。最古の竜。会場の上を一周した、あの翼の主だ。街の賭け札は、正直だった。倍率は、うちに厳しい。厳しいほど、燃える人たちの街でもある。",
+      "text": "規格外の食欲に、屋台のおやじたちの悲鳴と万歳が同時に出た。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w25.node.line.002c",
+      "lineId": "main.s1.w25.line.002c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "明日の相手の話は、誰もしない。しないことで、全員が考えているのが分かる。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w25.node.line.003a",
+      "lineId": "main.s1.w25.line.003a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "決勝の相手、シャハル。空の王者、最古の竜。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w25.node.line.003b",
+      "lineId": "main.s1.w25.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "会場の上を一周した、あの翼の主だ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w25.node.line.003c",
+      "lineId": "main.s1.w25.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "街の賭け札は、正直だった。倍率は、うちに厳しい。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s1.w25.node.line.004",
-      "lineId": "main.s1.w25.line.004",
+      "id": "main.s1.w25.node.line.004a",
+      "lineId": "main.s1.w25.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "宴の輪を少し外れて、展望デッキで夜風に当たった。手帳を開く。第一週からの頁を、ぱらぱらと戻る。一行ズレた判。三つの扉。希望欄。特訓。滅亡。復興。……よく来たものだ、ここまで。",
+      "text": "宴の輪を少し外れて、展望デッキで夜風に当たった。手帳を開く。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w25.node.line.004b",
+      "lineId": "main.s1.w25.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "第一週からの頁を、ぱらぱらと戻る。一行ズレた判、三つの扉、希望欄、特訓。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w25.node.line.004c",
+      "lineId": "main.s1.w25.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "滅亡、復興。……よく来たものだ、ここまで。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s1.w25.node.line.005",
-      "lineId": "main.s1.w25.line.005",
+      "id": "main.s1.w25.node.line.005a",
+      "lineId": "main.s1.w25.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "夜空の星が、一列、消えた。消えたのではなく——隠れたのだ。大きな翼の影に。風が、デッキの提灯を全部揺らして、それが、降りてきた。",
+      "text": "夜空の星が、一列、消えた。消えたんじゃない——隠れたのだ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w25.node.line.005b",
+      "lineId": "main.s1.w25.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "大きな翼の影に。風が、提灯を全部揺らして、それが降りてきた。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s1.w25.node.line.006",
-      "lineId": "main.s1.w25.line.006",
+      "id": "main.s1.w25.node.line.006a",
+      "lineId": "main.s1.w25.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "シャハル。間近で見る空の王者は、静かで、大きくて、夜そのものより夜だった。王者は名乗らなかった。私も、名乗らなかった。お互い、知っているからだ。",
+      "text": "シャハル。間近で見る空の王者は、静かで、大きくて、夜そのものより夜だった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w25.node.line.006b",
+      "lineId": "main.s1.w25.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "王者は名乗らず、私も名乗らなかった。お互い、知っているからだ。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s1.w25.node.line.007",
-      "lineId": "main.s1.w25.line.007",
+      "id": "main.s1.w25.node.line.007a",
+      "lineId": "main.s1.w25.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "王者は、ひとつだけ聞いた。「あなたのチームは——**何年、もちますか**」。",
+      "text": "王者は、ひとつだけ聞いた。「あなたのチームは——何年、もちますか」",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s1.w25.node.line.008",
-      "lineId": "main.s1.w25.line.008",
+      "id": "main.s1.w25.node.line.008a",
+      "lineId": "main.s1.w25.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "何年。竜の時間の単位だ。何千年を生きる王者が、できたばかりの、うちのちいさなチームに、年数を聞いている。馬鹿にする響きは、無かった。本当に、知りたい声だった。",
+      "text": "何年。竜の時間の単位だ。何千年を生きる王者が、できたばかりのチームに、年数を聞いている。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w25.node.line.008b",
+      "lineId": "main.s1.w25.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "馬鹿にする響きは、無かった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w25.node.line.008c",
+      "lineId": "main.s1.w25.line.008c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "本当に、知りたい声だった。耳が、思わず立った。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s1.w25.node.line.009",
-      "lineId": "main.s1.w25.line.009",
+      "id": "main.s1.w25.node.line.009a",
+      "lineId": "main.s1.w25.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
       "text": "私は、答えた。何と答えたかは——明日の試合で、見せることにする。",
       "emotion": "resolve"
     },
     {
+      "type": "direction",
+      "id": "main.s1.w25.node.direction.mimi.shift.010",
+      "command": {
+        "type": "show",
+        "assetId": "main.s1.w25.asset.sprite.mimi.smile",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
+    },
+    {
       "type": "line",
-      "id": "main.s1.w25.node.line.010",
-      "lineId": "main.s1.w25.line.010",
+      "id": "main.s1.w25.node.line.010a",
+      "lineId": "main.s1.w25.line.010a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "王者は翼を広げた。飛び立つ間際、独り言が夜風に残った。「……四百年ぶりです。**明日が楽しみで、眠れそうにないのは**」。星が、一列ずつ、戻ってくる。私は宴の輪へ走った。監督が寝不足では、話にならないからだ。",
+      "text": "王者は翼を広げた。飛び立つ間際、独り言が夜風に残った。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w25.node.line.010b",
+      "lineId": "main.s1.w25.line.010b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「……四百年ぶりです。明日が楽しみで、眠れそうにないのは」星が、一列ずつ、戻ってくる。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w25.node.line.010c",
+      "lineId": "main.s1.w25.line.010c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "監督が寝不足では、話にならない。私は、宴の輪へ走った。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s1.w25.node.line.011",
-      "lineId": "main.s1.w25.line.011",
+      "id": "main.s1.w25.node.line.011a",
+      "lineId": "main.s1.w25.line.011a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "宴へ戻って、明日の話をひとつだけした。「決勝の朝、全員で朝ごはんを食べましょう。まかないの、いつもの席で」。試合の話ではなく、朝食の話。大一番の前夜に要るのは、作戦より——明日も、いつも通りが続くという約束だ。",
+      "text": "明日も、いつも通りが続くという約束だ。",
       "emotion": "tender"
     },
     {
       "type": "effect",
       "id": "main.s1.w25.node.effect.001",
-      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+      "effects": [
+        {
+          "type": "sharedPoints",
+          "amount": 2
+        }
+      ]
     },
     {
       "type": "end",
@@ -148,7 +308,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "週25最大の山(10行)。シャハルの「何年もちますか」(登記ギャグ)を場外の一問として。ミミの答えは書かない(プレイヤーに答えさせる)。「四百年ぶり」が王者側の飢えを一行で。",
+    "authorNote": "語り口V2・二行枠で改稿。週25最大の山(10行)。シャハルの「何年もちますか」(登記ギャグ)を場外の一問として。ミミの答えは書かない(プレイヤーに答えさせる)。「四百年ぶり」が王者側の飢えを一行で。",
     "legacyGeneratedIds": false
   }
 }

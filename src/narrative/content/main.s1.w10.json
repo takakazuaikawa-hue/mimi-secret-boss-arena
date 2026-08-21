@@ -8,9 +8,20 @@
     "arcId": "main.stage1"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -22,6 +33,18 @@
         "kind": "background",
         "path": "/assets/story/bg-arena-reception.png",
         "alt": "闘技場の正面受付の背景"
+      },
+      {
+        "id": "main.s1.w10.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
+      },
+      {
+        "id": "main.s1.w10.asset.sprite.mimi.smile",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-smile-v1.png",
+        "alt": "笑顔のミミ"
       }
     ]
   },
@@ -29,100 +52,248 @@
     {
       "type": "direction",
       "id": "main.s1.w10.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s1.w10.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s1.w10.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "direction",
       "id": "main.s1.w10.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.w10.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s1.w10.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
-      "id": "main.s1.w10.node.line.001",
-      "lineId": "main.s1.w10.line.001",
+      "id": "main.s1.w10.node.line.001a",
+      "lineId": "main.s1.w10.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "朝の掲示板前で、それを見た。よそのチームの監督さんが、配達人から封筒を受け取っている。黒い、角封筒。角がぴんと立って、封に赤い蝋。",
+      "text": "朝の掲示板前で、それを見た。よそのチームの監督さんが、封筒を受け取っている。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w10.node.line.001b",
+      "lineId": "main.s1.w10.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "黒い、角封筒。角がぴんと立って、赤い蝋。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s1.w10.node.line.002",
-      "lineId": "main.s1.w10.line.002",
+      "id": "main.s1.w10.node.line.002a",
+      "lineId": "main.s1.w10.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "受け取った監督さんの顔から、順番に色が引いていくのが、遠目にも分かった。周りの人たちが、すっと目をそらす。そらし方が、慣れていた。"
+      "text": "受け取った監督さんの顔から、色が引いていく。"
     },
     {
       "type": "line",
-      "id": "main.s1.w10.node.line.003",
-      "lineId": "main.s1.w10.line.003",
+      "id": "main.s1.w10.node.line.002b",
+      "lineId": "main.s1.w10.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ノノさんが、小声で言った。「あれが来たら、大体——選手が、いなくなるんです」。いなくなる? 回収? 移籍? 聞き返す前に、ノノさんは仕事の顔に戻ってしまった。受付の人が仕事の顔に戻るのは、聞くな、の合図である。",
+      "text": "周りの人たちが、すっと目をそらした。そらし方が、妙に慣れていた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w10.node.line.003a",
+      "lineId": "main.s1.w10.line.003a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ノノさんが、小声で言った。「あれが来たら、大体――選手が、いなくなるんです」いなくなる?"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w10.node.line.003b",
+      "lineId": "main.s1.w10.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": " 回収? 移籍? 耳が、ぴくっと立った。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w10.node.line.003c",
+      "lineId": "main.s1.w10.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "聞き返す前に、ノノさんは仕事の顔に戻った。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w10.node.line.003d",
+      "lineId": "main.s1.w10.line.003d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……この顔は、聞くなの合図。もう、知ってる。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s1.w10.node.line.004",
-      "lineId": "main.s1.w10.line.004",
+      "id": "main.s1.w10.node.line.004a",
+      "lineId": "main.s1.w10.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "かわりに、うちの郵便受けを、全員でそっと確認しに行った。白い封筒が、一通だけ。全員の息が、そろって漏れた。安堵のため息は、種族が違っても同じ音がするらしい。",
+      "text": "かわりに、うちの郵便受けを確認しに行った。白い封筒が、一通だけ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w10.node.line.004b",
+      "lineId": "main.s1.w10.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "全員の息が、そっと漏れた。安堵のため息って、種族が違っても、同じ音がするんですね。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s1.w10.node.line.005",
-      "lineId": "main.s1.w10.line.005",
+      "id": "main.s1.w10.node.line.005a",
+      "lineId": "main.s1.w10.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "白い封筒の中身は、「資産価値予備調査のお知らせ」。読める字しか書いていないのに、意味の分からない文書というものが、世の中にはある。",
+      "text": "白い封筒の中身は「資産価値予備調査のお知らせ」読める字しか、書いていない。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w10.node.line.005b",
+      "lineId": "main.s1.w10.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "なのに、意味だけ、まるで分からない。不思議な紙も、あるんですね。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s1.w10.node.line.006",
-      "lineId": "main.s1.w10.line.006",
+      "id": "main.s1.w10.node.line.006a",
+      "lineId": "main.s1.w10.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ノノさんに見せると、めずらしく眉が困った形になった。「会社が、おたくの帳簿を見に来ます、というお知らせです。最上級ですから……注目されてるんですね」。",
+      "text": "ノノさんに見せると、眉が、困った形になった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w10.node.line.006b",
+      "lineId": "main.s1.w10.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「会社が、おたくの帳簿を見に来ます、というお知らせです」"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w10.node.line.006c",
+      "lineId": "main.s1.w10.line.006c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「最上級ですから……注目、されてるんですね」",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s1.w10.node.line.007",
-      "lineId": "main.s1.w10.line.007",
+      "id": "main.s1.w10.node.line.007a",
+      "lineId": "main.s1.w10.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "帳簿なら見せられる。うちの帳簿は、希望欄が自慢だ。そう言うと、ノノさんは少しだけ笑って——それから、笑いを引っ込めた。「会社が見るのは、たぶん、希望欄じゃないです」。",
+      "text": "帳簿なら、見せられます。うちの自慢は、希望欄ですから。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w10.node.line.007b",
+      "lineId": "main.s1.w10.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "そう言うと、ノノさんが少しだけ笑って――それから、笑いを引っ込めた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w10.node.line.007c",
+      "lineId": "main.s1.w10.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「会社が見るのは……たぶん、希望欄じゃないです」",
       "emotion": "revelation"
     },
     {
+      "type": "direction",
+      "id": "main.s1.w10.node.direction.mimi.shift.008",
+      "command": {
+        "type": "show",
+        "assetId": "main.s1.w10.asset.sprite.mimi.smile",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
+    },
+    {
       "type": "line",
-      "id": "main.s1.w10.node.line.008",
-      "lineId": "main.s1.w10.line.008",
+      "id": "main.s1.w10.node.line.008a",
+      "lineId": "main.s1.w10.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "じゃあ、何を見るのか。答えの代わりに、掲示板の向こうを、黒い封筒の監督さんが、うつむいて歩いていった。誰も、声をかけなかった。かけない街なのではなく、かけられない朝なのだと思う。",
+      "text": "じゃあ、何を見るんですか。答えの代わりに、掲示板の向こうを、あの監督さんが歩いていく。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w10.node.line.008b",
+      "lineId": "main.s1.w10.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "うつむいたまま。誰も、声をかけなかった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w10.node.line.008c",
+      "lineId": "main.s1.w10.line.008c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "かけない街じゃない。かけられない朝、なんだと思う。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s1.w10.node.line.009",
-      "lineId": "main.s1.w10.line.009",
+      "id": "main.s1.w10.node.line.009a",
+      "lineId": "main.s1.w10.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "午後は、普通に働いた。判を押して、行列を捌いて、まかないを食べた。普通に働けることが、今日はなんだか、ありがたかった。",
+      "text": "午後は、普通に働いた。判を押して、行列を捌いた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w10.node.line.009b",
+      "lineId": "main.s1.w10.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "まかないも、いつも通り食べた。普通に働けるのって、今日はなんだか、ありがたい。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s1.w10.node.line.010",
-      "lineId": "main.s1.w10.line.010",
+      "id": "main.s1.w10.node.line.010a",
+      "lineId": "main.s1.w10.line.010a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "締めの前、手帳の負債の頁をもう一度開いた。数字は、変わらない。変わらない数字の下に、私は小さく書き足した。「希望欄は、渡さない」。",
+      "text": "締めの前、手帳の負債の頁を、もう一度開いた。数字は、変わらない。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w10.node.line.010b",
+      "lineId": "main.s1.w10.line.010b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "その下に、小さく書き足した。「希望欄は、渡さない」",
       "emotion": "resolve"
     },
     {
@@ -132,23 +303,33 @@
         {
           "id": "main.s1.w10.choice.001",
           "label": "調査の日程を、こちらから指定する",
-          "result": "受け身は性に合わない。「予備調査、うちは今週でも結構です」と返信を書いた。ノノさんが目を丸くする。「日程を指定したミミさん、初めて見ました」。指定したところで、見られる帳簿は同じだ。それでも、待つのと迎えるのとでは、姿勢が違う。返信の控えを手帳に挟むと、隣の頁の「希望欄は、渡さない」が、少しだけ頼もしく見えた。",
+          "result": "受け身は、性に合わない。「今週でも結構です」と返信を書いた。ノノさんが目を丸くする。「日程を指定したミミさん、初めてです」……なんだか、ちょっと誇らしい。",
           "intent": "見られる側ではなく、迎える側に立つ",
           "promise": "主導権の形が残る代わりに、準備の時間は短くなる",
           "memory": "日程を指定してきた監督、として会社側に記録が残る",
           "tone": "defiant",
-          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
           "goto": "main.s1.w10.node.end.001"
         },
         {
           "id": "main.s1.w10.choice.002",
           "label": "調査の前に、帳簿を磨き上げる",
-          "result": "その夜から、帳簿の大掃除を始めた。数字の突き合わせ、控えの整理、頁の順番。事務は、私の庭である。磨き上がった帳簿は、我ながら美しかった。ノノさんが感嘆した。「これ、受付の見本にしたいです」。どうぞ。見られて困る帳簿より、見せたくなる帳簿の方が、きっと強い。負債の数字は変わらないが、並べ方は変えられる。",
+          "result": "その夜から、帳簿の大掃除。数字の突き合わせ、控えの整理。事務は、私の庭だ。磨き上がった帳簿、我ながら美しい。ノノさんが「受付の見本にしたいです」と……えへへ、どうぞ。数字は変わらないが、並べ方は変えられる。",
           "intent": "見られる前提で、足元を固める",
           "promise": "帳簿に隙が無くなる代わりに、数字そのものは変わらない",
           "memory": "見本になった帳簿の評判が、受付から静かに広がる",
           "tone": "pragmatic",
-          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
           "goto": "main.s1.w10.node.end.001"
         }
       ]
@@ -162,7 +343,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "週10(10行)。中心対立のリマインダー。黒角封筒は遠景一度だけ(キャラ個別の危機の書式と共通)。仕組み学習=会社と資産管理の目線の存在。白封筒=事務段階の区別。",
+    "authorNote": "語り口V2・二行枠で改稿。週10(10行)。中心対立のリマインダー。黒角封筒は遠景一度だけ(キャラ個別の危機の書式と共通)。仕組み学習=会社と資産管理の目線の存在。白封筒=事務段階の区別。",
     "legacyGeneratedIds": false
   }
 }

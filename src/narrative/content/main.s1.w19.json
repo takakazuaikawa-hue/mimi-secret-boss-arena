@@ -8,9 +8,20 @@
     "arcId": "main.stage1"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -22,6 +33,18 @@
         "kind": "background",
         "path": "/assets/story/bg-employee-cafeteria-day-v1.png",
         "alt": "従業員食堂の背景"
+      },
+      {
+        "id": "main.s1.w19.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
+      },
+      {
+        "id": "main.s1.w19.asset.sprite.mimi.confused",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-confused-v1.png",
+        "alt": "困惑するミミ"
       }
     ]
   },
@@ -29,115 +52,276 @@
     {
       "type": "direction",
       "id": "main.s1.w19.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s1.w19.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s1.w19.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "direction",
       "id": "main.s1.w19.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.w19.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s1.w19.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
-      "id": "main.s1.w19.node.line.001",
-      "lineId": "main.s1.w19.line.001",
+      "id": "main.s1.w19.node.line.001a",
+      "lineId": "main.s1.w19.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "読破合宿は、食堂に移った。理由は単純で、まかないに近いからだ。読む係、要約する係、疑う係、そして食べる係(全員が兼任)。",
+      "text": "読破合宿、今日から食堂で決行。理由はまかないに近いから。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w19.node.line.001b",
+      "lineId": "main.s1.w19.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "読む係、疑う係、それと食べる係。全員、兼任です。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s1.w19.node.line.002",
-      "lineId": "main.s1.w19.line.002",
+      "id": "main.s1.w19.node.line.002a",
+      "lineId": "main.s1.w19.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "規格外の読書風景は、いちいち規格外だった。頁をめくる風圧で要約の紙が飛び、白熱した議論で湯呑みが三回沸騰した。食堂のおばちゃんは動じない。「昔から、揉め事はここでやるんだよ」。"
+      "text": "頁をめくる風で、紙が飛んだ。湯呑みも三回、沸騰した。"
     },
     {
       "type": "line",
-      "id": "main.s1.w19.node.line.003",
-      "lineId": "main.s1.w19.line.003",
+      "id": "main.s1.w19.node.line.002b",
+      "lineId": "main.s1.w19.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "会社案の弱点は、少しずつ見えてきた。「推奨」には拒否権がある。「任命」には同意がいる。だが、どれも決定打ではない。会社は、拒否されたら次の手を出せる側だ。こちらには、盤面をひっくり返す一枚が要る。",
+      "text": "食堂のおばちゃんは動じない。「昔から、揉め事はここでやるんだよ」"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w19.node.line.003a",
+      "lineId": "main.s1.w19.line.003a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "会社案の弱点が、少しずつ見えてきた。「推奨」には拒否権、「任命」には同意がいる。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w19.node.line.003b",
+      "lineId": "main.s1.w19.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "でも、決定打じゃない。拒否されても会社は次の手を出せる。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w19.node.line.003c",
+      "lineId": "main.s1.w19.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "こっちには、ひっくり返す一枚が要る。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s1.w19.node.line.004",
-      "lineId": "main.s1.w19.line.004",
+      "id": "main.s1.w19.node.line.004a",
+      "lineId": "main.s1.w19.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "窓の外では、街が所有者グランプリの支度を始めていた。会社主催の大会。勝者には「編成裁量の保全」。つまり会社は、試合の場まで用意して、そこで決めようと言っている。……用意された土俵、というのが引っかかる。",
+      "text": "窓の外、街は所有者グランプリの支度。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w19.node.line.004b",
+      "lineId": "main.s1.w19.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "勝てば「編成裁量の保全」つまり、試合の場まで会社が用意して、そこで決めろと言っている。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w19.node.line.004c",
+      "lineId": "main.s1.w19.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……用意された土俵。そこが、ちょっと引っかかる。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s1.w19.node.line.005",
-      "lineId": "main.s1.w19.line.005",
+      "id": "main.s1.w19.node.line.005a",
+      "lineId": "main.s1.w19.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "三日目の夜、古い版を読んでいた選手が、ふいに手を止めた。「……ミミさん。これを」。差し出された頁は茶色く、手書きの字が並んでいた。",
+      "text": "三日目の夜、選手の一人が、ふいに手を止めた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w19.node.line.005b",
+      "lineId": "main.s1.w19.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「……ミミさん。これを」差し出された頁は茶色くて、手書きの字が並んでいた。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s1.w19.node.line.006",
-      "lineId": "main.s1.w19.line.006",
+      "id": "main.s1.w19.node.line.006a",
+      "lineId": "main.s1.w19.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「選手は、自らの物語の上演について、異議を申し立てる権利を有する」。——上演。試合、ではなく。物語の、上演。",
+      "text": "「選手は、自らの物語の上演について異議を申し立てる権利を有する」上演。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w19.node.line.006b",
+      "lineId": "main.s1.w19.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "試合じゃなくて、上演。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.w19.node.direction.mimi.shift.007",
+      "command": {
+        "type": "show",
+        "assetId": "main.s1.w19.asset.sprite.mimi.confused",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w19.node.line.007a",
+      "lineId": "main.s1.w19.line.007a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "妙な言葉選び。耳が、ぴこん、と傾いた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w19.node.line.007b",
+      "lineId": "main.s1.w19.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "闘技場の規定なのに、上演と書いてある。書いた人は、舞台だと思ってたのかな。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w19.node.line.007c",
+      "lineId": "main.s1.w19.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "気になるけど、今は使い道が先。この一条は、選手本人の権利。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w19.node.line.007d",
+      "lineId": "main.s1.w19.line.007d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "会社が何を決めても、本人が異議を出せる。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s1.w19.node.line.007",
-      "lineId": "main.s1.w19.line.007",
+      "id": "main.s1.w19.node.line.008a",
+      "lineId": "main.s1.w19.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "妙な言葉選びだ。闘技場の規定なのに、試合と書かず、上演と書いてある。書いた人は、この場所を——舞台だと、思っていたのだろうか。疑問は湧いたが、今は使い道が先だ。この一条は、選手本人の権利。会社が何を決めようと、本人が異議を出せる。",
+      "text": "ノノさんが写しを取り、条番号を確かめた。現行版と突き合わせる。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w19.node.line.008b",
+      "lineId": "main.s1.w19.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「削除されていません。忘れられているだけです」消されていない規定は、生きている規定。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s1.w19.node.line.008",
-      "lineId": "main.s1.w19.line.008",
+      "id": "main.s1.w19.node.line.009a",
+      "lineId": "main.s1.w19.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ノノさんが写しを取り、条番号を確かめ、現行版と突き合わせた。「現行版では……削除されていません。**忘れられているだけ**です」。削除されていない規定は、生きている規定である。",
-      "emotion": "revelation"
+      "text": "食堂に、静かな熱がこもった。誰も万歳はしない。"
     },
     {
       "type": "line",
-      "id": "main.s1.w19.node.line.009",
-      "lineId": "main.s1.w19.line.009",
+      "id": "main.s1.w19.node.line.009b",
+      "lineId": "main.s1.w19.line.009b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "食堂に、静かな熱が満ちた。誰も万歳はしなかった。かわりに、全員がもう一度、自分の巻に戻った。武器は一つ見つかった。二つ目を探す顔で。",
+      "text": "かわりに、全員がまた自分の巻に戻った。武器はひとつ、見つかった。",
       "emotion": "resolve"
     },
     {
       "type": "line",
-      "id": "main.s1.w19.node.line.010",
-      "lineId": "main.s1.w19.line.010",
+      "id": "main.s1.w19.node.line.010a",
+      "lineId": "main.s1.w19.line.010a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "その夜のうちに、ノノさんと書式を起こした。古い一条を根拠にした、異議申立の様式。申立人の欄は空欄のまま——書くのは、本人たちだ。仕上がりを眺めて、ノノさんが言った。「美しい書式です。会社のより、美しいです」。",
+      "text": "その夜、ノノさんと書式を起こした。古い一条を根拠にした異議申立の様式。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w19.node.line.010b",
+      "lineId": "main.s1.w19.line.010b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "申立人の欄は、空欄のまま。書くのは、本人たち。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w19.node.line.010c",
+      "lineId": "main.s1.w19.line.010c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "仕上がりを眺めて、ノノさんが言った。「美しい書式です。会社のより、美しいです」",
       "emotion": "resolve"
     },
     {
       "type": "line",
-      "id": "main.s1.w19.node.line.011",
-      "lineId": "main.s1.w19.line.011",
+      "id": "main.s1.w19.node.line.011a",
+      "lineId": "main.s1.w19.line.011a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "解散間際、ノノさんがカレンダーに丸を付けた。回答期限まで、あと一週間。丸の隣の週が、所有者グランプリ。——決戦の週まで、あと少し。",
+      "text": "解散間際、ノノさんがカレンダーに丸を付けた。回答期限まで、あと一週間。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w19.node.line.011b",
+      "lineId": "main.s1.w19.line.011b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "丸の隣の週は、所有者グランプリ。決戦まで、あと少し。",
       "emotion": "tension"
     },
     {
       "type": "effect",
       "id": "main.s1.w19.node.effect.001",
-      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+      "effects": [
+        {
+          "type": "sharedPoints",
+          "amount": 2
+        }
+      ]
     },
     {
       "type": "end",
@@ -148,7 +332,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "週19(10行)。仕組み学習=規定という武器(削除されていない=生きている)。「上演」の一語がQ1/Q3への遠い糸(趣意書の先触れ)。回答期限とグランプリの時計を明示。週22の書式伏線。",
+    "authorNote": "語り口V2・二行枠で改稿。週19(10行)。仕組み学習=規定という武器(削除されていない=生きている)。「上演」の一語がQ1/Q3への遠い糸(趣意書の先触れ)。回答期限とグランプリの時計を明示。週22の書式伏線。",
     "legacyGeneratedIds": false
   }
 }

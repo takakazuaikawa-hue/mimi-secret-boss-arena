@@ -8,9 +8,20 @@
     "arcId": "main.stage1"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -22,6 +33,18 @@
         "kind": "background",
         "path": "/assets/story/bg-fountain-plaza-day-v1.png",
         "alt": "謝酒祭の噴水広場の背景"
+      },
+      {
+        "id": "main.s1.w17.asset.sprite.mimi.tsukkomi",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-tsukkomi-v1.png",
+        "alt": "驚いてツッコミを入れるミミ"
+      },
+      {
+        "id": "main.s1.w17.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
       }
     ]
   },
@@ -29,106 +52,267 @@
     {
       "type": "direction",
       "id": "main.s1.w17.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s1.w17.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s1.w17.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "direction",
       "id": "main.s1.w17.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.w17.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s1.w17.asset.sprite.mimi.tsukkomi",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
-      "id": "main.s1.w17.node.line.001",
-      "lineId": "main.s1.w17.line.001",
+      "id": "main.s1.w17.node.line.001a",
+      "lineId": "main.s1.w17.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "その週、街は朝から、ほんのり酒の匂いがした。謝酒祭——一年お世話になった酒に、街をあげて感謝する祭りだそうだ。噴水から、うっすら発泡している何かが出ている。",
+      "text": "朝から、街が酒くさい。謝酒祭——酒へ感謝する祭りだそうだ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w17.node.line.001b",
+      "lineId": "main.s1.w17.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "噴水から、うっすら発泡した何かが出ている。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s1.w17.node.line.002",
-      "lineId": "main.s1.w17.line.002",
+      "id": "main.s1.w17.node.line.002a",
+      "lineId": "main.s1.w17.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "よりによって、その週に、査定官が来た。白い手袋、値札の束。「資産価値査定を開始します。通常業務をお続けください」。通常業務が、今週は祭りなのですが。"
+      "text": "よりによって、その週に、査定官が来た。白い手袋、値札の束。"
     },
     {
       "type": "line",
-      "id": "main.s1.w17.node.line.003",
-      "lineId": "main.s1.w17.line.003",
+      "id": "main.s1.w17.node.line.002b",
+      "lineId": "main.s1.w17.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "七世界の酒が、広場に並んでいた。竜の火酒(注ぐと燃える。それが正解)、幽霊の気化酒(飲まずに浴びる)、海の塩酒(つまみが要らない)。乾杯の作法だけで、回覧板が三枚出ている。",
+      "text": "「資産価値査定を開始。通常業務をお続けください」……今週は、祭りなんですが。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w17.node.line.003a",
+      "lineId": "main.s1.w17.line.003a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "七世界の酒が、広場に並ぶ。竜の火酒——注ぐと燃えるのが、正解。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w17.node.line.003b",
+      "lineId": "main.s1.w17.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "幽霊の気化酒は、飲まずに浴びる。海の塩酒は、つまみが要らない。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w17.node.line.003c",
+      "lineId": "main.s1.w17.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "乾杯の作法だけで、回覧板が三枚も出ている。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s1.w17.node.line.004",
-      "lineId": "main.s1.w17.line.004",
+      "id": "main.s1.w17.node.line.004a",
+      "lineId": "main.s1.w17.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "査定官は、職務に忠実だった。祭りの中を歩きながら、目に映る全部に値札を付けていく。うちの中古の備品に、思ったより高い値。特訓場の壁の亀裂に、マイナスの値。私の監督指示には——「声掛け: 〇円(無形資産・評価不能)」。紙に書かれると、微妙に傷つく。",
+      "text": "査定官は職務に忠実だった。目に映る全部に、値札を付けていく。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w17.node.line.004b",
+      "lineId": "main.s1.w17.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "うちの備品に、高値。特訓場の壁の亀裂に、マイナス。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w17.node.line.004c",
+      "lineId": "main.s1.w17.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私の監督指示には「声掛け:〇円」耳が、ちょっと下がった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w17.node.line.004d",
+      "lineId": "main.s1.w17.line.004d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "紙に値段を書かれると、地味に傷つく。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s1.w17.node.line.005",
-      "lineId": "main.s1.w17.line.005",
+      "id": "main.s1.w17.node.line.005a",
+      "lineId": "main.s1.w17.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "事件は、火酒の屋台で起きた。竜のお客様が、査定官に一杯すすめたのだ。「感謝の杯を断るのは、この祭りでは決闘の申し込みじゃぞ」。査定官は職務の顔のまま、飲んだ。飲んでしまった。",
+      "text": "事件は、火酒の屋台で起きた。竜のお客様が、査定官に一杯すすめた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w17.node.line.005b",
+      "lineId": "main.s1.w17.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「感謝の杯を断るのは、この祭りでは決闘の申し込みじゃぞ」査定官は、職務の顔のまま飲んだ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w17.node.line.005c",
+      "lineId": "main.s1.w17.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……飲んでしまった。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s1.w17.node.line.006",
-      "lineId": "main.s1.w17.line.006",
+      "id": "main.s1.w17.node.line.006a",
+      "lineId": "main.s1.w17.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "三十分後。査定官の値札が、おかしくなり始めた。焼きとうもろこしに「プライスレス」。夕焼けに「評価不能(良い意味で)」。そして選手たちの特訓風景を長いこと眺めて、ぽつり。「……いい職場ですね、ここ」。",
-      "emotion": "comic"
-    },
-    {
-      "type": "line",
-      "id": "main.s1.w17.node.line.007",
-      "lineId": "main.s1.w17.line.007",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "本音というものは、気化酒みたいに漏れる。査定官は、うちの希望欄の束を(酔った勢いで)最後まで読み、読み終えて、手袋の甲で目元を押さえた。「こういう帳簿は……査定項目に、無いんですよ」。無いなら、作ってください。二度目のお願いである。",
+      "text": "ぽつり「……いい職場ですね、ここ」",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s1.w17.node.line.008",
-      "lineId": "main.s1.w17.line.008",
+      "id": "main.s1.w17.node.line.007a",
+      "lineId": "main.s1.w17.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "翌朝、酔いの醒めた査定官は、完璧な職務の顔に戻っていた。結論の欄に判を押して、帰っていった。「当チームは、資産としての管理を推奨する」。——祭りの夜の本音と、朝の判は、別の生き物らしい。",
+      "text": "本音は、気化酒みたいに漏れるものらしい。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w17.node.line.007b",
+      "lineId": "main.s1.w17.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "査定官は希望欄の束を(酔った勢いで)最後まで読み、目元を押さえた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w17.node.line.007c",
+      "lineId": "main.s1.w17.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「こういう帳簿は、査定項目に、無いんですよ」無いなら、作ってください。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w17.node.line.007d",
+      "lineId": "main.s1.w17.line.007d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "二度目の、お願いだった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.w17.node.direction.mimi.shift.008",
+      "command": {
+        "type": "show",
+        "assetId": "main.s1.w17.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w17.node.line.008a",
+      "lineId": "main.s1.w17.line.008a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "翌朝、酔いの醒めた査定官は、完璧な職務顔に戻っていた。結論欄に判を押して、帰っていった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w17.node.line.008b",
+      "lineId": "main.s1.w17.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「当チームは、資産としての管理を推奨する」祭りの夜の本音と、朝の判は、別の生き物らしい。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s1.w17.node.line.009",
-      "lineId": "main.s1.w17.line.009",
+      "id": "main.s1.w17.node.line.009a",
+      "lineId": "main.s1.w17.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "写しを預かったノノさんが、静かに言った。「推奨は、命令の一歩手前の言葉です。……次は、たぶん、案が来ます」。祭りの後片付けの音の中で、その一言だけ、温度が低かった。",
+      "text": "「推奨は、命令の一歩手前の言葉です。次は、たぶん、案が来ます」"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w17.node.line.009b",
+      "lineId": "main.s1.w17.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "後片付けの音の中、その一言だけ、温度が低かった。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s1.w17.node.line.010",
-      "lineId": "main.s1.w17.line.010",
+      "id": "main.s1.w17.node.line.010a",
+      "lineId": "main.s1.w17.line.010a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "その夜、控室の値札を全部はがして回った。はがした値札は束にして、帳場の引き出しへ。人と道具の値段は、付けるのも外すのも、うちで決める。——ただ一枚、「プライスレス」の値札だけは、焼きとうもろこしの屋台のおやじが記念に持ち帰った。",
+      "text": "その夜、控室の値札を、全部はがして回った。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w17.node.line.010b",
+      "lineId": "main.s1.w17.line.010b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "人と道具の値段は、付けるのも外すのも、うちで決める。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w17.node.line.010c",
+      "lineId": "main.s1.w17.line.010c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ただ一枚「プライスレス」の札だけ、屋台のおやじが記念に持ち帰った。",
       "emotion": "resolve"
     },
     {
       "type": "effect",
       "id": "main.s1.w17.node.effect.001",
-      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+      "effects": [
+        {
+          "type": "sharedPoints",
+          "amount": 2
+        }
+      ]
     },
     {
       "type": "end",
@@ -139,7 +323,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "週17(10行・選択肢なし)。祭事=謝酒祭(ユーザー提案2026-08-14)を査定週に重ねる。査定官の酔いの本音と朝の判の落差で、会社=悪人ではなく制度である描写。学習=会社の目線。「推奨は命令の一歩手前」で週18へ。",
+    "authorNote": "語り口V2・二行枠で改稿。週17(10行・選択肢なし)。祭事=謝酒祭(ユーザー提案2026-08-14)を査定週に重ねる。査定官の酔いの本音と朝の判の落差で、会社=悪人ではなく制度である描写。学習=会社の目線。「推奨は命令の一歩手前」で週18へ。",
     "legacyGeneratedIds": false
   }
 }

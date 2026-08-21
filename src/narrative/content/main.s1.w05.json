@@ -8,9 +8,20 @@
     "arcId": "main.stage1"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -22,6 +33,18 @@
         "kind": "background",
         "path": "/assets/story/bg-hot-spring-ryokan.png",
         "alt": "温泉旅館の門前の背景"
+      },
+      {
+        "id": "main.s1.w05.asset.sprite.mimi.confused",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-confused-v1.png",
+        "alt": "困惑するミミ"
+      },
+      {
+        "id": "main.s1.w05.asset.sprite.mimi.smile",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-smile-v1.png",
+        "alt": "笑顔のミミ"
       }
     ]
   },
@@ -29,115 +52,300 @@
     {
       "type": "direction",
       "id": "main.s1.w05.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s1.w05.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s1.w05.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "direction",
       "id": "main.s1.w05.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.w05.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s1.w05.asset.sprite.mimi.confused",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
-      "id": "main.s1.w05.node.line.001",
-      "lineId": "main.s1.w05.line.001",
+      "id": "main.s1.w05.node.line.001a",
+      "lineId": "main.s1.w05.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "山道のバスは、硫黄の匂いが先に来た。膝の上に、大会の白い封筒。隣の席から通路まで、うちの選手がぎゅうぎゅうに詰まっている。",
+      "text": "山道のバス、硫黄の匂いが先に来る。膝の上に、大会の白い封筒。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w05.node.line.001b",
+      "lineId": "main.s1.w05.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "隣の席から通路まで、うちの選手がぎゅうぎゅう。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s1.w05.node.line.002",
-      "lineId": "main.s1.w05.line.002",
+      "id": "main.s1.w05.node.line.002a",
+      "lineId": "main.s1.w05.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "行き先は温泉旅館「鏡見の湯」。賞品として、あるいは商店会の押し切りとして、旅は決まった。今日の目標はひとつだけ。仕事を、忘れる。"
+      "text": "行き先は温泉旅館「鏡見の湯」だ。賞品として、あるいは商店会の押し切りで旅は決まった。"
     },
     {
       "type": "line",
-      "id": "main.s1.w05.node.line.003",
-      "lineId": "main.s1.w05.line.003",
+      "id": "main.s1.w05.node.line.002b",
+      "lineId": "main.s1.w05.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "忘れさせてくれなかった。出発直前、速達が私を追いかけてきたのだ。差出人、闘技場計測室。「貴チームの測定値、計測上限を超過。規定により、ランクを最上級へ訂正します」。",
+      "text": "今日の目標はひとつ。仕事を、忘れる。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w05.node.line.003a",
+      "lineId": "main.s1.w05.line.003a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "忘れさせてくれなかった。出発直前、速達が私を追いかけてきた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w05.node.line.003b",
+      "lineId": "main.s1.w05.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "差出人、闘技場計測室。「貴チームの測定値、計測上限を超過」"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w05.node.line.003c",
+      "lineId": "main.s1.w05.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「規定により、ランクを最上級へ訂正します」",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s1.w05.node.line.004",
-      "lineId": "main.s1.w05.line.004",
+      "id": "main.s1.w05.node.line.004a",
+      "lineId": "main.s1.w05.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "最上級。同封のランク表を見る。銅、鉄、銀、金、竜金——そして最上級。普通は一段ずつ、何年もかけて上がる階段らしい。うちは初戦で、七段飛ばした。",
+      "text": "最上級。同封のランク表を見る。銅、鉄、銀、金、竜金——そして最上級。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w05.node.line.004b",
+      "lineId": "main.s1.w05.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "普通は一段ずつ、何年もかけて上がる階段らしい。うちは初戦で、七段飛ばした。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s1.w05.node.line.005",
-      "lineId": "main.s1.w05.line.005",
+      "id": "main.s1.w05.node.line.005a",
+      "lineId": "main.s1.w05.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "バスの中で、回し読みが始まった。選手たちは妙に嬉しそうだ。「最上級」「ほう、最上級」「ふふ。最上級」。単語の響きだけで三回楽しめる人たちである。私だけが、要項の「義務」の頁を探していた。",
+      "text": "バスの中で、回し読みが始まった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w05.node.line.005b",
+      "lineId": "main.s1.w05.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "選手たちは妙に嬉しそう。「最上級」"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w05.node.line.005c",
+      "lineId": "main.s1.w05.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「ほう、最上級」「ふふ。最上級」響きだけで三回楽しめる人たち。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w05.node.line.005d",
+      "lineId": "main.s1.w05.line.005d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私だけ、要項の「義務」の頁を探してた。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s1.w05.node.line.006",
-      "lineId": "main.s1.w05.line.006",
+      "id": "main.s1.w05.node.line.006a",
+      "lineId": "main.s1.w05.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "同封の選手証は顔写真入りで、つやつやの金縁だった。派遣の名札より立派な身分証を、私は人生で初めて持った。持ちたかった形とは、ちょっと違う。",
+      "text": "同封の選手証は顔写真入り、つやつやの金縁だった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w05.node.line.006b",
+      "lineId": "main.s1.w05.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "派遣の名札より立派な身分証、人生で初めて持った。持ちたかった形とは、ちょっと違う。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s1.w05.node.line.007",
-      "lineId": "main.s1.w05.line.007",
+      "id": "main.s1.w05.node.line.007a",
+      "lineId": "main.s1.w05.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "車窓が山に変わる頃、気づいた。この速達、宛名が「監督 ミミ様」だ。暫定でも、代理でもなく。誰かの書き間違いだ。書き間違いのはずなのに、封筒を、捨てられない。",
+      "text": "車窓が山に変わる頃、気づいた。この速達、宛名が「監督 ミミ様」とある。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w05.node.line.007b",
+      "lineId": "main.s1.w05.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "暫定でも、代理でもなく。誰かの書き間違いのはず。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w05.node.line.007c",
+      "lineId": "main.s1.w05.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "なのに、封筒を捨てられない。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s1.w05.node.line.008",
-      "lineId": "main.s1.w05.line.008",
+      "id": "main.s1.w05.node.line.008a",
+      "lineId": "main.s1.w05.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "隣の席から、ひょいと封筒を覗かれた。「監督、と書いてあるな」「見ないでください」「事実ではないか」「事実じゃないんです、まだ」。——まだ、と言ってから、まだって何だ、と自分で思った。",
+      "text": "隣の席から、ひょいと封筒を覗かれた。「監督、と書いてあるな」"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w05.node.line.008b",
+      "lineId": "main.s1.w05.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「見ないでください」「事実ではないか」耳が、かあっと熱くなった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w05.node.line.008c",
+      "lineId": "main.s1.w05.line.008c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「事実じゃないんです、まだ」……まだ? 自分で言って、自分でつまずいた。",
       "emotion": "comic"
     },
     {
+      "type": "direction",
+      "id": "main.s1.w05.node.direction.mimi.shift.009",
+      "command": {
+        "type": "show",
+        "assetId": "main.s1.w05.asset.sprite.mimi.smile",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
+    },
+    {
       "type": "line",
-      "id": "main.s1.w05.node.line.009",
-      "lineId": "main.s1.w05.line.009",
+      "id": "main.s1.w05.node.line.009a",
+      "lineId": "main.s1.w05.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "宿が見えた。谷あいに灯り、湯気が立っている。門前の効能書きに、大きな筆文字。「すべての疲れに効く」。すべて。……名義の疲れにも、効くだろうか。",
+      "text": "宿が見えた。谷あいに灯り、湯気が立ってる。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w05.node.line.009b",
+      "lineId": "main.s1.w05.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "門前の効能書き、大きな筆文字。「すべての疲れに効く」すべて。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w05.node.line.009c",
+      "lineId": "main.s1.w05.line.009c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……名義の疲れにも、効くだろうか。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s1.w05.node.line.010",
-      "lineId": "main.s1.w05.line.010",
+      "id": "main.s1.w05.node.line.010a",
+      "lineId": "main.s1.w05.line.010a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "バスを降りると、山の空気が冷たくて、湯の匂いが濃かった。肩の力が、勝手に抜けていく。今日はもう、手帳を開かない。開かないったら、開かない。",
+      "text": "バスを降りると、山の空気が冷たい。湯の匂いが濃い。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w05.node.line.010b",
+      "lineId": "main.s1.w05.line.010b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "肩の力が、勝手に抜けていく。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w05.node.line.010c",
+      "lineId": "main.s1.w05.line.010c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "今日はもう、手帳を開かない。開かないったら、開かない。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s1.w05.node.line.011",
-      "lineId": "main.s1.w05.line.011",
+      "id": "main.s1.w05.node.line.011a",
+      "lineId": "main.s1.w05.line.011a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "暖簾の前で、仲居さんが深々と頭を下げた。「お待ちしておりました——最上級の皆さま。お布団、上等なのに替えておきました。最上級ですので」。……もう知られているし、ランクで布団が変わる宿だった。",
+      "text": "暖簾の前で、仲居さんが深々と頭を下げた。「お待ちしておりました——最上級の皆さま」"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w05.node.line.011b",
+      "lineId": "main.s1.w05.line.011b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「お布団、上等なのに替えておきました」「最上級ですので」"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w05.node.line.011c",
+      "lineId": "main.s1.w05.line.011c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……もう知られてる。ランクで布団が変わる宿だった。",
       "emotion": "tension"
     },
     {
       "type": "effect",
       "id": "main.s1.w05.node.effect.001",
-      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+      "effects": [
+        {
+          "type": "sharedPoints",
+          "amount": 2
+        }
+      ]
     },
     {
       "type": "end",
@@ -148,7 +356,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "週5(増量版11行)。仕組み学習=ランクの階段と七段飛ばしの異常。宿の中は既存温泉イベントの領分のため暖簾の前で切る。引き=恥の予兆(もう知られている)。選択肢は撤去(判断週ではないため)。",
+    "authorNote": "語り口V2・二行枠で改稿。週5(増量版11行)。仕組み学習=ランクの階段と七段飛ばしの異常。宿の中は既存温泉イベントの領分のため暖簾の前で切る。引き=恥の予兆(もう知られている)。選択肢は撤去(判断週ではないため)。",
     "legacyGeneratedIds": false
   }
 }

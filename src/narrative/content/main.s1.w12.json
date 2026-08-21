@@ -8,9 +8,20 @@
     "arcId": "main.stage1"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -22,6 +33,18 @@
         "kind": "background",
         "path": "/assets/arena-daylight.png",
         "alt": "大会当日の闘技場の背景"
+      },
+      {
+        "id": "main.s1.w12.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
+      },
+      {
+        "id": "main.s1.w12.asset.sprite.mimi.smile",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-smile-v1.png",
+        "alt": "笑顔のミミ"
       }
     ]
   },
@@ -29,110 +52,228 @@
     {
       "type": "direction",
       "id": "main.s1.w12.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s1.w12.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s1.w12.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "direction",
       "id": "main.s1.w12.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.w12.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s1.w12.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
-      "id": "main.s1.w12.node.line.001",
-      "lineId": "main.s1.w12.line.001",
+      "id": "main.s1.w12.node.line.001a",
+      "lineId": "main.s1.w12.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "契約者リーグの朝、受付に呼び出された。うちの選手一名の出場資格に、異議が付いたという。異議申立書は、見たことのない美しさの書式だった。",
+      "text": "契約者リーグの朝、受付に呼び出された。うちの選手一名の出場資格に、異議が付いたという。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w12.node.line.001b",
+      "lineId": "main.s1.w12.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "異議申立書は、見たことのない美しさの書式だった。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s1.w12.node.line.002",
-      "lineId": "main.s1.w12.line.002",
+      "id": "main.s1.w12.node.line.002a",
+      "lineId": "main.s1.w12.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "申立人の欄には、判事の署名。ノノさんが息を呑んだ。「アマラ判事です。……何でも開廷する方です」。何でも、とは。"
+      "text": "申立人の欄には、判事の署名。ノノさんが、息を呑んだ。"
     },
     {
       "type": "line",
-      "id": "main.s1.w12.node.line.003",
-      "lineId": "main.s1.w12.line.003",
+      "id": "main.s1.w12.node.line.002b",
+      "lineId": "main.s1.w12.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "何でも、だった。会場に着くと、砂場の真ん中に裁判官席が組まれていて、銅鑼の代わりに小槌が置かれていた。本日の一戦は、審理として執り行われるらしい。観客席は満員である。この街、裁判も興行なのだ。",
+      "text": "「アマラ判事です……何でも開廷する方です」何でも、とは。耳が、ぴくっと傾いた。",
+      "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w12.node.line.003a",
+      "lineId": "main.s1.w12.line.003a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "何でも、だった。会場に着くと、砂場の真ん中に裁判官席。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w12.node.line.003b",
+      "lineId": "main.s1.w12.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "銅鑼の代わりに、小槌が置かれていた。本日の一戦は、審理として執り行われるらしい。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w12.node.line.003c",
+      "lineId": "main.s1.w12.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "観客席は、満員。この街、裁判まで興行なんですね。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s1.w12.node.line.004",
-      "lineId": "main.s1.w12.line.004",
+      "id": "main.s1.w12.node.line.004a",
+      "lineId": "main.s1.w12.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「開廷します」。よく通る声だった。「本件、出場資格の確認。資格は、書類ではなく、試合内容で証明していただきます」。書類ではなく、試合で。つまり、勝てばいいのか。聞くと、小槌がこつんと鳴った。「勝ち負けではありません。中身です」。",
+      "text": "「勝ち負けではありません。中身です」",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s1.w12.node.line.005",
-      "lineId": "main.s1.w12.line.005",
+      "id": "main.s1.w12.node.line.005a",
+      "lineId": "main.s1.w12.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "審理の冒頭、アマラ判事は過去の試合記録の束をめくった。うちの初戦からの、全部だ。めくり終えて、眼鏡の位置を直し、一言。「……興味深い記録ですね」。",
+      "text": "審理の冒頭、アマラ判事は過去の試合記録の束をめくった。うちの初戦からの、全部だ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w12.node.line.005b",
+      "lineId": "main.s1.w12.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "めくり終えて、眼鏡の位置を直し、一言。「……興味深い記録ですね」",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s1.w12.node.line.006",
-      "lineId": "main.s1.w12.line.006",
+      "id": "main.s1.w12.node.line.006a",
+      "lineId": "main.s1.w12.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「あなたのチーム、全員が——**全力を封じたまま**、勝とうとしていますね」。",
+      "text": "「あなたのチーム、全員が――**全力を封じたまま**――勝とうとしていますね」",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s1.w12.node.line.007",
-      "lineId": "main.s1.w12.line.007",
+      "id": "main.s1.w12.node.line.007a",
+      "lineId": "main.s1.w12.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "封じたまま。振り返ると、うちの三人が、そろって目をそらした。目をそらすのが、答えだった。計測器の上限を超える人たちが、まだ、上限のこちら側で戦っていたなんて。",
-      "emotion": "revelation"
+      "text": "封じたまま。振り返ると、うちの三人が、そろって目をそらした。"
     },
     {
       "type": "line",
-      "id": "main.s1.w12.node.line.008",
-      "lineId": "main.s1.w12.line.008",
+      "id": "main.s1.w12.node.line.007b",
+      "lineId": "main.s1.w12.line.007b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「会場が壊れるからです」と、誰かが小さく言った。「加減を、しているんです。ずっと」。——加減。四百年ぶんの、加減。",
+      "text": "目をそらすのが、答えだった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w12.node.line.007c",
+      "lineId": "main.s1.w12.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "計測器の上限を超える人たちが……まだ、上限のこちら側で戦っていたなんて。",
+      "emotion": "revelation"
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.w12.node.direction.mimi.shift.008",
+      "command": {
+        "type": "show",
+        "assetId": "main.s1.w12.asset.sprite.mimi.smile",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w12.node.line.008a",
+      "lineId": "main.s1.w12.line.008a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「会場が壊れるからです」と、誰かが小さく言った。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w12.node.line.008b",
+      "lineId": "main.s1.w12.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「加減を、しているんです。ずっと」――加減。四百年ぶんの、加減。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s1.w12.node.line.009",
-      "lineId": "main.s1.w12.line.009",
+      "id": "main.s1.w12.node.line.009a",
+      "lineId": "main.s1.w12.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "アマラ判事は、それ以上追及しなかった。かわりに小槌を一度鳴らして、宣した。「では、審理を始めましょう。あなたたちの中身を、本法廷は見せていただきます」。",
+      "text": "アマラ判事は、それ以上追及しなかった。かわりに小槌を一度鳴らして、宣した。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w12.node.line.009b",
+      "lineId": "main.s1.w12.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「では、審理を始めましょう。あなたたちの中身を、本法廷は見せていただきます」",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s1.w12.node.line.010",
-      "lineId": "main.s1.w12.line.010",
+      "id": "main.s1.w12.node.line.010a",
+      "lineId": "main.s1.w12.line.010a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "みなさん。資格は、私が証明します。いつもどおり——いえ、いつもより少しだけ、正直にいきましょう。",
+      "text": "みなさん、資格は私が証明します。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w12.node.line.010b",
+      "lineId": "main.s1.w12.line.010b",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "いつもどおり、じゃなくて、いつもより少しだけ、正直にいきましょう。",
       "emotion": "resolve"
     },
     {
       "type": "line",
-      "id": "main.s1.w12.node.line.011",
-      "lineId": "main.s1.w12.line.011",
+      "id": "main.s1.w12.node.line.011a",
+      "lineId": "main.s1.w12.line.011a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "入場口の札が裏返る。法廷仕立ての砂場へ、うちの三人が歩き出す。傍聴席のノノさんが、そっと拳を握るのが見えた。",
+      "text": "入場口の札が、裏返る。法廷仕立ての砂場へ、うちの三人が歩き出す。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w12.node.line.011b",
+      "lineId": "main.s1.w12.line.011b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "傍聴席のノノさんが、そっと拳を握るのが見えた。",
       "emotion": "tension"
     },
     {
@@ -142,23 +283,33 @@
         {
           "id": "main.s1.w12.choice.001",
           "label": "審理の場で、加減のことを正直に述べる",
-          "result": "「うちの選手は、加減をしています。会場と、相手と、この街を壊さないためです」。傍聴席がざわめいた。アマラ判事は小槌を鳴らして静粛を求め、それから、ほんの少しだけ口元を緩めた。「正直は、本法廷でいちばん強い証拠です」。審理は続く。だが風向きは、もう変わっていた。加減は、隠すものではなく、誇るものとして記録された。",
+          "result": "「うちの選手は、加減をしています。会場と相手を、壊さないためです」傍聴席がざわめいた。判事が小槌を鳴らし、ふっと口元を緩める。「正直は、本法廷でいちばん強い証拠です」加減は、恥じゃなく、誇りとして記録された。",
           "intent": "チームの秘密を、恥ではなく事実として出す",
           "promise": "法廷の心証を得る代わりに、加減の存在が公知になる",
           "memory": "「加減は誇るもの」という審理記録が残った",
           "tone": "heroic",
-          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
           "goto": "main.s1.w12.node.end.001"
         },
         {
           "id": "main.s1.w12.choice.002",
           "label": "中身は試合で見せます、とだけ答える",
-          "result": "「言葉より、試合でご覧ください」。アマラ判事は眼鏡の奥で目を細め、「結構」と小槌を鳴らした。法廷は言葉の場所だが、闘技場は違う。うちの三人は、いつもより丁寧に、いつもより一歩深く踏み込んで戦った。封を解かないまま、封の内側の熱を見せる戦い方。審理記録の末尾に、判事の手書きが一行残った。「続きが見たい」。",
+          "result": "「言葉より、試合でご覧ください」判事が目を細め、「結構」と小槌を鳴らす。うちの三人は、いつもより一歩深く踏み込んで戦った。封を解かないまま、内側の熱だけを見せる戦い方。記録の末尾に、判事の手書きが一行。「続きが見たい」",
           "intent": "言葉ではなく、試合の中身で証明する",
           "promise": "チームの誇りを守る代わりに、判事の宿題を背負う",
           "memory": "審理記録の「続きが見たい」の一行が残っている",
           "tone": "defiant",
-          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
           "goto": "main.s1.w12.node.end.001"
         }
       ]
@@ -172,7 +323,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "週12大会週(11行)。ライバル=アマラ(登記ギャグ: 何でも開廷)。「全力を封じたまま」の指摘=週13封印解放アークの起点。加減の理由(会場が壊れる)は事情の入口だけ。内面は個別の領分。",
+    "authorNote": "語り口V2・二行枠で改稿。週12大会週(11行)。ライバル=アマラ(登記ギャグ: 何でも開廷)。「全力を封じたまま」の指摘=週13封印解放アークの起点。加減の理由(会場が壊れる)は事情の入口だけ。内面は個別の領分。",
     "legacyGeneratedIds": false
   }
 }

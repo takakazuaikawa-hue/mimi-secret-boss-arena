@@ -8,9 +8,20 @@
     "arcId": "main.stage1"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -22,6 +33,18 @@
         "kind": "background",
         "path": "/assets/arena-daylight.png",
         "alt": "決勝当日の闘技場の背景"
+      },
+      {
+        "id": "main.s1.w26.asset.sprite.mimi.smile",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-smile-v1.png",
+        "alt": "笑顔のミミ"
+      },
+      {
+        "id": "main.s1.w26.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
       }
     ]
   },
@@ -29,110 +52,259 @@
     {
       "type": "direction",
       "id": "main.s1.w26.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s1.w26.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s1.w26.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "direction",
       "id": "main.s1.w26.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.w26.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s1.w26.asset.sprite.mimi.smile",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
-      "id": "main.s1.w26.node.line.001",
-      "lineId": "main.s1.w26.line.001",
+      "id": "main.s1.w26.node.line.001a",
+      "lineId": "main.s1.w26.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "決勝の朝は、まかないの匂いで始まった。約束どおり、いつもの席で、全員で朝ごはん。三人はよく食べ、私は緊張で、味噌汁を三杯飲んだ。いつも通りが、いちばん強い。",
+      "text": "決勝の朝は、まかないの匂いで始まった。約束どおり、いつもの席で。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w26.node.line.001b",
+      "lineId": "main.s1.w26.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "三人はよく食べ、私は緊張で、味噌汁を三杯飲んだ。いつも通りが、いちばん強い。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s1.w26.node.line.002",
-      "lineId": "main.s1.w26.line.002",
+      "id": "main.s1.w26.node.line.002a",
+      "lineId": "main.s1.w26.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "闘技場は、こけら落とし以来という満員だった。瓦礫を積み直した壁の席まで、人と竜と幽霊でぎっしり。趣意書の額の前には、写しを求める行列ができている。"
+      "text": "闘技場は、こけら落とし以来という満員だった。"
     },
     {
       "type": "line",
-      "id": "main.s1.w26.node.line.003",
-      "lineId": "main.s1.w26.line.003",
+      "id": "main.s1.w26.node.line.002b",
+      "lineId": "main.s1.w26.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "客席に、知った顔が全部あった。マダム、計測係くん、仲居さん、遺失物窓口のお姉さん、三本目の剣のおじいさん(膝に剣)。最前列には白ひげの剣士さん。腰の剣が——今日は、高く、澄んだ音で鳴っていた。",
+      "text": "瓦礫を積み直した壁の席まで、人と竜と幽霊でぎっしり。趣意書の額の前には行列。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w26.node.line.003a",
+      "lineId": "main.s1.w26.line.003a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "客席に、知った顔が全部あった。マダム、計測係くん、仲居さん。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w26.node.line.003b",
+      "lineId": "main.s1.w26.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "遺失物窓口のお姉さん、三本目の剣のおじいさん。最前列には、白ひげの剣士さん。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w26.node.line.003c",
+      "lineId": "main.s1.w26.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "腰の剣が——今日は、高く、澄んだ音で鳴っていた。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s1.w26.node.line.004",
-      "lineId": "main.s1.w26.line.004",
+      "id": "main.s1.w26.node.line.004a",
+      "lineId": "main.s1.w26.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ライバルたちも来ていた。泡文字が空中に「けっしょう 100てんを みにきた」。満点は出さない海が、満点を口にした。闇は照明係を買って出て、法廷の人は「本日は傍聴です」と最上段に座った。",
+      "text": "ライバルたちも来ていた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w26.node.line.004b",
+      "lineId": "main.s1.w26.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "泡文字が空中に「けっしょう 100てんを みにきた」満点は出さない海が、満点を口にした。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w26.node.line.004c",
+      "lineId": "main.s1.w26.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "闇は照明係を買って出て、法廷の人は「本日は傍聴です」と最上段に座った。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s1.w26.node.line.005",
-      "lineId": "main.s1.w26.line.005",
+      "id": "main.s1.w26.node.line.005a",
+      "lineId": "main.s1.w26.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "会社の観覧席にも、席札が出ていた。「物語資産管理部」。今日は、視察の顔ぶれが多い。構わない。見たいなら、見ていけばいい。うちの帳簿も、うちの全力も、磨き上げてある。",
+      "text": "会社の観覧席にも、席札が出ていた。「物語資産管理部」今日は、視察の顔ぶれが多い。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w26.node.line.005b",
+      "lineId": "main.s1.w26.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "見たいなら、見ていけばいい。うちの帳簿も、うちの全力も、磨き上げてある。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s1.w26.node.line.006",
-      "lineId": "main.s1.w26.line.006",
+      "id": "main.s1.w26.node.line.006a",
+      "lineId": "main.s1.w26.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "空が、翳った。翼だ。シャハルが、会場の真上でゆっくり旋回して、砂場の向こう側に降りた。着地の風で、場内の旗が一斉に鳴る。四百年、眠れないほど楽しみにされた決勝が、いま、形になった。",
-      "emotion": "tension"
+      "text": "空が、翳った。翼だ。シャハルが、会場の真上でゆっくり旋回して、砂場の向こうへ降りた。"
     },
     {
       "type": "line",
-      "id": "main.s1.w26.node.line.007",
-      "lineId": "main.s1.w26.line.007",
+      "id": "main.s1.w26.node.line.006b",
+      "lineId": "main.s1.w26.line.006b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "控室で、最後の確認をした。合図はひとつ。解くのは、見せるため。壊すためじゃない。三人は頷いて、それぞれの封を、そっと撫でた。四百年の自制が、今日は誇りの形をしている。",
+      "text": "着地の風で、旗が一斉に鳴る。四百年、待たれた決勝が、いま形になった。",
+      "emotion": "tension"
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.w26.node.direction.mimi.shift.007",
+      "command": {
+        "type": "show",
+        "assetId": "main.s1.w26.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w26.node.line.007a",
+      "lineId": "main.s1.w26.line.007a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "控室で、最後の確認をした。合図はひとつ、解くのは見せるため。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w26.node.line.007b",
+      "lineId": "main.s1.w26.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "壊すためじゃない。三人は頷いて、封を、そっと撫でた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w26.node.line.007c",
+      "lineId": "main.s1.w26.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "四百年の自制が、今日は誇りの形をしている。",
       "emotion": "resolve"
     },
     {
       "type": "line",
-      "id": "main.s1.w26.node.line.008",
-      "lineId": "main.s1.w26.line.008",
+      "id": "main.s1.w26.node.line.008a",
+      "lineId": "main.s1.w26.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ガヤ氏の声が、割れんばかりに響いた。「復興選手権、決勝! 空の王者に挑むは——この街の、続きを作った者たち!」。言い直しの無い、まっすぐな前説だった。",
+      "text": "「空の王者に挑むは——この街の、続きを作った者たち!」言い直しの無い、まっすぐな前説だった。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s1.w26.node.line.009",
-      "lineId": "main.s1.w26.line.009",
+      "id": "main.s1.w26.node.line.009a",
+      "lineId": "main.s1.w26.line.009a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "ゆうべの問いに、お答えします。うちのチームは——何年でも。続きが、ある限り!",
+      "text": "ゆうべの問いに、お答えします。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w26.node.line.009b",
+      "lineId": "main.s1.w26.line.009b",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "うちのチームは——何年でも。続きが、ある限り!",
       "emotion": "resolve"
     },
     {
       "type": "line",
-      "id": "main.s1.w26.node.line.010",
-      "lineId": "main.s1.w26.line.010",
+      "id": "main.s1.w26.node.line.010a",
+      "lineId": "main.s1.w26.line.010a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "砂場の向こうで、王者の目が細くなった。笑ったのだと、分かった。入場口の札が裏返る。第一週、一行ズレた判から始まった二十六週の、いちばん先の光へ——うちの三人が、歩き出す。",
+      "text": "砂場の向こうで、王者の目が細くなった。笑ったのだと、分かった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w26.node.line.010b",
+      "lineId": "main.s1.w26.line.010b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "入場口の札が裏返る。二十六週の、いちばん先の光へ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w26.node.line.010c",
+      "lineId": "main.s1.w26.line.010c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "うちの三人が、歩き出す。耳が、誇らしげに、ぴんと立っていた。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s1.w26.node.line.011",
-      "lineId": "main.s1.w26.line.011",
+      "id": "main.s1.w26.node.line.011a",
+      "lineId": "main.s1.w26.line.011a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "監督席に立つ。深呼吸、ひとつ。フロア長の立ち方、腹から出す声、育つ手帳。私がこの街で覚えた全部を、この一戦に持ってきた。——さあ、決勝を、始めましょう。",
+      "text": "監督席に立つ。深呼吸、ひとつ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w26.node.line.011b",
+      "lineId": "main.s1.w26.line.011b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "フロア長の立ち方、腹から出す声、育つ手帳。この街で覚えた全部を、持ってきた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w26.node.line.011c",
+      "lineId": "main.s1.w26.line.011c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……ちょっと、緊張する。でも——さあ、決勝を、始めましょう。",
       "emotion": "resolve"
     },
     {
@@ -142,23 +314,33 @@
         {
           "id": "main.s1.w26.choice.001",
           "label": "最初の指示は「楽しんで!」",
-          "result": "監督としての最初の号令は、作戦ではなかった。「楽しんで!」。三人が、そろって笑うのが背中で分かった。四百年ぶりに全力を出せる相手と、全力を観たい満員の客席と、全力を許す監督。そろうものが全部そろった砂場で、楽しむなというほうが無理である。王者の翼が大きく開き、場内の歓声が、屋根を持ち上げるかと思った。",
+          "result": "最初の号令は、作戦じゃなかった。「楽しんで!」三人が、そろって笑うのが背中で分かった。全部そろった砂場で、楽しむなというほうが無理だ。王者の翼が、大きく開いた。",
           "intent": "この決勝を、全員の祝祭として開ける",
           "promise": "全員が最高の顔で戦える代わりに、監督の作戦は後回しになる",
           "memory": "決勝の第一声「楽しんで!」が、この街の語り草になる",
           "tone": "wild",
-          "effects": [{ "type": "sharedPoints", "amount": 3 }],
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 3
+            }
+          ],
           "goto": "main.s1.w26.node.end.001"
         },
         {
           "id": "main.s1.w26.choice.002",
           "label": "最初の指示は「いつも通り!」",
-          "result": "「いつも通り!」。決勝だからと、特別なことは何もしない。朝ごはんを食べて、合図を確かめて、いつもの並びで立つ。それがうちの二十六週で作った型だ。王者を前に平常運転のチームを見て、客席がかえってどよめいた。「あれは、強い者の顔だ」と、最前列の剣士さんが呟いたのが、あとで実況に拾われていた。",
+          "result": "「いつも通り!」決勝だからと、特別なことは何もしない。いつもの並びで立つ。客席がかえってどよめいた。「あれは、強い者の顔だ」と、剣士さんが呟いた。",
           "intent": "二十六週で作った型を、そのまま出す",
           "promise": "崩れない戦いができる代わりに、爆発力は流れ次第になる",
           "memory": "「いつも通り」で王者に向かった決勝が、記録に残る",
           "tone": "pragmatic",
-          "effects": [{ "type": "sharedPoints", "amount": 3 }],
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 3
+            }
+          ],
           "goto": "main.s1.w26.node.end.001"
         }
       ]
@@ -172,7 +354,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "週26決勝(11行)。全登場人物の客席集結(週1〜25の回収)。剣の音が「高く澄んだ音」=週1の対。ミミの答え=「何年でも。続きがある限り」。試合とエピローグ/エンディング三段は実装側(台本エンディング設計)。",
+    "authorNote": "語り口V2・二行枠で改稿。週26決勝(11行)。全登場人物の客席集結(週1〜25の回収)。剣の音が「高く澄んだ音」=週1の対。ミミの答え=「何年でも。続きがある限り」。試合とエピローグ/エンディング三段は実装側(台本エンディング設計)。",
     "legacyGeneratedIds": false
   }
 }

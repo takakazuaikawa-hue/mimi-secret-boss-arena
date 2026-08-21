@@ -8,9 +8,20 @@
     "arcId": "main.stage1"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -22,6 +33,18 @@
         "kind": "background",
         "path": "/assets/story/bg-casino-cafe-night.png",
         "alt": "夜のカジノカフェの背景"
+      },
+      {
+        "id": "main.s1.w16.asset.sprite.mimi.tsukkomi",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-tsukkomi-v1.png",
+        "alt": "驚いてツッコミを入れるミミ"
+      },
+      {
+        "id": "main.s1.w16.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
       }
     ]
   },
@@ -29,88 +52,244 @@
     {
       "type": "direction",
       "id": "main.s1.w16.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s1.w16.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s1.w16.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "direction",
       "id": "main.s1.w16.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.w16.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s1.w16.asset.sprite.mimi.tsukkomi",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
-      "id": "main.s1.w16.node.line.001",
-      "lineId": "main.s1.w16.line.001",
+      "id": "main.s1.w16.node.line.001a",
+      "lineId": "main.s1.w16.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "黄金ジャックポット杯は、夜に開く大会だ。集合場所のカジノカフェには、揚げたてのポテトと、興奮した客の匂い。今夜は資金の懸かった、賭け興行である。",
+      "text": "黄金ジャックポット杯。夜だけの、特別な大会。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w16.node.line.001b",
+      "lineId": "main.s1.w16.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "集合場所は、カジノカフェ。揚げたてポテトの匂いがした。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w16.node.line.001c",
+      "lineId": "main.s1.w16.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "お客さんの熱気も、ぎゅうぎゅう。今夜は、お金の懸かった試合。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s1.w16.node.line.002",
-      "lineId": "main.s1.w16.line.002",
+      "id": "main.s1.w16.node.line.002a",
+      "lineId": "main.s1.w16.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "賭け興行の仕組みを、ノノさんが窓口で教えてくれた。「観客が試合に賭けて、動いたお金の一部が、賞金の山になります。だから盛り上がる試合ほど、賞金が育つんです」。つまり今夜は、面白さが直接お金になる夜だ。"
+      "text": "賭け興行の仕組み、ノノさんが窓口で教えてくれた。"
     },
     {
       "type": "line",
-      "id": "main.s1.w16.node.line.003",
-      "lineId": "main.s1.w16.line.003",
+      "id": "main.s1.w16.node.line.002b",
+      "lineId": "main.s1.w16.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "相手は「夜を食べるもの」。名前のとおりの存在で、会場へ向かう道すがら、街灯の明かりが一列ずつ、ぱくりぱくりと消えていった。食べられているのだ、夜が。",
+      "text": "「観客が賭けて、動いたお金の一部が、賞金になります」"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w16.node.line.002c",
+      "lineId": "main.s1.w16.line.002c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「盛り上がるほど、賞金が育つ」今夜は、面白さがお金になる夜らしい。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w16.node.line.003a",
+      "lineId": "main.s1.w16.line.003a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "相手は「夜を食べるもの」名前まんまの、存在だった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w16.node.line.003b",
+      "lineId": "main.s1.w16.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "会場へ向かう道、街灯が一列ずつ、ぱくり、消えていく。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w16.node.line.003c",
+      "lineId": "main.s1.w16.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "食べられている。夜が。……見た目より、正直な相手。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s1.w16.node.line.004",
-      "lineId": "main.s1.w16.line.004",
+      "id": "main.s1.w16.node.line.004a",
+      "lineId": "main.s1.w16.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "暗がりから、批評の声がした。「この街灯、出汁が浅い。星二つ」。……食べた上に、採点している。闇の主の食レポは、設備に厳しい。",
+      "text": "暗がりから、批評の声がした。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w16.node.line.004b",
+      "lineId": "main.s1.w16.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「この街灯、出汁が浅い。星二つ」食べた上に、採点している。闇の主、厳しい。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s1.w16.node.line.005",
-      "lineId": "main.s1.w16.line.005",
+      "id": "main.s1.w16.node.line.005a",
+      "lineId": "main.s1.w16.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "控室で、最後の調整をした。特訓の成果——封印を「手首まで」解く練習の、初の実戦前リハーサル。合図を出す。一人目、成功。二人目、成功。三人目で——暴発した。",
+      "text": "たぶん、大丈夫。控室で、最後の調整。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w16.node.line.005b",
+      "lineId": "main.s1.w16.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "封印を「手首まで」解く練習。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w16.node.line.005c",
+      "lineId": "main.s1.w16.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "実戦前、初のリハーサル。合図で、一人目が成功。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w16.node.line.005d",
+      "lineId": "main.s1.w16.line.005d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "二人目も、成功。……三人目で、暴発した。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s1.w16.node.line.006",
-      "lineId": "main.s1.w16.line.006",
+      "id": "main.s1.w16.node.line.006a",
+      "lineId": "main.s1.w16.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "控室の照明が全部割れて、扉が廊下の向こうまで飛んだ。幸い、けが人はゼロ。真っ暗になった控室で、誰かが言った。「……半分だけ解く方が、難しいな」。全開より、半開が難しい。封印とは、そういうものらしい。",
+      "text": "照明が全部割れて、扉が廊下の向こうまで飛んだ。けが人はゼロ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w16.node.line.006b",
+      "lineId": "main.s1.w16.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "暗闇の中、誰かの声「半分だけ解く方が、難しいな」全開より、半開の方が難しいらしい。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w16.node.line.006c",
+      "lineId": "main.s1.w16.line.006c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "封印って、変な生き物。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s1.w16.node.line.007",
-      "lineId": "main.s1.w16.line.007",
+      "id": "main.s1.w16.node.line.007a",
+      "lineId": "main.s1.w16.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "暗闇の向こうから、拍手が一つ聞こえた。夜を食べるものだった。「今の暴発、コクがあった。星四つ」。敵に褒められた。複雑だが、悪い気はしない。",
-      "emotion": "comic"
+      "text": "暗闇の向こうから、拍手が一つ。夜を食べるものだった。"
     },
     {
       "type": "line",
-      "id": "main.s1.w16.node.line.008",
-      "lineId": "main.s1.w16.line.008",
+      "id": "main.s1.w16.node.line.007b",
+      "lineId": "main.s1.w16.line.007b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "入場前、会社の観覧席が目に入った。今夜は席札が出ている。「物語資産管理部」。予備調査の、本隊のお出ましらしい。帳簿は磨いてある。希望欄は、渡さない。",
+      "text": "「今の暴発、コクがあった。星四つ」敵に、褒められた。耳が、ちょっと立った。",
+      "emotion": "comic"
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.w16.node.direction.mimi.shift.008",
+      "command": {
+        "type": "show",
+        "assetId": "main.s1.w16.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w16.node.line.008a",
+      "lineId": "main.s1.w16.line.008a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "入場前、観覧席が目に入った。今夜は、席札付き。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w16.node.line.008b",
+      "lineId": "main.s1.w16.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「物語資産管理部」予備調査の、本隊らしい。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w16.node.line.008c",
+      "lineId": "main.s1.w16.line.008c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "帳簿は磨いてある。希望欄は、渡さない。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w16.node.line.008d",
+      "lineId": "main.s1.w16.line.008d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "正直、緊張してる。……ちょっとだけ。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s1.w16.node.line.009",
-      "lineId": "main.s1.w16.line.009",
+      "id": "main.s1.w16.node.line.009a",
+      "lineId": "main.s1.w16.line.009a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -119,11 +298,19 @@
     },
     {
       "type": "line",
-      "id": "main.s1.w16.node.line.010",
-      "lineId": "main.s1.w16.line.010",
+      "id": "main.s1.w16.node.line.010a",
+      "lineId": "main.s1.w16.line.010a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「両方勝ちとは何だ」と場内がざわつき、胴元が頭を抱えるのが見えた。カジノの流儀は、闘技場でも物議を醸すらしい。銅鑼が鳴る。夜の大会が、始まる。",
+      "text": "「両方勝ちとは何だ」場内がざわつき、胴元さんが頭を抱えた。うちの流儀、物議を醸すらしい。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.w16.node.line.010b",
+      "lineId": "main.s1.w16.line.010b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "銅鑼が鳴った。夜の大会が、始まる。",
       "emotion": "comic"
     },
     {
@@ -133,23 +320,33 @@
         {
           "id": "main.s1.w16.choice.001",
           "label": "今夜は封印に触れず、確実に戦う",
-          "result": "「暴発の直後です。今夜は、いつもの戦い方で」。無理をしない判断は、地味で、正しい。三人は少し残念そうに、それでも頷いた。観覧席の資産管理部には、いつも通りのうちだけが見える。それでいい。切り札は、見せる日を選べるうちが切り札だ。手帳に書く。「半開の特訓、続行。本番投入は、まだ」。",
+          "result": "「今夜は、いつもの戦い方で」三人は少し残念そうに頷いた。観覧席には、いつも通りの姿だけ。手帳に書く「半開の特訓、続行。本番は、まだ」",
           "intent": "暴発直後の無理をせず、足元で勝負する",
           "promise": "安全に戦える代わりに、切り札の実戦データは持ち越し",
           "memory": "「切り札は見せる日を選ぶ」が監督の口癖に加わった",
           "tone": "pragmatic",
-          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
           "goto": "main.s1.w16.node.end.001"
         },
         {
           "id": "main.s1.w16.choice.002",
           "label": "一瞬だけ、指先の解放を試合で試す",
-          "result": "「一瞬だけ。指先だけ。合図で開けて、合図で閉じます」。夜の会場は、切り札の初披露にちょうどいい暗さだった。たとえ小さく光っただけでも、賭け場の空気は正直だ——どよめきが波になり、賞金の山がひとまわり育つ音がした。夜を食べるものの声が、暗がりから届いた。「今の一瞬、香りが良い。星、保留」。保留。次を見たい、の意味だと受け取った。",
+          "result": "「一瞬だけ。合図で開けて、閉じます」賭け場の空気が沸き、賞金がひとまわり育つ音がした。夜を食べるものの声「今の一瞬、香りが良い。星、保留」次を見たい、の意味らしい。",
           "intent": "実戦の空気の中で、解放の一歩目を刻む",
           "promise": "実戦データが取れる代わりに、会社の目にも一瞬映る",
           "memory": "夜の会場の「星、保留」が、次への宿題になった",
           "tone": "wild",
-          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
           "goto": "main.s1.w16.node.end.001"
         }
       ]
@@ -163,7 +360,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "週16大会週(10行)。ライバル=夜を食べるもの(登記ギャグ: 食レポ採点)。仕組み学習=賭け興行(盛り上がり=賞金)。解放三段の二段目=リハ暴発(半開は全開より難しい)。資産管理部の席札。",
+    "authorNote": "語り口V2・二行枠で改稿。週16大会週(10行)。ライバル=夜を食べるもの(登記ギャグ: 食レポ採点)。仕組み学習=賭け興行(盛り上がり=賞金)。解放三段の二段目=リハ暴発(半開は全開より難しい)。資産管理部の席札。",
     "legacyGeneratedIds": false
   }
 }
