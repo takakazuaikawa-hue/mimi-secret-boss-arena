@@ -20,8 +20,14 @@
       {
         "id": "main.s2.eve.amara.asset.background.001",
         "kind": "background",
-        "path": "/assets/story/bg-casino-cafe-night.png",
-        "alt": "前夜祭の夜の街の背景"
+        "path": "/assets/story/bg-championship-eve-night-market-v2.png",
+        "alt": "白いチョークの路上法廷跡が残る前夜祭の石畳広場"
+      },
+      {
+        "id": "main.s2.eve.amara.asset.sprite.amara",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/amara.png",
+        "alt": "天秤の裁定者アマラ"
       }
     ]
   },
@@ -35,6 +41,17 @@
       "type": "direction",
       "id": "main.s2.eve.amara.node.direction.002",
       "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.eve.amara.node.direction.amara.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s2.eve.amara.asset.sprite.amara",
+        "actorId": "amara",
+        "slot": "right",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
@@ -60,7 +77,7 @@
       "lineId": "main.s2.eve.amara.line.003",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「証人ミミさん。明日の相手を、述べてください」。四百年の歴代王者の、全盛期の再現です。「怖いですか」。……はい。正直に言うと、傍聴席から「わかるよ!」と声が飛んだ。良い法廷である。",
+      "text": "「証人ミミさん。明日の相手を、一言で」。——台帳が選び抜いた、四百年ぶんの全盛期。「怖いですか」。……はい。正直に言うと、傍聴席から「わかるよ!」と声が飛んだ。良い法廷である。",
       "emotion": "comic"
     },
     {

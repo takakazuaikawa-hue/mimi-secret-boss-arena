@@ -20,8 +20,26 @@
       {
         "id": "main.s3.w23.asset.background.001",
         "kind": "background",
-        "path": "/assets/story/bg-arena-reception.png",
-        "alt": "闘技場の正面の背景"
+        "path": "/assets/story/bg-arena-reconstruction-day-v1.png",
+        "alt": "上棟を迎えた建て替え中の闘技場正面"
+      },
+      {
+        "id": "main.s3.w23.asset.sprite.mimi.smile",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-smile-v1.png",
+        "alt": "笑顔のミミ"
+      },
+      {
+        "id": "main.s3.w23.asset.sprite.mimi.tsukkomi",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-tsukkomi-v1.png",
+        "alt": "驚いてツッコミを入れるミミ"
+      },
+      {
+        "id": "main.s3.w23.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
       }
     ]
   },
@@ -35,6 +53,17 @@
       "type": "direction",
       "id": "main.s3.w23.node.direction.002",
       "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.w23.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s3.w23.asset.sprite.mimi.smile",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
@@ -51,7 +80,7 @@
       "lineId": "main.s3.w23.line.002",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "今日の用は、上棟の祭りと、帳面の白紙を埋めること。裁きの日は、もう明後日の距離にある。その前に、祝いの形だけは決めておきたい。勝つ気の支度、である。"
+      "text": "今日の用は、上棟の祭りと、帳面の白紙を埋めること。裁きの日は、もう目と鼻の先にある。その前に、祝いの形だけは決めておきたい。勝つ気の支度、である。"
     },
     {
       "type": "line",
@@ -70,6 +99,17 @@
       "mode": "thought",
       "text": "決まった。祝いの名前は——柿落とし。四百年目の、新しい闘技場の、最初の興行である。帳面に書き込むと、覗いていた仲間から声が飛んだ。「演目は?」「誰が出るんです?」。全員です。一人一幕、十五幕。",
       "emotion": "resolve"
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.w23.node.direction.mimi.shift.001",
+      "command": {
+        "type": "show",
+        "assetId": "main.s3.w23.asset.sprite.mimi.tsukkomi",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
@@ -106,6 +146,17 @@
       "mode": "thought",
       "text": "帰りぎわ、旧会場の壁に、新しい貼り紙が出た。「四百年目の審理——旧会場、最後の興行として執り行う」。裁きが、興行になった。この街らしいと言えば、これほどらしいこともない。",
       "emotion": "comic"
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.w23.node.direction.mimi.shift.002",
+      "command": {
+        "type": "show",
+        "assetId": "main.s3.w23.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",

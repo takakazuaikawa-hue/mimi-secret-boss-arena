@@ -20,8 +20,14 @@
       {
         "id": "main.s2.eve.sazanami.asset.background.001",
         "kind": "background",
-        "path": "/assets/story/bg-casino-cafe-night.png",
-        "alt": "前夜祭の夜の街の背景"
+        "path": "/assets/story/bg-festival-fountain-portable-aquarium-night-v2.png",
+        "alt": "携帯水槽を水辺へ下ろして休める前夜祭外れの噴水広場"
+      },
+      {
+        "id": "main.s2.eve.sazanami.asset.sprite.sazanami",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/sazanami-trueform.png",
+        "alt": "水と巨大な瞳の姿をしたさざなみ"
       }
     ]
   },
@@ -37,12 +43,23 @@
       "command": { "type": "clearSprites" }
     },
     {
+      "type": "direction",
+      "id": "main.s2.eve.sazanami.node.direction.sazanami.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s2.eve.sazanami.asset.sprite.sazanami",
+        "actorId": "sazanami",
+        "slot": "center",
+        "scale": "compact"
+      }
+    },
+    {
       "type": "line",
       "id": "main.s2.eve.sazanami.node.line.001",
       "lineId": "main.s2.eve.sazanami.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "前夜祭を、さざなみと回ることになった。さざなみは、携帯水槽で歩く。水槽の中から、泡の文字で会話する人である。屋台を通るたび、泡がぽこぽこと立つ。「たこ焼き 六十八点」「りんご飴 七十一点」。",
+      "text": "祭りの人波を、涼しい水音がついてくる。さざなみは、携帯水槽で歩く人だ。水槽の中から、泡の文字で会話する。屋台を通るたび、泡がぽこぽこと立つ。「たこ焼き 六十八点」「りんご飴 七十一点」。",
       "emotion": "comic"
     },
     {

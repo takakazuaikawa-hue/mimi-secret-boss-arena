@@ -22,6 +22,18 @@
         "kind": "background",
         "path": "/assets/story/bg-arena-reception.png",
         "alt": "闘技場の正面受付の背景"
+      },
+      {
+        "id": "main.s3.w13.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
+      },
+      {
+        "id": "main.s3.w13.asset.sprite.mimi.smile",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-smile-v1.png",
+        "alt": "笑顔のミミ"
       }
     ]
   },
@@ -37,12 +49,23 @@
       "command": { "type": "clearSprites" }
     },
     {
+      "type": "direction",
+      "id": "main.s3.w13.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s3.w13.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
+    },
+    {
       "type": "line",
       "id": "main.s3.w13.node.line.001",
       "lineId": "main.s3.w13.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "白手袋の机は、今日も受付の脇にある。今日は、こちらから出向いた。鞄の中に、紙が三枚。砂の上の勝ちの記録。街の寄り合いの言い分。それから、まだ薄い、湯めぐりの名簿。",
+      "text": "白手袋の机は、今日も受付の脇にある。今日は、こちらから出向いた。鞄の中に、紙が三枚。砂の上の戦いの記録。街の寄り合いの言い分。それから、まだ薄い、湯めぐりの名簿。",
       "emotion": "resolve"
     },
     {
@@ -97,6 +120,17 @@
       "mode": "thought",
       "text": "帰り道、仲間が祝おうとして、やめた。「ミミさん? 顔が、変です」。……気づいてしまったのだ。三年間、私は店の子たちの欄を取り返してきた。自分のために砂に立つのは、考えてみれば、初めてである。少し——怖い。",
       "emotion": "tension"
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.w13.node.direction.mimi.shift.001",
+      "command": {
+        "type": "show",
+        "assetId": "main.s3.w13.asset.sprite.mimi.smile",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",

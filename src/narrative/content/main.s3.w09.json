@@ -22,6 +22,24 @@
         "kind": "background",
         "path": "/assets/story/bg-observation-deck-night.png",
         "alt": "夜の展望席の背景"
+      },
+      {
+        "id": "main.s3.w09.asset.sprite.mimi.smile",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-smile-v1.png",
+        "alt": "笑顔のミミ"
+      },
+      {
+        "id": "main.s3.w09.asset.sprite.mimi.tsukkomi",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-tsukkomi-v1.png",
+        "alt": "驚いてツッコミを入れるミミ"
+      },
+      {
+        "id": "main.s3.w09.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
       }
     ]
   },
@@ -37,12 +55,23 @@
       "command": { "type": "clearSprites" }
     },
     {
+      "type": "direction",
+      "id": "main.s3.w09.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s3.w09.asset.sprite.mimi.smile",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
+    },
+    {
       "type": "line",
       "id": "main.s3.w09.node.line.001",
       "lineId": "main.s3.w09.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "夜の展望席には、火薬の匂いが先に届く。花火大会、三年目である。膝の上には、あの帳面の続きの写し。砂の上の言い分は、ちゃんと通った。読む権利は、うちの手の中にある。",
+      "text": "夜の展望席には、火薬の匂いが先に届く。花火大会、三年目である。膝の上には、あの帳面の続きの写し。あの審理の一戦を場内ぜんぶが見てしまって、役所はもう、閲覧を断れなくなったのだ。勝ち負けの帳面より、見せ場の記憶が強い日もある。",
       "emotion": "tender"
     },
     {
@@ -52,6 +81,17 @@
       "speakerId": "narrator",
       "mode": "thought",
       "text": "今日の用は、骨休めと、写しの続きを少し。……のはずが、一発目で手が止まった。観客の拍手が、花火より先に、鳴ったのである。"
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.w09.node.direction.mimi.shift.001",
+      "command": {
+        "type": "show",
+        "assetId": "main.s3.w09.asset.sprite.mimi.tsukkomi",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
@@ -88,6 +128,17 @@
       "mode": "thought",
       "text": "客席が、今夜いちばん沸いた。誰も知らない花火にだけ、拍手は遅れて、大きく来る。新しいものは、強い。去年の決勝で学んだことを、夜空がもう一度言った。",
       "emotion": "revelation"
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.w09.node.direction.mimi.shift.002",
+      "command": {
+        "type": "show",
+        "assetId": "main.s3.w09.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",

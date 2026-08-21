@@ -22,6 +22,12 @@
         "kind": "background",
         "path": "/assets/story/bg-casino-cafe-night.png",
         "alt": "夜のカジノカフェの背景"
+      },
+      {
+        "id": "main.s2.w16.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
       }
     ]
   },
@@ -35,6 +41,17 @@
       "type": "direction",
       "id": "main.s2.w16.node.direction.002",
       "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.w16.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s2.w16.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
@@ -105,7 +122,7 @@
       "lineId": "main.s2.w16.line.008",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "入場口の札が裏返る。今夜勝てば、赤線は三本目。手帳の一覧の、ちょうど折り返しである。",
+      "text": "入場口の札が裏返る。狙うは、赤線の三本目。予想紙に書けない試合を、場内ぜんぶに見てもらう。手帳の一覧の、ちょうど折り返しである。",
       "emotion": "resolve"
     },
     {

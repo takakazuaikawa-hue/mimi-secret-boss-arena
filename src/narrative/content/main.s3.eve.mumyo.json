@@ -22,6 +22,12 @@
         "kind": "background",
         "path": "/assets/story/bg-observation-deck-night.png",
         "alt": "夜の展望席の背景"
+      },
+      {
+        "id": "main.s3.eve.mumyo.asset.sprite.mumyo",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mumyo-trueform.png",
+        "alt": "鏡の中に人影を映す一振りの無銘"
       }
     ]
   },
@@ -35,6 +41,17 @@
       "type": "direction",
       "id": "main.s3.eve.mumyo.node.direction.002",
       "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.eve.mumyo.node.direction.mumyo.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s3.eve.mumyo.asset.sprite.mumyo",
+        "actorId": "mumyo",
+        "slot": "center",
+        "scale": "compact"
+      }
     },
     {
       "type": "line",
@@ -51,7 +68,7 @@
       "lineId": "main.s3.eve.mumyo.line.002",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "並んで、祭りの灯りを見下ろした。急かさないのが、この人と過ごす作法である。沈黙が三つぶん過ぎて、先に口を開いたのは、珍しく向こうだった。「今日、裁きの場で、あなたの欄が戻るのを見た」。",
+      "text": "並んで、祭りの灯りを見下ろした。急かさないのが、この人と過ごす作法である。沈黙が三つぶん過ぎて、先に口を開いたのは、珍しく向こうだった。「裁きの日——あなたの欄が戻るのを、私はこの目で見た」。",
       "emotion": "tension"
     },
     {

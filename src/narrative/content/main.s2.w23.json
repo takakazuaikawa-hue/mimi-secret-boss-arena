@@ -22,6 +22,24 @@
         "kind": "background",
         "path": "/assets/story/bg-fountain-plaza-day-v1.png",
         "alt": "新作祭の噴水広場の背景"
+      },
+      {
+        "id": "main.s2.w23.asset.sprite.mimi.tsukkomi",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-tsukkomi-v1.png",
+        "alt": "驚いてツッコミを入れるミミ"
+      },
+      {
+        "id": "main.s2.w23.asset.sprite.mimi.smile",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-smile-v1.png",
+        "alt": "笑顔のミミ"
+      },
+      {
+        "id": "main.s2.w23.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
       }
     ]
   },
@@ -35,6 +53,17 @@
       "type": "direction",
       "id": "main.s2.w23.node.direction.002",
       "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.w23.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s2.w23.asset.sprite.mimi.tsukkomi",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
@@ -54,6 +83,17 @@
       "text": "祭りの品書きも、新作づくしだった。新作大福(中身が日替わり。今日は何と、普通のこしあん——それが一番の変化球だという)。試し打ちの新作花火。夜店のくじは「景品も新作(中身は誰も知らない)」。"
     },
     {
+      "type": "direction",
+      "id": "main.s2.w23.node.direction.mimi.shift.001",
+      "command": {
+        "type": "show",
+        "assetId": "main.s2.w23.asset.sprite.mimi.smile",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
+    },
+    {
       "type": "line",
       "id": "main.s2.w23.node.line.003",
       "lineId": "main.s2.w23.line.003",
@@ -70,6 +110,17 @@
       "mode": "thought",
       "text": "会社も、物量で来ていた。滅亡ショーの宣伝が、壁という壁を覆っている。ただ、その貼り紙の余白に、子どもの落書きが増えていく。兎の耳の絵と、下手な字。「けっしょう みにいく」。——物量は、落書き一つに負けることがある。",
       "emotion": "tender"
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.w23.node.direction.mimi.shift.002",
+      "command": {
+        "type": "show",
+        "assetId": "main.s2.w23.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
@@ -95,7 +146,7 @@
       "lineId": "main.s2.w23.line.007",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "隣で、うちの仲間の一人が、足を止めた。長い沈黙のあと、静かに言った。「——あの型。**本物と、砂の上で向かい合ったことがある**」。四百年を生きた者の声だった。かつての好敵手が、台帳の駒にされている。ぞくりの正体が、分かった。怖さではない。怒りだ。",
+      "text": "隣で、うちの仲間の一人が、足を止めた。何も、言わない。ただ、砂を掴むときの形に、拳がゆっくり閉じていく。四百年を生きた者の、何かを知っている沈黙だった。聞かなかった。聞くのは、あの人の口が開く夜でいい。——ぞくりの正体だけは、分かった。怖さではない。怒りだ。",
       "emotion": "resolve"
     },
     {

@@ -22,6 +22,24 @@
         "kind": "background",
         "path": "/assets/story/bg-hot-spring-ryokan.png",
         "alt": "古い湯屋の背景"
+      },
+      {
+        "id": "main.s3.w14.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
+      },
+      {
+        "id": "main.s3.w14.asset.sprite.mimi.confused",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-confused-v1.png",
+        "alt": "困惑した表情のミミ"
+      },
+      {
+        "id": "main.s3.w14.asset.sprite.mimi.smile",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-smile-v1.png",
+        "alt": "笑顔のミミ"
       }
     ]
   },
@@ -35,6 +53,17 @@
       "type": "direction",
       "id": "main.s3.w14.node.direction.002",
       "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.w14.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s3.w14.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
@@ -63,6 +92,17 @@
       "emotion": "tension"
     },
     {
+      "type": "direction",
+      "id": "main.s3.w14.node.direction.mimi.shift.001",
+      "command": {
+        "type": "show",
+        "assetId": "main.s3.w14.asset.sprite.mimi.confused",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
+    },
+    {
       "type": "line",
       "id": "main.s3.w14.node.line.004",
       "lineId": "main.s3.w14.line.004",
@@ -77,7 +117,7 @@
       "lineId": "main.s3.w14.line.005",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「それきり、来んかったがな」。返しに来なかった借り主に、おじいさんは笑って、湯呑みを差し出した。「なに、三年で返しに来りゃあ上等の口よ。四百年、返さん人も、おる」。……四百年?",
+      "text": "「それきり、来んかったがな」。返しに来なかった借り主に、おじいさんは笑って、湯呑みを差し出した。「なに、三年で返しに来りゃあ上等の口よ。世の中にゃ、四百年借りっぱなしの御仁もおるでな」。……四百年?",
       "emotion": "comic"
     },
     {
@@ -88,6 +128,17 @@
       "mode": "thought",
       "text": "湯に浸かって、分かったことがある。私の三年は、数えごとの紙で始まったのではない。担いでくれた誰かと、貸しタオル一本で始まったのだ。持ち物の帳面より、貸し借りの帳面のほうが、先だった。——それなら、私の言い分は、湯の側に理がある。",
       "emotion": "revelation"
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.w14.node.direction.mimi.shift.002",
+      "command": {
+        "type": "show",
+        "assetId": "main.s3.w14.asset.sprite.mimi.smile",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",

@@ -22,6 +22,12 @@
         "kind": "background",
         "path": "/assets/story/bg-arena-reception.png",
         "alt": "闘技場の正面受付の背景"
+      },
+      {
+        "id": "main.s1.w06.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
       }
     ]
   },
@@ -35,6 +41,17 @@
       "type": "direction",
       "id": "main.s1.w06.node.direction.002",
       "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.w06.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s1.w06.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
@@ -131,7 +148,7 @@
       "lineId": "main.s1.w06.line.011",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "手帳に、新しい欄が開いていた。「興行義務: 残り26週」。二十六。私は初めて、その数字を自分の予定として見た。",
+      "text": "手帳に、新しい欄が開いていた。「興行義務: 今季、二十六週」。二十六。私は初めて、その数字を自分の予定として見た。",
       "emotion": "tension"
     },
     {

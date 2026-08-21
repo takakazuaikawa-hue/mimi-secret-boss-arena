@@ -22,6 +22,18 @@
         "kind": "background",
         "path": "/assets/story/bg-observation-deck-night.png",
         "alt": "決勝前夜の闘技場の背景"
+      },
+      {
+        "id": "main.s2.w25.asset.sprite.mimi.smile",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-smile-v1.png",
+        "alt": "笑顔のミミ"
+      },
+      {
+        "id": "main.s2.w25.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
       }
     ]
   },
@@ -35,6 +47,17 @@
       "type": "direction",
       "id": "main.s2.w25.node.direction.002",
       "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.w25.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s2.w25.asset.sprite.mimi.smile",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
@@ -54,12 +77,23 @@
       "text": "書き出すと、こうなる。相手は、歴代王者選抜——四百年の優勝者たちの、全盛期の再現。監督席には、あの室長が自ら座る。同じ時刻に、街の反対側では「世界滅亡ショー」が開演し、客の取り合いになる。勝てば、最後の赤線。負ければ——それは、書かない。書かないが、覚悟だけは、しておく。"
     },
     {
+      "type": "direction",
+      "id": "main.s2.w25.node.direction.mimi.shift.001",
+      "command": {
+        "type": "show",
+        "assetId": "main.s2.w25.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
+    },
+    {
       "type": "line",
       "id": "main.s2.w25.node.line.003",
       "lineId": "main.s2.w25.line.003",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "赤線は、いま五本。台本試合、常時稼働、胴元総取り、出口廃止、名入れ販売——壊すたび、街の空気が軽くなった条文たち。残るは六つ目、「台帳による再演の強制」。ただしこれには、条文が無い。無いものに、どう線を引くか。答えは明日、砂の上で出す。",
+      "text": "赤線は、いま五本。五本目は、抜かない剣の一戦と、人の名前が消えた賞品欄を見てしまった場内の声とで、引けた線だ。台本試合、常時稼働、胴元総取り、出口廃止、名入れ販売——壊すたび、街の空気が軽くなった条文たち。残るは六つ目、「台帳による再演の強制」。ただしこれには、条文が無い。無いものに、どう線を引くか。答えは明日、砂の上で出す。",
       "emotion": "resolve"
     },
     {
@@ -70,6 +104,17 @@
       "mode": "thought",
       "text": "手帳を閉じて、夜風に当たりに歩いた。誰もいないはずの、闘技場の砂場——に、灯りがひとつ。誰かが、型の練習をしている。見たことのない、古い、美しい型。優美で、力強くて、まるで教科書がひとりでに動いているようだった。",
       "emotion": "tension"
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.w25.node.direction.mimi.shift.002",
+      "command": {
+        "type": "show",
+        "assetId": "main.s2.w25.asset.sprite.mimi.smile",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",

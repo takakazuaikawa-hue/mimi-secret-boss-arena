@@ -22,6 +22,18 @@
         "kind": "background",
         "path": "/assets/story/bg-arena-reception.png",
         "alt": "闘技場の正面玄関の背景"
+      },
+      {
+        "id": "main.s2.w19.asset.sprite.mimi.smile",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-smile-v1.png",
+        "alt": "笑顔のミミ"
+      },
+      {
+        "id": "main.s2.w19.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
       }
     ]
   },
@@ -37,12 +49,23 @@
       "command": { "type": "clearSprites" }
     },
     {
+      "type": "direction",
+      "id": "main.s2.w19.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s2.w19.asset.sprite.mimi.smile",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
+    },
+    {
       "type": "line",
       "id": "main.s2.w19.node.line.001",
       "lineId": "main.s2.w19.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "決戦準備の週は、掃除から始めた。験担ぎである。正面玄関の趣意書の額を、ノノさんと二人で外して、硝子を磨く。「当場は、物語を終えた者たちが、続きを生きるための場所である」。何度読んでも、いい一行だ。",
+      "text": "決勝の相手の欄は、今朝もまだ「調整中」。なら、こちらは支度を進めるだけだ。決戦準備の週は、掃除から始めた。験担ぎである。正面玄関の趣意書の額を、ノノさんと二人で外して、硝子を磨く。「当場は、物語を終えた者たちが、続きを生きるための場所である」。何度読んでも、いい一行だ。",
       "emotion": "tender"
     },
     {
@@ -52,6 +75,17 @@
       "speakerId": "narrator",
       "mode": "thought",
       "text": "額を外した壁を見て、ノノさんが「あら」と言った。趣意書の掛かっていた場所の隣に——もう一つ、四角い日焼け跡がある。同じ大きさの跡。ここには昔、もう一枚、何かが並んで掛かっていた。"
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.w19.node.direction.mimi.shift.001",
+      "command": {
+        "type": "show",
+        "assetId": "main.s2.w19.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",

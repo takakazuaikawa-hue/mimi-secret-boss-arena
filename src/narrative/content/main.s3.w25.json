@@ -20,8 +20,26 @@
       {
         "id": "main.s3.w25.asset.background.001",
         "kind": "background",
-        "path": "/assets/story/bg-observation-deck-night.png",
-        "alt": "前夜の闘技場の背景"
+        "path": "/assets/story/bg-new-arena-opening-eve-v1.png",
+        "alt": "柿落としを待つ前夜の新しい闘技場"
+      },
+      {
+        "id": "main.s3.w25.asset.sprite.mimi.smile",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-smile-v1.png",
+        "alt": "笑顔のミミ"
+      },
+      {
+        "id": "main.s3.w25.asset.sprite.mimi.tsukkomi",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-tsukkomi-v1.png",
+        "alt": "驚いてツッコミを入れるミミ"
+      },
+      {
+        "id": "main.s3.w25.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
       }
     ]
   },
@@ -37,12 +55,23 @@
       "command": { "type": "clearSprites" }
     },
     {
+      "type": "direction",
+      "id": "main.s3.w25.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s3.w25.asset.sprite.mimi.smile",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
+    },
+    {
       "type": "line",
       "id": "main.s3.w25.node.line.001",
       "lineId": "main.s3.w25.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "柿落とし前夜の街は、提灯の海だった。新しい闘技場が、初めての灯りをまとって立っている。私は宴の輪を少し外れて、手帳を開いた。明日のことを、一度ぜんぶ、並べておきたかったのだ。",
+      "text": "柿落とし前夜の街は、提灯の海だった。結びの興行の砂埃も落ちて、新しい闘技場が、初めての灯りをまとって立っている。私は宴の輪を少し外れて、手帳を開いた。明日のことを、一度ぜんぶ、並べておきたかったのだ。",
       "emotion": "tender"
     },
     {
@@ -72,6 +101,17 @@
       "emotion": "tender"
     },
     {
+      "type": "direction",
+      "id": "main.s3.w25.node.direction.mimi.shift.001",
+      "command": {
+        "type": "show",
+        "assetId": "main.s3.w25.asset.sprite.mimi.tsukkomi",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
+    },
+    {
       "type": "line",
       "id": "main.s3.w25.node.line.005",
       "lineId": "main.s3.w25.line.005",
@@ -88,6 +128,17 @@
       "mode": "thought",
       "text": "ふと、手が止まった。祝いの帳面に挟んだ、あの手紙のことを考えていた。四百年前の、いちばん良い夜の手紙。署名の無い手紙。明日の夜は、あの夜の続きになる。四百年ぶりの、柿落としなのだから。",
       "emotion": "revelation"
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.w25.node.direction.mimi.shift.002",
+      "command": {
+        "type": "show",
+        "assetId": "main.s3.w25.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",

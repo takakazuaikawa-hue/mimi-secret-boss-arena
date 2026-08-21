@@ -22,6 +22,18 @@
         "kind": "background",
         "path": "/assets/arena-daylight.png",
         "alt": "大会当日の闘技場の背景"
+      },
+      {
+        "id": "main.s2.w04.asset.sprite.mimi.tsukkomi",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-tsukkomi-v1.png",
+        "alt": "驚いてツッコミを入れるミミ"
+      },
+      {
+        "id": "main.s2.w04.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
       }
     ]
   },
@@ -35,6 +47,17 @@
       "type": "direction",
       "id": "main.s2.w04.node.direction.002",
       "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.w04.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s2.w04.asset.sprite.mimi.tsukkomi",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
@@ -90,12 +113,23 @@
       "emotion": "comic"
     },
     {
+      "type": "direction",
+      "id": "main.s2.w04.node.direction.mimi.shift.001",
+      "command": {
+        "type": "show",
+        "assetId": "main.s2.w04.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
+    },
+    {
       "type": "line",
       "id": "main.s2.w04.node.line.007",
       "lineId": "main.s2.w04.line.007",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "視察席に、会社の席札が出ていた。読んで、少し眉が動く。——「再演企画室」。去年は、資産管理部だった。名前が、変わっている。組織の名前が変わるとき、中では何かが本気になっている。事務員の経験則である。",
+      "text": "視察席に、会社の席札が出ていた。「再演企画室」。初日に垂れ幕で見た、あの新しい名前が、もう視察の席まで来ている。名前を変えた組織が早速動き出すとき、中では何かが本気になっている。事務員の経験則である。",
       "emotion": "tension"
     },
     {

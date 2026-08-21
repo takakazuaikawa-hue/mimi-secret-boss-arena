@@ -22,6 +22,12 @@
         "kind": "background",
         "path": "/assets/story/bg-contract-archive-v2.png",
         "alt": "契約保管庫の背景"
+      },
+      {
+        "id": "main.s1.w18.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
       }
     ]
   },
@@ -35,6 +41,17 @@
       "type": "direction",
       "id": "main.s1.w18.node.direction.002",
       "command": { "type": "clearSprites" }
+    },
+    {
+      "type": "direction",
+      "id": "main.s1.w18.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s1.w18.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
@@ -68,7 +85,7 @@
       "lineId": "main.s1.w18.line.004",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "案には「回答期限」の欄があった。所有者グランプリの、前の週。会社は、大会の前に決めたいらしい。試合の外で。",
+      "text": "案には「回答期限」の欄があった。所有者グランプリの週の、初日。会社は、大会の前に決めたいらしい。試合の外で。",
       "emotion": "tension"
     },
     {

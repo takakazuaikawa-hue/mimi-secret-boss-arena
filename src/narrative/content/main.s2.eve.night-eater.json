@@ -20,8 +20,14 @@
       {
         "id": "main.s2.eve.night-eater.asset.background.001",
         "kind": "background",
-        "path": "/assets/story/bg-casino-cafe-night.png",
-        "alt": "前夜祭の夜の街の背景"
+        "path": "/assets/story/bg-championship-eve-night-market-v2.png",
+        "alt": "残された一灯と星の見える暗い路地へ続く前夜祭の夜店通り"
+      },
+      {
+        "id": "main.s2.eve.night-eater.asset.sprite.night-eater",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/night-eater.png",
+        "alt": "夜の輪郭をまとう夜を食べるもの"
       }
     ]
   },
@@ -37,12 +43,23 @@
       "command": { "type": "clearSprites" }
     },
     {
+      "type": "direction",
+      "id": "main.s2.eve.night-eater.node.direction.night-eater.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s2.eve.night-eater.asset.sprite.night-eater",
+        "actorId": "night-eater",
+        "slot": "right",
+        "scale": "tall"
+      }
+    },
+    {
       "type": "line",
       "id": "main.s2.eve.night-eater.node.line.001",
       "lineId": "main.s2.eve.night-eater.line.001",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "前夜祭を、夜を食べるものと回ることになった。提灯の通りを歩くと、彼の足取りが、利き酒の名人のそれになる。「今年の提灯は、良い年です。芯がまっすぐで、後味が甘い」。……明かりの、ソムリエである。",
+      "text": "提灯に火が入るころ、夜を食べるものが迎えに来た。連れ立って通りを歩くと、彼の足取りが、利き酒の名人のそれになる。「今年の提灯は、良い年です。芯がまっすぐで、後味が甘い」。……明かりの、ソムリエである。",
       "emotion": "comic"
     },
     {
