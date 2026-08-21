@@ -8,9 +8,20 @@
     "arcId": "main.stage3"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -20,8 +31,20 @@
       {
         "id": "main.s3.w26.asset.background.001",
         "kind": "background",
-        "path": "/assets/story/bg-arena-reception.png",
-        "alt": "新しい闘技場の正面の背景"
+        "path": "/assets/story/bg-new-arena-opening-morning-v1.png",
+        "alt": "紙吹雪の舞う決勝朝の新しい闘技場"
+      },
+      {
+        "id": "main.s3.w26.asset.sprite.mimi.smile",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-smile-v1.png",
+        "alt": "笑顔のミミ"
+      },
+      {
+        "id": "main.s3.w26.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
       }
     ]
   },
@@ -29,91 +52,263 @@
     {
       "type": "direction",
       "id": "main.s3.w26.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s3.w26.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s3.w26.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "direction",
       "id": "main.s3.w26.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.w26.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s3.w26.asset.sprite.mimi.smile",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
-      "id": "main.s3.w26.node.line.001",
-      "lineId": "main.s3.w26.line.001",
+      "id": "main.s3.w26.node.line.001a",
+      "lineId": "main.s3.w26.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "決勝の朝は、約束どおり、まかないの席から始まった。全員で、いつもの朝ごはん。湯気と、揚げ物の音と、誰かの寝癖。三年目の約束は、三年目も、ちゃんと果たされた。",
+      "text": "決勝の朝は、約束どおり、まかないの席から始まった。全員で、いつもの朝ごはん。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w26.node.line.001b",
+      "lineId": "main.s3.w26.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "湯気と、揚げ物の音と、誰かの寝癖。三年目の約束は、三年目も、ちゃんと果たされた。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s3.w26.node.line.002",
-      "lineId": "main.s3.w26.line.002",
+      "id": "main.s3.w26.node.line.002a",
+      "lineId": "main.s3.w26.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "今日の用は、二つ。昼に、決勝。夜に、柿落とし。手帳の目標の欄は、今朝、書き直してある。「ぜんぶ返して、ぜんぶ始める」。"
+      "text": "今日の用は、二つ。昼に、決勝。"
     },
     {
       "type": "line",
-      "id": "main.s3.w26.node.line.003",
-      "lineId": "main.s3.w26.line.003",
+      "id": "main.s3.w26.node.line.002b",
+      "lineId": "main.s3.w26.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "表に出ると、太鼓と紙吹雪だった。第一週と、同じ音である。でも、今日のは違う。誰の巻き戻しでもない。新しい闘技場の、最初の日——世界の、四百年ぶりの、ほんものの初日だ。同じ太鼓が、こんなに違って聞こえるとは。",
+      "text": "夜に、柿落とし。手帳の目標の欄は、今朝、書き直してある。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w26.node.line.002c",
+      "lineId": "main.s3.w26.line.002c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「ぜんぶ返して、ぜんぶ始める」"
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.w26.node.direction.mimi.shift.001",
+      "command": {
+        "type": "show",
+        "assetId": "main.s3.w26.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w26.node.line.003a",
+      "lineId": "main.s3.w26.line.003a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "表に出ると、太鼓と紙吹雪だった。第一週と、同じ音だ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w26.node.line.003b",
+      "lineId": "main.s3.w26.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "でも、今日のは違う。誰の巻き戻しでもない。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w26.node.line.003c",
+      "lineId": "main.s3.w26.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "新しい闘技場の、最初の日——世界の、四百年ぶりの、ほんものの初日だ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w26.node.line.003d",
+      "lineId": "main.s3.w26.line.003d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "同じ太鼓が、耳には、こんなに違って聞こえるとは。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s3.w26.node.line.004",
-      "lineId": "main.s3.w26.line.004",
+      "id": "main.s3.w26.node.line.004a",
+      "lineId": "main.s3.w26.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "入場口の掲示は、短かった。「決勝——初演の一座」。四百年前の、最初の舞台の人たちの再現。台帳の最後の頁が立てた、最後の演目である。",
+      "text": "入場口の掲示は、短かった。「決勝——初演の一座」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w26.node.line.004b",
+      "lineId": "main.s3.w26.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "とだけ、あった。四百年前の、最初の舞台の人たちの再現だ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w26.node.line.004c",
+      "lineId": "main.s3.w26.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "台帳の最後の頁が立てた、最後の演目だ。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s3.w26.node.line.005",
-      "lineId": "main.s3.w26.line.005",
+      "id": "main.s3.w26.node.line.005a",
+      "lineId": "main.s3.w26.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "支度場への廊下で、その一座とすれ違った。古い、美しい衣装。先頭の座長格の人が足を止め、四百年前の口上を、朗々と述べた。完璧で、場違いで——どこか、懐かしい型だった。去年の決勝前夜、誰も観ていない砂場で観た、あの型の系譜である。",
+      "text": "支度場への廊下で、その一座とすれ違った。古い、美しい衣装。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w26.node.line.005b",
+      "lineId": "main.s3.w26.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "先頭の座長格の人が足を止め、四百年前の口上を、朗々と述べた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w26.node.line.005c",
+      "lineId": "main.s3.w26.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "完璧で、場違いで——どこか、懐かしい型だった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w26.node.line.005d",
+      "lineId": "main.s3.w26.line.005d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "去年の決勝前夜、誰も観ていない砂場で観た、あの型の系譜だ。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s3.w26.node.line.006",
-      "lineId": "main.s3.w26.line.006",
+      "id": "main.s3.w26.node.line.006a",
+      "lineId": "main.s3.w26.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "口上が終わって、私は、こう返した。「——ようこそ、新しい闘技場へ。あなたたちが建てた場所の、四百年目です」。座長格の人の目が、記録に無いはずの目が、一度だけ、瞬いた。",
+      "text": "口上が終わって、私は、こう返した。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w26.node.line.006b",
+      "lineId": "main.s3.w26.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「——ようこそ、新しい闘技場へ。あなたたちが建てた場所の、四百年目です」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w26.node.line.006c",
+      "lineId": "main.s3.w26.line.006c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "座長格の人の目が、記録に無いはずの目が、一度だけ、瞬いた。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s3.w26.node.line.007",
-      "lineId": "main.s3.w26.line.007",
+      "id": "main.s3.w26.node.line.007a",
+      "lineId": "main.s3.w26.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "仲間が、順に隣へ並んだ。誰も、何も言わない。言わないのに、全員の呼吸が揃っている。初演と、新作。四百年の最初と、いま。この一戦は、倒し合いではない。——受け渡し、である。",
+      "text": "仲間が、順に隣へ並んだ。誰も、何も言わない。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w26.node.line.007b",
+      "lineId": "main.s3.w26.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "言わないのに、全員の呼吸が揃っている。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w26.node.line.007c",
+      "lineId": "main.s3.w26.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "初演と、新作。四百年の最初と、いま。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w26.node.line.007d",
+      "lineId": "main.s3.w26.line.007d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "この一戦は、倒し合いではない。——受け渡し、だ。",
       "emotion": "resolve"
     },
     {
       "type": "line",
-      "id": "main.s3.w26.node.line.008",
-      "lineId": "main.s3.w26.line.008",
+      "id": "main.s3.w26.node.line.008a",
+      "lineId": "main.s3.w26.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "懐で、紙のかさりと鳴る音がした。演目帳——十五の幕と、鉛筆の薄い一行。夜には、濃く書く。そのために、昼を勝つ。",
+      "text": "懐で、紙のかさりと鳴る音がした。演目帳には、十五の幕と、鉛筆の薄い一行。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w26.node.line.008b",
+      "lineId": "main.s3.w26.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "夜には、濃く書く。そのために、昼を勝つ。",
       "emotion": "resolve"
     },
     {
       "type": "line",
-      "id": "main.s3.w26.node.line.009",
-      "lineId": "main.s3.w26.line.009",
+      "id": "main.s3.w26.node.line.009a",
+      "lineId": "main.s3.w26.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "開演の太鼓が鳴る。砂場の光の中へ、一歩。——行ってきます。今夜、柿落としで会いましょう。",
+      "text": "開演の太鼓が鳴る。砂場の光の中へ、一歩。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w26.node.line.009b",
+      "lineId": "main.s3.w26.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "行ってきます。今夜、柿落としで会いましょう。",
       "emotion": "tension"
     },
     {
@@ -123,23 +318,33 @@
         {
           "id": "main.s3.w26.choice.001",
           "label": "額の裏の手紙を、懐に入れて入場する",
-          "result": "四百年前のいちばん良い夜を、砂の上まで連れて行くことにした。懐の手紙は、軽い。軽いのに、背筋が伸びる。初演の人たちと向き合うのに、これほど正しいお守りも無い。——書いた人。見ていてください。今日の砂を。",
+          "result": "四百年前のいちばん良い夜を、砂の上まで連れて行くことにした。懐の手紙は軽いのに、背筋が伸びる。初演の人たちと向き合うのに、こんなに正しいお守りはない。書いた人、見ていてください。今日の砂を。",
           "intent": "始まりの夜と一緒に、砂を踏む",
           "promise": "背筋の伸びるお守りを得る代わりに、手紙は汗と砂を浴びる",
           "memory": "懐に入れて入場した、署名の無い手紙",
           "tone": "heroic",
-          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
           "goto": "main.s3.w26.node.end.001"
         },
         {
           "id": "main.s3.w26.choice.002",
           "label": "手紙は今夜の舞台のそばに、置いていく",
-          "result": "あれは、戦いの道具ではない。祝いの席で返す、預かり物である。演目帳に挟み直して、大取りの舞台袖に、そっと置いた。「夜まで、そこで観ててください」。……返事の代わりに、紙が一枚、かさりと鳴った気がした。",
+          "result": "あれは、戦いの道具じゃない。祝いの席で返す、預かり物だ。演目帳に挟み直し、大取りの舞台袖にそっと置いた。「夜まで、そこで観ててください」。返事の代わりに、紙が一枚、かさりと鳴った気がした。",
           "intent": "手紙は祝いの席のために取っておく",
           "promise": "預かり物は無事なまま、砂の上はうちの力だけで踏む",
           "memory": "舞台袖に置かれた、演目帳と手紙",
           "tone": "pragmatic",
-          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
           "goto": "main.s3.w26.node.end.001"
         }
       ]
@@ -153,7 +358,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "3周目・週26(決勝の朝。週1と対の絵=同じ太鼓・違う意味(巻き戻しでない、ほんものの初日)。初演の一座への「ようこそ」=倒し合いでなく受け渡し。入場前で切り、柿落とし十五幕・大取り(閲覧札の名前の回収=初代記録係)・最終選択は真エンディング(grand)側が担う——program拡張はシステム注文8参照。Q=この街を引き受けるか(答え=Yes、行動はエンディングで) / turn=行3(同じ太鼓が違って聞こえる) / hook=未決着の勝負(大)/climactic / try=はい、そして / game=なし(決戦の朝。寝癖一拍のみ) / carry=朝ごはんの約束(週25)・鉛筆の一行 / open=大取りと最終選択(答え=エンディング) / newterm=なし",
+    "authorNote": "語り口V2・二行枠で改稿。3周目・週26(決勝の朝。週1と対の絵=同じ太鼓・違う意味(巻き戻しでない、ほんものの初日)。初演の一座への「ようこそ」=倒し合いでなく受け渡し。入場前で切り、柿落とし十五幕・大取り(閲覧札の名前の回収=初代記録係)・最終選択は真エンディング(grand)側が担う——program拡張はシステム注文8参照。Q=この街を引き受けるか(答え=Yes、行動はエンディングで) / turn=行3(同じ太鼓が違って聞こえる) / hook=未決着の勝負(大)/climactic / try=はい、そして / game=なし(決戦の朝。寝癖一拍のみ) / carry=朝ごはんの約束(週25)・鉛筆の一行 / open=大取りと最終選択(答え=エンディング) / newterm=なし",
     "legacyGeneratedIds": false
   }
 }

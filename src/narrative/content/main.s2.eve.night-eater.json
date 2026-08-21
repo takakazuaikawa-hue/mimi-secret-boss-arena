@@ -8,9 +8,20 @@
     "arcId": "main.stage2"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 890,
     "weight": 1
   },
@@ -35,12 +46,18 @@
     {
       "type": "direction",
       "id": "main.s2.eve.night-eater.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s2.eve.night-eater.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s2.eve.night-eater.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "direction",
       "id": "main.s2.eve.night-eater.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
     },
     {
       "type": "direction",
@@ -55,80 +72,213 @@
     },
     {
       "type": "line",
-      "id": "main.s2.eve.night-eater.node.line.001",
-      "lineId": "main.s2.eve.night-eater.line.001",
+      "id": "main.s2.eve.night-eater.node.line.001a",
+      "lineId": "main.s2.eve.night-eater.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "提灯に火が入るころ、夜を食べるものが迎えに来た。連れ立って通りを歩くと、彼の足取りが、利き酒の名人のそれになる。「今年の提灯は、良い年です。芯がまっすぐで、後味が甘い」。……明かりの、ソムリエである。",
+      "text": "提灯に火が入るころ、夜を食べるものが迎えに来た。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.night-eater.node.line.001b",
+      "lineId": "main.s2.eve.night-eater.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "連れ立って通りを歩くと、彼の足取りが、利き酒の名人のそれになる。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.night-eater.node.line.001c",
+      "lineId": "main.s2.eve.night-eater.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「今年の提灯は、良い年です。芯がまっすぐで、後味が甘い」……明かりの、ソムリエだ。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s2.eve.night-eater.node.line.002",
-      "lineId": "main.s2.eve.night-eater.line.002",
+      "id": "main.s2.eve.night-eater.node.line.002a",
+      "lineId": "main.s2.eve.night-eater.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "食べ歩きは、行儀よく進んだ。切れかけの電球を一口。消し忘れの倉庫の灯りを一口。屋台のおじさんが「うちの余り火もどうだい」と差し出す。この街は、彼の食事に、もうすっかり慣れている。",
+      "text": "食べ歩きは、行儀よく進んだ。切れかけの電球を、一口。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.night-eater.node.line.002b",
+      "lineId": "main.s2.eve.night-eater.line.002b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "消し忘れの倉庫の灯りも、一口。屋台のおじさんが「うちの余り火もどうだい」"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.night-eater.node.line.002c",
+      "lineId": "main.s2.eve.night-eater.line.002c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "と差し出す。この街は、彼の食事に、もうすっかり慣れている。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s2.eve.night-eater.node.line.003",
-      "lineId": "main.s2.eve.night-eater.line.003",
+      "id": "main.s2.eve.night-eater.node.line.003a",
+      "lineId": "main.s2.eve.night-eater.line.003a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "通りの果てで、彼はふと足を止めた。「ミミさん。少し、暗いところを歩きましょう」。祭りの裏の、灯りのない路地である。……この人の誘い文句は、いつも一見、不穏で、いつも、外れない。",
+      "text": "通りの果てで、彼はふと足を止めた。「ミミさん。少し、暗いところを歩きましょう」"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.night-eater.node.line.003b",
+      "lineId": "main.s2.eve.night-eater.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "耳が一瞬、警戒するように立った。祭りの裏の、灯りのない路地だ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.night-eater.node.line.003c",
+      "lineId": "main.s2.eve.night-eater.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……この人の誘い文句は、いつも一見、不穏で、いつも、外れない。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s2.eve.night-eater.node.line.004",
-      "lineId": "main.s2.eve.night-eater.line.004",
+      "id": "main.s2.eve.night-eater.node.line.004a",
+      "lineId": "main.s2.eve.night-eater.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "暗い路地の真ん中で、彼は言った。「見えますか」。見上げると——星だった。提灯の光が届かない場所にだけ、星が満ちている。「暗がりは、星の器なので。ぜんぶは、食べないんです」。",
+      "text": "暗い路地の真ん中で、彼は言った。「見えますか」"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.night-eater.node.line.004b",
+      "lineId": "main.s2.eve.night-eater.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "見上げると——星だった。提灯の光が届かない場所にだけ、星が満ちている。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.night-eater.node.line.004c",
+      "lineId": "main.s2.eve.night-eater.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「暗がりは、星の器なので。ぜんぶは、食べないんです」",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s2.eve.night-eater.node.line.005",
-      "lineId": "main.s2.eve.night-eater.line.005",
+      "id": "main.s2.eve.night-eater.node.line.005a",
+      "lineId": "main.s2.eve.night-eater.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "明日の話を、少しだけした。決勝と、同じ時刻の滅亡ショーの話。私の声が硬くなったのが、暗がりでも分かったらしい。「ミミさん。あなたの周りの暗いの、少しだけ、いただきますね」。",
+      "text": "明日の話を、少しだけした。決勝と、同じ時刻の滅亡ショーの話。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.night-eater.node.line.005b",
+      "lineId": "main.s2.eve.night-eater.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私の声が硬くなったのが、暗がりでも分かったらしい。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.night-eater.node.line.005c",
+      "lineId": "main.s2.eve.night-eater.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「ミミさん。あなたの周りの暗いの、少しだけ、いただきますね」",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s2.eve.night-eater.node.line.006",
-      "lineId": "main.s2.eve.night-eater.line.006",
+      "id": "main.s2.eve.night-eater.node.line.006a",
+      "lineId": "main.s2.eve.night-eater.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ふ、と。肩の重さが、一口ぶん、軽くなった。「……緊張って、食べられるんですか」「暗ければ、だいたい食べられます。あなたのは、少し塩気がありました。がんばりの味です」。",
+      "text": "ふ、と。肩の重さが、一口ぶん、軽くなった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.night-eater.node.line.006b",
+      "lineId": "main.s2.eve.night-eater.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「……緊張って、食べられるんですか」「暗ければ、だいたい食べられます」"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.night-eater.node.line.006c",
+      "lineId": "main.s2.eve.night-eater.line.006c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「あなたのは、少し塩気がありました。がんばりの味です」",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s2.eve.night-eater.node.line.007",
-      "lineId": "main.s2.eve.night-eater.line.007",
+      "id": "main.s2.eve.night-eater.node.line.007a",
+      "lineId": "main.s2.eve.night-eater.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "帰り道、彼は通りでいちばん見事な提灯の前を、素通りした。「食べないんですか」「今夜いちばんの一灯は、残すんです。明日、勝って帰ってきたあなたと——一緒に見るぶんなので」。",
+      "text": "帰り道、彼は通りでいちばん見事な提灯の前を、素通りした。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.night-eater.node.line.007b",
+      "lineId": "main.s2.eve.night-eater.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「食べないんですか」「今夜いちばんの一灯は、残すんです」"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.night-eater.node.line.007c",
+      "lineId": "main.s2.eve.night-eater.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「明日、勝って帰ってきたあなたと——一緒に見るぶんなので」",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s2.eve.night-eater.node.line.008",
-      "lineId": "main.s2.eve.night-eater.line.008",
+      "id": "main.s2.eve.night-eater.node.line.008a",
+      "lineId": "main.s2.eve.night-eater.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "食いしん坊の、食べ残し。それが、この人の精いっぱいの願掛けである。「じゃあ、明日の夜まで、誰にも食べさせないでくださいね」「ええ。見張っておきます。……主に、私から」。",
+      "text": "食いしん坊の、食べ残し。それが、この人の精いっぱいの願掛けだ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.night-eater.node.line.008b",
+      "lineId": "main.s2.eve.night-eater.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「じゃあ、明日の夜まで、誰にも食べさせないでくださいね」"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.night-eater.node.line.008c",
+      "lineId": "main.s2.eve.night-eater.line.008c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「ええ。見張っておきます。……主に、私から」",
       "emotion": "comic"
     },
     {
       "type": "effect",
       "id": "main.s2.eve.night-eater.node.effect.001",
-      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+      "effects": [
+        {
+          "type": "sharedPoints",
+          "amount": 2
+        }
+      ]
     },
     {
       "type": "end",
@@ -139,7 +289,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "2周目・本命前夜(夜を食べるもの)。明かり品評会(bond)の様式+安全灯を残す配慮(演目表act4)の私的な形=食べ残しの一灯の願掛け。暗がり=星の器、緊張を一口だけ食べる。",
+    "authorNote": "語り口V2・二行枠で改稿。2周目・本命前夜(夜を食べるもの)。明かり品評会(bond)の様式+安全灯を残す配慮(演目表act4)の私的な形=食べ残しの一灯の願掛け。暗がり=星の器、緊張を一口だけ食べる。",
     "legacyGeneratedIds": false
   }
 }

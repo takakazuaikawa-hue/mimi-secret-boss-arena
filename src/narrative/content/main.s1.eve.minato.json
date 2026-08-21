@@ -8,9 +8,20 @@
     "arcId": "main.stage1"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 890,
     "weight": 1
   },
@@ -35,85 +46,211 @@
     {
       "type": "direction",
       "id": "main.s1.eve.minato.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s1.eve.minato.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s1.eve.minato.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "direction",
       "id": "main.s1.eve.minato.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
     },
     {
       "type": "line",
-      "id": "main.s1.eve.minato.node.line.001",
-      "lineId": "main.s1.eve.minato.line.001",
+      "id": "main.s1.eve.minato.node.line.001a",
+      "lineId": "main.s1.eve.minato.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "前夜祭を、ミナトと二人で回ることになった。元勇者と縁日。彼は屋台の並びを見渡して、開口一番、真剣に言った。「……多いな。選択肢が」。始まった。この人の、いつもの戦いが。",
+      "text": "前夜祭を、ミナトと回ることになった。元勇者と、縁日。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.eve.minato.node.line.001b",
+      "lineId": "main.s1.eve.minato.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "彼は屋台の並びを見渡して、真剣に言った。「……多いな。選択肢が」"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.eve.minato.node.line.001c",
+      "lineId": "main.s1.eve.minato.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "始まった。この人の、いつもの戦いに、耳がぴくりと動く。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s1.eve.minato.node.line.002",
-      "lineId": "main.s1.eve.minato.line.002",
+      "id": "main.s1.eve.minato.node.line.002a",
+      "lineId": "main.s1.eve.minato.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "焼きそばか、串焼きか。彼は真顔で五分悩んだ。世界の命運を割り振ってきた人は、夕飯の命運を割り振れない。日替わり定食が選べないのは、チームの全員が知っている。",
+      "text": "焼きそばか、串焼きか。彼は真顔で、五分悩んだ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.eve.minato.node.line.002b",
+      "lineId": "main.s1.eve.minato.line.002b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "世界の命運を割り振ってきた人は、夕飯の命運を割り振れない。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.eve.minato.node.line.002c",
+      "lineId": "main.s1.eve.minato.line.002c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "日替わり定食が選べないのは、チームの全員が知っている。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s1.eve.minato.node.line.003",
-      "lineId": "main.s1.eve.minato.line.003",
+      "id": "main.s1.eve.minato.node.line.003a",
+      "lineId": "main.s1.eve.minato.line.003a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「両方にしましょう」と言ったら、彼は雷に打たれた顔をした。「その手が……あったのか」。あったんです。四百年の冒険で誰も教えてくれなかったらしい。両方は、いつだって正解である。",
+      "text": "「両方にしましょう」と言ったら、彼は雷に打たれた顔をした。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.eve.minato.node.line.003b",
+      "lineId": "main.s1.eve.minato.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「その手が……あったのか」あったんです。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.eve.minato.node.line.003c",
+      "lineId": "main.s1.eve.minato.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "四百年の冒険で、誰も教えてくれなかったらしい。両方は、いつだって、正解だ。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s1.eve.minato.node.line.004",
-      "lineId": "main.s1.eve.minato.line.004",
+      "id": "main.s1.eve.minato.node.line.004a",
+      "lineId": "main.s1.eve.minato.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "射的の屋台で、彼は一度だけ本気の目をした。構えが、綺麗すぎた。屋台のおやじが息を呑み、通行人が足を止め、彼は——そっと銃を置いた。「大人げないので」。景品の兎は、私が外して外して、おやじの温情でもらった。",
+      "text": "射的の屋台で、彼は一度だけ、本気の目をした。構えが、綺麗すぎた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.eve.minato.node.line.004b",
+      "lineId": "main.s1.eve.minato.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "屋台のおやじが息を呑み、通行人が足を止めた。彼は——そっと銃を置いた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.eve.minato.node.line.004c",
+      "lineId": "main.s1.eve.minato.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「大人げないので」景品の兎は、私が外して外して、おやじの温情でもらった。",
       "emotion": "comic"
     },
     {
       "type": "direction",
       "id": "main.s1.eve.minato.node.direction.003",
-      "command": { "type": "still", "assetId": "main.s1.eve.minato.asset.still.001" }
+      "command": {
+        "type": "still",
+        "assetId": "main.s1.eve.minato.asset.still.001"
+      }
     },
     {
       "type": "line",
-      "id": "main.s1.eve.minato.node.line.005",
-      "lineId": "main.s1.eve.minato.line.005",
+      "id": "main.s1.eve.minato.node.line.005a",
+      "lineId": "main.s1.eve.minato.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "橋の上で、火の消えた提灯を見ながら、彼はぽつりと言った。「祭りは、終わるのがいいんだ。終わるって分かってるものは、ちゃんと大事にできる」。……役目を終えた人の言葉は、たまに、深いところに落ちる。",
+      "text": "橋の上で、火の消えた提灯を見ながら、彼はぽつりと言った。「祭りは、終わるのがいいんだ」"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.eve.minato.node.line.005b",
+      "lineId": "main.s1.eve.minato.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「終わるって分かってるものは、ちゃんと大事にできる」"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.eve.minato.node.line.005c",
+      "lineId": "main.s1.eve.minato.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……役目を終えた人の言葉は、たまに、深いところに落ちる。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s1.eve.minato.node.line.006",
-      "lineId": "main.s1.eve.minato.line.006",
+      "id": "main.s1.eve.minato.node.line.006a",
+      "lineId": "main.s1.eve.minato.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「明日の決勝は、終わっても、終わらないんだろう?」と彼は続けた。「続きがある。この職場は、そこがいい」。選べない人が、この職場を選んでくれたことを、私は今夜、初めてちゃんと嬉しいと思った。",
+      "text": "「明日の決勝は、終わっても、終わらないんだろう?」"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.eve.minato.node.line.006b",
+      "lineId": "main.s1.eve.minato.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "と彼は続けた。「続きがある。この職場は、そこがいい」"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.eve.minato.node.line.006c",
+      "lineId": "main.s1.eve.minato.line.006c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "選べない人が、この職場を選んでくれた。それが今夜は、じんわり嬉しい。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s1.eve.minato.node.line.007",
-      "lineId": "main.s1.eve.minato.line.007",
+      "id": "main.s1.eve.minato.node.line.007a",
+      "lineId": "main.s1.eve.minato.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "別れ際、彼は少し迷ってから(五分)、兎のぬいぐるみを指さした。「それ、名前を付けていいか」。どうぞ。「……考えておく」。決まるのは、たぶん来週だ。楽しみに待つことにする。",
+      "text": "別れ際、彼は五分迷って、兎のぬいぐるみを指さした。"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.eve.minato.node.line.007b",
+      "lineId": "main.s1.eve.minato.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「それ、名前を付けていいか」どうぞ。「……考えておく」"
+    },
+    {
+      "type": "line",
+      "id": "main.s1.eve.minato.node.line.007c",
+      "lineId": "main.s1.eve.minato.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "決まるのは、たぶん来週だ。楽しみに待つことにする。",
       "emotion": "tender"
     },
     {
       "type": "effect",
       "id": "main.s1.eve.minato.node.effect.001",
-      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+      "effects": [
+        {
+          "type": "sharedPoints",
+          "amount": 2
+        }
+      ]
     },
     {
       "type": "end",
@@ -124,7 +261,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "本命前夜シーン(ミナト)。登記モチーフ(選べない・役目を終えた勇者)のみ使用、個別アーク進行に非依存。週25の本命選択から連鎖再生される。",
+    "authorNote": "語り口V2・二行枠で改稿。本命前夜シーン(ミナト)。登記モチーフ(選べない・役目を終えた勇者)のみ使用、個別アーク進行に非依存。週25の本命選択から連鎖再生される。",
     "legacyGeneratedIds": false
   }
 }

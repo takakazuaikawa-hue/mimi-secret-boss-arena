@@ -8,9 +8,20 @@
     "arcId": "main.stage3"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -47,12 +58,18 @@
     {
       "type": "direction",
       "id": "main.s3.w25.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s3.w25.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s3.w25.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "direction",
       "id": "main.s3.w25.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
     },
     {
       "type": "direction",
@@ -67,37 +84,117 @@
     },
     {
       "type": "line",
-      "id": "main.s3.w25.node.line.001",
-      "lineId": "main.s3.w25.line.001",
+      "id": "main.s3.w25.node.line.001a",
+      "lineId": "main.s3.w25.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "柿落とし前夜の街は、提灯の海だった。結びの興行の砂埃も落ちて、新しい闘技場が、初めての灯りをまとって立っている。私は宴の輪を少し外れて、手帳を開いた。明日のことを、一度ぜんぶ、並べておきたかったのだ。",
+      "text": "柿落とし前夜の街は、提灯の海だった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w25.node.line.001b",
+      "lineId": "main.s3.w25.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "結びの興行の砂埃も落ちて、新しい闘技場が、初めての灯りをまとって立つ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w25.node.line.001c",
+      "lineId": "main.s3.w25.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私は宴の輪を少し外れて、手帳を開いた。明日のことを、一度ぜんぶ、並べておきたかったのだ。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s3.w25.node.line.002",
-      "lineId": "main.s3.w25.line.002",
+      "id": "main.s3.w25.node.line.002a",
+      "lineId": "main.s3.w25.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "書き出すと、こうなる。昼、決勝。相手は、掲示によれば「初演の一座」——四百年前、この闘技場の最初の舞台に立った人たちの、再現である。台帳が立てる、最後の演目らしい。夜は、柿落とし十五幕。大取りの欄は、まだ空白。"
+      "text": "書き出すと、こうなる。昼は決勝、相手は「初演の一座」"
     },
     {
       "type": "line",
-      "id": "main.s3.w25.node.line.003",
-      "lineId": "main.s3.w25.line.003",
+      "id": "main.s3.w25.node.line.002b",
+      "lineId": "main.s3.w25.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "初演の一座。怖い、というより、不思議な心持ちだった。この場所を建てた側の人たちと、砂の上で会える。四百年目の建て替えの日に、である。台帳の最後の仕事にしては、ずいぶん粋な組み合わせを出してきた。",
+      "text": "だ。四百年前、この闘技場の最初の舞台に立った人たちの再現だ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w25.node.line.002c",
+      "lineId": "main.s3.w25.line.002c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "台帳が立てる、最後の演目らしい。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w25.node.line.002d",
+      "lineId": "main.s3.w25.line.002d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "夜は、柿落とし十五幕。大取りの欄は、まだ空白。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w25.node.line.003a",
+      "lineId": "main.s3.w25.line.003a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "初演の一座。怖い、というより、不思議な心持ちだった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w25.node.line.003b",
+      "lineId": "main.s3.w25.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "この場所を建てた人たちと、四百年目に、砂の上で会える。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w25.node.line.003c",
+      "lineId": "main.s3.w25.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "台帳の最後の仕事にしては、ずいぶん粋な組み合わせを出してきた。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s3.w25.node.line.004",
-      "lineId": "main.s3.w25.line.004",
+      "id": "main.s3.w25.node.line.004a",
+      "lineId": "main.s3.w25.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "宴を抜けて、新しい砂場を見に行った。誰もいない——と思ったら、灯りがひとつ。仲間が一人、砂を均していた。「明日、初演の人たちが踏む砂です。綺麗にしとかないと」。……敵の足元の心配をする店は、うちくらいである。",
+      "text": "宴を抜けて、新しい砂場を見に行った。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w25.node.line.004b",
+      "lineId": "main.s3.w25.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "誰もいない——と思ったら、灯りがひとつ。仲間が一人、砂を均していた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w25.node.line.004c",
+      "lineId": "main.s3.w25.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「明日、初演の人たちが踏む砂です。綺麗にしとかないと」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w25.node.line.004d",
+      "lineId": "main.s3.w25.line.004d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……敵の足元の心配をする店は、うちくらいだ。",
       "emotion": "tender"
     },
     {
@@ -113,20 +210,52 @@
     },
     {
       "type": "line",
-      "id": "main.s3.w25.node.line.005",
-      "lineId": "main.s3.w25.line.005",
+      "id": "main.s3.w25.node.line.005a",
+      "lineId": "main.s3.w25.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "並んで砂を均しながら、聞いてみた。「大取り、何をやると思います?」「ミミさんの、やりたいことでしょう」。それが分からないから聞いているのだが、まあ——その通りである。",
+      "text": "並んで砂を均しながら、聞いてみた。耳が、少しだけ傾いた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w25.node.line.005b",
+      "lineId": "main.s3.w25.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「大取り、何をやると思います?」「ミミさんの、やりたいことでしょう」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w25.node.line.005c",
+      "lineId": "main.s3.w25.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "それが分からないから聞いているのだが、まあ——その通りだ。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s3.w25.node.line.006",
-      "lineId": "main.s3.w25.line.006",
+      "id": "main.s3.w25.node.line.006a",
+      "lineId": "main.s3.w25.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ふと、手が止まった。祝いの帳面に挟んだ、あの手紙のことを考えていた。四百年前の、いちばん良い夜の手紙。署名の無い手紙。明日の夜は、あの夜の続きになる。四百年ぶりの、柿落としなのだから。",
+      "text": "ふと、手が止まった。祝いの帳面に挟んだ、あの手紙のことを考えていた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w25.node.line.006b",
+      "lineId": "main.s3.w25.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "四百年前の、いちばん良い夜の手紙。署名の無い手紙。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w25.node.line.006c",
+      "lineId": "main.s3.w25.line.006c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "明日の夜は、あの夜の続きになる。四百年ぶりの、柿落としなのだから。",
       "emotion": "revelation"
     },
     {
@@ -142,35 +271,80 @@
     },
     {
       "type": "line",
-      "id": "main.s3.w25.node.line.007",
-      "lineId": "main.s3.w25.line.007",
+      "id": "main.s3.w25.node.line.007a",
+      "lineId": "main.s3.w25.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "なら、大取りですることは、決まりかけている気がした。形は、まだ言葉にならない。ならないが、方角だけは分かる。——**あの手紙に、返事を書くこと**だ。",
+      "text": "なら、大取りですることは、決まりかけている気がした。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w25.node.line.007b",
+      "lineId": "main.s3.w25.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "形は、まだ言葉にならない。ならないが、方角だけは分かる。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w25.node.line.007c",
+      "lineId": "main.s3.w25.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "——**あの手紙に、返事を書くこと**だ。",
       "emotion": "resolve"
     },
     {
       "type": "line",
-      "id": "main.s3.w25.node.line.008",
-      "lineId": "main.s3.w25.line.008",
+      "id": "main.s3.w25.node.line.008a",
+      "lineId": "main.s3.w25.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "宴に戻って、明日の話をひとつだけした。「決勝の朝、全員で朝ごはんを食べましょう。まかないの、いつもの席で」。三年目も、この約束から始める。大一番の前夜に要るのは、いつも通りが続くという約束だ。",
+      "text": "宴に戻って、明日の話をひとつだけした。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w25.node.line.008b",
+      "lineId": "main.s3.w25.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「決勝の朝、全員で朝ごはんを食べましょう。まかないの、いつもの席で」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w25.node.line.008c",
+      "lineId": "main.s3.w25.line.008c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "三年目も、この約束から始める。大一番の前夜に要るのは、いつも通りが続くという約束だ。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s3.w25.node.line.009",
-      "lineId": "main.s3.w25.line.009",
+      "id": "main.s3.w25.node.line.009a",
+      "lineId": "main.s3.w25.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "布団に入る前、手帳の大取りの欄に、鉛筆で薄く、一行だけ書いた。まだ、消せる濃さで。——明日の夜、濃く書けるかどうかは、私しだいである。",
+      "text": "布団に入る前、手帳の大取りの欄に、鉛筆で薄く、一行だけ書いた。まだ、消せる濃さで。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w25.node.line.009b",
+      "lineId": "main.s3.w25.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "——明日の夜、濃く書けるかどうかは、私しだいだ。",
       "emotion": "tension"
     },
     {
       "type": "effect",
       "id": "main.s3.w25.node.effect.001",
-      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+      "effects": [
+        {
+          "type": "sharedPoints",
+          "amount": 2
+        }
+      ]
     },
     {
       "type": "end",
@@ -181,7 +355,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "3周目・週25(前夜。手帳ブリーフ=決勝の相手「初演の一座」の告知と柿落としの整理。大取りの方角=手紙への返事(名前の回収は週26まで伏せる)。朝ごはんの約束は三年目の天丼。本命選択(区分3版)はシステム拡張後にこの後へ連鎖(要実装: 前夜シーン5本)。Q=この街を引き受けるか / turn=行6(明日はあの夜の続き) / hook=決断の直前(大)/pre-point / try=はい、そして / game=敵の足元の心配(砂均し) / carry=手紙(週19)・演目帳(週23) / open=大取りの中身(答え=週26) / newterm=なし",
+    "authorNote": "語り口V2・二行枠で改稿。3周目・週25(前夜。手帳ブリーフ=決勝の相手「初演の一座」の告知と柿落としの整理。大取りの方角=手紙への返事(名前の回収は週26まで伏せる)。朝ごはんの約束は三年目の天丼。本命選択(区分3版)はシステム拡張後にこの後へ連鎖(要実装: 前夜シーン5本)。Q=この街を引き受けるか / turn=行6(明日はあの夜の続き) / hook=決断の直前(大)/pre-point / try=はい、そして / game=敵の足元の心配(砂均し) / carry=手紙(週19)・演目帳(週23) / open=大取りの中身(答え=週26) / newterm=なし",
     "legacyGeneratedIds": false
   }
 }

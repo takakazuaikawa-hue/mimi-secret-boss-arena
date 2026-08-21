@@ -8,9 +8,20 @@
     "arcId": "main.stage3"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -20,8 +31,14 @@
       {
         "id": "main.s3.w24.asset.background.001",
         "kind": "background",
-        "path": "/assets/story/bg-arena-reception.png",
-        "alt": "旧会場の背景"
+        "path": "/assets/story/bg-old-arena-hearing-sunset-v1.png",
+        "alt": "四百年目の審理に使われる夕刻の旧闘技場"
+      },
+      {
+        "id": "main.s3.w24.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
       }
     ]
   },
@@ -29,109 +46,334 @@
     {
       "type": "direction",
       "id": "main.s3.w24.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s3.w24.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s3.w24.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "direction",
       "id": "main.s3.w24.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.w24.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s3.w24.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
-      "id": "main.s3.w24.node.line.001",
-      "lineId": "main.s3.w24.line.001",
+      "id": "main.s3.w24.node.line.001a",
+      "lineId": "main.s3.w24.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "旧会場は、朝から満員だった。四百年目の審理は、立ち見まで出ている。開廷の鐘の代わりに、開演の太鼓が鳴った。裁きが興行なら、支度はいつもの支度である。深呼吸を、ひとつ。",
+      "text": "旧会場は、朝から満員だった。四百年目の審理は、立ち見まで出ている。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w24.node.line.001b",
+      "lineId": "main.s3.w24.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "開廷の鐘の代わりに、開演の太鼓が鳴った。裁きが興行なら、支度はいつもの支度だ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w24.node.line.001c",
+      "lineId": "main.s3.w24.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "耳の先が、冷たかった。深呼吸を、ひとつ。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s3.w24.node.line.002",
-      "lineId": "main.s3.w24.line.002",
+      "id": "main.s3.w24.node.line.002a",
+      "lineId": "main.s3.w24.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "今日、取りに来たものは、一つだけ。私の欄、である。鞄には名簿と、勝ちの記録と、写しの束。それから、三年ぶんの、この街での暮らし。"
+      "text": "今日、取りに来たものは、一つだけ。私の欄だ。"
     },
     {
       "type": "line",
-      "id": "main.s3.w24.node.line.003",
-      "lineId": "main.s3.w24.line.003",
+      "id": "main.s3.w24.node.line.002b",
+      "lineId": "main.s3.w24.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "向こうの席には、ポラリスさんと、その上役たち。真ん中の高い席には、協議会から来た裁き役さん——白髭の、眠そうなおじいさんである。拍子木が鳴った。「はじめます。四百年前の取り決めの、当否について」。",
+      "text": "鞄には名簿と、勝ちの記録と、写しの束。それから、三年ぶんの、この街での暮らし。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w24.node.line.003a",
+      "lineId": "main.s3.w24.line.003a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "向こうの席には、ポラリスさんと、その上役たち。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w24.node.line.003b",
+      "lineId": "main.s3.w24.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "真ん中の高い席に、協議会の裁き役さん——白髭の、眠そうなおじいさんだ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w24.node.line.003c",
+      "lineId": "main.s3.w24.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "拍子木が鳴った。「はじめます。四百年前の取り決めの、当否について」",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s3.w24.node.line.004",
-      "lineId": "main.s3.w24.line.004",
+      "id": "main.s3.w24.node.line.004a",
+      "lineId": "main.s3.w24.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "先に、向こうの言い分。「預かりは、世界を回すための、正しい決まりでした」。こちらは、二枚で返す。一枚——承認の欄は、空欄のまま(説明の会で、この会場の皆が見ている)。二枚——但し書きは「女神の帰還まで」。預かりは、はじめから期限つき。",
+      "text": "先に、向こうの言い分。「預かりは、世界を回すための、正しい決まりでした」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w24.node.line.004b",
+      "lineId": "main.s3.w24.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "こちらは、二枚で返す。一枚——承認の欄は、空欄のままだ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w24.node.line.004c",
+      "lineId": "main.s3.w24.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "会場の皆が、もう見ている。二枚——但し書きには「女神の帰還まで」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w24.node.line.004d",
+      "lineId": "main.s3.w24.line.004d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "とあった。預かりは、期限つきだ。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s3.w24.node.line.005",
-      "lineId": "main.s3.w24.line.005",
+      "id": "main.s3.w24.node.line.005a",
+      "lineId": "main.s3.w24.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "三枚目は、紙ではなかった。湯の、貸し借りの帳面である。番台のおじいさんが、証言の席でゆっくり開いた。「この子が来た晩、うちはタオルを一本、貸した。所有より先に、貸し借りがあった。——この街は最初っから、この子を客として迎えとるんだ」。会場が、今日いちばん静かになった。",
+      "text": "三枚目は、紙ではなかった。湯の、貸し借りの帳面だ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w24.node.line.005b",
+      "lineId": "main.s3.w24.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "番台のおじいさんが、証言の席でゆっくり開いた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w24.node.line.005c",
+      "lineId": "main.s3.w24.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「この子が来た晩、うちはタオルを一本、貸した。所有より先に、貸し借りがあった」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w24.node.line.005d",
+      "lineId": "main.s3.w24.line.005d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「——この街は最初っから、この子を客として迎えとるんだ」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w24.node.line.005e",
+      "lineId": "main.s3.w24.line.005e",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "会場が、今日いちばん静かになった。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s3.w24.node.line.006",
-      "lineId": "main.s3.w24.line.006",
+      "id": "main.s3.w24.node.line.006a",
+      "lineId": "main.s3.w24.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "それから、百の名前を出した。積めば、山である。でも、読み上げれば、一枚ずつは顔だ。仲居さん。湯守さんたち。焼き餅屋のおばちゃん。鱗が一枚。最後の一枚を読んだ裁き役さんの、眉が上がった。「……アルデバラン社、再演企画室、室長?」。会場が、揺れた。",
+      "text": "それから、百の名前を出した。積めば山、読み上げれば顔だ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w24.node.line.006b",
+      "lineId": "main.s3.w24.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "仲居さん。湯守さんたち。焼き餅屋のおばちゃん。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w24.node.line.006c",
+      "lineId": "main.s3.w24.line.006c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "鱗が一枚。最後の一枚を読んだ裁き役さんの、眉が上がった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w24.node.line.006d",
+      "lineId": "main.s3.w24.line.006d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「……アルデバラン社、再演企画室、室長?」会場が、揺れた。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s3.w24.node.line.007",
-      "lineId": "main.s3.w24.line.007",
+      "id": "main.s3.w24.node.line.007a",
+      "lineId": "main.s3.w24.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "裁き役さんは、長いこと名簿を見ていた。それから、制度の言葉で言った。「承認なき裁定は、当事者百名の連署をもって、破棄する」。一拍おいて、人間の言葉が続いた。「——お嬢さん。よく集めなさった。四百年、誰もやらなかったことです」。",
+      "text": "裁き役さんは、長いこと名簿を見ていた。それから、制度の言葉で言った。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w24.node.line.007b",
+      "lineId": "main.s3.w24.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「承認なき裁定は、当事者百名の連署をもって、破棄する」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w24.node.line.007c",
+      "lineId": "main.s3.w24.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "一拍おいて、人間の言葉が続いた。「——お嬢さん。よく集めなさった」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w24.node.line.007d",
+      "lineId": "main.s3.w24.line.007d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「四百年、誰もやらなかったことです」",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s3.w24.node.line.008",
-      "lineId": "main.s3.w24.line.008",
+      "id": "main.s3.w24.node.line.008a",
+      "lineId": "main.s3.w24.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "続いて、償いの談判になった。四百年ぶんの利子、と係の人が算盤を弾き——桁が、足りなくなった。会場が笑いに沸く中で、手を挙げる。「お金は、結構です。代わりに、新しい闘技場の建て替えに、力を貸してください。それから——」。",
+      "text": "続いて、償いの談判になった。四百年ぶんの利子を、係の人が算盤で弾く。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w24.node.line.008b",
+      "lineId": "main.s3.w24.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "桁が、足りなくなった。会場が、笑いに沸いた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w24.node.line.008c",
+      "lineId": "main.s3.w24.line.008c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "手を挙げる。「お金は、結構です。代わりに、新しい闘技場の建て替えに、力を貸してください」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w24.node.line.008d",
+      "lineId": "main.s3.w24.line.008d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「それから……」",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s3.w24.node.line.009",
-      "lineId": "main.s3.w24.line.009",
+      "id": "main.s3.w24.node.line.009a",
+      "lineId": "main.s3.w24.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「私の名前を、返してください」。裁き役さんが、頷いた。運ばれてきた目録の写しの、所有者の欄に、借りた筆で線を引く。六本の赤線と、同じ引き方で。空いた欄に、書いた。**本人**。",
+      "text": "「私の名前を、返してください」裁き役さんが、頷いた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w24.node.line.009b",
+      "lineId": "main.s3.w24.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "運ばれてきた目録の写しの、所有者の欄に、借りた筆で線を引く。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w24.node.line.009c",
+      "lineId": "main.s3.w24.line.009c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "六本の赤線と同じ引き方で、空いた欄に**本人**と書いた。",
       "emotion": "resolve"
     },
     {
       "type": "line",
-      "id": "main.s3.w24.node.line.010",
-      "lineId": "main.s3.w24.line.010",
+      "id": "main.s3.w24.node.line.010a",
+      "lineId": "main.s3.w24.line.010a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "客席の音を、どう書けばいいのか、分からない。太鼓と、拍手と、誰かの泣き笑い。向こうの席で、ポラリスさんが深く一礼するのが見えた。上役たちの誰よりも、深い礼だった。",
+      "text": "客席の音を、どう書けばいいのか、分からない。太鼓と、拍手と、誰かの泣き笑い。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w24.node.line.010b",
+      "lineId": "main.s3.w24.line.010b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "向こうの席で、ポラリスさんが深く一礼した。上役たちの誰よりも、深い礼だった。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s3.w24.node.line.011",
-      "lineId": "main.s3.w24.line.011",
+      "id": "main.s3.w24.node.line.011a",
+      "lineId": "main.s3.w24.line.011a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "裁き役さんが、木槌の代わりに、開演の拍子木を打った。「では——結びの興行を。この裁きの締めは、この街の作法で」。準決勝の入場口が、光っている。今日の砂は、私の砂だ。",
+      "text": "裁き役さんが、木槌の代わりに、開演の拍子木を打った。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w24.node.line.011b",
+      "lineId": "main.s3.w24.line.011b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「では、結びの興行を。この裁きの締めは、この街の作法で」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w24.node.line.011c",
+      "lineId": "main.s3.w24.line.011c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "準決勝の入場口が、光っている。今日の砂は、私の砂だ。",
       "emotion": "resolve"
     },
     {
@@ -141,23 +383,33 @@
         {
           "id": "main.s3.w24.choice.001",
           "label": "今夜のうちに、百人へ報せの文を書く",
-          "result": "百枚の報せを、また夜なべで書いた。「破棄、なりました。名前、返ってきました」。それだけの文なのに、書くたびに手が止まる。一枚ずつ、顔が浮かぶからである。人魚さんへの貝紙には、鱗のお返しに、新しい闘技場のこけらを一片、包んだ。海の底にも、祝いの匂いは届くはずだ。",
+          "result": "百枚の報せを、また夜なべで書いた。「破棄、なりました。名前、返ってきました」。一枚ずつ、顔が浮かんで、手が止まる。人魚さんの貝紙には、こけらを一片、包んだ。海の底にも、祝いは届くはずだ。",
           "intent": "名前をくれた全員に、真っ先に届ける",
           "promise": "百の顔に喜びが届く代わりに、今夜も寝る時間が消える",
           "memory": "こけらを一片包んだ、貝紙の報せ",
           "tone": "heroic",
-          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
           "goto": "main.s3.w24.node.end.001"
         },
         {
           "id": "main.s3.w24.choice.002",
           "label": "判決の写しを、掲示板のいちばん目立つ場所へ",
-          "result": "写しを一枚もらって、広場の掲示板の、いちばん高いところに貼った。黒い封蝋の告示が貼られた、あの場所である。夕方には、写しの余白が子どもの落書きで埋まり始めた。兎の耳と、下手な字。「かきおとし みにいく」。——正式の紙が、街の紙になっていく。",
+          "result": "写しを一枚もらって、広場の掲示板のいちばん高いところに貼った。黒い封蝋の告知があった、あの場所だ。夕方には、余白が子どもの落書きで埋まった。兎の耳と、下手な字。「かきおとし みにいく」。正式の紙が、街の紙になっていく。",
           "intent": "勝ちを、私のものでなく街のものにする",
           "promise": "街全体の祝いになる代わりに、百人への報せは明日回しになる",
           "memory": "告示の場所に貼り直された、判決の写し",
           "tone": "pragmatic",
-          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
           "goto": "main.s3.w24.node.end.001"
         }
       ]
@@ -171,7 +423,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "3周目・週24(裁判クライマックス。判決は試合の前に紙の上で確定し、準決勝は「結びの興行」=勝敗と判決を分離(ロバスト)。三枚目の証拠=湯の貸し借りの帳面(週14の回収)。意外な一筆=室長の読み上げ。判決二段(制度の言葉→人間の言葉)。慰謝料二段オチ(算盤の桁→建て替え+名前)。最後の赤線=自分の欄に「本人」)。Q=この街を引き受けるか / turn=行5(所有より先に貸し借りがあった) / hook=未決着の勝負(中)/pre-point / try=はい、そして / game=裁きの興行化(開演の太鼓→算盤の桁→拍子木) / carry=名簿100(週22)・貸し借りの帳面(週14)・空欄と期限(週6・9) / open=結びの興行と柿落とし(答え=週25-26) / newterm=なし",
+    "authorNote": "語り口V2・二行枠で改稿。3周目・週24(裁判クライマックス。判決は試合の前に紙の上で確定し、準決勝は「結びの興行」=勝敗と判決を分離(ロバスト)。三枚目の証拠=湯の貸し借りの帳面(週14の回収)。意外な一筆=室長の読み上げ。判決二段(制度の言葉→人間の言葉)。慰謝料二段オチ(算盤の桁→建て替え+名前)。最後の赤線=自分の欄に「本人」)。Q=この街を引き受けるか / turn=行5(所有より先に貸し借りがあった) / hook=未決着の勝負(中)/pre-point / try=はい、そして / game=裁きの興行化(開演の太鼓→算盤の桁→拍子木) / carry=名簿100(週22)・貸し借りの帳面(週14)・空欄と期限(週6・9) / open=結びの興行と柿落とし(答え=週25-26) / newterm=なし",
     "legacyGeneratedIds": false
   }
 }

@@ -8,9 +8,20 @@
     "arcId": "main.stage3"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -35,12 +46,18 @@
     {
       "type": "direction",
       "id": "main.s3.w20.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s3.w20.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s3.w20.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "direction",
       "id": "main.s3.w20.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
     },
     {
       "type": "direction",
@@ -55,82 +72,218 @@
     },
     {
       "type": "line",
-      "id": "main.s3.w20.node.line.001",
-      "lineId": "main.s3.w20.line.001",
+      "id": "main.s3.w20.node.line.001a",
+      "lineId": "main.s3.w20.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "大会の週の朝、受付に白手袋が立っていた。ポラリスさん本人が、である。目録のときより、深い礼だった。嫌な予感は、礼の深さに比例する。",
+      "text": "大会の週の朝、受付に白手袋が立っていた。ポラリスさん本人だ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w20.node.line.001b",
+      "lineId": "main.s3.w20.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "目録のときより、深い礼だった。……嫌な予感は、礼の深さに比例する。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s3.w20.node.line.002",
-      "lineId": "main.s3.w20.line.002",
+      "id": "main.s3.w20.node.line.002a",
+      "lineId": "main.s3.w20.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "差し出された紙は、短かった。「争いの対象となった一件は、裁きの日まで、封をして預かる」。……封。読み下すのに、少し時間が要った。争いの対象の一件とは——私、である。"
+      "text": "差し出された紙は、短かった。「争いの対象となった一件は、裁きの日まで、封をして預かる」"
     },
     {
       "type": "line",
-      "id": "main.s3.w20.node.line.003",
-      "lineId": "main.s3.w20.line.003",
+      "id": "main.s3.w20.node.line.002b",
+      "lineId": "main.s3.w20.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「執行は、今夜です」。声は、いつも通りだった。いつも通りにしようとして、少しだけ、失敗していた。「上の決定です。日付は、守られました。ですが……このような形は、私の望みでは、ありません」。",
+      "text": "……封、読み下すのに、少し時間が要った。争いの対象の一件とは——私だ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w20.node.line.003a",
+      "lineId": "main.s3.w20.line.003a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「執行は、今夜です」声は、いつも通りだった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w20.node.line.003b",
+      "lineId": "main.s3.w20.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "いつも通りにしようとして、少しだけ、失敗していた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w20.node.line.003c",
+      "lineId": "main.s3.w20.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「上の決定です。日付は、守られました」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w20.node.line.003d",
+      "lineId": "main.s3.w20.line.003d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「ですが……このような形は、私の望みでは、ありません」",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s3.w20.node.line.004",
-      "lineId": "main.s3.w20.line.004",
+      "id": "main.s3.w20.node.line.004a",
+      "lineId": "main.s3.w20.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "封をされると、どうなるのか。「巻き戻る側の人々から、見えなくなります。裁きの日まで」。街から、私が消えるのだ。祭りからも、賭場の板の前からも、焼き餅の列からも。",
+      "text": "封をされると、どうなるのか。「巻き戻る側の人々から、見えなくなります。裁きの日まで」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w20.node.line.004b",
+      "lineId": "main.s3.w20.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "街から、私が消えるのだ。祭りからも、賭場の板の前からも、焼き餅の列からも。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w20.node.line.004c",
+      "lineId": "main.s3.w20.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……正直に言えば、少し、怖い。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s3.w20.node.line.005",
-      "lineId": "main.s3.w20.line.005",
+      "id": "main.s3.w20.node.line.005a",
+      "lineId": "main.s3.w20.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "仲間が、割って入った。「見えなくなるって、俺たちもですか」「いいえ。暦の外の方々と、来た口の方々には、見えたままです」。……家は、残る。家は残るが——街を、取り上げられる。",
+      "text": "仲間が、割って入った。「見えなくなるって、俺たちもですか」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w20.node.line.005b",
+      "lineId": "main.s3.w20.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「いいえ。暦の外の方々と、来た口の方々には、見えたままです」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w20.node.line.005c",
+      "lineId": "main.s3.w20.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……家は、残る。家は残るが——街を、取り上げられる。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s3.w20.node.line.006",
-      "lineId": "main.s3.w20.line.006",
+      "id": "main.s3.w20.node.line.006a",
+      "lineId": "main.s3.w20.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "妙に冷静な頭が、そうか、と言う。回収も、値札も、結局はこれだったのだ。数える側は、見える側を決められる。四百年、この世界でいちばん強かったのは、腕でも興行でもなく——帳面だったのである。",
+      "text": "妙に冷静な頭が、そうか、と言う。回収も、値札も、結局はこれだったんだ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w20.node.line.006b",
+      "lineId": "main.s3.w20.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "数える側は、見える側を決められる。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w20.node.line.006c",
+      "lineId": "main.s3.w20.line.006c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……四百年、この世界でいちばん強かったのは、帳面だったんだ。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s3.w20.node.line.007",
-      "lineId": "main.s3.w20.line.007",
+      "id": "main.s3.w20.node.line.007a",
+      "lineId": "main.s3.w20.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "今夜までにやることを、決めた。昼の試合は、いつも通りに戦う。それから、街を目に焼き付けて回る。焼き餅を一枚。賭場の板を一目。湯の暖簾を、一撫で。行く先々で、いつも通りに手を振った。いつも通りが、今夜から、いちばん遠くなる。",
+      "text": "今夜までにやることを、決めた。昼の試合は、いつも通りに戦う。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w20.node.line.007b",
+      "lineId": "main.s3.w20.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "それから、街を目に焼き付けて回る——焼き餅を一枚、賭場の板を一目。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w20.node.line.007c",
+      "lineId": "main.s3.w20.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "湯の暖簾を、一撫で。行く先々で、いつも通りに手を振った。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w20.node.line.007d",
+      "lineId": "main.s3.w20.line.007d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……いつも通りが、今夜から、いちばん遠くなる。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s3.w20.node.line.008",
-      "lineId": "main.s3.w20.line.008",
+      "id": "main.s3.w20.node.line.008a",
+      "lineId": "main.s3.w20.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "夜。封は、音もなく執り行われた。痛くも、痒くもない。ただ、通りすがりの常連さんの目が、私の上を、すっと素通りした。それだけのことが、こんなに静かに効くとは。",
+      "text": "夜、封は、音もなく執り行われた。痛くも、痒くもない。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w20.node.line.008b",
+      "lineId": "main.s3.w20.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ただ、通りすがりの常連さんの目が、私の上を、すっと素通りした。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w20.node.line.008c",
+      "lineId": "main.s3.w20.line.008c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "耳が、しゅんと、力なく垂れた。……それだけのことが、こんなに静かに効くとは。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s3.w20.node.line.009",
-      "lineId": "main.s3.w20.line.009",
+      "id": "main.s3.w20.node.line.009a",
+      "lineId": "main.s3.w20.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ポラリスさんが、帳面を閉じて、深く一礼した。「——裁きの日に、お会いします」。見えない私に向かって、まっすぐ礼をする人が、敵の側に一人いる。今夜は、それだけを貯金にする。",
+      "text": "ポラリスさんが帳面を閉じて、深く一礼した。「——裁きの日に、お会いします」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w20.node.line.009b",
+      "lineId": "main.s3.w20.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "見えない私に、まっすぐ礼をする人が、敵の側に一人いる。……今夜は、それだけを貯金にする。",
       "emotion": "resolve"
     },
     {
@@ -140,23 +293,33 @@
         {
           "id": "main.s3.w20.choice.001",
           "label": "最後の一回りを、笑って回る",
-          "result": "行く先々で、大きく手を振って回った。「なんだいミミさん、今日はご機嫌だね」「はい。とっても」。嘘ではない。見える最後の日に見せる顔を、選べるのは私だ。焼き餅屋のおばちゃんが、おまけを二枚くれた。「あんた、今日は二枚目の顔だよ」。……鋭い。涙は、裁きの日の後に取っておく。",
+          "result": "行く先々で、大きく手を振って回った。「今日はご機嫌だね」「はい、とっても」噓じゃない。焼き餅屋のおばちゃんが、おまけを二枚。「今日は、二枚目の顔だよ」……鋭い。涙は、後に取っておく。",
           "intent": "最後に見せる顔を、自分で選ぶ",
           "promise": "街の記憶に笑顔が残る代わりに、胸の底の心細さは自分持ちになる",
           "memory": "おまけ二枚と「二枚目の顔だよ」",
           "tone": "heroic",
-          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
           "goto": "main.s3.w20.node.end.001"
         },
         {
           "id": "main.s3.w20.choice.002",
           "label": "今夜のうちに、仲間へ全部を預ける",
-          "result": "夜までに、帳面を三冊、仲間に預けた。名簿。祝いの帳面。店の段取り帳。「私が見えなくても、店と祝いの支度は止めない。いいですね」「ミミさん」「はい」「——見えてますから、俺たちには。全部、いつも通りにやるだけです」。……それを聞きたくて、預けたのかもしれない。",
+          "result": "夜までに、帳面を三冊、仲間に預けた。名簿、祝いの帳面、店の段取り帳。「見えなくても、いいですね」「はい」「——見えてますから。いつも通りにやるだけです」……それを聞きたくて、預けたのかも。",
           "intent": "見えない週の備えを、家に託す",
           "promise": "店と祝いは止まらない代わりに、街回りの時間は削られる",
           "memory": "仲間に預けた、三冊の帳面",
           "tone": "pragmatic",
-          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
           "goto": "main.s3.w20.node.end.001"
         }
       ]
@@ -170,7 +333,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "3周目・週20(どん底=封。試合の結果には触れず、封は結果と無関係に夜に執行(システム注文4と同型)。全員の名前を取り返してきた人が、街から見えなくなる)。Q=この街を引き受けるか / value=街 +→-(取り上げられる) / turn=行6(いちばん強いのは帳面) / hook=保留された返事(大)/post-point / try=いいえ、しかも / game=礼の深さ(嫌な予感は礼に比例→いつも通りの失敗→見えない私への一礼) / carry=裁きの日(週13)・ポラリスの芯(週12) / open=見えない週をどう生きるか(答え=週21) / newterm=封(紙の引用と同ノードで作用提示)",
+    "authorNote": "語り口V2・二行枠で改稿。 / 3周目・週20(どん底=封。試合の結果には触れず、封は結果と無関係に夜に執行(システム注文4と同型)。全員の名前を取り返してきた人が、街から見えなくなる)。Q=この街を引き受けるか / value=街 +→-(取り上げられる) / turn=行6(いちばん強いのは帳面) / hook=保留された返事(大)/post-point / try=いいえ、しかも / game=礼の深さ(嫌な予感は礼に比例→いつも通りの失敗→見えない私への一礼) / carry=裁きの日(週13)・ポラリスの芯(週12) / open=見えない週をどう生きるか(答え=週21) / newterm=封(紙の引用と同ノードで作用提示)",
     "legacyGeneratedIds": false
   }
 }

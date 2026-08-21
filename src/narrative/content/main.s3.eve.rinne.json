@@ -8,9 +8,20 @@
     "arcId": "main.stage3"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 890,
     "weight": 1
   },
@@ -20,8 +31,14 @@
       {
         "id": "main.s3.eve.rinne.asset.background.001",
         "kind": "background",
-        "path": "/assets/story/bg-casino-cafe-night.png",
-        "alt": "前夜祭の夜の街の背景"
+        "path": "/assets/story/bg-festival-shooting-gallery-night-v2.png",
+        "alt": "兎の耳の周囲に九発の外れ跡が残る前夜祭の射的屋台"
+      },
+      {
+        "id": "main.s3.eve.rinne.asset.sprite.rinne",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/rinne.png",
+        "alt": "未来を賭ける勝負師リンネ"
       }
     ]
   },
@@ -29,89 +46,207 @@
     {
       "type": "direction",
       "id": "main.s3.eve.rinne.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s3.eve.rinne.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s3.eve.rinne.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "direction",
       "id": "main.s3.eve.rinne.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.eve.rinne.node.direction.rinne.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s3.eve.rinne.asset.sprite.rinne",
+        "actorId": "rinne",
+        "slot": "right",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
-      "id": "main.s3.eve.rinne.node.line.001",
-      "lineId": "main.s3.eve.rinne.line.001",
+      "id": "main.s3.eve.rinne.node.line.001a",
+      "lineId": "main.s3.eve.rinne.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "前夜祭を、リンネと回ることになった。待ち合わせの目印は、「いちばん行列の短い屋台」。彼女がいると、賭け事の屋台は商売にならないからである。的中固定を、壊した側と壊された側の、両方を知る人だ。",
+      "text": "前夜祭を、リンネと回ることになった。待ち合わせの目印は、「いちばん行列の短い屋台」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.rinne.node.line.001b",
+      "lineId": "main.s3.eve.rinne.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "彼女がいると、賭け事の屋台は商売にならない。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.rinne.node.line.001c",
+      "lineId": "main.s3.eve.rinne.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "的中固定を、壊した側と壊された側、両方を知る人だ。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s3.eve.rinne.node.line.002",
-      "lineId": "main.s3.eve.rinne.line.002",
+      "id": "main.s3.eve.rinne.node.line.002a",
+      "lineId": "main.s3.eve.rinne.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "射的の屋台で、彼女はコルクを九発、撃った。九発とも、外した。景品の兎の置物の、耳のすれすれを、九回。屋台のおじさんが唸る。「あんた、外すほうが難しいだろ、それ」。",
+      "text": "射的の屋台で、彼女はコルクを九発、撃った。九発とも、外した。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.rinne.node.line.002b",
+      "lineId": "main.s3.eve.rinne.line.002b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "景品の兎の置物の、耳のすれすれを、九回。屋台のおじさんが唸る。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.rinne.node.line.002c",
+      "lineId": "main.s3.eve.rinne.line.002c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「あんた、外すほうが難しいだろ、それ」",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s3.eve.rinne.node.line.003",
-      "lineId": "main.s3.eve.rinne.line.003",
+      "id": "main.s3.eve.rinne.node.line.003a",
+      "lineId": "main.s3.eve.rinne.line.003a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「外れる自由って、練習が要るんですよ」。リンネは、空の的を眺めて笑った。当たりしか引けなかった人の、これは、リハビリなのだ。九発の外れは、九発ぶんの自由である。",
+      "text": "「外れる自由って、練習が要るんですよ」リンネは、空の的を眺めて笑った。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.rinne.node.line.003b",
+      "lineId": "main.s3.eve.rinne.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "当たりしか引けなかった人の、これは、リハビリなのだ。九発の外れは、九発ぶんの自由だ。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s3.eve.rinne.node.line.004",
-      "lineId": "main.s3.eve.rinne.line.004",
+      "id": "main.s3.eve.rinne.node.line.004a",
+      "lineId": "main.s3.eve.rinne.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "十発目を、彼女は私に握らせた。「ミミさんの番」。撃った。外れた。私のは、練習でなく実力である。二人で、変な清々しさで笑った。景品は、取れていないのに。",
+      "text": "十発目を、彼女は私に握らせた。「ミミさんの番」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.rinne.node.line.004b",
+      "lineId": "main.s3.eve.rinne.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "撃って、外れた。私のは、練習でなく実力だ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.rinne.node.line.004c",
+      "lineId": "main.s3.eve.rinne.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "二人で、変な清々しさで笑った。景品は、取れていないのに。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s3.eve.rinne.node.line.005",
-      "lineId": "main.s3.eve.rinne.line.005",
+      "id": "main.s3.eve.rinne.node.line.005a",
+      "lineId": "main.s3.eve.rinne.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "帰り道、彼女は、待ち合わせの印にしているあのコインを、指で回した。裏も表も無い、音のいい空のコインである。「昔は、これで全部決めてました。当たると分かってる賭けだけ、してたので」。",
+      "text": "帰り道、彼女は待ち合わせの印のコインを、指で回した。裏も表も無い、音のいい空のコインだ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.rinne.node.line.005b",
+      "lineId": "main.s3.eve.rinne.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「昔は、これで全部決めてました」「当たると分かってる賭けだけ、してたので」",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s3.eve.rinne.node.line.006",
-      "lineId": "main.s3.eve.rinne.line.006",
+      "id": "main.s3.eve.rinne.node.line.006a",
+      "lineId": "main.s3.eve.rinne.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「でも、今夜は、当たるか分からない賭けを一つだけ、します」。コインが、夜空で一回転した。「ミミ。明日の柿落としの後も、あなたの隣は、面白いほうに賭けます」。",
+      "text": "「でも、今夜は、当たるか分からない賭けを一つだけ、します」コインが、夜空で一回転した。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.rinne.node.line.006b",
+      "lineId": "main.s3.eve.rinne.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「ミミ。明日の柿落としの後も、あなたの隣は、面白いほうに賭けます」",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s3.eve.rinne.node.line.007",
-      "lineId": "main.s3.eve.rinne.line.007",
+      "id": "main.s3.eve.rinne.node.line.007a",
+      "lineId": "main.s3.eve.rinne.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "受け止めたコインを、彼女は開かなかった。「結果は、見ません。外れても、賭け直すので」。……賭博師の口説き文句としては、たぶん、世界一誠実である。",
+      "text": "受け止めたコインを、彼女は開かなかった。「結果は、見ません。外れても、賭け直すので」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.rinne.node.line.007b",
+      "lineId": "main.s3.eve.rinne.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……賭博師の口説き文句としては、たぶん、世界一誠実だ。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s3.eve.rinne.node.line.008",
-      "lineId": "main.s3.eve.rinne.line.008",
+      "id": "main.s3.eve.rinne.node.line.008a",
+      "lineId": "main.s3.eve.rinne.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "別れぎわ、屋台のおじさんが走ってきて、兎の置物を押し付けていった。「九回も耳を撫でられたら、もうあんたらのもんだよ」。……当てずに景品を取る人の隣に、いると、こうなる。",
+      "text": "別れぎわ、屋台のおじさんが走ってきて、兎の置物を押し付けていった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.rinne.node.line.008b",
+      "lineId": "main.s3.eve.rinne.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「九回も耳を撫でられたら、もうあんたらのもんだよ」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.rinne.node.line.008c",
+      "lineId": "main.s3.eve.rinne.line.008c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……当てずに景品を取る人の隣に、いると、こうなる。",
       "emotion": "comic"
     },
     {
       "type": "effect",
       "id": "main.s3.eve.rinne.node.effect.001",
-      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+      "effects": [
+        {
+          "type": "sharedPoints",
+          "amount": 2
+        }
+      ]
     },
     {
       "type": "end",
@@ -122,7 +257,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "3周目・本命前夜(リンネ)。bond「当てない射的」の様式の続き+外れる自由(2周目赤線三本目)のリハビリとしての外し。空のコイン(meet)の再登場。賭けない人の一つだけの賭け=結果を見ない賭け。呼び方の一段=名前呼び。",
+    "authorNote": "語り口V2・二行枠で改稿。3周目・本命前夜(リンネ)。bond「当てない射的」の様式の続き+外れる自由(2周目赤線三本目)のリハビリとしての外し。空のコイン(meet)の再登場。賭けない人の一つだけの賭け=結果を見ない賭け。呼び方の一段=名前呼び。",
     "legacyGeneratedIds": false
   }
 }

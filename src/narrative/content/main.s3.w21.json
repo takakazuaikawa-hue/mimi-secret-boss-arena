@@ -8,9 +8,20 @@
     "arcId": "main.stage3"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -22,6 +33,18 @@
         "kind": "background",
         "path": "/assets/story/bg-employee-cafeteria-day-v1.png",
         "alt": "従業員食堂の背景"
+      },
+      {
+        "id": "main.s3.w21.asset.sprite.mimi.smile",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-smile-v1.png",
+        "alt": "笑顔のミミ"
+      },
+      {
+        "id": "main.s3.w21.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
       }
     ]
   },
@@ -29,97 +52,258 @@
     {
       "type": "direction",
       "id": "main.s3.w21.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s3.w21.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s3.w21.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "direction",
       "id": "main.s3.w21.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.w21.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s3.w21.asset.sprite.mimi.smile",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
-      "id": "main.s3.w21.node.line.001",
-      "lineId": "main.s3.w21.line.001",
+      "id": "main.s3.w21.node.line.001a",
+      "lineId": "main.s3.w21.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "見えなくなって、最初の朝は、静かだった。まかないに降りると、私の席に、湯気の立つ椀が置いてある。いつも通りの、私のぶんが。おばちゃんには、私が見えない。見えないのに——手が、覚えているのだ。",
+      "text": "見えなくなって、最初の朝は、しんとしていた。まかないに降りると、私の席に、湯気の椀。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w21.node.line.001b",
+      "lineId": "main.s3.w21.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "いつも通りの、私のぶんだ。おばちゃんには、見えないのに——手が、覚えていた。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s3.w21.node.line.002",
-      "lineId": "main.s3.w21.line.002",
+      "id": "main.s3.w21.node.line.002a",
+      "lineId": "main.s3.w21.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "今日の用は、見えないなりに、支度を続けることだ。裁きの日は近い。名簿の清書、祝いの帳面、勝ちの記録の綴じ直し。手は動く。手を止めたら、この静けさに負ける。"
+      "text": "今日の用は、支度を続けること。裁きの日は近い。"
     },
     {
       "type": "line",
-      "id": "main.s3.w21.node.line.003",
-      "lineId": "main.s3.w21.line.003",
+      "id": "main.s3.w21.node.line.002b",
+      "lineId": "main.s3.w21.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "街に出ると、見えないことの、妙な景色が見えてきた。賭場の板に、私の枠がまだ残っている。「ミミさんの言い分、通るか通らぬか」。倍率は、今日も少しずつ動く。誰が賭けているのか、皆はもう覚えていないのに——名前だけが、消えていない。",
+      "text": "名簿の清書、祝いの帳面、勝ちの記録の綴じ直し。手を止めたら、この静けさに負ける気がした。"
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.w21.node.direction.mimi.shift.001",
+      "command": {
+        "type": "show",
+        "assetId": "main.s3.w21.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w21.node.line.003a",
+      "lineId": "main.s3.w21.line.003a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "街に出ると、賭場の板に、私の枠が残っていた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w21.node.line.003b",
+      "lineId": "main.s3.w21.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「ミミさんの言い分、通るか通らぬか」倍率は、今日も、少しずつ動く。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w21.node.line.003c",
+      "lineId": "main.s3.w21.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "誰が賭けているのか、みんなもう忘れたのに——名前だけが、消えていない。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s3.w21.node.line.004",
-      "lineId": "main.s3.w21.line.004",
+      "id": "main.s3.w21.node.line.004a",
+      "lineId": "main.s3.w21.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "焼き餅の列では、常連さんが首をかしげていた。「なんで俺、二枚買ったんだ?」。おまけの一枚を誰にあげるつもりだったのか、思い出せない顔である。……すみません。それ、たぶん私のぶんです。",
+      "text": "焼き餅の列で、常連さんが首をかしげていた。「なんで俺、二枚買ったんだ?」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w21.node.line.004b",
+      "lineId": "main.s3.w21.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "誰にあげる気だったか、思い出せない顔。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w21.node.line.004c",
+      "lineId": "main.s3.w21.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……すみません。それ、たぶん私のぶんです。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s3.w21.node.line.005",
-      "lineId": "main.s3.w21.line.005",
+      "id": "main.s3.w21.node.line.005a",
+      "lineId": "main.s3.w21.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "記録室では、司書さん(来た口である)が、いつも通りに迎えてくれた。それから、閲覧札の棚を指す。「外しませんよ、ミミさんの札は。決まりに、外せとは書いてないので」。私の札は、今日も棚に挂かっている。",
+      "text": "記録室の司書さんは、来た口の人だ。いつもどおりに、迎えてくれた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w21.node.line.005b",
+      "lineId": "main.s3.w21.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "それから、閲覧札の棚を指す。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w21.node.line.005c",
+      "lineId": "main.s3.w21.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「外しませんよ、ミミさんの札は。決まりに、外せとは書いてないので」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w21.node.line.005d",
+      "lineId": "main.s3.w21.line.005d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私の札は、今日も棚に掛かっている。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s3.w21.node.line.006",
-      "lineId": "main.s3.w21.line.006",
+      "id": "main.s3.w21.node.line.006a",
+      "lineId": "main.s3.w21.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "その隣に、ずいぶん古い札が一枚あるのに、初めて気づいた。木が飴色で、字が掠れている。「これは?」「さあ。私が来たときには、もう。——四百年、返しに来ない人が、いるんですよ」。……どこかで、聞いた話である。",
+      "text": "その隣に、古い札が一枚。木は飴色で、字が掠れている。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w21.node.line.006b",
+      "lineId": "main.s3.w21.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「これは?」「さあ。私が来たときには、もう」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w21.node.line.006c",
+      "lineId": "main.s3.w21.line.006c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「——四百年、返しに来ない人が、いるんですよ」……どこかで、聞いた話だ。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s3.w21.node.line.007",
-      "lineId": "main.s3.w21.line.007",
+      "id": "main.s3.w21.node.line.007a",
+      "lineId": "main.s3.w21.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "夕方、涙が出そうになって、やめた。悲しいから、ではない。逆である。人の目は素通りするのに——席が、椀が、板の枠が、札が、私を覚えている。この街の習慣という習慣が、私の形に、凹んでいるのだ。",
+      "text": "夕方、涙が出そうになって、やめた。悲しいから、ではない。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w21.node.line.007b",
+      "lineId": "main.s3.w21.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "人の目は素通りするのに——席が、椀が、板の枠が、私を覚えている。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w21.node.line.007c",
+      "lineId": "main.s3.w21.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "耳が、ひとりでに、ぴんと立った。この街の習慣が、私の形に、凹んでいるのだ。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s3.w21.node.line.008",
-      "lineId": "main.s3.w21.line.008",
+      "id": "main.s3.w21.node.line.008a",
+      "lineId": "main.s3.w21.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "夜、祝いの帳面を開くと、覚えのない字が増えていた。仲間の字。ノノさんの字。大工さんの字。「舞台の寸法、決まりました」「幕の布、良いのが入ります」。見えない一週間のあいだも、祝いは、みんなの手で進んでいる。",
+      "text": "夜、祝いの帳面を開くと、覚えのない字が増えていた。仲間の字、ノノさんの字、大工さんの字。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w21.node.line.008b",
+      "lineId": "main.s3.w21.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「舞台の寸法、決まりました」「幕の布、良いのが入ります」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w21.node.line.008c",
+      "lineId": "main.s3.w21.line.008c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "見えない一週間も、祝いは、みんなの手で進んでいた。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s3.w21.node.line.009",
-      "lineId": "main.s3.w21.line.009",
+      "id": "main.s3.w21.node.line.009a",
+      "lineId": "main.s3.w21.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "帰り道の人混みで、一人だけ、私を避けて歩いた人がいた。避けた——ということは、見えている。振り向くと、街灯の下で、会社の室長が、小さく会釈をした。",
+      "text": "帰り道、人混みの中で、一人だけ、私を避けた。避けた、ということは——見えている。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w21.node.line.009b",
+      "lineId": "main.s3.w21.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "振り向くと、街灯の下。会社の室長が、小さく会釈した。",
       "emotion": "tension"
     },
     {
       "type": "effect",
       "id": "main.s3.w21.node.effect.001",
-      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+      "effects": [
+        {
+          "type": "sharedPoints",
+          "amount": 2
+        }
+      ]
     },
     {
       "type": "end",
@@ -130,7 +314,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "3周目・週21(世界の覚醒の山場。台詞でなく習慣で描く——椀・板の枠・閲覧札。四百年物の札の一拍=説明しない(答え=週26)。引き=室長だけが見えている=来た口の証明、告白なしで)。Q=この街を引き受けるか / value=孤独 -→+(習慣が覚えている) / turn=行7(街の習慣が私の形に凹んでいる) / hook=閃き(大)/post-point / try=いいえ、しかし(見えないが、忘れられていない) / game=見えない景色(動く倍率→二枚買った謎→外されない札) / carry=封(週20)・祝いの帳面 / open=四百年の札の主(答え=週26)・室長には見える(答え=週22) / newterm=なし",
+    "authorNote": "語り口V2・二行枠で改稿。3周目・週21(世界の覚醒の山場。台詞でなく習慣で描く——椀・板の枠・閲覧札。四百年物の札の一拍=説明しない(答え=週26)。引き=室長だけが見えている=来た口の証明、告白なしで)。Q=この街を引き受けるか / value=孤独 -→+(習慣が覚えている) / turn=行7(街の習慣が私の形に凹んでいる) / hook=閃き(大)/post-point / try=いいえ、しかし(見えないが、忘れられていない) / game=見えない景色(動く倍率→二枚買った謎→外されない札) / carry=封(週20)・祝いの帳面 / open=四百年の札の主(答え=週26)・室長には見える(答え=週22) / newterm=なし",
     "legacyGeneratedIds": false
   }
 }

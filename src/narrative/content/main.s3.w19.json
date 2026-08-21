@@ -8,9 +8,20 @@
     "arcId": "main.stage3"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -22,6 +33,18 @@
         "kind": "background",
         "path": "/assets/story/bg-arena-reception.png",
         "alt": "闘技場の正面受付の背景"
+      },
+      {
+        "id": "main.s3.w19.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
+      },
+      {
+        "id": "main.s3.w19.asset.sprite.mimi.smile",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-smile-v1.png",
+        "alt": "笑顔のミミ"
       }
     ]
   },
@@ -29,97 +52,290 @@
     {
       "type": "direction",
       "id": "main.s3.w19.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s3.w19.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s3.w19.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "direction",
       "id": "main.s3.w19.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.w19.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s3.w19.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
-      "id": "main.s3.w19.node.line.001",
-      "lineId": "main.s3.w19.line.001",
+      "id": "main.s3.w19.node.line.001a",
+      "lineId": "main.s3.w19.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "建て替えの下見が、受付の壁まで来た。趣意書の額——この闘技場の始まりの言葉を納めた、あの古い額も、一度外すことになる。大工さんが二人がかりで持ち上げて、「おっ」と声を出した。裏に、もう一枚、紙がある。",
+      "text": "建て替えの下見が、受付の壁まで来た。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w19.node.line.001b",
+      "lineId": "main.s3.w19.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "趣意書の額——始まりの言葉を納めた、あの古い額も外すことになる。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w19.node.line.001c",
+      "lineId": "main.s3.w19.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "大工さんが二人がかりで持ち上げて、「おっ」と声を出した。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w19.node.line.001d",
+      "lineId": "main.s3.w19.line.001d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……裏に、もう一枚、紙がある。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s3.w19.node.line.002",
-      "lineId": "main.s3.w19.line.002",
+      "id": "main.s3.w19.node.line.002a",
+      "lineId": "main.s3.w19.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "額の裏に紙の跡があるのは、去年から分かっていた。中身までは、誰も知らなかった。大工さんが慎重に剥がして、私の手に載せる。埃と、古い墨の匂い。古い、古い、手紙だった。"
+      "text": "額の裏に紙の跡があるのは、去年から分かっていた。"
     },
     {
       "type": "line",
-      "id": "main.s3.w19.node.line.003",
-      "lineId": "main.s3.w19.line.003",
+      "id": "main.s3.w19.node.line.002b",
+      "lineId": "main.s3.w19.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "読み上げる声が、途中で小さくなった。「——今夜、柿落としが終わった。皆が帰った。四百年で、いちばん良い夜だった」。日付は、四百年前。この闘技場の、最初の夜である。",
+      "text": "中身は、誰も知らなかった。大工さんが慎重に剥がして、私の手に載せる。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w19.node.line.002c",
+      "lineId": "main.s3.w19.line.002c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "埃と、古い墨の匂い。古い、古い、手紙だった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w19.node.line.003a",
+      "lineId": "main.s3.w19.line.003a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "読み上げる声が、途中で小さくなった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w19.node.line.003b",
+      "lineId": "main.s3.w19.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「——今夜、柿落としが終わった。皆が帰った。四百年で、いちばん良い夜だった」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w19.node.line.003c",
+      "lineId": "main.s3.w19.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……日付は、四百年前。この闘技場の、最初の夜だった。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s3.w19.node.line.004",
-      "lineId": "main.s3.w19.line.004",
+      "id": "main.s3.w19.node.line.004a",
+      "lineId": "main.s3.w19.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "続きは、こうだった。「終わらせたく、なかった。だから、同じ一年を、もう一度だけ、と書いた。もう一度だけ、もう一度だけ、と書いているうちに——やめ方が、分からなくなった」。",
+      "text": "続きは、こうだった。「終わらせたく、なかった」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w19.node.line.004b",
+      "lineId": "main.s3.w19.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「だから、同じ一年を、もう一度だけ、と書いた」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w19.node.line.004c",
+      "lineId": "main.s3.w19.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「もう一度だけ、もう一度だけ、と書いているうちに——」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w19.node.line.004d",
+      "lineId": "main.s3.w19.line.004d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……やめ方が、分からなくなった。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s3.w19.node.line.005",
-      "lineId": "main.s3.w19.line.005",
+      "id": "main.s3.w19.node.line.005a",
+      "lineId": "main.s3.w19.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "巻き戻る暦。同じ進行の祭り。続きの無い、続き。四百年の「もう一度だけ」の正体が、手のひらの上にあった。悪意では、なかったのだ。終わらせたくなかった誰かの、やめられなくなった、大事のしかたである。",
+      "text": "巻き戻る暦、同じ進行の祭り。続きの無い、続き。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w19.node.line.005b",
+      "lineId": "main.s3.w19.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "四百年の「もう一度だけ」の正体が、手のひらの上にあった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w19.node.line.005c",
+      "lineId": "main.s3.w19.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "悪意では、なかったんだ。宿題を、四百年、出しそびれた人みたいだ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w19.node.line.005d",
+      "lineId": "main.s3.w19.line.005d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……終わらせたくなかった誰かの、やめられなくなった、大事のしかただった。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s3.w19.node.line.006",
-      "lineId": "main.s3.w19.line.006",
+      "id": "main.s3.w19.node.line.006a",
+      "lineId": "main.s3.w19.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "仲間が、そっと覗き込んだ。「……誰が、書いたんです?」。手紙を、裏まで返す。無い。日付と、文と、それだけ。——署名だけが、無いのだ。",
+      "text": "仲間が、そっと覗き込んだ。「……誰が、書いたんです?」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w19.node.line.006b",
+      "lineId": "main.s3.w19.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "手紙を、裏まで返す——文字は、日付と本文だけ。……署名だけが、無いんだ。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s3.w19.node.line.007",
-      "lineId": "main.s3.w19.line.007",
+      "id": "main.s3.w19.node.line.007a",
+      "lineId": "main.s3.w19.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "四百年、この世界の続きを書いてきた誰かは、自分の名前だけ、書かなかった。書き忘れたのか。書けなかったのか。それとも——書く資格が無いと、思ったのか。",
-      "emotion": "tension"
+      "text": "四百年、続きを書いてきた誰かは、自分の名前だけ、書かなかった。書き忘れたのか。"
     },
     {
       "type": "line",
-      "id": "main.s3.w19.node.line.008",
-      "lineId": "main.s3.w19.line.008",
+      "id": "main.s3.w19.node.line.007b",
+      "lineId": "main.s3.w19.line.007b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "額は、元の壁に戻した。手紙は写しを取り、原本は祝いの帳面に、そっと挟んだ。始まりの言葉の裏で四百年待っていた手紙は、祝いの日に、ちゃんと返したい。誰に返すのかは、まだ分からないけれど。",
+      "text": "書けなかったのか。それとも——書く資格が無いと、思ったのか。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w19.node.line.007c",
+      "lineId": "main.s3.w19.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "耳が、少し、しゅんと下がった。",
+      "emotion": "tension"
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.w19.node.direction.mimi.shift.001",
+      "command": {
+        "type": "show",
+        "assetId": "main.s3.w19.asset.sprite.mimi.smile",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w19.node.line.008a",
+      "lineId": "main.s3.w19.line.008a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "額は、元の壁に戻した。手紙は写しを取り、原本は祝いの帳面に、そっと挟んだ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w19.node.line.008b",
+      "lineId": "main.s3.w19.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "始まりの言葉の裏で、四百年待っていた手紙。祝いの日に、ちゃんと返したい。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w19.node.line.008c",
+      "lineId": "main.s3.w19.line.008c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……誰に返すのかは、まだ分からないけれど。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s3.w19.node.line.009",
-      "lineId": "main.s3.w19.line.009",
+      "id": "main.s3.w19.node.line.009a",
+      "lineId": "main.s3.w19.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "その晩、名簿と手紙を、机に並べて気づいた。私はいま、名前を百、集めている。あの人は、四百年、名前を一つ書けずにいる。——どちらも、たった一つの名前の話なのだ。",
+      "text": "その晩、名簿と手紙を、机に並べて気づいた。私はいま、名前を百、集めている。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w19.node.line.009b",
+      "lineId": "main.s3.w19.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "あの人は四百年、名前を一つ書けずにいる。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w19.node.line.009c",
+      "lineId": "main.s3.w19.line.009c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……どちらも、たった一つの名前の話なんだ。",
       "emotion": "revelation"
     },
     {
       "type": "effect",
       "id": "main.s3.w19.node.effect.001",
-      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+      "effects": [
+        {
+          "type": "sharedPoints",
+          "amount": 2
+        }
+      ]
     },
     {
       "type": "end",
@@ -130,7 +346,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "3周目・週19(2周目w19「額の裏の紙の跡」の回収。台帳の書き手の層が開く=愛から始まったやめられない「もう一度だけ」。署名の無い手紙→週21の四百年物の閲覧札→週26の名前回収、の三段の一段目)。深刻一滴の許容週だが、大事のしかた、の語で温度を保つ。Q=この街を引き受けるか / value=敵 制度→不在の誰か / turn=行5(悪意ではなかった) / hook=半分の啓示(中)/post-point / try=いいえ、しかも(署名が無い) / game=なし(静の回。大工の「おっ」だけ) / carry=足場(週16)・祝いの帳面(週13) / open=書き手は誰か(答え=週21札の一拍→週26) / newterm=なし",
+    "authorNote": "語り口V2・二行枠で改稿。 / 3周目・週19(2周目w19「額の裏の紙の跡」の回収。台帳の書き手の層が開く=愛から始まったやめられない「もう一度だけ」。署名の無い手紙→週21の四百年物の閲覧札→週26の名前回収、の三段の一段目)。深刻一滴の許容週だが、大事のしかた、の語で温度を保つ。Q=この街を引き受けるか / value=敵 制度→不在の誰か / turn=行5(悪意ではなかった) / hook=半分の啓示(中)/post-point / try=いいえ、しかも(署名が無い) / game=なし(静の回。大工の「おっ」だけ) / carry=足場(週16)・祝いの帳面(週13) / open=書き手は誰か(答え=週21札の一拍→週26) / newterm=なし",
     "legacyGeneratedIds": false
   }
 }

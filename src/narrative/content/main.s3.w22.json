@@ -8,9 +8,20 @@
     "arcId": "main.stage3"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -22,6 +33,12 @@
         "kind": "background",
         "path": "/assets/story/bg-hot-spring-ryokan.png",
         "alt": "古い湯屋の背景"
+      },
+      {
+        "id": "main.s3.w22.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
       }
     ]
   },
@@ -29,91 +46,244 @@
     {
       "type": "direction",
       "id": "main.s3.w22.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s3.w22.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s3.w22.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "direction",
       "id": "main.s3.w22.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.w22.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s3.w22.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
-      "id": "main.s3.w22.node.line.001",
-      "lineId": "main.s3.w22.line.001",
+      "id": "main.s3.w22.node.line.001a",
+      "lineId": "main.s3.w22.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "湯けむりの中に、その人は、本当に来た。街いちばん古い湯の、いちばん熱い浴槽の縁に、会社の室長が、律儀な姿勢で浸かっている。「……考えて、おきました」。",
+      "text": "湯けむりの中に、その人は本当に来た。街いちばん古い湯の、熱い浴槽の縁。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w22.node.line.001b",
+      "lineId": "main.s3.w22.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "会社の室長が、律儀な姿勢で浸かっている。「……考えて、おきました」",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s3.w22.node.line.002",
-      "lineId": "main.s3.w22.line.002",
+      "id": "main.s3.w22.node.line.002a",
+      "lineId": "main.s3.w22.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "今日の用は、待つことだった。見えない私に会えるのは、湯の人たちだけ。だから名簿の最後の一枠は、湯で待つと決めていた。来るか来ないかは、あの人の帳面の話である。"
+      "text": "今日の用は、待つことだった。見えない私に会えるのは、湯の人たちだけ。"
     },
     {
       "type": "line",
-      "id": "main.s3.w22.node.line.003",
-      "lineId": "main.s3.w22.line.003",
+      "id": "main.s3.w22.node.line.002b",
+      "lineId": "main.s3.w22.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "室長は、湯の中で、ゆっくり話した。「私は——数えるのを、やめられない口です。この祭りが何回目か。この暦が何巡目か。数えて、数えて、疲れて。あるとき決めたんです。疑うのを、やめようと」。",
+      "text": "だから、名簿の最後の一枠は、湯で待つと決めていた。来るか来ないかは、あの人しだいだ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w22.node.line.003a",
+      "lineId": "main.s3.w22.line.003a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "室長は、湯の中で、ゆっくり話し出した。「私は——数えるのを、やめられない口です」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w22.node.line.003b",
+      "lineId": "main.s3.w22.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「この祭りが何回目か。この暦が何巡目か」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w22.node.line.003c",
+      "lineId": "main.s3.w22.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「数えて、数えて、疲れて。あるとき決めたんです」「疑うのを、やめようと」",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s3.w22.node.line.004",
-      "lineId": "main.s3.w22.line.004",
+      "id": "main.s3.w22.node.line.004a",
+      "lineId": "main.s3.w22.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「同じ一年を、良い再演にする側に回れば、数は、ただの仕事になる。……そうやって、私は会社の人間になりました。長く、なりました」。湯気の向こうの背中は、三年よりは、ずっと重い年月の形をしていた。",
+      "text": "「同じ一年を、良い再演にする側に回れば、数は、ただの仕事になる」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w22.node.line.004b",
+      "lineId": "main.s3.w22.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「……そうやって、私は会社の人間になりました。長く、なりました」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w22.node.line.004c",
+      "lineId": "main.s3.w22.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "湯気の向こうの背中は、三年よりずっと、重い年月の形をしていた。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s3.w22.node.line.005",
-      "lineId": "main.s3.w22.line.005",
+      "id": "main.s3.w22.node.line.005a",
+      "lineId": "main.s3.w22.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「あなたを見ていると、思い出す。数えるのが、怖くなかったころを。——去年の決勝は、良い興行だった。覚えていますよ。全部」。……やっぱり。「脇が締まった」の人である。",
+      "text": "「あなたを見ていると、思い出す。数えるのが、怖くなかったころを」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w22.node.line.005b",
+      "lineId": "main.s3.w22.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「——去年の決勝は、良い興行だった。覚えていますよ、全部」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w22.node.line.005c",
+      "lineId": "main.s3.w22.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……やっぱり、「脇が締まった」のあの人だ。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s3.w22.node.line.006",
-      "lineId": "main.s3.w22.line.006",
+      "id": "main.s3.w22.node.line.006a",
+      "lineId": "main.s3.w22.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私は、名簿を差し出した。言葉は、選ばなかった。「百人目を、お願いします」。室長は長いこと名簿を見て、手を拭いて、筆を取った。「——最後に、もう一度だけ、疑います」。",
+      "text": "私は、名簿を差し出した。「百人目を、お願いします」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w22.node.line.006b",
+      "lineId": "main.s3.w22.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "言葉は、選ばなかった。室長は長いこと見て、手を拭いて、筆を取った。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w22.node.line.006c",
+      "lineId": "main.s3.w22.line.006c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「——最後に、もう一度だけ、疑います」",
       "emotion": "resolve"
     },
     {
       "type": "line",
-      "id": "main.s3.w22.node.line.007",
-      "lineId": "main.s3.w22.line.007",
+      "id": "main.s3.w22.node.line.007a",
+      "lineId": "main.s3.w22.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "百の名前が、揃った。その瞬間の音を、私はたぶん、生涯忘れない。何も、鳴らなかったのだ。湯の音だけがして——帰り道、焼き餅屋のおばちゃんと、目が合った。「おや、ミミさん。今日は早いね」。見えて、いる。",
+      "text": "百の名前が、揃った。その瞬間の音を、私はたぶん、生涯忘れない。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w22.node.line.007b",
+      "lineId": "main.s3.w22.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "何も、鳴らなかった。湯の音だけがしていた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w22.node.line.007c",
+      "lineId": "main.s3.w22.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "——帰り道、焼き餅屋のおばちゃんと、目が合った。「おや、ミミさん。今日は早いね」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w22.node.line.007d",
+      "lineId": "main.s3.w22.line.007d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "見えて、いる。耳が、かっと熱くなった。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s3.w22.node.line.008",
-      "lineId": "main.s3.w22.line.008",
+      "id": "main.s3.w22.node.line.008a",
+      "lineId": "main.s3.w22.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "夕方には、ポラリスさんが受付に来ていた。「当事者百名の連署は、封より強い。決まりです」。少しだけ、走って来た息だった。「裁きの日も、繰り上げられます。ご希望は」「祝いの支度がありますから——早いほうで」。",
+      "text": "夕方には、ポラリスさんが受付に来ていた。少しだけ、走って来た息だった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w22.node.line.008b",
+      "lineId": "main.s3.w22.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「当事者百名の連署は、封より強い。決まりです」「裁きの日も、繰り上げられます。ご希望は」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w22.node.line.008c",
+      "lineId": "main.s3.w22.line.008c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「祝いの支度がありますから——早いほうで」",
       "emotion": "resolve"
     },
     {
       "type": "line",
-      "id": "main.s3.w22.node.line.009",
-      "lineId": "main.s3.w22.line.009",
+      "id": "main.s3.w22.node.line.009a",
+      "lineId": "main.s3.w22.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "板の前で、常連たちが騒いでいた。「ミミさんの枠、動いたぞ!」「戻ってきたのか!」。……ただいま、です。倍率は、聞かないでおいた。",
+      "text": "板の前で、常連たちが騒いでいた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w22.node.line.009b",
+      "lineId": "main.s3.w22.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「ミミさんの枠、動いたぞ!」「戻ってきたのか!」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w22.node.line.009c",
+      "lineId": "main.s3.w22.line.009c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ただいま、です。倍率は、聞かないでおいた。",
       "emotion": "comic"
     },
     {
@@ -123,23 +293,33 @@
         {
           "id": "main.s3.w22.choice.001",
           "label": "百人へ、祝いの招待状を書く",
-          "result": "百枚の招待状を、夜なべで書いた。宛名は、湯で会った顔を思い出しながら、一枚ずつ。人魚さんの一枚は、防水の貝紙にした。ノノさんが横で袋詰めをしながら言う。「祝いの中身、まだ白紙ですけど、いいんですか」「席が埋まれば、中身は決まります」。興行の順序としては、正しいはずである。",
+          "result": "百枚の招待状を、夜なべで書いた。人魚さんの一枚だけ、防水の貝紙にした。ノノさんが聞く。「中身、まだ白紙ですけど」「席が埋まれば、決まります」。それが、うちの順番だ。",
           "intent": "名前をくれた全員に、席で返す",
           "promise": "祝いの客席が固まる代わりに、寝る時間が一晩消える",
           "memory": "貝紙の一枚を含む、百枚の招待状",
           "tone": "heroic",
-          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
           "goto": "main.s3.w22.node.end.001"
         },
         {
           "id": "main.s3.w22.choice.002",
           "label": "まず、街へ「ただいま」を配って回る",
-          "result": "見える身体で、街をもう一回り。「ただいま」を、焼き餅屋から順に配って歩いた。「おかえり!」「どこ行ってたんだい」「ちょっと、遠くに」。噓ではない。列の最後で、剣士さんが火酒を掲げた。「よう分からんが、めでたい日じゃな!」。よく分からなくて、めでたい。この街の得意技である。",
+          "result": "見える体で、街をもう一回り。「ただいま」を、焼き餅屋から順に配った。「おかえり!」「どこ行ってたんだい」。噓じゃない。剣士さんが火酒を掲げる。「よう分からんが、めでたい日じゃな!」。よく分からず、めでたい。それが、この街だ。",
           "intent": "戻った足で、街の空気を確かめる",
           "promise": "街の熱が戻る代わりに、招待状は明日回しになる",
           "memory": "「よう分からんが、めでたい日じゃな!」",
           "tone": "pragmatic",
-          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
           "goto": "main.s3.w22.node.end.001"
         }
       ]
@@ -153,7 +333,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "3周目・週22(反転。百人目=室長。「最後に、もう一度だけ、疑います」。連署>封の様式で復元、裁きの日は週24へ繰り上げ(執り納めの日=年度末は柿落としの夜に転用)。Q=この街を引き受けるか / value=束 99→100・街 -→+(ただいま) / turn=行7(百が揃った音=無音、そして見えている) / hook=次に会う理由(中)/post-point / try=はい、そして(週20からTry切替: 3周目は週20で急へ) / game=律儀の続き(考えておきました→律儀な姿勢の入浴→筆の前の手拭き) / carry=湯への誘い(週17)・名簿99(週18)・室長だけ見えた(週21) / open=裁きの日の中身(答え=週24) / newterm=なし",
+    "authorNote": "語り口V2・二行枠で改稿。3周目・週22(反転。百人目=室長。「最後に、もう一度だけ、疑います」。連署>封の様式で復元、裁きの日は週24へ繰り上げ(執り納めの日=年度末は柿落としの夜に転用)。Q=この街を引き受けるか / value=束 99→100・街 -→+(ただいま) / turn=行7(百が揃った音=無音、そして見えている) / hook=次に会う理由(中)/post-point / try=はい、そして(週20からTry切替: 3周目は週20で急へ) / game=律儀の続き(考えておきました→律儀な姿勢の入浴→筆の前の手拭き) / carry=湯への誘い(週17)・名簿99(週18)・室長だけ見えた(週21) / open=裁きの日の中身(答え=週24) / newterm=なし",
     "legacyGeneratedIds": false
   }
 }

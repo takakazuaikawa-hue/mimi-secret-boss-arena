@@ -8,9 +8,20 @@
     "arcId": "main.stage3"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -47,12 +58,18 @@
     {
       "type": "direction",
       "id": "main.s3.w14.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s3.w14.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s3.w14.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "direction",
       "id": "main.s3.w14.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
     },
     {
       "type": "direction",
@@ -67,28 +84,68 @@
     },
     {
       "type": "line",
-      "id": "main.s3.w14.node.line.001",
-      "lineId": "main.s3.w14.line.001",
+      "id": "main.s3.w14.node.line.001a",
+      "lineId": "main.s3.w14.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "路地の奥の古い湯は、石鹸と薪の匂いがする。番台のおじいさんが、先週と同じ顔で笑った。「おや。今度は、覚えのある顔だ」。——先週の「三年ぶりだね」の答え合わせに、今日は来たのである。",
+      "text": "路地の奥の湯は、石鹸と薪の匂い。番台のおじいさんが、先週と同じ顔で笑った。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w14.node.line.001b",
+      "lineId": "main.s3.w14.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「おや。今度は、覚えのある顔だ」って、笑われた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w14.node.line.001c",
+      "lineId": "main.s3.w14.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……「三年ぶりだね」の答え合わせに、今日は来たんです。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s3.w14.node.line.002",
-      "lineId": "main.s3.w14.line.002",
+      "id": "main.s3.w14.node.line.002a",
+      "lineId": "main.s3.w14.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "今日の用は、二つ。名簿の二人目をお願いすること。それから、三年ぶりの意味を聞くことだ。私がこの湯に来たのは、どう数えても、先週が初めてなのだから。"
+      "text": "今日の用は、二つ。名簿の二人目をお願いすること。"
     },
     {
       "type": "line",
-      "id": "main.s3.w14.node.line.003",
-      "lineId": "main.s3.w14.line.003",
+      "id": "main.s3.w14.node.line.002b",
+      "lineId": "main.s3.w14.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "おじいさんは、番台の下から古い帳面を出した。湯の、貸し借りの帳面である。頁をめくり、三年前の日付を、とん、と指す。「タオル一本、貸し。未返却」。借り主の欄に——私の名前があった。",
+      "text": "それから、三年ぶりの意味を聞くこと。私がこの湯に来たのは、先週が初めてのはずなのに。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w14.node.line.003a",
+      "lineId": "main.s3.w14.line.003a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "おじいさんが番台の下から、古い帳面を出した。湯の貸し借りの帳面らしい。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w14.node.line.003b",
+      "lineId": "main.s3.w14.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "三年前の日付を、とん、と指す。「タオル一本、貸し。未返却」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w14.node.line.003c",
+      "lineId": "main.s3.w14.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "借り主の欄に——耳が、先に冷えた。私の名前だった。",
       "emotion": "tension"
     },
     {
@@ -104,29 +161,85 @@
     },
     {
       "type": "line",
-      "id": "main.s3.w14.node.line.004",
-      "lineId": "main.s3.w14.line.004",
+      "id": "main.s3.w14.node.line.004a",
+      "lineId": "main.s3.w14.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "覚えて、いない。「雨の晩でな。空から落ってきた子を、うちの常連が担ぎ込んだんだ。冷えきっとったから、湯で温めて、タオルを貸して帰した」。……この世界で私が最初に触れたのは、登録の紙ではなく、この湯だったのだ。",
+      "text": "覚えて、いない。「雨の晩でな、空から落ってきた子を、担ぎ込んだんだ」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w14.node.line.004b",
+      "lineId": "main.s3.w14.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「冷えきっとったから、湯で温めて、タオルを貸して帰した」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w14.node.line.004c",
+      "lineId": "main.s3.w14.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……この世界で最初に触れたのは、登録の紙じゃなく、この湯だったんだ。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s3.w14.node.line.005",
-      "lineId": "main.s3.w14.line.005",
+      "id": "main.s3.w14.node.line.005a",
+      "lineId": "main.s3.w14.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「それきり、来んかったがな」。返しに来なかった借り主に、おじいさんは笑って、湯呑みを差し出した。「なに、三年で返しに来りゃあ上等の口よ。世の中にゃ、四百年借りっぱなしの御仁もおるでな」。……四百年?",
+      "text": "「それきり、来んかったがな」おじいさんは笑って、湯呑みを差し出した。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w14.node.line.005b",
+      "lineId": "main.s3.w14.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「なに、三年で返しに来りゃあ上等の口よ」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w14.node.line.005c",
+      "lineId": "main.s3.w14.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「世の中にゃ、四百年借りっぱなしの御仁もおるでな」……四百年?",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s3.w14.node.line.006",
-      "lineId": "main.s3.w14.line.006",
+      "id": "main.s3.w14.node.line.006a",
+      "lineId": "main.s3.w14.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "湯に浸かって、分かったことがある。私の三年は、数えごとの紙で始まったのではない。担いでくれた誰かと、貸しタオル一本で始まったのだ。持ち物の帳面より、貸し借りの帳面のほうが、先だった。——それなら、私の言い分は、湯の側に理がある。",
+      "text": "湯に浸かって、分かったことがある。私の三年は、数えごとの紙で始まったんじゃない。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w14.node.line.006b",
+      "lineId": "main.s3.w14.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "担いでくれた誰かと、貸しタオル一本で始まったんだ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w14.node.line.006c",
+      "lineId": "main.s3.w14.line.006c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "持ち物の帳面より、貸し借りの帳面のほうが、先だった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w14.node.line.006d",
+      "lineId": "main.s3.w14.line.006d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……なら、私の言い分は、湯の側にある。",
       "emotion": "revelation"
     },
     {
@@ -142,35 +255,88 @@
     },
     {
       "type": "line",
-      "id": "main.s3.w14.node.line.007",
-      "lineId": "main.s3.w14.line.007",
+      "id": "main.s3.w14.node.line.007a",
+      "lineId": "main.s3.w14.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "番台で、名簿を開いた。おじいさんは眼鏡をかけ、思ったよりずっと丁寧な字で、名を書いた。二人目である。「常連にも、来た口が何人かおる。回しといてやろう」。湯には、回状という文化があるらしい。",
+      "text": "番台で、名簿を開いた。おじいさんは眼鏡をかけ、丁寧な字で名を書いた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w14.node.line.007b",
+      "lineId": "main.s3.w14.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "二人目だ。「常連にも、来た口が何人かおる。回しといてやろう」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w14.node.line.007c",
+      "lineId": "main.s3.w14.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……湯の世界にも、回状という文化があるらしい。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s3.w14.node.line.008",
-      "lineId": "main.s3.w14.line.008",
+      "id": "main.s3.w14.node.line.008a",
+      "lineId": "main.s3.w14.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "帰りぎわ、三年越しのタオルを返した。洗って、糊をきかせて、である。おじいさんは検分して、帳面の行に、ゆっくり線を引いた。「完済」。妙に背筋の伸びる、良い儀式だった。",
+      "text": "帰りぎわ、三年越しのタオルを返した。洗って、糊もきかせて。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w14.node.line.008b",
+      "lineId": "main.s3.w14.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "おじいさんは検分して、帳面の行に、ゆっくり線を引いた。「完済」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w14.node.line.008c",
+      "lineId": "main.s3.w14.line.008c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……妙に、背筋まで伸びる、良い儀式だった。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s3.w14.node.line.009",
-      "lineId": "main.s3.w14.line.009",
+      "id": "main.s3.w14.node.line.009a",
+      "lineId": "main.s3.w14.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "路地を出ると、仲間が名簿を覗いた。「二人。あと、九十八ですね」。道は長い。長いが、湯はあと九つある。次は、山の湯だそうです。",
+      "text": "路地を出ると、仲間が名簿を覗いた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w14.node.line.009b",
+      "lineId": "main.s3.w14.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「二人。あと、九十八ですね」この先も、道は長い。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w14.node.line.009c",
+      "lineId": "main.s3.w14.line.009c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "長いが、湯はあと九つ。次は、山の湯だそうです。",
       "emotion": "comic"
     },
     {
       "type": "effect",
       "id": "main.s3.w14.node.effect.001",
-      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+      "effects": [
+        {
+          "type": "sharedPoints",
+          "amount": 2
+        }
+      ]
     },
     {
       "type": "end",
@@ -181,7 +347,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "3周目・週14(週11の「三年ぶり」の答え=来た日にこの湯へ担ぎ込まれていた。本当の一日目は貸しタオルで始まった)。「四百年、返さん人も、おる」は一拍だけの種(答え=週21閲覧札/週26)。タオル返済の線引き=3周目最初の赤線の私的な形。背景は旅館流用(新規アセット候補: 街の古い湯)。Q=この街を引き受けるか / value=由来 -→+(湯の側に理がある) / turn=行6(登録の紙より貸し借りが先) / hook=次に会う理由(小)/post-hook / try=はい、しかし / game=貸し借りの帳面(未返却→上等の口→完済の儀式) / carry=名簿・番台の謎(週11) / open=四百年返さない人(答え=週21・26) / newterm=なし",
+    "authorNote": "語り口V2・二行枠で改稿。 / 3周目・週14(週11の「三年ぶり」の答え=来た日にこの湯へ担ぎ込まれていた。本当の一日目は貸しタオルで始まった)。「四百年、返さん人も、おる」は一拍だけの種(答え=週21閲覧札/週26)。タオル返済の線引き=3周目最初の赤線の私的な形。背景は旅館流用(新規アセット候補: 街の古い湯)。Q=この街を引き受けるか / value=由来 -→+(湯の側に理がある) / turn=行6(登録の紙より貸し借りが先) / hook=次に会う理由(小)/post-hook / try=はい、しかし / game=貸し借りの帳面(未返却→上等の口→完済の儀式) / carry=名簿・番台の謎(週11) / open=四百年返さない人(答え=週21・26) / newterm=なし",
     "legacyGeneratedIds": false
   }
 }

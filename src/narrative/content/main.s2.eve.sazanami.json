@@ -8,9 +8,20 @@
     "arcId": "main.stage2"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 890,
     "weight": 1
   },
@@ -35,12 +46,18 @@
     {
       "type": "direction",
       "id": "main.s2.eve.sazanami.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s2.eve.sazanami.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s2.eve.sazanami.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "direction",
       "id": "main.s2.eve.sazanami.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
     },
     {
       "type": "direction",
@@ -55,80 +72,221 @@
     },
     {
       "type": "line",
-      "id": "main.s2.eve.sazanami.node.line.001",
-      "lineId": "main.s2.eve.sazanami.line.001",
+      "id": "main.s2.eve.sazanami.node.line.001a",
+      "lineId": "main.s2.eve.sazanami.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "祭りの人波を、涼しい水音がついてくる。さざなみは、携帯水槽で歩く人だ。水槽の中から、泡の文字で会話する。屋台を通るたび、泡がぽこぽこと立つ。「たこ焼き 六十八点」「りんご飴 七十一点」。",
+      "text": "祭りの人波を、涼しい水音がついてくる。さざなみは、携帯水槽で歩く人だ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.sazanami.node.line.001b",
+      "lineId": "main.s2.eve.sazanami.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "水槽の中から、泡の文字で会話する。屋台を通るたび、泡がぽこぽこと立つ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.sazanami.node.line.001c",
+      "lineId": "main.s2.eve.sazanami.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「たこ焼き 六十八点」「りんご飴 七十一点」",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s2.eve.sazanami.node.line.002",
-      "lineId": "main.s2.eve.sazanami.line.002",
+      "id": "main.s2.eve.sazanami.node.line.002a",
+      "lineId": "main.s2.eve.sazanami.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "採点は、彼女の愛情表現である。辛口なのは、ちゃんと見ている証拠。ちなみに私の去年の弁当は四十二点だった。今年は六十点まで上がった。伸び代を褒める流儀なのだ、と信じている。",
+      "text": "採点は、彼女の愛情表現だ。辛口なのは、ちゃんと見ている証拠。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.sazanami.node.line.002b",
+      "lineId": "main.s2.eve.sazanami.line.002b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ちなみに私の去年の弁当は、四十二点だった。今年は、六十点まで上がった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.sazanami.node.line.002c",
+      "lineId": "main.s2.eve.sazanami.line.002c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "伸び代を褒める流儀なのだ、と信じている。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s2.eve.sazanami.node.line.003",
-      "lineId": "main.s2.eve.sazanami.line.003",
+      "id": "main.s2.eve.sazanami.node.line.003a",
+      "lineId": "main.s2.eve.sazanami.line.003a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "金魚すくいの屋台で、恒例の対決をした。私のポイは三秒で破れ、彼女は水槽の中から視線だけで金魚を誘導して、おじさんに出禁を言い渡された。「水の民の反則です」。ごもっともである。",
+      "text": "金魚すくいの屋台で、恒例の対決をした。私のポイは、三秒で破れた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.sazanami.node.line.003b",
+      "lineId": "main.s2.eve.sazanami.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "彼女は水槽の中から、視線だけで金魚を誘導し、おじさんに出禁を言い渡された。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.sazanami.node.line.003c",
+      "lineId": "main.s2.eve.sazanami.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「水の民の反則です」ごもっともだ。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s2.eve.sazanami.node.line.004",
-      "lineId": "main.s2.eve.sazanami.line.004",
+      "id": "main.s2.eve.sazanami.node.line.004a",
+      "lineId": "main.s2.eve.sazanami.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "通りの外れの噴水に、水槽を浸けて、休憩にした。夜の水面が、祭りの灯りを砕いて揺れる。泡が、静かに立った。「あした の しあい こわい?」。……少し、と答えた。水の人に、嘘は通じない。",
+      "text": "通りの外れの噴水に、水槽を浸けて、休憩にした。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.sazanami.node.line.004b",
+      "lineId": "main.s2.eve.sazanami.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "夜の水面が、祭りの灯りを砕いて揺れる。泡が、静かに立った。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.sazanami.node.line.004c",
+      "lineId": "main.s2.eve.sazanami.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「あした の しあい こわい?」……少し、と答えた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.sazanami.node.line.004d",
+      "lineId": "main.s2.eve.sazanami.line.004d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "耳が、ほんの少し伏せていた。水の人に、嘘は通じない。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s2.eve.sazanami.node.line.005",
-      "lineId": "main.s2.eve.sazanami.line.005",
+      "id": "main.s2.eve.sazanami.node.line.005a",
+      "lineId": "main.s2.eve.sazanami.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "泡が、ゆっくり続けた。「れきだい おうじゃ みんな みた」。四百年、海からこの街の興行を見てきた人である。「かんぺき だった。てんすう つけやすかった」。完璧は、採点しやすい。……なるほど。",
+      "text": "泡が、ゆっくり続けた。「れきだい おうじゃ みんな みた」"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.sazanami.node.line.005b",
+      "lineId": "main.s2.eve.sazanami.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "四百年、海からこの街の興行を見てきた人だ。「かんぺき だった。てんすう つけやすかった」"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.sazanami.node.line.005c",
+      "lineId": "main.s2.eve.sazanami.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "完璧は、採点しやすい。……なるほど。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s2.eve.sazanami.node.line.006",
-      "lineId": "main.s2.eve.sazanami.line.006",
+      "id": "main.s2.eve.sazanami.node.line.006a",
+      "lineId": "main.s2.eve.sazanami.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「でも ミミ の あした は」。泡が、一度ぜんぶ消えて、それから、大きな一文が浮かんだ。「さいてん ふのう」。……不能? 「みたこと ない ものは てん が つけられない」。",
+      "text": "「でも ミミ の あした は」"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.sazanami.node.line.006b",
+      "lineId": "main.s2.eve.sazanami.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "泡が、一度ぜんぶ消えて、それから、大きな一文が浮かんだ。「さいてん ふのう」"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.sazanami.node.line.006c",
+      "lineId": "main.s2.eve.sazanami.line.006c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……不能? 「みたこと ない ものは てん が つけられない」",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s2.eve.sazanami.node.line.007",
-      "lineId": "main.s2.eve.sazanami.line.007",
+      "id": "main.s2.eve.sazanami.node.line.007a",
+      "lineId": "main.s2.eve.sazanami.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "何でも採点する人の、採点不能。それは、この人の辞書で、いちばん上等の点数である。泡が照れたように小さく続けた。「よんひゃくねん で はじめて」。……四百年ぶんの、白紙の採点表をもらってしまった。",
+      "text": "何でも採点する人の、採点不能。それは、この人の辞書で、いちばん上等の点数だ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.sazanami.node.line.007b",
+      "lineId": "main.s2.eve.sazanami.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "泡が照れたように、小さく続けた。「よんひゃくねん で はじめて」"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.sazanami.node.line.007c",
+      "lineId": "main.s2.eve.sazanami.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……四百年ぶんの、白紙の採点表をもらってしまった。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s2.eve.sazanami.node.line.008",
-      "lineId": "main.s2.eve.sazanami.line.008",
+      "id": "main.s2.eve.sazanami.node.line.008a",
+      "lineId": "main.s2.eve.sazanami.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "帰り道、水槽の水面に、最後の泡が立った。「あした うみ から おうえん する。なみ が たかかったら それ わたし」。……明日の会場、少し、潮の匂いがするかもしれない。",
+      "text": "帰り道、水槽の水面に、最後の泡が立った。「あした うみ から おうえん する」"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.sazanami.node.line.008b",
+      "lineId": "main.s2.eve.sazanami.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「なみ が たかかったら それ わたし」"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.sazanami.node.line.008c",
+      "lineId": "main.s2.eve.sazanami.line.008c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……明日の会場、少し、潮の匂いがするかもしれない。",
       "emotion": "tender"
     },
     {
       "type": "effect",
       "id": "main.s2.eve.sazanami.node.effect.001",
-      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+      "effects": [
+        {
+          "type": "sharedPoints",
+          "amount": 2
+        }
+      ]
     },
     {
       "type": "end",
@@ -139,7 +297,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "2周目・本命前夜(さざなみ)。採点の様式美(meet四十二点→六十点)+金魚すくい対決(bond)の天丼。「採点不能」=見たことのないもの=新作への最高評価(決勝の主題と共鳴)。",
+    "authorNote": "語り口V2・二行枠で改稿。2周目・本命前夜(さざなみ)。採点の様式美(meet四十二点→六十点)+金魚すくい対決(bond)の天丼。「採点不能」=見たことのないもの=新作への最高評価(決勝の主題と共鳴)。",
     "legacyGeneratedIds": false
   }
 }

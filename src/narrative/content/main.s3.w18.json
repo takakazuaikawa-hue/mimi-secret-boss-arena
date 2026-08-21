@@ -8,9 +8,20 @@
     "arcId": "main.stage3"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -22,6 +33,24 @@
         "kind": "background",
         "path": "/assets/story/bg-loading-dock-day-v1.png",
         "alt": "搬入口の背景"
+      },
+      {
+        "id": "main.s3.w18.asset.sprite.mimi.tsukkomi",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-tsukkomi-v1.png",
+        "alt": "驚いてツッコミを入れるミミ"
+      },
+      {
+        "id": "main.s3.w18.asset.sprite.mimi.smile",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-smile-v1.png",
+        "alt": "笑顔のミミ"
+      },
+      {
+        "id": "main.s3.w18.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
       }
     ]
   },
@@ -29,97 +58,261 @@
     {
       "type": "direction",
       "id": "main.s3.w18.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s3.w18.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s3.w18.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "direction",
       "id": "main.s3.w18.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.w18.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s3.w18.asset.sprite.mimi.tsukkomi",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
-      "id": "main.s3.w18.node.line.001",
-      "lineId": "main.s3.w18.line.001",
+      "id": "main.s3.w18.node.line.001a",
+      "lineId": "main.s3.w18.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "搬入口に、旅支度が積み上がった。桶、手ぬぐい、名簿、土産の焼き餅。革の紐の匂いがする。湯めぐりの、追い込み週である。山、砂漠、海の底——残りの湯を、大会の合間にぜんぶ回る。",
+      "text": "搬入口に、旅支度が積み上がった。桶、手ぬぐい、名簿、土産の焼き餅。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w18.node.line.001b",
+      "lineId": "main.s3.w18.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "革の紐の匂いがする。耳が、もう旅の気配に、ぴくりと動いた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w18.node.line.001c",
+      "lineId": "main.s3.w18.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "湯めぐりの、追い込み週らしい。山、砂漠、海の底——残りの湯を、ぜんぶ回る。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s3.w18.node.line.002",
-      "lineId": "main.s3.w18.line.002",
+      "id": "main.s3.w18.node.line.002a",
+      "lineId": "main.s3.w18.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "今日の用は、出発。と、帰着。と、また出発である。詳しくは、こうだ。"
+      "text": "今日の用は、出発と、帰着と、また出発。詳しくは、こう。"
     },
     {
       "type": "line",
-      "id": "main.s3.w18.node.line.003",
-      "lineId": "main.s3.w18.line.003",
+      "id": "main.s3.w18.node.line.003a",
+      "lineId": "main.s3.w18.line.003a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "山の湯。霧の中で笛を吹く湯守さんは、名簿を一目見て、「百年ぶりに、いい話だ」。砂漠の湯は、砂風呂だった(湯とは)。店主さんいわく、「来た口はな、砂の中でも空を見上げるんだ」。……その見分け方は、もう信じることにしている。",
+      "text": "山の湯。霧の中で笛を吹く湯守さんは、名簿を一目見て言った。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w18.node.line.003b",
+      "lineId": "main.s3.w18.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「百年ぶりに、いい話だ」砂漠の湯は、砂風呂だった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w18.node.line.003c",
+      "lineId": "main.s3.w18.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……湯とは。店主さんいわく、「来た口はな、砂の中でも空を見上げるんだ」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w18.node.line.003d",
+      "lineId": "main.s3.w18.line.003d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……その見分け方は、もう信じることにしている。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s3.w18.node.line.004",
-      "lineId": "main.s3.w18.line.004",
+      "id": "main.s3.w18.node.line.004a",
+      "lineId": "main.s3.w18.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "海の底の湯は、本当にあった。泡の膜の中の、静かな青い湯である。湯守は無口な人魚さんで、名を書く代わりに、鱗を一枚くれた。「署名の代わりだそうです」と、通訳の貝が言った。名簿に、鱗の頁ができた。",
-      "emotion": "comic"
+      "text": "海の底の湯は、本当にあった。泡の膜の中の、静かな青い湯だ。"
     },
     {
       "type": "line",
-      "id": "main.s3.w18.node.line.005",
-      "lineId": "main.s3.w18.line.005",
+      "id": "main.s3.w18.node.line.004b",
+      "lineId": "main.s3.w18.line.004b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "名前は、湯から湯へ、集まっていった。五十、七十、九十。回状が先回りして、着く頃には湯上がりの来た口たちが、番台に並んで待っている。「ミミさんとこの名簿が来るよ」。湯の道は、噂より速い。",
+      "text": "湯守は無口な人魚さんで、名を書く代わりに、鱗を一枚くれた。「署名の代わりだそうです」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w18.node.line.004c",
+      "lineId": "main.s3.w18.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "と、通訳の貝が言った。……名簿に、鱗の頁ができた。",
+      "emotion": "comic"
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.w18.node.direction.mimi.shift.001",
+      "command": {
+        "type": "show",
+        "assetId": "main.s3.w18.asset.sprite.mimi.smile",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w18.node.line.005a",
+      "lineId": "main.s3.w18.line.005a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "名前は、湯から湯へ、集まっていった。五十、七十、九十。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w18.node.line.005b",
+      "lineId": "main.s3.w18.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "回状が先回りして、着く頃には来た口たちが、番台に並んで待っている。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w18.node.line.005c",
+      "lineId": "main.s3.w18.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「ミミさんとこの名簿が来るよ」……湯の道は、噂より速い。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s3.w18.node.line.006",
-      "lineId": "main.s3.w18.line.006",
+      "id": "main.s3.w18.node.line.006a",
+      "lineId": "main.s3.w18.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "九十九人目は、意外な人だった。焼き餅屋の、おばちゃんである。「あたし、言ってなかったかい? 五十年前に、空から来たんだよ」。——道理で。値札に、誰よりも怒っていたわけである。",
+      "text": "九十九人目は、意外な人だった。焼き餅屋の、おばちゃんだ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w18.node.line.006b",
+      "lineId": "main.s3.w18.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「あたし、言ってなかったかい? 五十年前に、空から来たんだよ」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w18.node.line.006c",
+      "lineId": "main.s3.w18.line.006c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……道理で。値札に、誰よりも怒っていたわけだ。",
       "emotion": "revelation"
     },
     {
+      "type": "direction",
+      "id": "main.s3.w18.node.direction.mimi.shift.002",
+      "command": {
+        "type": "show",
+        "assetId": "main.s3.w18.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
+    },
+    {
       "type": "line",
-      "id": "main.s3.w18.node.line.007",
-      "lineId": "main.s3.w18.line.007",
+      "id": "main.s3.w18.node.line.007a",
+      "lineId": "main.s3.w18.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "そして名簿は、九十九で止まった。回状の返事は、全部来た。湯は、回り切った。——あと、一人。",
+      "text": "そして名簿は、九十九で止まった。回状の返事は、全部来た。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w18.node.line.007b",
+      "lineId": "main.s3.w18.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "湯は、回り切った。……あと、一人。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s3.w18.node.line.008",
-      "lineId": "main.s3.w18.line.008",
+      "id": "main.s3.w18.node.line.008a",
+      "lineId": "main.s3.w18.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "当ては、一人だけ、いる。誘いの言葉も、もう渡してある。あとは、あの人が湯に来るかどうか、だけだ。",
+      "text": "当ては、一人だけ、いる。誘いの言葉も、もう渡してある。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w18.node.line.008b",
+      "lineId": "main.s3.w18.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "あとは、あの人が湯に来るかどうか、だけだ。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s3.w18.node.line.009",
-      "lineId": "main.s3.w18.line.009",
+      "id": "main.s3.w18.node.line.009a",
+      "lineId": "main.s3.w18.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "荷ほどきをしながら、ノノさんが言った。「来ますかね」「来ます」。根拠は、無い。無いが——「考えておきます」と言った人は、この街では、だいたい来る。",
+      "text": "荷ほどきをしながら、ノノさんが言った。「来ますかね」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w18.node.line.009b",
+      "lineId": "main.s3.w18.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「来ます」根拠は、無い。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w18.node.line.009c",
+      "lineId": "main.s3.w18.line.009c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "無いが——「考えておきます」と言った人は、この街では、だいたい来る。",
       "emotion": "tender"
     },
     {
       "type": "effect",
       "id": "main.s3.w18.node.effect.001",
-      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+      "effects": [
+        {
+          "type": "sharedPoints",
+          "amount": 2
+        }
+      ]
     },
     {
       "type": "end",
@@ -130,7 +323,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "3周目・週18(湯めぐりモンタージュ。九十九人目=焼き餅屋のおばちゃん(週10の怒りの再文脈化)。百人目の空席=室長)。Q=この街を引き受けるか / value=束 -→99 / turn=行6(おばちゃんの怒りの意味が変わる) / hook=保留された返事(中)/pre-point / try=はい、しかし / game=湯の多様性(笛の湯守→砂風呂(湯とは)→人魚の鱗署名) / carry=誘いの言葉(週17)・回状(週14) / open=百人目は来るか(答え=週22) / newterm=なし",
+    "authorNote": "語り口V2・二行枠で改稿。 / 3周目・週18(湯めぐりモンタージュ。九十九人目=焼き餅屋のおばちゃん(週10の怒りの再文脈化)。百人目の空席=室長)。Q=この街を引き受けるか / value=束 -→99 / turn=行6(おばちゃんの怒りの意味が変わる) / hook=保留された返事(中)/pre-point / try=はい、しかし / game=湯の多様性(笛の湯守→砂風呂(湯とは)→人魚の鱗署名) / carry=誘いの言葉(週17)・回状(週14) / open=百人目は来るか(答え=週22) / newterm=なし",
     "legacyGeneratedIds": false
   }
 }

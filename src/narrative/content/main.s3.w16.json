@@ -8,9 +8,20 @@
     "arcId": "main.stage3"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -20,8 +31,20 @@
       {
         "id": "main.s3.w16.asset.background.001",
         "kind": "background",
-        "path": "/assets/story/bg-arena-reception.png",
-        "alt": "闘技場の正面受付の背景"
+        "path": "/assets/story/bg-arena-reconstruction-day-v1.png",
+        "alt": "建て替えの足場に囲まれた昼の闘技場正面"
+      },
+      {
+        "id": "main.s3.w16.asset.sprite.mimi.tsukkomi",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-tsukkomi-v1.png",
+        "alt": "驚いてツッコミを入れるミミ"
+      },
+      {
+        "id": "main.s3.w16.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
       }
     ]
   },
@@ -29,91 +52,231 @@
     {
       "type": "direction",
       "id": "main.s3.w16.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s3.w16.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s3.w16.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "direction",
       "id": "main.s3.w16.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.w16.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s3.w16.asset.sprite.mimi.tsukkomi",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
-      "id": "main.s3.w16.node.line.001",
-      "lineId": "main.s3.w16.line.001",
+      "id": "main.s3.w16.node.line.001a",
+      "lineId": "main.s3.w16.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "闘技場の正面に、足場が組まれ始めた。木と、縄の匂い。四百年目の祝いの支度——建て替えの下見である。祝いの中身は、帳面の上ではまだ白紙。白紙なのに、街の大工さんたちの手だけが早い。",
+      "text": "闘技場の正面に、足場が組まれ始めた。木と、縄の匂い。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w16.node.line.001b",
+      "lineId": "main.s3.w16.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "四百年目の祝いの支度——建て替えの下見らしい。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w16.node.line.001c",
+      "lineId": "main.s3.w16.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "祝いの中身は、まだ白紙。なのに、大工さんの手だけが早い。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s3.w16.node.line.002",
-      "lineId": "main.s3.w16.line.002",
+      "id": "main.s3.w16.node.line.002a",
+      "lineId": "main.s3.w16.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "今日の用は、次の大会の支度だ。裁きの日に持っていく勝ちの帳面は、一頁でも厚くしたい。積めるものは、全部積む後半戦である。"
+      "text": "今日の用は、次の大会の支度だ。裁きの日の帳面は、一頁でも厚くしたい。"
     },
     {
       "type": "line",
-      "id": "main.s3.w16.node.line.003",
-      "lineId": "main.s3.w16.line.003",
+      "id": "main.s3.w16.node.line.002b",
+      "lineId": "main.s3.w16.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "板の前で、妙な噂を聞いた。「最近、会社の室長が、あんたのとこの試合を毎回観てるぞ」。……あの、私を覚えていない室長が? 新規のお客としても、ずいぶん熱心である。",
+      "text": "積めるものは、全部積む——欲張りな後半戦だ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w16.node.line.003a",
+      "lineId": "main.s3.w16.line.003a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "板の前で、妙な噂を聞いた。「最近、会社の室長が、あんたのとこの試合を毎回観てるぞ」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w16.node.line.003b",
+      "lineId": "main.s3.w16.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……あの、私を覚えていない室長が? 新規客にしては、ずいぶん熱心だ。",
       "emotion": "comic"
     },
     {
+      "type": "direction",
+      "id": "main.s3.w16.node.direction.mimi.shift.001",
+      "command": {
+        "type": "show",
+        "assetId": "main.s3.w16.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
+    },
+    {
       "type": "line",
-      "id": "main.s3.w16.node.line.004",
-      "lineId": "main.s3.w16.line.004",
+      "id": "main.s3.w16.node.line.004a",
+      "lineId": "main.s3.w16.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "練習の帰り、その室長と、通用口ですれ違った。会釈をされる。された、だけのはずが——向こうの足が、止まった。「……良い構えです。去年より、脇が締まった」。去年? 去年と、言いましたか、いま。",
+      "text": "練習の帰り、その室長と、通用口ですれ違った。会釈をされる。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w16.node.line.004b",
+      "lineId": "main.s3.w16.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "された、だけのはずが——向こうの足が、止まった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w16.node.line.004c",
+      "lineId": "main.s3.w16.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「……良い構えです。去年より、脇が締まった」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w16.node.line.004d",
+      "lineId": "main.s3.w16.line.004d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "耳が、勝手にぴんと立った。……去年、と言いましたか、いま。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s3.w16.node.line.005",
-      "lineId": "main.s3.w16.line.005",
+      "id": "main.s3.w16.node.line.005a",
+      "lineId": "main.s3.w16.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "振り向いたときには、もう仕事の顔だった。「失礼。初めてお会いした気が、しないもので」。そのまま、行ってしまう。まっすぐで、少し疲れた背中だった。",
+      "text": "振り向いたときには、もう仕事の顔だった。「失礼。初めてお会いした気が、しないもので」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w16.node.line.005b",
+      "lineId": "main.s3.w16.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "そのまま、行ってしまう。まっすぐで、少し疲れた背中だった。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s3.w16.node.line.006",
-      "lineId": "main.s3.w16.line.006",
+      "id": "main.s3.w16.node.line.006a",
+      "lineId": "main.s3.w16.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "覚えていないはずの人が、去年を口走る。巻き戻った人は、同じ動きをするだけのはず。覚えている人は、もう同じには動かない。——なら、あの人は今、どちら側なのだろう。",
+      "text": "覚えていないはずの人が、なぜか去年を口走る。巻き戻った人は、同じ動きをするだけのはず。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w16.node.line.006b",
+      "lineId": "main.s3.w16.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "覚えている人は、もう二度と同じには動かない。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w16.node.line.006c",
+      "lineId": "main.s3.w16.line.006c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……なら、あの人は今、どちら側なのだろう。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s3.w16.node.line.007",
-      "lineId": "main.s3.w16.line.007",
+      "id": "main.s3.w16.node.line.007a",
+      "lineId": "main.s3.w16.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "仲間に話すと、腕組みが返ってきた。「敵、なんですかね」「分かりません。ただ——」。ただ、あの背中は、敵の背中には見えなかった。",
+      "text": "仲間に話すと、腕組みが返ってきた。「敵、なんですかね」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w16.node.line.007b",
+      "lineId": "main.s3.w16.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「分かりません。ただ——」……ただ、あの背中は、敵の背中には見えなかった。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s3.w16.node.line.008",
-      "lineId": "main.s3.w16.line.008",
+      "id": "main.s3.w16.node.line.008a",
+      "lineId": "main.s3.w16.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "大会の朝が来る。客席の隅には白手袋の帳面、その三列後ろに、会社の室長。観客が、二人とも真剣である。良い興行の条件が、揃ってしまった。",
+      "text": "大会の朝が来る。客席の隅には、白手袋の帳面。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w16.node.line.008b",
+      "lineId": "main.s3.w16.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "その三列後ろに、会社の室長。観客が、二人とも真剣だ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w16.node.line.008c",
+      "lineId": "main.s3.w16.line.008c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……良い興行の条件が、揃ってしまった。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s3.w16.node.line.009",
-      "lineId": "main.s3.w16.line.009",
+      "id": "main.s3.w16.node.line.009a",
+      "lineId": "main.s3.w16.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "入場の前、初陣の子が聞いた。「今日は、誰に見せて勝ちます?」。良い質問である。——全員に、です。",
+      "text": "入場の前、初陣の子が聞いた。「今日は、誰に見せて勝ちます?」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w16.node.line.009b",
+      "lineId": "main.s3.w16.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "良い質問だ。——全員に、です。",
       "emotion": "resolve"
     },
     {
@@ -123,23 +286,33 @@
         {
           "id": "main.s3.w16.choice.001",
           "label": "試合の前に、室長へ挨拶に行く",
-          "result": "客席の室長へ、こちらから挨拶に行った。「いつも、ご観覧ありがとうございます」。室長は一拍おいて、律儀に頭を下げた。「……良い興行には、通うものです」。それから、小さく付け足した。「今日の、九戦目は」「結果は分かりませんよ。うちの試合は、いつでも」。——少しだけ、笑った気がした。",
+          "result": "客席の室長へ、挨拶に行った。「いつも、ご観覧ありがとうございます」室長は一拍おいて、律儀に頭を下げた。「……良い興行には、通うものです」……少しだけ、笑った気がした。",
           "intent": "正体より先に、お客として迎える",
           "promise": "橋が一本架かる代わりに、謎はまだ謎のまま持つことになる",
           "memory": "「良い興行には、通うものです」の一言",
           "tone": "heroic",
-          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
           "goto": "main.s3.w16.node.end.001"
         },
         {
           "id": "main.s3.w16.choice.002",
           "label": "雑音は後で。いつもの円陣に集中する",
-          "result": "考えごとは、勝ってから拾う。控えで、いつもの円陣を組んだ。「今日の目標」「勝つ!」「あと?」「派手に!」。三年目の円陣は、短くて強い。客席の視線が二つ増えたところで、うちのやることは変わらない。砂の上に、全部置いてくる。",
+          "result": "考えごとは、勝ってから拾う。控えで、いつもの円陣「今日の目標」「勝つ!」「あと?」「派手に!」。三年目の円陣は短くて強い。砂の上に、全部置いてくるだけだ。",
           "intent": "目の前の一戦に、全部を置く",
           "promise": "仕上がりは最高になる代わりに、室長の謎は持ち越しになる",
           "memory": "短くて強い、三年目の円陣",
           "tone": "pragmatic",
-          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
           "goto": "main.s3.w16.node.end.001"
         }
       ]
@@ -153,7 +326,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "3周目・週16(大会週。室長の口走り=「去年より脇が締まった」。二軸の枠でプレイヤーが先に推理できる形。要承認: 室長=転生者の示唆はここから)。Q=この街を引き受けるか / value=謎 0→+(どちら側の人か) / turn=行6(覚えていないはずの人が去年を言う) / hook=保留された返事(中)/pre-point / try=はい、しかし / game=熱心すぎる新規客(毎回観てる→口走り→仕事の顔) / carry=祝いの帳面(週13)・足場 / open=室長はどちら側か(答え=週17空を見る→週21見える→週22署名) / newterm=なし",
+    "authorNote": "語り口V2・二行枠で改稿。 / 3周目・週16(大会週。室長の口走り=「去年より脇が締まった」。二軸の枠でプレイヤーが先に推理できる形。要承認: 室長=転生者の示唆はここから)。Q=この街を引き受けるか / value=謎 0→+(どちら側の人か) / turn=行6(覚えていないはずの人が去年を言う) / hook=保留された返事(中)/pre-point / try=はい、しかし / game=熱心すぎる新規客(毎回観てる→口走り→仕事の顔) / carry=祝いの帳面(週13)・足場 / open=室長はどちら側か(答え=週17空を見る→週21見える→週22署名) / newterm=なし",
     "legacyGeneratedIds": false
   }
 }

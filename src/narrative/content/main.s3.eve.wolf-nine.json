@@ -8,9 +8,20 @@
     "arcId": "main.stage3"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 890,
     "weight": 1
   },
@@ -20,8 +31,14 @@
       {
         "id": "main.s3.eve.wolf-nine.asset.background.001",
         "kind": "background",
-        "path": "/assets/story/bg-casino-cafe-night.png",
-        "alt": "前夜祭の夜の街の背景"
+        "path": "/assets/story/bg-championship-eve-night-market-v2.png",
+        "alt": "八つの勝負屋台が連なる前夜祭の夜店通り"
+      },
+      {
+        "id": "main.s3.eve.wolf-nine.asset.sprite.wolf-nine",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/wolf-nine.png",
+        "alt": "九度目の決闘者ヴォルフ・ナイン"
       }
     ]
   },
@@ -29,89 +46,220 @@
     {
       "type": "direction",
       "id": "main.s3.eve.wolf-nine.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s3.eve.wolf-nine.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s3.eve.wolf-nine.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "direction",
       "id": "main.s3.eve.wolf-nine.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.eve.wolf-nine.node.direction.wolf-nine.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s3.eve.wolf-nine.asset.sprite.wolf-nine",
+        "actorId": "wolf-nine",
+        "slot": "right",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
-      "id": "main.s3.eve.wolf-nine.node.line.001",
-      "lineId": "main.s3.eve.wolf-nine.line.001",
+      "id": "main.s3.eve.wolf-nine.node.line.001a",
+      "lineId": "main.s3.eve.wolf-nine.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "前夜祭を、九番の狼と回ることになった。誘われ方が、彼らしかった。夕方、うちの郵便受けに挑戦状が八通。「夜店・全八種目。受けるか」。……受けます。受けますけど、八通は多い。",
+      "text": "前夜祭を、九番の狼と回ることになった。誘われ方が、彼らしかった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.wolf-nine.node.line.001b",
+      "lineId": "main.s3.eve.wolf-nine.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "夕方、うちの郵便受けに挑戦状が八通。「夜店・全八種目。受けるか」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.wolf-nine.node.line.001c",
+      "lineId": "main.s3.eve.wolf-nine.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……受けます。受けますけど、八通は多い。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s3.eve.wolf-nine.node.line.002",
-      "lineId": "main.s3.eve.wolf-nine.line.002",
+      "id": "main.s3.eve.wolf-nine.node.line.002a",
+      "lineId": "main.s3.eve.wolf-nine.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "一種目め、射的。二種目め、型抜き。三種目め、綿飴の早食い(彼の圧勝)。焼き餅屋のおばちゃんが囃す。「今夜は決闘かい!」「祭りです!」。どっちも、半分正解である。",
+      "text": "一種目めは射的、二種目めは型抜き。三種目め、綿飴の早食いは、彼の圧勝だった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.wolf-nine.node.line.002b",
+      "lineId": "main.s3.eve.wolf-nine.line.002b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "焼き餅屋のおばちゃんが囃す。「今夜は決闘かい!」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.wolf-nine.node.line.002c",
+      "lineId": "main.s3.eve.wolf-nine.line.002c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「祭りです!」どっちも、半分正解だ。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s3.eve.wolf-nine.node.line.003",
-      "lineId": "main.s3.eve.wolf-nine.line.003",
+      "id": "main.s3.eve.wolf-nine.node.line.003a",
+      "lineId": "main.s3.eve.wolf-nine.line.003a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "彼は、勝負のたびに律儀に礼をする。去年まで、九戦目の結果は先に決められていた人だ。「結果の分からない勝負は、ぜんぶ、ごちそうだ」。だから今夜の八種目は、八皿の宴なのだった。",
+      "text": "彼は、勝負のたびに律儀に礼をする。去年まで、九戦目の結果は先に決められていた人だ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.wolf-nine.node.line.003b",
+      "lineId": "main.s3.eve.wolf-nine.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「結果の分からない勝負は、ぜんぶ、ごちそうだ」だから今夜の八種目は、八皿の宴なのだった。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s3.eve.wolf-nine.node.line.004",
-      "lineId": "main.s3.eve.wolf-nine.line.004",
+      "id": "main.s3.eve.wolf-nine.node.line.004a",
+      "lineId": "main.s3.eve.wolf-nine.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "四つ勝って、四つ負けた。通算、四対四。夜店の通りの端まで来て、私は気づいた。「九種目めは?」。挑戦状は、八通しか来ていない。",
-      "emotion": "tension"
+      "text": "四つ勝って、四つ負けた。通算、四対四。"
     },
     {
       "type": "line",
-      "id": "main.s3.eve.wolf-nine.node.line.005",
-      "lineId": "main.s3.eve.wolf-nine.line.005",
+      "id": "main.s3.eve.wolf-nine.node.line.004b",
+      "lineId": "main.s3.eve.wolf-nine.line.004b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "狼は、耳の後ろを掻いた。強い人が、勝負以外で見せる仕草だった。「九つ目は……挑戦状に、書けなかった」。書けない種目が、あるんですか。「ある。勝ち負けが、無いやつだ」。",
-      "emotion": "tension"
+      "text": "夜店の通りの端まで来て、私は気づいた。「九種目めは?」"
     },
     {
       "type": "line",
-      "id": "main.s3.eve.wolf-nine.node.line.006",
-      "lineId": "main.s3.eve.wolf-nine.line.006",
+      "id": "main.s3.eve.wolf-nine.node.line.004c",
+      "lineId": "main.s3.eve.wolf-nine.line.004c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "彼は、まっすぐ立ち直して、言った。「ミミ。明日の柿落としが終わったら——次の祭りも、俺と回ってくれ」。……九つ目は、挑戦ではなく、約束だった。初めて、名前で呼ばれた夜に。",
+      "text": "挑戦状は、八通しか来ていない。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.wolf-nine.node.line.005a",
+      "lineId": "main.s3.eve.wolf-nine.line.005a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "狼は、耳の後ろを掻いた。強い人が、勝負以外で見せる仕草だった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.wolf-nine.node.line.005b",
+      "lineId": "main.s3.eve.wolf-nine.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「九つ目は……挑戦状に、書けなかった」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.wolf-nine.node.line.005c",
+      "lineId": "main.s3.eve.wolf-nine.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "書けない種目が、あるんですか。「ある。勝ち負けが、無いやつだ」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.wolf-nine.node.line.006a",
+      "lineId": "main.s3.eve.wolf-nine.line.006a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "彼は、まっすぐ立ち直して、言った。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.wolf-nine.node.line.006b",
+      "lineId": "main.s3.eve.wolf-nine.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「ミミ。明日の柿落としが終わったら——次の祭りも、俺と回ってくれ」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.wolf-nine.node.line.006c",
+      "lineId": "main.s3.eve.wolf-nine.line.006c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……九つ目は、挑戦ではなく、約束だった。初めて、名前で呼ばれた夜に。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s3.eve.wolf-nine.node.line.007",
-      "lineId": "main.s3.eve.wolf-nine.line.007",
+      "id": "main.s3.eve.wolf-nine.node.line.007a",
+      "lineId": "main.s3.eve.wolf-nine.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "返事は、彼の流儀で返すことにした。人差し指を立てて、宣言する。「受けて立ちます。ただし、次の祭りの一種目めは、私が選びます」。狼の尻尾が、正直に一回転した。",
-      "emotion": "tender"
+      "text": "返事は、彼の流儀で返すことにした。人差し指を立てて、宣言する。"
     },
     {
       "type": "line",
-      "id": "main.s3.eve.wolf-nine.node.line.008",
-      "lineId": "main.s3.eve.wolf-nine.line.008",
+      "id": "main.s3.eve.wolf-nine.node.line.007b",
+      "lineId": "main.s3.eve.wolf-nine.line.007b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "帰り道、彼は九通目の封筒をくれた。中身は、白紙だった。「次の挑戦状は、二人で書く」。……白紙の紙が、こんなに嬉しい夜も、ある。",
+      "text": "「受けて立ちます。ただし、次の祭りの一種目めは、私が選びます」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.wolf-nine.node.line.007c",
+      "lineId": "main.s3.eve.wolf-nine.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "狼の尻尾が、正直に一回転した。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.wolf-nine.node.line.008a",
+      "lineId": "main.s3.eve.wolf-nine.line.008a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "帰り道、彼は九通目の封筒をくれた。中身は、白紙だった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.eve.wolf-nine.node.line.008b",
+      "lineId": "main.s3.eve.wolf-nine.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「次の挑戦状は、二人で書く」……白紙の紙が、こんなに嬉しい夜も、ある。",
       "emotion": "tender"
     },
     {
       "type": "effect",
       "id": "main.s3.eve.wolf-nine.node.effect.001",
-      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+      "effects": [
+        {
+          "type": "sharedPoints",
+          "amount": 2
+        }
+      ]
     },
     {
       "type": "end",
@@ -122,7 +270,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "3周目・本命前夜(ヴォルフ・ナイン)。九通の挑戦状の様式美(meet「宛先不明、八通」の回収)。九つ目=勝ち負けの無い約束。呼び方の一段=名前呼び。白紙の九通目=続きは二人で書く(シーズン主題との共鳴)。",
+    "authorNote": "語り口V2・二行枠で改稿。3周目・本命前夜(ヴォルフ・ナイン)。九通の挑戦状の様式美(meet「宛先不明、八通」の回収)。九つ目=勝ち負けの無い約束。呼び方の一段=名前呼び。白紙の九通目=続きは二人で書く(シーズン主題との共鳴)。",
     "legacyGeneratedIds": false
   }
 }

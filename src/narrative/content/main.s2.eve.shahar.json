@@ -8,9 +8,20 @@
     "arcId": "main.stage2"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 890,
     "weight": 1
   },
@@ -22,6 +33,12 @@
         "kind": "background",
         "path": "/assets/story/bg-observation-deck-night.png",
         "alt": "夜の展望席の背景"
+      },
+      {
+        "id": "main.s2.eve.shahar.asset.sprite.shahar",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/shahar-trueform.png",
+        "alt": "雲上を覆う古竜シャハル"
       }
     ]
   },
@@ -29,89 +46,239 @@
     {
       "type": "direction",
       "id": "main.s2.eve.shahar.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s2.eve.shahar.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s2.eve.shahar.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "direction",
       "id": "main.s2.eve.shahar.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.eve.shahar.node.direction.shahar.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s2.eve.shahar.asset.sprite.shahar",
+        "actorId": "shahar",
+        "slot": "center",
+        "scale": "compact"
+      }
     },
     {
       "type": "line",
-      "id": "main.s2.eve.shahar.node.line.001",
-      "lineId": "main.s2.eve.shahar.line.001",
+      "id": "main.s2.eve.shahar.node.line.001a",
+      "lineId": "main.s2.eve.shahar.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "待ち合わせは、屋上だった。シャハルの待ち合わせは、いつも高い場所である。着くと、銀白の鱗が一枚、床に置いてあった。「乗って」。……この鱗、エレベーターなのである。世界でいちばん贅沢な。",
+      "text": "待ち合わせは、屋上だった。シャハルの待ち合わせは、いつも高い場所だ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.shahar.node.line.001b",
+      "lineId": "main.s2.eve.shahar.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "着くと、銀白の鱗が一枚、床に置いてあった。「乗って」"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.shahar.node.line.001c",
+      "lineId": "main.s2.eve.shahar.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……この鱗、エレベーターなんだ。世界でいちばん贅沢な。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s2.eve.shahar.node.line.002",
-      "lineId": "main.s2.eve.shahar.line.002",
+      "id": "main.s2.eve.shahar.node.line.002a",
+      "lineId": "main.s2.eve.shahar.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "鱗は、音もなく夜空を昇った。祭りの提灯が、下でひと繋がりの光の川になる。雲を一枚抜けたところで、止まった。ここが、彼女の言う「良い席」である。",
+      "text": "鱗は、音もなく夜空を昇った。祭りの提灯が、下でひと繋がりの光の川になる。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.shahar.node.line.002b",
+      "lineId": "main.s2.eve.shahar.line.002b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "雲を一枚抜けたところで、止まった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.shahar.node.line.002c",
+      "lineId": "main.s2.eve.shahar.line.002c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ここが、彼女の言う「良い席」だ。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s2.eve.shahar.node.line.003",
-      "lineId": "main.s2.eve.shahar.line.003",
+      "id": "main.s2.eve.shahar.node.line.003a",
+      "lineId": "main.s2.eve.shahar.line.003a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "古竜の本体は、雲の向こうで、静かに息をしていた。息のたび、雲の形が変わる。「身じろぎ一つで、三県の天気が変わるんですよね」と言ったら、少し得意げな気配がした。「今夜は、行儀よくしてる」。",
+      "text": "古竜の本体は、雲の向こうで、静かに息をしていた。息のたび、雲の形が変わる。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.shahar.node.line.003b",
+      "lineId": "main.s2.eve.shahar.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「身じろぎ一つで、三県の天気が変わるんですよね」"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.shahar.node.line.003c",
+      "lineId": "main.s2.eve.shahar.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "と言ったら、少し得意げな気配がした。「今夜は、行儀よくしてる」",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s2.eve.shahar.node.line.004",
-      "lineId": "main.s2.eve.shahar.line.004",
+      "id": "main.s2.eve.shahar.node.line.004a",
+      "lineId": "main.s2.eve.shahar.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「明日の空の話を、しに来た」。シャハルは、雲の海を指した。「あの雲を、朝までに、南へ動かす。そうすると、決勝の刻限に、会場の真上だけ、晴れる」。……天気の、仕込みである。",
+      "text": "「明日の空の話を、しに来た」シャハルは、雲の海を指した。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.shahar.node.line.004b",
+      "lineId": "main.s2.eve.shahar.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「あの雲を、朝までに、南へ動かす。そうすると、決勝の刻限に、会場の真上だけ、晴れる」"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.shahar.node.line.004c",
+      "lineId": "main.s2.eve.shahar.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……天気の、仕込みだ。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s2.eve.shahar.node.line.005",
-      "lineId": "main.s2.eve.shahar.line.005",
+      "id": "main.s2.eve.shahar.node.line.005a",
+      "lineId": "main.s2.eve.shahar.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「観客が、空を見上げる興行にしたいの。あなたの明日は——空まで含めて、新作だから」。四百年生きた竜が、一晩かけて、たった三分の晴れ間を作る。規模のおかしい応援を、私は今、受けている。",
+      "text": "「観客が、空を見上げる興行にしたいの。あなたの明日は——空まで含めて、新作だから」"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.shahar.node.line.005b",
+      "lineId": "main.s2.eve.shahar.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "四百年生きた竜が、一晩かけて、たった三分の晴れ間を作る。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.shahar.node.line.005c",
+      "lineId": "main.s2.eve.shahar.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "規模のおかしい応援を、私は今、受けている。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s2.eve.shahar.node.line.006",
-      "lineId": "main.s2.eve.shahar.line.006",
+      "id": "main.s2.eve.shahar.node.line.006a",
+      "lineId": "main.s2.eve.shahar.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "お礼の言葉を探していたら、先に聞かれた。「ミミ。怖い?」。名前の呼び方が、風のように軽かった。……少し。「ん。私も、初めて人前で飛んだ日は、怖かった」。四百年前の話を、昨日のことみたいに言う。",
+      "text": "お礼の言葉を探していたら、先に聞かれた。「ミミ。怖い?」"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.shahar.node.line.006b",
+      "lineId": "main.s2.eve.shahar.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "名前の呼び方が、風のように軽かった。……少し。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.shahar.node.line.006c",
+      "lineId": "main.s2.eve.shahar.line.006c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "耳が、思わず、ぴくりと動く。「ん。私も、初めて人前で飛んだ日は、怖かった」"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.shahar.node.line.006d",
+      "lineId": "main.s2.eve.shahar.line.006d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "四百年前の話を、昨日のことみたいに言う。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s2.eve.shahar.node.line.007",
-      "lineId": "main.s2.eve.shahar.line.007",
+      "id": "main.s2.eve.shahar.node.line.007a",
+      "lineId": "main.s2.eve.shahar.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「でも、飛んだら、分かった。見てる人がいると、空は、落ちる場所じゃなくて、舞台になる」。だから明日、と彼女は言った。「空を見上げる暇があったら、それは私の合図。——胸を張って」。",
+      "text": "「でも、飛んだら、分かった。見てる人がいると、空は、落ちる場所じゃなくて、舞台になる」"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.shahar.node.line.007b",
+      "lineId": "main.s2.eve.shahar.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「だから明日」と彼女は言った。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.shahar.node.line.007c",
+      "lineId": "main.s2.eve.shahar.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「空を見上げる暇があったら、それは私の合図。——胸を張って」",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s2.eve.shahar.node.line.008",
-      "lineId": "main.s2.eve.shahar.line.008",
+      "id": "main.s2.eve.shahar.node.line.008a",
+      "lineId": "main.s2.eve.shahar.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "鱗が、ゆっくり降りていく。光の川が、近づいてくる。降り立つ寸前、頬に、あたたかい風が一度だけ吹いた。竜の、おやすみの言い方である。",
+      "text": "鱗が、ゆっくり降りていく。光の川が、近づいてくる。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.eve.shahar.node.line.008b",
+      "lineId": "main.s2.eve.shahar.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "降り立つ寸前、頬に、あたたかい風が一度だけ吹いた。竜の、おやすみの言い方だ。",
       "emotion": "tender"
     },
     {
       "type": "effect",
       "id": "main.s2.eve.shahar.node.effect.001",
-      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+      "effects": [
+        {
+          "type": "sharedPoints",
+          "amount": 2
+        }
+      ]
     },
     {
       "type": "end",
@@ -122,7 +289,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "2周目・本命前夜(シャハル)。鱗のエレベーター(bond)+天気を変える身じろぎ(meet)の集大成=決勝の刻限だけ晴らす仕込み。空=舞台、の四百年の経験談。呼び方の一段=名前呼び。",
+    "authorNote": "語り口V2・二行枠で改稿。2周目・本命前夜(シャハル)。鱗のエレベーター(bond)+天気を変える身じろぎ(meet)の集大成=決勝の刻限だけ晴らす仕込み。空=舞台、の四百年の経験談。呼び方の一段=名前呼び。",
     "legacyGeneratedIds": false
   }
 }

@@ -8,9 +8,20 @@
     "arcId": "main.stage3"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -22,6 +33,24 @@
         "kind": "background",
         "path": "/assets/story/bg-casino-cafe-night.png",
         "alt": "夜のカジノカフェの背景"
+      },
+      {
+        "id": "main.s3.w17.asset.sprite.mimi.tsukkomi",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-tsukkomi-v1.png",
+        "alt": "驚いてツッコミを入れるミミ"
+      },
+      {
+        "id": "main.s3.w17.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
+      },
+      {
+        "id": "main.s3.w17.asset.sprite.mimi.smile",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-smile-v1.png",
+        "alt": "笑顔のミミ"
       }
     ]
   },
@@ -29,97 +58,261 @@
     {
       "type": "direction",
       "id": "main.s3.w17.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s3.w17.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s3.w17.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "direction",
       "id": "main.s3.w17.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.w17.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s3.w17.asset.sprite.mimi.tsukkomi",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
-      "id": "main.s3.w17.node.line.001",
-      "lineId": "main.s3.w17.line.001",
+      "id": "main.s3.w17.node.line.001a",
+      "lineId": "main.s3.w17.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "謝酒祭の夜は、街ぜんぶが火酒の匂いになる。三年目ともなると、査定官さんの席がうちの隣に置かれるのは、もう決まりごとだ。「今年も、断れませんよ」「存じてます」。",
+      "text": "謝酒祭の夜は、街ぜんぶが火酒の匂いになる。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w17.node.line.001b",
+      "lineId": "main.s3.w17.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "三年目ともなると、査定官さんの席がうちの隣に置かれるのは、決まりごとだ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w17.node.line.001c",
+      "lineId": "main.s3.w17.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「今年も、断れませんよ」「存じてます」",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s3.w17.node.line.002",
-      "lineId": "main.s3.w17.line.002",
+      "id": "main.s3.w17.node.line.002a",
+      "lineId": "main.s3.w17.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "今日の用は、お祭りの義理を果たすこと。それから、できれば聞き耳である。祭りの夜は、いろんなものが、ゆるむ。"
+      "text": "今日の用は、お祭りの義理を果たすこと。それから、できれば——聞き耳。"
     },
     {
       "type": "line",
-      "id": "main.s3.w17.node.line.003",
-      "lineId": "main.s3.w17.line.003",
+      "id": "main.s3.w17.node.line.002b",
+      "lineId": "main.s3.w17.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "今年は、新顔の席があった。白手袋の一団の、非番の人たちである。ポラリスさんは、いない。「うちの局長は、非番でも非番の顔をしないので」と、部下の人が笑った。役所にも、宴会の顔があるらしい。",
+      "text": "祭りの夜は、いろんなものが、みんなゆるむ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w17.node.line.003a",
+      "lineId": "main.s3.w17.line.003a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "今年は、新顔の席があった。白手袋の一団の、非番の人たちだ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w17.node.line.003b",
+      "lineId": "main.s3.w17.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ポラリスさんは、いない。「うちの局長は、非番でも非番の顔をしないので」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w17.node.line.003c",
+      "lineId": "main.s3.w17.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "部下の人が、笑った。……役所にも、宴会の顔があるらしい。",
       "emotion": "comic"
     },
     {
+      "type": "direction",
+      "id": "main.s3.w17.node.direction.mimi.shift.001",
+      "command": {
+        "type": "show",
+        "assetId": "main.s3.w17.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
+    },
+    {
       "type": "line",
-      "id": "main.s3.w17.node.line.004",
-      "lineId": "main.s3.w17.line.004",
+      "id": "main.s3.w17.node.line.004a",
+      "lineId": "main.s3.w17.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "もう一つの新顔は、会社の席だった。端に、あの室長がいる。杯は、進んでいないように見えた。進んでいないのに——夜が更けるほど、目だけが、酔った人のそれになっていく。",
+      "text": "もう一つの新顔は、会社の席だった。端に、あの室長がいる。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w17.node.line.004b",
+      "lineId": "main.s3.w17.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "杯は、進んでいないように見えた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w17.node.line.004c",
+      "lineId": "main.s3.w17.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……なのに、夜が更けるほど、目だけが酔った人のそれになっていく。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s3.w17.node.line.005",
-      "lineId": "main.s3.w17.line.005",
+      "id": "main.s3.w17.node.line.005a",
+      "lineId": "main.s3.w17.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "席が流れて、たまたま隣になった。祭りの夜の、決まりごとみたいな偶然である。室長は、杯を見たまま、ぽつりと言った。「……この祭り、四百と何回目か、ご存じですか」。",
-      "emotion": "tension"
+      "text": "席が流れて、たまたま隣になった。祭りの夜の、決まりごとみたいな偶然だ。"
     },
     {
       "type": "line",
-      "id": "main.s3.w17.node.line.006",
-      "lineId": "main.s3.w17.line.006",
+      "id": "main.s3.w17.node.line.005b",
+      "lineId": "main.s3.w17.line.005b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "数えている人の、聞き方だった。「さあ。私は、三回目です」「三回目、ですか」。杯が、少しだけ傾く。「——いい数字だ。まだ、疲れない数字です」。",
+      "text": "室長は杯を見たまま、ぽつりと言った。「……この祭り、四百と何回目か、ご存じですか」",
+      "emotion": "tension"
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.w17.node.direction.mimi.shift.002",
+      "command": {
+        "type": "show",
+        "assetId": "main.s3.w17.asset.sprite.mimi.smile",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w17.node.line.006a",
+      "lineId": "main.s3.w17.line.006a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "数えている人の、聞き方だった。「さあ。私は、三回目です」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w17.node.line.006b",
+      "lineId": "main.s3.w17.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「三回目、ですか」って、杯が少しだけ、傾いた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w17.node.line.006c",
+      "lineId": "main.s3.w17.line.006c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「——いい数字だ。まだ、疲れない数字です」",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s3.w17.node.line.007",
-      "lineId": "main.s3.w17.line.007",
+      "id": "main.s3.w17.node.line.007a",
+      "lineId": "main.s3.w17.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "それ以上は、聞かなかった。祭りの夜に、人の帳面を開かせるものではない。代わりに、一つだけ渡した。「今度、湯にでも。……良い湯、知ってるんです」。",
+      "text": "それ以上は、聞かなかった。祭りの夜に、人の帳面を開かせるものじゃない。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w17.node.line.007b",
+      "lineId": "main.s3.w17.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "代わりに、一つだけ渡した。「今度、湯にでも。良い湯、知ってるんです」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w17.node.line.007c",
+      "lineId": "main.s3.w17.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "言ってから、耳の先が、じんわり熱くなった。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s3.w17.node.line.008",
-      "lineId": "main.s3.w17.line.008",
+      "id": "main.s3.w17.node.line.008a",
+      "lineId": "main.s3.w17.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "室長は、杯を置いて、初めてまっすぐこちらを見た。長い間があった。「——考えて、おきます」。考えておく、は、この街では脈のある返事である。",
+      "text": "室長は杯を置いて、初めてまっすぐ、こちらを見た。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w17.node.line.008b",
+      "lineId": "main.s3.w17.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "長い間があった。「——考えて、おきます」"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w17.node.line.008c",
+      "lineId": "main.s3.w17.line.008c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……考えておく、はこの街では、脈のある返事だ。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s3.w17.node.line.009",
-      "lineId": "main.s3.w17.line.009",
+      "id": "main.s3.w17.node.line.009a",
+      "lineId": "main.s3.w17.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "帰り道、夜空を見上げた。雨も降っていないのに、少し離れた角で、室長も同じ空を見ていた。……あの覚え書き、やっぱり当たっているのかもしれない。",
+      "text": "帰り道、夜空を見上げた。雨も降っていないのに、少し離れた角で、室長も同じ空を見ていた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w17.node.line.009b",
+      "lineId": "main.s3.w17.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……あの覚え書き、やっぱり当たっているのかもしれない。",
       "emotion": "tension"
     },
     {
       "type": "effect",
       "id": "main.s3.w17.node.effect.001",
-      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+      "effects": [
+        {
+          "type": "sharedPoints",
+          "amount": 2
+        }
+      ]
     },
     {
       "type": "end",
@@ -130,7 +323,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "3周目・週17(謝酒祭。室長の一滴=「四百と何回目か」を数えている人の聞き方。空を見る癖で覚え書きが答え合わせ。湯への誘い=週22の百人目の種)。Q=この街を引き受けるか / value=橋 0→+(考えておきます) / turn=行6(数えている人の聞き方) / hook=保留された返事(中)/post-point / try=はい、しかし / game=祭りの決まりごと(査定官の隣席→非番の顔→決まりごとみたいな偶然) / carry=室長の口走り(週16)・空を見る癖(週15) / open=室長は湯に来るか(答え=週22) / newterm=なし",
+    "authorNote": "語り口V2・二行枠で改稿。 / 3周目・週17(謝酒祭。室長の一滴=「四百と何回目か」を数えている人の聞き方。空を見る癖で覚え書きが答え合わせ。湯への誘い=週22の百人目の種)。Q=この街を引き受けるか / value=橋 0→+(考えておきます) / turn=行6(数えている人の聞き方) / hook=保留された返事(中)/post-point / try=はい、しかし / game=祭りの決まりごと(査定官の隣席→非番の顔→決まりごとみたいな偶然) / carry=室長の口走り(週16)・空を見る癖(週15) / open=室長は湯に来るか(答え=週22) / newterm=なし",
     "legacyGeneratedIds": false
   }
 }
