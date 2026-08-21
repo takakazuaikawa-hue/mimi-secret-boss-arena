@@ -54,20 +54,39 @@
     {
       "type": "direction",
       "id": "sazanami.bond.node.direction.003",
-      "command": { "type": "still", "assetId": "sazanami.bond.asset.still.001" }
+      "command": {
+        "type": "still",
+        "assetId": "sazanami.bond.asset.still.001"
+      }
     },
     {
       "type": "line",
-      "id": "sazanami.bond.node.line.001",
-      "lineId": "sazanami.bond.line.001",
+      "id": "sazanami.bond.node.line.001a",
+      "lineId": "sazanami.bond.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "休日、雨。私は金魚鉢サイズの携帯水槽を抱えて、商店街を歩いていた。中身は、さざなみの影のさらに一部。「街の散歩がしてみたい」という本人の希望による、初めての外出である。"
+      "text": "休日、雨。金魚鉢サイズの携帯水槽を抱えて、商店街を歩いてた。"
     },
     {
       "type": "line",
-      "id": "sazanami.bond.node.line.002",
-      "lineId": "sazanami.bond.line.002",
+      "id": "sazanami.bond.node.line.001b",
+      "lineId": "sazanami.bond.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "中身は、さざなみの影の、さらに一部。「街の散歩がしてみたい」"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.bond.node.line.001c",
+      "lineId": "sazanami.bond.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "——本人希望の、初めての外出。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.bond.node.line.002a",
+      "lineId": "sazanami.bond.line.002a",
       "speakerId": "legacy.speaker.we7zqt",
       "speakerName": "さざなみ",
       "mode": "dialogue",
@@ -75,8 +94,8 @@
     },
     {
       "type": "line",
-      "id": "sazanami.bond.node.line.003",
-      "lineId": "sazanami.bond.line.003",
+      "id": "sazanami.bond.node.line.003a",
+      "lineId": "sazanami.bond.line.003a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -84,56 +103,122 @@
     },
     {
       "type": "line",
-      "id": "sazanami.bond.node.line.004",
-      "lineId": "sazanami.bond.line.004",
+      "id": "sazanami.bond.node.line.004a",
+      "lineId": "sazanami.bond.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "水槽の中の影が、うれしそうに渦を巻いた。彼女いわく、雨の日は「海が街へ迎えに来ている日」らしい。水たまりの一つずつに挨拶しながら歩くので、進みは遅い。散歩とは、そういうものだ。",
+      "text": "水槽の中の影が、うれしそうに渦を巻いた。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.bond.node.line.004b",
+      "lineId": "sazanami.bond.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "彼女いわく、雨の日は「海が街へ迎えに来る日」だそう。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.bond.node.line.004c",
+      "lineId": "sazanami.bond.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "水たまり一つずつに挨拶するから、進みは遅い。耳も、心なしか弾んでる。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "sazanami.bond.node.line.005",
-      "lineId": "sazanami.bond.line.005",
+      "id": "sazanami.bond.node.line.005a",
+      "lineId": "sazanami.bond.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "事件は、商店街の奥で起きた。雨天でもやっている屋台の金魚すくい。その水槽を見た瞬間、携帯水槽の影が、ぴたりと止まった。",
+      "text": "事件は、商店街の奥で起きた。雨天でもやってる屋台の、金魚すくい。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.bond.node.line.005b",
+      "lineId": "sazanami.bond.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "その水槽を見た瞬間、携帯水槽の影が、ぴたりと止まった。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "sazanami.bond.node.line.006",
-      "lineId": "sazanami.bond.line.006",
+      "id": "sazanami.bond.node.line.006a",
+      "lineId": "sazanami.bond.line.006a",
       "speakerId": "legacy.speaker.we7zqt",
       "speakerName": "さざなみ",
       "mode": "dialogue",
-      "text": "……あの水は、狭い。金魚が、二十七匹。水量に対して、九匹、多い。"
+      "text": "……あの水は、狭い。金魚が、二十七匹。"
     },
     {
       "type": "line",
-      "id": "sazanami.bond.node.line.007",
-      "lineId": "sazanami.bond.line.007",
+      "id": "sazanami.bond.node.line.006b",
+      "lineId": "sazanami.bond.line.006b",
+      "speakerId": "legacy.speaker.we7zqt",
+      "speakerName": "さざなみ",
+      "mode": "dialogue",
+      "text": "水量に対して、九匹、多い。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.bond.node.line.007a",
+      "lineId": "sazanami.bond.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "海の採点が、始まってしまった。屋台のおやじさんが「なんだお客さん、文句あるのか」と身を乗り出す。まずい。相手は水槽越しでも、寝返りで三県を揺らす海である。",
+      "text": "海の採点が、始まってしまった。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.bond.node.line.007b",
+      "lineId": "sazanami.bond.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "屋台のおやじさんが「なんだお客さん、文句あるのか」と身を乗り出す。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.bond.node.line.007c",
+      "lineId": "sazanami.bond.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "まずい。相手は水槽越しでも、三県を揺らす海。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "sazanami.bond.node.line.008",
-      "lineId": "sazanami.bond.line.008",
+      "id": "sazanami.bond.node.line.008a",
+      "lineId": "sazanami.bond.line.008a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "文句じゃないです！　勝負です！　私がすくった金魚のぶんだけ、水槽を広くしてあげてください！"
+      "text": "文句じゃないです!　勝負です!"
     },
     {
       "type": "line",
-      "id": "sazanami.bond.node.line.009",
-      "lineId": "sazanami.bond.line.009",
+      "id": "sazanami.bond.node.line.008b",
+      "lineId": "sazanami.bond.line.008b",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "私がすくった金魚のぶんだけ、水槽を広くしてあげてください!"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.bond.node.line.009a",
+      "lineId": "sazanami.bond.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "勢いで宣言してしまった。接客業の悪い癖だ。落とし所を先に作ってしまう。かくして雨の商店街で、バニーガール対金魚すくい屋台の、九匹救出作戦が始まった。",
+      "text": "勢いで宣言しちゃった。接客業の、悪い癖。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.bond.node.line.009b",
+      "lineId": "sazanami.bond.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "かくして商店街で、バニーガール対金魚すくいの、九匹救出作戦が始まった。",
       "emotion": "comic"
     },
     {
@@ -146,35 +231,76 @@
     },
     {
       "type": "line",
-      "id": "sazanami.bond.node.line.010",
-      "lineId": "sazanami.bond.line.010",
+      "id": "sazanami.bond.node.line.010a",
+      "lineId": "sazanami.bond.line.010a",
       "speakerId": "legacy.speaker.we7zqt",
       "speakerName": "さざなみ",
       "mode": "dialogue",
-      "text": "ミミ。ポイは、水と平行に。……金魚は、追わない。潮目を読んで、待つ。"
+      "text": "ミミ。ポイは、水と平行に。"
     },
     {
       "type": "line",
-      "id": "sazanami.bond.node.line.011",
-      "lineId": "sazanami.bond.line.011",
+      "id": "sazanami.bond.node.line.010b",
+      "lineId": "sazanami.bond.line.010b",
+      "speakerId": "legacy.speaker.we7zqt",
+      "speakerName": "さざなみ",
+      "mode": "dialogue",
+      "text": "……金魚は、追わない。潮目を読んで、待つ。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.bond.node.line.011a",
+      "lineId": "sazanami.bond.line.011a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "肩の上の携帯水槽から、海溝より大きい存在の、金魚すくい実況コーチが飛ぶ。屋台の水面のどこに流れが生まれるか、彼女には全部見えるらしい。私は言われた場所にポイを置くだけでよかった。",
+      "text": "肩の携帯水槽から、金魚すくい実況コーチが飛ぶ。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.bond.node.line.011b",
+      "lineId": "sazanami.bond.line.011b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "屋台の水面のどこに流れが生まれるか、彼女には全部見えるそう。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.bond.node.line.011c",
+      "lineId": "sazanami.bond.line.011c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私は、言われた場所にポイを置くだけでよかった。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "sazanami.bond.node.line.012",
-      "lineId": "sazanami.bond.line.012",
+      "id": "sazanami.bond.node.line.012a",
+      "lineId": "sazanami.bond.line.012a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "結果、九匹。ポイは最後まで破れなかった。おやじさんは負けを認めて、大きい水槽を出してきた。ついでに「あんたの相棒、何者だい」と聞かれたので、「海です」と正直に答えたら、笑って金魚を一匹おまけしてくれた。",
+      "text": "結果、九匹。ポイは最後まで破れなかった。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.bond.node.line.012b",
+      "lineId": "sazanami.bond.line.012b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "おやじさんは負けを認めて、大きい水槽を出してくれた。「あんたの相棒、何者だい」"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.bond.node.line.012c",
+      "lineId": "sazanami.bond.line.012c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「海です」と答えたら、金魚を一匹おまけしてくれた。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "sazanami.bond.node.line.013",
-      "lineId": "sazanami.bond.line.013",
+      "id": "sazanami.bond.node.line.013a",
+      "lineId": "sazanami.bond.line.013a",
       "speakerId": "legacy.speaker.we7zqt",
       "speakerName": "さざなみ",
       "mode": "dialogue",
@@ -182,8 +308,8 @@
     },
     {
       "type": "line",
-      "id": "sazanami.bond.node.line.014",
-      "lineId": "sazanami.bond.line.014",
+      "id": "sazanami.bond.node.line.014a",
+      "lineId": "sazanami.bond.line.014a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -191,8 +317,8 @@
     },
     {
       "type": "line",
-      "id": "sazanami.bond.node.line.015",
-      "lineId": "sazanami.bond.line.015",
+      "id": "sazanami.bond.node.line.015a",
+      "lineId": "sazanami.bond.line.015a",
       "speakerId": "legacy.speaker.we7zqt",
       "speakerName": "さざなみ",
       "mode": "dialogue",
@@ -200,20 +326,28 @@
     },
     {
       "type": "line",
-      "id": "sazanami.bond.node.line.016",
-      "lineId": "sazanami.bond.line.016",
+      "id": "sazanami.bond.node.line.016a",
+      "lineId": "sazanami.bond.line.016a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "雨音の中で、心臓がひとつ跳ねた。採点の人の一点は、そういう使い方もできるのか。私は傘を少し傾けて、携帯水槽に雨粒が届くようにした。海が、雨と再会して、小さく波立った。",
+      "text": "雨音の中で、心臓がひとつ跳ねた。採点の人の一点は、そういう使い方もできるのか。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.bond.node.line.016b",
+      "lineId": "sazanami.bond.line.016b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "傘を少し傾けて、携帯水槽に雨粒を届けた。海が、小さく波立った。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "sazanami.bond.node.line.017",
-      "lineId": "sazanami.bond.line.017",
+      "id": "sazanami.bond.node.line.017a",
+      "lineId": "sazanami.bond.line.017a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "帰り道は、まだ長い。散歩の続きの使い方を、決められる。",
+      "text": "帰り道は、まだ長い。散歩の続きを、決められる。",
       "emotion": "resolve"
     },
     {
@@ -223,7 +357,7 @@
         {
           "id": "sazanami.bond.choice.001",
           "label": "海が見える窓辺で、小さな水槽の散歩をする",
-          "result": "帰りに、海の見える高台へ寄り道した。携帯水槽を窓辺に置くと、水槽の中の影と、水平線の本体が、しばらく静かに向き合っていた。「自分を、外から見るのは、初めて」と彼女は言った。大きすぎて全体を見たことがなかった人が、金魚鉢の中から、初めて自分の広さを眺めた夕方だった。",
+          "result": "帰りに、海の見える高台へ寄り道した。窓辺の水槽で、影と水平線の本体が、静かに向き合った。「自分を、外から見るのは、初めて」と彼女は言った。大きすぎて全体を見たことがない人が、初めて自分の広さを眺めた夕方だった。",
           "intent": "海に、海を見せる",
           "promise": "読みにくい作戦になる代わりに、この人だけの成長を大きく進める。",
           "memory": "海が初めて自分を外から見た夕方を、二人とも覚えている。",
@@ -253,7 +387,7 @@
         {
           "id": "sazanami.bond.choice.002",
           "label": "水槽の影へ三人の陣形を重ねる",
-          "result": "帰り道、雨宿りのついでに作戦会議をした。携帯水槽の水面に、彼女が三人の陣形を波紋で描いてくれる。前衛の波、中衛の渦、後衛の凪。「陣形は、潮と同じ。形より、流れ」。波紋の戦術図は、ホワイトボードより分かりやすかった。うちの作戦会議は、また一つ変な道具を覚えた。",
+          "result": "帰り道、雨宿りで作戦会議をした。水槽の水面に、彼女が三人の陣形を波紋で描く。前衛の波、中衛の渦、後衛の凪。「陣形は、潮と同じ。形より、流れ」と教わった。うちの作戦会議は、また一つ変な道具を覚えた。",
           "intent": "海の視点で、チームの流れを整える",
           "promise": "散歩の続きは短くなるが、全員へ配れる成長ポイントを得る。",
           "memory": "波紋の戦術図を、チームは「さざなみボード」と呼んでいる。",
@@ -298,7 +432,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 携帯水槽の散歩と金魚すくい九匹救出作戦。「満点を出すと終わってしまう」の一点。海に海を見せる夕方。",
+    "authorNote": "語り口V2・二行枠で改稿。携帯水槽の散歩と金魚すくい九匹救出作戦。「満点を出すと終わってしまう」の一点。海に海を見せる夕方。",
     "legacyGeneratedIds": false
   }
 }

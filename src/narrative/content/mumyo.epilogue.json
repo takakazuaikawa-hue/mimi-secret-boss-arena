@@ -10,9 +10,17 @@
     "stage": "epilogue"
   },
   "trigger": {
-    "actions": ["rest"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "rest"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 400,
     "weight": 1
   },
@@ -36,56 +44,126 @@
   "nodes": [
     {
       "type": "line",
-      "id": "mumyo.epilogue.node.line.001",
-      "lineId": "mumyo.epilogue.line.001",
+      "id": "mumyo.epilogue.node.line.001a",
+      "lineId": "mumyo.epilogue.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "最終大会の翌週、私は『第一回・所有者なし搬出式』の司会台に立っていた。第一回なのは前例がないからで、第二回があると困る種類の式典だった。",
+      "text": "最終大会の翌週、私は『第一回・所有者なし搬出式』の司会台に立っていた。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.epilogue.node.line.001b",
+      "lineId": "mumyo.epilogue.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "第一回なのは前例がないからで、第二回があると困る種類の式典だった。",
       "emotion": "comic"
     },
     {
       "type": "direction",
       "id": "mumyo.epilogue.node.direction.001",
-      "command": { "type": "background", "assetId": "mumyo.epilogue.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "mumyo.epilogue.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "line",
-      "id": "mumyo.epilogue.node.line.002",
-      "lineId": "mumyo.epilogue.line.002",
+      "id": "mumyo.epilogue.node.line.002a",
+      "lineId": "mumyo.epilogue.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "原因はアルデバラン社の備品規則だった。『解放済み景品は、所有者の責任で展示室から搬出すること』。解放済みなのに所有者を要求する。規則が一行で自分の足を踏んでいた。"
+      "text": "原因はアルデバラン社の備品規則だった。"
     },
     {
       "type": "line",
-      "id": "mumyo.epilogue.node.line.003",
-      "lineId": "mumyo.epilogue.line.003",
+      "id": "mumyo.epilogue.node.line.002b",
+      "lineId": "mumyo.epilogue.line.002b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "『解放済み景品は、所有者の責任で展示室から搬出すること』解放済みなのに所有者を要求する。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.epilogue.node.line.002c",
+      "lineId": "mumyo.epilogue.line.002c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "規則が一行で自分の足を踏んでいた。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.epilogue.node.line.003a",
+      "lineId": "mumyo.epilogue.line.003a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "というわけで本日の主役は、所有者がいないので搬出できない、搬出できないのでずっと景品のままという、規則に挟まれた最強の剣です。拍手は剣が抜けない程度でお願いします。"
+      "text": "というわけで本日の主役は、所有者がいないので搬出できない。"
     },
     {
       "type": "line",
-      "id": "mumyo.epilogue.node.line.004",
-      "lineId": "mumyo.epilogue.line.004",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "拍手は起きた。展示ケースの鏡に立つ黒髪の人物だけが、拍手の代わりに少し眉を上げた。無銘は笑わない。けれど最近、呆れたときの顔だけは分かるようになった。"
+      "id": "mumyo.epilogue.node.line.003b",
+      "lineId": "mumyo.epilogue.line.003b",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "搬出できないのでずっと景品のままという、規則に挟まれた最強の剣です。"
     },
     {
       "type": "line",
-      "id": "mumyo.epilogue.node.line.005",
-      "lineId": "mumyo.epilogue.line.005",
+      "id": "mumyo.epilogue.node.line.003c",
+      "lineId": "mumyo.epilogue.line.003c",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "拍手は剣が抜けない程度でお願いします。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.epilogue.node.line.004a",
+      "lineId": "mumyo.epilogue.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "会社が用意した搬出案は、黄金の神輿、聖獣八頭立て、対魔王用自走台車、そして『近くにいた勇者へお願いする』だった。最後の案だけ予算がゼロで、担当者の期待が大きい。",
+      "text": "拍手は起きた。展示ケースの鏡に立つ黒髪の人物だけが、拍手の代わりに少し眉を上げた。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.epilogue.node.line.004b",
+      "lineId": "mumyo.epilogue.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "無銘は笑わない。けれど最近、呆れたときの顔だけは分かるようになった。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.epilogue.node.line.005a",
+      "lineId": "mumyo.epilogue.line.005a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "会社が用意した搬出案は、黄金の神輿、聖獣八頭立て、対魔王用自走台車。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.epilogue.node.line.005b",
+      "lineId": "mumyo.epilogue.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "そして『近くにいた勇者へお願いする』だった。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.epilogue.node.line.005c",
+      "lineId": "mumyo.epilogue.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "最後の案だけ予算がゼロで、担当者の期待が大きい。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "mumyo.epilogue.node.line.006",
-      "lineId": "mumyo.epilogue.line.006",
+      "id": "mumyo.epilogue.node.line.006a",
+      "lineId": "mumyo.epilogue.line.006a",
       "speakerId": "mumyo",
       "speakerName": "無銘",
       "mode": "dialogue",
@@ -93,16 +171,24 @@
     },
     {
       "type": "line",
-      "id": "mumyo.epilogue.node.line.007",
-      "lineId": "mumyo.epilogue.line.007",
+      "id": "mumyo.epilogue.node.line.007a",
+      "lineId": "mumyo.epilogue.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "静かな声だった。それだけで神輿の担ぎ手がそっと肩を下ろし、聖獣が伏せ、自走台車が自分から電源を切った。空気を読む機械は初めて見た。"
+      "text": "静かな声だった。それだけで神輿の担ぎ手がそっと肩を下ろした。"
     },
     {
       "type": "line",
-      "id": "mumyo.epilogue.node.line.008",
-      "lineId": "mumyo.epilogue.line.008",
+      "id": "mumyo.epilogue.node.line.007b",
+      "lineId": "mumyo.epilogue.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "聖獣が伏せ、自走台車が自分から電源を切った。空気を読む機械は初めて見た。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.epilogue.node.line.008a",
+      "lineId": "mumyo.epilogue.line.008a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -110,26 +196,50 @@
     },
     {
       "type": "line",
-      "id": "mumyo.epilogue.node.line.009",
-      "lineId": "mumyo.epilogue.line.009",
+      "id": "mumyo.epilogue.node.line.009a",
+      "lineId": "mumyo.epilogue.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "質問が展示室へ落ちた瞬間、鞘から刃が一寸だけ浮いた。鏡が十四枚に割れ、炎上する王都、沈む天空城、月を噛む竜、終末の鐘が同時に映る。歴代の所有者たちが、全員、自分こそ最後の勇者だという顔で剣へ手を伸ばした。",
+      "text": "質問が展示室へ落ちた瞬間、鞘から刃が一寸だけ浮いた。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.epilogue.node.line.009b",
+      "lineId": "mumyo.epilogue.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "鏡が十四枚に割れ、炎上する王都、沈む天空城、月を噛む竜、終末の鐘が同時に映る。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.epilogue.node.line.009c",
+      "lineId": "mumyo.epilogue.line.009c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "歴代の所有者たちが、全員、自分こそ最後の勇者だという顔で剣へ手を伸ばした。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "mumyo.epilogue.node.line.010",
-      "lineId": "mumyo.epilogue.line.010",
+      "id": "mumyo.epilogue.node.line.010a",
+      "lineId": "mumyo.epilogue.line.010a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "最終決戦が十四件。司会進行表には一件も載っていない。私はとりあえず『順番にお並びください』と言った。終末にも列整理は必要だった。",
+      "text": "最終決戦が十四件。司会進行表には一件も載っていない。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.epilogue.node.line.010b",
+      "lineId": "mumyo.epilogue.line.010b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私はとりあえず『順番にお並びください』と言った。終末にも列整理は必要だった。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "mumyo.epilogue.node.line.011",
-      "lineId": "mumyo.epilogue.line.011",
+      "id": "mumyo.epilogue.node.line.011a",
+      "lineId": "mumyo.epilogue.line.011a",
       "speakerId": "mumyo",
       "speakerName": "無銘",
       "mode": "dialogue",
@@ -137,30 +247,66 @@
     },
     {
       "type": "line",
-      "id": "mumyo.epilogue.node.line.012",
-      "lineId": "mumyo.epilogue.line.012",
+      "id": "mumyo.epilogue.node.line.012a",
+      "lineId": "mumyo.epilogue.line.012a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "鏡の中の無銘が、人差し指を一度だけ下ろした。誰も触れていない刃が鞘へ戻る。十四の炎も、竜も、鐘も、命令の言葉まで、音を立てず一斉に納まった。最強の剣が見せたのは、世界を斬る力ではなく、世界を斬らないと決める力だった。",
+      "text": "鏡の中の無銘が、人差し指を一度だけ下ろした。誰も触れていない刃が鞘へ戻る。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.epilogue.node.line.012b",
+      "lineId": "mumyo.epilogue.line.012b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "十四の炎も、竜も、鐘も、命令の言葉まで、音を立てず一斉に納まった。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.epilogue.node.line.012c",
+      "lineId": "mumyo.epilogue.line.012c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "最強の剣が見せたのは、世界を斬る力ではなく、世界を斬らないと決める力だった。",
       "emotion": "revelation"
     },
     {
       "type": "direction",
       "id": "mumyo.epilogue.node.direction.002",
-      "command": { "type": "still", "assetId": "mumyo.epilogue.asset.still.001", "transition": "dissolve" }
+      "command": {
+        "type": "still",
+        "assetId": "mumyo.epilogue.asset.still.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "line",
-      "id": "mumyo.epilogue.node.line.013",
-      "lineId": "mumyo.epilogue.line.013",
+      "id": "mumyo.epilogue.node.line.013a",
+      "lineId": "mumyo.epilogue.line.013a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "最後の鏡だけが残った。黒髪の人物は、枠の内側からこちらへ片足を出す。靴底が展示室の床へ触れた。剣はケースにある。それなのに無銘は、自分の足で私のいる側へ立っていた。"
+      "text": "最後の鏡だけが残った。黒髪の人物は、枠の内側からこちらへ片足を出す。"
     },
     {
       "type": "line",
-      "id": "mumyo.epilogue.node.line.014",
-      "lineId": "mumyo.epilogue.line.014",
+      "id": "mumyo.epilogue.node.line.013b",
+      "lineId": "mumyo.epilogue.line.013b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "靴底が展示室の床へ触れた。剣はケースにある。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.epilogue.node.line.013c",
+      "lineId": "mumyo.epilogue.line.013c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "それなのに無銘は、自分の足で私のいる側へ立っていた。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.epilogue.node.line.014a",
+      "lineId": "mumyo.epilogue.line.014a",
       "speakerId": "mumyo",
       "speakerName": "無銘",
       "mode": "dialogue",
@@ -168,8 +314,8 @@
     },
     {
       "type": "line",
-      "id": "mumyo.epilogue.node.line.015",
-      "lineId": "mumyo.epilogue.line.015",
+      "id": "mumyo.epilogue.node.line.015a",
+      "lineId": "mumyo.epilogue.line.015a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -177,8 +323,8 @@
     },
     {
       "type": "line",
-      "id": "mumyo.epilogue.node.line.016",
-      "lineId": "mumyo.epilogue.line.016",
+      "id": "mumyo.epilogue.node.line.016a",
+      "lineId": "mumyo.epilogue.line.016a",
       "speakerId": "mumyo",
       "speakerName": "無銘",
       "mode": "dialogue",
@@ -186,38 +332,79 @@
     },
     {
       "type": "line",
-      "id": "mumyo.epilogue.node.line.017",
-      "lineId": "mumyo.epilogue.line.017",
+      "id": "mumyo.epilogue.node.line.017a",
+      "lineId": "mumyo.epilogue.line.017a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "名前を呼ばれた。誰かの願いを映した声ではなく、無銘が選び分けた声で。胸の奥が一拍遅れて熱くなる。私は司会台の陰で、曲がっていない兎耳をなぜか直した。",
+      "text": "名前を呼ばれた。誰かの願いを映した声ではなく、無銘が選び分けた声で。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.epilogue.node.line.017b",
+      "lineId": "mumyo.epilogue.line.017b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "胸の奥が一拍遅れて熱くなる。私は司会台の陰で、曲がっていない兎耳をなぜか直した。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "mumyo.epilogue.node.line.018",
-      "lineId": "mumyo.epilogue.line.018",
+      "id": "mumyo.epilogue.node.line.018a",
+      "lineId": "mumyo.epilogue.line.018a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "搬出式の結果欄には『本人の意思により、本人だけ退出。剣は有給休暇』と書いた。提出したら総務から電話が来たので、無銘と二人で聞かなかったことにした。",
+      "text": "搬出式の結果欄には『本人の意思により、本人だけ退出。剣は有給休暇』と書いた。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.epilogue.node.line.018b",
+      "lineId": "mumyo.epilogue.line.018b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "提出したら総務から電話が来たので、無銘と二人で聞かなかったことにした。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "mumyo.epilogue.node.line.020",
-      "lineId": "mumyo.epilogue.line.020",
+      "id": "mumyo.epilogue.node.line.020a",
+      "lineId": "mumyo.epilogue.line.020a",
       "speakerId": "mumyo",
       "speakerName": "無銘",
       "mode": "dialogue",
-      "text": "演目表の出演届は、出しておいた。演目名は「抜かない居合、十四連続」。……刃は、見せない。納める方を、見せる。"
+      "text": "演目表の出演届は、出しておいた。演目名は「抜かない居合、十四連続」"
     },
     {
       "type": "line",
-      "id": "mumyo.epilogue.node.line.019",
-      "lineId": "mumyo.epilogue.line.019",
+      "id": "mumyo.epilogue.node.line.020b",
+      "lineId": "mumyo.epilogue.line.020b",
+      "speakerId": "mumyo",
+      "speakerName": "無銘",
+      "mode": "dialogue",
+      "text": "……刃は、見せない。納める方を、見せる。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.epilogue.node.line.019a",
+      "lineId": "mumyo.epilogue.line.019a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "開いたケースの前から、二つの足音が離れていく。持つ者と持たれる物ではない。どちらが先を歩くとも決めない。次の角で同時に道を譲り合って、二人とも少し困ってから笑った。",
+      "text": "開いたケースの前から、二つの足音が離れていく。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.epilogue.node.line.019b",
+      "lineId": "mumyo.epilogue.line.019b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "持つ者と持たれる物ではない。どちらが先を歩くとも決めない。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.epilogue.node.line.019c",
+      "lineId": "mumyo.epilogue.line.019c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "次の角で同時に道を譲り合って、二人とも少し困ってから笑った。",
       "emotion": "tender"
     },
     {
@@ -229,7 +416,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "承認済み本文(所有者なし搬出式)を保持し、出演届の一行のみ追加して演目表へ接続。",
+    "authorNote": "語り口V2・二行枠で改稿。承認済み本文(所有者なし搬出式)を保持し、出演届の一行のみ追加して演目表へ接続。",
     "legacyGeneratedIds": false
   }
 }

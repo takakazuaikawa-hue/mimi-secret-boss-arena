@@ -71,16 +71,24 @@
     },
     {
       "type": "line",
-      "id": "opening.owner-transfer.node.line.001",
-      "lineId": "opening.owner-transfer.line.001",
+      "id": "opening.owner-transfer.node.line.001a",
+      "lineId": "opening.owner-transfer.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "閉館前、私はマダムを登録窓口へ案内した。今日の仕事はよく働いたと思う。飲み物を運び、道を案内し、海を設備担当へ渡した。あとは勤務確認へ印をもらえば終わる。"
+      "text": "閉館前、私はマダムを登録窓口へ案内した。今日の仕事は、よく働いた。"
     },
     {
       "type": "line",
-      "id": "opening.owner-transfer.node.line.002",
-      "lineId": "opening.owner-transfer.line.002",
+      "id": "opening.owner-transfer.node.line.001b",
+      "lineId": "opening.owner-transfer.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "飲み物を運び、道を案内し、海を設備担当へ渡した。あとは勤務確認の印をもらえば終わる。"
+    },
+    {
+      "type": "line",
+      "id": "opening.owner-transfer.node.line.002a",
+      "lineId": "opening.owner-transfer.line.002a",
       "speakerId": "legacy.speaker.3fs2v8",
       "speakerName": "受付係ノノ",
       "mode": "dialogue",
@@ -88,17 +96,17 @@
     },
     {
       "type": "line",
-      "id": "opening.owner-transfer.node.line.003",
-      "lineId": "opening.owner-transfer.line.003",
+      "id": "opening.owner-transfer.node.line.003a",
+      "lineId": "opening.owner-transfer.line.003a",
       "speakerId": "legacy.speaker.jsgxc9",
       "speakerName": "マダム",
       "mode": "dialogue",
-      "text": "今日、現場にいる責任者の方でよろしいの？"
+      "text": "今日、現場にいる責任者の方でよろしいの?"
     },
     {
       "type": "line",
-      "id": "opening.owner-transfer.node.line.004",
-      "lineId": "opening.owner-transfer.line.004",
+      "id": "opening.owner-transfer.node.line.004a",
+      "lineId": "opening.owner-transfer.line.004a",
       "speakerId": "legacy.speaker.3fs2v8",
       "speakerName": "受付係ノノ",
       "mode": "dialogue",
@@ -106,17 +114,17 @@
     },
     {
       "type": "line",
-      "id": "opening.owner-transfer.node.line.005",
-      "lineId": "opening.owner-transfer.line.005",
+      "id": "opening.owner-transfer.node.line.005a",
+      "lineId": "opening.owner-transfer.line.005a",
       "speakerId": "legacy.speaker.jsgxc9",
       "speakerName": "マダム",
       "mode": "dialogue",
-      "text": "ではミミさん、お願いできる？"
+      "text": "ではミミさん、お願いできる?"
     },
     {
       "type": "line",
-      "id": "opening.owner-transfer.node.line.006",
-      "lineId": "opening.owner-transfer.line.006",
+      "id": "opening.owner-transfer.node.line.006a",
+      "lineId": "opening.owner-transfer.line.006a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -124,25 +132,42 @@
     },
     {
       "type": "line",
-      "id": "opening.owner-transfer.node.line.007",
-      "lineId": "opening.owner-transfer.line.007",
+      "id": "opening.owner-transfer.node.line.007a",
+      "lineId": "opening.owner-transfer.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "三人とも、同じ話をしている顔だった。魔法盤の欄には「現場代理人」。派遣票には「本日の現場責任者」。双子なら、せめて別々の服を着てほしいくらい似ている。"
+      "text": "三人とも、同じ話をしている顔だった。魔法盤の欄は「現場代理人」"
     },
     {
       "type": "line",
-      "id": "opening.owner-transfer.node.line.008",
-      "lineId": "opening.owner-transfer.line.008",
+      "id": "opening.owner-transfer.node.line.007b",
+      "lineId": "opening.owner-transfer.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "、派遣票は「本日の現場責任者」とある。"
+    },
+    {
+      "type": "line",
+      "id": "opening.owner-transfer.node.line.007c",
+      "lineId": "opening.owner-transfer.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "双子なら、せめて別々の服を着てほしいくらい似ている。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "opening.owner-transfer.node.line.008a",
+      "lineId": "opening.owner-transfer.line.008a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "今日ここで働いたことを確認すればいいんですね？"
+      "text": "今日ここで働いたことを確認すればいいんですね?"
     },
     {
       "type": "line",
-      "id": "opening.owner-transfer.node.line.009",
-      "lineId": "opening.owner-transfer.line.009",
+      "id": "opening.owner-transfer.node.line.009a",
+      "lineId": "opening.owner-transfer.line.009a",
       "speakerId": "legacy.speaker.3fs2v8",
       "speakerName": "受付係ノノ",
       "mode": "dialogue",
@@ -166,34 +191,42 @@
     },
     {
       "type": "line",
-      "id": "opening.owner-transfer.node.line.010",
-      "lineId": "opening.owner-transfer.line.010",
+      "id": "opening.owner-transfer.node.line.010a",
+      "lineId": "opening.owner-transfer.line.010a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "社員証を置く。盤面が青く光り、「返却手続き」の文字が消えた。代わりに、私の名前が出た。",
+      "text": "社員証を置く。盤面が青く光り、「返却手続き」の文字が消えた。"
+    },
+    {
+      "type": "line",
+      "id": "opening.owner-transfer.node.line.010b",
+      "lineId": "opening.owner-transfer.line.010b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "代わりに、私の名前が出た。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "opening.owner-transfer.node.line.011",
-      "lineId": "opening.owner-transfer.line.011",
+      "id": "opening.owner-transfer.node.line.011a",
+      "lineId": "opening.owner-transfer.line.011a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "暫定オーナー　ミミ。"
+      "text": "暫定オーナー　ミミ。耳が、ひくっと跳ねた。"
     },
     {
       "type": "line",
-      "id": "opening.owner-transfer.node.line.012",
-      "lineId": "opening.owner-transfer.line.012",
+      "id": "opening.owner-transfer.node.line.012a",
+      "lineId": "opening.owner-transfer.line.012a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "私の勤務確認、ずいぶん偉くなっていませんか？"
+      "text": "私の勤務確認、ずいぶん偉くなっていませんか?"
     },
     {
       "type": "line",
-      "id": "opening.owner-transfer.node.line.013",
-      "lineId": "opening.owner-transfer.line.013",
+      "id": "opening.owner-transfer.node.line.013a",
+      "lineId": "opening.owner-transfer.line.013a",
       "speakerId": "legacy.speaker.jsgxc9",
       "speakerName": "マダム",
       "mode": "dialogue",
@@ -201,8 +234,8 @@
     },
     {
       "type": "line",
-      "id": "opening.owner-transfer.node.line.014",
-      "lineId": "opening.owner-transfer.line.014",
+      "id": "opening.owner-transfer.node.line.014a",
+      "lineId": "opening.owner-transfer.line.014a",
       "speakerId": "legacy.speaker.3fs2v8",
       "speakerName": "受付係ノノ",
       "mode": "dialogue",
@@ -210,16 +243,25 @@
     },
     {
       "type": "line",
-      "id": "opening.owner-transfer.node.line.015",
-      "lineId": "opening.owner-transfer.line.015",
+      "id": "opening.owner-transfer.node.line.015a",
+      "lineId": "opening.owner-transfer.line.015a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ノノさんは魔法盤を見た。マダムは私を見た。私は社員証を見た。社員証は何も悪くない顔をしていた。"
+      "text": "ノノさんは魔法盤を見た。マダムは私を見た。"
     },
     {
       "type": "line",
-      "id": "opening.owner-transfer.node.line.016",
-      "lineId": "opening.owner-transfer.line.016",
+      "id": "opening.owner-transfer.node.line.015b",
+      "lineId": "opening.owner-transfer.line.015b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私は社員証を見た。社員証は何も悪くない顔をしていた。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "opening.owner-transfer.node.line.016a",
+      "lineId": "opening.owner-transfer.line.016a",
       "speakerId": "legacy.speaker.jsgxc9",
       "speakerName": "マダム",
       "mode": "dialogue",
@@ -227,8 +269,8 @@
     },
     {
       "type": "line",
-      "id": "opening.owner-transfer.node.line.017",
-      "lineId": "opening.owner-transfer.line.017",
+      "id": "opening.owner-transfer.node.line.017a",
+      "lineId": "opening.owner-transfer.line.017a",
       "speakerId": "legacy.speaker.3fs2v8",
       "speakerName": "受付係ノノ",
       "mode": "dialogue",
@@ -236,8 +278,8 @@
     },
     {
       "type": "line",
-      "id": "opening.owner-transfer.node.line.018",
-      "lineId": "opening.owner-transfer.line.018",
+      "id": "opening.owner-transfer.node.line.018a",
+      "lineId": "opening.owner-transfer.line.018a",
       "speakerId": "legacy.speaker.jsgxc9",
       "speakerName": "マダム",
       "mode": "dialogue",
@@ -245,26 +287,34 @@
     },
     {
       "type": "line",
-      "id": "opening.owner-transfer.node.line.019",
-      "lineId": "opening.owner-transfer.line.019",
+      "id": "opening.owner-transfer.node.line.019a",
+      "lineId": "opening.owner-transfer.line.019a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "手渡された箱には『八つ裂き大福』と書いてあった。割れ目から真っ赤ないちご蜜が垂れている。謝罪の品としては事件性が高い。",
+      "text": "手渡された箱には『八つ裂き大福』と書いてあった。"
+    },
+    {
+      "type": "line",
+      "id": "opening.owner-transfer.node.line.019b",
+      "lineId": "opening.owner-transfer.line.019b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "割れ目から真っ赤ないちご蜜が垂れている。謝罪の品としては、事件性が高い。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "opening.owner-transfer.node.line.020",
-      "lineId": "opening.owner-transfer.line.020",
+      "id": "opening.owner-transfer.node.line.020a",
+      "lineId": "opening.owner-transfer.line.020a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "ありがとうございます。味は平和なんですね？"
+      "text": "ありがとうございます。味は平和なんですね?"
     },
     {
       "type": "line",
-      "id": "opening.owner-transfer.node.line.021",
-      "lineId": "opening.owner-transfer.line.021",
+      "id": "opening.owner-transfer.node.line.021a",
+      "lineId": "opening.owner-transfer.line.021a",
       "speakerId": "legacy.speaker.jsgxc9",
       "speakerName": "マダム",
       "mode": "dialogue",
@@ -272,11 +322,27 @@
     },
     {
       "type": "line",
-      "id": "opening.owner-transfer.node.line.022",
-      "lineId": "opening.owner-transfer.line.022",
+      "id": "opening.owner-transfer.node.line.022a",
+      "lineId": "opening.owner-transfer.line.022a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "派遣初日の帰り際に、三日分ほどの闘技場を持たされた。私とマダムとノノさんの勘違いが、きれいな三角形になっている。真ん中には、私の名前と、血のようないちご蜜があった。",
+      "text": "派遣初日の帰り際に、三日分ほどの闘技場を持たされた。"
+    },
+    {
+      "type": "line",
+      "id": "opening.owner-transfer.node.line.022b",
+      "lineId": "opening.owner-transfer.line.022b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私とマダムとノノさんの勘違いが、きれいな三角形になっている。"
+    },
+    {
+      "type": "line",
+      "id": "opening.owner-transfer.node.line.022c",
+      "lineId": "opening.owner-transfer.line.022c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "真ん中には、私の名前と、血のようないちご蜜があった。",
       "emotion": "comic"
     },
     {
@@ -286,7 +352,7 @@
         {
           "id": "opening.owner-transfer.choice.001",
           "label": "今すぐ訂正できる方法をノノへ聞く",
-          "result": "訂正申請はすぐ作ってもらえた。ただし処理には数日かかる。その間に使える権利は、問題が起きるたび一つずつ確認することになった。",
+          "result": "訂正申請は、すぐ作ってもらえた。ただし処理には数日かかる。その間に使える権利は、問題が起きるたび、ひとつずつ確認することになった。",
           "intent": "まず正規の訂正手続きを確認する",
           "promise": "名義訂正を進めながら、必要な権利だけを一つずつ知る。",
           "memory": "最初に制度へ確認を求めたことが、後の問い合わせ方へ残る。",
@@ -308,7 +374,7 @@
         {
           "id": "opening.owner-transfer.choice.003",
           "label": "三人で「現場代理人」の欄を読み直す",
-          "result": "三人がそれぞれ別の意味だと思っていたことだけは、完全に一致した。分かりやすい説明へ直すよう、訂正申請と一緒に要望を出した。",
+          "result": "三人が、それぞれ別の意味で読んでいたことだけは、完全に一致した。分かりやすい説明へ直すよう、訂正申請と一緒に要望を出した。",
           "intent": "誤登録の原因を三人で確かめる",
           "promise": "誰か一人の不注意にせず、紛らわしい手続きそのものを記録する。",
           "memory": "三人で同じ欄を読み直した時間が、最初の共同作業として残る。",
@@ -346,7 +412,7 @@
   "debug": {
     "status": "approved",
     "sourceDocument": "native narrative block migration",
-    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "authorNote": "語り口V2・二行枠で改稿。正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
     "legacyGeneratedIds": false
   }
 }

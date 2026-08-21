@@ -35,6 +35,12 @@
         "kind": "background",
         "path": "/assets/story/bg-contract-archive-v2.png",
         "alt": "所有者名簿室の背景"
+      },
+      {
+        "id": "mumyo.crisis.asset.sprite.character",
+        "kind": "sprite",
+        "path": "/assets/battle/fighters/mumyo-v1.png",
+        "alt": "鏡の中だけに人影を映す一振りの無銘"
       }
     ]
   },
@@ -49,45 +55,146 @@
       }
     },
     {
+      "type": "direction",
+      "id": "mumyo.crisis.node.direction.character.001",
+      "command": {
+        "type": "show",
+        "assetId": "mumyo.crisis.asset.sprite.character",
+        "actorId": "mumyo",
+        "slot": "center",
+        "scale": "compact"
+      }
+    },
+    {
       "type": "line",
-      "id": "mumyo.crisis.node.line.001",
-      "lineId": "mumyo.crisis.line.001",
+      "id": "mumyo.crisis.node.line.001a",
+      "lineId": "mumyo.crisis.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "景品展示室に、下見のお客が来ていた。分厚いカタログを手にした紳士が、第零展示ケースの前で目を細める。「これが噂の、名前を彫れる聖剣かね」。競売カタログは、もう刷り上がっていた。掲載番号、十五。——黒い角封筒は、そのカタログに挟まっていた。",
+      "text": "景品展示室に、下見のお客が来ていた。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.crisis.node.line.001b",
+      "lineId": "mumyo.crisis.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "分厚いカタログを手にした紳士が、第零展示ケースの前で目を細める。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.crisis.node.line.001c",
+      "lineId": "mumyo.crisis.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「これが噂の、名前を彫れる聖剣かね」"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.crisis.node.line.001d",
+      "lineId": "mumyo.crisis.line.001d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "競売カタログは、もう刷り上がっていた。掲載番号、十五。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.crisis.node.line.001e",
+      "lineId": "mumyo.crisis.line.001e",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "——黒い角封筒は、そのカタログに挟まっていた。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "mumyo.crisis.node.line.002",
-      "lineId": "mumyo.crisis.line.002",
+      "id": "mumyo.crisis.node.line.002a",
+      "lineId": "mumyo.crisis.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "名入れ販売。所有者の公募。私たちがやっと見つけた「所有者欄・本人」を、会社は規定の一行で消しにきた。十五個目の名前が、あの鞘に刻まれようとしている。",
-      "emotion": "tension"
+      "text": "名入れ販売。所有者の公募。"
     },
     {
       "type": "line",
-      "id": "mumyo.crisis.node.line.003",
-      "lineId": "mumyo.crisis.line.003",
+      "id": "mumyo.crisis.node.line.002b",
+      "lineId": "mumyo.crisis.line.002b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私たちがやっと見つけた「所有者欄・本人」を、会社は規定の一行で消しにきた。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.crisis.node.line.002c",
+      "lineId": "mumyo.crisis.line.002c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "十五個目の名前が、あの鞘に刻まれようとしている。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.crisis.node.line.003a",
+      "lineId": "mumyo.crisis.line.003a",
       "speakerId": "legacy.speaker.1whk6fw",
       "speakerName": "無銘",
       "mode": "dialogue",
-      "text": "……白状する。この通告を読んだ夜、少しだけ、楽だと思った。誰かに持たれれば、迷わなくて済む。「したいこと」の欄を、また空白のまま、誰かの願いで埋めてもらえる。……四百年、そうやって楽をしてきた。"
+      "text": "……白状する。この通告を読んだ夜、少しだけ、楽だと思った。"
     },
     {
       "type": "line",
-      "id": "mumyo.crisis.node.line.004",
-      "lineId": "mumyo.crisis.line.004",
+      "id": "mumyo.crisis.node.line.003b",
+      "lineId": "mumyo.crisis.line.003b",
+      "speakerId": "legacy.speaker.1whk6fw",
+      "speakerName": "無銘",
+      "mode": "dialogue",
+      "text": "誰かに持たれれば、迷わなくて済む。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.crisis.node.line.003c",
+      "lineId": "mumyo.crisis.line.003c",
+      "speakerId": "legacy.speaker.1whk6fw",
+      "speakerName": "無銘",
+      "mode": "dialogue",
+      "text": "「したいこと」の欄を、また空白のまま、誰かの願いで埋めてもらえる。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.crisis.node.line.003d",
+      "lineId": "mumyo.crisis.line.003d",
+      "speakerId": "legacy.speaker.1whk6fw",
+      "speakerName": "無銘",
+      "mode": "dialogue",
+      "text": "……四百年、そうやって楽をしてきた。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.crisis.node.line.004a",
+      "lineId": "mumyo.crisis.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "会社の通告は、いつも正確に古傷を突く。自分の声か、残響か、確かめる苦しさごと、会社は「仕様」として買い取るつもりなのだ。物語資産管理部は、資産の弱みの台帳でも持っているに違いない。",
+      "text": "会社の通告は、いつも正確に古傷を突く。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.crisis.node.line.004b",
+      "lineId": "mumyo.crisis.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "自分の声か、残響か、確かめる苦しさごと、会社は「仕様」として買い取るつもりだ。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.crisis.node.line.004c",
+      "lineId": "mumyo.crisis.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "耳の奥が、ぎゅっと冷えた。物語資産管理部は、資産の弱みの台帳でも持っているに違いない。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "mumyo.crisis.node.line.005",
-      "lineId": "mumyo.crisis.line.005",
+      "id": "mumyo.crisis.node.line.005a",
+      "lineId": "mumyo.crisis.line.005a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -95,11 +202,11 @@
     },
     {
       "type": "line",
-      "id": "mumyo.crisis.node.line.006",
-      "lineId": "mumyo.crisis.line.006",
+      "id": "mumyo.crisis.node.line.006a",
+      "lineId": "mumyo.crisis.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "長い沈黙。名簿室の灯りが、一度だけ揺れた。「……誰のでもない。十四人の中に、雨を好きな者は、いなかった」。鏡の中の人物が、ゆっくりと顔を上げる。四百年ぶんの空白の中から、自分の一滴を、確かに拾い上げた顔だった。",
+      "text": "四百年ぶんの空白の中から、自分の一滴を、確かに拾い上げた顔だった。",
       "emotion": "revelation"
     },
     {
@@ -112,29 +219,62 @@
     },
     {
       "type": "line",
-      "id": "mumyo.crisis.node.line.007",
-      "lineId": "mumyo.crisis.line.007",
+      "id": "mumyo.crisis.node.line.007a",
+      "lineId": "mumyo.crisis.line.007a",
       "speakerId": "legacy.speaker.1whk6fw",
       "speakerName": "無銘",
       "mode": "dialogue",
-      "text": "回答書を、頼む。「当資産の鞘に、次の名を刻む欄はありません。空欄は欠陥ではなく、本人の署名予定地です」。……十五人目は、いらない。次にあの鞘へ刻まれる名は、私が自分で選んだ、私の名だ。"
+      "text": "回答書を、頼む。"
     },
     {
       "type": "line",
-      "id": "mumyo.crisis.node.line.008",
-      "lineId": "mumyo.crisis.line.008",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "私は回答書を清書し、証拠資料を一枚添えた。選手登録の写し——所有者欄「本人」、受理済み。規定と規定がぶつかる音が、書類の上から聞こえる気がした。",
-      "emotion": "resolve"
+      "id": "mumyo.crisis.node.line.007b",
+      "lineId": "mumyo.crisis.line.007b",
+      "speakerId": "legacy.speaker.1whk6fw",
+      "speakerName": "無銘",
+      "mode": "dialogue",
+      "text": "「当資産の鞘に、次の名を刻む欄はありません。空欄は欠陥ではなく、本人の署名予定地です」"
     },
     {
       "type": "line",
-      "id": "mumyo.crisis.node.line.009",
-      "lineId": "mumyo.crisis.line.009",
+      "id": "mumyo.crisis.node.line.007c",
+      "lineId": "mumyo.crisis.line.007c",
+      "speakerId": "legacy.speaker.1whk6fw",
+      "speakerName": "無銘",
+      "mode": "dialogue",
+      "text": "……十五人目は、いらない。次にあの鞘へ刻まれる名は、私が自分で選んだ、私の名だ。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.crisis.node.line.008a",
+      "lineId": "mumyo.crisis.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "会社は「商品価値の実証」を求めてくるだろう。望むところだ。次の試合、誰にも持たれない剣がどんな銘より強いことを、音で覚えさせる。",
+      "text": "私は回答書を清書し、証拠資料を一枚添えた。選手登録の写し——所有者欄「本人」"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.crisis.node.line.008b",
+      "lineId": "mumyo.crisis.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "、受理済み。規定と規定がぶつかる音が、書類の上から聞こえる気がした。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.crisis.node.line.009a",
+      "lineId": "mumyo.crisis.line.009a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "会社は「商品価値の実証」を求めてくるだろう。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.crisis.node.line.009b",
+      "lineId": "mumyo.crisis.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "次の試合、誰にも持たれない剣がどんな銘より強いことを、音で覚えさせる。",
       "emotion": "resolve"
     },
     {
@@ -144,7 +284,7 @@
         {
           "id": "mumyo.crisis.choice.001",
           "label": "鏡の本人に、剣を抜く瞬間を決めてもらう",
-          "result": "次の試合、無銘は誰の合図もなく、自分の選んだ一瞬にだけ刃を光らせた。命じられない一閃が敵の大技を根元から断ち、会場が静まり返る。実況が叫んだ。「今の一撃、所有者は誰だ!?」。答えは選手名鑑に書いてある。所有者・本人。名入れ販売の公募ページは、その夜、応募資格の欄に一行追記された。「※本人が応募済みのため、締め切りました」。",
+          "result": "次の試合、無銘は誰の合図もなく、自分の選んだ一瞬にだけ刃を光らせた。命じられない一閃が敵の大技を根元から断ち、会場が静まり返った。名入れ販売の公募ページに、その夜、一行追記された。「※本人が応募済みのため、締め切りました」",
           "intent": "この人だけの突破法へ賭ける",
           "promise": "予測しにくい方法を試し、この人専用の成長を大きく進める。",
           "memory": "危機で選んだ方法は、契約を解く場面でも二人の共通の記憶として戻る。",
@@ -174,7 +314,7 @@
         {
           "id": "mumyo.crisis.choice.002",
           "label": "鞘のまま一度だけ公式戦へ出る",
-          "result": "試合には、鞘のまま出た。一度も抜かず、鞘越しの剣圧だけで三人の受け流しを完成させ、勝った。回答書にはこう追記した。「当資産は抜かずに勝ちました。全出力の開放は、商品価値に寄与しません」。抜かない勝利が、名入れ販売の企画書を静かに棚上げにした。無銘は帰り道で一言だけ。「……楽ではなかった。だが、私の勝ち方だった」。",
+          "result": "試合には、鞘のまま出た。一度も抜かず、鞘越しの剣圧だけで三人の受け流しを完成させ、勝った。抜かない勝利が、名入れ販売の企画書を静かに棚上げにした。「……楽ではなかった。だが、私の勝ち方だった」",
           "intent": "全員が使える安全な突破法を作る",
           "promise": "本人だけの切り札は抑え、チーム全体へ使える成長を持ち帰る。",
           "memory": "全員で組み直した手順は、契約を解く場面でも選んだ責任として戻る。",
@@ -224,7 +364,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 黒い角封筒=名入れ販売・新所有者公募(Q2)。持たれる楽への誘惑と、空欄=本人の署名予定地の宣言。 圧力の到来形式を差別化(封筒は事後に届く落ちへ)。",
+    "authorNote": "語り口V2・二行枠で改稿。v2改稿: 黒い角封筒=名入れ販売・新所有者公募(Q2)。持たれる楽への誘惑と、空欄=本人の署名予定地の宣言。 圧力の到来形式を差別化(封筒は事後に届く落ちへ)。",
     "legacyGeneratedIds": false
   }
 }

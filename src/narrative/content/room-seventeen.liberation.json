@@ -10,9 +10,20 @@
     "stage": "liberation"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 400,
     "weight": 1
   },
@@ -43,83 +54,172 @@
     {
       "type": "direction",
       "id": "room-seventeen.liberation.node.direction.001",
-      "command": { "type": "background", "assetId": "room-seventeen.liberation.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "room-seventeen.liberation.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "line",
-      "id": "room-seventeen.liberation.node.line.001",
-      "lineId": "room-seventeen.liberation.line.001",
+      "id": "room-seventeen.liberation.node.line.001a",
+      "lineId": "room-seventeen.liberation.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "契約を終わらせる夜。十七号室の正面扉には、真鍮のプレートの下に、所有者用の鍵穴がある。マスターキーを差せば、彼の全フロアを、彼の意思と無関係に開閉できる鍵穴だ。今夜、これを埋める。"
+      "text": "契約を終わらせる夜。十七号室の正面扉、真鍮のプレートの下に、所有者用の鍵穴がある。"
     },
     {
       "type": "line",
-      "id": "room-seventeen.liberation.node.line.002",
-      "lineId": "room-seventeen.liberation.line.002",
+      "id": "room-seventeen.liberation.node.line.001b",
+      "lineId": "room-seventeen.liberation.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "マスターキーを差せば、彼の意思と無関係に、全フロアを開閉できる鍵穴。今夜、これを埋める。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.liberation.node.line.002a",
+      "lineId": "room-seventeen.liberation.line.002a",
       "speakerId": "legacy.speaker.zzyjm6",
       "speakerName": "十七号室",
       "mode": "dialogue",
-      "text": "その鍵穴は、生まれた時から、あります。……ない自分を、想像したことが、ありません。"
+      "text": "その鍵穴は、生まれた時から、あります。"
     },
     {
       "type": "line",
-      "id": "room-seventeen.liberation.node.line.003",
-      "lineId": "room-seventeen.liberation.line.003",
+      "id": "room-seventeen.liberation.node.line.002b",
+      "lineId": "room-seventeen.liberation.line.002b",
+      "speakerId": "legacy.speaker.zzyjm6",
+      "speakerName": "十七号室",
+      "mode": "dialogue",
+      "text": "……ない自分を、想像したことが、ありません。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.liberation.node.line.003a",
+      "lineId": "room-seventeen.liberation.line.003a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "解除届に判を押す。マスターキーを、彼の目の前で、返却箱に落とす。それから彼は、自分の意思で、ゆっくりと鍵穴を埋めた。真鍮の面が、なめらかに閉じていく。誰にも、外からは開けられない扉になった。",
+      "text": "解除届に、判を押す。マスターキーを、彼の目の前で返却箱に落とす。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.liberation.node.line.003b",
+      "lineId": "room-seventeen.liberation.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "それから彼は、自分の意思で、ゆっくりと鍵穴を埋めた。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.liberation.node.line.003c",
+      "lineId": "room-seventeen.liberation.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "真鍮の面が、なめらかに閉じていく。誰にも、外からは開けられない扉になった。",
       "emotion": "tension"
     },
     {
       "type": "direction",
       "id": "room-seventeen.liberation.node.direction.002",
-      "command": { "type": "still", "assetId": "room-seventeen.liberation.asset.still.001" }
+      "command": {
+        "type": "still",
+        "assetId": "room-seventeen.liberation.asset.still.001"
+      }
     },
     {
       "type": "direction",
       "id": "room-seventeen.liberation.node.direction.003",
-      "command": { "type": "effect", "effectId": "pulse" }
+      "command": {
+        "type": "effect",
+        "effectId": "pulse"
+      }
     },
     {
       "type": "line",
-      "id": "room-seventeen.liberation.node.line.004",
-      "lineId": "room-seventeen.liberation.line.004",
+      "id": "room-seventeen.liberation.node.line.004a",
+      "lineId": "room-seventeen.liberation.line.004a",
       "speakerId": "legacy.speaker.zzyjm6",
       "speakerName": "十七号室",
       "mode": "dialogue",
-      "text": "……不思議です。鍵穴がなくなったのに、閉じた気が、しません。むしろ——今、初めて、ちゃんと開けられる気がします。開けるかどうかを、私が決められるので。"
+      "text": "……不思議です。鍵穴がなくなったのに、閉じた気が、しません。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.liberation.node.line.004b",
+      "lineId": "room-seventeen.liberation.line.004b",
+      "speakerId": "legacy.speaker.zzyjm6",
+      "speakerName": "十七号室",
+      "mode": "dialogue",
+      "text": "むしろ——今、初めて、ちゃんと開けられる気がします。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.liberation.node.line.004c",
+      "lineId": "room-seventeen.liberation.line.004c",
+      "speakerId": "legacy.speaker.zzyjm6",
+      "speakerName": "十七号室",
+      "mode": "dialogue",
+      "text": "開けるかどうかを、私が決められるので。"
     },
     {
       "type": "direction",
       "id": "room-seventeen.liberation.node.direction.004",
-      "command": { "type": "still", "assetId": "room-seventeen.liberation.asset.still.002" }
+      "command": {
+        "type": "still",
+        "assetId": "room-seventeen.liberation.asset.still.002"
+      }
     },
     {
       "type": "line",
-      "id": "room-seventeen.liberation.node.line.005",
-      "lineId": "room-seventeen.liberation.line.005",
+      "id": "room-seventeen.liberation.node.line.005a",
+      "lineId": "room-seventeen.liberation.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "鍵で開く扉と、ノックで開く扉。彼はこれから、後者だけで生きていく。私は癖のノックを、二回、間を置いて、もう一回。扉は、待ってましたとばかりに開いた。",
+      "text": "鍵で開く扉と、ノックで開く扉。彼はこれから、後者だけで生きていく。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.liberation.node.line.005b",
+      "lineId": "room-seventeen.liberation.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私は癖のノックを、二回、間を置いて、もう一回。扉が開いた瞬間、耳が、ふわっと立った。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "room-seventeen.liberation.node.line.006",
-      "lineId": "room-seventeen.liberation.line.006",
+      "id": "room-seventeen.liberation.node.line.006a",
+      "lineId": "room-seventeen.liberation.line.006a",
       "speakerId": "legacy.speaker.zzyjm6",
       "speakerName": "十七号室",
       "mode": "dialogue",
-      "text": "いらっしゃいませ。……いえ。おかえりなさい。……どちらでも、あなたなら、正解です。"
+      "text": "いらっしゃいませ。……いえ。おかえりなさい。"
     },
     {
       "type": "line",
-      "id": "room-seventeen.liberation.node.line.007",
-      "lineId": "room-seventeen.liberation.line.007",
+      "id": "room-seventeen.liberation.node.line.006b",
+      "lineId": "room-seventeen.liberation.line.006b",
+      "speakerId": "legacy.speaker.zzyjm6",
+      "speakerName": "十七号室",
+      "mode": "dialogue",
+      "text": "……どちらでも、あなたなら、正解です。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.liberation.node.line.007a",
+      "lineId": "room-seventeen.liberation.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "夜の百二十階は静かで、どこかの階から、覚えたてのお茶の湯気の匂いがした。帰り支度の前に、締めだけ決める。帰りはもちろん、正面の出口からである。",
+      "text": "夜の百二十階は静かで、どこかの階から、お茶の湯気の匂いがした。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.liberation.node.line.007b",
+      "lineId": "room-seventeen.liberation.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "帰り支度の前に、締めだけ決める。帰りはもちろん、正面の出口から。",
       "emotion": "resolve"
     },
     {
@@ -129,29 +229,58 @@
         {
           "id": "room-seventeen.liberation.choice.001",
           "label": "所有者用の鍵穴を埋め、出口を本人へ返す",
-          "result": "鍵穴の跡に、彼は小さな表札を生やした。「当室の扉は、すべて内側から開きます。ご用の方は、ノックを」。管理される建築から、迎える建築へ。表札の字は、私の週報の字に、少しだけ似ていた。長く見てきたものに、似るらしい。照れる。",
+          "result": "鍵穴の跡に、彼は小さな表札を生やした。「当室の扉は、すべて内側から開きます。ご用の方は、ノックを」管理される建築から、迎える建築へ。表札の字は、私の週報の字に、少し似ていた。照れる。",
           "intent": "開閉の権利を、完全に本人へ返す",
           "promise": "所有者名を消し、本人が自分の名で次の試合を選べるようにする。",
           "memory": "表札の字が誰の字に似ているかを、部屋は白状しない。",
           "tone": "defiant",
           "effects": [
-            { "type": "relationship", "target": { "type": "fighter", "fighterId": "room-seventeen" }, "mode": "add", "trust": 10, "ownership": 0 },
-            { "type": "liberationDecision", "fighterId": "room-seventeen", "decision": "release" }
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "room-seventeen"
+              },
+              "mode": "add",
+              "trust": 10,
+              "ownership": 0
+            },
+            {
+              "type": "liberationDecision",
+              "fighterId": "room-seventeen",
+              "decision": "release"
+            }
           ],
           "goto": "room-seventeen.liberation.node.effect.001"
         },
         {
           "id": "room-seventeen.liberation.choice.002",
           "label": "契約を解き、次戦まで会議室を一時間予約する",
-          "result": "「契約は終わり。これは、ただの予約です」。決勝前日の作戦会議、一時間、いつもの何もない小さな部屋で。予約票を受け取った部屋は、控えめに聞いた。「……定例に、しても?」。毎週同じ時間の予約が、契約より長持ちする約束として、台帳の一番上に載った。",
+          "result": "「契約は終わり。これは、ただの予約です」決勝前日の作戦会議、一時間、いつもの何もない小さな部屋で。部屋は控えめに聞いた。「……定例に、しても?」毎週同じ予約が、契約より長持ちする約束として台帳の一番上に載った。",
           "intent": "契約の代わりに、定例の予約を残す",
           "promise": "断る権利を返したうえで、決勝前の新しい約束を結ぶ。",
           "memory": "毎週の定例予約は、どちらからも一度も休みが出ていない。",
           "tone": "tender",
           "effects": [
-            { "type": "relationship", "target": { "type": "fighter", "fighterId": "room-seventeen" }, "mode": "add", "trust": 6, "ownership": 0 },
-            { "type": "sharedPoints", "amount": 4 },
-            { "type": "liberationDecision", "fighterId": "room-seventeen", "decision": "release" }
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "room-seventeen"
+              },
+              "mode": "add",
+              "trust": 6,
+              "ownership": 0
+            },
+            {
+              "type": "sharedPoints",
+              "amount": 4
+            },
+            {
+              "type": "liberationDecision",
+              "fighterId": "room-seventeen",
+              "decision": "release"
+            }
           ],
           "goto": "room-seventeen.liberation.node.effect.001"
         }
@@ -161,10 +290,30 @@
       "type": "effect",
       "id": "room-seventeen.liberation.node.effect.001",
       "effects": [
-        { "type": "setStoryStage", "fighterId": "room-seventeen", "stage": 6 },
-        { "type": "setLiberationEligible", "fighterId": "room-seventeen", "eligible": false },
-        { "type": "setLiberated", "fighterId": "room-seventeen", "liberated": true },
-        { "type": "relationship", "target": { "type": "fighter", "fighterId": "room-seventeen" }, "mode": "set", "ownership": 0 }
+        {
+          "type": "setStoryStage",
+          "fighterId": "room-seventeen",
+          "stage": 6
+        },
+        {
+          "type": "setLiberationEligible",
+          "fighterId": "room-seventeen",
+          "eligible": false
+        },
+        {
+          "type": "setLiberated",
+          "fighterId": "room-seventeen",
+          "liberated": true
+        },
+        {
+          "type": "relationship",
+          "target": {
+            "type": "fighter",
+            "fighterId": "room-seventeen"
+          },
+          "mode": "set",
+          "ownership": 0
+        }
       ]
     },
     {
@@ -176,7 +325,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 鍵穴を自分で埋める解放。「開けるかどうかを私が決められる」。ノックだけの扉。",
+    "authorNote": "語り口V2・二行枠で改稿。v2改稿: 鍵穴を自分で埋める解放。「開けるかどうかを私が決められる」。ノックだけの扉。",
     "legacyGeneratedIds": false
   }
 }

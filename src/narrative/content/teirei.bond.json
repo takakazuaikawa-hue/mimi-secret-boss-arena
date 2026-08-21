@@ -10,9 +10,18 @@
     "stage": "bond"
   },
   "trigger": {
-    "actions": ["work", "rest"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "rest"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 400,
     "weight": 1
   },
@@ -22,7 +31,7 @@
       {
         "id": "teirei.bond.asset.background.001",
         "kind": "background",
-        "path": "/assets/story/bg-casino-cafe-rain.png",
+        "path": "/assets/story/bg-measurement-workshop-v1.png",
         "alt": "雨の整備室の背景"
       },
       {
@@ -37,29 +46,49 @@
     {
       "type": "direction",
       "id": "teirei.bond.node.direction.001",
-      "command": { "type": "background", "assetId": "teirei.bond.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "teirei.bond.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "line",
-      "id": "teirei.bond.node.line.001",
-      "lineId": "teirei.bond.line.001",
+      "id": "teirei.bond.node.line.001a",
+      "lineId": "teirei.bond.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "雨の午後、練習は休み。私は労いのつもりで、丁零に軽く言った。「今日はもう、休んで」。——五秒後、彼女は電源を落とした。立ったまま。"
+      "text": "雨の午後、練習は休み。労いのつもりで、丁零に軽く言った。"
     },
     {
       "type": "line",
-      "id": "teirei.bond.node.line.002",
-      "lineId": "teirei.bond.line.002",
+      "id": "teirei.bond.node.line.001b",
+      "lineId": "teirei.bond.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「今日はもう、休んで」"
+    },
+    {
+      "type": "line",
+      "id": "teirei.bond.node.line.001c",
+      "lineId": "teirei.bond.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "——五秒後、彼女は電源を落とした。立ったまま。"
+    },
+    {
+      "type": "line",
+      "id": "teirei.bond.node.line.002a",
+      "lineId": "teirei.bond.line.002a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "違う違う違う！　起きて！　機能停止じゃなくて休憩！"
+      "text": "違う違う違う!　起きて!　機能停止じゃなくて休憩!"
     },
     {
       "type": "line",
-      "id": "teirei.bond.node.line.003",
-      "lineId": "teirei.bond.line.003",
+      "id": "teirei.bond.node.line.003a",
+      "lineId": "teirei.bond.line.003a",
       "speakerId": "legacy.speaker.qmf7da",
       "speakerName": "丁零",
       "mode": "dialogue",
@@ -67,17 +96,41 @@
     },
     {
       "type": "line",
-      "id": "teirei.bond.node.line.004",
-      "lineId": "teirei.bond.line.004",
+      "id": "teirei.bond.node.line.004a",
+      "lineId": "teirei.bond.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "難問だった。休みとは何か。接客歴半年の私も、定義を求められると答えに詰まる。「命令されずに、したいことをする時間です」と答えたら、彼女は固まった。演算の長考。首、二十五度。また新記録。",
+      "text": "難問だった。休みとは何か。"
+    },
+    {
+      "type": "line",
+      "id": "teirei.bond.node.line.004b",
+      "lineId": "teirei.bond.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "接客歴半年の私も、定義を求められると答えに詰まる。"
+    },
+    {
+      "type": "line",
+      "id": "teirei.bond.node.line.004c",
+      "lineId": "teirei.bond.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「命令されずに、したいことをする時間です」と答えたら、彼女は固まった。演算の長考。"
+    },
+    {
+      "type": "line",
+      "id": "teirei.bond.node.line.004d",
+      "lineId": "teirei.bond.line.004d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "首、二十五度。また新記録。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "teirei.bond.node.line.005",
-      "lineId": "teirei.bond.line.005",
+      "id": "teirei.bond.node.line.005a",
+      "lineId": "teirei.bond.line.005a",
       "speakerId": "legacy.speaker.qmf7da",
       "speakerName": "丁零",
       "mode": "dialogue",
@@ -85,43 +138,100 @@
     },
     {
       "type": "line",
-      "id": "teirei.bond.node.line.006",
-      "lineId": "teirei.bond.line.006",
+      "id": "teirei.bond.node.line.006a",
+      "lineId": "teirei.bond.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "空欄。命令の空欄を怖がる人は、自分の欄も空欄だった。よし。今日の休みは、これを埋める日にしよう。私は雨の整備室で、「したいこと探しツアー」を開催した。",
+      "text": "空欄。命令の空欄を怖がる人は、自分の欄も空欄だった。"
+    },
+    {
+      "type": "line",
+      "id": "teirei.bond.node.line.006b",
+      "lineId": "teirei.bond.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "よし、耳を立てて考えよう。今日はこれを埋める日にしよう。"
+    },
+    {
+      "type": "line",
+      "id": "teirei.bond.node.line.006c",
+      "lineId": "teirei.bond.line.006c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "雨の整備室で、「したいこと探しツアー」を開催した。",
       "emotion": "resolve"
     },
     {
       "type": "line",
-      "id": "teirei.bond.node.line.007",
-      "lineId": "teirei.bond.line.007",
+      "id": "teirei.bond.node.line.007a",
+      "lineId": "teirei.bond.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "第一候補、読書。彼女は辞書を三分で読了し「情報の重複が多い」と講評した。第二候補、音楽。「周波数は理解しました。用途は?」。第三候補、お菓子。「補給効率が、悪い」。ツアーは連敗を重ねた。",
+      "text": "第一候補、読書。辞書を三分で読了し「情報の重複が多い」と講評した。"
+    },
+    {
+      "type": "line",
+      "id": "teirei.bond.node.line.007b",
+      "lineId": "teirei.bond.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "第二候補、音楽。「周波数は理解しました。用途は?」"
+    },
+    {
+      "type": "line",
+      "id": "teirei.bond.node.line.007c",
+      "lineId": "teirei.bond.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "第三候補、お菓子。「補給効率が、悪い」"
+    },
+    {
+      "type": "line",
+      "id": "teirei.bond.node.line.007d",
+      "lineId": "teirei.bond.line.007d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ツアーは連敗を重ねた。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "teirei.bond.node.line.008",
-      "lineId": "teirei.bond.line.008",
+      "id": "teirei.bond.node.line.008a",
+      "lineId": "teirei.bond.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "諦めかけた頃、彼女がふと、給湯器の前で足を止めた。お湯を注ぎ、温度計も使わず、紅茶を淹れる。差し出されたカップは、60.0度ちょうどだった。"
+      "text": "諦めかけた頃、彼女がふと、給湯器の前で足を止めた。"
     },
     {
       "type": "line",
-      "id": "teirei.bond.node.line.009",
-      "lineId": "teirei.bond.line.009",
+      "id": "teirei.bond.node.line.008b",
+      "lineId": "teirei.bond.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "お湯を注ぎ、温度計も使わず淹れた紅茶は、60.0度ちょうどだった。"
+    },
+    {
+      "type": "line",
+      "id": "teirei.bond.node.line.009a",
+      "lineId": "teirei.bond.line.009a",
       "speakerId": "legacy.speaker.qmf7da",
       "speakerName": "丁零",
       "mode": "dialogue",
-      "text": "……気づきました。私は、この温度を作る工程が——非効率なのに、繰り返している。命令されていないのに。"
+      "text": "……気づきました。私は、この温度を作る工程が——非効率なのに、繰り返している。"
     },
     {
       "type": "line",
-      "id": "teirei.bond.node.line.010",
-      "lineId": "teirei.bond.line.010",
+      "id": "teirei.bond.node.line.009b",
+      "lineId": "teirei.bond.line.009b",
+      "speakerId": "legacy.speaker.qmf7da",
+      "speakerName": "丁零",
+      "mode": "dialogue",
+      "text": "命令されていないのに。"
+    },
+    {
+      "type": "line",
+      "id": "teirei.bond.node.line.010a",
+      "lineId": "teirei.bond.line.010a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -129,17 +239,17 @@
     },
     {
       "type": "line",
-      "id": "teirei.bond.node.line.011",
-      "lineId": "teirei.bond.line.011",
+      "id": "teirei.bond.node.line.011a",
+      "lineId": "teirei.bond.line.011a",
       "speakerId": "legacy.speaker.qmf7da",
       "speakerName": "丁零",
       "mode": "dialogue",
-      "text": "「好き」。……理由の欄が、空欄のままですが。"
+      "text": "「好き」……理由の欄が、空欄のままですが。"
     },
     {
       "type": "line",
-      "id": "teirei.bond.node.line.012",
-      "lineId": "teirei.bond.line.012",
+      "id": "teirei.bond.node.line.012a",
+      "lineId": "teirei.bond.line.012a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -147,25 +257,52 @@
     },
     {
       "type": "line",
-      "id": "teirei.bond.node.line.013",
-      "lineId": "teirei.bond.line.013",
+      "id": "teirei.bond.node.line.013a",
+      "lineId": "teirei.bond.line.013a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "彼女は長い長い演算のあと、内部記録に一行を追加した。読み上げてくれた。「好み・第一号: 紅茶を60.0度で淹れる工程。理由: (空欄のまま提出)」。空欄を怖がる人の、初めての、怖くない空欄だった。",
+      "text": "「好み・第一号: 紅茶を60.0度で淹れる工程。理由: (空欄のまま提出)」"
+    },
+    {
+      "type": "line",
+      "id": "teirei.bond.node.line.013b",
+      "lineId": "teirei.bond.line.013b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "空欄を怖がる人の、初めての、怖くない空欄だった。",
       "emotion": "tender"
     },
     {
       "type": "direction",
       "id": "teirei.bond.node.direction.002",
-      "command": { "type": "still", "assetId": "teirei.bond.asset.still.001" }
+      "command": {
+        "type": "still",
+        "assetId": "teirei.bond.asset.still.001"
+      }
     },
     {
       "type": "line",
-      "id": "teirei.bond.node.line.014",
-      "lineId": "teirei.bond.line.014",
+      "id": "teirei.bond.node.line.014a",
+      "lineId": "teirei.bond.line.014a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "雨音の整備室で、60.0度の紅茶を二人で飲む。彼女の胸の琥珀灯が、満充電でもないのに、少し明るい気がした。午後の残りの使い方を、決める。",
+      "text": "雨音の整備室で、60.0度の紅茶を二人で飲む。"
+    },
+    {
+      "type": "line",
+      "id": "teirei.bond.node.line.014b",
+      "lineId": "teirei.bond.line.014b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "彼女の胸の琥珀灯が、満充電でもないのに、少し明るい気がした。"
+    },
+    {
+      "type": "line",
+      "id": "teirei.bond.node.line.014c",
+      "lineId": "teirei.bond.line.014c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "午後の残りの使い方を、決める。",
       "emotion": "resolve"
     },
     {
@@ -175,28 +312,56 @@
         {
           "id": "teirei.bond.choice.001",
           "label": "命令語を使わず、今日したいことを質問する",
-          "result": "午後は「質問だけで過ごす」練習にした。「何がしたい?」「どっちが好き?」。彼女の回答は最初「不明」ばかりだったが、夕方、ついに自発の一文が出た。「……雨の音を、録音したい。今日の雨は、周波数が、好みなので」。好み・第二号は、雨の音。理由欄、空欄のまま提出。良い提出だった。",
+          "result": "午後は「質問だけで過ごす」練習にした。回答は「不明」ばかりだったが、夕方、自発の一文が出た。「……雨の音を、録音したい。周波数が、好みなので」好み・第二号は、雨の音。理由欄、空欄のまま提出。",
           "intent": "空欄を埋める練習に、一日つきあう",
           "promise": "読みにくい成長になる代わりに、この人だけの成長を大きく進める。",
           "memory": "好み第一号と第二号の登録日を、二人とも覚えている。",
           "tone": "wild",
           "effects": [
-            { "type": "relationship", "target": { "type": "fighter", "fighterId": "teirei" }, "mode": "add", "trust": 9, "ownership": -2 },
-            { "type": "fighterPoints", "target": { "type": "fighter", "fighterId": "teirei" }, "amount": 3 }
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "teirei"
+              },
+              "mode": "add",
+              "trust": 9,
+              "ownership": -2
+            },
+            {
+              "type": "fighterPoints",
+              "target": {
+                "type": "fighter",
+                "fighterId": "teirei"
+              },
+              "amount": 3
+            }
           ],
           "goto": "teirei.bond.node.effect.001"
         },
         {
           "id": "teirei.bond.choice.002",
           "label": "三人分の行動条件を、丁零と一緒に書き直す",
-          "result": "午後は作戦業務にした。チームの作戦書の曖昧な表現——「いい感じに」「様子を見て」——を、丁零が全部「解釈不能」と赤入れし、二人で数値と条件に書き直した。完成した作戦書は誰が読んでも同じ動きになる逸品で、彼女は表紙に几帳面に書いた。「誤解の余地: 0.0パーセント」。",
+          "result": "午後は作戦業務にした。曖昧な表現を、丁零が全部「解釈不能」と赤入れし、数値と条件に書き直した。表紙には几帳面な一文。「誤解の余地: 0.0パーセント」",
           "intent": "彼女の精密さを、チームの共有財産にする",
           "promise": "好み探しは後日になるが、全員へ配れる成長ポイントを得る。",
           "memory": "「誤解の余地0.0パーセント」の作戦書を、チームは家宝にしている。",
           "tone": "pragmatic",
           "effects": [
-            { "type": "relationship", "target": { "type": "fighter", "fighterId": "teirei" }, "mode": "add", "trust": 1, "ownership": 7 },
-            { "type": "sharedPoints", "amount": 3 }
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "teirei"
+              },
+              "mode": "add",
+              "trust": 1,
+              "ownership": 7
+            },
+            {
+              "type": "sharedPoints",
+              "amount": 3
+            }
           ],
           "goto": "teirei.bond.node.effect.001"
         }
@@ -206,7 +371,11 @@
       "type": "effect",
       "id": "teirei.bond.node.effect.001",
       "effects": [
-        { "type": "setStoryStage", "fighterId": "teirei", "stage": 3 }
+        {
+          "type": "setStoryStage",
+          "fighterId": "teirei",
+          "stage": 3
+        }
       ]
     },
     {
@@ -218,7 +387,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 「休んで」=機能停止のcanonギャグ。好み第一号(紅茶60.0度)の発見。理由欄は空欄のまま提出。",
+    "authorNote": "語り口V2・二行枠で改稿。「休んで」=機能停止のcanonギャグ。好み第一号(紅茶60.0度)の発見。理由欄は空欄のまま提出。",
     "legacyGeneratedIds": false
   }
 }

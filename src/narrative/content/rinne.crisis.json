@@ -56,44 +56,110 @@
     },
     {
       "type": "line",
-      "id": "rinne.crisis.node.line.001",
-      "lineId": "rinne.crisis.line.001",
+      "id": "rinne.crisis.node.line.001a",
+      "lineId": "rinne.crisis.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "街の売店に、新しい予想紙が並んでいた。『リンネ印・的中率百パーセント予想』。三日後の公式戦の勝敗が、もう印刷されている。飛ぶように売れていた。——黒い角封筒がリンネの元へ届いたのは、初版が完売した後だった。",
+      "text": "街の売店に、新しい予想紙が並んでいた。『リンネ印・的中率百パーセント予想』。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.crisis.node.line.001b",
+      "lineId": "rinne.crisis.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "三日後の公式戦の勝敗が、もう印刷されている。飛ぶように、売れていた。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.crisis.node.line.001c",
+      "lineId": "rinne.crisis.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "——黒い角封筒がリンネの元へ届いたのは、初版が完売した後だった。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "rinne.crisis.node.line.002",
-      "lineId": "rinne.crisis.line.002",
+      "id": "rinne.crisis.node.line.002a",
+      "lineId": "rinne.crisis.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "勝利する未来のみに、固定。それはつまり、リンネから「選ばない」も「外す」も「見ないでおく」も、全部取り上げるということだ。当たりしか引けないくじ引きは、もう、くじ引きではない。",
+      "text": "勝利する未来のみに、固定。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.crisis.node.line.002b",
+      "lineId": "rinne.crisis.line.002b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "つまり「選ばない」も「外す」も「見ないでおく」も、全部取り上げられる。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.crisis.node.line.002c",
+      "lineId": "rinne.crisis.line.002c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "当たりしか引けないくじは、もう、くじじゃない。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "rinne.crisis.node.line.003",
-      "lineId": "rinne.crisis.line.003",
+      "id": "rinne.crisis.node.line.003a",
+      "lineId": "rinne.crisis.line.003a",
       "speakerId": "legacy.speaker.1vpt9ol",
       "speakerName": "リンネ",
       "mode": "dialogue",
-      "text": "……白状する。この通知、ちょっとだけ、楽だなって思った。全部固定されたら、私はもう何も選ばなくていい。選ばなければ、失くさない。あんたのことも——賭けずに、済む。"
+      "text": "……白状する。この通知、ちょっとだけ、楽だなって思った。"
     },
     {
       "type": "line",
-      "id": "rinne.crisis.node.line.004",
-      "lineId": "rinne.crisis.line.004",
+      "id": "rinne.crisis.node.line.003b",
+      "lineId": "rinne.crisis.line.003b",
+      "speakerId": "legacy.speaker.1vpt9ol",
+      "speakerName": "リンネ",
+      "mode": "dialogue",
+      "text": "全部固定されたら、私はもう何も選ばなくていい。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.crisis.node.line.003c",
+      "lineId": "rinne.crisis.line.003c",
+      "speakerId": "legacy.speaker.1vpt9ol",
+      "speakerName": "リンネ",
+      "mode": "dialogue",
+      "text": "選ばなければ、失くさない。あんたのことも——賭けずに、済む。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.crisis.node.line.004a",
+      "lineId": "rinne.crisis.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "会社の通告は、いつも正確に古傷を突いてくる。賭けなければ誰にも選ばれず、賭ければ大切なものを自分から失う——その痛みごと、会社は「仕様」として買い取るつもりなのだ。",
+      "text": "会社の通告は、いつも正確に古傷を突いてくる。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.crisis.node.line.004b",
+      "lineId": "rinne.crisis.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "賭けなければ誰にも選ばれず、賭ければ大切なものを自分から失う。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.crisis.node.line.004c",
+      "lineId": "rinne.crisis.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "その痛みごと、会社は「仕様」として買い取るつもりだ。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "rinne.crisis.node.line.005",
-      "lineId": "rinne.crisis.line.005",
+      "id": "rinne.crisis.node.line.005a",
+      "lineId": "rinne.crisis.line.005a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -109,11 +175,27 @@
     },
     {
       "type": "line",
-      "id": "rinne.crisis.node.line.006",
-      "lineId": "rinne.crisis.line.006",
+      "id": "rinne.crisis.node.line.006a",
+      "lineId": "rinne.crisis.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "長い沈黙のあと、リンネは笑った。いつもの、軽く作った笑いではなく、少し悔しそうな、本物の方だった。「……ずるいなあ。その質問、どの未来にもなかった」。",
+      "text": "長い沈黙のあと、リンネが笑った。耳が、ふわっと軽くなった。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.crisis.node.line.006b",
+      "lineId": "rinne.crisis.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ほっとした証拠。いつもの軽い作り笑いじゃなく、少し悔しそうな、本物の方。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.crisis.node.line.006c",
+      "lineId": "rinne.crisis.line.006c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「……ずるいなあ。その質問、どの未来にもなかった」",
       "emotion": "tender"
     },
     {
@@ -126,29 +208,79 @@
     },
     {
       "type": "line",
-      "id": "rinne.crisis.node.line.007",
-      "lineId": "rinne.crisis.line.007",
+      "id": "rinne.crisis.node.line.007a",
+      "lineId": "rinne.crisis.line.007a",
       "speakerId": "legacy.speaker.1vpt9ol",
       "speakerName": "リンネ",
       "mode": "dialogue",
-      "text": "回答書、書いて。「当資産の的中率は、本人の意思により保証されません。外れも含めて、私の商品です」。……固定されたくじは引かない。私は、賭けの側に残る。"
+      "text": "回答書、書いて。"
     },
     {
       "type": "line",
-      "id": "rinne.crisis.node.line.008",
-      "lineId": "rinne.crisis.line.008",
+      "id": "rinne.crisis.node.line.007b",
+      "lineId": "rinne.crisis.line.007b",
+      "speakerId": "legacy.speaker.1vpt9ol",
+      "speakerName": "リンネ",
+      "mode": "dialogue",
+      "text": "「当資産の的中率は、本人の意思により保証されません。外れも含めて、私の商品です」"
+    },
+    {
+      "type": "line",
+      "id": "rinne.crisis.node.line.007c",
+      "lineId": "rinne.crisis.line.007c",
+      "speakerId": "legacy.speaker.1vpt9ol",
+      "speakerName": "リンネ",
+      "mode": "dialogue",
+      "text": "……固定されたくじは引かない。私は、賭けの側に残る。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.crisis.node.line.008a",
+      "lineId": "rinne.crisis.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私は回答書を清書し、証拠資料を一枚添えた。夜市の外れくじだ。未来の見える人が、結果を見ずに引いて、ちゃんと外した記録。的中率百パーセントの商品には、絶対にできない芸である。",
+      "text": "回答書を清書し、証拠資料を一枚添えた。夜市の外れくじだ。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.crisis.node.line.008b",
+      "lineId": "rinne.crisis.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "未来が見える人が、結果を見ずに引いて、ちゃんと外した記録。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.crisis.node.line.008c",
+      "lineId": "rinne.crisis.line.008c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "的中率百パーセントの商品には、絶対にできない芸だ。",
       "emotion": "resolve"
     },
     {
       "type": "line",
-      "id": "rinne.crisis.node.line.009",
-      "lineId": "rinne.crisis.line.009",
+      "id": "rinne.crisis.node.line.009a",
+      "lineId": "rinne.crisis.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "会社は「収益予測の再提出」を求めてくるだろう。再提出は、しない。代わりに次の試合、予想紙のどこにも無い未来を引いて見せる。胴元が倍率を付けそこねるくらいの、やつを。",
+      "text": "会社は「収益予測の再提出」を求めてくるだろう。再提出は、しない。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.crisis.node.line.009b",
+      "lineId": "rinne.crisis.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "代わりに次の試合、予想紙のどこにも無い未来を引いて見せる。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.crisis.node.line.009c",
+      "lineId": "rinne.crisis.line.009c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "胴元が倍率を付けそこねるくらいの、やつを。",
       "emotion": "resolve"
     },
     {
@@ -158,7 +290,7 @@
         {
           "id": "rinne.crisis.choice.001",
           "label": "勝率ゼロと表示された未来へ少額だけ賭ける",
-          "result": "次の試合、リンネは全員の予想盤で勝率ゼロと表示された一手を、自分の意思で選んだ。表示は最後までゼロのまま——それでも、その一手だけが通った。観客席の予想屋が全滅する中、彼女は舌を出した。「ね? 私の外れは、売り物にならないでしょ」。物語資産管理部の商品企画書は、その夜、静かに取り下げられたらしい。",
+          "result": "次の試合、リンネは予想盤で勝率ゼロの一手を、自分の意思で選んだ。表示は最後までゼロ——それでも、その一手だけが通った。「ね? 私の外れは、売り物にならないでしょ」——商品企画書は、その夜、静かに取り下げられたらしい。",
           "intent": "この人だけの突破法へ賭ける",
           "promise": "予測しにくい方法を試し、この人専用の成長を大きく進める。",
           "memory": "危機で選んだ方法は、契約を解く場面でも二人の共通の記憶として戻る。",
@@ -188,7 +320,7 @@
         {
           "id": "rinne.crisis.choice.002",
           "label": "最も平凡な勝ち筋を全員で選ぶ",
-          "result": "奇跡は使わず、全員で組んだ一番平凡な手順で勝ち切った。試合後、リンネは会社への回答書に一行追記した。「本日の勝利に、予知は一割も使っていません。よって商品化の根拠を欠きます」。退屈な勝ち方が、そのまま反論の証拠になった。彼女は少しだけ退屈そうで、でも手順書には、ちゃんと自分の名前を書いた。",
+          "result": "奇跡は使わず、全員で組んだ一番平凡な手順で勝ち切った。リンネは回答書に一行追記——「本日の勝利に、予知は一割も使っていません」——退屈な勝ち方が、そのまま反論の証拠になった。手順書には、ちゃんと自分の名前を書いた。",
           "intent": "全員が使える安全な突破法を作る",
           "promise": "本人だけの切り札は抑え、チーム全体へ使える成長を持ち帰る。",
           "memory": "全員で組み直した手順は、契約を解く場面でも選んだ責任として戻る。",
@@ -238,7 +370,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 黒い角封筒=的中率の商品化(Q2)。固定への誘惑(選ばなければ失くさない)と、外れを含めた自分の宣言。 圧力の到来形式を差別化(封筒は事後に届く落ちへ)。",
+    "authorNote": "語り口V2・二行枠で改稿。v2改稿: 黒い角封筒=的中率の商品化(Q2)。固定への誘惑(選ばなければ失くさない)と、外れを含めた自分の宣言。 圧力の到来形式を差別化(封筒は事後に届く落ちへ)。",
     "legacyGeneratedIds": false
   }
 }

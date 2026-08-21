@@ -55,25 +55,51 @@
     },
     {
       "type": "line",
-      "id": "opening.hot-spring-trip.node.line.001",
-      "lineId": "opening.hot-spring-trip.line.001",
+      "id": "opening.hot-spring-trip.node.line.001a",
+      "lineId": "opening.hot-spring-trip.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "新人向け大会で三連勝した翌週、私たちは温泉宿の玄関に立っていた。賞品の旅行券は本物だった。チームランクが最上級になったことより、朝食ビュッフェが本当に付いていることの方が、まだ信じやすい。"
+      "text": "新人向け大会で三連勝した翌週、私たちは温泉宿の玄関に立っていた。"
     },
     {
       "type": "line",
-      "id": "opening.hot-spring-trip.node.line.002",
-      "lineId": "opening.hot-spring-trip.line.002",
+      "id": "opening.hot-spring-trip.node.line.001b",
+      "lineId": "opening.hot-spring-trip.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "賞品の旅行券は、本物だった。"
+    },
+    {
+      "type": "line",
+      "id": "opening.hot-spring-trip.node.line.001c",
+      "lineId": "opening.hot-spring-trip.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "チームランクの最上級より、朝食ビュッフェの実在の方が、まだ信じやすい。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "opening.hot-spring-trip.node.line.002a",
+      "lineId": "opening.hot-spring-trip.line.002a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "今日は戦いません。封印も解きません。お風呂に入って、ごはんを食べて、普通に寝ます。"
+      "text": "今日は戦いません。封印も解きません。"
     },
     {
       "type": "line",
-      "id": "opening.hot-spring-trip.node.line.003",
-      "lineId": "opening.hot-spring-trip.line.003",
+      "id": "opening.hot-spring-trip.node.line.002b",
+      "lineId": "opening.hot-spring-trip.line.002b",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "お風呂に入って、ごはんを食べて、普通に寝ます。"
+    },
+    {
+      "type": "line",
+      "id": "opening.hot-spring-trip.node.line.003a",
+      "lineId": "opening.hot-spring-trip.line.003a",
       "speakerId": "narrator",
       "mode": "thought",
       "text": "仲間たちは静かにうなずいた。宿の屋根から、なぜか警報用の鳥が三羽飛び立った。",
@@ -81,8 +107,8 @@
     },
     {
       "type": "line",
-      "id": "opening.hot-spring-trip.node.line.004",
-      "lineId": "opening.hot-spring-trip.line.004",
+      "id": "opening.hot-spring-trip.node.line.004a",
+      "lineId": "opening.hot-spring-trip.line.004a",
       "speakerId": "legacy.speaker.1102kql",
       "speakerName": "宿の女将",
       "mode": "dialogue",
@@ -90,8 +116,8 @@
     },
     {
       "type": "line",
-      "id": "opening.hot-spring-trip.node.line.005",
-      "lineId": "opening.hot-spring-trip.line.005",
+      "id": "opening.hot-spring-trip.node.line.005a",
+      "lineId": "opening.hot-spring-trip.line.005a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -99,11 +125,20 @@
     },
     {
       "type": "line",
-      "id": "opening.hot-spring-trip.node.line.006",
-      "lineId": "opening.hot-spring-trip.line.006",
+      "id": "opening.hot-spring-trip.node.line.006a",
+      "lineId": "opening.hot-spring-trip.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "女将は少し考え、それから浴衣の棚を示した。ようやく旅行らしい説明が始まる。私は胸をなで下ろした。棚のいちばん奥には『翼六枚用』と『霧状生命用』が並んでいた。"
+      "text": "女将は少し考え、それから浴衣の棚を示した。ようやく旅行らしい説明が始まる。"
+    },
+    {
+      "type": "line",
+      "id": "opening.hot-spring-trip.node.line.006b",
+      "lineId": "opening.hot-spring-trip.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "耳が、ほっと下がった。棚のいちばん奥には『翼六枚用』と『霧状生命用』が並んでいた。",
+      "emotion": "comic"
     },
     {
       "type": "choice",
@@ -154,7 +189,7 @@
         {
           "id": "opening.hot-spring-trip.choice.003",
           "label": "誰も壊さない温泉の入り方を相談する",
-          "result": "入浴前の確認会は慎重だったが、最後には全員で笑った。壊さないための相談を本人たちとできることが、命令よりずっと頼もしく思えた。",
+          "result": "入浴前の確認会は慎重だったが、最後には全員で笑った。壊さないための相談を、本人たちとできることが、命令よりずっと頼もしかった。",
           "intent": "宿と仲間の安全を一緒に考える",
           "promise": "禁止する前に、どうすれば楽しめるかを話し合う。",
           "memory": "湯けむりの前で交わした、最初の生活上の作戦会議。",
@@ -183,7 +218,7 @@
   "debug": {
     "status": "approved",
     "sourceDocument": "native narrative block migration",
-    "authorNote": "正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
+    "authorNote": "語り口V2・二行枠で改稿。正式IDへ移行済み。以後の本文・選択肢・演出変更はこのブロックを正本とする。",
     "legacyGeneratedIds": false
   }
 }

@@ -10,9 +10,17 @@
     "stage": "bond"
   },
   "trigger": {
-    "actions": ["play"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "play"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 400,
     "weight": 1
   },
@@ -37,38 +45,59 @@
     {
       "type": "direction",
       "id": "wolf-nine.bond.node.direction.001",
-      "command": { "type": "background", "assetId": "wolf-nine.bond.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "wolf-nine.bond.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "line",
-      "id": "wolf-nine.bond.node.line.001",
-      "lineId": "wolf-nine.bond.line.001",
+      "id": "wolf-nine.bond.node.line.001a",
+      "lineId": "wolf-nine.bond.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "大会の翌朝、チームの朝食会。ヴォルフ・ナインが加わってから、うちの食卓は変わった。何がって、全部が種目になった。"
+      "text": "大会の翌朝、チームの朝食会。ヴォルフ・ナインが加わってから、食卓が変わった。"
     },
     {
       "type": "line",
-      "id": "wolf-nine.bond.node.line.002",
-      "lineId": "wolf-nine.bond.line.002",
+      "id": "wolf-nine.bond.node.line.001b",
+      "lineId": "wolf-nine.bond.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "何がって、全部が種目になった。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.bond.node.line.002a",
+      "lineId": "wolf-nine.bond.line.002a",
       "speakerId": "legacy.speaker.1vj9fme",
       "speakerName": "ヴォルフ・ナイン",
       "mode": "dialogue",
-      "text": "第一種目、トーストの焼き色選手権。第二種目、ジャム塗りの均一性。第三種目、目玉焼きの黄身位置——中央からのずれをミリで競う。"
+      "text": "第一種目、トーストの焼き色選手権。第二種目、ジャム塗りの均一性。"
     },
     {
       "type": "line",
-      "id": "wolf-nine.bond.node.line.003",
-      "lineId": "wolf-nine.bond.line.003",
+      "id": "wolf-nine.bond.node.line.002b",
+      "lineId": "wolf-nine.bond.line.002b",
+      "speakerId": "legacy.speaker.1vj9fme",
+      "speakerName": "ヴォルフ・ナイン",
+      "mode": "dialogue",
+      "text": "第三種目、目玉焼きの黄身位置——中央からのずれをミリで競う。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.bond.node.line.003a",
+      "lineId": "wolf-nine.bond.line.003a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "朝から種目が多い！　普通に食べません！？"
+      "text": "朝から種目が多い!　普通に食べません!?"
     },
     {
       "type": "line",
-      "id": "wolf-nine.bond.node.line.004",
-      "lineId": "wolf-nine.bond.line.004",
+      "id": "wolf-nine.bond.node.line.004a",
+      "lineId": "wolf-nine.bond.line.004a",
       "speakerId": "legacy.speaker.1vj9fme",
       "speakerName": "ヴォルフ・ナイン",
       "mode": "dialogue",
@@ -76,67 +105,128 @@
     },
     {
       "type": "line",
-      "id": "wolf-nine.bond.node.line.005",
-      "lineId": "wolf-nine.bond.line.005",
+      "id": "wolf-nine.bond.node.line.005a",
+      "lineId": "wolf-nine.bond.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "困ったことに、チームが乗り気だった。焼き色に誇りを持つ者、黄身の中央を極めし者。気づけば私も、ジャムの塗りムラで惜敗して悔しがっている。競争は、伝染する。",
+      "text": "困ったことに、チームが乗り気だった。焼き色に誇りを持つ者、黄身の中央を極めし者。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.bond.node.line.005b",
+      "lineId": "wolf-nine.bond.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "気づけば私も、ジャムの塗りムラで惜敗して悔しがっている。競争は、伝染する。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "wolf-nine.bond.node.line.006",
-      "lineId": "wolf-nine.bond.line.006",
+      "id": "wolf-nine.bond.node.line.006a",
+      "lineId": "wolf-nine.bond.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "最終第八種目は「最後のパン一枚を懸けた総合格闘じゃんけん」だった。決勝は私対ヴォルフ。三回戦って、三回あいこ。四回目——も、あいこ。",
+      "text": "最終第八種目は「最後のパン一枚を懸けた総合格闘じゃんけん」だった。決勝は私対ヴォルフ。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.bond.node.line.006b",
+      "lineId": "wolf-nine.bond.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "三回戦って、三回あいこ。四回目——も、あいこ。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "wolf-nine.bond.node.line.007",
-      "lineId": "wolf-nine.bond.line.007",
+      "id": "wolf-nine.bond.node.line.007a",
+      "lineId": "wolf-nine.bond.line.007a",
       "speakerId": "legacy.speaker.1vj9fme",
       "speakerName": "ヴォルフ・ナイン",
       "mode": "dialogue",
-      "text": "むう……決着がつかん！　ミミ、これは持ち越しだ。延長戦という名の——おかわりを要求する！"
+      "text": "むう……決着がつかん!　ミミ、これは持ち越しだ。"
     },
     {
       "type": "line",
-      "id": "wolf-nine.bond.node.line.008",
-      "lineId": "wolf-nine.bond.line.008",
+      "id": "wolf-nine.bond.node.line.007b",
+      "lineId": "wolf-nine.bond.line.007b",
+      "speakerId": "legacy.speaker.1vj9fme",
+      "speakerName": "ヴォルフ・ナイン",
+      "mode": "dialogue",
+      "text": "延長戦という名の——おかわりを要求する!"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.bond.node.line.008a",
+      "lineId": "wolf-nine.bond.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "延長戦という名のおかわり。つまり、決着を明日に持ち越して、今日はもう一枚ずつ食べる。八敗の狼の辞書に、「持ち越し」という楽しい負け方が増えていた。",
+      "text": "延長戦という名のおかわり。決着を明日に持ち越して、今日はもう一枚食べる。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.bond.node.line.008b",
+      "lineId": "wolf-nine.bond.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "八敗の狼の辞書に、「持ち越し」という楽しい負け方が増えていた。",
       "emotion": "tender"
     },
     {
       "type": "direction",
       "id": "wolf-nine.bond.node.direction.002",
-      "command": { "type": "still", "assetId": "wolf-nine.bond.asset.still.001" }
+      "command": {
+        "type": "still",
+        "assetId": "wolf-nine.bond.asset.still.001"
+      }
     },
     {
       "type": "line",
-      "id": "wolf-nine.bond.node.line.009",
-      "lineId": "wolf-nine.bond.line.009",
+      "id": "wolf-nine.bond.node.line.009a",
+      "lineId": "wolf-nine.bond.line.009a",
       "speakerId": "legacy.speaker.1vj9fme",
       "speakerName": "ヴォルフ・ナイン",
       "mode": "dialogue",
-      "text": "なあ、ミミ。競い合える食卓ってのは……いいもんだな。八人と戦ってた頃は、飯は、いつも一人だった。"
+      "text": "なあ、ミミ。競い合える食卓ってのは……いいもんだな。"
     },
     {
       "type": "line",
-      "id": "wolf-nine.bond.node.line.010",
-      "lineId": "wolf-nine.bond.line.010",
+      "id": "wolf-nine.bond.node.line.009b",
+      "lineId": "wolf-nine.bond.line.009b",
+      "speakerId": "legacy.speaker.1vj9fme",
+      "speakerName": "ヴォルフ・ナイン",
+      "mode": "dialogue",
+      "text": "八人と戦ってた頃は、飯は、いつも一人だった。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.bond.node.line.010a",
+      "lineId": "wolf-nine.bond.line.010a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "強敵と戦って、強敵と食卓は囲めなかった人。うちの食卓の九種目は、彼にとって、勝負と団らんが初めて同時にある場所なのだ。ジャムの塗りムラくらい、いくらでも競おうと思った。",
+      "text": "強敵と戦って、強敵と食卓は囲めなかった人。耳が、ふっと下がった。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.bond.node.line.010b",
+      "lineId": "wolf-nine.bond.line.010b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "食卓の九種目は、彼にとって、勝負と団らんが初めて同時にある場所。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.bond.node.line.010c",
+      "lineId": "wolf-nine.bond.line.010c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ジャムの塗りムラくらい、いくらでも競おう。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "wolf-nine.bond.node.line.011",
-      "lineId": "wolf-nine.bond.line.011",
+      "id": "wolf-nine.bond.node.line.011a",
+      "lineId": "wolf-nine.bond.line.011a",
       "speakerId": "narrator",
       "mode": "thought",
       "text": "食後の時間の使い方も、たぶん種目になる。先に決めておこう。",
@@ -149,28 +239,56 @@
         {
           "id": "wolf-nine.bond.choice.001",
           "label": "勝敗をつけず、朝食のパンだけ取り合う",
-          "result": "翌朝から、最終種目は「勝敗保留の総当たり戦」に変わった。持ち越しに次ぐ持ち越しで、現在の対戦成績は全員あいこのまま二十七連続。ヴォルフは成績表を毎朝更新しながら、世界一楽しそうに「決着がつかん！」と吠える。決着のつかない勝負を、彼は生まれて初めて、愛し始めている。",
+          "result": "最終種目は「勝敗保留の総当たり戦」に変わった。対戦成績は、全員あいこのまま二十七連続。ヴォルフは毎朝、世界一楽しそうに「決着がつかん！」と吠える。決着のつかない勝負を、初めて愛し始めている。",
           "intent": "決着のない勝負の楽しさを、食卓に根付かせる",
           "promise": "読みにくい成長になる代わりに、この人だけの成長を大きく進める。",
           "memory": "あいこ二十七連続の成績表は、食堂の壁に貼ってある。",
           "tone": "wild",
           "effects": [
-            { "type": "relationship", "target": { "type": "fighter", "fighterId": "wolf-nine" }, "mode": "add", "trust": 9, "ownership": -2 },
-            { "type": "fighterPoints", "target": { "type": "fighter", "fighterId": "wolf-nine" }, "amount": 3 }
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "wolf-nine"
+              },
+              "mode": "add",
+              "trust": 9,
+              "ownership": -2
+            },
+            {
+              "type": "fighterPoints",
+              "target": {
+                "type": "fighter",
+                "fighterId": "wolf-nine"
+              },
+              "amount": 3
+            }
           ],
           "goto": "wolf-nine.bond.node.effect.001"
         },
         {
           "id": "wolf-nine.bond.choice.002",
           "label": "過去八敗の映像から、三人分の対策を作る",
-          "result": "食後は勉強会になった。彼の八敗の記録映像を、チームで観る。負け試合を人に見せるのを、彼は最初嫌がったが、観終わったチームの感想は満場一致だった。「八人とも、化け物すぎる」「この相手にこの粘りは、むしろ勲章」。八敗は、恥ではなく教材になった。対策ノートの表紙に、彼は自分で書いた。「先人八名の胸を借りる」。",
+          "result": "食後は勉強会になった。彼の八敗の記録映像を、チームで観る。感想は満場一致。「八人とも、化け物すぎる」「この粘りは、むしろ勲章」八敗は教材になった。ノートの表紙には「先人八名の胸を借りる」とあった。",
           "intent": "八敗を、チームの財産に変える",
           "promise": "本人の照れは残るが、全員へ配れる成長ポイントを得る。",
           "memory": "「先人八名の胸を借りる」のノートを、チームは今も使っている。",
           "tone": "pragmatic",
           "effects": [
-            { "type": "relationship", "target": { "type": "fighter", "fighterId": "wolf-nine" }, "mode": "add", "trust": 1, "ownership": 7 },
-            { "type": "sharedPoints", "amount": 3 }
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "wolf-nine"
+              },
+              "mode": "add",
+              "trust": 1,
+              "ownership": 7
+            },
+            {
+              "type": "sharedPoints",
+              "amount": 3
+            }
           ],
           "goto": "wolf-nine.bond.node.effect.001"
         }
@@ -180,7 +298,11 @@
       "type": "effect",
       "id": "wolf-nine.bond.node.effect.001",
       "effects": [
-        { "type": "setStoryStage", "fighterId": "wolf-nine", "stage": 3 }
+        {
+          "type": "setStoryStage",
+          "fighterId": "wolf-nine",
+          "stage": 3
+        }
       ]
     },
     {
@@ -192,7 +314,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 朝食九種目化(canon: 食事・席取り・休憩まで試合化)。延長戦という名のおかわり。勝負と団らんの同時実現。",
+    "authorNote": "語り口V2・二行枠で改稿。v2改稿: 朝食九種目化(canon: 食事・席取り・休憩まで試合化)。延長戦という名のおかわり。勝負と団らんの同時実現。",
     "legacyGeneratedIds": false
   }
 }

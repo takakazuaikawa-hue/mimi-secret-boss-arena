@@ -10,9 +10,18 @@
     "stage": "bond"
   },
   "trigger": {
-    "actions": ["rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 400,
     "weight": 1
   },
@@ -31,56 +40,102 @@
     {
       "type": "direction",
       "id": "room-seventeen.bond.node.direction.001",
-      "command": { "type": "background", "assetId": "room-seventeen.bond.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "room-seventeen.bond.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "line",
-      "id": "room-seventeen.bond.node.line.001",
-      "lineId": "room-seventeen.bond.line.001",
+      "id": "room-seventeen.bond.node.line.001a",
+      "lineId": "room-seventeen.bond.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "雨の休憩時間、私はこっそり十七号室に通うようになっていた。行き先は決まって、あの「何もない小さな部屋」。窓の外(なぜか部屋の中なのに雨の景色がある)を眺めて、十五分ぼんやりする。それだけの常連である。"
+      "text": "それだけの、常連だった。"
     },
     {
       "type": "line",
-      "id": "room-seventeen.bond.node.line.002",
-      "lineId": "room-seventeen.bond.line.002",
+      "id": "room-seventeen.bond.node.line.002a",
+      "lineId": "room-seventeen.bond.line.002a",
       "speakerId": "legacy.speaker.zzyjm6",
       "speakerName": "十七号室",
       "mode": "dialogue",
-      "text": "本日もお越しくださって……いえ。違いますね。身内には、こう言うのでした。——おかえりなさい。"
+      "text": "本日もお越しくださって……いえ。違いますね。"
     },
     {
       "type": "line",
-      "id": "room-seventeen.bond.node.line.003",
-      "lineId": "room-seventeen.bond.line.003",
+      "id": "room-seventeen.bond.node.line.002b",
+      "lineId": "room-seventeen.bond.line.002b",
+      "speakerId": "legacy.speaker.zzyjm6",
+      "speakerName": "十七号室",
+      "mode": "dialogue",
+      "text": "身内には、こう言うのでした。——おかえりなさい。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.bond.node.line.003a",
+      "lineId": "room-seventeen.bond.line.003a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "使い方が合っているかは怪しいが、悪い気はしなかった。ただ、今日は少し困りごとがあった。他のチームメンバーも部屋の噂を聞きつけて、休憩に来たがっているのだ。",
+      "text": "使い方、合ってるか怪しい。でも、悪い気はしなかった。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.bond.node.line.003b",
+      "lineId": "room-seventeen.bond.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ただ、今日は困りごとが一つ。他のチームメンバーも噂を聞いて、休憩に来たがってる。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "room-seventeen.bond.node.line.004",
-      "lineId": "room-seventeen.bond.line.004",
+      "id": "room-seventeen.bond.node.line.004a",
+      "lineId": "room-seventeen.bond.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "部屋の返事は、悩んだ末の増築ラッシュだった。轟音とともに階が生える生える。仮眠階。読書階。誰かのための温度低めの階。誰かのための天井の高い階。もてなしの癖は、身内相手でも豪快に出る。",
+      "text": "部屋の返事は、悩んだ末の増築ラッシュだった。轟音とともに、階が生える生える。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.bond.node.line.004b",
+      "lineId": "room-seventeen.bond.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "仮眠階。読書階。誰かのための温度低めの階。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.bond.node.line.004c",
+      "lineId": "room-seventeen.bond.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "天井の高い階。もてなしの癖は、身内相手でも豪快に出る。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "room-seventeen.bond.node.line.005",
-      "lineId": "room-seventeen.bond.line.005",
+      "id": "room-seventeen.bond.node.line.005a",
+      "lineId": "room-seventeen.bond.line.005a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "十七号室さん、増築ストップ！　みんな、豪華な階が目当てじゃないんです。あなたの部屋は、雨の日にほっとするから人気なんですよ。"
+      "text": "十七号室さん、増築ストップ!　みんな、豪華な階が目当てじゃないんです。"
     },
     {
       "type": "line",
-      "id": "room-seventeen.bond.node.line.006",
-      "lineId": "room-seventeen.bond.line.006",
+      "id": "room-seventeen.bond.node.line.005b",
+      "lineId": "room-seventeen.bond.line.005b",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "あなたの部屋は、雨の日にほっとするから人気なんですよ。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.bond.node.line.006a",
+      "lineId": "room-seventeen.bond.line.006a",
       "speakerId": "legacy.speaker.zzyjm6",
       "speakerName": "十七号室",
       "mode": "dialogue",
@@ -88,53 +143,129 @@
     },
     {
       "type": "line",
-      "id": "room-seventeen.bond.node.line.007",
-      "lineId": "room-seventeen.bond.line.007",
+      "id": "room-seventeen.bond.node.line.007a",
+      "lineId": "room-seventeen.bond.line.007a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "階じゃないです。あなたです。雨の音をちょっと大きくしてくれたり、お茶が冷めた頃に新しいのが出てきたり。そういうの、全部あなたでしょう。"
+      "text": "階じゃないです。あなたです。"
     },
     {
       "type": "line",
-      "id": "room-seventeen.bond.node.line.008",
-      "lineId": "room-seventeen.bond.line.008",
+      "id": "room-seventeen.bond.node.line.007b",
+      "lineId": "room-seventeen.bond.line.007b",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "雨の音をちょっと大きくしてくれたり、お茶が冷めた頃に新しいのが出てきたり。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.bond.node.line.007c",
+      "lineId": "room-seventeen.bond.line.007c",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "そういうの、全部あなたでしょう。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.bond.node.line.008a",
+      "lineId": "room-seventeen.bond.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "部屋が、照れた。照れると照明が全部いっせいに三割暗くなるらしい。百二十階ぶんの照れは、停電と区別がつかない。",
+      "text": "部屋が、照れた。照れると、照明が全部いっせいに三割暗くなるらしい。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.bond.node.line.008b",
+      "lineId": "room-seventeen.bond.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "百二十階ぶんの照れは、停電と区別がつかない。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "room-seventeen.bond.node.line.009",
-      "lineId": "room-seventeen.bond.line.009",
+      "id": "room-seventeen.bond.node.line.009a",
+      "lineId": "room-seventeen.bond.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "薄暗がりの中で、ふと聞いてみた。「そういえば、この部屋の鍵って、ないんですか。私、合鍵とか持ってた方が……」。返事は、少し間をおいて、静かに来た。",
+      "text": "「そういえば、この部屋の鍵って、ないんですか。私、合鍵とか持ってた方が……」"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.bond.node.line.009b",
+      "lineId": "room-seventeen.bond.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "返事は、少し間をおいて、静かに来た。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "room-seventeen.bond.node.line.010",
-      "lineId": "room-seventeen.bond.line.010",
+      "id": "room-seventeen.bond.node.line.010a",
+      "lineId": "room-seventeen.bond.line.010a",
       "speakerId": "legacy.speaker.zzyjm6",
       "speakerName": "十七号室",
       "mode": "dialogue",
-      "text": "あなたの鍵は、作りません。……鍵で開く扉は、音がしないので。私は、あなたのノックが、聞きたいのです。あの、二回のあとに少し間があって、もう一回のノックが。"
+      "text": "あなたの鍵は、作りません。……鍵で開く扉は、音がしないので。"
     },
     {
       "type": "line",
-      "id": "room-seventeen.bond.node.line.011",
-      "lineId": "room-seventeen.bond.line.011",
+      "id": "room-seventeen.bond.node.line.010b",
+      "lineId": "room-seventeen.bond.line.010b",
+      "speakerId": "legacy.speaker.zzyjm6",
+      "speakerName": "十七号室",
+      "mode": "dialogue",
+      "text": "私は、あなたのノックが、聞きたいのです。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.bond.node.line.010c",
+      "lineId": "room-seventeen.bond.line.010c",
+      "speakerId": "legacy.speaker.zzyjm6",
+      "speakerName": "十七号室",
+      "mode": "dialogue",
+      "text": "あの、二回のあとに少し間があって、もう一回のノックが。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.bond.node.line.011a",
+      "lineId": "room-seventeen.bond.line.011a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "自分のノックの癖を、私は今日まで知らなかった。部屋は知っていた。常連の音を、覚える建築だった。雨の音の中で、心拍だけが少し速くなる。この部屋、心拍も聞こえているんだろうか。聞こえていませんように。",
+      "text": "自分のノックの癖を、私は今日まで知らなかった。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.bond.node.line.011b",
+      "lineId": "room-seventeen.bond.line.011b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "部屋は、知っていた。常連の音を覚える建築だった。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.bond.node.line.011c",
+      "lineId": "room-seventeen.bond.line.011c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "雨の音の中で、耳が熱くなる。心拍まで、ちょっと速い。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.bond.node.line.011d",
+      "lineId": "room-seventeen.bond.line.011d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "この部屋、心拍も聞こえてるんだろうか。聞こえてませんように。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "room-seventeen.bond.node.line.012",
-      "lineId": "room-seventeen.bond.line.012",
+      "id": "room-seventeen.bond.node.line.012a",
+      "lineId": "room-seventeen.bond.line.012a",
       "speakerId": "narrator",
       "mode": "thought",
       "text": "休憩の残り時間で、チーム用の整備をひとつ決める。",
@@ -147,28 +278,56 @@
         {
           "id": "room-seventeen.bond.choice.001",
           "label": "迷わず戻れる部屋を、一緒に一つ決める",
-          "result": "チーム全員で相談して、「帰り部屋」を一つ決めた。誰がどの階で迷子になっても、扉を三つ開ければ必ずそこへ出る、待ち合わせ用の小部屋だ。壁には全員ぶんのマグ掛けが生えた(部屋の自主増設)。迷路の真ん中に、迷わない場所が一つ。チームの避難訓練は、なぜかピクニックみたいになった。",
+          "result": "チーム全員で相談して「帰り部屋」を一つ決めた。誰が迷っても、扉を三つ開ければ必ず出る小部屋。壁には全員ぶんのマグ掛けが生えた。迷路の真ん中に、迷わない場所が一つ。避難訓練は、なぜかピクニックみたいに。",
           "intent": "迷宮の中に、全員の帰る場所を作る",
           "promise": "読みにくい成長になる代わりに、この人だけの成長を大きく進める。",
           "memory": "帰り部屋のマグ掛けの位置を、全員が自分で決めた。",
           "tone": "wild",
           "effects": [
-            { "type": "relationship", "target": { "type": "fighter", "fighterId": "room-seventeen" }, "mode": "add", "trust": 9, "ownership": -2 },
-            { "type": "fighterPoints", "target": { "type": "fighter", "fighterId": "room-seventeen" }, "amount": 3 }
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "room-seventeen"
+              },
+              "mode": "add",
+              "trust": 9,
+              "ownership": -2
+            },
+            {
+              "type": "fighterPoints",
+              "target": {
+                "type": "fighter",
+                "fighterId": "room-seventeen"
+              },
+              "amount": 3
+            }
           ],
           "goto": "room-seventeen.bond.node.effect.001"
         },
         {
           "id": "room-seventeen.bond.choice.002",
           "label": "三人用の近道を作り、陣形移動へ使う",
-          "result": "試合用に、扉三枚の「近道」を整備した。前衛が扉に入って後衛の位置から出る。三人の並びが、一呼吸で入れ替わる。リハーサルで審判に見せたら、「移動なのか転移なのか」で判定会議が四十分続いた。結論、「扉は歩いて通ったので移動」。うちのチームの判例集が、また一頁増えた。",
+          "result": "試合用に、扉三枚の「近道」を整備した。前衛が入って後衛の位置から出る。三人の並びが一呼吸で入れ替わる。審判に見せたら「移動か転移か」で判定会議が四十分。結論「歩いたので移動」判例集がまた一頁増えた。",
           "intent": "扉の力を、チームの機動力にする",
           "promise": "常連の時間は減るが、全員へ配れる成長ポイントを得る。",
           "memory": "「扉は歩いて通ったので移動」の判定を、チームは暗唱できる。",
           "tone": "pragmatic",
           "effects": [
-            { "type": "relationship", "target": { "type": "fighter", "fighterId": "room-seventeen" }, "mode": "add", "trust": 1, "ownership": 7 },
-            { "type": "sharedPoints", "amount": 3 }
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "room-seventeen"
+              },
+              "mode": "add",
+              "trust": 1,
+              "ownership": 7
+            },
+            {
+              "type": "sharedPoints",
+              "amount": 3
+            }
           ],
           "goto": "room-seventeen.bond.node.effect.001"
         }
@@ -178,7 +337,11 @@
       "type": "effect",
       "id": "room-seventeen.bond.node.effect.001",
       "effects": [
-        { "type": "setStoryStage", "fighterId": "room-seventeen", "stage": 3 }
+        {
+          "type": "setStoryStage",
+          "fighterId": "room-seventeen",
+          "stage": 3
+        }
       ]
     },
     {
@@ -190,7 +353,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 何もない部屋の常連。照れると全館三割暗くなる。「あなたのノックが聞きたい」。",
+    "authorNote": "語り口V2・二行枠で改稿。v2改稿: 何もない部屋の常連。照れると全館三割暗くなる。「あなたのノックが聞きたい」。",
     "legacyGeneratedIds": false
   }
 }

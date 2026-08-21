@@ -10,9 +10,18 @@
     "stage": "power"
   },
   "trigger": {
-    "actions": ["search", "rest"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "search",
+      "rest"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 400,
     "weight": 1
   },
@@ -24,6 +33,12 @@
         "kind": "background",
         "path": "/assets/story/bg-unused-mortuary-day-v1.png",
         "alt": "使われていない霊安室の背景"
+      },
+      {
+        "id": "marian.power.asset.sprite.character",
+        "kind": "sprite",
+        "path": "/assets/battle/fighters/marian-v1.png",
+        "alt": "終わりまで治す聖女マリアン"
       }
     ]
   },
@@ -31,100 +46,211 @@
     {
       "type": "direction",
       "id": "marian.power.node.direction.001",
-      "command": { "type": "background", "assetId": "marian.power.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "marian.power.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "marian.power.node.direction.character.001",
+      "command": {
+        "type": "show",
+        "assetId": "marian.power.asset.sprite.character",
+        "actorId": "marian",
+        "slot": "right",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
-      "id": "marian.power.node.line.001",
-      "lineId": "marian.power.line.001",
+      "id": "marian.power.node.line.001a",
+      "lineId": "marian.power.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「私の力の、届く場所を見てほしいのです」。マリアンに案内されたのは、闘技場の地下にある、使われていない霊安室だった。使われていないのに、床は磨かれ、空気は澄んでいて、小さな花が一輪、活けてあった。"
+      "text": "耳の先が、ひやりとした。"
     },
     {
       "type": "line",
-      "id": "marian.power.node.line.002",
-      "lineId": "marian.power.line.002",
+      "id": "marian.power.node.line.002a",
+      "lineId": "marian.power.line.002a",
       "speakerId": "legacy.speaker.quc8xa",
       "speakerName": "マリアン",
       "mode": "dialogue",
-      "text": "この施設で人が亡くなったことは、一度もありません。私が来てからは。……ここを使わせないことが、私の、本当の仕事です。"
+      "text": "この施設で人が亡くなったことは、一度もありません。私が来てからは。"
     },
     {
       "type": "line",
-      "id": "marian.power.node.line.003",
-      "lineId": "marian.power.line.003",
+      "id": "marian.power.node.line.002b",
+      "lineId": "marian.power.line.002b",
+      "speakerId": "legacy.speaker.quc8xa",
+      "speakerName": "マリアン",
+      "mode": "dialogue",
+      "text": "……ここを使わせないことが、私の、本当の仕事です。"
+    },
+    {
+      "type": "line",
+      "id": "marian.power.node.line.003a",
+      "lineId": "marian.power.line.003a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "そして彼女は、静かに打ち明けた。彼女の祈りは、生死の境まで届く。境を越えかけた人を、呼び戻せる。——そして、境の向こうへも、声だけは、届いてしまう。",
+      "text": "そして彼女は、静かに打ち明けた。彼女の祈りは、生死の境まで届く。"
+    },
+    {
+      "type": "line",
+      "id": "marian.power.node.line.003b",
+      "lineId": "marian.power.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "境を越えかけた人を、呼び戻せる。——そして、境の向こうへも、声だけは、届いてしまう。",
       "emotion": "tension"
     },
     {
       "type": "direction",
       "id": "marian.power.node.direction.002",
-      "command": { "type": "effect", "effectId": "flash" }
+      "command": {
+        "type": "effect",
+        "effectId": "flash"
+      }
     },
     {
       "type": "line",
-      "id": "marian.power.node.line.004",
-      "lineId": "marian.power.line.004",
+      "id": "marian.power.node.line.004a",
+      "lineId": "marian.power.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "彼女が短い祈りを唱えると、霊安室の空気が変わった。冷たさが消え、どこからか、花の匂い。誰もいないのに、部屋が「留守」ではなく「待機」の顔になる。生死の境というものが、この人の周りでは、壁ではなく扉なのだと分かった。",
+      "text": "彼女が短い祈りを唱えると、霊安室の空気が変わった。"
+    },
+    {
+      "type": "line",
+      "id": "marian.power.node.line.004b",
+      "lineId": "marian.power.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "冷たさが消え、どこからか、花の匂い。部屋が「留守」"
+    },
+    {
+      "type": "line",
+      "id": "marian.power.node.line.004c",
+      "lineId": "marian.power.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "でなく「待機」の顔になる。生死の境は、この人の周りでは、壁でなく扉なのだと分かった。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "marian.power.node.line.005",
-      "lineId": "marian.power.line.005",
+      "id": "marian.power.node.line.005a",
+      "lineId": "marian.power.line.005a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "……救護室の奥の、あの空のベッド。あれも、この力と関係が？"
+      "text": "……救護室の奥の、あの空のベッド。あれも、この力と関係が?"
     },
     {
       "type": "line",
-      "id": "marian.power.node.line.006",
-      "lineId": "marian.power.line.006",
+      "id": "marian.power.node.line.006a",
+      "lineId": "marian.power.line.006a",
       "speakerId": "legacy.speaker.quc8xa",
       "speakerName": "マリアン",
       "mode": "dialogue",
-      "text": "……昔、一人だけ、間に合わなかった人がいます。私の範囲が、まだ小さかった頃に。あのベッドは、その人の。……あの日から、私の範囲は、こんなに大きくなりました。もう誰にも間に合わないことが、ないように。"
+      "text": "……昔、一人だけ、間に合わなかった人がいます。"
     },
     {
       "type": "line",
-      "id": "marian.power.node.line.007",
-      "lineId": "marian.power.line.007",
+      "id": "marian.power.node.line.006b",
+      "lineId": "marian.power.line.006b",
+      "speakerId": "legacy.speaker.quc8xa",
+      "speakerName": "マリアン",
+      "mode": "dialogue",
+      "text": "私の範囲が、まだ小さかった頃に。あのベッドは、その人の。"
+    },
+    {
+      "type": "line",
+      "id": "marian.power.node.line.006c",
+      "lineId": "marian.power.line.006c",
+      "speakerId": "legacy.speaker.quc8xa",
+      "speakerName": "マリアン",
+      "mode": "dialogue",
+      "text": "……あの日から、私の範囲は、こんなに大きくなりました。"
+    },
+    {
+      "type": "line",
+      "id": "marian.power.node.line.006d",
+      "lineId": "marian.power.line.006d",
+      "speakerId": "legacy.speaker.quc8xa",
+      "speakerName": "マリアン",
+      "mode": "dialogue",
+      "text": "もう誰にも間に合わないことが、ないように。"
+    },
+    {
+      "type": "line",
+      "id": "marian.power.node.line.007a",
+      "lineId": "marian.power.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "効きすぎる力の、出どころを聞いてしまった。癖毛やクッキーまで治る過剰な範囲は、間に合わなかった一人へ向けて、今も広がり続けている祈りの半径なのだ。",
+      "text": "効きすぎる力の、出どころを聞いてしまった。"
+    },
+    {
+      "type": "line",
+      "id": "marian.power.node.line.007b",
+      "lineId": "marian.power.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "癖毛やクッキーまで治る過剰な範囲は、間に合わなかった一人へ広がり続ける祈りの半径。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "marian.power.node.line.008",
-      "lineId": "marian.power.line.008",
+      "id": "marian.power.node.line.008a",
+      "lineId": "marian.power.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "かける言葉を、私は選ばなかった。代わりに、彼女が毎朝しているのと同じ手つきで、空のベッドの隅を、ぴんと整え直した。彼女は少し目を見開いて、それから隣で、反対側の隅を整えた。二人でやると、一分で終わった。",
+      "text": "かける言葉を、私は選ばなかった。"
+    },
+    {
+      "type": "line",
+      "id": "marian.power.node.line.008b",
+      "lineId": "marian.power.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "代わりに、彼女と同じ手つきで、空のベッドの隅を、ぴんと整え直した。"
+    },
+    {
+      "type": "line",
+      "id": "marian.power.node.line.008c",
+      "lineId": "marian.power.line.008c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "彼女は少し目を見開いて、隣で、反対側の隅を整えた。二人でやると、一分で終わった。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "marian.power.node.line.009",
-      "lineId": "marian.power.line.009",
+      "id": "marian.power.node.line.009a",
+      "lineId": "marian.power.line.009a",
       "speakerId": "legacy.speaker.quc8xa",
       "speakerName": "マリアン",
       "mode": "dialogue",
-      "text": "……この日課を、誰かとやったのは、初めてです。……一分は、一人より、短いのですね。"
+      "text": "……この日課を、誰かとやったのは、初めてです。"
     },
     {
       "type": "line",
-      "id": "marian.power.node.line.010",
-      "lineId": "marian.power.line.010",
+      "id": "marian.power.node.line.009b",
+      "lineId": "marian.power.line.009b",
+      "speakerId": "legacy.speaker.quc8xa",
+      "speakerName": "マリアン",
+      "mode": "dialogue",
+      "text": "……一分は、一人より、短いのですね。"
+    },
+    {
+      "type": "line",
+      "id": "marian.power.node.line.010a",
+      "lineId": "marian.power.line.010a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "試合でこの力をどう使うか。彼女の範囲と、彼女の怖さに合う形を、決める。",
+      "text": "試合でこの力をどう使うか。彼女の範囲と、怖さに合う形を、決める。",
       "emotion": "resolve"
     },
     {
@@ -134,28 +260,56 @@
         {
           "id": "marian.power.choice.001",
           "label": "死者へ届く祈りを、味方の名前で止める",
-          "result": "決めた型は「点呼」。試合中、彼女の祈りが境へ向かって広がりすぎた時、私が味方三人の名前を順に呼ぶ。名前は、生きている側の座標だ。祈りは名前に引かれて、こちら側へ戻ってくる。初めての実戦で、彼女は試合後に言った。「あなたの点呼が聞こえる間は、私は、どこまで行っても帰れます」。",
+          "result": "決めた型は「点呼」彼女の祈りが境へ広がりすぎた時、私が味方三人の名前を順に呼ぶ。名前は、生きている側の座標。祈りは名前に引かれて戻ってくる。初戦後、彼女は言った。「点呼が聞こえる間は、どこまで行っても帰れます」",
           "intent": "祈りの帰り道を、声で作る",
           "promise": "失敗時の危険を引き受け、この人専用の成長を最大まで進める。",
           "memory": "型「点呼」の名前の順番を、二人とも間違えない。",
           "tone": "heroic",
           "effects": [
-            { "type": "relationship", "target": { "type": "fighter", "fighterId": "marian" }, "mode": "add", "trust": 10, "ownership": -4 },
-            { "type": "fighterPoints", "target": { "type": "fighter", "fighterId": "marian" }, "amount": 5 }
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "marian"
+              },
+              "mode": "add",
+              "trust": 10,
+              "ownership": -4
+            },
+            {
+              "type": "fighterPoints",
+              "target": {
+                "type": "fighter",
+                "fighterId": "marian"
+              },
+              "amount": 5
+            }
           ],
           "goto": "marian.power.node.effect.001"
         },
         {
           "id": "marian.power.choice.002",
           "label": "傷だけを巻き戻し、命には触れない練習をする",
-          "result": "深夜まで、範囲を絞る練習をした。傷だけ。命の線には触れない。彼女の治癒陣が、初めて「小さく」編まれていく。完成した最小の陣は、コイン一枚ぶんの大きさで、擦り傷を一つだけ治した。「小さい陣は、難しい。……でも、優しい大きさです」。効きすぎる人の、初めての、効きすぎない魔法だった。",
+          "result": "深夜まで、範囲を絞る練習をした。傷だけ、命の線には触れない。治癒陣が、初めて「小さく」編まれていく。完成した最小の陣は、コイン一枚ぶんで、擦り傷を一つだけ治した。「小さい陣は難しい。でも、優しい大きさです」",
           "intent": "力に、優しい大きさを覚えさせる",
           "promise": "本来の範囲は温存し、チーム全体の成長へ成果を持ち帰る。",
           "memory": "コイン一枚ぶんの治癒陣を、彼女は「一番の自信作」と呼ぶ。",
           "tone": "pragmatic",
           "effects": [
-            { "type": "relationship", "target": { "type": "fighter", "fighterId": "marian" }, "mode": "add", "trust": 0, "ownership": 9 },
-            { "type": "sharedPoints", "amount": 5 }
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "marian"
+              },
+              "mode": "add",
+              "trust": 0,
+              "ownership": 9
+            },
+            {
+              "type": "sharedPoints",
+              "amount": 5
+            }
           ],
           "goto": "marian.power.node.effect.001"
         }
@@ -165,7 +319,11 @@
       "type": "effect",
       "id": "marian.power.node.effect.001",
       "effects": [
-        { "type": "setStoryStage", "fighterId": "marian", "stage": 4 }
+        {
+          "type": "setStoryStage",
+          "fighterId": "marian",
+          "stage": 4
+        }
       ]
     },
     {
@@ -177,7 +335,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿(シリアス枠): 空のベッドの理由=間に合わなかった一人。効きすぎる範囲=広がり続ける祈りの半径。二人で整えるベッド。",
+    "authorNote": "語り口V2・二行枠で改稿。v2改稿(シリアス枠): 空のベッドの理由=間に合わなかった一人。効きすぎる範囲=広がり続ける祈りの半径。二人で整えるベッド。",
     "legacyGeneratedIds": false
   }
 }

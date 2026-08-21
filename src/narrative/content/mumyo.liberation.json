@@ -56,29 +56,71 @@
     },
     {
       "type": "line",
-      "id": "mumyo.liberation.node.line.001",
-      "lineId": "mumyo.liberation.line.001",
+      "id": "mumyo.liberation.node.line.001a",
+      "lineId": "mumyo.liberation.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "契約を終わらせる夜。場所は本人の希望で、所有者名簿室になった。「終わらせるなら、始まった場所で」。四百年の記録が眠る書庫の最奥に、あの十四倍の厚さの名簿を机に開いて、無銘が待っていた。",
+      "text": "「終わらせるなら、始まった場所で」"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.liberation.node.line.001b",
+      "lineId": "mumyo.liberation.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "四百年の記録が眠る書庫の最奥に、あの十四倍の厚さの名簿を机に開いて、無銘が待っていた。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "mumyo.liberation.node.line.002",
-      "lineId": "mumyo.liberation.line.002",
+      "id": "mumyo.liberation.node.line.002a",
+      "lineId": "mumyo.liberation.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "解除届は薄く、あの名簿の一ページより軽い。こんな紙一枚で人の自由を渡せると思うこと自体が、最後の所有なのかもしれない。判を押す指に、手汗がにじんだ。"
+      "text": "解除届は薄く、あの名簿の一ページより軽い。"
     },
     {
       "type": "line",
-      "id": "mumyo.liberation.node.line.003",
-      "lineId": "mumyo.liberation.line.003",
+      "id": "mumyo.liberation.node.line.002b",
+      "lineId": "mumyo.liberation.line.002b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "こんな紙一枚で人の自由を渡せると思うこと自体が、最後の所有なのかもしれない。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.liberation.node.line.002c",
+      "lineId": "mumyo.liberation.line.002c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "判を押す指に、手汗がにじんだ。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.liberation.node.line.003a",
+      "lineId": "mumyo.liberation.line.003a",
       "speakerId": "legacy.speaker.1whk6fw",
       "speakerName": "無銘",
       "mode": "dialogue",
-      "text": "所有者名簿の、最後のページを見てほしい。歴代の記録係は、ここに十五人目の欄を用意していた。……私は今夜、この欄を、私の手で埋める。"
+      "text": "所有者名簿の、最後のページを見てほしい。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.liberation.node.line.003b",
+      "lineId": "mumyo.liberation.line.003b",
+      "speakerId": "legacy.speaker.1whk6fw",
+      "speakerName": "無銘",
+      "mode": "dialogue",
+      "text": "歴代の記録係は、ここに十五人目の欄を用意していた。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.liberation.node.line.003c",
+      "lineId": "mumyo.liberation.line.003c",
+      "speakerId": "legacy.speaker.1whk6fw",
+      "speakerName": "無銘",
+      "mode": "dialogue",
+      "text": "……私は今夜、この欄を、私の手で埋める。"
     },
     {
       "type": "direction",
@@ -98,35 +140,76 @@
     },
     {
       "type": "line",
-      "id": "mumyo.liberation.node.line.004",
-      "lineId": "mumyo.liberation.line.004",
+      "id": "mumyo.liberation.node.line.004a",
+      "lineId": "mumyo.liberation.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "鏡の中の人物が、ペンを取った。現実の机の上で、誰も触れていないペンが、同じ角度に浮く。十五人目の所有者欄に、ゆっくりと文字が刻まれていく。——「私」。所有者、私。四百年の名簿が、初めて、持たれる側の字で終わった。",
+      "text": "鏡の中の人物が、ペンを取った。現実の机の上で、誰も触れていないペンが、同じ角度に浮く。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.liberation.node.line.004b",
+      "lineId": "mumyo.liberation.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "十五人目の所有者欄に、ゆっくりと文字が刻まれていく。——「私」"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.liberation.node.line.004c",
+      "lineId": "mumyo.liberation.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "所有者、私。四百年の名簿が、初めて、持たれる側の字で終わった。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "mumyo.liberation.node.line.005",
-      "lineId": "mumyo.liberation.line.005",
+      "id": "mumyo.liberation.node.line.005a",
+      "lineId": "mumyo.liberation.line.005a",
       "speakerId": "legacy.speaker.1whk6fw",
       "speakerName": "無銘",
       "mode": "dialogue",
-      "text": "これで、この名簿は完結だ。十六人目の欄は、作らせない。……不思議だな。名を持たないまま、初めて、署名ができた。"
+      "text": "これで、この名簿は完結だ。十六人目の欄は、作らせない。"
     },
     {
       "type": "line",
-      "id": "mumyo.liberation.node.line.006",
-      "lineId": "mumyo.liberation.line.006",
+      "id": "mumyo.liberation.node.line.005b",
+      "lineId": "mumyo.liberation.line.005b",
+      "speakerId": "legacy.speaker.1whk6fw",
+      "speakerName": "無銘",
+      "mode": "dialogue",
+      "text": "……不思議だな。名を持たないまま、初めて、署名ができた。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.liberation.node.line.006a",
+      "lineId": "mumyo.liberation.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "解除届に、私も判を押した。契約印が消える。関係まで消える音は、しなかった。代わりに来たのは、これからは断られるかもしれないという、自由な静けさだった。",
+      "text": "解除届に、私も判を押した。契約印が消える。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.liberation.node.line.006b",
+      "lineId": "mumyo.liberation.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "関係まで消える音は、しなかった。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.liberation.node.line.006c",
+      "lineId": "mumyo.liberation.line.006c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "代わりに来たのは、これからは断られるかもしれないという、自由な静けさだった。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "mumyo.liberation.node.line.007",
-      "lineId": "mumyo.liberation.line.007",
+      "id": "mumyo.liberation.node.line.007a",
+      "lineId": "mumyo.liberation.line.007a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -134,20 +217,45 @@
     },
     {
       "type": "line",
-      "id": "mumyo.liberation.node.line.008",
-      "lineId": "mumyo.liberation.line.008",
+      "id": "mumyo.liberation.node.line.008a",
+      "lineId": "mumyo.liberation.line.008a",
       "speakerId": "legacy.speaker.1whk6fw",
       "speakerName": "無銘",
       "mode": "dialogue",
-      "text": "約束する。……それと、決める時は、たぶんお前の近くで決める。私の一滴は、いつも、お前と話している時に見つかるから。"
+      "text": "約束する。……それと、決める時は、たぶんお前の近くで決める。"
     },
     {
       "type": "line",
-      "id": "mumyo.liberation.node.line.009",
-      "lineId": "mumyo.liberation.line.009",
+      "id": "mumyo.liberation.node.line.008b",
+      "lineId": "mumyo.liberation.line.008b",
+      "speakerId": "legacy.speaker.1whk6fw",
+      "speakerName": "無銘",
+      "mode": "dialogue",
+      "text": "私の一滴は、いつも、お前と話している時に見つかるから。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.liberation.node.line.009a",
+      "lineId": "mumyo.liberation.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "書庫の夜気の中で、耳の先だけが熱かった。世界を十四回救った剣の、十五回目の物語の一行目に、どうやら私は立ち会っている。一行目の終わり方くらいは、二人で選ばせてもらう。",
+      "text": "書庫の夜気の中で、耳の先だけが熱かった。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.liberation.node.line.009b",
+      "lineId": "mumyo.liberation.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "世界を十四回救った剣の、十五回目の物語の一行目に、どうやら私は立ち会っている。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.liberation.node.line.009c",
+      "lineId": "mumyo.liberation.line.009c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "一行目の終わり方くらいは、二人で選ばせてもらう。",
       "emotion": "resolve"
     },
     {
@@ -157,7 +265,7 @@
         {
           "id": "mumyo.liberation.choice.001",
           "label": "所有者名簿を消し、鏡の本人へ鞘を返す",
-          "result": "会社の登録簿から、歴代所有者の名を全部抹消した。残ったのは最後のページの「私」の一行だけ。鞘は、鏡の中の本人が自分の手で受け取った。「次の試合に、これを持っていく。持たれるのではなく、携えて」。現実の剣が台座の上でわずかに向きを変え、初めて、自分で行き先を選んだ道具の顔をした。",
+          "result": "会社の登録簿から、歴代所有者の名を全部抹消した。残ったのは「私」の一行だけ。鞘は、鏡の中の本人が自分の手で受け取った。「次の試合に、これを持っていく。持たれるのではなく、携えて」",
           "intent": "契約と出場登録を完全に分ける",
           "promise": "所有者名を消し、本人が自分の名で次の試合を選べるようにする。",
           "memory": "自由になったあと、最初に自分で選んだ集合時刻が残る。",
@@ -184,7 +292,7 @@
         {
           "id": "mumyo.liberation.choice.002",
           "label": "契約を解き、名前のない仲間として同行を頼む",
-          "result": "「決勝、一緒に来てもらえませんか。剣としてじゃなく、仲間として。名札は——空欄のままで」。鏡の人物は頷いて、控室の席をひとつ、自分で選んだ。名札のない席。けれど翌朝、誰かがその名札に小さく書き足していた。「じき、決まる」。筆跡は、チーム全員分あった。",
+          "result": "「決勝、一緒に来てもらえませんか。剣としてじゃなく、仲間として。名札は——空欄のままで」鏡の人物は頷いて、席をひとつ自分で選んだ。翌朝、誰かがその名札に書き足していた。「じき、決まる」",
           "intent": "自由な相手へ改めて協力を頼む",
           "promise": "断る権利を返したうえで、決勝を一緒に戦う新しい約束を結ぶ。",
           "memory": "頼まれたからではなく、頼みを聞いたから残った。その違いを二人が覚えている。",
@@ -253,7 +361,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 十五人目の所有者欄に「私」と署名。名簿の完結。名は急がず自分で選ぶ。",
+    "authorNote": "語り口V2・二行枠で改稿。v2改稿: 十五人目の所有者欄に「私」と署名。名簿の完結。名は急がず自分で選ぶ。",
     "legacyGeneratedIds": false
   }
 }

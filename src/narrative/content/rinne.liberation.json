@@ -62,29 +62,78 @@
     },
     {
       "type": "line",
-      "id": "rinne.liberation.node.line.001",
-      "lineId": "rinne.liberation.line.001",
+      "id": "rinne.liberation.node.line.001a",
+      "lineId": "rinne.liberation.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "契約を終わらせる夜。場所は、いつもの閉店後のルーレットの前にした。解除届は薄くて、ポケットの空のコインより軽い。こんな紙一枚で人の自由を渡せると思うこと自体が、最後の所有なのかもしれない。手汗で、端が少し曲がった。",
+      "text": "契約を終わらせる夜。場所は、いつもの閉店後のルーレット前。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.liberation.node.line.001b",
+      "lineId": "rinne.liberation.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "解除届は薄い。ポケットの空のコインより軽い。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.liberation.node.line.001c",
+      "lineId": "rinne.liberation.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "こんな紙一枚で、人の自由を渡せると思うこと自体が。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.liberation.node.line.001d",
+      "lineId": "rinne.liberation.line.001d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "最後の所有、なのかもしれない。手汗で、端が少し曲がった。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "rinne.liberation.node.line.002",
-      "lineId": "rinne.liberation.line.002",
+      "id": "rinne.liberation.node.line.002a",
+      "lineId": "rinne.liberation.line.002a",
       "speakerId": "legacy.speaker.1vpt9ol",
       "speakerName": "リンネ",
       "mode": "dialogue",
-      "text": "署名の前に、一個だけ宣言。私、今から目を閉じて書く。この紙の先の未来を、一秒も見ないで。……転生してから、初めてやる。"
+      "text": "署名の前に、一個だけ宣言。私、今から目を閉じて書く。"
     },
     {
       "type": "line",
-      "id": "rinne.liberation.node.line.003",
-      "lineId": "rinne.liberation.line.003",
+      "id": "rinne.liberation.node.line.002b",
+      "lineId": "rinne.liberation.line.002b",
+      "speakerId": "legacy.speaker.1vpt9ol",
+      "speakerName": "リンネ",
+      "mode": "dialogue",
+      "text": "この紙の先の未来を、一秒も見ないで。……転生してから、初めてやる。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.liberation.node.line.003a",
+      "lineId": "rinne.liberation.line.003a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "全部見える人が、見ないことを選ぶ。それがどれだけ大きな賭けか、私はもう知っている。ペン先は、迷わず進んだ。目を閉じたままの署名は少し曲がっていて、これまで見たどの字より、軽やかだった。",
+      "text": "全部見える人が、見ないことを選ぶ。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.liberation.node.line.003b",
+      "lineId": "rinne.liberation.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "それがどれだけ大きな賭けか、私はもう知っている。ペン先は、迷わず進んだ。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.liberation.node.line.003c",
+      "lineId": "rinne.liberation.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "目を閉じたままの署名は少し曲がっていて、これまで見たどの字より、軽やかだった。",
       "emotion": "revelation"
     },
     {
@@ -105,12 +154,21 @@
     },
     {
       "type": "line",
-      "id": "rinne.liberation.node.line.004",
-      "lineId": "rinne.liberation.line.004",
+      "id": "rinne.liberation.node.line.004a",
+      "lineId": "rinne.liberation.line.004a",
       "speakerId": "legacy.speaker.1vpt9ol",
       "speakerName": "リンネ",
       "mode": "dialogue",
-      "text": "契約が、外れた。……変なの。未来は一個も増えてないはずなのに、増えた気がする。選んでいい未来が、増えたからかな。"
+      "text": "契約が、外れた。……変なの。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.liberation.node.line.004b",
+      "lineId": "rinne.liberation.line.004b",
+      "speakerId": "legacy.speaker.1vpt9ol",
+      "speakerName": "リンネ",
+      "mode": "dialogue",
+      "text": "未来は一個も増えてないはずなのに、増えた気がする。選んでいい未来が、増えたからかな。"
     },
     {
       "type": "direction",
@@ -122,17 +180,41 @@
     },
     {
       "type": "line",
-      "id": "rinne.liberation.node.line.005",
-      "lineId": "rinne.liberation.line.005",
+      "id": "rinne.liberation.node.line.005a",
+      "lineId": "rinne.liberation.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "もう、この人を呼び止める権利はない。それでも、と思って顔を上げたら、彼女は帰り支度を全然していなかった。ルーレットの縁に頬杖をついて、私の次の言葉を、答えを知らないまま待っている顔をしていた。",
+      "text": "もう、この人を呼び止める権利はない。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.liberation.node.line.005b",
+      "lineId": "rinne.liberation.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "それでも、と顔を上げたら、彼女は帰り支度を全然していなかった。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.liberation.node.line.005c",
+      "lineId": "rinne.liberation.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ルーレットの縁に頬杖をついて。耳が、こっちを窺うみたいに、少し動いた。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.liberation.node.line.005d",
+      "lineId": "rinne.liberation.line.005d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私の次の言葉を、答えを知らないまま待っている顔。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "rinne.liberation.node.line.006",
-      "lineId": "rinne.liberation.line.006",
+      "id": "rinne.liberation.node.line.006a",
+      "lineId": "rinne.liberation.line.006a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -140,29 +222,63 @@
     },
     {
       "type": "line",
-      "id": "rinne.liberation.node.line.007",
-      "lineId": "rinne.liberation.line.007",
+      "id": "rinne.liberation.node.line.007a",
+      "lineId": "rinne.liberation.line.007a",
       "speakerId": "legacy.speaker.1vpt9ol",
       "speakerName": "リンネ",
       "mode": "dialogue",
-      "text": "続き、言わないで。今夜はそれを、見ないで待つ賭けにする。……当たり外れのない約束を、一度だけ信じて待つ。ずっとやりたかったやつ、今、やってるとこだから。"
+      "text": "続き、言わないで。今夜はそれを、見ないで待つ賭けにする。"
     },
     {
       "type": "line",
-      "id": "rinne.liberation.node.line.008",
-      "lineId": "rinne.liberation.line.008",
+      "id": "rinne.liberation.node.line.007b",
+      "lineId": "rinne.liberation.line.007b",
+      "speakerId": "legacy.speaker.1vpt9ol",
+      "speakerName": "リンネ",
+      "mode": "dialogue",
+      "text": "……当たり外れのない約束を、一度だけ信じて待つ。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.liberation.node.line.007c",
+      "lineId": "rinne.liberation.line.007c",
+      "speakerId": "legacy.speaker.1vpt9ol",
+      "speakerName": "リンネ",
+      "mode": "dialogue",
+      "text": "ずっとやりたかったやつ、今、やってるとこだから。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.liberation.node.line.008a",
+      "lineId": "rinne.liberation.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "帰り際、預かっていた空のコインを返そうとした。彼女は受け取らなかった。「預けたんじゃない。それは、次に会う場所の印。持ってる方が、待ち合わせ場所」。つまり私は、これから毎日、待ち合わせ場所を持ち歩くことになる。",
+      "text": "「預けたんじゃない。それは、次に会う場所の印。持ってる方が、待ち合わせ場所」"
+    },
+    {
+      "type": "line",
+      "id": "rinne.liberation.node.line.008b",
+      "lineId": "rinne.liberation.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "つまり私は、これから毎日、待ち合わせ場所を持ち歩くことになる。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "rinne.liberation.node.line.009",
-      "lineId": "rinne.liberation.line.009",
+      "id": "rinne.liberation.node.line.009a",
+      "lineId": "rinne.liberation.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "別れの挨拶をした。それなのに、足音は二つとも同じ出口へ向かっていた。契約ではなく、本人の歩幅で。今夜の締めは、コインを投げずに決める。",
+      "text": "別れの挨拶をした。それなのに、足音は二つとも同じ出口へ向かっていた。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.liberation.node.line.009b",
+      "lineId": "rinne.liberation.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "契約ではなく、本人の歩幅で。今夜の締めは、コインを投げずに決める。",
       "emotion": "resolve"
     },
     {
@@ -172,7 +288,7 @@
         {
           "id": "rinne.liberation.choice.001",
           "label": "契約金を精算し、未来の賭け札を本人へ返す",
-          "result": "最後の精算で、彼女の未来に賭けられていた札を全部、本人の手へ返した。最後の配当はゼロ。リンネは札を自分の財布へしまい、宣言した。「次の試合には、賭けじゃなくて、予定として来る」。予定——未来の見える人が使うには、あまりに普通で、あまりに新品の言葉だった。集合時刻は、彼女が自分で決めた。",
+          "result": "最後の精算で、彼女に賭けられていた札を、全部本人へ返した。配当はゼロ。リンネは札を財布へしまい、宣言した。「次は、賭けじゃなくて予定として来る」——未来が見える人には、あまりに新品の言葉だった。集合時刻は、彼女が自分で決めた。",
           "intent": "契約と出場登録を完全に分ける",
           "promise": "所有者名を消し、本人が自分の名で次の試合を選べるようにする。",
           "memory": "自由になったあと、最初に自分で選んだ集合時刻が残る。",
@@ -199,7 +315,7 @@
         {
           "id": "rinne.liberation.choice.002",
           "label": "契約を解き、勝率を聞かずに決勝へ誘う",
-          "result": "「決勝、一緒に出てくれませんか。勝率は——聞きません」。リンネは数字を見ないまま、参加の欄に丸をつけた。確率を知ってから選んできた人の、初めての、知らないままの丸。「頼まれたから、じゃないよ。頼みを聞いたから、残るの」。その違いを、二人とも大事に覚えておくことにした。",
+          "result": "「決勝、一緒に出てくれませんか。勝率は——聞きません」——リンネは数字を見ないまま、参加の欄に丸をつけた。知らないままの、初めての丸。「頼まれたから、じゃないよ。頼みを聞いたから、残るの」——その違いを、二人で覚えておくことにした。",
           "intent": "自由な相手へ改めて協力を頼む",
           "promise": "断る権利を返したうえで、決勝を一緒に戦う新しい約束を結ぶ。",
           "memory": "頼まれたからではなく、頼みを聞いたから残った。その違いを二人が覚えている。",
@@ -268,7 +384,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 目を閉じた署名(承認済みビート保持)。空のコイン=次に会う場所の印。「見ないで待つ賭け」。",
+    "authorNote": "語り口V2・二行枠で改稿。v2改稿: 目を閉じた署名(承認済みビート保持)。空のコイン=次に会う場所の印。「見ないで待つ賭け」。",
     "legacyGeneratedIds": false
   }
 }

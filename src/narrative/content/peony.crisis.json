@@ -33,8 +33,14 @@
       {
         "id": "peony.crisis.asset.background.001",
         "kind": "background",
-        "path": "/assets/story/bg-contract-archive-v2.png",
+        "path": "/assets/story/bg-old-city-wall-exhibit-day-v1.png",
         "alt": "契約保管庫の背景"
+      },
+      {
+        "id": "peony.crisis.asset.sprite.character",
+        "kind": "sprite",
+        "path": "/assets/battle/fighters/peony-v1.png",
+        "alt": "巨人の守護者ピオニー"
       }
     ]
   },
@@ -49,35 +55,110 @@
       }
     },
     {
+      "type": "direction",
+      "id": "peony.crisis.node.direction.character.001",
+      "command": {
+        "type": "show",
+        "assetId": "peony.crisis.asset.sprite.character",
+        "actorId": "peony",
+        "slot": "right",
+        "scale": "standard"
+      }
+    },
+    {
       "type": "line",
-      "id": "peony.crisis.node.line.001",
-      "lineId": "peony.crisis.line.001",
+      "id": "peony.crisis.node.line.001a",
+      "lineId": "peony.crisis.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "中庭に、仮設の観客席が組まれていた。三千席。正面には、真新しい城壁が一枚。立て看板いわく、『毎公演、城壁三枚破壊。迫力保証』。ピオニーさんは、その設営を遠くから見ていた。出演者本人だけが、聞かされていない公演だった。黒い角封筒が届いたのは、その日の夕方である。",
+      "text": "中庭に、仮設の観客席が組まれていた。"
+    },
+    {
+      "type": "line",
+      "id": "peony.crisis.node.line.001b",
+      "lineId": "peony.crisis.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "三千席。正面に、真新しい城壁が一枚。看板に『毎公演、城壁三枚破壊。"
+    },
+    {
+      "type": "line",
+      "id": "peony.crisis.node.line.001c",
+      "lineId": "peony.crisis.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "迫力保証』。ピオニーさんは、その設営を遠くから見ていた。"
+    },
+    {
+      "type": "line",
+      "id": "peony.crisis.node.line.001d",
+      "lineId": "peony.crisis.line.001d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "出演者本人だけが、聞かされていない公演。黒い封筒は、その日の夕方に届いた。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "peony.crisis.node.line.002",
-      "lineId": "peony.crisis.line.002",
+      "id": "peony.crisis.node.line.002a",
+      "lineId": "peony.crisis.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "壊さないために全力を使ってきた人に、壊すことを売れという通告だった。ピオニーは封筒を読んで、静かに「わかった」とだけ言った。その静かさが、一番の異常事態だった。"
+      "text": "壊さないために全力を使ってきた人に、壊すことを売れという通告。"
     },
     {
       "type": "line",
-      "id": "peony.crisis.node.line.003",
-      "lineId": "peony.crisis.line.003",
+      "id": "peony.crisis.node.line.002b",
+      "lineId": "peony.crisis.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "翌日から、彼女はおかしくなった。会場中の備品に「こわれもの注意」のシールを貼って回り始めたのだ。椅子に、手すりに、自販機に、掲示板に。夜中の三時に、売店のガラスケースへシールを貼っている巨人を、警備員さんが発見した。",
+      "text": "ピオニーは封筒を読んで、静かに「わかった」とだけ言った。"
+    },
+    {
+      "type": "line",
+      "id": "peony.crisis.node.line.002c",
+      "lineId": "peony.crisis.line.002c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "その静かさが、一番の異常事態だった。"
+    },
+    {
+      "type": "line",
+      "id": "peony.crisis.node.line.003a",
+      "lineId": "peony.crisis.line.003a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "翌日から、彼女はおかしくなった。耳が、ずっと心配していた。"
+    },
+    {
+      "type": "line",
+      "id": "peony.crisis.node.line.003b",
+      "lineId": "peony.crisis.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "会場中の備品に「こわれもの注意」のシールを貼って回り始めた。"
+    },
+    {
+      "type": "line",
+      "id": "peony.crisis.node.line.003c",
+      "lineId": "peony.crisis.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "椅子に、手すりに、自販機に、掲示板に。"
+    },
+    {
+      "type": "line",
+      "id": "peony.crisis.node.line.003d",
+      "lineId": "peony.crisis.line.003d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "夜中の三時、売店のガラスケースへシールを貼る巨人を、警備員さんが発見した。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "peony.crisis.node.line.004",
-      "lineId": "peony.crisis.line.004",
+      "id": "peony.crisis.node.line.004a",
+      "lineId": "peony.crisis.line.004a",
       "speakerId": "legacy.speaker.1e9iq7o",
       "speakerName": "ピオニー",
       "mode": "dialogue",
@@ -85,11 +166,19 @@
     },
     {
       "type": "line",
-      "id": "peony.crisis.node.line.005",
-      "lineId": "peony.crisis.line.005",
+      "id": "peony.crisis.node.line.005a",
+      "lineId": "peony.crisis.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "守る対象を増やして増やして、パンクする寸前だった。会場の備品、約四万点。シールは三百枚入りを、既に十二袋消費している。このままでは、ショーの前に彼女が壊れる。",
+      "text": "守る対象を増やして増やして、パンクする寸前だった。会場の備品、約四万点。"
+    },
+    {
+      "type": "line",
+      "id": "peony.crisis.node.line.005b",
+      "lineId": "peony.crisis.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "シールは、既に十二袋消費。このままでは、ショーの前に彼女が壊れる。",
       "emotion": "tension"
     },
     {
@@ -102,71 +191,174 @@
     },
     {
       "type": "line",
-      "id": "peony.crisis.node.line.006",
-      "lineId": "peony.crisis.line.006",
+      "id": "peony.crisis.node.line.006a",
+      "lineId": "peony.crisis.line.006a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "ピオニーさん、ストップ！　シール、いったん置いて。……聞いてください。守るものは、選んでいいんです。全部は、誰にも守れません。"
+      "text": "ピオニーさん、ストップ!　シール、いったん置いて。"
     },
     {
       "type": "line",
-      "id": "peony.crisis.node.line.007",
-      "lineId": "peony.crisis.line.007",
+      "id": "peony.crisis.node.line.006b",
+      "lineId": "peony.crisis.line.006b",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "……聞いてください。守るものは、選んでいいんです。"
+    },
+    {
+      "type": "line",
+      "id": "peony.crisis.node.line.006c",
+      "lineId": "peony.crisis.line.006c",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "全部は、誰にも守れません。"
+    },
+    {
+      "type": "line",
+      "id": "peony.crisis.node.line.007a",
+      "lineId": "peony.crisis.line.007a",
       "speakerId": "legacy.speaker.1e9iq7o",
       "speakerName": "ピオニー",
       "mode": "dialogue",
-      "text": "でも……まもりそこねたら、また、なくなるよ。わたしの城みたいに。ぜんぶ、まもらないと、ぜんぶ——"
+      "text": "でも……まもりそこねたら、また、なくなるよ。"
     },
     {
       "type": "line",
-      "id": "peony.crisis.node.line.008",
-      "lineId": "peony.crisis.line.008",
+      "id": "peony.crisis.node.line.007b",
+      "lineId": "peony.crisis.line.007b",
+      "speakerId": "legacy.speaker.1e9iq7o",
+      "speakerName": "ピオニー",
+      "mode": "dialogue",
+      "text": "わたしの城みたいに。ぜんぶ、まもらないと、ぜんぶ——"
+    },
+    {
+      "type": "line",
+      "id": "peony.crisis.node.line.008a",
+      "lineId": "peony.crisis.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "出た。この人の一番深い場所。守りそこねた城の記憶が、「全部守る」という不可能な命題に化けて、彼女を夜中の売店に立たせている。",
+      "text": "出た。この人の一番深い場所。守りそこねた城の記憶が、「全部守る」という命題に化けている。"
+    },
+    {
+      "type": "line",
+      "id": "peony.crisis.node.line.008b",
+      "lineId": "peony.crisis.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "それが、彼女を夜中の売店に立たせていた。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "peony.crisis.node.line.009",
-      "lineId": "peony.crisis.line.009",
+      "id": "peony.crisis.node.line.009a",
+      "lineId": "peony.crisis.line.009a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "……逆にしましょう。壊すものを、選ぶんです。この世には、壊されたがってるものが、ちゃんとあります。"
+      "text": "……逆にしましょう。壊すものを、選ぶんです。"
     },
     {
       "type": "line",
-      "id": "peony.crisis.node.line.010",
-      "lineId": "peony.crisis.line.010",
+      "id": "peony.crisis.node.line.009b",
+      "lineId": "peony.crisis.line.009b",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "この世には、壊されたがってるものが、ちゃんとあります。"
+    },
+    {
+      "type": "line",
+      "id": "peony.crisis.node.line.010a",
+      "lineId": "peony.crisis.line.010a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私は施設課の解体予定リストを持ち出した。老朽化した旧スタンド。撤去費用が出ずに三年放置の廃倉庫。危険で立入禁止の崩れかけ通路。——全部、「壊してほしい」建物たちだ。",
+      "text": "私は、施設課の解体予定リストを持ち出した。老朽化した旧スタンド。"
+    },
+    {
+      "type": "line",
+      "id": "peony.crisis.node.line.010b",
+      "lineId": "peony.crisis.line.010b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "三年放置の廃倉庫。崩れかけ通路。"
+    },
+    {
+      "type": "line",
+      "id": "peony.crisis.node.line.010c",
+      "lineId": "peony.crisis.line.010c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "——全部、「壊してほしい」建物たちだ。",
       "emotion": "resolve"
     },
     {
       "type": "line",
-      "id": "peony.crisis.node.line.011",
-      "lineId": "peony.crisis.line.011",
+      "id": "peony.crisis.node.line.011a",
+      "lineId": "peony.crisis.line.011a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "会社のショー、受けましょう。ただし演目名は変えます。「解体式典」。壊すのは、壊されたがってるものだけ。あなたの一撃で、三年分の危険が消えて、跡地に新しいものが建つ。——それ、破壊ショーじゃなくて、街のお手伝いです。"
+      "text": "会社のショー、受けましょう。ただし演目名は変えます。"
     },
     {
       "type": "line",
-      "id": "peony.crisis.node.line.012",
-      "lineId": "peony.crisis.line.012",
+      "id": "peony.crisis.node.line.011b",
+      "lineId": "peony.crisis.line.011b",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "「解体式典」に。壊すのは、壊されたがってるものだけ。"
+    },
+    {
+      "type": "line",
+      "id": "peony.crisis.node.line.011c",
+      "lineId": "peony.crisis.line.011c",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "あなたの一撃で、三年分の危険が消えて、跡地に新しいものが建つ。"
+    },
+    {
+      "type": "line",
+      "id": "peony.crisis.node.line.011d",
+      "lineId": "peony.crisis.line.011d",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "——それ、破壊ショーじゃなくて、街のお手伝いです。"
+    },
+    {
+      "type": "line",
+      "id": "peony.crisis.node.line.012a",
+      "lineId": "peony.crisis.line.012a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "本番の日。満員の観客の前で、ピオニーは旧スタンドに一礼して、角の封印を外した。一撃。三年間誰も手を付けられなかった危険建築が、静かな砂の山に変わる。歓声より先に、施設課の職員さんたちが泣いた。",
+      "text": "本番の日。満員の観客の前で、ピオニーは旧スタンドに一礼した。角の封印を外す。"
+    },
+    {
+      "type": "line",
+      "id": "peony.crisis.node.line.012b",
+      "lineId": "peony.crisis.line.012b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "一撃。三年間誰も手を付けられなかった危険建築が、静かな砂の山に変わる。"
+    },
+    {
+      "type": "line",
+      "id": "peony.crisis.node.line.012c",
+      "lineId": "peony.crisis.line.012c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "歓声より先に、施設課の職員さんたちが泣いた。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "peony.crisis.node.line.013",
-      "lineId": "peony.crisis.line.013",
+      "id": "peony.crisis.node.line.013a",
+      "lineId": "peony.crisis.line.013a",
       "speakerId": "legacy.speaker.1e9iq7o",
       "speakerName": "ピオニー",
       "mode": "dialogue",
@@ -174,11 +366,19 @@
     },
     {
       "type": "line",
-      "id": "peony.crisis.node.line.014",
-      "lineId": "peony.crisis.line.014",
+      "id": "peony.crisis.node.line.014a",
+      "lineId": "peony.crisis.line.014a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "物語資産管理部は「破壊の花形」が「解体の恩人」に化けたことに気づいて、企画書を持ち帰った。残るは、次の試合での仕上げだ。",
+      "text": "物語資産管理部は、企画書を持ち帰った。"
+    },
+    {
+      "type": "line",
+      "id": "peony.crisis.node.line.014b",
+      "lineId": "peony.crisis.line.014b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「破壊の花形」が「解体の恩人」に化けたことに気づいて。残るは、次の試合での仕上げだ。",
       "emotion": "resolve"
     },
     {
@@ -188,7 +388,7 @@
         {
           "id": "peony.crisis.choice.001",
           "label": "観客席を守る城壁役として前へ出る",
-          "result": "次の試合、相手の広範囲攻撃が観客席へ流れた瞬間、ピオニーは迷わず最前列へ出て、両腕のドームで一区画まるごと守り切った。守るものを「選ぶ」練習の成果だった——彼女はもう、四万点にシールを貼らない。守ると決めた範囲を、全力で守る。試合後、守られた区画の観客から、紙の冠が三十個届いた。",
+          "result": "次の試合、相手の攻撃が観客席へ流れた瞬間、ピオニーは最前列へ出て、両腕のドームで一区画を守り切った。「選ぶ」練習の成果——もう四万点にシールは貼らない。決めた範囲を全力で守る。試合後、紙の冠が三十個届いた。",
           "intent": "選んで守る強さを、本番で見せる",
           "promise": "危険を引き受け、この人専用の成長を最大まで進める。",
           "memory": "三十個の紙冠は、案内所の天井に飾ってある。",
@@ -218,7 +418,7 @@
         {
           "id": "peony.crisis.choice.002",
           "label": "角の封印を外し、最短で決着をつける",
-          "result": "長引くほど会場が危ない相手だったので、開始十秒、角の封印を外した「寸止めの花」で決着をつけた。相手の武装だけが砂になり、本人は無傷で降参した。解説席が絶句する中、ピオニーはマイクを借りて一言。「こわしたのは、ぶきだけ。……ぶきは、こわされたがってた、とおもう」。名解説だった。",
+          "result": "会場が危ない相手だったので、開始十秒、「寸止めの花」で決着をつけた。相手の武装だけが砂になり、本人は無傷で降参。ピオニーはマイクで一言。「こわしたのは、ぶきだけ。……ぶきも、こわされたがってたとおもう」——名解説だった。",
           "intent": "最小の破壊で最速の決着を取る",
           "promise": "本人の葛藤は残るが、チーム全体へ使える成長を持ち帰る。",
           "memory": "開始十秒の決着を、実況は「花の閉会式」と呼んだ。",
@@ -268,7 +468,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 黒い角封筒=破壊の興行化(Q2)。守る対象を増やしすぎる暴走(canon指示)→解体式典への転換。 圧力の到来形式を差別化(封筒は事後に届く落ちへ)。",
+    "authorNote": "語り口V2・二行枠で改稿。黒い角封筒=破壊の興行化(Q2)。守る対象を増やしすぎる暴走(canon指示)→解体式典への転換。 圧力の到来形式を差別化(封筒は事後に届く落ちへ)。",
     "legacyGeneratedIds": false
   }
 }

@@ -47,33 +47,57 @@
   "nodes": [
     {
       "type": "line",
-      "id": "amara.crisis.node.line.001",
-      "lineId": "amara.crisis.line.001",
+      "id": "amara.crisis.node.line.001a",
+      "lineId": "amara.crisis.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "アマラに避けられて、六日目。廊下で手を振ったら、業務用の会釈だけが返ってきた。開廷すら、されない。それが一番おかしい。"
+      "text": "アマラさんに避けられて、六日目。廊下で手を振ったら、業務用の会釈だけが返ってきた。"
     },
     {
       "type": "line",
-      "id": "amara.crisis.node.line.002",
-      "lineId": "amara.crisis.line.002",
+      "id": "amara.crisis.node.line.001b",
+      "lineId": "amara.crisis.line.001b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "七日目。黒い角封筒が届いた。差出人、アルデバラン社・物語資産管理部。「契約確認書——資産『アマラ』の本社回収について。期限、次の公式戦まで」。資産。回収。人を、荷物みたいに。決定欄は空白のまま、私を見上げていた。",
+      "text": "開廷すら、されない。それが一番おかしい。"
+    },
+    {
+      "type": "line",
+      "id": "amara.crisis.node.line.002a",
+      "lineId": "amara.crisis.line.002a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "七日目。黒い角封筒が届いた。差出人はアルデバラン社・物語資産管理部。"
+    },
+    {
+      "type": "line",
+      "id": "amara.crisis.node.line.002b",
+      "lineId": "amara.crisis.line.002b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「契約確認書、資産『アマラ』の本社回収について。期限、次の公式戦まで」資産。回収。"
+    },
+    {
+      "type": "line",
+      "id": "amara.crisis.node.line.002c",
+      "lineId": "amara.crisis.line.002c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "人を、荷物みたいに。決定欄は空白のまま、私を見上げていた。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "amara.crisis.node.line.003",
-      "lineId": "amara.crisis.line.003",
+      "id": "amara.crisis.node.line.003a",
+      "lineId": "amara.crisis.line.003a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "契約保管庫の扉の中から、声がした。アマラの声で、アマラじゃないみたいな声。"
+      "text": "契約保管庫の扉の中から、声がした。アマラさんの声で、アマラさんじゃないみたいな声。"
     },
     {
       "type": "line",
-      "id": "amara.crisis.node.line.004",
-      "lineId": "amara.crisis.line.004",
+      "id": "amara.crisis.node.line.004a",
+      "lineId": "amara.crisis.line.004a",
       "speakerId": "legacy.speaker.14shtqw",
       "speakerName": "アマラ",
       "mode": "dialogue",
@@ -81,17 +105,25 @@
     },
     {
       "type": "line",
-      "id": "amara.crisis.node.line.005",
-      "lineId": "amara.crisis.line.005",
+      "id": "amara.crisis.node.line.005a",
+      "lineId": "amara.crisis.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "扉の隙間からのぞくと、一人の法廷だった。原告席にアマラの契約書。被告席に——私の名札。床には丸めた下書きが、雪みたいに積もっていた。",
+      "text": "扉の隙間からのぞくと、一人の法廷だった。原告席にアマラの契約書。"
+    },
+    {
+      "type": "line",
+      "id": "amara.crisis.node.line.005b",
+      "lineId": "amara.crisis.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "被告席に——私の名札。床には丸めた下書きが、雪みたいに積もってた。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "amara.crisis.node.line.006",
-      "lineId": "amara.crisis.line.006",
+      "id": "amara.crisis.node.line.006a",
+      "lineId": "amara.crisis.line.006a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -116,17 +148,17 @@
     },
     {
       "type": "line",
-      "id": "amara.crisis.node.line.007",
-      "lineId": "amara.crisis.line.007",
+      "id": "amara.crisis.node.line.007a",
+      "lineId": "amara.crisis.line.007a",
       "speakerId": "legacy.speaker.14shtqw",
       "speakerName": "アマラ",
       "mode": "dialogue",
-      "text": "！　……傍聴は、認めていません。"
+      "text": "!　……傍聴は、認めていません。"
     },
     {
       "type": "line",
-      "id": "amara.crisis.node.line.008",
-      "lineId": "amara.crisis.line.008",
+      "id": "amara.crisis.node.line.008a",
+      "lineId": "amara.crisis.line.008a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -134,26 +166,35 @@
     },
     {
       "type": "line",
-      "id": "amara.crisis.node.line.009",
-      "lineId": "amara.crisis.line.009",
+      "id": "amara.crisis.node.line.009a",
+      "lineId": "amara.crisis.line.009a",
       "speakerId": "legacy.speaker.14shtqw",
       "speakerName": "アマラ",
       "mode": "dialogue",
-      "text": "……アルデバラン社が、私の回収期限を切りました。私は、会社を訴えます。だが、あなたが所有者である限り、私の訴えはあなたへの訴えになる。利益相反です。"
+      "text": "……アルデバラン社が、私の回収期限を切りました。私は、会社を訴えます。"
     },
     {
       "type": "line",
-      "id": "amara.crisis.node.line.010",
-      "lineId": "amara.crisis.line.010",
+      "id": "amara.crisis.node.line.009b",
+      "lineId": "amara.crisis.line.009b",
+      "speakerId": "legacy.speaker.14shtqw",
+      "speakerName": "アマラ",
+      "mode": "dialogue",
+      "text": "だが、あなたが所有者である限り、私の訴えはあなたへの訴えになる。利益相反です。"
+    },
+    {
+      "type": "line",
+      "id": "amara.crisis.node.line.010a",
+      "lineId": "amara.crisis.line.010a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "それで一週間、私を訴える練習を？"
+      "text": "それで一週間、私を訴える練習を?"
     },
     {
       "type": "line",
-      "id": "amara.crisis.node.line.011",
-      "lineId": "amara.crisis.line.011",
+      "id": "amara.crisis.node.line.011a",
+      "lineId": "amara.crisis.line.011a",
       "speakerId": "legacy.speaker.14shtqw",
       "speakerName": "アマラ",
       "mode": "dialogue",
@@ -161,17 +202,25 @@
     },
     {
       "type": "line",
-      "id": "amara.crisis.node.line.012",
-      "lineId": "amara.crisis.line.012",
+      "id": "amara.crisis.node.line.012a",
+      "lineId": "amara.crisis.line.012a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "百二件。怒ればいいのか笑えばいいのか分からない。この人は真面目を、いちばん不器用な使い方で使う。",
+      "text": "百二件。怒ればいいのか、笑えばいいのか分からない。"
+    },
+    {
+      "type": "line",
+      "id": "amara.crisis.node.line.012b",
+      "lineId": "amara.crisis.line.012b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "この人は真面目を、いちばん不器用な使い方で使う。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "amara.crisis.node.line.013",
-      "lineId": "amara.crisis.line.013",
+      "id": "amara.crisis.node.line.013a",
+      "lineId": "amara.crisis.line.013a",
       "speakerId": "legacy.speaker.14shtqw",
       "speakerName": "アマラ",
       "mode": "dialogue",
@@ -179,29 +228,45 @@
     },
     {
       "type": "line",
-      "id": "amara.crisis.node.line.014",
-      "lineId": "amara.crisis.line.014",
+      "id": "amara.crisis.node.line.014a",
+      "lineId": "amara.crisis.line.014a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "アマラは規則集を置いて、扉へ歩き出した。外は、土砂降りだった。傘もささずに、雨の中へ。",
+      "text": "アマラさんは規則集を置いて、扉へ歩き出した。"
+    },
+    {
+      "type": "line",
+      "id": "amara.crisis.node.line.014b",
+      "lineId": "amara.crisis.line.014b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "外は、土砂降りだった。傘もささずに、雨の中へ。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "amara.crisis.node.line.015",
-      "lineId": "amara.crisis.line.015",
+      "id": "amara.crisis.node.line.015a",
+      "lineId": "amara.crisis.line.015a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "待ちなさい！！"
+      "text": "待ちなさい!!"
     },
     {
       "type": "line",
-      "id": "amara.crisis.node.line.016",
-      "lineId": "amara.crisis.line.016",
+      "id": "amara.crisis.node.line.016a",
+      "lineId": "amara.crisis.line.016a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "気づいたら、走っていた。雨の中庭で追いついて、白い手袋を——つかんだ。初めて、私から触れた。雨に濡れた手袋越しでも、体温は分かった。",
+      "text": "気づいたら、走っていた。雨の中庭で追いついて、白い手袋を——つかんだ。"
+    },
+    {
+      "type": "line",
+      "id": "amara.crisis.node.line.016b",
+      "lineId": "amara.crisis.line.016b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "初めて、私から触れた。耳まで、雨よりずっと熱かった。",
       "emotion": "tension"
     },
     {
@@ -222,8 +287,8 @@
     },
     {
       "type": "line",
-      "id": "amara.crisis.node.line.017",
-      "lineId": "amara.crisis.line.017",
+      "id": "amara.crisis.node.line.017a",
+      "lineId": "amara.crisis.line.017a",
       "speakerId": "legacy.speaker.14shtqw",
       "speakerName": "アマラ",
       "mode": "dialogue",
@@ -231,46 +296,81 @@
     },
     {
       "type": "line",
-      "id": "amara.crisis.node.line.018",
-      "lineId": "amara.crisis.line.018",
+      "id": "amara.crisis.node.line.018a",
+      "lineId": "amara.crisis.line.018a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "その判決、合議制違反です。本気の判断は、一人で決めない。——あなたが記録した法ですよ。"
+      "text": "その判決、合議制違反です。本気の判断は、一人で決めない。"
     },
     {
       "type": "line",
-      "id": "amara.crisis.node.line.019",
-      "lineId": "amara.crisis.line.019",
+      "id": "amara.crisis.node.line.018b",
+      "lineId": "amara.crisis.line.018b",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "あなたが記録した法ですよ。"
+    },
+    {
+      "type": "line",
+      "id": "amara.crisis.node.line.019a",
+      "lineId": "amara.crisis.line.019a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "アマラの目が、揺れた。雨が、二人の間で音を立てていた。"
+      "text": "アマラさんの目が、揺れた。雨が、二人の間で音を立てていた。"
     },
     {
       "type": "line",
-      "id": "amara.crisis.node.line.020",
-      "lineId": "amara.crisis.line.020",
+      "id": "amara.crisis.node.line.020a",
+      "lineId": "amara.crisis.line.020a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "判例もあります。「両者勝訴」。私も降りない、あなたも降りない道を探す。——審理継続、です。"
+      "text": "判例もあります。「両者勝訴」"
     },
     {
       "type": "line",
-      "id": "amara.crisis.node.line.021",
-      "lineId": "amara.crisis.line.021",
+      "id": "amara.crisis.node.line.020b",
+      "lineId": "amara.crisis.line.020b",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "私も降りない、あなたも降りない道を探す。審理継続、です。"
+    },
+    {
+      "type": "line",
+      "id": "amara.crisis.node.line.021a",
+      "lineId": "amara.crisis.line.021a",
       "speakerId": "legacy.speaker.14shtqw",
       "speakerName": "アマラ",
       "mode": "dialogue",
-      "text": "……被告からの提案を、受理します。前例は……あります。温泉の、卓球台に。"
+      "text": "……被告からの提案を、受理します。"
     },
     {
       "type": "line",
-      "id": "amara.crisis.node.line.022",
-      "lineId": "amara.crisis.line.022",
+      "id": "amara.crisis.node.line.021b",
+      "lineId": "amara.crisis.line.021b",
+      "speakerId": "legacy.speaker.14shtqw",
+      "speakerName": "アマラ",
+      "mode": "dialogue",
+      "text": "前例は……あります。温泉の、卓球台に。"
+    },
+    {
+      "type": "line",
+      "id": "amara.crisis.node.line.022a",
+      "lineId": "amara.crisis.line.022a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "裁定者の顔が、初めて崩れた。間違えるのが怖いだけの人が、雨の中で、私の手をつかみ返していた。その夜の箸袋、第五号。「本件、判決不能。よって審理を継続する。——傍聴人の、同席を求める」。ずぶ濡れ二人分の始末書は、明日書く。",
+      "text": "「本件、判決不能。審理を継続し、傍聴人の同席を求める」"
+    },
+    {
+      "type": "line",
+      "id": "amara.crisis.node.line.022b",
+      "lineId": "amara.crisis.line.022b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ずぶ濡れ二人分の始末書は、明日書く。",
       "emotion": "tender"
     },
     {
@@ -280,7 +380,7 @@
         {
           "id": "amara.crisis.choice.001",
           "label": "回収通告ごと、選手契約を公開法廷へ持ち込む",
-          "result": "次の興行日、アリーナ中央に星の法廷が降りた。観客まで証人として残り、アマラは勝敗より先に回収通告の矛盾を認めさせ、期限を「無効」にする判例を一つ作った。閉廷は初めての合議制——彼女が判決文を読み、私がうなずいてから、木槌が鳴った。",
+          "result": "次の興行日、アリーナ中央に星の法廷が降りた。観客も証人になり、アマラさんは回収通告の矛盾を認めさせ「無効」の判例を作った。閉廷は初めての合議制、彼女が判決文を読み、私がうなずいてから木槌が鳴った",
           "intent": "この人だけの突破法へ賭ける",
           "promise": "予測しにくい方法を試し、この人専用の成長を大きく進める。",
           "memory": "満員のアリーナに降りた星の法廷を、二人とも一番の判例として覚えている。",
@@ -310,7 +410,7 @@
         {
           "id": "amara.crisis.choice.002",
           "label": "大会規定の矛盾から、回収期限の根拠を崩す",
-          "result": "回収通告の根拠条文を一つずつ監査すると、期限そのものが大会規定と矛盾していた。相手の違反技も三つ止まり、次の試合を公平にする手順が全員へ残った。アマラは監査報告書の最後へ「審理は継続中」と書き添えた。私宛ての、一行だった。",
+          "result": "回収通告の根拠条文を監査すると、期限そのものが大会規定と矛盾してた。相手の違反技も三つ止め、次の試合を公平にする手順が残った。アマラさんは報告書の最後に「審理は継続中」私宛ての一行だった",
           "intent": "全員が使える安全な突破法を作る",
           "promise": "本人だけの切り札は抑え、チーム全体へ使える成長を持ち帰る。",
           "memory": "全員で組み直した手順は、契約を解く場面でも選んだ責任として戻る。",
@@ -360,7 +460,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md",
-    "authorNote": "v3改稿: 回収期限で物語を大きく動かす。雨の中の追走と、ミミから初めて触れる手。「両者勝訴」「合議制」の二重コールバック。箸袋第五号。",
+    "authorNote": "語り口V2・二行枠で改稿。v3改稿: 回収期限で物語を大きく動かす。雨の中の追走と、ミミから初めて触れる手。「両者勝訴」「合議制」の二重コールバック。箸袋第五号。",
     "legacyGeneratedIds": false
   }
 }

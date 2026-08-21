@@ -54,16 +54,32 @@
     },
     {
       "type": "line",
-      "id": "minato.bond.node.line.001",
-      "lineId": "minato.bond.line.001",
+      "id": "minato.bond.node.line.001a",
+      "lineId": "minato.bond.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "大会の翌日の昼、従業員食堂は祝勝気分でにぎやかだった。今日はチームの昼食会——という名目の、特訓の日である。特訓内容、「ミナトが自分の昼を自分で選ぶ」。"
+      "text": "大会の翌日の昼、従業員食堂は祝勝気分でにぎやかだった。"
     },
     {
       "type": "line",
-      "id": "minato.bond.node.line.002",
-      "lineId": "minato.bond.line.002",
+      "id": "minato.bond.node.line.001b",
+      "lineId": "minato.bond.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "今日はチームの昼食会——という名目の、特訓の日。"
+    },
+    {
+      "type": "line",
+      "id": "minato.bond.node.line.001c",
+      "lineId": "minato.bond.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "特訓内容、「ミナトが自分の昼を自分で選ぶ」"
+    },
+    {
+      "type": "line",
+      "id": "minato.bond.node.line.002a",
+      "lineId": "minato.bond.line.002a",
       "speakerId": "legacy.speaker.1vz3er0",
       "speakerName": "ミナト",
       "mode": "dialogue",
@@ -71,8 +87,8 @@
     },
     {
       "type": "line",
-      "id": "minato.bond.node.line.003",
-      "lineId": "minato.bond.line.003",
+      "id": "minato.bond.node.line.003a",
+      "lineId": "minato.bond.line.003a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -80,17 +96,33 @@
     },
     {
       "type": "line",
-      "id": "minato.bond.node.line.004",
-      "lineId": "minato.bond.line.004",
+      "id": "minato.bond.node.line.004a",
+      "lineId": "minato.bond.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私は秘密兵器を出した。トーナメント表である。カレー対ラーメン、定食対うどん、シードで本日のパスタ。五種類の総当たりは長いので、勝ち抜き戦にした。選択を、試合にしてしまえばいい。",
+      "text": "私は秘密兵器を出した。トーナメント表だ。"
+    },
+    {
+      "type": "line",
+      "id": "minato.bond.node.line.004b",
+      "lineId": "minato.bond.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "カレー対ラーメン、定食対うどん、シードで本日のパスタ。"
+    },
+    {
+      "type": "line",
+      "id": "minato.bond.node.line.004c",
+      "lineId": "minato.bond.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "総当たりは長いので、勝ち抜き戦にした。選択を、試合にしてしまえばいい。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "minato.bond.node.line.005",
-      "lineId": "minato.bond.line.005",
+      "id": "minato.bond.node.line.005a",
+      "lineId": "minato.bond.line.005a",
       "speakerId": "legacy.speaker.1vz3er0",
       "speakerName": "ミナト",
       "mode": "dialogue",
@@ -98,11 +130,19 @@
     },
     {
       "type": "line",
-      "id": "minato.bond.node.line.006",
-      "lineId": "minato.bond.line.006",
+      "id": "minato.bond.node.line.006a",
+      "lineId": "minato.bond.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "第一試合、カレー対ラーメン。ミナトの背中の花柄の短剣が、そわそわと鞘の中で揺れた。応援らしい。返却しなかった唯一の一本は、彼の昼にまで付き合う気だ。",
+      "text": "第一試合、カレー対ラーメン。ミナトの背中の花柄の短剣が、そわそわと鞘の中で揺れた。"
+    },
+    {
+      "type": "line",
+      "id": "minato.bond.node.line.006b",
+      "lineId": "minato.bond.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "応援らしい。返却しなかった一本は、彼の昼にまで付き合う気だ。",
       "emotion": "comic"
     },
     {
@@ -123,8 +163,8 @@
     },
     {
       "type": "line",
-      "id": "minato.bond.node.line.007",
-      "lineId": "minato.bond.line.007",
+      "id": "minato.bond.node.line.007a",
+      "lineId": "minato.bond.line.007a",
       "speakerId": "legacy.speaker.1vz3er0",
       "speakerName": "ミナト",
       "mode": "dialogue",
@@ -132,52 +172,101 @@
     },
     {
       "type": "line",
-      "id": "minato.bond.node.line.008",
-      "lineId": "minato.bond.line.008",
+      "id": "minato.bond.node.line.008a",
+      "lineId": "minato.bond.line.008a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "いいですよ、その理由！　根拠なんて匂いで十分です！"
+      "text": "いいですよ、その理由!　根拠なんて匂いで十分です!"
     },
     {
       "type": "line",
-      "id": "minato.bond.node.line.009",
-      "lineId": "minato.bond.line.009",
+      "id": "minato.bond.node.line.009a",
+      "lineId": "minato.bond.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "準決勝、決勝と、勝負は白熱した。気づけば食堂の職人さんたちが厨房から身を乗り出し、周りの席が勝敗予想を始めていた。決勝カード、カレー対本日のパスタ。会場(食堂)の空気が張り詰める。",
+      "text": "準決勝、決勝と、勝負は白熱した。"
+    },
+    {
+      "type": "line",
+      "id": "minato.bond.node.line.009b",
+      "lineId": "minato.bond.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "気づけば食堂の職人さんたちが厨房から身を乗り出し、周りの席が勝敗予想を始めていた。"
+    },
+    {
+      "type": "line",
+      "id": "minato.bond.node.line.009c",
+      "lineId": "minato.bond.line.009c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "決勝カード、カレー対本日のパスタ。会場(食堂)の空気が張り詰める。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "minato.bond.node.line.010",
-      "lineId": "minato.bond.line.010",
+      "id": "minato.bond.node.line.010a",
+      "lineId": "minato.bond.line.010a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ミナトは長考した。三分。五分。それから、静かに顔を上げた。魔王と対峙した時も、きっとこの目だったのだろう、という目で。"
+      "text": "ミナトは長考した。三分。五分。"
     },
     {
       "type": "line",
-      "id": "minato.bond.node.line.011",
-      "lineId": "minato.bond.line.011",
+      "id": "minato.bond.node.line.010b",
+      "lineId": "minato.bond.line.010b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "それから、静かに顔を上げた。魔王と対峙した時も、きっとこの目だった。"
+    },
+    {
+      "type": "line",
+      "id": "minato.bond.node.line.011a",
+      "lineId": "minato.bond.line.011a",
       "speakerId": "legacy.speaker.1vz3er0",
       "speakerName": "ミナト",
       "mode": "dialogue",
-      "text": "——カレーで行く。今日の俺は、カレーの気分だ。誰の命運も、懸かっていないが。"
+      "text": "——カレーで行く。今日の俺は、カレーの気分だ。"
     },
     {
       "type": "line",
-      "id": "minato.bond.node.line.012",
-      "lineId": "minato.bond.line.012",
+      "id": "minato.bond.node.line.011b",
+      "lineId": "minato.bond.line.011b",
+      "speakerId": "legacy.speaker.1vz3er0",
+      "speakerName": "ミナト",
+      "mode": "dialogue",
+      "text": "誰の命運も、懸かっていないが。"
+    },
+    {
+      "type": "line",
+      "id": "minato.bond.node.line.012a",
+      "lineId": "minato.bond.line.012a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "食堂が、拍手に包まれた。厨房から「大盛りサービス！」の声。彼の初めての「気分」に、知らない人たちまで祝福を送っている。この街は、終わった物語の続きに、やさしい。",
+      "text": "食堂が、拍手に包まれた。厨房から「大盛りサービス!」の声。"
+    },
+    {
+      "type": "line",
+      "id": "minato.bond.node.line.012b",
+      "lineId": "minato.bond.line.012b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "彼の初めての「気分」に、知らない人たちまで祝福を送っている。"
+    },
+    {
+      "type": "line",
+      "id": "minato.bond.node.line.012c",
+      "lineId": "minato.bond.line.012c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "この街は、終わった物語の続きに、やさしい。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "minato.bond.node.line.013",
-      "lineId": "minato.bond.line.013",
+      "id": "minato.bond.node.line.013a",
+      "lineId": "minato.bond.line.013a",
       "speakerId": "legacy.speaker.1vz3er0",
       "speakerName": "ミナト",
       "mode": "dialogue",
@@ -185,30 +274,45 @@
     },
     {
       "type": "line",
-      "id": "minato.bond.node.line.014",
-      "lineId": "minato.bond.line.014",
+      "id": "minato.bond.node.line.014a",
+      "lineId": "minato.bond.line.014a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "それ、伝票に書いておきますね。「本日の勝者、カレーの気分」。"
+      "text": "それ、伝票に書いておきますね。「本日の勝者、カレーの気分」"
     },
     {
       "type": "line",
-      "id": "minato.bond.node.line.015",
-      "lineId": "minato.bond.line.015",
+      "id": "minato.bond.node.line.015a",
+      "lineId": "minato.bond.line.015a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "スプーンを持つ手が、少しだけ震えていた。使命の震えじゃない。ただの、うれしい震えだ。一口目を食べた彼が「……うまい」と言った時、食堂のざわめきが急にあたたかくなった。",
+      "text": "スプーンを持つ手が、少しだけ震えていた。耳の先も、正直に震えてた。"
+    },
+    {
+      "type": "line",
+      "id": "minato.bond.node.line.015b",
+      "lineId": "minato.bond.line.015b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "使命の震えじゃない。ただの、うれしい震えだ。"
+    },
+    {
+      "type": "line",
+      "id": "minato.bond.node.line.015c",
+      "lineId": "minato.bond.line.015c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "一口目を食べた彼が「……うまい」と言った時、食堂のざわめきが急にあたたかくなった。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "minato.bond.node.line.016",
-      "lineId": "minato.bond.line.016",
+      "id": "minato.bond.node.line.016a",
+      "lineId": "minato.bond.line.016a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "午後の予定を、決める番だった。特訓の続きにするか、チームの仕事にするか。",
-      "emotion": "resolve"
+      "text": "午後の予定を、決める番だった。特訓の続きにするか、チームの仕事にするか。"
     },
     {
       "type": "choice",
@@ -217,7 +321,7 @@
         {
           "id": "minato.bond.choice.001",
           "label": "剣を一本も持たず、日用品の買い出しへ行く",
-          "result": "午後は丸腰で商店街へ出た。ミナトは歯ブラシの色を八分、タオルの厚さを十二分悩んで、全部自分で選んだ。帰り道、両手の袋を見て彼が言った。「今日選んだものは、全部、俺しか使わない」。その顔が誇らしげだったので、レシートは記念に取っておくことにした。",
+          "result": "午後は丸腰で商店街へ出た。歯ブラシの色もタオルの厚さも、全部自分で選んだ。「今日選んだものは、全部、俺しか使わない」その顔が誇らしげで、レシートは記念に取っておいた。",
           "intent": "誰も救わない選択を、午後いっぱい練習する",
           "promise": "読みにくい成長になる代わりに、この人だけの成長を大きく進める。",
           "memory": "丸腰の買い出しで選んだ歯ブラシの色を、ミナトは大事に使っている。",
@@ -247,7 +351,7 @@
         {
           "id": "minato.bond.choice.002",
           "label": "返却済みの剣を、全員で一晩だけ手入れする",
-          "result": "夜、控室で剣の手入れ会をした。四十七本は大喜びで、順番待ちの列を自主的に作った(並べるんだ……)。ミナトは一本ずつ布をかけ、遠征の思い出を一つずつ話した。チームのみんなが聞き役になり、夜食のおにぎりが三回追加された。良い夜だった。",
+          "result": "夜、控室で剣の手入れ会をした。四十七本は大喜びで、自主的に列を作った(並べるんだ……)。ミナトは一本ずつ布をかけ、遠征の思い出を話した。夜食のおにぎりが三回追加された。",
           "intent": "終わった物語を、チームで見送る",
           "promise": "本人の特訓は休みになるが、全員へ配れる成長ポイントを得る。",
           "memory": "剣の手入れ会の夜を、チームは「四十七夜」と呼んでいる。",
@@ -292,7 +396,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 昼食トーナメント事件。「カレーの気分」=初めて自分のために選ぶ。食堂全体が見守る群像コメディ。",
+    "authorNote": "語り口V2・二行枠で改稿。v2改稿: 昼食トーナメント事件。「カレーの気分」=初めて自分のために選ぶ。食堂全体が見守る群像コメディ。",
     "legacyGeneratedIds": false
   }
 }

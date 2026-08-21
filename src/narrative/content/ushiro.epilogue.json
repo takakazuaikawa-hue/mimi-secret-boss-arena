@@ -10,9 +10,17 @@
     "stage": "epilogue"
   },
   "trigger": {
-    "actions": ["rest"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "rest"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 400,
     "weight": 1
   },
@@ -43,48 +51,106 @@
     {
       "type": "direction",
       "id": "ushiro.epilogue.node.direction.001",
-      "command": { "type": "background", "assetId": "ushiro.epilogue.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "ushiro.epilogue.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "line",
-      "id": "ushiro.epilogue.node.line.001",
-      "lineId": "ushiro.epilogue.line.001",
+      "id": "ushiro.epilogue.node.line.001a",
+      "lineId": "ushiro.epilogue.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "最終大会のあと、闘技場の恒例行事が一つ増えた。「全館合同記念写真」。従業員も選手もお客様も、来たい人は全員写っていい、年に一度の大撮影会である。発案者は、記念撮影所の新スタッフ。つまり、うしろだ。"
+      "text": "最終大会のあと、闘技場の恒例行事が一つ増えた。「全館合同記念写真」"
     },
     {
       "type": "line",
-      "id": "ushiro.epilogue.node.line.002",
-      "lineId": "ushiro.epilogue.line.002",
+      "id": "ushiro.epilogue.node.line.001b",
+      "lineId": "ushiro.epilogue.line.001b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "当日の朝、アトリウムは大混雑だった。整列の途中から、参加者が気づき始める。「あれ、隣の人の後ろに、同じ人が……」「うちの列にも」「こっちにも！」。百二十七人が、全員の背後に、律儀に写り込み待機していた。",
+      "text": "従業員も選手もお客様も、来たい人は全員写っていい。年に一度の大撮影会だ。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.epilogue.node.line.001c",
+      "lineId": "ushiro.epilogue.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "発案者は、記念撮影所の新スタッフ。つまり、うしろだ。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.epilogue.node.line.002a",
+      "lineId": "ushiro.epilogue.line.002a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "当日の朝、アトリウムは大混雑だった。整列の途中から、参加者が気づき始める。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.epilogue.node.line.002b",
+      "lineId": "ushiro.epilogue.line.002b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「あれ、隣の人の後ろに、同じ人が……」「うちの列にも」"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.epilogue.node.line.002c",
+      "lineId": "ushiro.epilogue.line.002c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「こっちにも!」百二十七人が、全員の背後に、律儀に写り込み待機していた。",
       "emotion": "comic"
     },
     {
       "type": "direction",
       "id": "ushiro.epilogue.node.direction.002",
-      "command": { "type": "still", "assetId": "ushiro.epilogue.asset.still.001" }
+      "command": {
+        "type": "still",
+        "assetId": "ushiro.epilogue.asset.still.001"
+      }
     },
     {
       "type": "direction",
       "id": "ushiro.epilogue.node.direction.003",
-      "command": { "type": "effect", "effectId": "pulse" }
+      "command": {
+        "type": "effect",
+        "effectId": "pulse"
+      }
     },
     {
       "type": "line",
-      "id": "ushiro.epilogue.node.line.003",
-      "lineId": "ushiro.epilogue.line.003",
+      "id": "ushiro.epilogue.node.line.003a",
+      "lineId": "ushiro.epilogue.line.003a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "実行委員が「参加人数の最終確認を」と言い、三分後に「人数確認、不能！」と晴れやかに宣言した。拍手が起きた。数えられないのは、うちの闘技場では、もう祝いごとの一種である。",
+      "text": "実行委員が「参加人数の最終確認を」と言った。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.epilogue.node.line.003b",
+      "lineId": "ushiro.epilogue.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "三分後、「人数確認、不能!」と晴れやかに宣言。拍手が起きた。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.epilogue.node.line.003c",
+      "lineId": "ushiro.epilogue.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "数えられないのは、うちの闘技場では、もう祝いごとの一種だ。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "ushiro.epilogue.node.line.004",
-      "lineId": "ushiro.epilogue.line.004",
+      "id": "ushiro.epilogue.node.line.004a",
+      "lineId": "ushiro.epilogue.line.004a",
       "speakerId": "legacy.speaker.1ddw3j9",
       "speakerName": "うしろ",
       "mode": "dialogue",
@@ -92,61 +158,146 @@
     },
     {
       "type": "line",
-      "id": "ushiro.epilogue.node.line.005",
-      "lineId": "ushiro.epilogue.line.005",
+      "id": "ushiro.epilogue.node.line.005a",
+      "lineId": "ushiro.epilogue.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "アトリウムが、静かにどよめいた。写り込みの名人が、今日は撮る側に立つ。百二十七の影が、ゆっくりと一人に集まっていく。たった一人になった彼が、カメラを構える。",
+      "text": "アトリウムが、静かにどよめいた。写り込みの名人が、今日は撮る側に立つ。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.epilogue.node.line.005b",
+      "lineId": "ushiro.epilogue.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "百二十七の影が、ゆっくりと一人に集まっていく。たった一人になった彼が、カメラを構える。",
       "emotion": "tender"
     },
     {
       "type": "direction",
       "id": "ushiro.epilogue.node.direction.004",
-      "command": { "type": "still", "assetId": "ushiro.epilogue.asset.still.002" }
+      "command": {
+        "type": "still",
+        "assetId": "ushiro.epilogue.asset.still.002"
+      }
     },
     {
       "type": "line",
-      "id": "ushiro.epilogue.node.line.006",
-      "lineId": "ushiro.epilogue.line.006",
+      "id": "ushiro.epilogue.node.line.006a",
+      "lineId": "ushiro.epilogue.line.006a",
       "speakerId": "legacy.speaker.1ddw3j9",
       "speakerName": "うしろ",
       "mode": "dialogue",
-      "text": "写りたい影だけ、どうぞ前へ。——はい、そのまま。誰も、振り返らないで。"
+      "text": "写りたい影だけ、どうぞ前へ。"
     },
     {
       "type": "line",
-      "id": "ushiro.epilogue.node.line.007",
-      "lineId": "ushiro.epilogue.line.007",
+      "id": "ushiro.epilogue.node.line.006b",
+      "lineId": "ushiro.epilogue.line.006b",
+      "speakerId": "legacy.speaker.1ddw3j9",
+      "speakerName": "うしろ",
+      "mode": "dialogue",
+      "text": "——はい、そのまま。誰も、振り返らないで。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.epilogue.node.line.007a",
+      "lineId": "ushiro.epilogue.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私は最前列で、二本の飲み物を持って写った。一本は私の。もう一本は、撮影が終わったら、撮影者に渡すぶんだ。振り返らない約束なので、シャッターの瞬間の彼の顔は見ていない。でも、いい顔をしていたはずだ。ファインダー越しに、全員の正面を見られる日なのだから。",
+      "text": "私は最前列で、二本の飲み物を持って写った。一本は私の。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.epilogue.node.line.007b",
+      "lineId": "ushiro.epilogue.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "もう一本は、撮影が終わったら、撮影者に渡すぶんだ。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.epilogue.node.line.007c",
+      "lineId": "ushiro.epilogue.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "振り返らない約束なので、シャッターの瞬間の彼の顔は見ていない。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.epilogue.node.line.007d",
+      "lineId": "ushiro.epilogue.line.007d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "でも、いい顔をしていたはずだ。ファインダー越しに、全員の正面を見られる日なのだから。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "ushiro.epilogue.node.line.008",
-      "lineId": "ushiro.epilogue.line.008",
+      "id": "ushiro.epilogue.node.line.008a",
+      "lineId": "ushiro.epilogue.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "柿落としの出演届は、撮影の翌日に貼り出された。演目「全館記念撮影(写りたい影だけ、どうぞ前へ)」。備考——「人数確認は、しません」。",
+      "text": "柿落としの出演届は、撮影の翌日に貼り出された。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.epilogue.node.line.008b",
+      "lineId": "ushiro.epilogue.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "演目「全館記念撮影(写りたい影だけ、どうぞ前へ)」備考——「人数確認は、しません」",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "ushiro.epilogue.node.line.009",
-      "lineId": "ushiro.epilogue.line.009",
+      "id": "ushiro.epilogue.node.line.009a",
+      "lineId": "ushiro.epilogue.line.009a",
       "speakerId": "legacy.speaker.1ddw3j9",
       "speakerName": "うしろ",
       "mode": "dialogue",
-      "text": "現像、できました。……ミミさんの写真、今回も、よく撮れています。あなたの背後は、その、……当日は満席でしたので、私は写っていませんが。"
+      "text": "現像、できました。……ミミさんの写真、今回も、よく撮れています。"
     },
     {
       "type": "line",
-      "id": "ushiro.epilogue.node.line.010",
-      "lineId": "ushiro.epilogue.line.010",
+      "id": "ushiro.epilogue.node.line.009b",
+      "lineId": "ushiro.epilogue.line.009b",
+      "speakerId": "legacy.speaker.1ddw3j9",
+      "speakerName": "うしろ",
+      "mode": "dialogue",
+      "text": "あなたの背後は、その、……当日は満席でしたので、私は写っていませんが。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.epilogue.node.line.010a",
+      "lineId": "ushiro.epilogue.line.010a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "受け取った写真の隅、私の飲み物の影が、よく見ると二本ぶん伸びていた。写っていないのに、写っている。うしろの写真は、いつもそういう写真だ。私はその一枚を、従業員証の裏に入れた。見守りは、携帯するに限る。",
+      "text": "受け取った写真の隅、私の飲み物の影が、よく見ると二本ぶん伸びていた。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.epilogue.node.line.010b",
+      "lineId": "ushiro.epilogue.line.010b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "写っていないのに、写っている。うしろの写真は、いつもそういう写真だ。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.epilogue.node.line.010c",
+      "lineId": "ushiro.epilogue.line.010c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私はその一枚を、従業員証の裏に入れた。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.epilogue.node.line.010d",
+      "lineId": "ushiro.epilogue.line.010d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "耳の先まで、ちょっとあたたかい。見守りは、携帯するに限る。",
       "emotion": "tender"
     },
     {
@@ -158,7 +309,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 全館合同記念写真(報酬CG2枚準拠: 人数確認不能の騒動と、一人に収束して撮影側へ)。出演届=全館記念撮影。",
+    "authorNote": "語り口V2・二行枠で改稿。全館合同記念写真(報酬CG2枚準拠: 人数確認不能の騒動と、一人に収束して撮影側へ)。出演届=全館記念撮影。",
     "legacyGeneratedIds": false
   }
 }

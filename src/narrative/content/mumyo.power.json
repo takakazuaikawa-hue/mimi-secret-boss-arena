@@ -53,38 +53,96 @@
     },
     {
       "type": "line",
-      "id": "mumyo.power.node.line.001",
-      "lineId": "mumyo.power.line.001",
+      "id": "mumyo.power.node.line.001a",
+      "lineId": "mumyo.power.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「見せたい場所がある」。無銘に案内されたのは、闘技場の地下にある所有者名簿室だった。この街に来た景品全部の、歴代所有者の記録が眠る書庫。その最奥に、彼の名簿があった。分厚さが、他の景品の十四倍あった。"
+      "text": "「見せたい場所がある」無銘に案内されたのは、闘技場の地下にある所有者名簿室だった。"
     },
     {
       "type": "line",
-      "id": "mumyo.power.node.line.002",
-      "lineId": "mumyo.power.line.002",
+      "id": "mumyo.power.node.line.001b",
+      "lineId": "mumyo.power.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "この街に来た景品全部の、歴代所有者の記録が眠る書庫。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.power.node.line.001c",
+      "lineId": "mumyo.power.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "その最奥に、彼の名簿があった。分厚さが、他の景品の十四倍あった。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.power.node.line.002a",
+      "lineId": "mumyo.power.line.002a",
       "speakerId": "legacy.speaker.1whk6fw",
       "speakerName": "無銘",
       "mode": "dialogue",
-      "text": "十四人。全員、時代の勇者だった。全員、私を握って世界を救った。……そして全員、最後は私を握ったまま、私の名を、自分の名で上書きした。"
+      "text": "十四人。全員、時代の勇者だった。全員、私を握って世界を救った。"
     },
     {
       "type": "line",
-      "id": "mumyo.power.node.line.003",
-      "lineId": "mumyo.power.line.003",
+      "id": "mumyo.power.node.line.002b",
+      "lineId": "mumyo.power.line.002b",
+      "speakerId": "legacy.speaker.1whk6fw",
+      "speakerName": "無銘",
+      "mode": "dialogue",
+      "text": "……そして全員、最後は私を握ったまま、私の名を、自分の名で上書きした。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.power.node.line.003a",
+      "lineId": "mumyo.power.line.003a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "名簿をめくる。「勇者アルドの剣」「聖王グレンの剣」「竜殺しの剣」——十四個の呼び名が並び、どのページにも、剣自身の名前を書く欄はなかった。四百年ぶんの記録の中で、彼はずっと、誰かの持ち物としてだけ存在していた。",
+      "text": "名簿をめくる。「勇者アルドの剣」"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.power.node.line.003b",
+      "lineId": "mumyo.power.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「聖王グレンの剣」「竜殺しの剣」"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.power.node.line.003c",
+      "lineId": "mumyo.power.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "——十四個の呼び名が並び、どのページにも、剣自身の名前を書く欄はなかった。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.power.node.line.003d",
+      "lineId": "mumyo.power.line.003d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "四百年ぶんの記録の中で、彼はずっと、誰かの持ち物としてだけ存在していた。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "mumyo.power.node.line.004",
-      "lineId": "mumyo.power.line.004",
+      "id": "mumyo.power.node.line.004a",
+      "lineId": "mumyo.power.line.004a",
       "speakerId": "legacy.speaker.1whk6fw",
       "speakerName": "無銘",
       "mode": "dialogue",
-      "text": "次の強敵戦の前に、知っておいてほしい。私の本当の力は——抜けば分かる。少しだけ、下がっていてくれ。"
+      "text": "次の強敵戦の前に、知っておいてほしい。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.power.node.line.004b",
+      "lineId": "mumyo.power.line.004b",
+      "speakerId": "legacy.speaker.1whk6fw",
+      "speakerName": "無銘",
+      "mode": "dialogue",
+      "text": "私の本当の力は——抜けば分かる。少しだけ、下がっていてくれ。"
     },
     {
       "type": "direction",
@@ -104,56 +162,114 @@
     },
     {
       "type": "line",
-      "id": "mumyo.power.node.line.005",
-      "lineId": "mumyo.power.line.005",
+      "id": "mumyo.power.node.line.005a",
+      "lineId": "mumyo.power.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "鞘から、刃が一寸だけ出た。それだけで、名簿室の空気が十四枚に割れた。燃える王都。沈む天空城。月を噛む竜。終末の鐘。十四の時代の最終決戦が同時に立ち上がり、そのどれもの中心で、この剣が振るわれている。一寸で、これだ。全部抜いたら、世界がもう一回、十四通りに終わる。",
+      "text": "全部抜いたら、世界がもう一回、十四通りに終わる。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "mumyo.power.node.line.006",
-      "lineId": "mumyo.power.line.006",
+      "id": "mumyo.power.node.line.006a",
+      "lineId": "mumyo.power.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "刃が納まる。幻影が消える。気づけば無銘は、鏡の中で私と危険の間に立っていた。一寸の間、ずっと。見せるための力の披露で、最初に確保されていたのは、私の立ち位置だった。",
+      "text": "刃が納まる。幻影が消える。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.power.node.line.006b",
+      "lineId": "mumyo.power.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "耳が、ぴんと張りつめてた。気づけば無銘は、鏡の中で私と危険の間に立っていた。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.power.node.line.006c",
+      "lineId": "mumyo.power.line.006c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "一寸の間、ずっと。見せるための力の披露で、最初に確保されていたのは、私の立ち位置だった。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "mumyo.power.node.line.007",
-      "lineId": "mumyo.power.line.007",
+      "id": "mumyo.power.node.line.007a",
+      "lineId": "mumyo.power.line.007a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "……ひとつ、分かりました。あなたの一番すごい力は、斬る方じゃないです。四百年、これを抜かずにいられた方です。"
+      "text": "……ひとつ、分かりました。あなたの一番すごい力は、斬る方じゃないです。"
     },
     {
       "type": "line",
-      "id": "mumyo.power.node.line.008",
-      "lineId": "mumyo.power.line.008",
+      "id": "mumyo.power.node.line.007b",
+      "lineId": "mumyo.power.line.007b",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "四百年、これを抜かずにいられた方です。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.power.node.line.008a",
+      "lineId": "mumyo.power.line.008a",
       "speakerId": "legacy.speaker.1whk6fw",
       "speakerName": "無銘",
       "mode": "dialogue",
-      "text": "……抜けば、誰かの願いが私を使う。抜かなければ、私は私のままでいられる。それを力と呼んだのは、お前が最初だ。"
+      "text": "……抜けば、誰かの願いが私を使う。抜かなければ、私は私のままでいられる。"
     },
     {
       "type": "line",
-      "id": "mumyo.power.node.line.009",
-      "lineId": "mumyo.power.line.009",
+      "id": "mumyo.power.node.line.008b",
+      "lineId": "mumyo.power.line.008b",
+      "speakerId": "legacy.speaker.1whk6fw",
+      "speakerName": "無銘",
+      "mode": "dialogue",
+      "text": "それを力と呼んだのは、お前が最初だ。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.power.node.line.009a",
+      "lineId": "mumyo.power.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "同行していた新人計測係くんは、幻影の最終決戦を十四件目まで数え切ってから気絶する寸前で踏みとどまり、記録板に「せかいのおわり、じゅうよん。ぜんぶ、しまった。」と書いた。今日も完璧な監査である。",
+      "text": "同行していた新人計測係くんは、幻影の最終決戦を十四件目まで数え切った。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.power.node.line.009b",
+      "lineId": "mumyo.power.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "気絶する寸前で踏みとどまり、記録板に書いた。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.power.node.line.009c",
+      "lineId": "mumyo.power.line.009c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「せかいのおわり、じゅうよん。ぜんぶ、しまった。」今日も完璧な監査だった。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "mumyo.power.node.line.010",
-      "lineId": "mumyo.power.line.010",
+      "id": "mumyo.power.node.line.010a",
+      "lineId": "mumyo.power.line.010a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "名簿室の薄明かりの下で、力の使い方の相談に入った。抜くか、抜かないか。決めるのは、もう所有者ではない。",
+      "text": "名簿室の薄明かりの下で、力の使い方の相談に入った。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.power.node.line.010b",
+      "lineId": "mumyo.power.line.010b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "抜くか、抜かないか。決めるのは、もう所有者ではない。",
       "emotion": "resolve"
     },
     {
@@ -163,7 +279,7 @@
         {
           "id": "mumyo.power.choice.001",
           "label": "鏡の本人に、抜く瞬間を選んでもらう",
-          "result": "「試合中、抜くかどうかも、いつ抜くかも、全部あなたが決めてください。私は合図もしません」。初めての試合で、刃は一度だけ、本人の選んだ一瞬にだけ光った。斬ったのは敵ではなく、敵の武器の影に潜んでいた古い呪いだけ。命じられない一閃は、十四代のどの伝説より正確で、そして初めて、誰の名前も付いていなかった。",
+          "result": "「抜くかどうかも、いつ抜くかも、全部あなたが決めてください」初めての試合で、刃は一度だけ、本人の選んだ一瞬にだけ光った。誰の名前も付いていない一閃だった。",
           "intent": "本来の力を一気に取り戻す",
           "promise": "失敗時の危険を引き受け、この人専用の成長を最大まで進める。",
           "memory": "力を恐れたまま任せたことを、相手は危機の場面で思い出す。",
@@ -193,7 +309,7 @@
         {
           "id": "mumyo.power.choice.002",
           "label": "鞘を開かず、剣圧だけを安全に取り出す",
-          "result": "本来の一撃は鞘の中に眠らせたまま、鞘越しに漏れる剣圧だけを、三人で扱える「風」として整えた。地味で、安全で、誰の伝説にもならない力。調整を終えた無銘は、その風で名簿室の埃を払ってみせた。「……十四代で、一番平和な使い道だ」。少し、誇らしそうだった。",
+          "result": "本来の一撃は鞘の中に眠らせ、鞘越しに漏れる剣圧だけを、三人で扱える「風」として整えた。その風で名簿室の埃を払ってみせた無銘は、「……十四代で、一番平和な使い道だ」少し誇らしそうだった。",
           "intent": "安全な段階解除で確実に進む",
           "promise": "本来の力は一部に留め、チーム全体の成長へ成果を持ち帰る。",
           "memory": "全員で帰ると決めた手順が、危機で使える安全策として残る。",
@@ -238,7 +354,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 所有者名簿室(十四倍の厚さ)。一寸=十四の最終決戦。真の力は「抜かずにいられた四百年」。",
+    "authorNote": "語り口V2・二行枠で改稿。v2改稿: 所有者名簿室(十四倍の厚さ)。一寸=十四の最終決戦。真の力は「抜かずにいられた四百年」。",
     "legacyGeneratedIds": false
   }
 }

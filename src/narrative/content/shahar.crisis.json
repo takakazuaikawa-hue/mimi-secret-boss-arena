@@ -33,7 +33,7 @@
       {
         "id": "shahar.crisis.asset.background.001",
         "kind": "background",
-        "path": "/assets/story/bg-contract-archive-v2.png",
+        "path": "/assets/story/bg-arena-rooftop-day-v1.png",
         "alt": "契約保管庫の背景"
       },
       {
@@ -56,33 +56,57 @@
     },
     {
       "type": "line",
-      "id": "shahar.crisis.node.line.001",
-      "lineId": "shahar.crisis.line.001",
+      "id": "shahar.crisis.node.line.001a",
+      "lineId": "shahar.crisis.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "売店の券売所に、朝から行列ができていた。『古竜遊覧便・一日五便・当日券あり』。時刻表まで刷ってある。第一便は明日の朝六時。——搭乗いただく予定の古竜ご本人は、屋上で日光浴をしていた。黒い角封筒は、その時刻表と一緒に届いた。",
+      "text": "売店の券売所に、朝から行列ができていた。『古竜遊覧便・一日五便・当日券あり』。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.crisis.node.line.001b",
+      "lineId": "shahar.crisis.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "時刻表まで刷ってある。第一便は明日の朝六時。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.crisis.node.line.001c",
+      "lineId": "shahar.crisis.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "搭乗予定のご本人は、屋上で日光浴をしていた。黒い角封筒は、その時刻表と一緒に届いた。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "shahar.crisis.node.line.002",
-      "lineId": "shahar.crisis.line.002",
+      "id": "shahar.crisis.node.line.002a",
+      "lineId": "shahar.crisis.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "先日の深夜飛行が、どこかから漏れたらしい。会社は古竜の背中を観光商品にする気だ。あの一度きりの夜を、毎日五便の「定期」に。"
+      "text": "先日の深夜飛行が、どこかから漏れたそう。会社は古竜の背中を、観光商品にする気だ。"
     },
     {
       "type": "line",
-      "id": "shahar.crisis.node.line.003",
-      "lineId": "shahar.crisis.line.003",
+      "id": "shahar.crisis.node.line.002b",
+      "lineId": "shahar.crisis.line.002b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "あの一度きりの夜を、毎日五便の「定期」に。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.crisis.node.line.003a",
+      "lineId": "shahar.crisis.line.003a",
       "speakerId": "narrator",
       "mode": "thought",
       "text": "屋上へ行くと、鱗の隣に同じ封筒が落ちていた。開封済み。空の気配は、いつもより高い。遠い。"
     },
     {
       "type": "line",
-      "id": "shahar.crisis.node.line.004",
-      "lineId": "shahar.crisis.line.004",
+      "id": "shahar.crisis.node.line.004a",
+      "lineId": "shahar.crisis.line.004a",
       "speakerId": "legacy.speaker.bkqdo1",
       "speakerName": "シャハル",
       "mode": "dialogue",
@@ -90,29 +114,46 @@
     },
     {
       "type": "line",
-      "id": "shahar.crisis.node.line.005",
-      "lineId": "shahar.crisis.line.005",
+      "id": "shahar.crisis.node.line.005a",
+      "lineId": "shahar.crisis.line.005a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "……本気で言ってます？"
+      "text": "……本気で言ってます?"
     },
     {
       "type": "line",
-      "id": "shahar.crisis.node.line.006",
-      "lineId": "shahar.crisis.line.006",
+      "id": "shahar.crisis.node.line.006a",
+      "lineId": "shahar.crisis.line.006a",
       "speakerId": "legacy.speaker.bkqdo1",
       "speakerName": "シャハル",
       "mode": "dialogue",
-      "text": "私は長いので。毎日五便を、何百年でも運行できます。終わらない仕事は、私に向いている。……終わるものより、ずっと安全だ。"
+      "text": "私は長いので。毎日五便を、何百年でも運行できます。"
     },
     {
       "type": "line",
-      "id": "shahar.crisis.node.line.007",
-      "lineId": "shahar.crisis.line.007",
+      "id": "shahar.crisis.node.line.006b",
+      "lineId": "shahar.crisis.line.006b",
+      "speakerId": "legacy.speaker.bkqdo1",
+      "speakerName": "シャハル",
+      "mode": "dialogue",
+      "text": "終わらない仕事は、私に向いている。……終わるものより、ずっと安全だ。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.crisis.node.line.007a",
+      "lineId": "shahar.crisis.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "出た。長生きの言い分。せっかく「今、見ないと」を練習してきた人が、会社の時刻表一枚で、永遠の傍観者の椅子に戻ろうとしている。",
+      "text": "出た。長生きの言い分。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.crisis.node.line.007b",
+      "lineId": "shahar.crisis.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "せっかく「今、見ないと」を練習してきた人が、時刻表一枚で永遠の傍観者に戻ろうとしてる。",
       "emotion": "tension"
     },
     {
@@ -125,8 +166,8 @@
     },
     {
       "type": "line",
-      "id": "shahar.crisis.node.line.008",
-      "lineId": "shahar.crisis.line.008",
+      "id": "shahar.crisis.node.line.008a",
+      "lineId": "shahar.crisis.line.008a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -134,8 +175,8 @@
     },
     {
       "type": "line",
-      "id": "shahar.crisis.node.line.009",
-      "lineId": "shahar.crisis.line.009",
+      "id": "shahar.crisis.node.line.009a",
+      "lineId": "shahar.crisis.line.009a",
       "speakerId": "legacy.speaker.bkqdo1",
       "speakerName": "シャハル",
       "mode": "dialogue",
@@ -143,20 +184,45 @@
     },
     {
       "type": "line",
-      "id": "shahar.crisis.node.line.010",
-      "lineId": "shahar.crisis.line.010",
+      "id": "shahar.crisis.node.line.010a",
+      "lineId": "shahar.crisis.line.010a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "毎日五便になったら、あれは「今日の三便目」になるんです。あなたの四百年で初めて隣の席が埋まった夜が、ただのダイヤになる。——私はそれ、嫌です。"
+      "text": "毎日五便になったら、あれは「今日の三便目」になるんです。"
     },
     {
       "type": "line",
-      "id": "shahar.crisis.node.line.011",
-      "lineId": "shahar.crisis.line.011",
+      "id": "shahar.crisis.node.line.010b",
+      "lineId": "shahar.crisis.line.010b",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "あなたの四百年で初めて隣の席が埋まった夜が、ただのダイヤになる。——私はそれ、嫌です。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.crisis.node.line.011a",
+      "lineId": "shahar.crisis.line.011a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "言い切ってから、自分の言葉の重さに気づいた。私はあの夜を、限定だと思っている。限定色の傘と、同じくらい。……いや、比べものにならないくらい。",
+      "text": "言い切ってから、自分の言葉の重さに気づいた。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.crisis.node.line.011b",
+      "lineId": "shahar.crisis.line.011b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私はあの夜を、限定だと思っている。限定色の傘と、同じくらい。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.crisis.node.line.011c",
+      "lineId": "shahar.crisis.line.011c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……いや、比べものにならないくらい。耳が、ふるっと震えた。",
       "emotion": "tension"
     },
     {
@@ -169,65 +235,124 @@
     },
     {
       "type": "line",
-      "id": "shahar.crisis.node.line.012",
-      "lineId": "shahar.crisis.line.012",
+      "id": "shahar.crisis.node.line.012a",
+      "lineId": "shahar.crisis.line.012a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "長い沈黙。それから、雲が下りてきた。屋上の高さまで。四百年の人の目線が、初めて私と同じ高さに来た。",
+      "text": "長い沈黙。それから、雲が下りてきた。屋上の高さまで。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.crisis.node.line.012b",
+      "lineId": "shahar.crisis.line.012b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "四百年の人の目線が、初めて私と同じ高さに来た。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "shahar.crisis.node.line.013",
-      "lineId": "shahar.crisis.line.013",
+      "id": "shahar.crisis.node.line.013a",
+      "lineId": "shahar.crisis.line.013a",
       "speakerId": "legacy.speaker.bkqdo1",
       "speakerName": "シャハル",
       "mode": "dialogue",
-      "text": "……怖かったのです。終わるものを、大事にするのが。大事になるほど、終わった後の私が、長い。"
+      "text": "……怖かったのです。終わるものを、大事にするのが。"
     },
     {
       "type": "line",
-      "id": "shahar.crisis.node.line.014",
-      "lineId": "shahar.crisis.line.014",
+      "id": "shahar.crisis.node.line.013b",
+      "lineId": "shahar.crisis.line.013b",
+      "speakerId": "legacy.speaker.bkqdo1",
+      "speakerName": "シャハル",
+      "mode": "dialogue",
+      "text": "大事になるほど、終わった後の私が、長い。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.crisis.node.line.014a",
+      "lineId": "shahar.crisis.line.014a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "なら、覚えていられるじゃないですか。四百年でも、色あせない側の係。……それ、あなたにしかできない役です。"
+      "text": "なら、覚えていられるじゃないですか。四百年でも、色あせない側の係。"
     },
     {
       "type": "line",
-      "id": "shahar.crisis.node.line.015",
-      "lineId": "shahar.crisis.line.015",
+      "id": "shahar.crisis.node.line.014b",
+      "lineId": "shahar.crisis.line.014b",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "……それ、あなたにしかできない役です。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.crisis.node.line.015a",
+      "lineId": "shahar.crisis.line.015a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "銀白の巨体が、ゆっくりと息を吐いた。三県の風向きが変わる音がした。それから彼は、時刻表の余白に、竜の爪で几帳面に書き込んだ。",
+      "text": "銀白の巨体が、ゆっくりと息を吐いた。三県の風向きが変わる音がした。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.crisis.node.line.015b",
+      "lineId": "shahar.crisis.line.015b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "それから彼は、時刻表の余白に、竜の爪で几帳面に書き込んだ。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "shahar.crisis.node.line.016",
-      "lineId": "shahar.crisis.line.016",
+      "id": "shahar.crisis.node.line.016a",
+      "lineId": "shahar.crisis.line.016a",
       "speakerId": "legacy.speaker.bkqdo1",
       "speakerName": "シャハル",
       "mode": "dialogue",
-      "text": "「運行は、気分(天候)により、欠航します。振替便は、ありません」。——これで提出してください。"
+      "text": "「運行は、気分(天候)により、欠航します。振替便は、ありません」"
     },
     {
       "type": "line",
-      "id": "shahar.crisis.node.line.017",
-      "lineId": "shahar.crisis.line.017",
+      "id": "shahar.crisis.node.line.016b",
+      "lineId": "shahar.crisis.line.016b",
+      "speakerId": "legacy.speaker.bkqdo1",
+      "speakerName": "シャハル",
+      "mode": "dialogue",
+      "text": "——これで提出してください。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.crisis.node.line.017a",
+      "lineId": "shahar.crisis.line.017a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "定期便の企画書に「振替便なし」の一行。会社にとっては欠陥商品、彼にとっては宣言だった。飛ぶかどうかは、私が決める。一度きりは、一度きりのまま。",
+      "text": "定期便の企画書に「振替便なし」の一行。会社にとっては欠陥商品、彼にとっては宣言だった。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.crisis.node.line.017b",
+      "lineId": "shahar.crisis.line.017b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "飛ぶかどうかは、私が決める。一度きりは、一度きりのまま。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "shahar.crisis.node.line.018",
-      "lineId": "shahar.crisis.line.018",
+      "id": "shahar.crisis.node.line.018a",
+      "lineId": "shahar.crisis.line.018a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "あとは、会社への見せ方だ。空の返事は、空でする。次の試合の日の空模様を、見ているといい。",
+      "text": "あとは、会社への見せ方だ。空の返事は、空でする。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.crisis.node.line.018b",
+      "lineId": "shahar.crisis.line.018b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "次の試合の日の空模様を、見ているといい。",
       "emotion": "resolve"
     },
     {
@@ -237,7 +362,7 @@
         {
           "id": "shahar.crisis.choice.001",
           "label": "鱗一枚のまま、会場へ雨雲を呼ぶ",
-          "result": "試合当日、シャハルは本体を見せなかった。鱗一枚で雨雲を呼び、会場の上にだけ、十分間の通り雨を降らせて勝った。観客は「本体はいつ出るんだ」とざわめき、物語資産管理部の担当者は時刻表を眺めて頭を抱えた。予告できない竜は、商品にならない。それが答えだった。",
+          "result": "試合当日、シャハルは本体を見せなかった。鱗一枚で雨雲を呼び、会場にだけ十分間の通り雨を降らせて勝った。観客はざわめき、担当者は時刻表を眺めて頭を抱えた。予告できない竜は、商品にならない。",
           "intent": "予告できない力のまま勝つ",
           "promise": "危険を引き受け、この人専用の成長を最大まで進める。",
           "memory": "十分間の通り雨の試合を、チームは「欠航日の勝利」と呼ぶ。",
@@ -267,7 +392,7 @@
         {
           "id": "shahar.crisis.choice.002",
           "label": "屋上を本体の臨時着陸地点へ改装する",
-          "result": "会社の企画を逆手に取り、屋上庭園を「臨時着陸地点」として正式登録した。定期便は拒否、ただし降りたい日に降りられる場所は確保する。総務は「竜の駐機場」の申請書式がなくて三日悩み、結局「大型来客用」で通した。書式に勝った気がする。",
+          "result": "会社の企画を逆手に取り、屋上庭園を「臨時着陸地点」として正式登録した。定期便は拒否、降りたい日に降りられる場所だけ確保する。総務は申請書式がなくて三日悩み、結局「大型来客用」で通した。",
           "intent": "会社の制度の中に、本人の自由な場所を作る",
           "promise": "本人の切り札は隠したまま、チーム全体へ使える成長を持ち帰る。",
           "memory": "「大型来客用」の申請が通った日を、総務も含めて全員が覚えている。",
@@ -317,7 +442,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 黒い角封筒=定期遊覧便化(限定の破壊)。誤った信念の再発と「振替便なし」の宣言。Q2=資産『古竜』。 圧力の到来形式を差別化(封筒は事後に届く落ちへ)。",
+    "authorNote": "語り口V2・二行枠で改稿。黒い角封筒=定期遊覧便化(限定の破壊)。誤った信念の再発と「振替便なし」の宣言。Q2=資産『古竜』。 圧力の到来形式を差別化(封筒は事後に届く落ちへ)。",
     "legacyGeneratedIds": false
   }
 }

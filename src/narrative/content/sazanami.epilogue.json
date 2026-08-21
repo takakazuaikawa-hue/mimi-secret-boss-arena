@@ -59,19 +59,43 @@
     },
     {
       "type": "line",
-      "id": "sazanami.epilogue.node.line.001",
-      "lineId": "sazanami.epilogue.line.001",
+      "id": "sazanami.epilogue.node.line.001a",
+      "lineId": "sazanami.epilogue.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "最終大会のあと、私は一つの大会を主催した。「第一回・浅瀬味青のり品評会」。審査員、海。運営、私。参加資格、弁当(市販可)。会場の噴水広場には、朝から行列ができた。"
+      "text": "最終大会のあと、私は一つの大会を主催した。"
     },
     {
       "type": "line",
-      "id": "sazanami.epilogue.node.line.002",
-      "lineId": "sazanami.epilogue.line.002",
+      "id": "sazanami.epilogue.node.line.001b",
+      "lineId": "sazanami.epilogue.line.001b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "参加者の顔ぶれが、うちの街らしい。和装のお姉さん、魔界の親子、月面から来たという常連さん。全員、自慢の弁当を抱えて、水槽の巨眼の前に並んでいる。",
+      "text": "大会名は「第一回・浅瀬味青のり品評会」に決めた。審査員、海。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.epilogue.node.line.001c",
+      "lineId": "sazanami.epilogue.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "運営、私。参加資格、弁当(市販可)。噴水広場には、朝から行列ができた。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.epilogue.node.line.002a",
+      "lineId": "sazanami.epilogue.line.002a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "参加者の顔ぶれが、うちの街らしい。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.epilogue.node.line.002b",
+      "lineId": "sazanami.epilogue.line.002b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "和装のお姉さん、魔界の親子、月面から来た常連さん。自慢の弁当を抱えて並んでる。",
       "emotion": "comic"
     },
     {
@@ -92,71 +116,129 @@
     },
     {
       "type": "line",
-      "id": "sazanami.epilogue.node.line.003",
-      "lineId": "sazanami.epilogue.line.003",
+      "id": "sazanami.epilogue.node.line.003a",
+      "lineId": "sazanami.epilogue.line.003a",
       "speakerId": "legacy.speaker.we7zqt",
       "speakerName": "さざなみ",
       "mode": "dialogue",
-      "text": "十二番の青のり——七十点。湿度は良い。だが、ごはんへの敬意が、あと三グラム足りない。"
+      "text": "十二番の青のり——七十点。湿度は良い。"
     },
     {
       "type": "line",
-      "id": "sazanami.epilogue.node.line.004",
-      "lineId": "sazanami.epilogue.line.004",
+      "id": "sazanami.epilogue.node.line.003b",
+      "lineId": "sazanami.epilogue.line.003b",
+      "speakerId": "legacy.speaker.we7zqt",
+      "speakerName": "さざなみ",
+      "mode": "dialogue",
+      "text": "だが、ごはんへの敬意が、あと三グラム足りない。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.epilogue.node.line.004a",
+      "lineId": "sazanami.epilogue.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "審査は真剣そのものだ。泡文字の講評は必ず良い所から始まり、参加者は落選しても「海に採点された」こと自体を喜ぶ。裏ボスが青のりを審査する大会は、たぶん世界にここだけしかない。",
+      "text": "審査は、真剣そのものだ。講評は必ず良い所から始まる。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.epilogue.node.line.004b",
+      "lineId": "sazanami.epilogue.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "落選しても「海に採点された」こと自体を喜ぶ。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.epilogue.node.line.004c",
+      "lineId": "sazanami.epilogue.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "裏ボスが青のりを審査する大会は、たぶん世界にここだけ。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "sazanami.epilogue.node.line.005",
-      "lineId": "sazanami.epilogue.line.005",
+      "id": "sazanami.epilogue.node.line.005a",
+      "lineId": "sazanami.epilogue.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私は黄色い胴長で会場を駆け回る。落ちそうな弁当を頭上へ救い、順番を捌き、泣きそうな子には先に採点を回す。運営は接客業の集大成だった。兎耳が三回、看板に引っかかったけれど。",
+      "text": "私は黄色い胴長で、会場を駆け回る。落ちそうな弁当を頭上へ救い、順番を捌く。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.epilogue.node.line.005b",
+      "lineId": "sazanami.epilogue.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "運営は接客業の集大成。兎耳が三回、看板に引っかかったけど。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "sazanami.epilogue.node.line.006",
-      "lineId": "sazanami.epilogue.line.006",
+      "id": "sazanami.epilogue.node.line.006a",
+      "lineId": "sazanami.epilogue.line.006a",
       "speakerId": "legacy.speaker.we7zqt",
       "speakerName": "さざなみ",
       "mode": "dialogue",
-      "text": "最終審査——見切り品弁当、値引きシール二枚。……磯の香り、記憶への忠実さ、ともに文句なし。"
+      "text": "最終審査——見切り品弁当、値引きシール二枚。"
     },
     {
       "type": "line",
-      "id": "sazanami.epilogue.node.line.007",
-      "lineId": "sazanami.epilogue.line.007",
+      "id": "sazanami.epilogue.node.line.006b",
+      "lineId": "sazanami.epilogue.line.006b",
+      "speakerId": "legacy.speaker.we7zqt",
+      "speakerName": "さざなみ",
+      "mode": "dialogue",
+      "text": "……磯の香り、記憶への忠実さ、ともに文句なし。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.epilogue.node.line.007a",
+      "lineId": "sazanami.epilogue.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "最後の出品は、私のあの弁当だった。出会いの夜に四十二点だった、思い出の味に一番似ているやつ。会場が静まる。泡文字が、ゆっくり浮かぶ。",
+      "text": "最後の出品は、私のあの弁当だった。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.epilogue.node.line.007b",
+      "lineId": "sazanami.epilogue.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "出会いの夜に四十二点だった、思い出の味に一番似てるやつ。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.epilogue.node.line.007c",
+      "lineId": "sazanami.epilogue.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "会場が静まる。泡文字が、ゆっくり浮かぶ。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "sazanami.epilogue.node.line.008",
-      "lineId": "sazanami.epilogue.line.008",
+      "id": "sazanami.epilogue.node.line.008a",
+      "lineId": "sazanami.epilogue.line.008a",
       "speakerId": "legacy.speaker.we7zqt",
       "speakerName": "さざなみ",
       "mode": "dialogue",
-      "text": "「九十九点」。"
+      "text": "九十九点。"
     },
     {
       "type": "line",
-      "id": "sazanami.epilogue.node.line.009",
-      "lineId": "sazanami.epilogue.line.009",
+      "id": "sazanami.epilogue.node.line.009a",
+      "lineId": "sazanami.epilogue.line.009a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "……最後の一点は？"
+      "text": "……最後の一点は?"
     },
     {
       "type": "line",
-      "id": "sazanami.epilogue.node.line.010",
-      "lineId": "sazanami.epilogue.line.010",
+      "id": "sazanami.epilogue.node.line.010a",
+      "lineId": "sazanami.epilogue.line.010a",
       "speakerId": "legacy.speaker.we7zqt",
       "speakerName": "さざなみ",
       "mode": "dialogue",
@@ -172,20 +254,52 @@
     },
     {
       "type": "line",
-      "id": "sazanami.epilogue.node.line.011",
-      "lineId": "sazanami.epilogue.line.011",
+      "id": "sazanami.epilogue.node.line.011a",
+      "lineId": "sazanami.epilogue.line.011a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "閉会後、静かになった広場で、水面は鏡みたいに水平だった。小台に、弁当が一箱。海と運営の、打ち上げである。柿落としの出演届は、もう出してある。演目「第二回・浅瀬味青のり品評会」。備考欄には、几帳面な泡文字でこうあった。「胴長、貸し出します」。",
+      "text": "閉会後、静かになった広場。水面は鏡みたいに水平だった。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.epilogue.node.line.011b",
+      "lineId": "sazanami.epilogue.line.011b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "小台に、弁当が一箱。海と運営の、打ち上げ。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.epilogue.node.line.011c",
+      "lineId": "sazanami.epilogue.line.011c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "柿落としの出演届は、もう出してある。演目は「第二回・浅瀬味青のり品評会」に決めた。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.epilogue.node.line.011d",
+      "lineId": "sazanami.epilogue.line.011d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "備考欄には、几帳面な泡文字で「胴長、貸し出します」とあった。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "sazanami.epilogue.node.line.012",
-      "lineId": "sazanami.epilogue.line.012",
+      "id": "sazanami.epilogue.node.line.012a",
+      "lineId": "sazanami.epilogue.line.012a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "取っておいた一点の使い道を、私はもう知っている。第二回も、その次も、一点はずっと、次の楽しみの側にある。海と私の点数は、そういう約束になった。",
+      "text": "取っておいた一点の使い道を、私はもう知っている。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.epilogue.node.line.012b",
+      "lineId": "sazanami.epilogue.line.012b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "第二回も、その次も、一点はずっと次の楽しみの側にある。海と私の点数は、そういう約束。",
       "emotion": "tender"
     },
     {
@@ -197,7 +311,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 青のり品評会(報酬CG2枚準拠)。四十二点→九十九点の円環。出演届=第二回開催。「一点は次の楽しみの側」。",
+    "authorNote": "語り口V2・二行枠で改稿。青のり品評会(報酬CG2枚準拠)。四十二点→九十九点の円環。出演届=第二回開催。「一点は次の楽しみの側」。",
     "legacyGeneratedIds": false
   }
 }

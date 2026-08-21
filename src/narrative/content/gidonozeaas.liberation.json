@@ -62,11 +62,19 @@
     },
     {
       "type": "line",
-      "id": "gidonozeaas.liberation.node.line.001",
-      "lineId": "gidonozeaas.liberation.line.001",
+      "id": "gidonozeaas.liberation.node.line.001a",
+      "lineId": "gidonozeaas.liberation.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "閉店後のカフェ。椅子は全部机の上。灯りは窓際だけ。契約を終わらせる条件がそろった夜に、彼が指定した場所は、やっぱりここだった。"
+      "text": "閉店後のカフェ、椅子は全部机の上。灯りは、窓際だけ。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.liberation.node.line.001b",
+      "lineId": "gidonozeaas.liberation.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "契約を終わらせる条件がそろった夜、彼が指定した場所は、やっぱりここだった。"
     },
     {
       "type": "direction",
@@ -81,8 +89,8 @@
     },
     {
       "type": "line",
-      "id": "gidonozeaas.liberation.node.line.002",
-      "lineId": "gidonozeaas.liberation.line.002",
+      "id": "gidonozeaas.liberation.node.line.002a",
+      "lineId": "gidonozeaas.liberation.line.002a",
       "speakerId": "legacy.speaker.1jmq03z",
       "speakerName": "ギドノゼアース",
       "mode": "dialogue",
@@ -90,35 +98,52 @@
     },
     {
       "type": "line",
-      "id": "gidonozeaas.liberation.node.line.003",
-      "lineId": "gidonozeaas.liberation.line.003",
+      "id": "gidonozeaas.liberation.node.line.003a",
+      "lineId": "gidonozeaas.liberation.line.003a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "第四条があってよかったです。「延長を相談できる」。"
+      "text": "第四条があってよかったです。「延長を相談できる」"
     },
     {
       "type": "line",
-      "id": "gidonozeaas.liberation.node.line.004",
-      "lineId": "gidonozeaas.liberation.line.004",
+      "id": "gidonozeaas.liberation.node.line.004a",
+      "lineId": "gidonozeaas.liberation.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "机の上に、解除届。三百年待った人の契約を終わらせる紙が、注文伝票と同じ薄さで置いてある。私はそれが、少しだけ憎かった。",
+      "text": "机の上に、解除届。三百年待った人の契約を終わらせる紙。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.liberation.node.line.004b",
+      "lineId": "gidonozeaas.liberation.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "注文伝票と、同じ薄さで置いてある。私はそれが、少しだけ憎かった。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "gidonozeaas.liberation.node.line.005",
-      "lineId": "gidonozeaas.liberation.line.005",
+      "id": "gidonozeaas.liberation.node.line.005a",
+      "lineId": "gidonozeaas.liberation.line.005a",
       "speakerId": "legacy.speaker.1jmq03z",
       "speakerName": "ギドノゼアース",
       "mode": "dialogue",
-      "text": "解除の前に、一つ確認を。——この店の、窓際の席。契約が終わったら、私は何の資格で座ればいい。"
+      "text": "解除の前に、一つ確認を。——この店の、窓際の席。"
     },
     {
       "type": "line",
-      "id": "gidonozeaas.liberation.node.line.006",
-      "lineId": "gidonozeaas.liberation.line.006",
+      "id": "gidonozeaas.liberation.node.line.005b",
+      "lineId": "gidonozeaas.liberation.line.005b",
+      "speakerId": "legacy.speaker.1jmq03z",
+      "speakerName": "ギドノゼアース",
+      "mode": "dialogue",
+      "text": "契約が終わったら、私は何の資格で座ればいい。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.liberation.node.line.006a",
+      "lineId": "gidonozeaas.liberation.line.006a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -126,20 +151,37 @@
     },
     {
       "type": "line",
-      "id": "gidonozeaas.liberation.node.line.007",
-      "lineId": "gidonozeaas.liberation.line.007",
+      "id": "gidonozeaas.liberation.node.line.007a",
+      "lineId": "gidonozeaas.liberation.line.007a",
       "speakerId": "legacy.speaker.1jmq03z",
       "speakerName": "ギドノゼアース",
       "mode": "dialogue",
-      "text": "……三百年前は、違いました。私が座ると、店が空になった。整理券だけが、私に平等だったんです。"
+      "text": "……三百年前は、違いました。私が座ると、店が空になった。"
     },
     {
       "type": "line",
-      "id": "gidonozeaas.liberation.node.line.008",
-      "lineId": "gidonozeaas.liberation.line.008",
+      "id": "gidonozeaas.liberation.node.line.007b",
+      "lineId": "gidonozeaas.liberation.line.007b",
+      "speakerId": "legacy.speaker.1jmq03z",
+      "speakerName": "ギドノゼアース",
+      "mode": "dialogue",
+      "text": "整理券だけが、私に平等だったんです。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.liberation.node.line.008a",
+      "lineId": "gidonozeaas.liberation.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "だからこの人は、行列が好きだったのだ。列の中でだけ、災害ではなく「順番待ちの一人」でいられたから。",
+      "text": "だからこの人は、行列が好きだったのだ。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.liberation.node.line.008b",
+      "lineId": "gidonozeaas.liberation.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "列の中でだけ、災害でなく「順番待ちの一人」でいられたから。",
       "emotion": "revelation"
     },
     {
@@ -152,26 +194,51 @@
     },
     {
       "type": "line",
-      "id": "gidonozeaas.liberation.node.line.009",
-      "lineId": "gidonozeaas.liberation.line.009",
+      "id": "gidonozeaas.liberation.node.line.009a",
+      "lineId": "gidonozeaas.liberation.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私は解除届に判を押した。契約の光が、静かにほどける。それから彼は、驚くことをした。窓際の「予約席」の札を、自分の手で裏返したのだ。——ただの、空席へ。",
+      "text": "私は解除届に判を押した。契約の光が、静かにほどける。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.liberation.node.line.009b",
+      "lineId": "gidonozeaas.liberation.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "それから彼は、驚くことをした。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.liberation.node.line.009c",
+      "lineId": "gidonozeaas.liberation.line.009c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "窓際の「予約席」の札を、自分の手で裏返す。——ただの、空席へ。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "gidonozeaas.liberation.node.line.010",
-      "lineId": "gidonozeaas.liberation.line.010",
+      "id": "gidonozeaas.liberation.node.line.010a",
+      "lineId": "gidonozeaas.liberation.line.010a",
       "speakerId": "legacy.speaker.1jmq03z",
       "speakerName": "ギドノゼアース",
       "mode": "dialogue",
-      "text": "予約は、もうしません。ふらりと来て、空いていたら座る。……それが、できる者になりたいので。"
+      "text": "予約は、もうしません。ふらりと来て、空いていたら座る。"
     },
     {
       "type": "line",
-      "id": "gidonozeaas.liberation.node.line.011",
-      "lineId": "gidonozeaas.liberation.line.011",
+      "id": "gidonozeaas.liberation.node.line.010b",
+      "lineId": "gidonozeaas.liberation.line.010b",
+      "speakerId": "legacy.speaker.1jmq03z",
+      "speakerName": "ギドノゼアース",
+      "mode": "dialogue",
+      "text": "……それが、できる者になりたいので。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.liberation.node.line.011a",
+      "lineId": "gidonozeaas.liberation.line.011a",
       "speakerId": "narrator",
       "mode": "thought",
       "text": "三百年の整理券より、予約のない席。この人の選んだ自由は、とても小さくて、とても大きい。",
@@ -179,29 +246,46 @@
     },
     {
       "type": "line",
-      "id": "gidonozeaas.liberation.node.line.012",
-      "lineId": "gidonozeaas.liberation.line.012",
+      "id": "gidonozeaas.liberation.node.line.012a",
+      "lineId": "gidonozeaas.liberation.line.012a",
       "speakerId": "legacy.speaker.1jmq03z",
       "speakerName": "ギドノゼアース",
       "mode": "dialogue",
-      "text": "それと——鍵は、返さなくていい。あれは契約の道具ではなく、私の「おかえりなさい」の預け先なので。"
+      "text": "それと——鍵は、返さなくていい。"
     },
     {
       "type": "line",
-      "id": "gidonozeaas.liberation.node.line.013",
-      "lineId": "gidonozeaas.liberation.line.013",
+      "id": "gidonozeaas.liberation.node.line.012b",
+      "lineId": "gidonozeaas.liberation.line.012b",
+      "speakerId": "legacy.speaker.1jmq03z",
+      "speakerName": "ギドノゼアース",
+      "mode": "dialogue",
+      "text": "あれは契約の道具ではなく、私の「おかえりなさい」の預け先なので。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.liberation.node.line.013a",
+      "lineId": "gidonozeaas.liberation.line.013a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ポケットの中の小さな鍵が、急に重くなった気がした。重いのに、嫌じゃない。こういう重さの単位を、私はまだ知らない。",
+      "text": "ポケットの中の小さな鍵が、急に重くなった気がした。耳の先まで、なぜか、そわそわしている。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.liberation.node.line.013b",
+      "lineId": "gidonozeaas.liberation.line.013b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "重いのに、嫌じゃない。こういう重さの単位を、まだ知らない。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "gidonozeaas.liberation.node.line.014",
-      "lineId": "gidonozeaas.liberation.line.014",
+      "id": "gidonozeaas.liberation.node.line.014a",
+      "lineId": "gidonozeaas.liberation.line.014a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "残るのは、これからの話だ。契約のない明日から、どう並ぶか。",
+      "text": "残るのは、これからの話。契約のない明日から、どう並ぶか。",
       "emotion": "resolve"
     },
     {
@@ -211,7 +295,7 @@
         {
           "id": "gidonozeaas.liberation.choice.001",
           "label": "契約解除届と、次の試合予定を別々に渡す",
-          "result": "「契約は終わり。こっちは、ただのお誘いです」。二枚の紙を分けて渡すと、彼は試合予定だけを二回折って胸元へ仕舞った。解除届の控えは、その場で読み終えて返してきた。「保管は任せます。私が取っておきたいのは、誘われた方なので」。",
+          "result": "「契約は終わり。こっちは、ただのお誘いです」二枚の紙を分けて渡すと、彼は試合予定だけを二回折って仕舞った。解除届はその場で読んで返した。「取っておきたいのは、誘われた方なので」",
           "intent": "契約と、一緒に戦う理由を分ける",
           "promise": "所有者名を消し、本人が自分の名で次の試合を選べるようにする。",
           "memory": "解除と誘いを別の紙にしたことを、ギドノゼアースは作法として覚えている。",
@@ -238,7 +322,7 @@
         {
           "id": "gidonozeaas.liberation.choice.002",
           "label": "解除したあと、限定パフェの席だけ予約する",
-          "result": "「予約はもうしないんじゃ？」と聞くと、彼は真顔で答えた。「例外規定です。二人席は、一人では取れないので」。かくして契約台帳の最後のページに、契約ではない予約が一件だけ残った。再販日の火曜、窓際、二名。",
+          "result": "「予約はもうしないんじゃ？」彼は真顔で答えた。「例外規定です。二人席は、一人では取れないので」契約台帳の最後には、契約ではない予約が一件。再販日の火曜、窓際、二名。",
           "intent": "自由になった人と、次の約束をする",
           "promise": "断る権利を返したうえで、再販日の約束を一つ結ぶ。",
           "memory": "契約台帳の最後が、パフェの予約で終わっていることを二人だけが知っている。",
@@ -307,7 +391,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 予約席の札を自分で裏返す解放。行列の意味の種明かし。鍵=「おかえりなさい」の預け先。",
+    "authorNote": "語り口V2・二行枠で改稿。v2改稿: 予約席の札を自分で裏返す解放。行列の意味の種明かし。鍵=「おかえりなさい」の預け先。",
     "legacyGeneratedIds": false
   }
 }

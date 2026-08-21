@@ -10,9 +10,17 @@
     "stage": "power"
   },
   "trigger": {
-    "actions": ["search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 400,
     "weight": 1
   },
@@ -43,98 +51,211 @@
     {
       "type": "direction",
       "id": "room-seventeen.power.node.direction.001",
-      "command": { "type": "background", "assetId": "room-seventeen.power.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "room-seventeen.power.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "line",
-      "id": "room-seventeen.power.node.line.001",
-      "lineId": "room-seventeen.power.line.001",
+      "id": "room-seventeen.power.node.line.001a",
+      "lineId": "room-seventeen.power.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「一番下の階を、見ていただきたいのです」。次の強敵戦を前に、部屋からの申し出だった。案内の階段は長く、下るほどに内装が古くなっていく。大理石が石壁になり、シャンデリアが松明になり——ここは、迷宮だった頃の彼だ。"
+      "text": "「一番下の階を、見ていただきたいのです」強敵戦を前に、部屋からの申し出だった。"
     },
     {
       "type": "line",
-      "id": "room-seventeen.power.node.line.002",
-      "lineId": "room-seventeen.power.line.002",
+      "id": "room-seventeen.power.node.line.001b",
+      "lineId": "room-seventeen.power.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "案内の階段は長く、下るほど内装が古くなっていく。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.power.node.line.001c",
+      "lineId": "room-seventeen.power.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "大理石が石壁に、シャンデリアが松明に。迷宮だった頃の彼だ。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.power.node.line.002a",
+      "lineId": "room-seventeen.power.line.002a",
       "speakerId": "legacy.speaker.zzyjm6",
       "speakerName": "十七号室",
       "mode": "dialogue",
-      "text": "最下層です。……私の、最初の部屋。攻略者の皆様が、宝を目指して降りてきた頃の、最終フロアです。"
+      "text": "最下層です。……私の、最初の部屋。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.power.node.line.002b",
+      "lineId": "room-seventeen.power.line.002b",
+      "speakerId": "legacy.speaker.zzyjm6",
+      "speakerName": "十七号室",
+      "mode": "dialogue",
+      "text": "攻略者の皆様が、宝を目指して降りてきた頃の、最終フロアです。"
     },
     {
       "type": "direction",
       "id": "room-seventeen.power.node.direction.003",
-      "command": { "type": "still", "assetId": "room-seventeen.power.asset.still.001" }
+      "command": {
+        "type": "still",
+        "assetId": "room-seventeen.power.asset.still.001"
+      }
     },
     {
       "type": "direction",
       "id": "room-seventeen.power.node.direction.004",
-      "command": { "type": "still", "assetId": "room-seventeen.power.asset.still.002" }
+      "command": {
+        "type": "still",
+        "assetId": "room-seventeen.power.asset.still.002"
+      }
     },
     {
       "type": "line",
-      "id": "room-seventeen.power.node.line.003",
-      "lineId": "room-seventeen.power.line.003",
+      "id": "room-seventeen.power.node.line.003a",
+      "lineId": "room-seventeen.power.line.003a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "最下層は、綺麗に片付いていた。宝箱の台座は空で、埃ひとつない。そして台座の隣に、場違いなものが、大切そうに飾ってあった。——片方だけの、靴下。",
+      "text": "最下層は、綺麗に片付いていた。宝箱の台座は空で、埃ひとつない。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.power.node.line.003b",
+      "lineId": "room-seventeen.power.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "台座の隣に、場違いなものが大切そうに飾ってあった。片方だけの、靴下。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "room-seventeen.power.node.line.004",
-      "lineId": "room-seventeen.power.line.004",
+      "id": "room-seventeen.power.node.line.004a",
+      "lineId": "room-seventeen.power.line.004a",
       "speakerId": "legacy.speaker.zzyjm6",
       "speakerName": "十七号室",
       "mode": "dialogue",
-      "text": "最後の攻略者の、落とし物です。あの方は宝を取って、笑って、帰っていきました。「また来るよ」と。……それきり、誰も、来ていません。私の物語は、あの日、終わったのだと思います。"
+      "text": "最後の攻略者の、落とし物です。"
     },
     {
       "type": "line",
-      "id": "room-seventeen.power.node.line.005",
-      "lineId": "room-seventeen.power.line.005",
+      "id": "room-seventeen.power.node.line.004b",
+      "lineId": "room-seventeen.power.line.004b",
+      "speakerId": "legacy.speaker.zzyjm6",
+      "speakerName": "十七号室",
+      "mode": "dialogue",
+      "text": "あの方は宝を取って、笑って、帰っていきました。「また来るよ」と。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.power.node.line.004c",
+      "lineId": "room-seventeen.power.line.004c",
+      "speakerId": "legacy.speaker.zzyjm6",
+      "speakerName": "十七号室",
+      "mode": "dialogue",
+      "text": "……それきり、誰も、来ていません。私の物語は、あの日、終わったのだと思います。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.power.node.line.005a",
+      "lineId": "room-seventeen.power.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "誤出口の癖の、根っこを見た気がした。「また来るよ」を信じて待ち続けた建築は、帰り道を作るたび、あの日の後ろ姿を思い出すのだ。",
+      "text": "誤出口の癖の、根っこを見た気がした。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.power.node.line.005b",
+      "lineId": "room-seventeen.power.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「また来るよ」を信じて待ち続けた建築は、帰り道を作るたび、あの日の後ろ姿を思い出す。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "room-seventeen.power.node.line.006",
-      "lineId": "room-seventeen.power.line.006",
+      "id": "room-seventeen.power.node.line.006a",
+      "lineId": "room-seventeen.power.line.006a",
       "speakerId": "legacy.speaker.zzyjm6",
       "speakerName": "十七号室",
       "mode": "dialogue",
-      "text": "ですが、今日お見せしたいのは、思い出ではなく——力の方です。この最下層が開いている時、私は、本気が出せます。"
+      "text": "ですが、今日お見せしたいのは、思い出ではなく——力の方です。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.power.node.line.006b",
+      "lineId": "room-seventeen.power.line.006b",
+      "speakerId": "legacy.speaker.zzyjm6",
+      "speakerName": "十七号室",
+      "mode": "dialogue",
+      "text": "この最下層が開いている時、私は、本気が出せます。"
     },
     {
       "type": "direction",
       "id": "room-seventeen.power.node.direction.002",
-      "command": { "type": "effect", "effectId": "flash" }
+      "command": {
+        "type": "effect",
+        "effectId": "flash"
+      }
     },
     {
       "type": "line",
-      "id": "room-seventeen.power.node.line.007",
-      "lineId": "room-seventeen.power.line.007",
+      "id": "room-seventeen.power.node.line.007a",
+      "lineId": "room-seventeen.power.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "床が透けて、下に無数の廊下が見えた。百二十階は、上物にすぎない。地下には、迷宮時代の全フロアが、今も生きて畳まれている。彼の本気は、この全部を、一瞬で任意の場所へ「生やす」力だった。会場の地下に、丸ごと一個の迷宮を。",
+      "text": "床が透けて、下に無数の廊下が見えた。百二十階は、上物にすぎない。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.power.node.line.007b",
+      "lineId": "room-seventeen.power.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "地下には、迷宮時代の全フロアが、今も生きて畳まれている。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.power.node.line.007c",
+      "lineId": "room-seventeen.power.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "彼の本気は、全部を一瞬で「生やす」力だった。会場の地下に、丸ごと一個の迷宮を。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "room-seventeen.power.node.line.008",
-      "lineId": "room-seventeen.power.line.008",
+      "id": "room-seventeen.power.node.line.008a",
+      "lineId": "room-seventeen.power.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "同行の新人くんは、覗き込んだ廊下の数を数えようとして、三十秒で挫折し、記録板に「そこ、ぜんぶ、へや。」と書いた。今日も完璧な監査である。",
+      "text": "同行の新人くんは、廊下の数を数えようとして三十秒で挫折。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.power.node.line.008b",
+      "lineId": "room-seventeen.power.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "記録板に「そこ、ぜんぶ、へや。」と書いた。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.power.node.line.008c",
+      "lineId": "room-seventeen.power.line.008c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "今日も、完璧な監査だと思う。耳が、笑いをこらえて震えた。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "room-seventeen.power.node.line.009",
-      "lineId": "room-seventeen.power.line.009",
+      "id": "room-seventeen.power.node.line.009a",
+      "lineId": "room-seventeen.power.line.009a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -142,20 +263,38 @@
     },
     {
       "type": "line",
-      "id": "room-seventeen.power.node.line.010",
-      "lineId": "room-seventeen.power.line.010",
+      "id": "room-seventeen.power.node.line.010a",
+      "lineId": "room-seventeen.power.line.010a",
       "speakerId": "legacy.speaker.zzyjm6",
       "speakerName": "十七号室",
       "mode": "dialogue",
-      "text": "初めてです。最下層は、攻略の最終地点なので。……辿り着いた方に、しか。あなたは、階段で普通に来てしまいましたが。……それも、悪くないものですね。"
+      "text": "初めてです。最下層は、攻略の最終地点なので。"
     },
     {
       "type": "line",
-      "id": "room-seventeen.power.node.line.011",
-      "lineId": "room-seventeen.power.line.011",
+      "id": "room-seventeen.power.node.line.010b",
+      "lineId": "room-seventeen.power.line.010b",
+      "speakerId": "legacy.speaker.zzyjm6",
+      "speakerName": "十七号室",
+      "mode": "dialogue",
+      "text": "……辿り着いた方に、しか。あなたは、階段で普通に来てしまいましたが。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.power.node.line.010c",
+      "lineId": "room-seventeen.power.line.010c",
+      "speakerId": "legacy.speaker.zzyjm6",
+      "speakerName": "十七号室",
+      "mode": "dialogue",
+      "text": "……それも、悪くないものですね。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.power.node.line.011a",
+      "lineId": "room-seventeen.power.line.011a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "攻略せずに最下層へ来た、史上初の客。松明の灯りの中、空の台座と片方の靴下の前で、私はしばらく、この部屋の四百年ぶんの待ちぼうけを思った。それから、力の使い方の相談に入った。",
+      "text": "それから、力の使い方の相談に入った。",
       "emotion": "tender"
     },
     {
@@ -165,28 +304,56 @@
         {
           "id": "room-seventeen.power.choice.001",
           "label": "閉ざされた最深階を、本人の内側から開く",
-          "result": "型の名前は「開館」。試合の合図とともに、会場の床に迷宮の入口が咲く。相手は戦うか、迷うか、もてなされるかの三択を迫られる。初リハーサルで模擬相手を務めた私は、三分で温泉階に誘導された。強い。この建築、対人戦において、たぶん最強の部類である。",
+          "result": "型の名前は「開館」、合図で会場の床に迷宮の入口が咲く。相手は戦うか迷うかもてなされるかの三択。初リハーサルの模擬相手は私で、三分で温泉階に誘導された。強い。たぶん最強の部類。",
           "intent": "迷宮時代の全力を、今の彼の形で出す",
           "promise": "失敗時の危険を引き受け、この人専用の成長を最大まで進める。",
           "memory": "型「開館」の初リハーサルの敗因(温泉)を、私は認めたくない。",
           "tone": "heroic",
           "effects": [
-            { "type": "relationship", "target": { "type": "fighter", "fighterId": "room-seventeen" }, "mode": "add", "trust": 10, "ownership": -4 },
-            { "type": "fighterPoints", "target": { "type": "fighter", "fighterId": "room-seventeen" }, "amount": 5 }
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "room-seventeen"
+              },
+              "mode": "add",
+              "trust": 10,
+              "ownership": -4
+            },
+            {
+              "type": "fighterPoints",
+              "target": {
+                "type": "fighter",
+                "fighterId": "room-seventeen"
+              },
+              "amount": 5
+            }
           ],
           "goto": "room-seventeen.power.node.effect.001"
         },
         {
           "id": "room-seventeen.power.choice.002",
           "label": "大会会場へ通じる三本の廊下だけを残す",
-          "result": "全開放は温存し、試合で使う廊下を三本に絞った。攻めの廊下、逃げの廊下、回り込みの廊下。三本だけなら審判にも説明でき、味方も覚えられる。「厳選の三本です」と部屋は言った。百二十階の建築が、初めてやった断捨離だった。",
+          "result": "全開放は温存し、試合で使う廊下を三本に絞った。攻めの廊下、逃げの廊下、回り込みの廊下。審判にも説明でき、味方も覚えられる。「厳選の三本です」百二十階の建築が、初めてやった断捨離。",
           "intent": "説明可能な範囲に力を整える",
           "promise": "本来の全開放は温存し、チーム全体の成長へ成果を持ち帰る。",
           "memory": "三本の廊下の名前は、チームの投票で決めた。",
           "tone": "pragmatic",
           "effects": [
-            { "type": "relationship", "target": { "type": "fighter", "fighterId": "room-seventeen" }, "mode": "add", "trust": 0, "ownership": 9 },
-            { "type": "sharedPoints", "amount": 5 }
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "room-seventeen"
+              },
+              "mode": "add",
+              "trust": 0,
+              "ownership": 9
+            },
+            {
+              "type": "sharedPoints",
+              "amount": 5
+            }
           ],
           "goto": "room-seventeen.power.node.effect.001"
         }
@@ -196,7 +363,11 @@
       "type": "effect",
       "id": "room-seventeen.power.node.effect.001",
       "effects": [
-        { "type": "setStoryStage", "fighterId": "room-seventeen", "stage": 4 }
+        {
+          "type": "setStoryStage",
+          "fighterId": "room-seventeen",
+          "stage": 4
+        }
       ]
     },
     {
@@ -208,7 +379,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 最下層と片方の靴下(canonモチーフ)。Q1=最後の攻略者の「また来るよ」で終わった物語。攻略せず来た史上初の客。",
+    "authorNote": "語り口V2・二行枠で改稿。v2改稿: 最下層と片方の靴下(canonモチーフ)。Q1=最後の攻略者の「また来るよ」で終わった物語。攻略せず来た史上初の客。",
     "legacyGeneratedIds": false
   }
 }

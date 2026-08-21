@@ -53,19 +53,51 @@
     },
     {
       "type": "line",
-      "id": "cassim-bell.meet.node.line.001",
-      "lineId": "cassim-bell.meet.line.001",
+      "id": "cassim-bell.meet.node.line.001a",
+      "lineId": "cassim-bell.meet.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "お客様の忘れ物の日傘を届けに、遺失物窓口へ——行くはずが、案内表示に従って歩いたら、見知らぬ大扉の前に出た。札にはこうある。「無限遺失物保管庫・総合受付(七世界対応)」。"
+      "text": "お客様の忘れ物の日傘を届けに、遺失物窓口へ——行くはずが。"
     },
     {
       "type": "line",
-      "id": "cassim-bell.meet.node.line.002",
-      "lineId": "cassim-bell.meet.line.002",
+      "id": "cassim-bell.meet.node.line.001b",
+      "lineId": "cassim-bell.meet.line.001b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "扉の中は、見上げても天井のない棚の谷だった。並んでいる列も、すごい。巨大な竜の靴を抱えた騎士、月の傘を探すお姫様、しゃべる冠。その全員を、たった一人の受付係が、恐ろしい速さで捌いている。",
+      "text": "案内表示のまま歩いたら、見知らぬ大扉の前に出た。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.meet.node.line.001c",
+      "lineId": "cassim-bell.meet.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "札にはこうある。「無限遺失物保管庫、総合受付(七世界対応)」"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.meet.node.line.002a",
+      "lineId": "cassim-bell.meet.line.002a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "扉の中は、見上げても天井のない棚の谷だった。並んでいる列も、すごい。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.meet.node.line.002b",
+      "lineId": "cassim-bell.meet.line.002b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "巨大な竜の靴を抱えた騎士、月の傘を探すお姫様、しゃべる冠。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.meet.node.line.002c",
+      "lineId": "cassim-bell.meet.line.002c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "その全員を、たった一人の受付係が、恐ろしい速さで捌いてる。",
       "emotion": "tension"
     },
     {
@@ -86,44 +118,78 @@
     },
     {
       "type": "line",
-      "id": "cassim-bell.meet.node.line.003",
-      "lineId": "cassim-bell.meet.line.003",
+      "id": "cassim-bell.meet.node.line.003a",
+      "lineId": "cassim-bell.meet.line.003a",
       "speakerId": "legacy.speaker.1wuvexi",
       "speakerName": "カシム・ベル",
       "mode": "dialogue",
-      "text": "十七番のお客様、竜の左靴は第四棚。十八番、月の傘は再入荷待ち。十九番——冠は、しゃべらない規則です。……次のお客様、どうぞ。"
+      "text": "十七番のお客様、竜の左靴は第四棚。十八番、月の傘は再入荷待ち。"
     },
     {
       "type": "line",
-      "id": "cassim-bell.meet.node.line.004",
-      "lineId": "cassim-bell.meet.line.004",
+      "id": "cassim-bell.meet.node.line.003b",
+      "lineId": "cassim-bell.meet.line.003b",
+      "speakerId": "legacy.speaker.1wuvexi",
+      "speakerName": "カシム・ベル",
+      "mode": "dialogue",
+      "text": "十九番——冠は、しゃべらない規則です。……次のお客様、どうぞ。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.meet.node.line.004a",
+      "lineId": "cassim-bell.meet.line.004a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "あの、日傘を届けに……って、あなた、目の下のクマ、大丈夫ですか！？"
+      "text": "あの、日傘を届けに……って、あなた、目の下のクマ、大丈夫ですか!?"
     },
     {
       "type": "line",
-      "id": "cassim-bell.meet.node.line.005",
-      "lineId": "cassim-bell.meet.line.005",
+      "id": "cassim-bell.meet.node.line.005a",
+      "lineId": "cassim-bell.meet.line.005a",
       "speakerId": "legacy.speaker.1wuvexi",
       "speakerName": "カシム・ベル",
       "mode": "dialogue",
-      "text": "ご心配なく。連続勤務、まだ七十二時間です。七世界の落とし物は、待ってくれないので。"
+      "text": "ご心配なく。連続勤務、まだ七十二時間です。"
     },
     {
       "type": "line",
-      "id": "cassim-bell.meet.node.line.006",
-      "lineId": "cassim-bell.meet.line.006",
+      "id": "cassim-bell.meet.node.line.005b",
+      "lineId": "cassim-bell.meet.line.005b",
+      "speakerId": "legacy.speaker.1wuvexi",
+      "speakerName": "カシム・ベル",
+      "mode": "dialogue",
+      "text": "七世界の落とし物は、待ってくれないので。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.meet.node.line.006a",
+      "lineId": "cassim-bell.meet.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "まだ、の使い方が完全に壊れていた。接客業として、見過ごせない。受付台の隅に、ほこりをかぶった札を見つけた。「休止中」。一度も使われた形跡がない。",
+      "text": "まだ、の使い方が完全に壊れていた。接客業として、見過ごせない。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.meet.node.line.006b",
+      "lineId": "cassim-bell.meet.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "受付台の隅に、ほこりをかぶった札を見つけた。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.meet.node.line.006c",
+      "lineId": "cassim-bell.meet.line.006c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「休止中」一度も使われた形跡がない。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "cassim-bell.meet.node.line.007",
-      "lineId": "cassim-bell.meet.line.007",
+      "id": "cassim-bell.meet.node.line.007a",
+      "lineId": "cassim-bell.meet.line.007a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -131,8 +197,8 @@
     },
     {
       "type": "line",
-      "id": "cassim-bell.meet.node.line.008",
-      "lineId": "cassim-bell.meet.line.008",
+      "id": "cassim-bell.meet.node.line.008a",
+      "lineId": "cassim-bell.meet.line.008a",
       "speakerId": "legacy.speaker.1wuvexi",
       "speakerName": "カシム・ベル",
       "mode": "dialogue",
@@ -140,11 +206,27 @@
     },
     {
       "type": "line",
-      "id": "cassim-bell.meet.node.line.009",
-      "lineId": "cassim-bell.meet.line.009",
+      "id": "cassim-bell.meet.node.line.009a",
+      "lineId": "cassim-bell.meet.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "意味が分からなかったので、試してもらった。休止札を立てて、一分。三十秒で棚の奥から地鳴りがして、四十秒で竜の靴が自分で歩いてきて、五十秒で月の傘が開いたまま滑空してきた。落とし物たちが、受付を、探しに来る。",
+      "text": "意味が分からなかったので、試してもらった。休止札を立てて、一分。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.meet.node.line.009b",
+      "lineId": "cassim-bell.meet.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "三十秒で棚の奥から地鳴りがして、四十秒で竜の靴が自分で歩いてきた。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.meet.node.line.009c",
+      "lineId": "cassim-bell.meet.line.009c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "五十秒で月の傘が開いたまま滑空。落とし物たちが、受付を探しに来る。",
       "emotion": "comic"
     },
     {
@@ -157,53 +239,94 @@
     },
     {
       "type": "line",
-      "id": "cassim-bell.meet.node.line.010",
-      "lineId": "cassim-bell.meet.line.010",
+      "id": "cassim-bell.meet.node.line.010a",
+      "lineId": "cassim-bell.meet.line.010a",
       "speakerId": "legacy.speaker.1wuvexi",
       "speakerName": "カシム・ベル",
       "mode": "dialogue",
-      "text": "ね？　……ですから私は、休まない。七世界の誰かが、今も何かを、失くしている。"
+      "text": "ね?　……ですから私は、休まない。七世界の誰かが、今も何かを、失くしている。"
     },
     {
       "type": "line",
-      "id": "cassim-bell.meet.node.line.011",
-      "lineId": "cassim-bell.meet.line.011",
+      "id": "cassim-bell.meet.node.line.011a",
+      "lineId": "cassim-bell.meet.line.011a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "誇りを持って言い切る顔が、疲れで少し透けていた。接客のプロが接客のプロを見れば分かる。この人は、休み方だけを、七世界のどこにも登録していない。",
+      "text": "誇りを持って言い切る顔が、疲れで少し透けていた。接客のプロが、接客のプロを見れば分かる。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.meet.node.line.011b",
+      "lineId": "cassim-bell.meet.line.011b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "この人は、休み方だけを、七世界のどこにも登録していない。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "cassim-bell.meet.node.line.012",
-      "lineId": "cassim-bell.meet.line.012",
+      "id": "cassim-bell.meet.node.line.012a",
+      "lineId": "cassim-bell.meet.line.012a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "……作戦があります。私、受付の経験者です。一分だけ、代わります。あなたは、あの棚の陰へ。"
+      "text": "……作戦があります。私、受付の経験者です。"
     },
     {
       "type": "line",
-      "id": "cassim-bell.meet.node.line.013",
-      "lineId": "cassim-bell.meet.line.013",
+      "id": "cassim-bell.meet.node.line.012b",
+      "lineId": "cassim-bell.meet.line.012b",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "一分だけ、代わります。あなたは、あの棚の陰へ。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.meet.node.line.013a",
+      "lineId": "cassim-bell.meet.line.013a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "落とし物たちは受付係を探しに来る。なら、受付に別の係が立てばいい。カシム・ベルは三回断って、四回目に、砂時計を取り出した。一分計。「では……一分だけ」。",
+      "text": "落とし物たちは受付係を探しに来る。なら、受付に別の係が立てばいい。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.meet.node.line.013b",
+      "lineId": "cassim-bell.meet.line.013b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "カシムさんは三回断って、四回目に砂時計を取り出した。一分計。「では……一分だけ」",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "cassim-bell.meet.node.line.014",
-      "lineId": "cassim-bell.meet.line.014",
+      "id": "cassim-bell.meet.node.line.014a",
+      "lineId": "cassim-bell.meet.line.014a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "棚の陰は狭くて、隠れるというより、二人で世界から一分借りるみたいだった。砂時計の砂が落ちる音まで聞こえる距離。彼は立ったまま目を閉じて、三十秒で眠りかけ、はっと起きて、小声で言った。",
+      "text": "棚の陰は狭くて、隠れるというより二人で、世界から一分借りるみたいだった。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.meet.node.line.014b",
+      "lineId": "cassim-bell.meet.line.014b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "砂時計の砂が落ちる音まで、聞こえる距離。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.meet.node.line.014c",
+      "lineId": "cassim-bell.meet.line.014c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "彼は立ったまま目を閉じ、三十秒で眠りかけた。耳元で、はっと小声。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "cassim-bell.meet.node.line.015",
-      "lineId": "cassim-bell.meet.line.015",
+      "id": "cassim-bell.meet.node.line.015a",
+      "lineId": "cassim-bell.meet.line.015a",
       "speakerId": "legacy.speaker.1wuvexi",
       "speakerName": "カシム・ベル",
       "mode": "dialogue",
@@ -211,8 +334,8 @@
     },
     {
       "type": "line",
-      "id": "cassim-bell.meet.node.line.016",
-      "lineId": "cassim-bell.meet.line.016",
+      "id": "cassim-bell.meet.node.line.016a",
+      "lineId": "cassim-bell.meet.line.016a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -220,11 +343,19 @@
     },
     {
       "type": "line",
-      "id": "cassim-bell.meet.node.line.017",
-      "lineId": "cassim-bell.meet.line.017",
+      "id": "cassim-bell.meet.node.line.017a",
+      "lineId": "cassim-bell.meet.line.017a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "砂時計が落ちきる。彼は受付へ戻り、私は日傘を届け出た。受理印を押す手つきが、さっきより少しだけ、ゆっくりだった。良い変化だと思う。",
+      "text": "砂時計が落ちきる。彼は受付へ戻り、私は日傘を届け出た。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.meet.node.line.017b",
+      "lineId": "cassim-bell.meet.line.017b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "受理印を押す手つきが、さっきより少しゆっくりだった。いい変化だと思う。",
       "emotion": "tender"
     },
     {
@@ -234,7 +365,7 @@
         {
           "id": "cassim-bell.meet.choice.001",
           "label": "失くした世界の受付票を書く",
-          "result": "帰り際、列の最後のお客様が言った。「世界を一つ、失くしまして」。カシム・ベルは顔色一つ変えず、専用の受付票を出した。品名欄「世界(一式)」。ここは、そういうものまで届く窓口なのだ。終わった世界の持ち物は、全部ここへ流れ着く——彼はそう言って、書きかけの受付票の隅に、小さく「本日の紛失物: 私の休憩(捜索中)」と書き足した。冗談が言えるなら、まだ大丈夫だ。",
+          "result": "帰り際、お客様が「世界を一つ、失くしまして」カシムさんは顔色一つ変えず受付票を出した、品名欄「世界一式」隅に小さく「本日の紛失物、私の休憩(捜索中)」冗談が言えるなら、まだ大丈夫",
           "intent": "この窓口が受け付けている物の正体を知る",
           "promise": "目先の報酬は得ない代わりに、この人が何を抱えているかを知る。",
           "memory": "「私の休憩(捜索中)」の受付票を、二人とも覚えている。",
@@ -256,7 +387,7 @@
         {
           "id": "cassim-bell.meet.choice.002",
           "label": "今日はカシム・ベルを誘わず、用事へ戻る",
-          "result": "日傘の届け出を終えて、私は仕事へ戻った。数日後、届いた受理通知の封筒に、砂時計の砂がひとつまみ、同封されていた。メモが一枚。「一分の借りは、一分でお返しします。ご入用の際は、お申し付けください」。律儀な人の借りの返し方は、砂まで正確だった。",
+          "result": "日傘の届け出を終えて、仕事へ戻った。数日後、受理通知の封筒に砂時計の砂がひとつまみ。メモに「一分の借りは、一分でお返しします」律儀な人の借りの返し方は、砂まで正確だった",
           "intent": "今日は配達業務に徹する",
           "promise": "所属選手にはならないが、後の出来事で再会できる。",
           "memory": "一分を貸した店員のことを、カシム・ベルは覚えている。",
@@ -291,7 +422,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 会場を無限遺失物保管庫へ分離(ミナトの遺失物窓口と衝突解消)。休止札の実験と一分の共犯。Q1=終わった世界の持ち物は全部ここへ流れ着く。",
+    "authorNote": "語り口V2・二行枠で改稿。v2改稿: 会場を無限遺失物保管庫へ分離(ミナトの遺失物窓口と衝突解消)。休止札の実験と一分の共犯。Q1=終わった世界の持ち物は全部ここへ流れ着く。",
     "legacyGeneratedIds": false
   }
 }

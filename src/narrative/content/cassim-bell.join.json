@@ -30,8 +30,14 @@
       {
         "id": "cassim-bell.join.asset.background.001",
         "kind": "background",
-        "path": "/assets/story/bg-employee-entrance.png",
+        "path": "/assets/story/bg-warehouse-interview-office-day-v1.png",
         "alt": "倉庫街の背景"
+      },
+      {
+        "id": "cassim-bell.join.asset.sprite.character",
+        "kind": "sprite",
+        "path": "/assets/battle/fighters/cassim-bell-v1.png",
+        "alt": "失くした世界の番人カシム・ベル"
       }
     ]
   },
@@ -46,35 +52,70 @@
       }
     },
     {
-      "type": "line",
-      "id": "cassim-bell.join.node.line.001",
-      "lineId": "cassim-bell.join.line.001",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "カシム・ベルの選手登録の日。倉庫街の空き事務所を借りて、静かな面談のはずだった。端末の職業欄に「受付」と入力した瞬間まで、は。"
+      "type": "direction",
+      "id": "cassim-bell.join.node.direction.character.001",
+      "command": {
+        "type": "show",
+        "assetId": "cassim-bell.join.asset.sprite.character",
+        "actorId": "cassim-bell",
+        "slot": "right",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
-      "id": "cassim-bell.join.node.line.002",
-      "lineId": "cassim-bell.join.line.002",
+      "id": "cassim-bell.join.node.line.001a",
+      "lineId": "cassim-bell.join.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "端末が、鳴りやまなくなった。「経歴を確認しました。人事部より至急連絡」「当施設の総合受付に欠員が」「夜間窓口の責任者として」——闘技場中の部署から、採用オファーが殺到している。",
+      "text": "カシムさんの選手登録の日。倉庫街の空き事務所で、静かな面談のはずだった。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.join.node.line.001b",
+      "lineId": "cassim-bell.join.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "端末の職業欄に「受付」と入力した瞬間までは。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.join.node.line.002a",
+      "lineId": "cassim-bell.join.line.002a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "端末が、鳴りやまなくなった。「経歴を確認しました。人事部より至急連絡」"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.join.node.line.002b",
+      "lineId": "cassim-bell.join.line.002b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「総合受付に欠員が」「夜間窓口の責任者として」"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.join.node.line.002c",
+      "lineId": "cassim-bell.join.line.002c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "——闘技場中から、採用オファーが殺到してる。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "cassim-bell.join.node.line.003",
-      "lineId": "cassim-bell.join.line.003",
+      "id": "cassim-bell.join.node.line.003a",
+      "lineId": "cassim-bell.join.line.003a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "選手登録なのに、スカウトされてるの、あなたの方なんですけど！？"
+      "text": "選手登録なのに、スカウトされてるの、あなたの方なんですけど!?"
     },
     {
       "type": "line",
-      "id": "cassim-bell.join.node.line.004",
-      "lineId": "cassim-bell.join.line.004",
+      "id": "cassim-bell.join.node.line.004a",
+      "lineId": "cassim-bell.join.line.004a",
       "speakerId": "legacy.speaker.1wuvexi",
       "speakerName": "カシム・ベル",
       "mode": "dialogue",
@@ -82,26 +123,51 @@
     },
     {
       "type": "line",
-      "id": "cassim-bell.join.node.line.005",
-      "lineId": "cassim-bell.join.line.005",
+      "id": "cassim-bell.join.node.line.005a",
+      "lineId": "cassim-bell.join.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "そして彼は、断らないのだった。「お困りでしたら、週二回なら」「夜間だけなら」——見ている間に兼務が三つ増えた。休めない人の正体は、有能で、断れない人だ。",
+      "text": "そして彼は、断らなかった。「お困りでしたら、週二回なら」"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.join.node.line.005b",
+      "lineId": "cassim-bell.join.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「夜間だけなら」——見てる間に、兼務が三つ増えた。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.join.node.line.005c",
+      "lineId": "cassim-bell.join.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "休めない人の正体は、有能で断れない人。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "cassim-bell.join.node.line.006",
-      "lineId": "cassim-bell.join.line.006",
+      "id": "cassim-bell.join.node.line.006a",
+      "lineId": "cassim-bell.join.line.006a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "ストップ！　全部ストップです！　カシムさん、今日は私が先約です。うちのオファーを最後まで聞いてから！"
+      "text": "ストップ!　全部ストップです!カシムさん、今日は私が先約です。"
     },
     {
       "type": "line",
-      "id": "cassim-bell.join.node.line.007",
-      "lineId": "cassim-bell.join.line.007",
+      "id": "cassim-bell.join.node.line.006b",
+      "lineId": "cassim-bell.join.line.006b",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "うちのオファーを最後まで聞いてから!"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.join.node.line.007a",
+      "lineId": "cassim-bell.join.line.007a",
       "speakerId": "legacy.speaker.1wuvexi",
       "speakerName": "カシム・ベル",
       "mode": "dialogue",
@@ -109,35 +175,69 @@
     },
     {
       "type": "line",
-      "id": "cassim-bell.join.node.line.008",
-      "lineId": "cassim-bell.join.line.008",
+      "id": "cassim-bell.join.node.line.008a",
+      "lineId": "cassim-bell.join.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "御社。うちは三人チームだが、御社と呼ばれた。私は咳払いをして、用意してきた求人票を出した。項目は三つ。",
+      "text": "御社。うちは三人チームだが、御社と呼ばれた。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.join.node.line.008b",
+      "lineId": "cassim-bell.join.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私は咳払いをして、用意した求人票を出した。項目は三つ。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "cassim-bell.join.node.line.009",
-      "lineId": "cassim-bell.join.line.009",
+      "id": "cassim-bell.join.node.line.009a",
+      "lineId": "cassim-bell.join.line.009a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "一、職種は選手。受付は、してはいけません。二、休憩は業務です。サボると怒られます。三、砂時計は、私が管理します。"
+      "text": "一、職種は選手。受付は、してはいけません。"
     },
     {
       "type": "line",
-      "id": "cassim-bell.join.node.line.010",
-      "lineId": "cassim-bell.join.line.010",
+      "id": "cassim-bell.join.node.line.009b",
+      "lineId": "cassim-bell.join.line.009b",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "二、休憩は業務です。サボると怒られます。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.join.node.line.009c",
+      "lineId": "cassim-bell.join.line.009c",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "三、砂時計は、私が管理します。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.join.node.line.010a",
+      "lineId": "cassim-bell.join.line.010a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "カシム・ベルは求人票を三回読んだ。有能な人の三回読みは、粗探しではない。信じていいか、確かめている時間だ。",
+      "text": "カシムさんは求人票を三回読んだ。有能な人の三回読みは、粗探しじゃない。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.join.node.line.010b",
+      "lineId": "cassim-bell.join.line.010b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "信じていいか、確かめてる時間。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "cassim-bell.join.node.line.011",
-      "lineId": "cassim-bell.join.line.011",
+      "id": "cassim-bell.join.node.line.011a",
+      "lineId": "cassim-bell.join.line.011a",
       "speakerId": "legacy.speaker.1wuvexi",
       "speakerName": "カシム・ベル",
       "mode": "dialogue",
@@ -145,8 +245,8 @@
     },
     {
       "type": "line",
-      "id": "cassim-bell.join.node.line.012",
-      "lineId": "cassim-bell.join.line.012",
+      "id": "cassim-bell.join.node.line.012a",
+      "lineId": "cassim-bell.join.line.012a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -154,17 +254,25 @@
     },
     {
       "type": "line",
-      "id": "cassim-bell.join.node.line.013",
-      "lineId": "cassim-bell.join.line.013",
+      "id": "cassim-bell.join.node.line.013a",
+      "lineId": "cassim-bell.join.line.013a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "彼は胸元から砂時計を出して、しばらく眺めて、それから受付台の外の人間がする、初めての顔で笑った。",
+      "text": "彼は胸元から砂時計を出して、しばらく眺めた。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.join.node.line.013b",
+      "lineId": "cassim-bell.join.line.013b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "それから、受付台の外の顔で笑った。私の耳が、勝手に立った。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "cassim-bell.join.node.line.014",
-      "lineId": "cassim-bell.join.line.014",
+      "id": "cassim-bell.join.node.line.014a",
+      "lineId": "cassim-bell.join.line.014a",
       "speakerId": "legacy.speaker.1wuvexi",
       "speakerName": "カシム・ベル",
       "mode": "dialogue",
@@ -172,8 +280,8 @@
     },
     {
       "type": "line",
-      "id": "cassim-bell.join.node.line.015",
-      "lineId": "cassim-bell.join.line.015",
+      "id": "cassim-bell.join.node.line.015a",
+      "lineId": "cassim-bell.join.line.015a",
       "speakerId": "narrator",
       "mode": "thought",
       "text": "受付は私。書類の締め方だけ、決めればいい。",
@@ -186,7 +294,7 @@
         {
           "id": "cassim-bell.join.choice.001",
           "label": "失くした世界の受付票を、最後まで一緒に書く",
-          "result": "契約の前に、彼が一枚だけ気にしていた受付票があった。例の「世界(一式)」の紛失届。「これだけは、引き継げないので」。二人で最後まで書き上げ、保管庫の一番静かな棚に納めた。失くした世界の落とし物を守る仕事と、選手の仕事。両方引き受けた人の署名は、いつもより丁寧だった。",
+          "result": "契約の前に、彼が気にしていた受付票が一枚。「世界(一式)」の紛失届「これだけは引き継げないので」二人で書き上げ、保管庫の一番静かな棚に納めた。両方引き受けた署名は、いつもより丁寧だった",
           "intent": "残していく仕事に、けじめをつけてもらう",
           "promise": "登録は少し遅れるが、この人専用の成長ポイントを得る。",
           "memory": "「世界(一式)」の受付票を一緒に仕上げたことを、二人とも覚えている。",
@@ -221,7 +329,7 @@
         {
           "id": "cassim-bell.join.choice.002",
           "label": "遺失物係の窓口ごと、闘技場へ移す",
-          "result": "保管庫の受付窓口を、正式にうちの施設内へ移設した。カシムは「選手と受付の兼務では」と粘ったが、求人票第一条を盾に、受付は週一時間の「趣味の時間」に制限。趣味で受付をする人が誕生した。窓口の新しい札には「営業時間: 気が向いた一時間」。七世界のお客様は、その一時間に合わせて並ぶようになった。",
+          "result": "保管庫の受付窓口を、うちの施設内へ移設した。カシムさんは兼務を粘ったが、受付は週一時間の「趣味の時間」に制限。新しい札は「営業時間、気が向いた一時間」七世界のお客様も、その一時間に合わせて並ぶようになった",
           "intent": "仕事ごと引っ越して、量を管理下に置く",
           "promise": "本人の切り替えは緩やかになるが、誰にでも使える成長ポイントを得る。",
           "memory": "「趣味の受付」の札を、七世界のお客様が写真に撮っていく。",
@@ -252,7 +360,7 @@
         {
           "id": "cassim-bell.join.choice.003",
           "label": "今回はカシム・ベルを誘わず、別の機会を待つ",
-          "result": "「今回は、見送ります」。彼は求人票を丁寧に折って、制服の内ポケットへ仕舞った。「この求人は、受付済みとして保管します。……期限は、設けません」。断ったのに、保管された。受付のプロの整理棚には、そういう棚もあるらしい。",
+          "result": "「今回は、見送ります」彼は求人票を丁寧に折って、内ポケットへ仕舞った。「この求人は、受付済みとして保管します」断ったのに、保管された。受付のプロには、そういう棚もあるらしい",
           "intent": "今回はチームへ誘わない",
           "promise": "今回の所属は見送るが、人物の物語と再会の可能性は失わない。",
           "memory": "期限のない求人票が、彼の内ポケットにある。",
@@ -277,7 +385,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 逆スカウト(オファー殺到)事件。求人票三箇条=「受付をしてはいけない職場」。断れない人の正体。",
+    "authorNote": "語り口V2・二行枠で改稿。v2改稿: 逆スカウト(オファー殺到)事件。求人票三箇条=「受付をしてはいけない職場」。断れない人の正体。",
     "legacyGeneratedIds": false
   }
 }

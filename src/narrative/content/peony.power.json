@@ -10,9 +10,17 @@
     "stage": "power"
   },
   "trigger": {
-    "actions": ["search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 400,
     "weight": 1
   },
@@ -37,29 +45,49 @@
     {
       "type": "direction",
       "id": "peony.power.node.direction.001",
-      "command": { "type": "background", "assetId": "peony.power.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "peony.power.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "line",
-      "id": "peony.power.node.line.001",
-      "lineId": "peony.power.line.001",
+      "id": "peony.power.node.line.001a",
+      "lineId": "peony.power.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "旧城壁展示区。解体予定の城壁レプリカが残る、夜の資材置き場だ。次の強敵に備えて、今日はピオニーの「角の封印」を外す練習に来た。彼女の全力は、角の封印を解いた時にだけ出る。"
+      "text": "旧城壁展示区。解体予定の城壁レプリカが残る、夜の資材置き場。"
     },
     {
       "type": "line",
-      "id": "peony.power.node.line.002",
-      "lineId": "peony.power.line.002",
+      "id": "peony.power.node.line.001b",
+      "lineId": "peony.power.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "次の強敵に備えて、今日は「角の封印」を外す練習に来た。"
+    },
+    {
+      "type": "line",
+      "id": "peony.power.node.line.001c",
+      "lineId": "peony.power.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "彼女の全力は、封印を解いた時にだけ出る。"
+    },
+    {
+      "type": "line",
+      "id": "peony.power.node.line.002a",
+      "lineId": "peony.power.line.002a",
       "speakerId": "legacy.speaker.1e9iq7o",
       "speakerName": "ピオニー",
       "mode": "dialogue",
-      "text": "……ほんとうに、はずすの？　わたしの全力、みたら、きらいになるかも。"
+      "text": "……ほんとうに、はずすの?　わたしの全力、みたら、きらいになるかも。"
     },
     {
       "type": "line",
-      "id": "peony.power.node.line.003",
-      "lineId": "peony.power.line.003",
+      "id": "peony.power.node.line.003a",
+      "lineId": "peony.power.line.003a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -67,45 +95,99 @@
     },
     {
       "type": "line",
-      "id": "peony.power.node.line.004",
-      "lineId": "peony.power.line.004",
+      "id": "peony.power.node.line.004a",
+      "lineId": "peony.power.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "彼女は角の封印——小さな花の飾りを、そっと外した。空気が変わる。夜の資材置き場に、静かな重圧が満ちる。新人くんの計測器は、電源を入れる前から煙を吹いた。予知である。",
+      "text": "彼女は角の封印——小さな花の飾りを、そっと外した。"
+    },
+    {
+      "type": "line",
+      "id": "peony.power.node.line.004b",
+      "lineId": "peony.power.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "空気が変わる。静かな重圧が、資材置き場に満ちる。"
+    },
+    {
+      "type": "line",
+      "id": "peony.power.node.line.004c",
+      "lineId": "peony.power.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "新人くんの計測器は、電源を入れる前から煙を吹いた。予知だ。",
       "emotion": "tension"
     },
     {
       "type": "direction",
       "id": "peony.power.node.direction.002",
-      "command": { "type": "effect", "effectId": "flash" }
+      "command": {
+        "type": "effect",
+        "effectId": "flash"
+      }
     },
     {
       "type": "line",
-      "id": "peony.power.node.line.005",
-      "lineId": "peony.power.line.005",
+      "id": "peony.power.node.line.005a",
+      "lineId": "peony.power.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "一撃だった。拳は、城壁レプリカに触れてすらいない。触れる寸前の風圧だけで、石積みの壁が、上から下まで、さらさらと砂に変わった。破壊というより、時間が早送りされたみたいな、静かな崩壊だった。",
+      "text": "一撃だった。耳が、先に竦んだ。"
+    },
+    {
+      "type": "line",
+      "id": "peony.power.node.line.005b",
+      "lineId": "peony.power.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "拳は、城壁レプリカに触れてすらいない。"
+    },
+    {
+      "type": "line",
+      "id": "peony.power.node.line.005c",
+      "lineId": "peony.power.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "触れる寸前の風圧だけで、壁が、さらさらと砂に変わった。"
+    },
+    {
+      "type": "line",
+      "id": "peony.power.node.line.005d",
+      "lineId": "peony.power.line.005d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "破壊というより、時間が早送りされたみたいな、静かな崩壊。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "peony.power.node.line.006",
-      "lineId": "peony.power.line.006",
+      "id": "peony.power.node.line.006a",
+      "lineId": "peony.power.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "振り向いたピオニーの顔が、泣きそうだった。全力を出すたび、この顔をしてきたのだろう。すごい、と言われるより先に、ごめんなさい、を用意している顔。",
+      "text": "振り向いたピオニーの顔が、泣きそうだった。全力を出すたび、この顔をしてきたのだろう。"
+    },
+    {
+      "type": "line",
+      "id": "peony.power.node.line.006b",
+      "lineId": "peony.power.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "すごい、より先に、ごめんなさいを用意している顔。",
       "emotion": "tension"
     },
     {
       "type": "direction",
       "id": "peony.power.node.direction.003",
-      "command": { "type": "still", "assetId": "peony.power.asset.still.001" }
+      "command": {
+        "type": "still",
+        "assetId": "peony.power.asset.still.001"
+      }
     },
     {
       "type": "line",
-      "id": "peony.power.node.line.007",
-      "lineId": "peony.power.line.007",
+      "id": "peony.power.node.line.007a",
+      "lineId": "peony.power.line.007a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -113,47 +195,97 @@
     },
     {
       "type": "line",
-      "id": "peony.power.node.line.008",
-      "lineId": "peony.power.line.008",
+      "id": "peony.power.node.line.008a",
+      "lineId": "peony.power.line.008a",
       "speakerId": "legacy.speaker.1e9iq7o",
       "speakerName": "ピオニー",
       "mode": "dialogue",
-      "text": "……もらう？　すな、を？"
+      "text": "……もらう?　すな、を?"
     },
     {
       "type": "line",
-      "id": "peony.power.node.line.009",
-      "lineId": "peony.power.line.009",
+      "id": "peony.power.node.line.009a",
+      "lineId": "peony.power.line.009a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "迷子案内所の前、砂場がほしいって、ずっと言ってたんです。城壁の砂なら、由緒正しくて最高です。"
+      "text": "迷子案内所の前、砂場がほしいって、ずっと言ってたんです。"
     },
     {
       "type": "line",
-      "id": "peony.power.node.line.010",
-      "lineId": "peony.power.line.010",
+      "id": "peony.power.node.line.009b",
+      "lineId": "peony.power.line.009b",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "城壁の砂なら、由緒正しくて最高です。"
+    },
+    {
+      "type": "line",
+      "id": "peony.power.node.line.010a",
+      "lineId": "peony.power.line.010a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "翌週、案内所の前に、小さな砂場ができた。ピオニーが自分の全力で作った砂で、子どもたちが小さな城を築いている。壊した城壁が、百個の小さな城になった。",
+      "text": "翌週、案内所の前に、小さな砂場ができた。"
+    },
+    {
+      "type": "line",
+      "id": "peony.power.node.line.010b",
+      "lineId": "peony.power.line.010b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ピオニーの全力で作った砂で、子どもたちが小さな城を築いている。"
+    },
+    {
+      "type": "line",
+      "id": "peony.power.node.line.010c",
+      "lineId": "peony.power.line.010c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "壊した城壁が、百個の小さな城になった。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "peony.power.node.line.011",
-      "lineId": "peony.power.line.011",
+      "id": "peony.power.node.line.011a",
+      "lineId": "peony.power.line.011a",
       "speakerId": "legacy.speaker.1e9iq7o",
       "speakerName": "ピオニー",
       "mode": "dialogue",
-      "text": "……こわしたものが、あそびばに、なった。……わたしの全力、はじめて、ありがとうって言われた。"
+      "text": "……こわしたものが、あそびばに、なった。"
     },
     {
       "type": "line",
-      "id": "peony.power.node.line.012",
-      "lineId": "peony.power.line.012",
+      "id": "peony.power.node.line.011b",
+      "lineId": "peony.power.line.011b",
+      "speakerId": "legacy.speaker.1e9iq7o",
+      "speakerName": "ピオニー",
+      "mode": "dialogue",
+      "text": "……わたしの全力、はじめて、ありがとうって言われた。"
+    },
+    {
+      "type": "line",
+      "id": "peony.power.node.line.012a",
+      "lineId": "peony.power.line.012a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "壊さないことだけが、優しさじゃない。壊れたあとの使い道まで一緒に考えるのが、うちのチームの流儀になった。夜の展示区で、試合用の型を決める。",
+      "text": "壊さないことだけが、優しさじゃない。"
+    },
+    {
+      "type": "line",
+      "id": "peony.power.node.line.012b",
+      "lineId": "peony.power.line.012b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "壊れたあとの使い道まで一緒に考えるのが、うちの流儀になった。"
+    },
+    {
+      "type": "line",
+      "id": "peony.power.node.line.012c",
+      "lineId": "peony.power.line.012c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "夜の展示区で、試合用の型を決める。",
       "emotion": "resolve"
     },
     {
@@ -163,28 +295,56 @@
         {
           "id": "peony.power.choice.001",
           "label": "角の封印を外し、壊さず止まる練習をする",
-          "result": "型の名前は「寸止めの花」。角の封印を外した全力の一撃を、相手の眼前ぴたりで止める。風圧だけが相手の装備を砂に変え、本人には髪一本触れない。練習台の私は、全力の拳が目の前で止まる瞬間を百回見た。百回目でも心臓は跳ねたが、怖さは一回目から、ずっとなかった。",
+          "result": "型の名は「寸止めの花」——全力の一撃を、相手の眼前ぴたりで止める。風圧だけが装備を砂に変え、本人には髪一本触れない。練習台の私は、拳が止まる瞬間を百回見た。心臓は跳ねたが、怖さは一回目からなかった。",
           "intent": "全力と制御を、両方手に入れる",
           "promise": "失敗時の危険を引き受け、この人専用の成長を最大まで進める。",
           "memory": "「寸止めの花」の練習台を務めたことを、私は少し自慢に思っている。",
           "tone": "heroic",
           "effects": [
-            { "type": "relationship", "target": { "type": "fighter", "fighterId": "peony" }, "mode": "add", "trust": 10, "ownership": -4 },
-            { "type": "fighterPoints", "target": { "type": "fighter", "fighterId": "peony" }, "amount": 5 }
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "peony"
+              },
+              "mode": "add",
+              "trust": 10,
+              "ownership": -4
+            },
+            {
+              "type": "fighterPoints",
+              "target": {
+                "type": "fighter",
+                "fighterId": "peony"
+              },
+              "amount": 5
+            }
           ],
           "goto": "peony.power.node.effect.001"
         },
         {
           "id": "peony.power.choice.002",
           "label": "角を封じたまま、守る力だけを広げる",
-          "result": "封印は外さず、守備範囲を広げる訓練にした。両腕のドームで守れる範囲は、最終的に観客席一区画ぶんまで広がった。新人くんの記録板には「かべ。うごく。やさしい。」。この三語で監査が通るのだから、彼の文才は本物である。",
+          "result": "封印は外さず、守備範囲を広げる訓練にした。両腕のドームは、最終的に観客席一区画ぶんまで広がった。新人くんの記録板には「かべ。うごく。やさしい。」——この三語で監査が通る。彼の文才は本物だ。",
           "intent": "破壊ではなく防御の上限を伸ばす",
           "promise": "本来の力は封印したまま、チーム全体の成長へ成果を持ち帰る。",
           "memory": "観客席一区画ぶんの守備範囲を、運営は防災設備として登録した。",
           "tone": "pragmatic",
           "effects": [
-            { "type": "relationship", "target": { "type": "fighter", "fighterId": "peony" }, "mode": "add", "trust": 0, "ownership": 9 },
-            { "type": "sharedPoints", "amount": 5 }
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "peony"
+              },
+              "mode": "add",
+              "trust": 0,
+              "ownership": 9
+            },
+            {
+              "type": "sharedPoints",
+              "amount": 5
+            }
           ],
           "goto": "peony.power.node.effect.001"
         }
@@ -194,7 +354,11 @@
       "type": "effect",
       "id": "peony.power.node.effect.001",
       "effects": [
-        { "type": "setStoryStage", "fighterId": "peony", "stage": 4 }
+        {
+          "type": "setStoryStage",
+          "fighterId": "peony",
+          "stage": 4
+        }
       ]
     },
     {
@@ -206,7 +370,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 風圧で城壁が砂になる全力デモ。壊した砂→案内所の砂場(壊れたあと一緒に直す/使うのcanon感情軸)。",
+    "authorNote": "語り口V2・二行枠で改稿。風圧で城壁が砂になる全力デモ。壊した砂→案内所の砂場(壊れたあと一緒に直す/使うのcanon感情軸)。",
     "legacyGeneratedIds": false
   }
 }

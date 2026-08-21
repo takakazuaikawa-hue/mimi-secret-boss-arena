@@ -51,11 +51,19 @@
   "nodes": [
     {
       "type": "line",
-      "id": "amara.bond.node.line.001",
-      "lineId": "amara.bond.line.001",
+      "id": "amara.bond.node.line.001a",
+      "lineId": "amara.bond.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "先週の大会の賞品は、温泉旅行だった。ペア一組、一泊二日。チーム内のくじ引きの結果——私と、アマラである。神様、話が急です。"
+      "text": "先週の大会の賞品は、温泉旅行。ペア一組、一泊二日。"
+    },
+    {
+      "type": "line",
+      "id": "amara.bond.node.line.001b",
+      "lineId": "amara.bond.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "くじ引きの結果——私と、アマラさん。神様、話が急です。"
     },
     {
       "type": "direction",
@@ -68,35 +76,52 @@
     },
     {
       "type": "line",
-      "id": "amara.bond.node.line.002",
-      "lineId": "amara.bond.line.002",
+      "id": "amara.bond.node.line.002a",
+      "lineId": "amara.bond.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "旅館に着いて三十秒で、アマラは効能書きの前に立った。「すべての疲れに効く」。……嫌な予感しかしない。",
+      "text": "旅館に着いて三十秒で、アマラさんは効能書きの前に立った。"
+    },
+    {
+      "type": "line",
+      "id": "amara.bond.node.line.002b",
+      "lineId": "amara.bond.line.002b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「すべての疲れに効く」……嫌な予感しかしない。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "amara.bond.node.line.003",
-      "lineId": "amara.bond.line.003",
+      "id": "amara.bond.node.line.003a",
+      "lineId": "amara.bond.line.003a",
       "speakerId": "legacy.speaker.14shtqw",
       "speakerName": "アマラ",
       "mode": "dialogue",
-      "text": "開廷します。本日の被告——「すべての疲れに効く」。誇大表示の疑い。"
+      "text": "開廷します。本日の被告——「すべての疲れに効く」"
     },
     {
       "type": "line",
-      "id": "amara.bond.node.line.004",
-      "lineId": "amara.bond.line.004",
+      "id": "amara.bond.node.line.003b",
+      "lineId": "amara.bond.line.003b",
+      "speakerId": "legacy.speaker.14shtqw",
+      "speakerName": "アマラ",
+      "mode": "dialogue",
+      "text": "誇大表示の疑い。"
+    },
+    {
+      "type": "line",
+      "id": "amara.bond.node.line.004a",
+      "lineId": "amara.bond.line.004a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "温泉を裁かないでください！！"
+      "text": "温泉を裁かないでください!!"
     },
     {
       "type": "line",
-      "id": "amara.bond.node.line.005",
-      "lineId": "amara.bond.line.005",
+      "id": "amara.bond.node.line.005a",
+      "lineId": "amara.bond.line.005a",
       "speakerId": "legacy.speaker.14shtqw",
       "speakerName": "アマラ",
       "mode": "dialogue",
@@ -104,8 +129,8 @@
     },
     {
       "type": "line",
-      "id": "amara.bond.node.line.006",
-      "lineId": "amara.bond.line.006",
+      "id": "amara.bond.node.line.006a",
+      "lineId": "amara.bond.line.006a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -113,8 +138,8 @@
     },
     {
       "type": "line",
-      "id": "amara.bond.node.line.007",
-      "lineId": "amara.bond.line.007",
+      "id": "amara.bond.node.line.007a",
+      "lineId": "amara.bond.line.007a",
       "speakerId": "legacy.speaker.14shtqw",
       "speakerName": "アマラ",
       "mode": "dialogue",
@@ -122,11 +147,19 @@
     },
     {
       "type": "line",
-      "id": "amara.bond.node.line.008",
-      "lineId": "amara.bond.line.008",
+      "id": "amara.bond.node.line.008a",
+      "lineId": "amara.bond.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "かくして私は、人生で初めて「証拠」として温泉に入った。いいお湯だった。証拠として、最高だった。",
+      "text": "かくして私は、人生で初めて「証拠」として温泉に入った。"
+    },
+    {
+      "type": "line",
+      "id": "amara.bond.node.line.008b",
+      "lineId": "amara.bond.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "いいお湯だった。証拠として、最高だった。",
       "emotion": "comic"
     },
     {
@@ -139,17 +172,33 @@
     },
     {
       "type": "line",
-      "id": "amara.bond.node.line.009",
-      "lineId": "amara.bond.line.009",
+      "id": "amara.bond.node.line.009a",
+      "lineId": "amara.bond.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "湯上がり、縁側。浴衣のアマラが、髪を下ろしていた。いつも法廷の人が、今日は夜風の人だった。見てはいけないものを見た気がして、私は麦茶を一気飲みした。",
+      "text": "湯上がり、縁側。浴衣のアマラさんが、髪を下ろしていた。"
+    },
+    {
+      "type": "line",
+      "id": "amara.bond.node.line.009b",
+      "lineId": "amara.bond.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "いつも法廷の人が、今日は夜風の人だった。"
+    },
+    {
+      "type": "line",
+      "id": "amara.bond.node.line.009c",
+      "lineId": "amara.bond.line.009c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "見てはいけないものを見た気がして、麦茶を一気飲みした。耳が、熱い。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "amara.bond.node.line.010",
-      "lineId": "amara.bond.line.010",
+      "id": "amara.bond.node.line.010a",
+      "lineId": "amara.bond.line.010a",
       "speakerId": "legacy.speaker.14shtqw",
       "speakerName": "アマラ",
       "mode": "dialogue",
@@ -157,8 +206,8 @@
     },
     {
       "type": "line",
-      "id": "amara.bond.node.line.011",
-      "lineId": "amara.bond.line.011",
+      "id": "amara.bond.node.line.011a",
+      "lineId": "amara.bond.line.011a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -166,26 +215,34 @@
     },
     {
       "type": "line",
-      "id": "amara.bond.node.line.012",
-      "lineId": "amara.bond.line.012",
+      "id": "amara.bond.node.line.012a",
+      "lineId": "amara.bond.line.012a",
       "speakerId": "legacy.speaker.14shtqw",
       "speakerName": "アマラ",
       "mode": "dialogue",
-      "text": "被告「すべての疲れに効く」は——無罪。……初めて、無罪を出しました。"
+      "text": "被告「すべての疲れに効く」は、無罪。……初めて、無罪を出しました。"
     },
     {
       "type": "line",
-      "id": "amara.bond.node.line.013",
-      "lineId": "amara.bond.line.013",
+      "id": "amara.bond.node.line.013a",
+      "lineId": "amara.bond.line.013a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "世界を裁く人の記念すべき初無罪が、温泉の効能書きだった。アマラは判決文を書く手を止めて、少しだけ困っていた。うれしい時の顔を、まだ持っていないのだ。",
+      "text": "世界を裁く人の初無罪、賞品は温泉の効能書きだった。"
+    },
+    {
+      "type": "line",
+      "id": "amara.bond.node.line.013b",
+      "lineId": "amara.bond.line.013b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "アマラさんは判決文を書く手を止めて、少し困ってた。うれしい時の顔を、まだ知らないだけ。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "amara.bond.node.line.014",
-      "lineId": "amara.bond.line.014",
+      "id": "amara.bond.node.line.014a",
+      "lineId": "amara.bond.line.014a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -193,8 +250,8 @@
     },
     {
       "type": "line",
-      "id": "amara.bond.node.line.015",
-      "lineId": "amara.bond.line.015",
+      "id": "amara.bond.node.line.015a",
+      "lineId": "amara.bond.line.015a",
       "speakerId": "legacy.speaker.14shtqw",
       "speakerName": "アマラ",
       "mode": "dialogue",
@@ -202,8 +259,8 @@
     },
     {
       "type": "line",
-      "id": "amara.bond.node.line.016",
-      "lineId": "amara.bond.line.016",
+      "id": "amara.bond.node.line.016a",
+      "lineId": "amara.bond.line.016a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -211,8 +268,8 @@
     },
     {
       "type": "line",
-      "id": "amara.bond.node.line.017",
-      "lineId": "amara.bond.line.017",
+      "id": "amara.bond.node.line.017a",
+      "lineId": "amara.bond.line.017a",
       "speakerId": "legacy.speaker.14shtqw",
       "speakerName": "アマラ",
       "mode": "dialogue",
@@ -221,29 +278,48 @@
     {
       "type": "direction",
       "id": "amara.bond.node.direction.003",
-      "command": { "type": "still", "assetId": "amara.bond.asset.still.001" }
+      "command": {
+        "type": "still",
+        "assetId": "amara.bond.asset.still.001"
+      }
     },
     {
       "type": "line",
-      "id": "amara.bond.node.line.018",
-      "lineId": "amara.bond.line.018",
+      "id": "amara.bond.node.line.018a",
+      "lineId": "amara.bond.line.018a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "アマラは強かった。ただし一打ごとに「今の回転の定義は」と確認が入るので、ラリー一本に三分かかった。浴衣の袖をたすき掛けにして、髪を結び直して、この人は卓球にも全力だった。",
+      "text": "アマラさんは強かった。ただし一打ごとに「今の回転の定義は」と確認が入る。"
+    },
+    {
+      "type": "line",
+      "id": "amara.bond.node.line.018b",
+      "lineId": "amara.bond.line.018b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "だからラリー一本に三分。浴衣の袖をたすき掛け、髪も結び直して卓球にも全力だった。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "amara.bond.node.line.019",
-      "lineId": "amara.bond.line.019",
+      "id": "amara.bond.node.line.019a",
+      "lineId": "amara.bond.line.019a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "10対10。最終ラリーの途中で、館内の消灯時間が来た。真っ暗な卓球室に、球の音だけが三回跳ねて、止まった。——引き分け。"
+      "text": "10対10。最終ラリーの途中で、消灯時間が来た。"
     },
     {
       "type": "line",
-      "id": "amara.bond.node.line.020",
-      "lineId": "amara.bond.line.020",
+      "id": "amara.bond.node.line.019b",
+      "lineId": "amara.bond.line.019b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "真っ暗な卓球室に、球の音が三回跳ねて止まった。引き分け。"
+    },
+    {
+      "type": "line",
+      "id": "amara.bond.node.line.020a",
+      "lineId": "amara.bond.line.020a",
       "speakerId": "legacy.speaker.14shtqw",
       "speakerName": "アマラ",
       "mode": "dialogue",
@@ -251,8 +327,8 @@
     },
     {
       "type": "line",
-      "id": "amara.bond.node.line.021",
-      "lineId": "amara.bond.line.021",
+      "id": "amara.bond.node.line.021a",
+      "lineId": "amara.bond.line.021a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -260,25 +336,45 @@
     },
     {
       "type": "line",
-      "id": "amara.bond.node.line.022",
-      "lineId": "amara.bond.line.022",
+      "id": "amara.bond.node.line.022a",
+      "lineId": "amara.bond.line.022a",
       "speakerId": "legacy.speaker.14shtqw",
       "speakerName": "アマラ",
       "mode": "dialogue",
-      "text": "……控訴します。……いえ。記録に残します。「本日の勝負、両者勝訴」と。"
+      "text": "……控訴します。……いえ。記録に残します。"
+    },
+    {
+      "type": "line",
+      "id": "amara.bond.node.line.022b",
+      "lineId": "amara.bond.line.022b",
+      "speakerId": "legacy.speaker.14shtqw",
+      "speakerName": "アマラ",
+      "mode": "dialogue",
+      "text": "「本日の勝負、両者勝訴」と。"
     },
     {
       "type": "direction",
       "id": "amara.bond.node.direction.004",
-      "command": { "type": "still", "assetId": "amara.bond.asset.still.002" }
+      "command": {
+        "type": "still",
+        "assetId": "amara.bond.asset.still.002"
+      }
     },
     {
       "type": "line",
-      "id": "amara.bond.node.line.023",
-      "lineId": "amara.bond.line.023",
+      "id": "amara.bond.node.line.023a",
+      "lineId": "amara.bond.line.023a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "暗闇で、月明かりだけがアマラの横顔を照らしていた。世界を裁ける人が、あいこ一つに三十秒かけて、新しい判決を発明した瞬間だった。縁側の卓には箸袋の第三号。「本日の温泉に、異議なし。——次回期日の継続を求める」。次も二人で、という意味に読めたのは、湯あたりのせいにしておく。",
+      "text": "「本日の温泉に、異議なし。次回期日の継続を求める」"
+    },
+    {
+      "type": "line",
+      "id": "amara.bond.node.line.023b",
+      "lineId": "amara.bond.line.023b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "次も二人で、という意味に読めたのは、湯あたりのせいにしておく。",
       "emotion": "tender"
     },
     {
@@ -288,7 +384,7 @@
         {
           "id": "amara.bond.choice.001",
           "label": "消灯後だけど、「両者勝訴」の練習にもう一本つきあう",
-          "result": "月明かりの卓球室で、こっそり三本。全部「両者勝訴」になった。仲居さんに見つかり、世界を裁ける人と接客のプロが、廊下に並んで正座で「ごめんなさい」をした。帰り道、アマラが小さく言った。「正座も、悪くない判決でした」。以後、うちの作戦会議は、なぜか卓球のラリーで始まる。",
+          "result": "月明かりの卓球室で、こっそり三本。全部「両者勝訴」に。仲居さんに見つかり、二人で廊下に正座「ごめんなさい」帰り道、アマラさんが「正座も、悪くない判決でした」以後、作戦会議はなぜか卓球で始まる",
           "intent": "勝敗のない時間を、この人の辞書に増やす",
           "promise": "読みにくい作戦になる代わりに、この人だけの成長を大きく進める。",
           "memory": "「両者勝訴」を発明した温泉の夜を、二人とも判例として引用する。",
@@ -318,7 +414,7 @@
         {
           "id": "amara.bond.choice.002",
           "label": "旅の締めに、次戦の作戦会議を軽くやる",
-          "result": "縁側で三十分だけ、次戦の話をした。アマラの背筋が三センチ伸び、規則書はすでに赤字だらけで、「合法でも感じが悪い」抜け道には自主的にバツがついていた。翌朝、宿の主人が効能書きの隣に「無罪判決文」を額装して飾っていた。チームの評判が、また変な方向に良くなった。",
+          "result": "縁側で三十分、次戦の話をした。アマラさんの背筋が三センチ伸び、規則書は赤字だらけ「合法でも感じが悪い」抜け道には自主的にバツ。翌朝、宿の主人が効能書きの隣に無罪判決文を額装。評判がまた変な方向に良くなった",
           "intent": "チームの勝ち筋を先に固める",
           "promise": "本人の休憩は短くなるが、全員へ配れる成長ポイントを得る。",
           "memory": "温泉の夜に決めた作戦と、額装された無罪判決を二人とも覚えている。",
@@ -363,7 +459,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md",
-    "authorNote": "v3改稿: 温泉旅行へ舞台移動。浴衣・髪下ろし・月明かりのドキドキ。初の無罪判決と「両者勝訴」誕生。箸袋第三号。",
+    "authorNote": "語り口V2・二行枠で改稿。v3改稿: 温泉旅行へ舞台移動。浴衣・髪下ろし・月明かりのドキドキ。初の無罪判決と「両者勝訴」誕生。箸袋第三号。",
     "legacyGeneratedIds": false
   }
 }

@@ -54,19 +54,35 @@
     },
     {
       "type": "line",
-      "id": "night-eater.meet.node.line.001",
-      "lineId": "night-eater.meet.line.001",
+      "id": "night-eater.meet.node.line.001a",
+      "lineId": "night-eater.meet.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "閉店五分前。私は照明管理室へ、『電球が一斉に怯えている』という、修理伝票としてかなり詩的な苦情を届けに行った。"
+      "text": "閉店五分前。修理伝票を片手に、照明管理室へ走った。"
     },
     {
       "type": "line",
-      "id": "night-eater.meet.node.line.002",
-      "lineId": "night-eater.meet.line.002",
+      "id": "night-eater.meet.node.line.001b",
+      "lineId": "night-eater.meet.line.001b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "管理室の扉を開けると、中は真っ暗だった。おかしい。ここは照明の、いわば本丸である。その暗闇の奥で、上品な影が、スプーンを持って座っていた。"
+      "text": "内容は「電球が一斉に怯えている」——変な苦情だ。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.meet.node.line.002a",
+      "lineId": "night-eater.meet.line.002a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "扉を開けると、中は真っ暗だった。耳が、ぴんと立つ。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.meet.node.line.002b",
+      "lineId": "night-eater.meet.line.002b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ここは照明の、いわば本丸のはずなのに。暗闇の奥、上品な影が、スプーンを持って座っていた。"
     },
     {
       "type": "direction",
@@ -86,47 +102,81 @@
     },
     {
       "type": "line",
-      "id": "night-eater.meet.node.line.003",
-      "lineId": "night-eater.meet.line.003",
+      "id": "night-eater.meet.node.line.003a",
+      "lineId": "night-eater.meet.line.003a",
       "speakerId": "legacy.speaker.ij983g",
       "speakerName": "夜を食べるもの",
       "mode": "dialogue",
-      "text": "……この蛍光灯は、渋みが強い。事務仕事の苦労の味がする。——三つ星。"
+      "text": "……この蛍光灯は、渋みが強い。"
     },
     {
       "type": "line",
-      "id": "night-eater.meet.node.line.004",
-      "lineId": "night-eater.meet.line.004",
+      "id": "night-eater.meet.node.line.003b",
+      "lineId": "night-eater.meet.line.003b",
+      "speakerId": "legacy.speaker.ij983g",
+      "speakerName": "夜を食べるもの",
+      "mode": "dialogue",
+      "text": "事務仕事の苦労の味がする。——三つ星。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.meet.node.line.004a",
+      "lineId": "night-eater.meet.line.004a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "食レポしてる場合ですか！　うちの電球が怯えてるんですけど！？"
+      "text": "食レポしてる場合ですか!　うちの電球が怯えてるんですけど!?"
     },
     {
       "type": "line",
-      "id": "night-eater.meet.node.line.005",
-      "lineId": "night-eater.meet.line.005",
+      "id": "night-eater.meet.node.line.005a",
+      "lineId": "night-eater.meet.line.005a",
       "speakerId": "legacy.speaker.ij983g",
       "speakerName": "夜を食べるもの",
       "mode": "dialogue",
-      "text": "怯えさせてはいない。順番を、待たせているだけ。……熟成中の光を先に食べるのは、無作法なので。"
+      "text": "怯えさせてはいない。順番を、待たせているだけ。"
     },
     {
       "type": "line",
-      "id": "night-eater.meet.node.line.006",
-      "lineId": "night-eater.meet.line.006",
+      "id": "night-eater.meet.node.line.005b",
+      "lineId": "night-eater.meet.line.005b",
+      "speakerId": "legacy.speaker.ij983g",
+      "speakerName": "夜を食べるもの",
+      "mode": "dialogue",
+      "text": "……熟成中の光を先に食べるのは、無作法なので。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.meet.node.line.006a",
+      "lineId": "night-eater.meet.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "光を食べる。つまりこの影が、最近フロアの照明が二割暗い原因だ。犯人は自首するどころか、ソムリエの顔で在庫を格付けしていた。",
+      "text": "光を、食べる?　……犯人、見つけた。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.meet.node.line.006b",
+      "lineId": "night-eater.meet.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "最近フロアが二割暗い理由は、この人だった。犯人は自首どころか、ソムリエ顔で格付け中。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "night-eater.meet.node.line.007",
-      "lineId": "night-eater.meet.line.007",
+      "id": "night-eater.meet.node.line.007a",
+      "lineId": "night-eater.meet.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私が名乗ろうとした、その時。影の手元が滑って、スプーンが大シャンデリアの制御盤に触れた。——フロア全体の音が、消えた。",
+      "text": "名乗ろうとした、その時だった。影の手元が滑って、スプーンが制御盤に触れた。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.meet.node.line.007b",
+      "lineId": "night-eater.meet.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "——フロア全体の音が、消えた。",
       "emotion": "tension"
     },
     {
@@ -139,44 +189,60 @@
     },
     {
       "type": "line",
-      "id": "night-eater.meet.node.line.008",
-      "lineId": "night-eater.meet.line.008",
+      "id": "night-eater.meet.node.line.008a",
+      "lineId": "night-eater.meet.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "真っ暗。完全な、真っ暗だった。カジノの喧騒が遠くでざわめきに変わる。パニックになりかけた私の耳元で、声だけが、静かに近かった。",
+      "text": "真っ暗。完全な、真っ暗だった。カジノの喧騒が、遠くのざわめきに変わる。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.meet.node.line.008b",
+      "lineId": "night-eater.meet.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "耳元で、声だけが、静かに近かった。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "night-eater.meet.node.line.009",
-      "lineId": "night-eater.meet.line.009",
+      "id": "night-eater.meet.node.line.009a",
+      "lineId": "night-eater.meet.line.009a",
       "speakerId": "legacy.speaker.ij983g",
       "speakerName": "夜を食べるもの",
       "mode": "dialogue",
-      "text": "……こわい？"
+      "text": "……こわい?"
     },
     {
       "type": "line",
-      "id": "night-eater.meet.node.line.010",
-      "lineId": "night-eater.meet.line.010",
+      "id": "night-eater.meet.node.line.010a",
+      "lineId": "night-eater.meet.line.010a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "び、びっくりしただけです。それより早く戻してください、お客様が転びます！"
+      "text": "び、びっくりしただけです。それより早く戻してください、お客様が転びます!"
     },
     {
       "type": "line",
-      "id": "night-eater.meet.node.line.011",
-      "lineId": "night-eater.meet.line.011",
+      "id": "night-eater.meet.node.line.011a",
+      "lineId": "night-eater.meet.line.011a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "短い沈黙のあと、信じられないことが起きた。影が、口元に手を当てて、食べた光を一口ぶん、そっと戻したのだ。シャンデリアが灯り直る。フロアの喧騒が帰ってくる。",
+      "text": "短い沈黙のあと、信じられないことが起きた。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.meet.node.line.011b",
+      "lineId": "night-eater.meet.line.011b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "影が、口元に手を当てて、光を一口ぶん、そっと戻した。シャンデリアが、灯り直る。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "night-eater.meet.node.line.012",
-      "lineId": "night-eater.meet.line.012",
+      "id": "night-eater.meet.node.line.012a",
+      "lineId": "night-eater.meet.line.012a",
       "speakerId": "legacy.speaker.ij983g",
       "speakerName": "夜を食べるもの",
       "mode": "dialogue",
@@ -184,47 +250,105 @@
     },
     {
       "type": "line",
-      "id": "night-eater.meet.node.line.013",
-      "lineId": "night-eater.meet.line.013",
+      "id": "night-eater.meet.node.line.013a",
+      "lineId": "night-eater.meet.line.013a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "言われてみれば、灯り直ったシャンデリアは、前より少しだけ暖色だった。お客様たちが「今夜は明かりがきれいだ」と口々に言っている。営業妨害と営業貢献を同時にする存在を、私は初めて見た。",
+      "text": "灯り直ったシャンデリアは、前より少し暖色だった。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.meet.node.line.013b",
+      "lineId": "night-eater.meet.line.013b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "お客様たちが「今夜は明かりがきれいだ」と言っている。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.meet.node.line.013c",
+      "lineId": "night-eater.meet.line.013c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "営業妨害と営業貢献を同時にする人を、初めて見た。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "night-eater.meet.node.line.014",
-      "lineId": "night-eater.meet.line.014",
+      "id": "night-eater.meet.node.line.014a",
+      "lineId": "night-eater.meet.line.014a",
       "speakerId": "legacy.speaker.ij983g",
       "speakerName": "夜を食べるもの",
       "mode": "dialogue",
-      "text": "私の夜は、長すぎるの。誰の朝にも、もう邪魔されない、終わった夜。……だから味のある光が、恋しくて。"
+      "text": "私の夜は、長すぎるの。誰の朝にも、もう邪魔されない、終わった夜。"
     },
     {
       "type": "line",
-      "id": "night-eater.meet.node.line.015",
-      "lineId": "night-eater.meet.line.015",
+      "id": "night-eater.meet.node.line.014b",
+      "lineId": "night-eater.meet.line.014b",
+      "speakerId": "legacy.speaker.ij983g",
+      "speakerName": "夜を食べるもの",
+      "mode": "dialogue",
+      "text": "……だから味のある光が、恋しくて。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.meet.node.line.015a",
+      "lineId": "night-eater.meet.line.015a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "終わった夜。その言い方が、少しだけ寂しくて、私は接客の頭で考えた。怯える電球と、お腹を空かせた夜と、閉店五分前。全部まとめて解決する方法を。",
+      "text": "終わった夜。その言い方が、少し寂しい。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.meet.node.line.015b",
+      "lineId": "night-eater.meet.line.015b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "接客の頭で、考えた。怯える電球と、空腹の夜と、閉店五分前。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.meet.node.line.015c",
+      "lineId": "night-eater.meet.line.015c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ぜんぶ解決する方法を。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "night-eater.meet.node.line.016",
-      "lineId": "night-eater.meet.line.016",
+      "id": "night-eater.meet.node.line.016a",
+      "lineId": "night-eater.meet.line.016a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "お客様。当店、賞味期限切れ間近の電球在庫が、倉庫に二百個ほどございます。——お味見、なさいますか。"
+      "text": "お客様。当店、賞味期限切れ間近の電球在庫が、倉庫に二百個ほどございます。"
     },
     {
       "type": "line",
-      "id": "night-eater.meet.node.line.017",
-      "lineId": "night-eater.meet.line.017",
+      "id": "night-eater.meet.node.line.016b",
+      "lineId": "night-eater.meet.line.016b",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "——お味見、なさいますか。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.meet.node.line.017a",
+      "lineId": "night-eater.meet.line.017a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "影が、ぴたりと止まった。暗闇の中で、初めて表情が分かった。あれは絶対に、目を輝かせている顔だ。光ってないのに、分かる。",
+      "text": "影が、ぴたりと止まった。暗闇の中で、初めて表情が分かった。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.meet.node.line.017b",
+      "lineId": "night-eater.meet.line.017b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "あれは絶対、目を輝かせている顔。光ってないのに、分かる。",
       "emotion": "comic"
     },
     {
@@ -234,7 +358,7 @@
         {
           "id": "night-eater.meet.choice.001",
           "label": "照明を一列だけ消して話す",
-          "result": "在庫の電球を並べて、閉店後の試食会を開いた。彼女は二百個を「若い」「熟しすぎ」「これは当たり年」と丁寧に格付けし、最後に管理室の怯えていた電球たちへ「あなたたちは食べない。安心なさい」と宣言した。翌朝、電球の怯え苦情はゼロになった。代わりに私の机へ、星五つの評価票が置いてあった。評価対象、「閉店五分前の機転」。",
+          "result": "閉店後、在庫の電球二百個で試食会を開いた。彼女は「若い」「当たり年」と格付けし、怯える電球には「食べない」と宣言。翌朝、苦情はゼロ。机には星五つの評価票が置いてあった。",
           "intent": "追い出すより先に、腹を満たす段取りをする",
           "promise": "目先の報酬は得ない代わりに、この人が何に飢えているかを知る。",
           "memory": "在庫処分と夜食を両立させた店員として、夜を食べるものは私を覚えている。",
@@ -256,7 +380,7 @@
         {
           "id": "night-eater.meet.choice.002",
           "label": "今日は夜を食べるものを誘わず、用事へ戻る",
-          "result": "修理伝票の原因欄に、私は正直に書いた。「原因: 美食家。対処: 在庫案内済み」。上長は首をかしげていたが、以後、電球の怯え苦情は来なくなった。倉庫の期限切れ電球だけが、なぜか毎週きれいに減っていく。伝票の隅に、たまに小さな星の落書きが増えている。",
+          "result": "伝票の原因欄に「美食家。対処、在庫案内済み」と正直に書いた。上長は首をかしげたが、苦情は来なくなった。倉庫の期限切れ電球だけが、毎週きれいに減っている。伝票の隅に、小さな星の落書きが増えていく。",
           "intent": "今日は修理伝票の処理に徹する",
           "promise": "所属選手にはならないが、後の出来事で再会できる。",
           "memory": "倉庫の在庫案内をした店員のことを、夜を食べるものは覚えている。",
@@ -291,7 +415,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 大シャンデリア消灯事件と初めての「戻す」。暗闇で声だけ近いドキドキ。Q1手掛かり=誰の朝にも邪魔されない終わった夜。",
+    "authorNote": "語り口V2・二行枠で改稿。大シャンデリア消灯事件と初めての「戻す」。暗闇で声だけ近いドキドキ。Q1手掛かり=誰の朝にも邪魔されない終わった夜。",
     "legacyGeneratedIds": false
   }
 }

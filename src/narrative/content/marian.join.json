@@ -10,9 +10,18 @@
     "stage": "join"
   },
   "trigger": {
-    "actions": ["rest", "work"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "rest",
+      "work"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 400,
     "weight": 1
   },
@@ -37,97 +46,204 @@
     {
       "type": "direction",
       "id": "marian.join.node.direction.001",
-      "command": { "type": "background", "assetId": "marian.join.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "marian.join.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "line",
-      "id": "marian.join.node.line.001",
-      "lineId": "marian.join.line.001",
+      "id": "marian.join.node.line.001a",
+      "lineId": "marian.join.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "マリアンの選手契約の面談は、静かな礼拝スペースで行うことになった。人混みだと、治したくない人まで治してしまうからだ。この面談の準備だけで、彼女の日常の不便さが少し分かる。"
+      "text": "マリアンの選手契約の面談は、静かな礼拝スペースで行うことになった。"
     },
     {
       "type": "line",
-      "id": "marian.join.node.line.002",
-      "lineId": "marian.join.line.002",
+      "id": "marian.join.node.line.001b",
+      "lineId": "marian.join.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "人混みだと、治したくない人まで、治してしまうから。"
+    },
+    {
+      "type": "line",
+      "id": "marian.join.node.line.001c",
+      "lineId": "marian.join.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "この面談の準備だけで、彼女の日常の不便さが、少し分かる。"
+    },
+    {
+      "type": "line",
+      "id": "marian.join.node.line.002a",
+      "lineId": "marian.join.line.002a",
       "speakerId": "legacy.speaker.quc8xa",
       "speakerName": "マリアン",
       "mode": "dialogue",
-      "text": "契約の前に、一つだけ。……あなたの脈を、測らせてください。診断は、契約より先です。"
+      "text": "契約の前に、一つだけ。"
+    },
+    {
+      "type": "line",
+      "id": "marian.join.node.line.002b",
+      "lineId": "marian.join.line.002b",
+      "speakerId": "legacy.speaker.quc8xa",
+      "speakerName": "マリアン",
+      "mode": "dialogue",
+      "text": "……あなたの脈を、測らせてください。診断は、契約より先です。"
     },
     {
       "type": "direction",
       "id": "marian.join.node.direction.002",
-      "command": { "type": "still", "assetId": "marian.join.asset.still.001" }
+      "command": {
+        "type": "still",
+        "assetId": "marian.join.asset.still.001"
+      }
     },
     {
       "type": "line",
-      "id": "marian.join.node.line.003",
-      "lineId": "marian.join.line.003",
+      "id": "marian.join.node.line.003a",
+      "lineId": "marian.join.line.003a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "面談する側の私が、先に診断される側になった。手首に、冷たい指が三本。静かな時間が一分。彼女の診断は、治癒陣を使わない。指と、目と、経験だけで診る。",
+      "text": "面談する側の私が、先に診断される側になった。"
+    },
+    {
+      "type": "line",
+      "id": "marian.join.node.line.003b",
+      "lineId": "marian.join.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "手首に、冷たい指が三本。静かな時間が一分。"
+    },
+    {
+      "type": "line",
+      "id": "marian.join.node.line.003c",
+      "lineId": "marian.join.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "彼女の診断は、治癒陣を使わない。指と、目と、経験だけで診る。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "marian.join.node.line.004",
-      "lineId": "marian.join.line.004",
+      "id": "marian.join.node.line.004a",
+      "lineId": "marian.join.line.004a",
       "speakerId": "legacy.speaker.quc8xa",
       "speakerName": "マリアン",
       "mode": "dialogue",
-      "text": "……診断結果。あなた、休みが足りていません。兎耳が、疲れると右だけ下がる癖があります。今、下がっています。"
+      "text": "……診断結果。あなた、休みが足りていません。"
     },
     {
       "type": "line",
-      "id": "marian.join.node.line.005",
-      "lineId": "marian.join.line.005",
+      "id": "marian.join.node.line.004b",
+      "lineId": "marian.join.line.004b",
+      "speakerId": "legacy.speaker.quc8xa",
+      "speakerName": "マリアン",
+      "mode": "dialogue",
+      "text": "兎耳が、疲れると右だけ下がる癖があります。今、下がっています。"
+    },
+    {
+      "type": "line",
+      "id": "marian.join.node.line.005a",
+      "lineId": "marian.join.line.005a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "み、右耳のことは会社にも秘密にしてください。……というか、面談、始めさせてください。"
+      "text": "み、右耳のことは会社にも秘密にしてください。"
     },
     {
       "type": "line",
-      "id": "marian.join.node.line.006",
-      "lineId": "marian.join.line.006",
+      "id": "marian.join.node.line.005b",
+      "lineId": "marian.join.line.005b",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "……というか、面談、始めさせてください。"
+    },
+    {
+      "type": "line",
+      "id": "marian.join.node.line.006a",
+      "lineId": "marian.join.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "面談は、変わった形で進んだ。彼女が試合に出たい理由は、賞金でも名誉でもなかった。「治療記録が、欲しいのです。私の力が、戦いの場でどこまで暴れるか。正確な記録がないと、私は私を、制御できないので」。",
+      "text": "「治療記録が、欲しいのです。私の力が、戦いの場でどこまで暴れるか」"
+    },
+    {
+      "type": "line",
+      "id": "marian.join.node.line.006b",
+      "lineId": "marian.join.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「正確な記録がないと、私は私を、制御できないので」",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "marian.join.node.line.007",
-      "lineId": "marian.join.line.007",
+      "id": "marian.join.node.line.007a",
+      "lineId": "marian.join.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "自分の力の観察記録のために、戦場へ出たいと言う人。無茶なような、誰よりも慎重なような。私は記録係を買って出ることにした。接客業は、メモの速さにも自信がある。",
+      "text": "自分の力の観察記録のために、戦場へ出たいと言う人。無茶なような、誰よりも慎重なような。"
+    },
+    {
+      "type": "line",
+      "id": "marian.join.node.line.007b",
+      "lineId": "marian.join.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私は記録係を買って出た。接客業は、メモの速さにも自信がある。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "marian.join.node.line.008",
-      "lineId": "marian.join.line.008",
+      "id": "marian.join.node.line.008a",
+      "lineId": "marian.join.line.008a",
       "speakerId": "legacy.speaker.quc8xa",
       "speakerName": "マリアン",
       "mode": "dialogue",
-      "text": "契約条件も、一つだけ。私が「治しますか」と聞いた時——答えを、急かさないでください。あなたにも、誰にも。答えを待つ時間が、私の治療の、一番大事な部分なので。"
+      "text": "契約条件も、一つだけ。私が「治しますか」と聞いた時——答えを、急かさないでください。"
     },
     {
       "type": "line",
-      "id": "marian.join.node.line.009",
-      "lineId": "marian.join.line.009",
+      "id": "marian.join.node.line.008b",
+      "lineId": "marian.join.line.008b",
+      "speakerId": "legacy.speaker.quc8xa",
+      "speakerName": "マリアン",
+      "mode": "dialogue",
+      "text": "あなたにも、誰にも。答えを待つ時間が、私の治療の、一番大事な部分なので。"
+    },
+    {
+      "type": "line",
+      "id": "marian.join.node.line.009a",
+      "lineId": "marian.join.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "治す前に、聞く。聞いたら、待つ。効きすぎる力の持ち主が編み出した、たった一つの安全装置が、その「間」だった。私は契約書の特記事項に書いた。「本人の質問と、相手の返事の間に、誰も口を挟まないこと」。",
+      "text": "治す前に、聞く。聞いたら、待つ。"
+    },
+    {
+      "type": "line",
+      "id": "marian.join.node.line.009b",
+      "lineId": "marian.join.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "効きすぎる力の持ち主が編み出した、たった一つの安全装置が、その「間」だった。"
+    },
+    {
+      "type": "line",
+      "id": "marian.join.node.line.009c",
+      "lineId": "marian.join.line.009c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "契約書の特記事項に書いた。「本人の質問と、相手の返事の間に、誰も口を挟まないこと」",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "marian.join.node.line.010",
-      "lineId": "marian.join.line.010",
+      "id": "marian.join.node.line.010a",
+      "lineId": "marian.join.line.010a",
       "speakerId": "narrator",
       "mode": "thought",
       "text": "署名の前に、締めの形を決める。",
@@ -140,43 +256,83 @@
         {
           "id": "marian.join.choice.001",
           "label": "包帯を畳みながら、治療が効きすぎる話を聞く",
-          "result": "契約のあと、救護室の在庫整理を手伝った。畳みながら聞いた失敗談は、悲惨で、少しだけ可笑しかった。敵の骨折を治してしまった試合。枯れかけの観葉植物が巨木になった待合室。「効きすぎの記録も、全部書き残してください」と彼女は言った。「失敗の記録だけが、私を止められるので」。私の記録係の初仕事は、巨木の育成記録からになった。",
+          "result": "契約のあと、救護室の在庫整理を手伝った。畳みながら聞いた失敗談は、悲惨で少し可笑しかった。枯れかけの観葉植物が巨木になった待合室。「失敗の記録だけが、私を止められるので」私の記録係の初仕事は、巨木の育成記録からになった。",
           "intent": "力の失敗談ごと、引き受ける",
           "promise": "登録は少し遅れるが、この人専用の成長ポイントを得る。",
           "memory": "待合室の巨木の由来を、二人だけが正確に知っている。",
           "tone": "tender",
           "effects": [
-            { "type": "relationship", "target": { "type": "fighter", "fighterId": "marian" }, "mode": "add", "trust": 8, "ownership": -3 },
-            { "type": "fighterPoints", "target": { "type": "fighter", "fighterId": "marian" }, "amount": 2 },
-            { "type": "recruitmentDecision", "fighterId": "marian", "decision": "join" }
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "marian"
+              },
+              "mode": "add",
+              "trust": 8,
+              "ownership": -3
+            },
+            {
+              "type": "fighterPoints",
+              "target": {
+                "type": "fighter",
+                "fighterId": "marian"
+              },
+              "amount": 2
+            },
+            {
+              "type": "recruitmentDecision",
+              "fighterId": "marian",
+              "decision": "join"
+            }
           ],
           "goto": "marian.join.node.end.001"
         },
         {
           "id": "marian.join.choice.002",
           "label": "救護担当を兼ねた選手証を先に発行する",
-          "result": "選手証は「選手兼・救護担当」の肩書きで発行された。チーム全員の健康診断が月一で定例化し、初回の診断で全員に「休み不足」の判定が出た。監督の私を含めて、である。救護担当の最初の業務命令は、こうだった。「全員、今週は一日、必ず休むこと。これは治療です」。",
+          "result": "選手証は「選手兼・救護担当」の肩書きで発行された。チーム全員の健康診断が月一で定例化し、初回で全員に「休み不足」の判定。監督の私も、もちろん含めて。最初の業務命令は「今週は一日、必ず休むこと。これは治療です」",
           "intent": "チームの健康管理ごと任せる",
           "promise": "本人の記録は後回しになるが、誰にでも使える成長ポイントを得る。",
           "memory": "「これは治療です」の休養命令を、チームは今も守っている。",
           "tone": "pragmatic",
           "effects": [
-            { "type": "relationship", "target": { "type": "fighter", "fighterId": "marian" }, "mode": "add", "trust": 0, "ownership": 8 },
-            { "type": "sharedPoints", "amount": 2 },
-            { "type": "recruitmentDecision", "fighterId": "marian", "decision": "join" }
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "marian"
+              },
+              "mode": "add",
+              "trust": 0,
+              "ownership": 8
+            },
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            },
+            {
+              "type": "recruitmentDecision",
+              "fighterId": "marian",
+              "decision": "join"
+            }
           ],
           "goto": "marian.join.node.end.001"
         },
         {
           "id": "marian.join.choice.003",
           "label": "今回はマリアンを誘わず、別の機会を待つ",
-          "result": "「今回は、見送りましょう」。彼女は静かにうなずいて、帰り際、私の右耳を見て一言だけ残した。「下がったままです。今日は、早く帰ってください。……これは診断ではなく、お願いです」。診断より、お願いの方が、効いた。その日は定時で帰った。",
+          "result": "「今回は、見送りましょう」彼女は静かにうなずき、帰り際、私の右耳を見て言った。「今日は、早く帰ってください。これは診断でなく、お願いです」お願いの方が、効いた。その日は定時で帰った。",
           "intent": "今回はチームへ誘わない",
           "promise": "今回の所属は見送るが、人物の物語と再会の可能性は失わない。",
           "memory": "「診断ではなく、お願い」の言い方を、私は覚えている。",
           "tone": "pragmatic",
           "effects": [
-            { "type": "recruitmentDecision", "fighterId": "marian", "decision": "decline" }
+            {
+              "type": "recruitmentDecision",
+              "fighterId": "marian",
+              "decision": "decline"
+            }
           ],
           "goto": "marian.join.node.end.001"
         }
@@ -191,7 +347,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 逆さの健康診断(右耳が下がる癖)。加入動機=治療記録の協働(canon)。安全装置=「治しますか」の間。",
+    "authorNote": "語り口V2・二行枠で改稿。v2改稿: 逆さの健康診断(右耳が下がる癖)。加入動機=治療記録の協働(canon)。安全装置=「治しますか」の間。",
     "legacyGeneratedIds": false
   }
 }

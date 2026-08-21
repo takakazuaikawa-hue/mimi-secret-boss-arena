@@ -48,70 +48,138 @@
     },
     {
       "type": "line",
-      "id": "rinne.join.node.line.001",
-      "lineId": "rinne.join.line.001",
+      "id": "rinne.join.node.line.001a",
+      "lineId": "rinne.join.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "リンネの選手登録は、賭場の隅の面談席で行われた。彼女が唯一「店が怒らない席」と認定した場所である。机に契約書と契約金を並べた瞬間、彼女の視線が札束の上で十二通りに揺れた。"
+      "text": "リンネの選手登録は、賭場の隅の面談席。彼女が唯一「店が怒らない席」と認めた場所だ。"
     },
     {
       "type": "line",
-      "id": "rinne.join.node.line.002",
-      "lineId": "rinne.join.line.002",
+      "id": "rinne.join.node.line.001b",
+      "lineId": "rinne.join.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "契約書とお金を置いた瞬間、彼女の視線が札束の上で十二通りに揺れた。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.join.node.line.002a",
+      "lineId": "rinne.join.line.002a",
       "speakerId": "legacy.speaker.1vpt9ol",
       "speakerName": "リンネ",
       "mode": "dialogue",
-      "text": "このお金、今受け取ると——三割の未来で倍になって、二割の未来で消える。残りの未来では、なぜか店長が犬を飼う。"
+      "text": "このお金、今受け取ると——三割の未来で倍になって、二割の未来で消える。"
     },
     {
       "type": "line",
-      "id": "rinne.join.node.line.003",
-      "lineId": "rinne.join.line.003",
+      "id": "rinne.join.node.line.002b",
+      "lineId": "rinne.join.line.002b",
+      "speakerId": "legacy.speaker.1vpt9ol",
+      "speakerName": "リンネ",
+      "mode": "dialogue",
+      "text": "残りの未来では、なぜか店長が犬を飼う。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.join.node.line.003a",
+      "lineId": "rinne.join.line.003a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "犬の未来が一番多いの、どういうことですか。……とにかく、先に生活費へ回してください。契約金は賭け金じゃありません。"
+      "text": "犬の未来が一番多いの、どういうことですか。"
     },
     {
       "type": "line",
-      "id": "rinne.join.node.line.004",
-      "lineId": "rinne.join.line.004",
+      "id": "rinne.join.node.line.003b",
+      "lineId": "rinne.join.line.003b",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "……とにかく、先に生活費へ回してください。契約金は、賭け金じゃありません。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.join.node.line.004a",
+      "lineId": "rinne.join.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "登録用紙も難航した。経歴欄は、書けば書くほど端末が警告音を鳴らす(前世の戦績が長すぎるらしい)。だが本当に手が止まったのは、そこではなかった。「これから何をしたいか」——たった一行の、未来の欄だった。",
+      "text": "登録用紙も、難航した。経歴欄は、書くほど端末が警告音を鳴らす。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.join.node.line.004b",
+      "lineId": "rinne.join.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "前世の戦績が長すぎるらしい。でも本当に手が止まったのは、そこじゃない。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.join.node.line.004c",
+      "lineId": "rinne.join.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「これから何をしたいか」——たった一行の、未来の欄だった。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "rinne.join.node.line.005",
-      "lineId": "rinne.join.line.005",
+      "id": "rinne.join.node.line.005a",
+      "lineId": "rinne.join.line.005a",
       "speakerId": "legacy.speaker.1vpt9ol",
       "speakerName": "リンネ",
       "mode": "dialogue",
-      "text": "変でしょ。未来なんて、見れば全部書いてあるのに。「したいか」って聞かれると、どの未来を写せばいいのか、分からなくなる。"
+      "text": "変でしょ。未来なんて、見れば全部書いてあるのに。"
     },
     {
       "type": "line",
-      "id": "rinne.join.node.line.006",
-      "lineId": "rinne.join.line.006",
+      "id": "rinne.join.node.line.005b",
+      "lineId": "rinne.join.line.005b",
+      "speakerId": "legacy.speaker.1vpt9ol",
+      "speakerName": "リンネ",
+      "mode": "dialogue",
+      "text": "「したいか」って聞かれると、どの未来を写せばいいのか、分からなくなる。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.join.node.line.006a",
+      "lineId": "rinne.join.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "見える人の空欄は、見えない人の空欄より、ずっと広い。私はペンを差し出しかけて、やめた。私のペンで彼女の未来まで埋めてしまわないように、用紙を机の真ん中へ、そっと戻す。",
+      "text": "見える人の空欄は、見えない人の空欄より、ずっと広い。ペンを差し出しかけて、やめた。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.join.node.line.006b",
+      "lineId": "rinne.join.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "彼女の未来まで埋めないよう、用紙を机の真ん中へ、そっと戻す。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "rinne.join.node.line.007",
-      "lineId": "rinne.join.line.007",
+      "id": "rinne.join.node.line.007a",
+      "lineId": "rinne.join.line.007a",
       "speakerId": "legacy.speaker.1vpt9ol",
       "speakerName": "リンネ",
       "mode": "dialogue",
-      "text": "……ひとつ、確認。このチーム、当たり外れのない約束って、規則違反にならない? 「勝てたら」とか「活躍したら」の付かない、ただの約束。"
+      "text": "……ひとつ、確認。このチーム、当たり外れのない約束って、規則違反にならない?"
     },
     {
       "type": "line",
-      "id": "rinne.join.node.line.008",
-      "lineId": "rinne.join.line.008",
+      "id": "rinne.join.node.line.007b",
+      "lineId": "rinne.join.line.007b",
+      "speakerId": "legacy.speaker.1vpt9ol",
+      "speakerName": "リンネ",
+      "mode": "dialogue",
+      "text": "「勝てたら」とか「活躍したら」の付かない、ただの約束。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.join.node.line.008a",
+      "lineId": "rinne.join.line.008a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -119,17 +187,33 @@
     },
     {
       "type": "line",
-      "id": "rinne.join.node.line.009",
-      "lineId": "rinne.join.line.009",
+      "id": "rinne.join.node.line.009a",
+      "lineId": "rinne.join.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "彼女は長い時間、空欄を見ていた。それから書いた。細くて、少し震えた字だった。「まだ決めない。決めないまま、ここにいる」。端末は初めて、警告音を鳴らさなかった。",
+      "text": "彼女は長い時間、空欄を見ていた。それから書いた。"
+    },
+    {
+      "type": "line",
+      "id": "rinne.join.node.line.009b",
+      "lineId": "rinne.join.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "細くて、少し震えた字。「まだ決めない。決めないまま、ここにいる」"
+    },
+    {
+      "type": "line",
+      "id": "rinne.join.node.line.009c",
+      "lineId": "rinne.join.line.009c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "耳が、じんとした。端末は、鳴らなかった。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "rinne.join.node.line.010",
-      "lineId": "rinne.join.line.010",
+      "id": "rinne.join.node.line.010a",
+      "lineId": "rinne.join.line.010a",
       "speakerId": "narrator",
       "mode": "thought",
       "text": "最後の欄だけが、まだ白紙だ。ここだけは、未来を見ないで決めたい。",
@@ -142,7 +226,7 @@
         {
           "id": "rinne.join.choice.001",
           "label": "一度も賭けず、未来の見え方だけを聞く",
-          "result": "契約の仕上げに、賭場のカウンターでお茶だけ頼んで、未来の見え方を教わった。「未来はね、道じゃなくて天気。全部見えるけど、傘を差すかどうかは、こっちが決める」。彼女は勝ち筋を一つも教えず、代わりに私の来週の負け方を三つ消した。無料相談のはずなのに、帰り際、得をした顔をされた。「あんたの質問、どの未来にもなかった。久しぶりに、初見の会話をした」。",
+          "result": "お茶だけ頼んで、未来の見え方を教わった。「未来はね、道じゃなくて天気。傘を差すかは、こっちが決める」——勝ち筋は教えず、代わりに来週の負け方を三つ消してくれた。「あんたの質問、どの未来にもなかった」と、得をした顔をされた。",
           "intent": "本人の得意な戦い方を知る",
           "promise": "登録は少し遅れるが、この人専用の成長ポイントを得る。",
           "memory": "自分で書いた最初の条件を、相手は次の大事な場面でも覚えている。",
@@ -177,7 +261,7 @@
         {
           "id": "rinne.join.choice.002",
           "label": "契約金を最初の元手として渡す",
-          "result": "「じゃあ、増やしてくる」。契約金は一時間で一度消え、閉店までに少し増えて戻ってきた。添えられた領収書の日付は、なぜか来週だった。「未来の店で両替したから」。経理課だけが、最後まで未来を信じなかった。信じなくて正解だと思う。",
+          "result": "「じゃあ、増やしてくる」——契約金は一時間で消え、閉店までに少し増えて戻った。領収書の日付は、なぜか来週。「未来の店で両替したから」だそうだ。経理課だけは最後まで信じなかった。正解だと思う。",
           "intent": "次の公式戦へ間に合わせる",
           "promise": "本人の詳細は後回しになるが、誰にでも使える成長ポイントを得る。",
           "memory": "先に席を確保した判断は、チームの始まり方として記録に残る。",
@@ -208,7 +292,7 @@
         {
           "id": "rinne.join.choice.003",
           "label": "今回はリンネを誘わず、別の機会を待つ",
-          "result": "「今回は、見送りましょう」。リンネは頷いて、契約書を綺麗に畳んだ。「その未来も見えてた。でも、口で聞くと、ちょっとだけ違う音がするね」。断られた人の台詞ではなかった。空のコインだけが、私のポケットで小さく鳴った。",
+          "result": "「今回は、見送りましょう」——リンネは頷いて、契約書を畳んだ。「その未来も見えてた。でも口で聞くと、ちょっと違う音がするね」と笑った。断られた人の顔じゃない。空のコインが、ポケットで小さく鳴った。",
           "intent": "今回はチームへ誘わない",
           "promise": "今回の所属は見送るが、人物の物語と再会の可能性は失わない。",
           "memory": "勧誘しない選択も尊重されたことを、相手は覚えている。",
@@ -233,7 +317,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 契約金の未来内訳(店長の犬)。「これから何をしたいか」の一行が書けない未来視。",
+    "authorNote": "語り口V2・二行枠で改稿。v2改稿: 契約金の未来内訳(店長の犬)。「これから何をしたいか」の一行が書けない未来視。",
     "legacyGeneratedIds": false
   }
 }

@@ -53,20 +53,37 @@
     },
     {
       "type": "line",
-      "id": "minato.meet.node.line.001",
-      "lineId": "minato.meet.line.001",
+      "id": "minato.meet.node.line.001a",
+      "lineId": "minato.meet.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "今日の担当は遺失物窓口。落とし物の傘が三本、手袋が片方、謎の卵がひとつ。平和な窓口である。午後二時までは、そうだった。"
+      "text": "今日の担当は、遺失物窓口。傘が三本、手袋が片方、謎の卵がひとつ。"
     },
     {
       "type": "line",
-      "id": "minato.meet.node.line.002",
-      "lineId": "minato.meet.line.002",
+      "id": "minato.meet.node.line.001b",
+      "lineId": "minato.meet.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "平和な午後、のはずだった。二時までは。"
+    },
+    {
+      "type": "line",
+      "id": "minato.meet.node.line.002a",
+      "lineId": "minato.meet.line.002a",
       "speakerId": "legacy.speaker.1vz3er0",
       "speakerName": "ミナト",
       "mode": "dialogue",
-      "text": "すみません。落とし物を、届けに来ました。……四十七本、あります。"
+      "text": "すみません。落とし物を、届けに来ました。"
+    },
+    {
+      "type": "line",
+      "id": "minato.meet.node.line.002b",
+      "lineId": "minato.meet.line.002b",
+      "speakerId": "legacy.speaker.1vz3er0",
+      "speakerName": "ミナト",
+      "mode": "dialogue",
+      "text": "……四十七本、あります。"
     },
     {
       "type": "direction",
@@ -86,78 +103,118 @@
     },
     {
       "type": "line",
-      "id": "minato.meet.node.line.003",
-      "lineId": "minato.meet.line.003",
+      "id": "minato.meet.node.line.003a",
+      "lineId": "minato.meet.line.003a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "銀青色の髪の人が、台車いっぱいの剣と杖と弓を窓口へ運び込んだ。全部、見るからに神器だった。刀身が勝手に光るし、一本は小声で聖歌を歌っている。",
+      "text": "銀青色の髪の人が、台車いっぱいの剣と杖と弓を運び込んだ。全部、神器だった。"
+    },
+    {
+      "type": "line",
+      "id": "minato.meet.node.line.003b",
+      "lineId": "minato.meet.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "刀身が勝手に光ってる。一本は、小声で聖歌まで歌っていた。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "minato.meet.node.line.004",
-      "lineId": "minato.meet.line.004",
+      "id": "minato.meet.node.line.004a",
+      "lineId": "minato.meet.line.004a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "お、落とし物というのは、その、どなたかが落とした物のことでして……これ、あなたの剣では？"
+      "text": "お、落とし物というのは、その、どなたかが落とした物のことでして……これ、あなたの剣では?"
     },
     {
       "type": "line",
-      "id": "minato.meet.node.line.005",
-      "lineId": "minato.meet.line.005",
+      "id": "minato.meet.node.line.005a",
+      "lineId": "minato.meet.line.005a",
       "speakerId": "legacy.speaker.1vz3er0",
       "speakerName": "ミナト",
       "mode": "dialogue",
-      "text": "俺のじゃない。世界のです。世界を救い終わったので、返します。"
+      "text": "俺のじゃない。"
     },
     {
       "type": "line",
-      "id": "minato.meet.node.line.006",
-      "lineId": "minato.meet.line.006",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "受理伝票の「拾得場所」欄に、彼は丁寧な字で書いた。「魔王城・玉座の間」。窓口の書式が、初めて物語の最終回を受け付けた瞬間だった。",
-      "emotion": "revelation"
-    },
-    {
-      "type": "line",
-      "id": "minato.meet.node.line.007",
-      "lineId": "minato.meet.line.007",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "私が四十七枚目の伝票を書き終えた、その時。台車の剣が一本、ふわりと浮いた。まっすぐ、彼の背中の鞘へ帰ろうとする。"
-    },
-    {
-      "type": "direction",
-      "id": "minato.meet.node.direction.004",
-      "command": {
-        "type": "effect",
-        "effectId": "shake"
-      }
-    },
-    {
-      "type": "line",
-      "id": "minato.meet.node.line.008",
-      "lineId": "minato.meet.line.008",
+      "id": "minato.meet.node.line.005b",
+      "lineId": "minato.meet.line.005b",
       "speakerId": "legacy.speaker.1vz3er0",
       "speakerName": "ミナト",
       "mode": "dialogue",
-      "text": "また君か。だめだ。戻るな。俺はもう、勇者じゃ——うわ、全員来るな！"
+      "text": "世界のです。世界を救い終わったので、返します。"
     },
     {
       "type": "line",
-      "id": "minato.meet.node.line.009",
-      "lineId": "minato.meet.line.009",
+      "id": "minato.meet.node.line.006a",
+      "lineId": "minato.meet.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "四十七本が、一斉に飛んだ。窓口が流星群の発着場になる。聖剣が私の頭上をかすめた瞬間——目の前に、彼の背中があった。片手で聖剣の柄を受け止めて、私を背にかばっている。",
+      "text": "受理伝票の「拾得場所」欄に、彼は丁寧な字で書いた。"
+    },
+    {
+      "type": "line",
+      "id": "minato.meet.node.line.006b",
+      "lineId": "minato.meet.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「魔王城・玉座の間」……最終回も、受け付けるんですね、この窓口。"
+    },
+    {
+      "type": "line",
+      "id": "minato.meet.node.line.007a",
+      "lineId": "minato.meet.line.007a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "四十七枚目の伝票を書き終えた、その時。台車の剣が一本、ふわりと浮いた。"
+    },
+    {
+      "type": "line",
+      "id": "minato.meet.node.line.007b",
+      "lineId": "minato.meet.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "まっすぐ、彼の背中の鞘へ帰ろうとしてる。耳が、ぴんと立った。"
+    },
+    {
+      "type": "line",
+      "id": "minato.meet.node.line.008a",
+      "lineId": "minato.meet.line.008a",
+      "speakerId": "legacy.speaker.1vz3er0",
+      "speakerName": "ミナト",
+      "mode": "dialogue",
+      "text": "また君か。だめだ。戻るな。俺はもう、勇者じゃ——うわ、全員来るな!"
+    },
+    {
+      "type": "line",
+      "id": "minato.meet.node.line.009a",
+      "lineId": "minato.meet.line.009a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "四十七本が、一斉に飛んだ。窓口が、流星群の発着場になった。"
+    },
+    {
+      "type": "line",
+      "id": "minato.meet.node.line.009b",
+      "lineId": "minato.meet.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "聖剣が頭上をかすめた——瞬間、目の前に彼の背中があった。"
+    },
+    {
+      "type": "line",
+      "id": "minato.meet.node.line.009c",
+      "lineId": "minato.meet.line.009c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "片手で剣の柄を受け止めて、私を背にかばっている。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "minato.meet.node.line.010",
-      "lineId": "minato.meet.line.010",
+      "id": "minato.meet.node.line.010a",
+      "lineId": "minato.meet.line.010a",
       "speakerId": "legacy.speaker.1vz3er0",
       "speakerName": "ミナト",
       "mode": "dialogue",
@@ -165,17 +222,24 @@
     },
     {
       "type": "line",
-      "id": "minato.meet.node.line.011",
-      "lineId": "minato.meet.line.011",
+      "id": "minato.meet.node.line.011a",
+      "lineId": "minato.meet.line.011a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "近い。背中が近い。心臓がうるさい。そして彼の背中越しに見えた。四十七本の神器が全部、捨てられた子犬の目(比喩)でこちらを見ている。",
-      "emotion": "comic"
+      "text": "近い。背中が、近い。心臓が、うるさい。"
     },
     {
       "type": "line",
-      "id": "minato.meet.node.line.012",
-      "lineId": "minato.meet.line.012",
+      "id": "minato.meet.node.line.011b",
+      "lineId": "minato.meet.line.011b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "彼の背中越しに見えた。四十七本の神器が全部、捨てられた子犬の目(比喩)でこっちを見てる。"
+    },
+    {
+      "type": "line",
+      "id": "minato.meet.node.line.012a",
+      "lineId": "minato.meet.line.012a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -183,29 +247,62 @@
     },
     {
       "type": "line",
-      "id": "minato.meet.node.line.013",
-      "lineId": "minato.meet.line.013",
+      "id": "minato.meet.node.line.013a",
+      "lineId": "minato.meet.line.013a",
       "speakerId": "legacy.speaker.1vz3er0",
       "speakerName": "ミナト",
       "mode": "dialogue",
-      "text": "困るんです。俺が持っていると、世界がまだ終わっていない気がしてしまうから。……俺の物語は、もう終わったのに。"
+      "text": "困るんです。俺が持っていると、世界がまだ終わっていない気がしてしまうから。"
     },
     {
       "type": "line",
-      "id": "minato.meet.node.line.014",
-      "lineId": "minato.meet.line.014",
+      "id": "minato.meet.node.line.013b",
+      "lineId": "minato.meet.line.013b",
+      "speakerId": "legacy.speaker.1vz3er0",
+      "speakerName": "ミナト",
+      "mode": "dialogue",
+      "text": "……俺の物語は、もう終わったのに。"
+    },
+    {
+      "type": "line",
+      "id": "minato.meet.node.line.014a",
+      "lineId": "minato.meet.line.014a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "終わったのに、と言う声が、少しだけ迷子だった。世界を救い終えた人は、次の朝、何をすればいいんだろう。四十七本の剣と一緒に、その答えもここへ届いた気がした。",
+      "text": "「終わったのに」の声が、少し迷子みたいだった。"
+    },
+    {
+      "type": "line",
+      "id": "minato.meet.node.line.014b",
+      "lineId": "minato.meet.line.014b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "世界を救い終えた人は、次の朝、何をすればいいんだろう。"
+    },
+    {
+      "type": "line",
+      "id": "minato.meet.node.line.014c",
+      "lineId": "minato.meet.line.014c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "その答えも、四十七本の剣と一緒にここへ届いた気がした。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "minato.meet.node.line.015",
-      "lineId": "minato.meet.line.015",
+      "id": "minato.meet.node.line.015a",
+      "lineId": "minato.meet.line.015a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "とりあえず窓口として、聞くべきことは一つ。この四十七本の「持ち主不明期間」を、どう過ごしてもらうかだ。",
+      "text": "とりあえず窓口として、聞くべきことは一つ。"
+    },
+    {
+      "type": "line",
+      "id": "minato.meet.node.line.015b",
+      "lineId": "minato.meet.line.015b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "この四十七本の「持ち主不明期間」を、どう過ごしてもらうか。",
       "emotion": "resolve"
     },
     {
@@ -215,7 +312,7 @@
         {
           "id": "minato.meet.choice.001",
           "label": "返した四十七本の由来を聞く",
-          "result": "閉店まで、四十七本ぶんの物語を聞いた。竜を落とした弓、海を割った杖、最後まで抜かなかった剣。全部の話の終わりで、彼は同じことを言った。「よく働いてくれた」と。道具にねぎらいを言う勇者を、私は初めて見た。四十八枚目の伝票に、私は品名欄へ「疲れた勇者・一名」とこっそり書いて、すぐ消した。",
+          "result": "閉店まで、四十七本ぶんの物語を聞いた。終わりはいつも同じ、「よく働いてくれた」道具にねぎらいを言う勇者を、初めて見た。四十八枚目の伝票の品名欄に「疲れた勇者・一名」と書いて、すぐ消した。",
           "intent": "登録より先に、終わった物語を聞く",
           "promise": "目先の報酬は得ない代わりに、この人が何を終えてきたかを知る。",
           "memory": "四十七本の由来を最後まで聞いた窓口係として、ミナトは私を覚えている。",
@@ -237,7 +334,7 @@
         {
           "id": "minato.meet.choice.002",
           "label": "今日はミナトを誘わず、用事へ戻る",
-          "result": "伝票は四十七枚、正式に受理した。翌朝、遺失物棚の前で剣が二本、こっそり彼を追いかけようとしていたので、棚に「お迎えは順番に」と張り紙をした。夕方、様子を見に来たミナトがその張り紙を読んで、初めて声を出して笑ったらしい。窓口日誌に、そう書いておいた。",
+          "result": "伝票は四十七枚、正式に受理した。翌朝、剣が二本こっそり彼を追いかけようとしていたので、棚に「お迎えは順番に」と張り紙をした。夕方見に来た彼が、それを読んで初めて声を出して笑ったらしい。",
           "intent": "今日は窓口業務に徹する",
           "promise": "所属選手にはならないが、後の出来事で再会できる。",
           "memory": "剣たちへの張り紙を書いた窓口係のことを、ミナトは覚えている。",
@@ -272,7 +369,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 神器返却の流星群事件。背中でかばうドキドキ。Q1手掛かり=拾得場所「魔王城・玉座の間」。遺失物伝票モチーフ開始。",
+    "authorNote": "語り口V2・二行枠で改稿。v2改稿: 神器返却の流星群事件。背中でかばうドキドキ。Q1手掛かり=拾得場所「魔王城・玉座の間」。遺失物伝票モチーフ開始。",
     "legacyGeneratedIds": false
   }
 }

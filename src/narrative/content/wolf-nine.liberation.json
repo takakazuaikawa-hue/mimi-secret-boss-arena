@@ -10,9 +10,20 @@
     "stage": "liberation"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 400,
     "weight": 1
   },
@@ -43,48 +54,83 @@
     {
       "type": "direction",
       "id": "wolf-nine.liberation.node.direction.001",
-      "command": { "type": "background", "assetId": "wolf-nine.liberation.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "wolf-nine.liberation.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "line",
-      "id": "wolf-nine.liberation.node.line.001",
-      "lineId": "wolf-nine.liberation.line.001",
+      "id": "wolf-nine.liberation.node.line.001a",
+      "lineId": "wolf-nine.liberation.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "契約を終わらせる夜。無人の決闘場に、彼は九本の旗を全部立てて待っていた。解除届は、決闘の立会人みたいに、旗の下の台に置かれた。"
+      "text": "契約を終わらせる夜。無人の決闘場に、彼は九本の旗を全部立てて待っていた。"
     },
     {
       "type": "line",
-      "id": "wolf-nine.liberation.node.line.002",
-      "lineId": "wolf-nine.liberation.line.002",
+      "id": "wolf-nine.liberation.node.line.001b",
+      "lineId": "wolf-nine.liberation.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "解除届は、決闘の立会人みたいに、旗の下の台に置かれた。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.liberation.node.line.002a",
+      "lineId": "wolf-nine.liberation.line.002a",
       "speakerId": "legacy.speaker.1vj9fme",
       "speakerName": "ヴォルフ・ナイン",
       "mode": "dialogue",
-      "text": "所有者命令ってのはな、俺の流儀じゃ「セコンドの指示」だ。悪くなかったぞ、あんたのセコンドは。……だが、ここから先は、自分の名前で戦う。"
+      "text": "所有者命令ってのはな、俺の流儀じゃ「セコンドの指示」だ。"
     },
     {
       "type": "line",
-      "id": "wolf-nine.liberation.node.line.003",
-      "lineId": "wolf-nine.liberation.line.003",
+      "id": "wolf-nine.liberation.node.line.002b",
+      "lineId": "wolf-nine.liberation.line.002b",
+      "speakerId": "legacy.speaker.1vj9fme",
+      "speakerName": "ヴォルフ・ナイン",
+      "mode": "dialogue",
+      "text": "悪くなかったぞ、あんたのセコンドは。……だが、ここから先は、自分の名前で戦う。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.liberation.node.line.003a",
+      "lineId": "wolf-nine.liberation.line.003a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "判を押す。所有者命令の権限が消える。彼は解除届を果たし状みたいに丁寧に検分して、「良い書式だ」と及第点をくれた。うちの解除届は、狼の品質基準を通過した。",
+      "text": "判を押す。所有者命令の権限が消える。彼は解除届を、果たし状みたいに丁寧に検分した。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.liberation.node.line.003b",
+      "lineId": "wolf-nine.liberation.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「良い書式だ」と及第点をくれた。狼の品質基準を通過した。",
       "emotion": "comic"
     },
     {
       "type": "direction",
       "id": "wolf-nine.liberation.node.direction.002",
-      "command": { "type": "still", "assetId": "wolf-nine.liberation.asset.still.001" }
+      "command": {
+        "type": "still",
+        "assetId": "wolf-nine.liberation.asset.still.001"
+      }
     },
     {
       "type": "direction",
       "id": "wolf-nine.liberation.node.direction.003",
-      "command": { "type": "effect", "effectId": "pulse" }
+      "command": {
+        "type": "effect",
+        "effectId": "pulse"
+      }
     },
     {
       "type": "line",
-      "id": "wolf-nine.liberation.node.line.004",
-      "lineId": "wolf-nine.liberation.line.004",
+      "id": "wolf-nine.liberation.node.line.004a",
+      "lineId": "wolf-nine.liberation.line.004a",
       "speakerId": "legacy.speaker.1vj9fme",
       "speakerName": "ヴォルフ・ナイン",
       "mode": "dialogue",
@@ -93,30 +139,41 @@
     {
       "type": "direction",
       "id": "wolf-nine.liberation.node.direction.004",
-      "command": { "type": "still", "assetId": "wolf-nine.liberation.asset.still.002" }
+      "command": {
+        "type": "still",
+        "assetId": "wolf-nine.liberation.asset.still.002"
+      }
     },
     {
       "type": "line",
-      "id": "wolf-nine.liberation.node.line.005",
-      "lineId": "wolf-nine.liberation.line.005",
+      "id": "wolf-nine.liberation.node.line.005a",
+      "lineId": "wolf-nine.liberation.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "差し出されたのは、封蝋つきの手紙だった。宛名——「ミミ殿」。九通目の、挑戦状。",
+      "text": "差し出されたのは、封蝋つきの手紙だった。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.liberation.node.line.005b",
+      "lineId": "wolf-nine.liberation.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「ミミ殿」という宛名。九通目の、挑戦状。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "wolf-nine.liberation.node.line.006",
-      "lineId": "wolf-nine.liberation.line.006",
+      "id": "wolf-nine.liberation.node.line.006a",
+      "lineId": "wolf-nine.liberation.line.006a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "く、九戦目！？　私が！？　人生で一番大事な勝負に使う番号じゃ……"
+      "text": "く、九戦目!?　私が!?人生で一番大事な勝負に使う番号じゃ……"
     },
     {
       "type": "line",
-      "id": "wolf-nine.liberation.node.line.007",
-      "lineId": "wolf-nine.liberation.line.007",
+      "id": "wolf-nine.liberation.node.line.007a",
+      "lineId": "wolf-nine.liberation.line.007a",
       "speakerId": "legacy.speaker.1vj9fme",
       "speakerName": "ヴォルフ・ナイン",
       "mode": "dialogue",
@@ -124,35 +181,84 @@
     },
     {
       "type": "line",
-      "id": "wolf-nine.liberation.node.line.008",
-      "lineId": "wolf-nine.liberation.line.008",
+      "id": "wolf-nine.liberation.node.line.008a",
+      "lineId": "wolf-nine.liberation.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "封を開ける。果たし状の作法で始まる文面は、途中から、様子がおかしかった。「果たし合いの内容——今後、末永く。朝食九種目、席取り、消印の押し方、その他日常の全種目において、俺と真剣に競い続けること。決着は、急がない。持ち越しを、無限に認める」。",
+      "text": "封を開ける。果たし状の作法で始まる文面は、途中から様子がおかしかった。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.liberation.node.line.008b",
+      "lineId": "wolf-nine.liberation.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「果たし合いの内容——今後、末永く」"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.liberation.node.line.008c",
+      "lineId": "wolf-nine.liberation.line.008c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「朝食九種目、席取り、消印の押し方、その他日常の全種目で、真剣に競い続けること」"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.liberation.node.line.008d",
+      "lineId": "wolf-nine.liberation.line.008d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「決着は、急がない。持ち越しを、無限に認める」",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "wolf-nine.liberation.node.line.009",
-      "lineId": "wolf-nine.liberation.line.009",
+      "id": "wolf-nine.liberation.node.line.009a",
+      "lineId": "wolf-nine.liberation.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "九戦目は、一回の決闘じゃなかった。終わらない日常戦、全部だった。八年空白だった九本目の旗に使う相手として、私を選んだのだ。この、決闘の形をした——これは、たぶん、そういう手紙である。心臓が、九種目ぶん跳ねた。",
+      "text": "九戦目は、一回の決闘じゃなかった。終わらない日常戦、全部だった。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.liberation.node.line.009b",
+      "lineId": "wolf-nine.liberation.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "八年空白だった九本目の旗に、私を選んだ。耳が、かっと熱くなった。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.liberation.node.line.009c",
+      "lineId": "wolf-nine.liberation.line.009c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "決闘の形をした、たぶん、そういう手紙だ。心臓が、九種目ぶん跳ねた。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "wolf-nine.liberation.node.line.010",
-      "lineId": "wolf-nine.liberation.line.010",
+      "id": "wolf-nine.liberation.node.line.010a",
+      "lineId": "wolf-nine.liberation.line.010a",
       "speakerId": "legacy.speaker.1vj9fme",
       "speakerName": "ヴォルフ・ナイン",
       "mode": "dialogue",
-      "text": "返事は今すぐでなくていい。決闘の返事は、じっくり書くのが作法だ。……だが、受けるなら、九本目の旗に、あんたの好きな色を塗れ。"
+      "text": "返事は今すぐでなくていい。決闘の返事は、じっくり書くのが作法だ。"
     },
     {
       "type": "line",
-      "id": "wolf-nine.liberation.node.line.011",
-      "lineId": "wolf-nine.liberation.line.011",
+      "id": "wolf-nine.liberation.node.line.010b",
+      "lineId": "wolf-nine.liberation.line.010b",
+      "speakerId": "legacy.speaker.1vj9fme",
+      "speakerName": "ヴォルフ・ナイン",
+      "mode": "dialogue",
+      "text": "……だが、受けるなら、九本目の旗に、あんたの好きな色を塗れ。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.liberation.node.line.011a",
+      "lineId": "wolf-nine.liberation.line.011a",
       "speakerId": "narrator",
       "mode": "thought",
       "text": "返事の書き方を、決める。",
@@ -165,29 +271,58 @@
         {
           "id": "wolf-nine.liberation.choice.001",
           "label": "所有者命令を破棄し、九通目の挑戦状を返す",
-          "result": "返事は、その場で書いた。決闘の作法で、封蝋つきで。「果たし状、謹んで受領。ただし対等な条件を要求する。私が勝ったら、朝食のジャム塗り選手権の審査基準を、私が決める」。彼は文面を読んで、決闘場中に響く声で笑い、九本目の白い旗を指した。翌朝、旗はカジノバニーの制服と同じ色に塗られていた。塗ったのは、私ではない。",
+          "result": "その場で、封蝋つきの返事を書いた。「謹んで受領。ただし、ジャム塗り選手権の審査基準は私が決める」彼は笑い、白い旗を指した。翌朝、旗は制服と同じ色に塗られていた。塗ったのは、私ではない。",
           "intent": "九戦目を、対等な条件で受ける",
           "promise": "所有者名を消し、本人が自分の名で次の試合を選べるようにする。",
           "memory": "制服色の九本目の旗は、決闘場の名物になっている。",
           "tone": "defiant",
           "effects": [
-            { "type": "relationship", "target": { "type": "fighter", "fighterId": "wolf-nine" }, "mode": "add", "trust": 10, "ownership": 0 },
-            { "type": "liberationDecision", "fighterId": "wolf-nine", "decision": "release" }
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "wolf-nine"
+              },
+              "mode": "add",
+              "trust": 10,
+              "ownership": 0
+            },
+            {
+              "type": "liberationDecision",
+              "fighterId": "wolf-nine",
+              "decision": "release"
+            }
           ],
           "goto": "wolf-nine.liberation.node.effect.001"
         },
         {
           "id": "wolf-nine.liberation.choice.002",
           "label": "契約を解き、決勝を最初の対等な決闘にする",
-          "result": "「返事の前に、一つだけ前哨戦を」と私は言った。「決勝戦、チームとして勝ちましょう。あなたが自由な選手として戦う、最初の公式戦です」。彼は牙を見せて笑った。「いいだろう。決勝が終わったら、九戦目の返事を聞く。……逃げるなよ、ミミ殿」。逃げませんとも。持ち越しは、無限に認められているのだ。",
+          "result": "「返事の前に、前哨戦を。決勝戦、チームとして勝ちましょう」彼は牙を見せて笑った。「決勝の後で、九戦目の返事を聞く。逃げるなよ、ミミ殿」逃げません。持ち越しは、無限に認められている。",
           "intent": "決勝を、自由な狼の初陣にする",
           "promise": "断る権利を返したうえで、決勝を一緒に戦う新しい約束を結ぶ。",
           "memory": "「逃げるなよ、ミミ殿」の宛名の呼び方を、私はまだ聞き慣れない。",
           "tone": "tender",
           "effects": [
-            { "type": "relationship", "target": { "type": "fighter", "fighterId": "wolf-nine" }, "mode": "add", "trust": 6, "ownership": 0 },
-            { "type": "sharedPoints", "amount": 4 },
-            { "type": "liberationDecision", "fighterId": "wolf-nine", "decision": "release" }
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "wolf-nine"
+              },
+              "mode": "add",
+              "trust": 6,
+              "ownership": 0
+            },
+            {
+              "type": "sharedPoints",
+              "amount": 4
+            },
+            {
+              "type": "liberationDecision",
+              "fighterId": "wolf-nine",
+              "decision": "release"
+            }
           ],
           "goto": "wolf-nine.liberation.node.effect.001"
         }
@@ -197,10 +332,30 @@
       "type": "effect",
       "id": "wolf-nine.liberation.node.effect.001",
       "effects": [
-        { "type": "setStoryStage", "fighterId": "wolf-nine", "stage": 6 },
-        { "type": "setLiberationEligible", "fighterId": "wolf-nine", "eligible": false },
-        { "type": "setLiberated", "fighterId": "wolf-nine", "liberated": true },
-        { "type": "relationship", "target": { "type": "fighter", "fighterId": "wolf-nine" }, "mode": "set", "ownership": 0 }
+        {
+          "type": "setStoryStage",
+          "fighterId": "wolf-nine",
+          "stage": 6
+        },
+        {
+          "type": "setLiberationEligible",
+          "fighterId": "wolf-nine",
+          "eligible": false
+        },
+        {
+          "type": "setLiberated",
+          "fighterId": "wolf-nine",
+          "liberated": true
+        },
+        {
+          "type": "relationship",
+          "target": {
+            "type": "fighter",
+            "fighterId": "wolf-nine"
+          },
+          "mode": "set",
+          "ownership": 0
+        }
       ]
     },
     {
@@ -212,7 +367,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 九通目の宛先=ミミ。果たし状の形をした、終わらない日常戦の申し込み。接触なしの高鳴り(canon)。",
+    "authorNote": "語り口V2・二行枠で改稿。v2改稿: 九通目の宛先=ミミ。果たし状の形をした、終わらない日常戦の申し込み。接触なしの高鳴り(canon)。",
     "legacyGeneratedIds": false
   }
 }

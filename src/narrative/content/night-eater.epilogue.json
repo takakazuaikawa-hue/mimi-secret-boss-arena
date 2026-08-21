@@ -59,19 +59,35 @@
     },
     {
       "type": "line",
-      "id": "night-eater.epilogue.node.line.001",
-      "lineId": "night-eater.epilogue.line.001",
+      "id": "night-eater.epilogue.node.line.001a",
+      "lineId": "night-eater.epilogue.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "最終大会のあと、うちのカフェには奇妙な名物ができた。「閉店後限定営業」。閉店の札を出してからの一時間だけ、夜の常連たちが集まる店になる。"
+      "text": "最終大会のあと、うちのカフェに奇妙な名物ができた。名は「閉店後限定営業」という。"
     },
     {
       "type": "line",
-      "id": "night-eater.epilogue.node.line.002",
-      "lineId": "night-eater.epilogue.line.002",
+      "id": "night-eater.epilogue.node.line.001b",
+      "lineId": "night-eater.epilogue.line.001b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "発起人は、もちろんあの人だ。柿落としの演目表には、彼女の枠がもう書いてある。「天の川、点灯——客席の照明はおいしくいただきます。安全灯は残します」。但し書きまで含めて、彼女の一年の集大成だった。",
+      "text": "閉店の札を出してからの一時間、夜の常連が集まる店になる。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.epilogue.node.line.002a",
+      "lineId": "night-eater.epilogue.line.002a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「天の川、点灯——客席の照明はいただきます。安全灯は残します」"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.epilogue.node.line.002b",
+      "lineId": "night-eater.epilogue.line.002b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "但し書きまで、彼女の一年の集大成だった。",
       "emotion": "comic"
     },
     {
@@ -84,17 +100,41 @@
     },
     {
       "type": "line",
-      "id": "night-eater.epilogue.node.line.003",
-      "lineId": "night-eater.epilogue.line.003",
+      "id": "night-eater.epilogue.node.line.003a",
+      "lineId": "night-eater.epilogue.line.003a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "今夜も店内は、閉店後だけ大繁盛だった。天井には彼女の夜が広がり、常連たちが星座の下でカップを傾ける。延長を宣言した瞬間、拍手したお客たちが、椅子上げと床掃除を自主的に始めた。うちの常連は、世界一行儀がいい。",
+      "text": "今夜も店内は、閉店後だけ大繁盛だった。耳がにぎやかで、うれしい。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.epilogue.node.line.003b",
+      "lineId": "night-eater.epilogue.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "天井には彼女の夜が広がり、常連が星座の下でカップを傾ける。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.epilogue.node.line.003c",
+      "lineId": "night-eater.epilogue.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "延長を宣言した瞬間、拍手が起きて、椅子上げと掃除が始まった。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.epilogue.node.line.003d",
+      "lineId": "night-eater.epilogue.line.003d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "うちの常連は、世界一行儀がいい。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "night-eater.epilogue.node.line.004",
-      "lineId": "night-eater.epilogue.line.004",
+      "id": "night-eater.epilogue.node.line.004a",
+      "lineId": "night-eater.epilogue.line.004a",
       "speakerId": "legacy.speaker.ij983g",
       "speakerName": "夜を食べるもの",
       "mode": "dialogue",
@@ -102,17 +142,25 @@
     },
     {
       "type": "line",
-      "id": "night-eater.epilogue.node.line.005",
-      "lineId": "night-eater.epilogue.line.005",
+      "id": "night-eater.epilogue.node.line.005a",
+      "lineId": "night-eater.epilogue.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "窓の外、東の空が白み始める。彼女は窓辺に立って、差し込んできた朝の最初の光を、ひとくちだけ、つまみ食いした。行儀のいい一口。それで夜が、三分だけ延びる。",
+      "text": "窓の外、東の空が白み始める。彼女は窓辺で、朝の最初の光を、ひとくちだけつまみ食いした。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.epilogue.node.line.005b",
+      "lineId": "night-eater.epilogue.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "行儀のいい一口。それで夜が、三分だけ延びる。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "night-eater.epilogue.node.line.006",
-      "lineId": "night-eater.epilogue.line.006",
+      "id": "night-eater.epilogue.node.line.006a",
+      "lineId": "night-eater.epilogue.line.006a",
       "speakerId": "legacy.speaker.ij983g",
       "speakerName": "夜を食べるもの",
       "mode": "dialogue",
@@ -120,8 +168,8 @@
     },
     {
       "type": "line",
-      "id": "night-eater.epilogue.node.line.007",
-      "lineId": "night-eater.epilogue.line.007",
+      "id": "night-eater.epilogue.node.line.007a",
+      "lineId": "night-eater.epilogue.line.007a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -129,8 +177,8 @@
     },
     {
       "type": "line",
-      "id": "night-eater.epilogue.node.line.008",
-      "lineId": "night-eater.epilogue.line.008",
+      "id": "night-eater.epilogue.node.line.008a",
+      "lineId": "night-eater.epilogue.line.008a",
       "speakerId": "legacy.speaker.ij983g",
       "speakerName": "夜を食べるもの",
       "mode": "dialogue",
@@ -146,35 +194,60 @@
     },
     {
       "type": "line",
-      "id": "night-eater.epilogue.node.line.009",
-      "lineId": "night-eater.epilogue.line.009",
+      "id": "night-eater.epilogue.node.line.009a",
+      "lineId": "night-eater.epilogue.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "常連たちが帰った店内に、食べ残された最後の一灯。その下に、カップが二つ。夜の最後の三分間は、いつも二人分の貸切だった。安全灯の緑と、彼女の夜の藍色が、カップの中で少しだけ混ざる。",
+      "text": "常連たちが帰った店内に、食べ残された最後の一灯。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.epilogue.node.line.009b",
+      "lineId": "night-eater.epilogue.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "その下に、カップが二つ。夜の最後の三分間は、いつも二人分の貸切だった。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.epilogue.node.line.009c",
+      "lineId": "night-eater.epilogue.line.009c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "安全灯の緑と、彼女の夜の藍色が、カップの中で少し混ざる。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "night-eater.epilogue.node.line.010",
-      "lineId": "night-eater.epilogue.line.010",
+      "id": "night-eater.epilogue.node.line.010a",
+      "lineId": "night-eater.epilogue.line.010a",
       "speakerId": "legacy.speaker.ij983g",
       "speakerName": "夜を食べるもの",
       "mode": "dialogue",
-      "text": "今夜の総評。営業、星五つ。閉店作業、星五つ。……この三分は、星、つけない。"
+      "text": "今夜の総評。営業、星五つ。"
     },
     {
       "type": "line",
-      "id": "night-eater.epilogue.node.line.011",
-      "lineId": "night-eater.epilogue.line.011",
+      "id": "night-eater.epilogue.node.line.010b",
+      "lineId": "night-eater.epilogue.line.010b",
+      "speakerId": "legacy.speaker.ij983g",
+      "speakerName": "夜を食べるもの",
+      "mode": "dialogue",
+      "text": "閉店作業、星五つ。……この三分は、星、つけない。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.epilogue.node.line.011a",
+      "lineId": "night-eater.epilogue.line.011a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "つけないんですか？"
+      "text": "つけないんですか?"
     },
     {
       "type": "line",
-      "id": "night-eater.epilogue.node.line.012",
-      "lineId": "night-eater.epilogue.line.012",
+      "id": "night-eater.epilogue.node.line.012a",
+      "lineId": "night-eater.epilogue.line.012a",
       "speakerId": "legacy.speaker.ij983g",
       "speakerName": "夜を食べるもの",
       "mode": "dialogue",
@@ -182,11 +255,19 @@
     },
     {
       "type": "line",
-      "id": "night-eater.epilogue.node.line.013",
-      "lineId": "night-eater.epilogue.line.013",
+      "id": "night-eater.epilogue.node.line.013a",
+      "lineId": "night-eater.epilogue.line.013a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "食レポの人の、最上級のほめ言葉だった。朝が店の窓まで来て、夜の裾が名残惜しそうに床を撫でる。「また今夜」と言い合える閉店を、私はこの一年でいちばんの発明だと思っている。",
+      "text": "食レポの人の、最上級のほめ言葉だった。朝が窓まで来て、夜の裾が名残惜しそうに床を撫でる。"
+    },
+    {
+      "type": "line",
+      "id": "night-eater.epilogue.node.line.013b",
+      "lineId": "night-eater.epilogue.line.013b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「また今夜」と言い合える閉店。この一年でいちばんの発明だと思う。",
       "emotion": "tender"
     },
     {
@@ -198,7 +279,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 閉店後限定営業と新条文第三条。朝のつまみ食いで三分延長→最後の二杯。報酬CG2枚に接続。",
+    "authorNote": "語り口V2・二行枠で改稿。閉店後限定営業と新条文第三条。朝のつまみ食いで三分延長→最後の二杯。報酬CG2枚に接続。",
     "legacyGeneratedIds": false
   }
 }

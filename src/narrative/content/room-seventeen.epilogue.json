@@ -10,9 +10,20 @@
     "stage": "epilogue"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 400,
     "weight": 1
   },
@@ -43,103 +54,274 @@
     {
       "type": "direction",
       "id": "room-seventeen.epilogue.node.direction.001",
-      "command": { "type": "background", "assetId": "room-seventeen.epilogue.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "room-seventeen.epilogue.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "line",
-      "id": "room-seventeen.epilogue.node.line.001",
-      "lineId": "room-seventeen.epilogue.line.001",
+      "id": "room-seventeen.epilogue.node.line.001a",
+      "lineId": "room-seventeen.epilogue.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "解放から最初の休日。十七号室の掲示板に、手書きの催しが貼り出された。「本日開催・定時退室訓練——通称、出口千本ノック。参加無料。全員、時間までに帰れたら優勝」。"
+      "text": "解放から、最初の休日。十七号室の掲示板に、手書きの催しが貼り出された。"
     },
     {
       "type": "line",
-      "id": "room-seventeen.epilogue.node.line.002",
-      "lineId": "room-seventeen.epilogue.line.002",
+      "id": "room-seventeen.epilogue.node.line.001b",
+      "lineId": "room-seventeen.epilogue.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「本日開催・定時退室訓練——通称、出口千本ノック」"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.epilogue.node.line.001c",
+      "lineId": "room-seventeen.epilogue.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「参加無料。全員、時間までに帰れたら優勝」"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.epilogue.node.line.002a",
+      "lineId": "room-seventeen.epilogue.line.002a",
       "speakerId": "legacy.speaker.zzyjm6",
       "speakerName": "十七号室",
       "mode": "dialogue",
-      "text": "私の誤出口の、総ざらいです。過去に開いてしまった間違いの扉を、今日は全部、正しく開けます。……お客様に、練習台になっていただくのは、心苦しいのですが。"
+      "text": "私の誤出口の、総ざらいです。"
     },
     {
       "type": "line",
-      "id": "room-seventeen.epilogue.node.line.003",
-      "lineId": "room-seventeen.epilogue.line.003",
+      "id": "room-seventeen.epilogue.node.line.002b",
+      "lineId": "room-seventeen.epilogue.line.002b",
+      "speakerId": "legacy.speaker.zzyjm6",
+      "speakerName": "十七号室",
+      "mode": "dialogue",
+      "text": "過去に開いてしまった間違いの扉を、今日は全部、正しく開けます。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.epilogue.node.line.002c",
+      "lineId": "room-seventeen.epilogue.line.002c",
+      "speakerId": "legacy.speaker.zzyjm6",
+      "speakerName": "十七号室",
+      "mode": "dialogue",
+      "text": "……お客様に、練習台になっていただくのは、心苦しいのですが。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.epilogue.node.line.003a",
+      "lineId": "room-seventeen.epilogue.line.003a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "練習台は大盛況だった。一番扉、開けると海底(過去最悪の誤出口)。二番扉、知らない会議の真ん中。三番扉、夕方の港。四番扉、昨日。五番扉、他人の家の玄関。参加者は誤出口の当たりを引くたび、なぜか歓声を上げた。ハズレが観光になっている。",
+      "text": "練習台は、大盛況だった。一番扉、開けると海底。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.epilogue.node.line.003b",
+      "lineId": "room-seventeen.epilogue.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "過去最悪の誤出口。二番扉、知らない会議の真ん中。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.epilogue.node.line.003c",
+      "lineId": "room-seventeen.epilogue.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "三番扉、夕方の港。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.epilogue.node.line.003d",
+      "lineId": "room-seventeen.epilogue.line.003d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "四番扉、昨日。五番扉、他人の家の玄関。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.epilogue.node.line.003e",
+      "lineId": "room-seventeen.epilogue.line.003e",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "参加者は当たりを引くたび、なぜか歓声。ハズレが観光になってる。",
       "emotion": "comic"
     },
     {
       "type": "direction",
       "id": "room-seventeen.epilogue.node.direction.002",
-      "command": { "type": "still", "assetId": "room-seventeen.epilogue.asset.still.001" }
+      "command": {
+        "type": "still",
+        "assetId": "room-seventeen.epilogue.asset.still.001"
+      }
     },
     {
       "type": "line",
-      "id": "room-seventeen.epilogue.node.line.004",
-      "lineId": "room-seventeen.epilogue.line.004",
+      "id": "room-seventeen.epilogue.node.line.004a",
+      "lineId": "room-seventeen.epilogue.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "そして訓練の本番。参加者ひとりひとりに、部屋は「その人の帰宅扉」を用意した。開けた先が、確実に、その人の家の前に着く扉。海底に落ちた人も、昨日に飛ばされた人も、最後は必ず、自分の玄関の匂いのする通路へ出る。千本ノックの千本目は、全員ぶんの、ただいまだった。",
+      "text": "そして、訓練の本番。参加者ひとりひとりに、部屋は「その人の帰宅扉」を用意した。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.epilogue.node.line.004b",
+      "lineId": "room-seventeen.epilogue.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "開けた先が、確実にその人の家の前に着く扉。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.epilogue.node.line.004c",
+      "lineId": "room-seventeen.epilogue.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "海底に落ちた人も、昨日に飛ばされた人も、最後は自分の玄関へ。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.epilogue.node.line.004d",
+      "lineId": "room-seventeen.epilogue.line.004d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "千本ノックの千本目は、全員ぶんの、ただいまだった。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "room-seventeen.epilogue.node.line.005",
-      "lineId": "room-seventeen.epilogue.line.005",
+      "id": "room-seventeen.epilogue.node.line.005a",
+      "lineId": "room-seventeen.epilogue.line.005a",
       "speakerId": "legacy.speaker.zzyjm6",
       "speakerName": "十七号室",
       "mode": "dialogue",
-      "text": "迷っていただくのが、私の芸です。ですが、お帰りだけは、間違えません。……間違えない練習を、四百年ぶんの間違いで、やっと積みました。"
+      "text": "迷っていただくのが、私の芸です。ですが、お帰りだけは、間違えません。"
     },
     {
       "type": "line",
-      "id": "room-seventeen.epilogue.node.line.006",
-      "lineId": "room-seventeen.epilogue.line.006",
+      "id": "room-seventeen.epilogue.node.line.005b",
+      "lineId": "room-seventeen.epilogue.line.005b",
+      "speakerId": "legacy.speaker.zzyjm6",
+      "speakerName": "十七号室",
+      "mode": "dialogue",
+      "text": "……間違えない練習を、四百年ぶんの間違いで、やっと積みました。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.epilogue.node.line.006a",
+      "lineId": "room-seventeen.epilogue.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "訓練後、雲の上の休憩階でお茶になった。新人計測係くんは全扉の完走者で、記録板に「まいご、ぜんぶ、ごーる。」と書いた。仲居さんは四番扉(昨日)で昨日の自分と鉢合わせ、会釈し合ったらしい。大人である。",
+      "text": "訓練後、雲の上の休憩階でお茶になった。新人計測係くんは全扉の完走者。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.epilogue.node.line.006b",
+      "lineId": "room-seventeen.epilogue.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "記録板に「まいご、ぜんぶ、ごーる。」"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.epilogue.node.line.006c",
+      "lineId": "room-seventeen.epilogue.line.006c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "仲居さんは四番扉(昨日)で、昨日の自分と鉢合わせ。会釈し合ったらしい。",
       "emotion": "comic"
     },
     {
       "type": "direction",
       "id": "room-seventeen.epilogue.node.direction.003",
-      "command": { "type": "still", "assetId": "room-seventeen.epilogue.asset.still.002" }
+      "command": {
+        "type": "still",
+        "assetId": "room-seventeen.epilogue.asset.still.002"
+      }
     },
     {
       "type": "line",
-      "id": "room-seventeen.epilogue.node.line.007",
-      "lineId": "room-seventeen.epilogue.line.007",
+      "id": "room-seventeen.epilogue.node.line.007a",
+      "lineId": "room-seventeen.epilogue.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "帰り際、私の帰宅扉の前で、部屋が小さな木の札をくれた。「また来ます」の札。扉の外側に、掛けるための札だ。「お客様が外から掛けてくだされば、私は、それを見て眠れます」。待ちぼうけの建築が編み出した、待たなくていい発明だった。",
+      "text": "「お客様が外から掛けてくだされば、私は、それを見て眠れます」"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.epilogue.node.line.007b",
+      "lineId": "room-seventeen.epilogue.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "待ちぼうけの建築が編み出した、待たなくていい発明だった。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "room-seventeen.epilogue.node.line.008",
-      "lineId": "room-seventeen.epilogue.line.008",
+      "id": "room-seventeen.epilogue.node.line.008a",
+      "lineId": "room-seventeen.epilogue.line.008a",
       "speakerId": "legacy.speaker.zzyjm6",
       "speakerName": "十七号室",
       "mode": "dialogue",
-      "text": "それと、演目表の出演届を、出しました。演目名は「お化け屋敷ではありません」。副題——「出口は全部正解」。……柿落としの日は、私の全フロア、休業にします。客席で、観たいので。"
+      "text": "それと、演目表の出演届を、出しました。"
     },
     {
       "type": "line",
-      "id": "room-seventeen.epilogue.node.line.009",
-      "lineId": "room-seventeen.epilogue.line.009",
+      "id": "room-seventeen.epilogue.node.line.008b",
+      "lineId": "room-seventeen.epilogue.line.008b",
+      "speakerId": "legacy.speaker.zzyjm6",
+      "speakerName": "十七号室",
+      "mode": "dialogue",
+      "text": "演目名は「お化け屋敷ではありません」副題——「出口は全部正解」"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.epilogue.node.line.008c",
+      "lineId": "room-seventeen.epilogue.line.008c",
+      "speakerId": "legacy.speaker.zzyjm6",
+      "speakerName": "十七号室",
+      "mode": "dialogue",
+      "text": "……柿落としの日は、私の全フロア、休業にします。客席で、観たいので。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.epilogue.node.line.009a",
+      "lineId": "room-seventeen.epilogue.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私は札を外側に掛け、ノックを二回、間を置いてもう一回。中から、照明が一段明るくなる気配がした。おやすみ、十七号室。また来ます——札の通りに。",
+      "text": "私は札を外側に掛け、ノックを二回、間を置いてもう一回。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.epilogue.node.line.009b",
+      "lineId": "room-seventeen.epilogue.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "中から、照明が一段明るくなる気配がした。耳も、少し温かい。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.epilogue.node.line.009c",
+      "lineId": "room-seventeen.epilogue.line.009c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "おやすみ、十七号室。また来ます——札の通りに。",
       "emotion": "resolve"
     },
     {
       "type": "effect",
       "id": "room-seventeen.epilogue.node.effect.001",
       "effects": [
-        { "type": "setStoryStage", "fighterId": "room-seventeen", "stage": 7 }
+        {
+          "type": "setStoryStage",
+          "fighterId": "room-seventeen",
+          "stage": 7
+        }
       ]
     },
     {
@@ -151,7 +333,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 承認済みエピローグ(出口千本ノック/誤出口=海底・会議・港・昨日・他人の家/「また来ます」の札)をLN文体で磨き、出演届で演目表へ接続。",
+    "authorNote": "語り口V2・二行枠で改稿。v2改稿: 承認済みエピローグ(出口千本ノック/誤出口=海底・会議・港・昨日・他人の家/「また来ます」の札)をLN文体で磨き、出演届で演目表へ接続。",
     "legacyGeneratedIds": false
   }
 }

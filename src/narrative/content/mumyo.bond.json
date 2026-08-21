@@ -31,8 +31,44 @@
       {
         "id": "mumyo.bond.asset.background.001",
         "kind": "background",
-        "path": "/assets/story/bg-casino-cafe-rain.png",
+        "path": "/assets/story/bg-mirror-corridor-rain-v1.png",
         "alt": "雨の日の鏡張りの廊下の背景"
+      },
+      {
+        "id": "mumyo.bond.asset.sprite.character",
+        "kind": "sprite",
+        "path": "/assets/battle/fighters/mumyo-v1.png",
+        "alt": "鏡の中だけに人影を映す一振りの無銘"
+      },
+      {
+        "id": "mumyo.bond.asset.outcome.001",
+        "kind": "still",
+        "path": "/assets/story/events/mumyo-bond-outcome-walk-v1.png",
+        "alt": "雨の鏡廊下で、剣を置いた無銘と鏡越しに手を重ねて歩く屋内勤務服のミミ",
+        "focusX": 50,
+        "focusY": 43,
+        "gallery": {
+          "title": "今日は、窓のある廊下がいい",
+          "chapter": "無銘 第三段階 / 雨の廊下を、隣で歩く",
+          "caption": "剣を置いたまま、誰のものでもない歩幅で。無銘が初めて自分から行き先を選んだ。",
+          "unlock": "on-choice",
+          "choiceId": "mumyo.bond.choice.001"
+        }
+      },
+      {
+        "id": "mumyo.bond.asset.outcome.002",
+        "kind": "still",
+        "path": "/assets/story/events/mumyo-bond-outcome-sheathed-guard-v1.png",
+        "alt": "青い練習場で、一度も抜けずに光の攻撃を逸らす無銘と手を伸ばす屋内勤務服のミミ",
+        "focusX": 50,
+        "focusY": 42,
+        "gallery": {
+          "title": "十四代で初めての、悪くない",
+          "chapter": "無銘 第三段階 / 雨の廊下を、隣で歩く",
+          "caption": "抜かずに守り、抜かずに勝った。誰かの願いではなく、無銘自身が選んだ初勝利。",
+          "unlock": "on-choice",
+          "choiceId": "mumyo.bond.choice.002"
+        }
       }
     ]
   },
@@ -47,54 +83,139 @@
       }
     },
     {
+      "type": "direction",
+      "id": "mumyo.bond.node.direction.character.001",
+      "command": {
+        "type": "show",
+        "assetId": "mumyo.bond.asset.sprite.character",
+        "actorId": "mumyo",
+        "slot": "center",
+        "scale": "compact"
+      }
+    },
+    {
       "type": "line",
-      "id": "mumyo.bond.node.line.001",
-      "lineId": "mumyo.bond.line.001",
+      "id": "mumyo.bond.node.line.001a",
+      "lineId": "mumyo.bond.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "雨の午後、展示室の掃除当番だった。ケースを磨いていると、鏡の中の無銘が、私の雑巾の動きを正確に真似していることに気づいた。指摘すると、ぴたりと止まった。「……暇だった」。最強の剣の告白として、歴代で一番かわいい部類だと思う。",
+      "text": "雨の午後、展示室の掃除当番だった。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.bond.node.line.001b",
+      "lineId": "mumyo.bond.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ケースを磨いていると、鏡の中の無銘が、私の雑巾の動きを正確に真似していることに気づいた。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.bond.node.line.001c",
+      "lineId": "mumyo.bond.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "指摘すると、ぴたりと止まった。「……暇だった」"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.bond.node.line.001d",
+      "lineId": "mumyo.bond.line.001d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "耳が、ちょっと気まずそうに揺れた。最強の剣の告白として、歴代で一番かわいい部類だと思う。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "mumyo.bond.node.line.002",
-      "lineId": "mumyo.bond.line.002",
+      "id": "mumyo.bond.node.line.002a",
+      "lineId": "mumyo.bond.line.002a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "暇なら、散歩に行きませんか。剣は置いていって。鏡張りの廊下なら、あなた、ずっと隣にいられるでしょう。"
+      "text": "暇なら、散歩に行きませんか。剣は置いていって。"
     },
     {
       "type": "line",
-      "id": "mumyo.bond.node.line.003",
-      "lineId": "mumyo.bond.line.003",
+      "id": "mumyo.bond.node.line.002b",
+      "lineId": "mumyo.bond.line.002b",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "鏡張りの廊下なら、あなた、ずっと隣にいられるでしょう。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.bond.node.line.003a",
+      "lineId": "mumyo.bond.line.003a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "鏡の人物が、まばたきを二回した。この人のまばたき二回は、動揺の最大値である。「剣を、置いて。……私を、連れて行くのか。武器を持たずに、私を?」。その二つが別のものとして数えられた瞬間に、この散歩はもう成功していた気がする。",
+      "text": "「剣を、置いて。……私を、連れて行くのか。武器を持たずに、私を?」"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.bond.node.line.003b",
+      "lineId": "mumyo.bond.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "その二つが別のものとして数えられた瞬間に、この散歩はもう成功していた気がする。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "mumyo.bond.node.line.004",
-      "lineId": "mumyo.bond.line.004",
+      "id": "mumyo.bond.node.line.004a",
+      "lineId": "mumyo.bond.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "雨音の廊下を、二人で歩いた。私は床を、無銘は鏡の中を。歩幅がなかなか合わない。彼は十四人の勇者の歩き方を覚えていて、どれで歩けばいいのか分からないらしい。「全部忘れて、適当にどうぞ」と言ったら、少し崩れた、誰のものでもない歩き方になった。",
+      "text": "雨音の廊下を、二人で歩いた。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.bond.node.line.004b",
+      "lineId": "mumyo.bond.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私は床を、無銘は鏡の中を。歩幅がなかなか合わない。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.bond.node.line.004c",
+      "lineId": "mumyo.bond.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "彼は十四人の勇者の歩き方を覚えていて、どれで歩けばいいのか分からないらしい。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.bond.node.line.004d",
+      "lineId": "mumyo.bond.line.004d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「全部忘れて、適当にどうぞ」と言ったら、少し崩れた、誰のものでもない歩き方になった。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "mumyo.bond.node.line.005",
-      "lineId": "mumyo.bond.line.005",
+      "id": "mumyo.bond.node.line.005a",
+      "lineId": "mumyo.bond.line.005a",
       "speakerId": "legacy.speaker.1whk6fw",
       "speakerName": "無銘",
       "mode": "dialogue",
-      "text": "持たれている間、私に時間はなかった。振るわれるか、鞘にいるか、だけだ。……置かれて初めて、時間というものが、こんなに長いと知った。"
+      "text": "持たれている間、私に時間はなかった。振るわれるか、鞘にいるか、だけだ。"
     },
     {
       "type": "line",
-      "id": "mumyo.bond.node.line.006",
-      "lineId": "mumyo.bond.line.006",
+      "id": "mumyo.bond.node.line.005b",
+      "lineId": "mumyo.bond.line.005b",
+      "speakerId": "legacy.speaker.1whk6fw",
+      "speakerName": "無銘",
+      "mode": "dialogue",
+      "text": "……置かれて初めて、時間というものが、こんなに長いと知った。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.bond.node.line.006a",
+      "lineId": "mumyo.bond.line.006a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -102,44 +223,93 @@
     },
     {
       "type": "line",
-      "id": "mumyo.bond.node.line.007",
-      "lineId": "mumyo.bond.line.007",
+      "id": "mumyo.bond.node.line.007a",
+      "lineId": "mumyo.bond.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "長い沈黙だった。雨音が三曲ぶんくらい流れた。それから、鏡の中の声が、ためらいながら答えた。「……分からない。したいこと、と思ったものが、本当に私の望みなのか、確かめる方法がない。私の声だと思ったものが、歴代の持ち主の願いの残響だったことが、何度もある」。",
+      "text": "「……分からない。したいこと、と思ったものが、本当に私の望みなのか、確かめる方法がない」"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.bond.node.line.007b",
+      "lineId": "mumyo.bond.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「私の声だと思ったものが、歴代の持ち主の願いの残響だったことが、何度もある」",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "mumyo.bond.node.line.008",
-      "lineId": "mumyo.bond.line.008",
+      "id": "mumyo.bond.node.line.008a",
+      "lineId": "mumyo.bond.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "四百年、他人の願いを注がれ続けた器の中で、どの一滴が自分なのか。そんな問いを抱えて、この人は鏡の中に立っている。私は立ち止まって、鏡に向き直った。",
-      "emotion": "tension"
+      "text": "四百年、他人の願いを注がれ続けた器の中で、どの一滴が自分なのか。"
     },
     {
       "type": "line",
-      "id": "mumyo.bond.node.line.009",
-      "lineId": "mumyo.bond.line.009",
+      "id": "mumyo.bond.node.line.008b",
+      "lineId": "mumyo.bond.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "そんな問いを抱えて、この人は鏡の中に立っている。私は立ち止まって、鏡に向き直った。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.bond.node.line.009a",
+      "lineId": "mumyo.bond.line.009a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "じゃあ、確かめ方をひとつ。さっき、歩き方を崩したでしょう。あれ、誰の残響でもないですよ。十四人の誰も、あんなへなへなの歩き方はしてません。……あれが、あなたです。"
+      "text": "じゃあ、確かめ方をひとつ。さっき、歩き方を崩したでしょう。"
     },
     {
       "type": "line",
-      "id": "mumyo.bond.node.line.010",
-      "lineId": "mumyo.bond.line.010",
+      "id": "mumyo.bond.node.line.009b",
+      "lineId": "mumyo.bond.line.009b",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "あれ、誰の残響でもないですよ。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.bond.node.line.009c",
+      "lineId": "mumyo.bond.line.009c",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "十四人の誰も、あんなへなへなの歩き方はしてません。……あれが、あなたです。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.bond.node.line.010a",
+      "lineId": "mumyo.bond.line.010a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "鏡の中の人物が、自分の足元を見下ろした。長く、見ていた。それから、廊下の突き当たりまで、もう一度あの崩れた歩き方で歩いた。今度は、少しだけ楽しそうに。雨が止んでも、私たちはしばらく廊下にいた。",
+      "text": "鏡の中の人物が、自分の足元を見下ろした。長く、見ていた。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.bond.node.line.010b",
+      "lineId": "mumyo.bond.line.010b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "それから、廊下の突き当たりまで、もう一度あの崩れた歩き方で歩いた。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.bond.node.line.010c",
+      "lineId": "mumyo.bond.line.010c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "今度は、少しだけ楽しそうに。雨が止んでも、私たちはしばらく廊下にいた。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "mumyo.bond.node.line.011",
-      "lineId": "mumyo.bond.line.011",
+      "id": "mumyo.bond.node.line.011a",
+      "lineId": "mumyo.bond.line.011a",
       "speakerId": "narrator",
       "mode": "thought",
       "text": "散歩の締めくくりに、チームでの過ごし方をひとつ決める。",
@@ -152,10 +322,11 @@
         {
           "id": "mumyo.bond.choice.001",
           "label": "剣を持たず、鏡の人物と廊下を歩く",
-          "result": "週に一度の散歩が、決まりになった。現実の剣はケースに残したまま、鏡の中の隣を歩く。角を曲がるたび、鏡の中の距離が少しずつ近くなる。三週目、彼は初めて自分から行き先を指定した。「今日は、窓のある廊下がいい。雨が見たい」。したいこと、一つ目の発見である。記念日にした。",
+          "result": "週に一度の散歩が決まりになった。角を曲がるたび、鏡の中の距離が少しずつ近くなる。三週目、彼は初めて自分から行き先を指定した。「今日は、窓のある廊下がいい。雨が見たい」記念日にした。",
           "intent": "相手の秘密の勝ち方を試す",
           "promise": "読みにくい作戦になる代わりに、この人だけの成長を大きく進める。",
           "memory": "任せた一戦の手応えが、次に力を見せる理由になる。",
+          "outcomeAssetId": "mumyo.bond.asset.outcome.001",
           "tone": "wild",
           "effects": [
             {
@@ -182,10 +353,11 @@
         {
           "id": "mumyo.bond.choice.002",
           "label": "鞘のまま、三人の受け流し役を任せる",
-          "result": "次の練習試合で、無銘は一度も抜かれないまま、鞘ごと敵の攻撃の軌道を逸らし続けた。斬らない剣は、味方にとって一番安全な壁になった。試合後、彼は静かに言った。「抜かずに勝ったのは、十四代で初めてだ。……悪くない」。悪くない、はこの人の最上級である。",
+          "result": "次の練習試合で、無銘は一度も抜かれないまま、鞘ごと敵の攻撃の軌道を逸らし続けた。試合後、彼は静かに言った。「抜かずに勝ったのは、十四代で初めてだ。……悪くない」悪くない、はこの人の最上級だ。",
           "intent": "チームの新しい連携を試す",
           "promise": "本人の流儀は崩すが、全員へ配れる成長ポイントを得る。",
           "memory": "成功した作戦と短くなった会話の両方が、次の判断まで残る。",
+          "outcomeAssetId": "mumyo.bond.asset.outcome.002",
           "tone": "pragmatic",
           "effects": [
             {
@@ -227,7 +399,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 剣を置いて行く散歩。誰のものでもない歩き方=残響ではない自分の発見。",
+    "authorNote": "語り口V2・二行枠で改稿。v2改稿: 剣を置いて行く散歩。誰のものでもない歩き方=残響ではない自分の発見。",
     "legacyGeneratedIds": false
   }
 }

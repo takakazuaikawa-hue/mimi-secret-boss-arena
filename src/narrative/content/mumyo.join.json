@@ -31,8 +31,14 @@
       {
         "id": "mumyo.join.asset.background.001",
         "kind": "background",
-        "path": "/assets/story/bg-employee-entrance.png",
+        "path": "/assets/story/bg-mirror-corridor-rain-v1.png",
         "alt": "鏡張りの廊下の背景"
+      },
+      {
+        "id": "mumyo.join.asset.sprite.character",
+        "kind": "sprite",
+        "path": "/assets/battle/fighters/mumyo-v1.png",
+        "alt": "鏡の中だけに人影を映す一振りの無銘"
       }
     ]
   },
@@ -47,89 +53,240 @@
       }
     },
     {
-      "type": "line",
-      "id": "mumyo.join.node.line.001",
-      "lineId": "mumyo.join.line.001",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "無銘の選手登録は、展示室から一番近い鏡張りの廊下で行うことにした。鏡が多いほど、本人がそこに「いられる」からだ。移動中、廊下の鏡を一枚ずつ、黒髪の人物が歩いて渡ってくる。通行人が二度見しても、本人は気にしない。"
+      "type": "direction",
+      "id": "mumyo.join.node.direction.character.001",
+      "command": {
+        "type": "show",
+        "assetId": "mumyo.join.asset.sprite.character",
+        "actorId": "mumyo",
+        "slot": "center",
+        "scale": "compact"
+      }
     },
     {
       "type": "line",
-      "id": "mumyo.join.node.line.002",
-      "lineId": "mumyo.join.line.002",
+      "id": "mumyo.join.node.line.001a",
+      "lineId": "mumyo.join.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "問題は、登録端末だった。剣を選手として認めたくせに、所有者欄が空白のままでは、頑として先へ進まない。赤い点滅が、責めるように続く。",
+      "text": "無銘の選手登録は、展示室から一番近い鏡張りの廊下で行うことにした。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.join.node.line.001b",
+      "lineId": "mumyo.join.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "鏡が多いほど、本人がそこに「いられる」からだ。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.join.node.line.001c",
+      "lineId": "mumyo.join.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "移動中、廊下の鏡を一枚ずつ、黒髪の人物が歩いて渡ってくる。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.join.node.line.001d",
+      "lineId": "mumyo.join.line.001d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "通行人が二度見しても、本人は気にしない。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.join.node.line.002a",
+      "lineId": "mumyo.join.line.002a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "問題は、登録端末だった。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.join.node.line.002b",
+      "lineId": "mumyo.join.line.002b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "剣を選手として認めたくせに、所有者欄が空白のままでは、頑として先へ進まない。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.join.node.line.002c",
+      "lineId": "mumyo.join.line.002c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "赤い点滅が、責めるように続く。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "mumyo.join.node.line.003",
-      "lineId": "mumyo.join.line.003",
+      "id": "mumyo.join.node.line.003a",
+      "lineId": "mumyo.join.line.003a",
       "speakerId": "legacy.speaker.1whk6fw",
       "speakerName": "無銘",
       "mode": "dialogue",
-      "text": "所有者欄へ、お前の名を書けば済む。私は抜けるようになり、登録も通る。……お前が望まなくても、命じられれば、私は斬る。それだけの話だ。"
+      "text": "所有者欄へ、お前の名を書けば済む。私は抜けるようになり、登録も通る。"
     },
     {
       "type": "line",
-      "id": "mumyo.join.node.line.004",
-      "lineId": "mumyo.join.line.004",
+      "id": "mumyo.join.node.line.003b",
+      "lineId": "mumyo.join.line.003b",
+      "speakerId": "legacy.speaker.1whk6fw",
+      "speakerName": "無銘",
+      "mode": "dialogue",
+      "text": "……お前が望まなくても、命じられれば、私は斬る。それだけの話だ。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.join.node.line.004a",
+      "lineId": "mumyo.join.line.004a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "済みません。その「済む」で、あなたの鞘の名前が一行増えるんですよね。……却下です。別の方法を探します。"
+      "text": "済みません。その「済む」で、あなたの鞘の名前が一行増えるんですよね。"
     },
     {
       "type": "line",
-      "id": "mumyo.join.node.line.005",
-      "lineId": "mumyo.join.line.005",
+      "id": "mumyo.join.node.line.004b",
+      "lineId": "mumyo.join.line.004b",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "……却下です。別の方法を探します。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.join.node.line.005a",
+      "lineId": "mumyo.join.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "鏡の中で、無銘が私を見た。便利さを断られた顔ではなかった。もっと静かな、たとえば長い雨がふと止んだ時のような顔だった。「……変わった運営だ」。褒められたのだと思うことにする。",
+      "text": "鏡の中で、無銘が私を見た。便利さを断られた顔ではなかった。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.join.node.line.005b",
+      "lineId": "mumyo.join.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "もっと静かな、たとえば長い雨がふと止んだ時のような顔だった。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.join.node.line.005c",
+      "lineId": "mumyo.join.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "耳が、くすぐったそうに揺れた。「……変わった運営だ」"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.join.node.line.005d",
+      "lineId": "mumyo.join.line.005d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "褒められたのだと思うことにする。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "mumyo.join.node.line.006",
-      "lineId": "mumyo.join.line.006",
+      "id": "mumyo.join.node.line.006a",
+      "lineId": "mumyo.join.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "それから二時間、規則集と格闘した。所有者欄の必須条件、例外規定、過去の判例。新人計測係くんまで動員して、ようやく隙間を一つ見つけた。「本体が自我を持つ武具は、武具自身を保護者として登録できる」——迷子の魔導人形のための、古い救済規定だった。",
+      "text": "それから二時間、規則集と格闘した。所有者欄の必須条件、例外規定、過去の判例。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.join.node.line.006b",
+      "lineId": "mumyo.join.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "新人計測係くんまで動員して、ようやく隙間を一つ見つけた。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.join.node.line.006c",
+      "lineId": "mumyo.join.line.006c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「本体が自我を持つ武具は、武具自身を保護者として登録できる」"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.join.node.line.006d",
+      "lineId": "mumyo.join.line.006d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "——迷子の魔導人形のための、古い救済規定だった。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "mumyo.join.node.line.007",
-      "lineId": "mumyo.join.line.007",
+      "id": "mumyo.join.node.line.007a",
+      "lineId": "mumyo.join.line.007a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "つまり、あなたがあなたの保護者になれます。所有者欄には「本人」って書けばいい。……前例はないですけど、規則違反でもないです。"
+      "text": "つまり、あなたがあなたの保護者になれます。所有者欄には「本人」って書けばいい。"
     },
     {
       "type": "line",
-      "id": "mumyo.join.node.line.008",
-      "lineId": "mumyo.join.line.008",
+      "id": "mumyo.join.node.line.007b",
+      "lineId": "mumyo.join.line.007b",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "……前例はないですけど、規則違反でもないです。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.join.node.line.008a",
+      "lineId": "mumyo.join.line.008a",
       "speakerId": "legacy.speaker.1whk6fw",
       "speakerName": "無銘",
       "mode": "dialogue",
-      "text": "私が、私を持つ。……十四代の間、誰も思いつかなかった。持つ側も、持たれる側も。"
+      "text": "私が、私を持つ。"
     },
     {
       "type": "line",
-      "id": "mumyo.join.node.line.009",
-      "lineId": "mumyo.join.line.009",
+      "id": "mumyo.join.node.line.008b",
+      "lineId": "mumyo.join.line.008b",
+      "speakerId": "legacy.speaker.1whk6fw",
+      "speakerName": "無銘",
+      "mode": "dialogue",
+      "text": "……十四代の間、誰も思いつかなかった。持つ側も、持たれる側も。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.join.node.line.009a",
+      "lineId": "mumyo.join.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "端末の所有者欄に「本人」と入力すると、赤い点滅は三秒迷って、青に変わった。機械が折れた瞬間である。廊下の鏡の中で、黒髪の人物が、自分の手のひらを不思議そうに見下ろしていた。",
+      "text": "端末の所有者欄に「本人」と入力すると、赤い点滅は三秒迷って、青に変わった。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.join.node.line.009b",
+      "lineId": "mumyo.join.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "機械が折れた瞬間だった。"
+    },
+    {
+      "type": "line",
+      "id": "mumyo.join.node.line.009c",
+      "lineId": "mumyo.join.line.009c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "廊下の鏡の中で、黒髪の人物が、自分の手のひらを不思議そうに見下ろしていた。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "mumyo.join.node.line.010",
-      "lineId": "mumyo.join.line.010",
+      "id": "mumyo.join.node.line.010a",
+      "lineId": "mumyo.join.line.010a",
       "speakerId": "narrator",
       "mode": "thought",
       "text": "最後の一筆の入れ方を、決める。銘を打つときのように、丁寧に。",
@@ -142,7 +299,7 @@
         {
           "id": "mumyo.join.choice.001",
           "label": "鏡の中の人物へ、先に新しい呼び名を聞く",
-          "result": "「登録名、どうします? 好きな名前を付けられますよ」。鏡の人物は長く考えて、答えた。「無銘のままでいい。名がないことは、今は、まだ誰のものでもないことの証だから。……次の名は、自分で選ぶ。急がない」。登録名「無銘」。所有者欄「本人」。史上初の書類が、静かに受理された。",
+          "result": "「登録名、どうします?」鏡の人物は長く考えて答えた。「無銘のままでいい。……次の名は、自分で選ぶ。急がない」登録名「無銘」所有者欄「本人」史上初の書類が、静かに受理された。",
           "intent": "本人の得意な戦い方を知る",
           "promise": "登録は少し遅れるが、この人専用の成長ポイントを得る。",
           "memory": "自分で書いた最初の条件を、相手は次の大事な場面でも覚えている。",
@@ -177,7 +334,7 @@
         {
           "id": "mumyo.join.choice.002",
           "label": "景品番号のまま、展示ケースごと登録する",
-          "result": "手続きを急ぎ、登録名は「景品番号・零」のまま、展示ケースごと選手登録した。選手証は出た。ただ、ケースの鏡に映った顔が、少しだけ呆れていた。「……番号で呼ばれるのは、慣れている」。慣れている、という言葉が、その日は少し重かった。次の書類で、必ず直そうと思う。",
+          "result": "手続きを急ぎ、登録名は「景品番号・零」のまま、展示ケースごと選手登録した。ケースの鏡に映った顔が、少し呆れていた。「……番号で呼ばれるのは、慣れている」その言葉が、少し重かった。",
           "intent": "次の公式戦へ間に合わせる",
           "promise": "本人の詳細は後回しになるが、誰にでも使える成長ポイントを得る。",
           "memory": "先に席を確保した判断は、チームの始まり方として記録に残る。",
@@ -208,7 +365,7 @@
         {
           "id": "mumyo.join.choice.003",
           "label": "今回は無銘を誘わず、別の機会を待つ",
-          "result": "「今回は、見送りましょう」。鏡の人物は頷いた。「構わない。待つのは、得意だ」。四百年待った人の「得意」は、冗談にならない重さがあった。せめて、と私は約束した。次に来る時は、書類ではなく、お茶を持ってくる。",
+          "result": "「今回は、見送りましょう」鏡の人物は頷いた。「構わない。待つのは、得意だ」四百年待った人の「得意」は、冗談にならない重さがあった。次は、お茶を持ってくると約束した。",
           "intent": "今回はチームへ誘わない",
           "promise": "今回の所属は見送るが、人物の物語と再会の可能性は失わない。",
           "memory": "勧誘しない選択も尊重されたことを、相手は覚えている。",
@@ -233,7 +390,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 所有者欄「本人」の発明(迷子の魔導人形の救済規定)。私が私を持つ、史上初の登録。",
+    "authorNote": "語り口V2・二行枠で改稿。v2改稿: 所有者欄「本人」の発明(迷子の魔導人形の救済規定)。私が私を持つ、史上初の登録。",
     "legacyGeneratedIds": false
   }
 }

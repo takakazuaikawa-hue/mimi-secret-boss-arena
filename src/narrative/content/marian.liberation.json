@@ -10,9 +10,20 @@
     "stage": "liberation"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 400,
     "weight": 1
   },
@@ -37,57 +48,117 @@
     {
       "type": "direction",
       "id": "marian.liberation.node.direction.001",
-      "command": { "type": "background", "assetId": "marian.liberation.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "marian.liberation.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "line",
-      "id": "marian.liberation.node.line.001",
-      "lineId": "marian.liberation.line.001",
+      "id": "marian.liberation.node.line.001a",
+      "lineId": "marian.liberation.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "契約を終わらせる夜。マリアンの契約書には、一見、彼女に優しい条項があった。「治療の結果に関する責任は、すべて所有者に帰属する」。彼女は、責任を負わなくていい。——その代わり、判断も、しなくていい。"
+      "text": "契約を終わらせる夜。マリアンの契約書には、一見、彼女に優しい条項があった。"
     },
     {
       "type": "line",
-      "id": "marian.liberation.node.line.002",
-      "lineId": "marian.liberation.line.002",
+      "id": "marian.liberation.node.line.001b",
+      "lineId": "marian.liberation.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「治療の結果に関する責任は、すべて所有者に帰属する」"
+    },
+    {
+      "type": "line",
+      "id": "marian.liberation.node.line.001c",
+      "lineId": "marian.liberation.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "彼女は、責任を負わなくていい。——その代わり、判断も、しなくていい。"
+    },
+    {
+      "type": "line",
+      "id": "marian.liberation.node.line.002a",
+      "lineId": "marian.liberation.line.002a",
       "speakerId": "legacy.speaker.quc8xa",
       "speakerName": "マリアン",
       "mode": "dialogue",
-      "text": "この条項に、私は、守られてきました。治す判断を、いつも誰かのせいに、できたので。……ですが、もう分かっています。判断を手放すことと、楽になることは、違う。"
+      "text": "この条項に、私は、守られてきました。治す判断を、いつも誰かのせいに、できたので。"
     },
     {
       "type": "line",
-      "id": "marian.liberation.node.line.003",
-      "lineId": "marian.liberation.line.003",
+      "id": "marian.liberation.node.line.002b",
+      "lineId": "marian.liberation.line.002b",
+      "speakerId": "legacy.speaker.quc8xa",
+      "speakerName": "マリアン",
+      "mode": "dialogue",
+      "text": "……ですが、もう分かっています。判断を手放すことと、楽になることは、違う。"
+    },
+    {
+      "type": "line",
+      "id": "marian.liberation.node.line.003a",
+      "lineId": "marian.liberation.line.003a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "判を押す。責任転嫁の条項が消える。これからは、治すのも、治さないのも、祈る範囲も、全部、彼女の判断で、彼女の責任だ。優しい檻が、静かに開いた。",
+      "text": "判を押す。責任転嫁の条項が、すっと消える。"
+    },
+    {
+      "type": "line",
+      "id": "marian.liberation.node.line.003b",
+      "lineId": "marian.liberation.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "これからは、治すのも、治さないのも、祈る範囲も、全部、彼女の判断で、彼女の責任。"
+    },
+    {
+      "type": "line",
+      "id": "marian.liberation.node.line.003c",
+      "lineId": "marian.liberation.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "優しい檻の扉が、静かに、音もなく開いた。",
       "emotion": "tension"
     },
     {
       "type": "direction",
       "id": "marian.liberation.node.direction.002",
-      "command": { "type": "still", "assetId": "marian.liberation.asset.still.001" }
+      "command": {
+        "type": "still",
+        "assetId": "marian.liberation.asset.still.001"
+      }
     },
     {
       "type": "direction",
       "id": "marian.liberation.node.direction.003",
-      "command": { "type": "effect", "effectId": "pulse" }
+      "command": {
+        "type": "effect",
+        "effectId": "pulse"
+      }
     },
     {
       "type": "line",
-      "id": "marian.liberation.node.line.004",
-      "lineId": "marian.liberation.line.004",
+      "id": "marian.liberation.node.line.004a",
+      "lineId": "marian.liberation.line.004a",
       "speakerId": "legacy.speaker.quc8xa",
       "speakerName": "マリアン",
       "mode": "dialogue",
-      "text": "怖い、です。今も。たぶん、これからも、ずっと。……ですが、怖いまま、選びます。それが、あの練習の、卒業試験なので。"
+      "text": "怖い、です。今も。たぶん、これからも、ずっと。"
     },
     {
       "type": "line",
-      "id": "marian.liberation.node.line.005",
-      "lineId": "marian.liberation.line.005",
+      "id": "marian.liberation.node.line.004b",
+      "lineId": "marian.liberation.line.004b",
+      "speakerId": "legacy.speaker.quc8xa",
+      "speakerName": "マリアン",
+      "mode": "dialogue",
+      "text": "……ですが、怖いまま、選びます。それが、あの練習の、卒業試験なので。"
+    },
+    {
+      "type": "line",
+      "id": "marian.liberation.node.line.005a",
+      "lineId": "marian.liberation.line.005a",
       "speakerId": "legacy.speaker.quc8xa",
       "speakerName": "マリアン",
       "mode": "dialogue",
@@ -95,35 +166,77 @@
     },
     {
       "type": "line",
-      "id": "marian.liberation.node.line.006",
-      "lineId": "marian.liberation.line.006",
+      "id": "marian.liberation.node.line.006a",
+      "lineId": "marian.liberation.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "いつも測る側の手首が、差し出された。私は見よう見まねで、指を三本、当てた。速い。診断するまでもなく、緊張の脈だ。でも、確かに、生きて、選ぼうとしている脈だった。",
+      "text": "いつも測る側の手首が、そっと差し出された。私は見よう見まねで、指を三本、当てた。"
+    },
+    {
+      "type": "line",
+      "id": "marian.liberation.node.line.006b",
+      "lineId": "marian.liberation.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "速い。耳が、なぜか、じんとする。診断するまでもなく、緊張の脈。"
+    },
+    {
+      "type": "line",
+      "id": "marian.liberation.node.line.006c",
+      "lineId": "marian.liberation.line.006c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "でも、確かに、生きて、選ぼうとしている脈だった。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "marian.liberation.node.line.007",
-      "lineId": "marian.liberation.line.007",
+      "id": "marian.liberation.node.line.007a",
+      "lineId": "marian.liberation.line.007a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "……診断結果。緊張してます。すごく。でも、悪い脈じゃないです。始まる前の脈です。"
+      "text": "……診断結果、出ました。かなり緊張してます。"
     },
     {
       "type": "line",
-      "id": "marian.liberation.node.line.008",
-      "lineId": "marian.liberation.line.008",
+      "id": "marian.liberation.node.line.007b",
+      "lineId": "marian.liberation.line.007b",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "びっくりするくらい。でも、悪い脈じゃないです。"
+    },
+    {
+      "type": "line",
+      "id": "marian.liberation.node.line.007c",
+      "lineId": "marian.liberation.line.007c",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "これはたぶん、何かが、始まる前の脈です。"
+    },
+    {
+      "type": "line",
+      "id": "marian.liberation.node.line.008a",
+      "lineId": "marian.liberation.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "彼女は小さく笑って、「良い診断です。及第点」と言った。師匠は厳しい。夜の霊安室の花が、少しだけ揺れた。",
+      "text": "彼女は小さく笑って、「良い診断です。及第点」と言った。"
+    },
+    {
+      "type": "line",
+      "id": "marian.liberation.node.line.008b",
+      "lineId": "marian.liberation.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "師匠は厳しい。夜の霊安室の花が、少しだけ揺れた。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "marian.liberation.node.line.009",
-      "lineId": "marian.liberation.line.009",
+      "id": "marian.liberation.node.line.009a",
+      "lineId": "marian.liberation.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
       "text": "今夜の締めくくりは、処方箋を書くように、丁寧に選ぶ。",
@@ -136,29 +249,58 @@
         {
           "id": "marian.liberation.choice.001",
           "label": "責任転嫁の条項を消し、祈る範囲を本人へ返す",
-          "result": "条項の消えた契約書の余白に、彼女は自分の字で書き足した。「治療方針は、マリアンが決める。相談は、歓迎する」。責任を引き受けた人の字は、思ったより、のびのびしていた。帰り際、空のベッドの前で彼女は立ち止まり、初めて、囁くように言った。「……見ていてください。私、ちゃんと、選べるようになりました」。ベッドは、今夜も綺麗に整っていた。",
+          "result": "契約書の余白に、彼女は書き足した。「治療方針は、マリアンが決める。相談は、歓迎する」責任を引き受けた字は、思ったよりのびのびしていた。空のベッドの前で、彼女は囁いた。「見ていてください。ちゃんと、選べるようになりました」",
           "intent": "判断の権利ごと、本人に返す",
           "promise": "所有者名を消し、本人が自分の名で次の試合を選べるようにする。",
           "memory": "余白の「相談は、歓迎する」の一行を、二人とも気に入っている。",
           "tone": "defiant",
           "effects": [
-            { "type": "relationship", "target": { "type": "fighter", "fighterId": "marian" }, "mode": "add", "trust": 10, "ownership": 0 },
-            { "type": "liberationDecision", "fighterId": "marian", "decision": "release" }
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "marian"
+              },
+              "mode": "add",
+              "trust": 10,
+              "ownership": 0
+            },
+            {
+              "type": "liberationDecision",
+              "fighterId": "marian",
+              "decision": "release"
+            }
           ],
           "goto": "marian.liberation.node.effect.001"
         },
         {
           "id": "marian.liberation.choice.002",
           "label": "契約を解き、救護室の当番を同僚として頼む",
-          "result": "「契約じゃなく、同僚としてのお願いです。救護室、続けてもらえますか」。彼女は診断の間くらい黙って、答えた。「条件が一つ。あなたの月一の休み判定に、私も従います。同僚は、対等なので」。かくして、救護担当と監督が、互いの右耳と脈を監視し合う健全な職場が完成した。",
+          "result": "「契約じゃなく、同僚としてのお願いです。救護室、続けてもらえますか」彼女は少し黙って答えた。「条件が一つ。あなたの休み判定に、私も従います」かくして、互いの右耳と脈を監視し合う健全な職場が完成した。",
           "intent": "自由になった人と、対等な同僚になる",
           "promise": "断る権利を返したうえで、救護室の新しい約束を結ぶ。",
           "memory": "互いの休みを監視し合う協定を、チームは「右耳条約」と呼ぶ。",
           "tone": "tender",
           "effects": [
-            { "type": "relationship", "target": { "type": "fighter", "fighterId": "marian" }, "mode": "add", "trust": 6, "ownership": 0 },
-            { "type": "sharedPoints", "amount": 4 },
-            { "type": "liberationDecision", "fighterId": "marian", "decision": "release" }
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "marian"
+              },
+              "mode": "add",
+              "trust": 6,
+              "ownership": 0
+            },
+            {
+              "type": "sharedPoints",
+              "amount": 4
+            },
+            {
+              "type": "liberationDecision",
+              "fighterId": "marian",
+              "decision": "release"
+            }
           ],
           "goto": "marian.liberation.node.effect.001"
         }
@@ -168,10 +310,30 @@
       "type": "effect",
       "id": "marian.liberation.node.effect.001",
       "effects": [
-        { "type": "setStoryStage", "fighterId": "marian", "stage": 6 },
-        { "type": "setLiberationEligible", "fighterId": "marian", "eligible": false },
-        { "type": "setLiberated", "fighterId": "marian", "liberated": true },
-        { "type": "relationship", "target": { "type": "fighter", "fighterId": "marian" }, "mode": "set", "ownership": 0 }
+        {
+          "type": "setStoryStage",
+          "fighterId": "marian",
+          "stage": 6
+        },
+        {
+          "type": "setLiberationEligible",
+          "fighterId": "marian",
+          "eligible": false
+        },
+        {
+          "type": "setLiberated",
+          "fighterId": "marian",
+          "liberated": true
+        },
+        {
+          "type": "relationship",
+          "target": {
+            "type": "fighter",
+            "fighterId": "marian"
+          },
+          "mode": "set",
+          "ownership": 0
+        }
       ]
     },
     {
@@ -183,7 +345,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿(シリアス枠): 責任転嫁条項=優しい檻。「怖いまま、選ぶ」(canon)。脈を測る側の反転。",
+    "authorNote": "語り口V2・二行枠で改稿。v2改稿(シリアス枠): 責任転嫁条項=優しい檻。「怖いまま、選ぶ」(canon)。脈を測る側の反転。",
     "legacyGeneratedIds": false
   }
 }

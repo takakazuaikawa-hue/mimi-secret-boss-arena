@@ -10,9 +10,20 @@
     "stage": "liberation"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 400,
     "weight": 1
   },
@@ -49,29 +60,58 @@
     {
       "type": "direction",
       "id": "ushiro.liberation.node.direction.001",
-      "command": { "type": "background", "assetId": "ushiro.liberation.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "ushiro.liberation.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "line",
-      "id": "ushiro.liberation.node.line.001",
-      "lineId": "ushiro.liberation.line.001",
+      "id": "ushiro.liberation.node.line.001a",
+      "lineId": "ushiro.liberation.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "契約を終わらせる夜。うしろの契約書には「観測対象」という欄があった。彼が背後につくべき相手の指定欄。会社の書式は、彼の居場所まで書式で決めていた。今夜、その欄を消す。"
+      "text": "契約を終わらせる夜。うしろの契約書には「観測対象」という欄があった。"
     },
     {
       "type": "line",
-      "id": "ushiro.liberation.node.line.002",
-      "lineId": "ushiro.liberation.line.002",
+      "id": "ushiro.liberation.node.line.001b",
+      "lineId": "ushiro.liberation.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "彼が背後につくべき相手の指定欄。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.liberation.node.line.001c",
+      "lineId": "ushiro.liberation.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "会社の書式は、彼の居場所まで決めていた。今夜、その欄を消す。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.liberation.node.line.002a",
+      "lineId": "ushiro.liberation.line.002a",
       "speakerId": "legacy.speaker.1ddw3j9",
       "speakerName": "うしろ",
       "mode": "dialogue",
-      "text": "この欄が消えると、私は、誰の背後でもなくなります。……どこに立てば、いいのでしょうね。"
+      "text": "この欄が消えると、私は、誰の背後でもなくなります。"
     },
     {
       "type": "line",
-      "id": "ushiro.liberation.node.line.003",
-      "lineId": "ushiro.liberation.line.003",
+      "id": "ushiro.liberation.node.line.002b",
+      "lineId": "ushiro.liberation.line.002b",
+      "speakerId": "legacy.speaker.1ddw3j9",
+      "speakerName": "うしろ",
+      "mode": "dialogue",
+      "text": "……どこに立てば、いいのでしょうね。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.liberation.node.line.003a",
+      "lineId": "ushiro.liberation.line.003a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -79,82 +119,176 @@
     },
     {
       "type": "line",
-      "id": "ushiro.liberation.node.line.004",
-      "lineId": "ushiro.liberation.line.004",
+      "id": "ushiro.liberation.node.line.004a",
+      "lineId": "ushiro.liberation.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "判を押す。観測対象の欄が消える。部屋の空気が、ふっと軽くなった。百二十七人ぶん、軽くなった気配がした。",
+      "text": "判を押す。観測対象の欄が消える。部屋の空気が、ふっと軽くなった。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.liberation.node.line.004b",
+      "lineId": "ushiro.liberation.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "百二十七人ぶん、軽くなった気配がした。",
       "emotion": "tension"
     },
     {
       "type": "direction",
       "id": "ushiro.liberation.node.direction.002",
-      "command": { "type": "still", "assetId": "ushiro.liberation.asset.still.001" }
+      "command": {
+        "type": "still",
+        "assetId": "ushiro.liberation.asset.still.001"
+      }
     },
     {
       "type": "direction",
       "id": "ushiro.liberation.node.direction.003",
-      "command": { "type": "effect", "effectId": "pulse" }
+      "command": {
+        "type": "effect",
+        "effectId": "pulse"
+      }
     },
     {
       "type": "line",
-      "id": "ushiro.liberation.node.line.005",
-      "lineId": "ushiro.liberation.line.005",
+      "id": "ushiro.liberation.node.line.005a",
+      "lineId": "ushiro.liberation.line.005a",
       "speakerId": "legacy.speaker.1ddw3j9",
       "speakerName": "うしろ",
       "mode": "dialogue",
-      "text": "ミミ。……お願いが、あります。今から、三秒だけ。……振り返って、もらえますか。"
+      "text": "ミミ。……お願いが、あります。今から、三秒だけ。"
     },
     {
       "type": "line",
-      "id": "ushiro.liberation.node.line.006",
-      "lineId": "ushiro.liberation.line.006",
+      "id": "ushiro.liberation.node.line.005b",
+      "lineId": "ushiro.liberation.line.005b",
+      "speakerId": "legacy.speaker.1ddw3j9",
+      "speakerName": "うしろ",
+      "mode": "dialogue",
+      "text": "……振り返って、もらえますか。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.liberation.node.line.006a",
+      "lineId": "ushiro.liberation.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "散歩の約束以来、私は彼の前で振り返ったことがない。振り返らないのが、彼への礼儀だと思っていたから。でも今夜の声は、いつもの背後からじゃなく、少し離れた正面寄りから聞こえた。",
+      "text": "散歩の約束以来、私は彼の前で振り返ったことがない。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.liberation.node.line.006b",
+      "lineId": "ushiro.liberation.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "振り返らないのが、彼への礼儀だと思っていたから。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.liberation.node.line.006c",
+      "lineId": "ushiro.liberation.line.006c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "でも今夜の声は、いつもの背後からじゃなく、少し離れた正面寄りから聞こえた。",
       "emotion": "tension"
     },
     {
       "type": "direction",
       "id": "ushiro.liberation.node.direction.004",
-      "command": { "type": "still", "assetId": "ushiro.liberation.asset.still.002" }
+      "command": {
+        "type": "still",
+        "assetId": "ushiro.liberation.asset.still.002"
+      }
     },
     {
       "type": "direction",
       "id": "ushiro.liberation.node.direction.005",
-      "command": { "type": "still", "assetId": "ushiro.liberation.asset.still.003" }
+      "command": {
+        "type": "still",
+        "assetId": "ushiro.liberation.asset.still.003"
+      }
     },
     {
       "type": "line",
-      "id": "ushiro.liberation.node.line.007",
-      "lineId": "ushiro.liberation.line.007",
+      "id": "ushiro.liberation.node.line.007a",
+      "lineId": "ushiro.liberation.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "一、二、三。振り返る。——いた。黒金の影が、逃げずに、正面に立っていた。初めて、ちゃんと目が合う。三秒は、思ったより長くて、彼の目が泳いで、それでも逸らさなかった。",
+      "text": "一、二、三。振り返る。——いた。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.liberation.node.line.007b",
+      "lineId": "ushiro.liberation.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "黒金の影が、逃げずに、正面に立っていた。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.liberation.node.line.007c",
+      "lineId": "ushiro.liberation.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "耳が、ぱたぱたと、忙しく動く。初めて、ちゃんと目が合う。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.liberation.node.line.007d",
+      "lineId": "ushiro.liberation.line.007d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "三秒は、思ったより長くて、彼の目が泳いで、それでも逸らさなかった。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "ushiro.liberation.node.line.008",
-      "lineId": "ushiro.liberation.line.008",
+      "id": "ushiro.liberation.node.line.008a",
+      "lineId": "ushiro.liberation.line.008a",
       "speakerId": "legacy.speaker.1ddw3j9",
       "speakerName": "うしろ",
       "mode": "dialogue",
-      "text": "……ありがとう、ございました。自由になったら、最初にしたいことが、これでした。……誰かの正面に、立ってみること。"
+      "text": "……ありがとう、ございました。自由になったら、最初にしたいことが、これでした。"
     },
     {
       "type": "line",
-      "id": "ushiro.liberation.node.line.009",
-      "lineId": "ushiro.liberation.line.009",
+      "id": "ushiro.liberation.node.line.008b",
+      "lineId": "ushiro.liberation.line.008b",
+      "speakerId": "legacy.speaker.1ddw3j9",
+      "speakerName": "うしろ",
+      "mode": "dialogue",
+      "text": "……誰かの正面に、立ってみること。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.liberation.node.line.009a",
+      "lineId": "ushiro.liberation.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "三秒が終わると、彼はそそくさと私の背後に戻った。「や、やはり、こちらが落ち着きます」。正面は、まだ三秒が限界らしい。でも、ゼロ秒と三秒の間には、契約書には書けない距離がある。",
+      "text": "三秒が終わると、彼はそそくさと私の背後に戻った。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.liberation.node.line.009b",
+      "lineId": "ushiro.liberation.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「や、やはり、こちらが落ち着きます」正面は、まだ三秒が限界らしい。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.liberation.node.line.009c",
+      "lineId": "ushiro.liberation.line.009c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "でも、ゼロ秒と三秒の間には、契約書には書けない距離がある。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "ushiro.liberation.node.line.010",
-      "lineId": "ushiro.liberation.line.010",
+      "id": "ushiro.liberation.node.line.010a",
+      "lineId": "ushiro.liberation.line.010a",
       "speakerId": "narrator",
       "mode": "thought",
       "text": "締めくくりは、珍しく、振り返って決めたい夜だった。",
@@ -167,29 +301,58 @@
         {
           "id": "ushiro.liberation.choice.001",
           "label": "観測対象の指定を消し、最後列の席だけ残す",
-          "result": "撮影所の最後列の席は、正式に「うしろ様専用・自由席」になった。座るかどうかは毎回、彼の自由。座らない日も、席は空けておく。撮影所の主任いわく「あの空席があると、写真がなぜか良く撮れる」。見守られている安心は、フィルムにも写るらしい。",
+          "result": "撮影所の最後列は、正式に「うしろ様専用・自由席」になった。座るかどうかは彼の自由、座らない日も席は空けておく。主任いわく「あの空席があると、写真がなぜか良く撮れる」見守りの安心は、フィルムにも写るらしい。",
           "intent": "居場所の指定を消し、席だけ残す",
           "promise": "所有者名を消し、本人が自分の名で次の試合を選べるようにする。",
           "memory": "空席のまま良い写真が撮れる理由を、撮影所の全員が知っている。",
           "tone": "defiant",
           "effects": [
-            { "type": "relationship", "target": { "type": "fighter", "fighterId": "ushiro" }, "mode": "add", "trust": 10, "ownership": 0 },
-            { "type": "liberationDecision", "fighterId": "ushiro", "decision": "release" }
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "ushiro"
+              },
+              "mode": "add",
+              "trust": 10,
+              "ownership": 0
+            },
+            {
+              "type": "liberationDecision",
+              "fighterId": "ushiro",
+              "decision": "release"
+            }
           ],
           "goto": "ushiro.liberation.node.effect.001"
         },
         {
           "id": "ushiro.liberation.choice.002",
           "label": "契約を解き、振り返らずに次戦へ誘う",
-          "result": "私は前を向いたまま、背後へ言った。「決勝、一緒に出てくれますか」。返事の代わりに、うなじのあたりの気配が、百二十七人ぶん、いっせいにうなずいた。風もないのに前髪が揺れるほどの、全員一致だった。",
+          "result": "前を向いたまま、背後へ言った。「決勝、一緒に出てくれますか」返事の代わりに、うなじの気配が百二十七人ぶん、いっせいにうなずいた。風もないのに前髪が揺れる、全員一致だった。",
           "intent": "彼の落ち着く位置のまま、隣に誘う",
           "promise": "断る権利を返したうえで、決勝を一緒に戦う新しい約束を結ぶ。",
           "memory": "百二十七人ぶんのうなずきの風を、私は忘れられない。",
           "tone": "tender",
           "effects": [
-            { "type": "relationship", "target": { "type": "fighter", "fighterId": "ushiro" }, "mode": "add", "trust": 6, "ownership": 0 },
-            { "type": "sharedPoints", "amount": 4 },
-            { "type": "liberationDecision", "fighterId": "ushiro", "decision": "release" }
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "ushiro"
+              },
+              "mode": "add",
+              "trust": 6,
+              "ownership": 0
+            },
+            {
+              "type": "sharedPoints",
+              "amount": 4
+            },
+            {
+              "type": "liberationDecision",
+              "fighterId": "ushiro",
+              "decision": "release"
+            }
           ],
           "goto": "ushiro.liberation.node.effect.001"
         }
@@ -199,10 +362,30 @@
       "type": "effect",
       "id": "ushiro.liberation.node.effect.001",
       "effects": [
-        { "type": "setStoryStage", "fighterId": "ushiro", "stage": 6 },
-        { "type": "setLiberationEligible", "fighterId": "ushiro", "eligible": false },
-        { "type": "setLiberated", "fighterId": "ushiro", "liberated": true },
-        { "type": "relationship", "target": { "type": "fighter", "fighterId": "ushiro" }, "mode": "set", "ownership": 0 }
+        {
+          "type": "setStoryStage",
+          "fighterId": "ushiro",
+          "stage": 6
+        },
+        {
+          "type": "setLiberationEligible",
+          "fighterId": "ushiro",
+          "eligible": false
+        },
+        {
+          "type": "setLiberated",
+          "fighterId": "ushiro",
+          "liberated": true
+        },
+        {
+          "type": "relationship",
+          "target": {
+            "type": "fighter",
+            "fighterId": "ushiro"
+          },
+          "mode": "set",
+          "ownership": 0
+        }
       ]
     },
     {
@@ -214,7 +397,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 観測対象欄の削除。「三秒だけ振り返って」=初めて目が合う。ゼロ秒と三秒の間の距離。",
+    "authorNote": "語り口V2・二行枠で改稿。観測対象欄の削除。「三秒だけ振り返って」=初めて目が合う。ゼロ秒と三秒の間の距離。",
     "legacyGeneratedIds": false
   }
 }

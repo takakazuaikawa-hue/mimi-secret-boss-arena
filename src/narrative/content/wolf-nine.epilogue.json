@@ -10,9 +10,17 @@
     "stage": "epilogue"
   },
   "trigger": {
-    "actions": ["rest"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "rest"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 400,
     "weight": 1
   },
@@ -37,105 +45,246 @@
     {
       "type": "direction",
       "id": "wolf-nine.epilogue.node.direction.001",
-      "command": { "type": "background", "assetId": "wolf-nine.epilogue.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "wolf-nine.epilogue.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "line",
-      "id": "wolf-nine.epilogue.node.line.001",
-      "lineId": "wolf-nine.epilogue.line.001",
+      "id": "wolf-nine.epilogue.node.line.001a",
+      "lineId": "wolf-nine.epilogue.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "最終大会のあと、闘技場の中庭で、前代未聞の祭りが開かれた。「第一回・休憩時間決闘祭」。主催、ヴォルフ・ナイン。参加資格、休憩中であること。九本の旗が、青空の下で揃って揺れている。"
+      "text": "最終大会のあと、中庭で、前代未聞の祭りが開かれた。"
     },
     {
       "type": "line",
-      "id": "wolf-nine.epilogue.node.line.002",
-      "lineId": "wolf-nine.epilogue.line.002",
+      "id": "wolf-nine.epilogue.node.line.001b",
+      "lineId": "wolf-nine.epilogue.line.001b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "競技は全八種目。昼寝の寝付き早さ、お茶の適温当て、ベンチ席取り、雑談のオチ対決、消印の押し方(受取所協賛)——全部、彼が愛する「休憩の全力」だ。観客は弁当持参で、計測係はもちろん、あの新人くん(規格外の判定に定評)。",
+      "text": "「第一回・休憩時間決闘祭」主催は、ヴォルフ・ナイン。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.epilogue.node.line.001c",
+      "lineId": "wolf-nine.epilogue.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "参加資格は、休憩していること。九本の旗が、青空の下で揺れる。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.epilogue.node.line.002a",
+      "lineId": "wolf-nine.epilogue.line.002a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "競技は全八種目。昼寝の寝付き早さ、お茶の適温当て、ベンチ席取り。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.epilogue.node.line.002b",
+      "lineId": "wolf-nine.epilogue.line.002b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "雑談のオチ対決、消印の押し方(受取所協賛)——全部、彼の愛する「休憩の全力」だ。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.epilogue.node.line.002c",
+      "lineId": "wolf-nine.epilogue.line.002c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "観客は弁当持参。計測係は、あの新人くん(規格外の判定に定評)。",
       "emotion": "comic"
     },
     {
       "type": "direction",
       "id": "wolf-nine.epilogue.node.direction.002",
-      "command": { "type": "still", "assetId": "wolf-nine.epilogue.asset.still.001" }
+      "command": {
+        "type": "still",
+        "assetId": "wolf-nine.epilogue.asset.still.001"
+      }
     },
     {
       "type": "direction",
       "id": "wolf-nine.epilogue.node.direction.003",
-      "command": { "type": "effect", "effectId": "pulse" }
+      "command": {
+        "type": "effect",
+        "effectId": "pulse"
+      }
     },
     {
       "type": "line",
-      "id": "wolf-nine.epilogue.node.line.003",
-      "lineId": "wolf-nine.epilogue.line.003",
+      "id": "wolf-nine.epilogue.node.line.003a",
+      "lineId": "wolf-nine.epilogue.line.003a",
       "speakerId": "legacy.speaker.1vj9fme",
       "speakerName": "ヴォルフ・ナイン",
       "mode": "dialogue",
-      "text": "八種目を制する者が、休憩王だ！　ただし言っておく——この祭りに、敗者はいない！　休憩したやつ、全員勝ちだ！"
+      "text": "八種目を制する者が、休憩王だ!"
     },
     {
       "type": "line",
-      "id": "wolf-nine.epilogue.node.line.004",
-      "lineId": "wolf-nine.epilogue.line.004",
+      "id": "wolf-nine.epilogue.node.line.003b",
+      "lineId": "wolf-nine.epilogue.line.003b",
+      "speakerId": "legacy.speaker.1vj9fme",
+      "speakerName": "ヴォルフ・ナイン",
+      "mode": "dialogue",
+      "text": "　ただし言っておく——この祭りに、敗者はいない!休憩したやつ、全員勝ちだ!"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.epilogue.node.line.004a",
+      "lineId": "wolf-nine.epilogue.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "八年、勝敗に焦がれた人の大会規定が「全員勝ち」。うちの闘技場の一年は、この一行のためにあった気がする。",
+      "text": "八年、勝敗に焦がれた人の大会規定は「全員勝ち」だった。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.epilogue.node.line.004b",
+      "lineId": "wolf-nine.epilogue.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "うちの闘技場の一年は、この一行のためにあった気がする。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "wolf-nine.epilogue.node.line.005",
-      "lineId": "wolf-nine.epilogue.line.005",
+      "id": "wolf-nine.epilogue.node.line.005a",
+      "lineId": "wolf-nine.epilogue.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私は消印種目で優勝し(職権)、昼寝種目は兎耳が物音を拾いすぎて最下位だった。夕方、総合成績はまたも同着多数。そして最後に、彼が第九種目を発表した。",
+      "text": "私は消印種目で優勝し(職権)、昼寝は耳が働きすぎて最下位。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.epilogue.node.line.005b",
+      "lineId": "wolf-nine.epilogue.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "夕方、総合成績はまたも同着多数。そして最後に、彼が第九種目を発表した。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "wolf-nine.epilogue.node.line.006",
-      "lineId": "wolf-nine.epilogue.line.006",
+      "id": "wolf-nine.epilogue.node.line.006a",
+      "lineId": "wolf-nine.epilogue.line.006a",
       "speakerId": "legacy.speaker.1vj9fme",
       "speakerName": "ヴォルフ・ナイン",
       "mode": "dialogue",
-      "text": "第九種目——「次の休憩へ、先に誘う」！　種目内容は言葉のとおりだ。次の休憩の約束を、先に取り付けた者の勝ち！　制限時間、日没まで！"
+      "text": "第九種目——「次の休憩へ、先に誘う」!　種目内容は言葉のとおりだ。"
     },
     {
       "type": "line",
-      "id": "wolf-nine.epilogue.node.line.007",
-      "lineId": "wolf-nine.epilogue.line.007",
+      "id": "wolf-nine.epilogue.node.line.006b",
+      "lineId": "wolf-nine.epilogue.line.006b",
+      "speakerId": "legacy.speaker.1vj9fme",
+      "speakerName": "ヴォルフ・ナイン",
+      "mode": "dialogue",
+      "text": "次の休憩の約束を、先に取り付けた者の勝ち!　制限時間、日没まで!"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.epilogue.node.line.007a",
+      "lineId": "wolf-nine.epilogue.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "中庭のあちこちで、「今度の休み、お茶でも」が始まった。祭りの最終種目が、次の約束の取り合いになる設計。八年前の彼が見たら、ぬるいと言うだろうか。いや、たぶん、うらやましがる。",
+      "text": "中庭のあちこちで、「今度の休み、お茶でも」が始まった。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.epilogue.node.line.007b",
+      "lineId": "wolf-nine.epilogue.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "祭りの最終種目が、次の約束の取り合いになる設計。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.epilogue.node.line.007c",
+      "lineId": "wolf-nine.epilogue.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "八年前の彼が見たら、ぬるいと言うだろうか。いや、たぶん、うらやましがる。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "wolf-nine.epilogue.node.line.008",
-      "lineId": "wolf-nine.epilogue.line.008",
+      "id": "wolf-nine.epilogue.node.line.008a",
+      "lineId": "wolf-nine.epilogue.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "日没間際、私の前に封蝋つきの招待状が二通、同時に差し出された。一通は彼から私へ。一通は——私が昼のうちに受取所で書いて、忍ばせておいたものだ。「次の休憩、決闘祭の反省会をしませんか」。同時。完全な、同着だった。",
+      "text": "日没間際、招待状が二通、同時に差し出された。一通は彼から私へ。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.epilogue.node.line.008b",
+      "lineId": "wolf-nine.epilogue.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "もう一通は、私が昼、受取所で書いて忍ばせたもの。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.epilogue.node.line.008c",
+      "lineId": "wolf-nine.epilogue.line.008c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「次の休憩、決闘祭の反省会をしませんか」同時。完全な、同着だった。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "wolf-nine.epilogue.node.line.009",
-      "lineId": "wolf-nine.epilogue.line.009",
+      "id": "wolf-nine.epilogue.node.line.009a",
+      "lineId": "wolf-nine.epilogue.line.009a",
       "speakerId": "legacy.speaker.1vj9fme",
       "speakerName": "ヴォルフ・ナイン",
       "mode": "dialogue",
-      "text": "……っ、はは！　同着か！　第九種目、勝者二名！　……こういう決着も、あるんだな。八年前の俺に、教えてやりたい。"
+      "text": "……っ、はは!　同着か!第九種目、勝者二名!"
     },
     {
       "type": "line",
-      "id": "wolf-nine.epilogue.node.line.010",
-      "lineId": "wolf-nine.epilogue.line.010",
+      "id": "wolf-nine.epilogue.node.line.009b",
+      "lineId": "wolf-nine.epilogue.line.009b",
+      "speakerId": "legacy.speaker.1vj9fme",
+      "speakerName": "ヴォルフ・ナイン",
+      "mode": "dialogue",
+      "text": "　……こういう決着も、あるんだな。八年前の俺に、教えてやりたい。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.epilogue.node.line.010a",
+      "lineId": "wolf-nine.epilogue.line.010a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "夕日の中で、狼の耳と兎の耳が、同時にぴんと立っていた。柿落としの出演届は、閉会宣言と一緒に貼り出された。演目「休憩時間決闘祭(全九種目)」。備考——「第九種目の結果は、非公表」。……非公表で、いい。同着の招待状は、二通とも、私の机の一番いい場所にある。",
+      "text": "夕日の中で、狼の耳と兎の耳が、同時にぴんと立っていた。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.epilogue.node.line.010b",
+      "lineId": "wolf-nine.epilogue.line.010b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "柿落としの出演届は、閉会宣言と一緒に貼り出された。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.epilogue.node.line.010c",
+      "lineId": "wolf-nine.epilogue.line.010c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "演目は「休憩時間決闘祭(全九種目)」、備考は「第九種目の結果は、非公表」だった。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.epilogue.node.line.010d",
+      "lineId": "wolf-nine.epilogue.line.010d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……非公表で、いい。同着の招待状は、二通とも、机の一番いい場所にある。",
       "emotion": "tender"
     },
     {
@@ -147,7 +296,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 休憩時間決闘祭(報酬CG準拠: 二通の封蝋招待状・九本の旗・弁当の観客・同時に立つ耳)。「全員勝ち」の大会規定。※「両者勝訴」は伝聞形で参照(順序非依存)。",
+    "authorNote": "語り口V2・二行枠で改稿。v2改稿: 休憩時間決闘祭(報酬CG準拠: 二通の封蝋招待状・九本の旗・弁当の観客・同時に立つ耳)。「全員勝ち」の大会規定。※「両者勝訴」は伝聞形で参照(順序非依存)。",
     "legacyGeneratedIds": false
   }
 }

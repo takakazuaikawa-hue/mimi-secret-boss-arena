@@ -65,11 +65,19 @@
     },
     {
       "type": "line",
-      "id": "gidonozeaas.epilogue.node.line.001",
-      "lineId": "gidonozeaas.epilogue.line.001",
+      "id": "gidonozeaas.epilogue.node.line.001a",
+      "lineId": "gidonozeaas.epilogue.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "火曜、再販日の朝。開店一時間前から、カフェの前には行列ができていた。冷めない店の噂は、もう街の常識になっている。犯人は素知らぬ顔で、行列の——外にいた。"
+      "text": "火曜、再販日の朝。開店一時間前から、カフェの前には行列ができていた。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.epilogue.node.line.001b",
+      "lineId": "gidonozeaas.epilogue.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "冷めない店の噂は、もう街の常識になっている。犯人は素知らぬ顔で、行列の——外にいた。"
     },
     {
       "type": "direction",
@@ -84,8 +92,8 @@
     },
     {
       "type": "line",
-      "id": "gidonozeaas.epilogue.node.line.002",
-      "lineId": "gidonozeaas.epilogue.line.002",
+      "id": "gidonozeaas.epilogue.node.line.002a",
+      "lineId": "gidonozeaas.epilogue.line.002a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -93,8 +101,8 @@
     },
     {
       "type": "line",
-      "id": "gidonozeaas.epilogue.node.line.003",
-      "lineId": "gidonozeaas.epilogue.line.003",
+      "id": "gidonozeaas.epilogue.node.line.003a",
+      "lineId": "gidonozeaas.epilogue.line.003a",
       "speakerId": "legacy.speaker.1jmq03z",
       "speakerName": "ギドノゼアース",
       "mode": "dialogue",
@@ -102,25 +110,49 @@
     },
     {
       "type": "line",
-      "id": "gidonozeaas.epilogue.node.line.004",
-      "lineId": "gidonozeaas.epilogue.line.004",
+      "id": "gidonozeaas.epilogue.node.line.004a",
+      "lineId": "gidonozeaas.epilogue.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "そう言って、彼は開店と同時に窓際の二人席へ座った。予約札のない、ただの空席へ。行列の常連さんたちが、なぜか拍手した。事情を知らないのに、拍手した。この街のお客様は、勘がいい。",
+      "text": "そう言って、彼は開店と同時に窓際の二人席へ座った。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.epilogue.node.line.004b",
+      "lineId": "gidonozeaas.epilogue.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "予約札のない、ただの空席へ。行列の常連さんたちが、なぜか拍手した。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.epilogue.node.line.004c",
+      "lineId": "gidonozeaas.epilogue.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "事情を知らないのに、拍手した。この街のお客様は、勘がいい。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "gidonozeaas.epilogue.node.line.005",
-      "lineId": "gidonozeaas.epilogue.line.005",
+      "id": "gidonozeaas.epilogue.node.line.005a",
+      "lineId": "gidonozeaas.epilogue.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "限定パフェが、彼の前に置かれる。三百年ぶん、待たせた側の店として、うちは今日、生クリームを一段増やした。"
+      "text": "限定パフェが、彼の前に置かれる。"
     },
     {
       "type": "line",
-      "id": "gidonozeaas.epilogue.node.line.006",
-      "lineId": "gidonozeaas.epilogue.line.006",
+      "id": "gidonozeaas.epilogue.node.line.005b",
+      "lineId": "gidonozeaas.epilogue.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "三百年ぶん、待たせた側の店として、うちは今日、生クリームを一段増やした。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.epilogue.node.line.006a",
+      "lineId": "gidonozeaas.epilogue.line.006a",
       "speakerId": "legacy.speaker.1jmq03z",
       "speakerName": "ギドノゼアース",
       "mode": "dialogue",
@@ -128,26 +160,51 @@
     },
     {
       "type": "line",
-      "id": "gidonozeaas.epilogue.node.line.007",
-      "lineId": "gidonozeaas.epilogue.line.007",
+      "id": "gidonozeaas.epilogue.node.line.006b",
+      "lineId": "gidonozeaas.epilogue.line.006b",
+      "speakerId": "legacy.speaker.1jmq03z",
+      "speakerName": "ギドノゼアース",
+      "mode": "dialogue",
+      "text": "耳が、思わずぴくっと動いた。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.epilogue.node.line.007a",
+      "lineId": "gidonozeaas.epilogue.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "彼が几帳面な字で書いてきたのは、柿落とし興行への出演届だった。演目「冷めないコーヒーの実演」。備考欄に一行、「窓際の二人席は、当日も予約なしで待てます」。三百年の行列の結論が、演目になっていた。",
+      "text": "演目「冷めないコーヒーの実演」"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.epilogue.node.line.007b",
+      "lineId": "gidonozeaas.epilogue.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "備考欄に一行——「窓際の二人席は、当日も予約なしで待てます」"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.epilogue.node.line.007c",
+      "lineId": "gidonozeaas.epilogue.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "三百年の行列の結論が、演目になっていた。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "gidonozeaas.epilogue.node.line.008",
-      "lineId": "gidonozeaas.epilogue.line.008",
+      "id": "gidonozeaas.epilogue.node.line.008a",
+      "lineId": "gidonozeaas.epilogue.line.008a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "待てる、なんですね。待たない、じゃなくて。"
+      "text": "待てる、なんですね。待たないんじゃなくて、待てる。"
     },
     {
       "type": "line",
-      "id": "gidonozeaas.epilogue.node.line.009",
-      "lineId": "gidonozeaas.epilogue.line.009",
+      "id": "gidonozeaas.epilogue.node.line.009a",
+      "lineId": "gidonozeaas.epilogue.line.009a",
       "speakerId": "legacy.speaker.1jmq03z",
       "speakerName": "ギドノゼアース",
       "mode": "dialogue",
@@ -174,29 +231,62 @@
     },
     {
       "type": "line",
-      "id": "gidonozeaas.epilogue.node.line.010",
-      "lineId": "gidonozeaas.epilogue.line.010",
+      "id": "gidonozeaas.epilogue.node.line.010a",
+      "lineId": "gidonozeaas.epilogue.line.010a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "向かいの席を、銀色の指がすっと示した。二人席の、空いている方。窓の光の中で、世界を終わらせるはずだった人が、スプーンを二本並べて待っている。",
+      "text": "向かいの席を、銀色の指がすっと示した。二人席の、空いている方。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.epilogue.node.line.010b",
+      "lineId": "gidonozeaas.epilogue.line.010b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "窓の光の中で、世界を終わらせるはずだった人が、スプーンを二本並べて待っている。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "gidonozeaas.epilogue.node.line.011",
-      "lineId": "gidonozeaas.epilogue.line.011",
+      "id": "gidonozeaas.epilogue.node.line.011a",
+      "lineId": "gidonozeaas.epilogue.line.011a",
       "speakerId": "legacy.speaker.1jmq03z",
       "speakerName": "ギドノゼアース",
       "mode": "dialogue",
-      "text": "三百年待ちました。あと五分は、誤差です。——休憩、まだですよね。"
+      "text": "三百年待ちました。あと五分は、誤差です。"
     },
     {
       "type": "line",
-      "id": "gidonozeaas.epilogue.node.line.012",
-      "lineId": "gidonozeaas.epilogue.line.012",
+      "id": "gidonozeaas.epilogue.node.line.011b",
+      "lineId": "gidonozeaas.epilogue.line.011b",
+      "speakerId": "legacy.speaker.1jmq03z",
+      "speakerName": "ギドノゼアース",
+      "mode": "dialogue",
+      "text": "——休憩、まだですよね。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.epilogue.node.line.012a",
+      "lineId": "gidonozeaas.epilogue.line.012a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私はエプロンを外して、「休憩中」の札を立てた。三百年と五分待ちの限定パフェは、二人で食べても、ちゃんと甘かった。窓際の時間だけ、今日も少し、ゆっくり流れていた気がする。",
+      "text": "私はエプロンを外して、「休憩中」の札を立てた。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.epilogue.node.line.012b",
+      "lineId": "gidonozeaas.epilogue.line.012b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "三百年と五分待ちの限定パフェは、二人で食べても、ちゃんと甘かった。"
+    },
+    {
+      "type": "line",
+      "id": "gidonozeaas.epilogue.node.line.012c",
+      "lineId": "gidonozeaas.epilogue.line.012c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "窓際の時間だけ、今日も少し、ゆっくり流れていた気がする。",
       "emotion": "tender"
     },
     {
@@ -208,7 +298,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 行列に並ばない再販日。新条文第四条の提出(WORLD_CONTINUITY§6)。スプーン二本の誘いで報酬CGへ接続。",
+    "authorNote": "語り口V2・二行枠で改稿。v2改稿: 行列に並ばない再販日。新条文第四条の提出(WORLD_CONTINUITY§6)。スプーン二本の誘いで報酬CGへ接続。",
     "legacyGeneratedIds": false
   }
 }

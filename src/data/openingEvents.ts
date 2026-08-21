@@ -15,7 +15,11 @@ export const ownershipTransferScene: CharacterScene = {
   lines: [
     {
       kind: "thought",
-      text: "閉館前、私はマダムを登録窓口へ案内した。今日の仕事はよく働いたと思う。飲み物を運び、道を案内し、海を設備担当へ渡した。あとは勤務確認へ印をもらえば終わる。",
+      text: "閉館前、私はマダムを登録窓口へ案内した。今日の仕事は、よく働いた。",
+    },
+    {
+      kind: "thought",
+      text: "飲み物を運び、道を案内し、海を設備担当へ渡した。あとは勤務確認の印をもらえば終わる。",
     },
     {
       speaker: "受付係ノノ",
@@ -23,7 +27,7 @@ export const ownershipTransferScene: CharacterScene = {
     },
     {
       speaker: "マダム",
-      text: "今日、現場にいる責任者の方でよろしいの？",
+      text: "今日、現場にいる責任者の方でよろしいの?",
     },
     {
       speaker: "受付係ノノ",
@@ -31,7 +35,7 @@ export const ownershipTransferScene: CharacterScene = {
     },
     {
       speaker: "マダム",
-      text: "ではミミさん、お願いできる？",
+      text: "ではミミさん、お願いできる?",
     },
     {
       speaker: "ミミ",
@@ -39,11 +43,19 @@ export const ownershipTransferScene: CharacterScene = {
     },
     {
       kind: "thought",
-      text: "三人とも、同じ話をしている顔だった。魔法盤の欄には「現場代理人」。派遣票には「本日の現場責任者」。双子なら、せめて別々の服を着てほしいくらい似ている。",
+      text: "三人とも、同じ話をしている顔だった。魔法盤の欄は「現場代理人」",
+    },
+    {
+      kind: "thought",
+      text: "、派遣票は「本日の現場責任者」とある。",
+    },
+    {
+      kind: "thought",
+      text: "双子なら、せめて別々の服を着てほしいくらい似ている。",
     },
     {
       speaker: "ミミ",
-      text: "今日ここで働いたことを確認すればいいんですね？",
+      text: "今日ここで働いたことを確認すればいいんですね?",
     },
     {
       speaker: "受付係ノノ",
@@ -51,20 +63,19 @@ export const ownershipTransferScene: CharacterScene = {
     },
     {
       kind: "thought",
-      text: "社員証を置く。盤面が青く光り、「返却手続き」の文字が消えた。代わりに、私の名前が出た。",
-      beat: "revelation",
-      direction: {
-        effect: "flash",
-        still: "/assets/story/events/prologue-contract.png",
-      },
+      text: "社員証を置く。盤面が青く光り、「返却手続き」の文字が消えた。",
     },
     {
       kind: "thought",
-      text: "暫定オーナー　ミミ。",
+      text: "代わりに、私の名前が出た。",
+    },
+    {
+      kind: "thought",
+      text: "暫定オーナー　ミミ。耳が、ひくっと跳ねた。",
     },
     {
       speaker: "ミミ",
-      text: "私の勤務確認、ずいぶん偉くなっていませんか？",
+      text: "私の勤務確認、ずいぶん偉くなっていませんか?",
     },
     {
       speaker: "マダム",
@@ -76,7 +87,11 @@ export const ownershipTransferScene: CharacterScene = {
     },
     {
       kind: "thought",
-      text: "ノノさんは魔法盤を見た。マダムは私を見た。私は社員証を見た。社員証は何も悪くない顔をしていた。",
+      text: "ノノさんは魔法盤を見た。マダムは私を見た。",
+    },
+    {
+      kind: "thought",
+      text: "私は社員証を見た。社員証は何も悪くない顔をしていた。",
     },
     {
       speaker: "マダム",
@@ -92,12 +107,15 @@ export const ownershipTransferScene: CharacterScene = {
     },
     {
       kind: "thought",
-      text: "手渡された箱には『八つ裂き大福』と書いてあった。割れ目から真っ赤ないちご蜜が垂れている。謝罪の品としては事件性が高い。",
-      beat: "comic",
+      text: "手渡された箱には『八つ裂き大福』と書いてあった。",
+    },
+    {
+      kind: "thought",
+      text: "割れ目から真っ赤ないちご蜜が垂れている。謝罪の品としては、事件性が高い。",
     },
     {
       speaker: "ミミ",
-      text: "ありがとうございます。味は平和なんですね？",
+      text: "ありがとうございます。味は平和なんですね?",
     },
     {
       speaker: "マダム",
@@ -105,15 +123,22 @@ export const ownershipTransferScene: CharacterScene = {
     },
     {
       kind: "thought",
-      text: "派遣初日の帰り際に、三日分ほどの闘技場を持たされた。私とマダムとノノさんの勘違いが、きれいな三角形になっている。真ん中には、私の名前と、血のようないちご蜜があった。",
-      beat: "comic",
+      text: "派遣初日の帰り際に、三日分ほどの闘技場を持たされた。",
+    },
+    {
+      kind: "thought",
+      text: "私とマダムとノノさんの勘違いが、きれいな三角形になっている。",
+    },
+    {
+      kind: "thought",
+      text: "真ん中には、私の名前と、血のようないちご蜜があった。",
     },
   ],
   choices: [
     {
       label: "今すぐ訂正できる方法をノノへ聞く",
       result:
-        "訂正申請はすぐ作ってもらえた。ただし処理には数日かかる。その間に使える権利は、問題が起きるたび一つずつ確認することになった。",
+        "訂正申請は、すぐ作ってもらえた。ただし処理には数日かかる。その間に使える権利は、問題が起きるたび、ひとつずつ確認することになった。",
       trust: 0,
       ownership: 0,
       tone: "pragmatic",
@@ -135,7 +160,7 @@ export const ownershipTransferScene: CharacterScene = {
     {
       label: "三人で「現場代理人」の欄を読み直す",
       result:
-        "三人がそれぞれ別の意味だと思っていたことだけは、完全に一致した。分かりやすい説明へ直すよう、訂正申請と一緒に要望を出した。",
+        "三人が、それぞれ別の意味で読んでいたことだけは、完全に一致した。分かりやすい説明へ直すよう、訂正申請と一緒に要望を出した。",
       trust: 0,
       ownership: 0,
       tone: "comic",
@@ -156,16 +181,27 @@ export const hotSpringTripScene: CharacterScene = {
   lines: [
     {
       kind: "thought",
-      text: "新人向け大会で三連勝した翌週、私たちは温泉宿の玄関に立っていた。賞品の旅行券は本物だった。チームランクが最上級になったことより、朝食ビュッフェが本当に付いていることの方が、まだ信じやすい。",
+      text: "新人向け大会で三連勝した翌週、私たちは温泉宿の玄関に立っていた。",
+    },
+    {
+      kind: "thought",
+      text: "賞品の旅行券は、本物だった。",
+    },
+    {
+      kind: "thought",
+      text: "チームランクの最上級より、朝食ビュッフェの実在の方が、まだ信じやすい。",
     },
     {
       speaker: "ミミ",
-      text: "今日は戦いません。封印も解きません。お風呂に入って、ごはんを食べて、普通に寝ます。",
+      text: "今日は戦いません。封印も解きません。",
+    },
+    {
+      speaker: "ミミ",
+      text: "お風呂に入って、ごはんを食べて、普通に寝ます。",
     },
     {
       kind: "thought",
       text: "仲間たちは静かにうなずいた。宿の屋根から、なぜか警報用の鳥が三羽飛び立った。",
-      beat: "comic",
     },
     {
       speaker: "宿の女将",
@@ -177,7 +213,11 @@ export const hotSpringTripScene: CharacterScene = {
     },
     {
       kind: "thought",
-      text: "女将は少し考え、それから浴衣の棚を示した。ようやく旅行らしい説明が始まる。私は胸をなで下ろした。棚のいちばん奥には『翼六枚用』と『霧状生命用』が並んでいた。",
+      text: "女将は少し考え、それから浴衣の棚を示した。ようやく旅行らしい説明が始まる。",
+    },
+    {
+      kind: "thought",
+      text: "耳が、ほっと下がった。棚のいちばん奥には『翼六枚用』と『霧状生命用』が並んでいた。",
     },
   ],
   choices: [
@@ -206,7 +246,7 @@ export const hotSpringTripScene: CharacterScene = {
     {
       label: "誰も壊さない温泉の入り方を相談する",
       result:
-        "入浴前の確認会は慎重だったが、最後には全員で笑った。壊さないための相談を本人たちとできることが、命令よりずっと頼もしく思えた。",
+        "入浴前の確認会は慎重だったが、最後には全員で笑った。壊さないための相談を、本人たちとできることが、命令よりずっと頼もしかった。",
       trust: 4,
       ownership: 0,
       tone: "pragmatic",

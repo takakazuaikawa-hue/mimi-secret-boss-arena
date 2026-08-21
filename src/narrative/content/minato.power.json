@@ -59,16 +59,24 @@
     },
     {
       "type": "line",
-      "id": "minato.power.node.line.001",
-      "lineId": "minato.power.line.001",
+      "id": "minato.power.node.line.001a",
+      "lineId": "minato.power.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "夜の搬入口に呼び出された。ミナトと、台車三台ぶんの神器四十七本。今夜は、彼が次の試合の「本気の形」を決める日だった。"
+      "text": "夜の搬入口に呼び出された。ミナトと、台車三台ぶんの神器四十七本。"
     },
     {
       "type": "line",
-      "id": "minato.power.node.line.002",
-      "lineId": "minato.power.line.002",
+      "id": "minato.power.node.line.001b",
+      "lineId": "minato.power.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "今夜は、彼が次の試合の「本気の形」を決める日だった。"
+    },
+    {
+      "type": "line",
+      "id": "minato.power.node.line.002a",
+      "lineId": "minato.power.line.002a",
       "speakerId": "legacy.speaker.1vz3er0",
       "speakerName": "ミナト",
       "mode": "dialogue",
@@ -92,17 +100,25 @@
     },
     {
       "type": "line",
-      "id": "minato.power.node.line.003",
-      "lineId": "minato.power.line.003",
+      "id": "minato.power.node.line.003a",
+      "lineId": "minato.power.line.003a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "四十七本が、彼を取り囲んで浮いていた。全部が「使ってくれ」と光っている。壮観で、きれいで、少し悲しい。道具はまだ、物語の続きを信じているのだ。",
+      "text": "四十七本が、彼を取り囲んで浮いていた。全部が「使ってくれ」と光ってる。"
+    },
+    {
+      "type": "line",
+      "id": "minato.power.node.line.003b",
+      "lineId": "minato.power.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "壮観で、きれいで、少し悲しい。道具はまだ、物語の続きを信じてる。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "minato.power.node.line.004",
-      "lineId": "minato.power.line.004",
+      "id": "minato.power.node.line.004a",
+      "lineId": "minato.power.line.004a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -110,8 +126,8 @@
     },
     {
       "type": "line",
-      "id": "minato.power.node.line.005",
-      "lineId": "minato.power.line.005",
+      "id": "minato.power.node.line.005a",
+      "lineId": "minato.power.line.005a",
       "speakerId": "legacy.speaker.1vz3er0",
       "speakerName": "ミナト",
       "mode": "dialogue",
@@ -119,17 +135,25 @@
     },
     {
       "type": "line",
-      "id": "minato.power.node.line.006",
-      "lineId": "minato.power.line.006",
+      "id": "minato.power.node.line.006a",
+      "lineId": "minato.power.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "彼は一本ずつ、神器の柄に触れて回った。労いの言葉を一本にひとつ。四十七回の「ありがとう」は、聞いているこっちの目頭に悪い。",
+      "text": "彼は一本ずつ、神器の柄に触れて回った。労いの言葉を一本にひとつ。"
+    },
+    {
+      "type": "line",
+      "id": "minato.power.node.line.006b",
+      "lineId": "minato.power.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "四十七回の「ありがとう」に、耳の先までじんとした。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "minato.power.node.line.007",
-      "lineId": "minato.power.line.007",
+      "id": "minato.power.node.line.007a",
+      "lineId": "minato.power.line.007a",
       "speakerId": "legacy.speaker.1vz3er0",
       "speakerName": "ミナト",
       "mode": "dialogue",
@@ -153,26 +177,58 @@
     },
     {
       "type": "line",
-      "id": "minato.power.node.line.008",
-      "lineId": "minato.power.line.008",
+      "id": "minato.power.node.line.008a",
+      "lineId": "minato.power.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "四十七本が、一斉に空へ昇った。逆さまの流星群だった。光の尾が四十七本、夜を上へ上へと流れていく。搬入口の作業員さんたちが全員手を止めて、空を見上げた。誰かが小さく拍手して、それが伝染して、夜の搬入口が拍手で満ちた。",
+      "text": "四十七本が、一斉に空へ昇った。逆さまの流星群だった。"
+    },
+    {
+      "type": "line",
+      "id": "minato.power.node.line.008b",
+      "lineId": "minato.power.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "光の尾が四十七本、夜を上へ上へと流れていく。"
+    },
+    {
+      "type": "line",
+      "id": "minato.power.node.line.008c",
+      "lineId": "minato.power.line.008c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "作業員さんたちが手を止めて、空を見上げた。拍手が伝染して、搬入口が拍手で満ちた。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "minato.power.node.line.009",
-      "lineId": "minato.power.line.009",
+      "id": "minato.power.node.line.009a",
+      "lineId": "minato.power.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "よく見ると、昇っていく光に、すれ違って降りてくる光もある。どこかの誰かの神器が、この街へ帰ってくるのだ。終わった物語の道具たちの、通勤ラッシュ。この空は、そういう空だった。",
+      "text": "よく見ると、昇る光に、すれ違って降りてくる光もある。"
+    },
+    {
+      "type": "line",
+      "id": "minato.power.node.line.009b",
+      "lineId": "minato.power.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "どこかの誰かの神器が、この街へ帰ってくる。"
+    },
+    {
+      "type": "line",
+      "id": "minato.power.node.line.009c",
+      "lineId": "minato.power.line.009c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "終わった物語の道具たちの、通勤ラッシュ。この空は、そういう空だった。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "minato.power.node.line.010",
-      "lineId": "minato.power.line.010",
+      "id": "minato.power.node.line.010a",
+      "lineId": "minato.power.line.010a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -180,44 +236,85 @@
     },
     {
       "type": "line",
-      "id": "minato.power.node.line.011",
-      "lineId": "minato.power.line.011",
+      "id": "minato.power.node.line.011a",
+      "lineId": "minato.power.line.011a",
       "speakerId": "legacy.speaker.1vz3er0",
       "speakerName": "ミナト",
       "mode": "dialogue",
-      "text": "これは神器じゃない。……旅の三日目に、露店で買った土産物だ。花柄で、安物で、一度も世界を救っていない。"
+      "text": "これは神器じゃない。……旅の三日目に、露店で買った土産物だ。"
     },
     {
       "type": "line",
-      "id": "minato.power.node.line.012",
-      "lineId": "minato.power.line.012",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "花柄の短剣。四十七本の伝説の中で、たった一本だけの「ただの買い物」。彼が自分の意思で選んだ最初の一本が、最後まで残った。",
-      "emotion": "tender"
-    },
-    {
-      "type": "line",
-      "id": "minato.power.node.line.013",
-      "lineId": "minato.power.line.013",
+      "id": "minato.power.node.line.011b",
+      "lineId": "minato.power.line.011b",
       "speakerId": "legacy.speaker.1vz3er0",
       "speakerName": "ミナト",
       "mode": "dialogue",
-      "text": "次の試合は、こいつと足で戦う。世界を救った強さじゃなく、カレーを選べるようになった俺の強さで。"
+      "text": "花柄で、安物で、一度も世界を救っていない。"
     },
     {
       "type": "line",
-      "id": "minato.power.node.line.014",
-      "lineId": "minato.power.line.014",
+      "id": "minato.power.node.line.012a",
+      "lineId": "minato.power.line.012a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "空になった台車が三台、夜風にことりと鳴った。四十七枚の遺失物伝票に、私は今夜、全部「返却完了」の判を押せる。窓口係として、これほど誇らしい残業はない。",
+      "text": "四十七本の伝説の中で、たった一本だけの「ただの買い物」"
+    },
+    {
+      "type": "line",
+      "id": "minato.power.node.line.012b",
+      "lineId": "minato.power.line.012b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "彼が自分の意思で選んだ最初の一本が、最後まで残った。"
+    },
+    {
+      "type": "line",
+      "id": "minato.power.node.line.013a",
+      "lineId": "minato.power.line.013a",
+      "speakerId": "legacy.speaker.1vz3er0",
+      "speakerName": "ミナト",
+      "mode": "dialogue",
+      "text": "次の試合は、こいつと足で戦う。"
+    },
+    {
+      "type": "line",
+      "id": "minato.power.node.line.013b",
+      "lineId": "minato.power.line.013b",
+      "speakerId": "legacy.speaker.1vz3er0",
+      "speakerName": "ミナト",
+      "mode": "dialogue",
+      "text": "世界を救った強さじゃなく、カレーを選べるようになった俺の強さで。"
+    },
+    {
+      "type": "line",
+      "id": "minato.power.node.line.014a",
+      "lineId": "minato.power.line.014a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "空になった台車が三台、夜風にことりと鳴った。"
+    },
+    {
+      "type": "line",
+      "id": "minato.power.node.line.014b",
+      "lineId": "minato.power.line.014b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "四十七枚の遺失物伝票に、今夜、全部「返却完了」の判を押せる。"
+    },
+    {
+      "type": "line",
+      "id": "minato.power.node.line.014c",
+      "lineId": "minato.power.line.014c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "窓口係として、これほど誇らしい残業はない。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "minato.power.node.line.015",
-      "lineId": "minato.power.line.015",
+      "id": "minato.power.node.line.015a",
+      "lineId": "minato.power.line.015a",
       "speakerId": "narrator",
       "mode": "thought",
       "text": "確かめておくことは、あと一つ。神器なしの戦い方を、どう仕上げるかだ。",
@@ -230,7 +327,7 @@
         {
           "id": "minato.power.choice.001",
           "label": "空の鞘だけで、かつての必殺技を再現する",
-          "result": "「見ててくれ」。彼は空の鞘で、四十七の物語の集大成を舞った。刃のない必殺技は、誰も傷つけられない代わりに、誰の目にも美しかった。舞い終わりの残心のまま、彼は言った。「刃は、もう要らなかったんだな」。夜空で、遅れて一本ぶんの流星が瞬いた。返事みたいに。",
+          "result": "「見ててくれ」彼は空の鞘で、四十七の物語の集大成を舞った。誰も傷つけない必殺技は、誰の目にも美しかった。「刃は、もう要らなかったんだな」夜空で、流星が一つ瞬いた。返事みたいに。",
           "intent": "伝説の技を、誰も傷つけない形で継ぐ",
           "promise": "失敗時の危険を引き受け、この人専用の成長を最大まで進める。",
           "memory": "刃のない必殺技の美しさを、見た者は忘れない。",
@@ -260,7 +357,7 @@
         {
           "id": "minato.power.choice.002",
           "label": "花柄の短剣に合う、新しい型を一から作る",
-          "result": "伝説の再現はやめて、安物の短剣に合う新しい型を、深夜まで二人で考えた。踏み込み、隠し方、抜くと見せて抜かない間合い。完成した型に名前が要ると言うので、「花柄一閃」と提案したら、真顔で採用された。チームの戦術ノートの新しいページが、また一枚増えた。",
+          "result": "伝説の再現はやめて、安物の短剣に合う新しい型を、深夜まで二人で考えた。名前が要ると言うので「花柄一閃」と提案したら、真顔で採用された。",
           "intent": "過去の再現ではなく、今の型を作る",
           "promise": "本来の力は使わず、チーム全体の成長へ成果を持ち帰る。",
           "memory": "「花柄一閃」の命名の経緯は、チームの公式記録に残っている。",
@@ -305,7 +402,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 逆さの流星群スペクタクル。Q1手掛かり=昇る光とすれ違い降りてくる光(終わった物語の道具の通勤)。花柄の短剣=唯一の自分の選択。",
+    "authorNote": "語り口V2・二行枠で改稿。v2改稿: 逆さの流星群スペクタクル。Q1手掛かり=昇る光とすれ違い降りてくる光(終わった物語の道具の通勤)。花柄の短剣=唯一の自分の選択。",
     "legacyGeneratedIds": false
   }
 }

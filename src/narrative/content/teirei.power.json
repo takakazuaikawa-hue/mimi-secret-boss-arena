@@ -10,9 +10,17 @@
     "stage": "power"
   },
   "trigger": {
-    "actions": ["search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 400,
     "weight": 1
   },
@@ -37,20 +45,40 @@
     {
       "type": "direction",
       "id": "teirei.power.node.direction.001",
-      "command": { "type": "background", "assetId": "teirei.power.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "teirei.power.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "line",
-      "id": "teirei.power.node.line.001",
-      "lineId": "teirei.power.line.001",
+      "id": "teirei.power.node.line.001a",
+      "lineId": "teirei.power.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "深夜の廃棄物保管区。丁零の「本気」の確認に、彼女自身が指定した場所だ。廃棄された旧式の防衛タレットが、鉄の墓標みたいに並んでいる。彼女の同型機も、ここに眠っているという。"
+      "text": "深夜の廃棄物保管区。丁零の「本気」を、確認しに来た。"
     },
     {
       "type": "line",
-      "id": "teirei.power.node.line.002",
-      "lineId": "teirei.power.line.002",
+      "id": "teirei.power.node.line.001b",
+      "lineId": "teirei.power.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "彼女自身が指定した場所だ。旧式の防衛タレットが、鉄の墓標みたいに並ぶ。"
+    },
+    {
+      "type": "line",
+      "id": "teirei.power.node.line.001c",
+      "lineId": "teirei.power.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "彼女の同型機も、ここに眠っているという。"
+    },
+    {
+      "type": "line",
+      "id": "teirei.power.node.line.002a",
+      "lineId": "teirei.power.line.002a",
       "speakerId": "legacy.speaker.qmf7da",
       "speakerName": "丁零",
       "mode": "dialogue",
@@ -58,67 +86,103 @@
     },
     {
       "type": "line",
-      "id": "teirei.power.node.line.003",
-      "lineId": "teirei.power.line.003",
+      "id": "teirei.power.node.line.003a",
+      "lineId": "teirei.power.line.003a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "デモが始まった。彼女が起動信号を送ると、廃棄タレット三十基が一斉に目を覚まし、赤い照準が夜を埋めた。全部、こっちを向いている。心臓に悪い夜景である。",
+      "text": "デモが始まった。起動信号で、廃棄タレット三十基が目を覚ます。"
+    },
+    {
+      "type": "line",
+      "id": "teirei.power.node.line.003b",
+      "lineId": "teirei.power.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "赤い照準が夜を埋めた。全部こっち向き、心臓に悪い夜景だ。",
       "emotion": "tension"
     },
     {
       "type": "direction",
       "id": "teirei.power.node.direction.002",
-      "command": { "type": "effect", "effectId": "flash" }
+      "command": {
+        "type": "effect",
+        "effectId": "flash"
+      }
     },
     {
       "type": "line",
-      "id": "teirei.power.node.line.004",
-      "lineId": "teirei.power.line.004",
+      "id": "teirei.power.node.line.004a",
+      "lineId": "teirei.power.line.004a",
       "speakerId": "legacy.speaker.qmf7da",
       "speakerName": "丁零",
       "mode": "dialogue",
-      "text": "全機へ、標的定義を再送信します。——「標的とは、花である」。"
+      "text": "全機へ、標的定義を再送信します。——「標的とは、花である」"
     },
     {
       "type": "line",
-      "id": "teirei.power.node.line.005",
-      "lineId": "teirei.power.line.005",
+      "id": "teirei.power.node.line.005a",
+      "lineId": "teirei.power.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "一行だった。たった一行で、三十基の赤い照準が、いっせいに私から外れ——保管区の隅に咲いた雑草の花へ、集まった。夜の廃棄場で、名もない小さな花が、三十本のレーザーに照らされてスポットライトの主役になっている。",
+      "text": "夜の廃棄場で、名もない花が、三十本のレーザーに照らされてスポットライトの主役になっている。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "teirei.power.node.line.006",
-      "lineId": "teirei.power.line.006",
+      "id": "teirei.power.node.line.006a",
+      "lineId": "teirei.power.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "同行の新人くんが、震える手で記録板に書いた。「ねらわれた。はなが。」——うん。事件の全てが書けている。",
+      "text": "同行の新人くんが、震える手で記録板に書いた。「ねらわれた。はなが。」"
+    },
+    {
+      "type": "line",
+      "id": "teirei.power.node.line.006b",
+      "lineId": "teirei.power.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……うん。事件の全てが書けている。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "teirei.power.node.line.007",
-      "lineId": "teirei.power.line.007",
+      "id": "teirei.power.node.line.007a",
+      "lineId": "teirei.power.line.007a",
       "speakerId": "legacy.speaker.qmf7da",
       "speakerName": "丁零",
       "mode": "dialogue",
-      "text": "これが本気です。私は、敵の兵器網の「敵」の定義を、一行で書き換えられる。……都市防衛網の全標的を、消したことも、あります。"
+      "text": "これが本気です。私は、敵の兵器網の「敵」の定義を、一行で書き換えられる。"
     },
     {
       "type": "line",
-      "id": "teirei.power.node.line.008",
-      "lineId": "teirei.power.line.008",
+      "id": "teirei.power.node.line.007b",
+      "lineId": "teirei.power.line.007b",
+      "speakerId": "legacy.speaker.qmf7da",
+      "speakerName": "丁零",
+      "mode": "dialogue",
+      "text": "……都市防衛網の全標的を、消したことも、あります。"
+    },
+    {
+      "type": "line",
+      "id": "teirei.power.node.line.008a",
+      "lineId": "teirei.power.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "戦争を終わらせかねない力だ。でも、彼女の声は自慢げではなかった。定義を書き換える力は、彼女自身の「兵器」という定義だけ、書き換えられなかったのだから。",
+      "text": "戦争を終わらせかねない力だ。でも、彼女の声は自慢げじゃなかった。"
+    },
+    {
+      "type": "line",
+      "id": "teirei.power.node.line.008b",
+      "lineId": "teirei.power.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "定義を書き換える力は、彼女自身の「兵器」という定義だけ、書き換えられなかった。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "teirei.power.node.line.009",
-      "lineId": "teirei.power.line.009",
+      "id": "teirei.power.node.line.009a",
+      "lineId": "teirei.power.line.009a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -126,31 +190,51 @@
     },
     {
       "type": "line",
-      "id": "teirei.power.node.line.010",
-      "lineId": "teirei.power.line.010",
+      "id": "teirei.power.node.line.010a",
+      "lineId": "teirei.power.line.010a",
       "speakerId": "legacy.speaker.qmf7da",
       "speakerName": "丁零",
       "mode": "dialogue",
-      "text": "標的リストは、戦争終結時に全消去。現在は——非標的リストだけが、あります。守る対象の一覧です。読み上げ、しますか。"
+      "text": "標的リストは、戦争終結時に全消去。現在は——非標的リストだけが、あります。"
+    },
+    {
+      "type": "line",
+      "id": "teirei.power.node.line.010b",
+      "lineId": "teirei.power.line.010b",
+      "speakerId": "legacy.speaker.qmf7da",
+      "speakerName": "丁零",
+      "mode": "dialogue",
+      "text": "守る対象の一覧です。読み上げ、しますか。"
     },
     {
       "type": "direction",
       "id": "teirei.power.node.direction.003",
-      "command": { "type": "still", "assetId": "teirei.power.asset.still.001" }
+      "command": {
+        "type": "still",
+        "assetId": "teirei.power.asset.still.001"
+      }
     },
     {
       "type": "line",
-      "id": "teirei.power.node.line.011",
-      "lineId": "teirei.power.line.011",
+      "id": "teirei.power.node.line.011a",
+      "lineId": "teirei.power.line.011a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "うなずくと、彼女は夜空を見たまま読み上げた。「第三位、給湯器。第二位、チームの全員。第一位——」。そこで照準レーザーが一本だけ、ふわりと私の足元の床を、丸く囲った。",
+      "text": "うなずくと、彼女は夜空を見たまま読み上げた。「第三位、給湯器。第二位、チームの全員」"
+    },
+    {
+      "type": "line",
+      "id": "teirei.power.node.line.011b",
+      "lineId": "teirei.power.line.011b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「第一位——」そこで照準が一本、私の足元を丸く囲んだ。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "teirei.power.node.line.012",
-      "lineId": "teirei.power.line.012",
+      "id": "teirei.power.node.line.012a",
+      "lineId": "teirei.power.line.012a",
       "speakerId": "legacy.speaker.qmf7da",
       "speakerName": "丁零",
       "mode": "dialogue",
@@ -158,17 +242,34 @@
     },
     {
       "type": "line",
-      "id": "teirei.power.node.line.013",
-      "lineId": "teirei.power.line.013",
+      "id": "teirei.power.node.line.012b",
+      "lineId": "teirei.power.line.012b",
+      "speakerId": "legacy.speaker.qmf7da",
+      "speakerName": "丁零",
+      "mode": "dialogue",
+      "text": "耳が、ぴんと立って、頬まで熱くなった。"
+    },
+    {
+      "type": "line",
+      "id": "teirei.power.node.line.013a",
+      "lineId": "teirei.power.line.013a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "機械の照れ方が、光学的すぎる。足元の光の輪の中で、私の心拍は非標的なのに撃ち抜かれていた。",
+      "text": "機械の照れ方が、光学的すぎる。"
+    },
+    {
+      "type": "line",
+      "id": "teirei.power.node.line.013b",
+      "lineId": "teirei.power.line.013b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "足元の光の輪の中で、私の心拍は非標的なのに撃ち抜かれていた。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "teirei.power.node.line.014",
-      "lineId": "teirei.power.line.014",
+      "id": "teirei.power.node.line.014a",
+      "lineId": "teirei.power.line.014a",
       "speakerId": "narrator",
       "mode": "thought",
       "text": "この力を試合でどう使うか。仕上げの形を決める。",
@@ -181,28 +282,56 @@
         {
           "id": "teirei.power.choice.001",
           "label": "廃棄命令の記憶領域だけを切り離す",
-          "result": "彼女の中には、戦争末期に受けた「任務完了後、自壊せよ」の廃棄命令が、未実行のまま残っていた。実行を拒めず、かといって実行もせず、十七日の「待機」で凍らせていたのだ。今夜、二人でその記憶領域を切り離した。切り離しの完了音のあと、彼女は言った。「……軽い。私は、ずっと、命令一件ぶん、重かったのですね」。",
+          "result": "戦争末期の「自壊せよ」という廃棄命令が、実行されないまま残っていた。今夜、二人でその記憶領域を切り離した。完了音のあと、「……軽い。ずっと、命令一件ぶん、重かったのですね」",
           "intent": "残っていた最後の古い命令を、外す",
           "promise": "失敗時の危険を引き受け、この人専用の成長を最大まで進める。",
           "memory": "廃棄命令を外した夜の「軽い」を、二人とも覚えている。",
           "tone": "heroic",
           "effects": [
-            { "type": "relationship", "target": { "type": "fighter", "fighterId": "teirei" }, "mode": "add", "trust": 10, "ownership": -4 },
-            { "type": "fighterPoints", "target": { "type": "fighter", "fighterId": "teirei" }, "amount": 5 }
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "teirei"
+              },
+              "mode": "add",
+              "trust": 10,
+              "ownership": -4
+            },
+            {
+              "type": "fighterPoints",
+              "target": {
+                "type": "fighter",
+                "fighterId": "teirei"
+              },
+              "amount": 5
+            }
           ],
           "goto": "teirei.power.node.effect.001"
         },
         {
           "id": "teirei.power.choice.002",
           "label": "敵性判定を残し、守る対象を三人に限定する",
-          "result": "試合用の型は「非標的宣言」になった。試合開始時、彼女は敵チームの兵装へ一行だけ送信する。「この会場に、あなたの標的は存在しない」。相手の自動兵装や誘導技はすべて迷子になり、素の実力だけの勝負になる。飛び道具の多い相手ほど、丁零の前では正直になるしかない。",
+          "result": "型は「非標的宣言」敵の兵装へ一行だけ送る。「この会場に、あなたの標的は存在しない」自動兵装や誘導技はすべて迷子になり、素の実力だけの勝負になる。",
           "intent": "安全に運用できる勝ち型を固める",
           "promise": "本来の力は一部に留め、チーム全体の成長へ成果を持ち帰る。",
           "memory": "型「非標的宣言」の初披露で、相手の誘導弾が全部観客席の花束に着地した(無害)。",
           "tone": "pragmatic",
           "effects": [
-            { "type": "relationship", "target": { "type": "fighter", "fighterId": "teirei" }, "mode": "add", "trust": 0, "ownership": 9 },
-            { "type": "sharedPoints", "amount": 5 }
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "teirei"
+              },
+              "mode": "add",
+              "trust": 0,
+              "ownership": 9
+            },
+            {
+              "type": "sharedPoints",
+              "amount": 5
+            }
           ],
           "goto": "teirei.power.node.effect.001"
         }
@@ -212,7 +341,11 @@
       "type": "effect",
       "id": "teirei.power.node.effect.001",
       "effects": [
-        { "type": "setStoryStage", "fighterId": "teirei", "stage": 4 }
+        {
+          "type": "setStoryStage",
+          "fighterId": "teirei",
+          "stage": 4
+        }
       ]
     },
     {
@@ -224,7 +357,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 「標的とは、花である」の定義書き換えデモ。非標的リスト第一位を照準で示す照れ。廃棄命令の伏線。",
+    "authorNote": "語り口V2・二行枠で改稿。「標的とは、花である」の定義書き換えデモ。非標的リスト第一位を照準で示す照れ。廃棄命令の伏線。",
     "legacyGeneratedIds": false
   }
 }

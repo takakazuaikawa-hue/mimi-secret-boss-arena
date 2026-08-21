@@ -53,25 +53,41 @@
     },
     {
       "type": "line",
-      "id": "shahar.epilogue.node.line.001",
-      "lineId": "shahar.epilogue.line.001",
+      "id": "shahar.epilogue.node.line.001a",
+      "lineId": "shahar.epilogue.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "最終大会のあと、街の掲示板に見慣れないお知らせが貼られた。「古竜通過日のお知らせ——本日午後、上空を古竜が通過します。お手持ちの傘(色は自由)を開いてお迎えください」。"
+      "text": "最終大会のあと、街の掲示板に見慣れないお知らせが貼られた。「古竜通過日のお知らせ」"
     },
     {
       "type": "line",
-      "id": "shahar.epilogue.node.line.002",
-      "lineId": "shahar.epilogue.line.002",
+      "id": "shahar.epilogue.node.line.001b",
+      "lineId": "shahar.epilogue.line.001b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "発案は商店街だ。あの限定傘の行列の話が、どこかから広まったらしい。売店には各色の傘が並び、子どもたちは屋根の上で待機し、天気予報は「快晴、ただし竜」と出た。",
+      "text": "「本日午後、上空を古竜が通過します。お手持ちの傘(色は自由)でお迎えください」"
+    },
+    {
+      "type": "line",
+      "id": "shahar.epilogue.node.line.002a",
+      "lineId": "shahar.epilogue.line.002a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "発案は商店街だ。あの限定傘の行列の話が、どこかから広まったよう。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.epilogue.node.line.002b",
+      "lineId": "shahar.epilogue.line.002b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "売店には各色の傘が並び、天気予報は「快晴、ただし竜」と出た。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "shahar.epilogue.node.line.003",
-      "lineId": "shahar.epilogue.line.003",
+      "id": "shahar.epilogue.node.line.003a",
+      "lineId": "shahar.epilogue.line.003a",
       "speakerId": "legacy.speaker.bkqdo1",
       "speakerName": "シャハル",
       "mode": "dialogue",
@@ -79,17 +95,26 @@
     },
     {
       "type": "line",
-      "id": "shahar.epilogue.node.line.004",
-      "lineId": "shahar.epilogue.line.004",
+      "id": "shahar.epilogue.node.line.004a",
+      "lineId": "shahar.epilogue.line.004a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "祭りは定期便じゃないです。今日だけの、一回きりです。……つまり？"
+      "text": "祭りは定期便じゃないです。今日だけの、一回きりです。"
     },
     {
       "type": "line",
-      "id": "shahar.epilogue.node.line.005",
-      "lineId": "shahar.epilogue.line.005",
+      "id": "shahar.epilogue.node.line.004b",
+      "lineId": "shahar.epilogue.line.004b",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "……つまり?"
+    },
+    {
+      "type": "line",
+      "id": "shahar.epilogue.node.line.005a",
+      "lineId": "shahar.epilogue.line.005a",
       "speakerId": "legacy.speaker.bkqdo1",
       "speakerName": "シャハル",
       "mode": "dialogue",
@@ -97,11 +122,27 @@
     },
     {
       "type": "line",
-      "id": "shahar.epilogue.node.line.006",
-      "lineId": "shahar.epilogue.line.006",
+      "id": "shahar.epilogue.node.line.006a",
+      "lineId": "shahar.epilogue.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "午後、専用席の安全帯を締める。四百年ぶんの流行研究の集大成だという編み紐は、今日は祭り仕様の飾り結びだった。準備のいい竜である。",
+      "text": "午後、専用席の安全帯を締める。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.epilogue.node.line.006b",
+      "lineId": "shahar.epilogue.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "四百年ぶんの流行研究の集大成という編み紐は、今日は祭り仕様の飾り結びだった。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.epilogue.node.line.006c",
+      "lineId": "shahar.epilogue.line.006c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "準備のいい竜だ。",
       "emotion": "comic"
     },
     {
@@ -122,17 +163,25 @@
     },
     {
       "type": "line",
-      "id": "shahar.epilogue.node.line.007",
-      "lineId": "shahar.epilogue.line.007",
+      "id": "shahar.epilogue.node.line.007a",
+      "lineId": "shahar.epilogue.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "銀白の翼が、青空を割って街の上へ出る。眼下で、一斉に傘が開いた。限定色、定番色、継ぎのあたった古い傘。街全体が、三分間だけ、色とりどりの花畑になる。",
+      "text": "銀白の翼が、青空を割って街の上へ出る。耳が、思わずぴんと立った。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.epilogue.node.line.007b",
+      "lineId": "shahar.epilogue.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "眼下で、一斉に傘が開いた。街全体が、三分間だけ、色とりどりの花畑になる。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "shahar.epilogue.node.line.008",
-      "lineId": "shahar.epilogue.line.008",
+      "id": "shahar.epilogue.node.line.008a",
+      "lineId": "shahar.epilogue.line.008a",
       "speakerId": "legacy.speaker.bkqdo1",
       "speakerName": "シャハル",
       "mode": "dialogue",
@@ -140,8 +189,8 @@
     },
     {
       "type": "line",
-      "id": "shahar.epilogue.node.line.009",
-      "lineId": "shahar.epilogue.line.009",
+      "id": "shahar.epilogue.node.line.009a",
+      "lineId": "shahar.epilogue.line.009a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -149,29 +198,54 @@
     },
     {
       "type": "line",
-      "id": "shahar.epilogue.node.line.010",
-      "lineId": "shahar.epilogue.line.010",
+      "id": "shahar.epilogue.node.line.010a",
+      "lineId": "shahar.epilogue.line.010a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "彼はしばらく黙って、傘の花畑を目に焼きつけていた。四百年もつ記憶に、三分の景色を、丁寧に仕舞う顔だった。",
+      "text": "彼はしばらく黙って、傘の花畑を目に焼きつけていた。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.epilogue.node.line.010b",
+      "lineId": "shahar.epilogue.line.010b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "四百年もつ記憶に、三分の景色を、丁寧に仕舞う顔だった。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "shahar.epilogue.node.line.011",
-      "lineId": "shahar.epilogue.line.011",
+      "id": "shahar.epilogue.node.line.011a",
+      "lineId": "shahar.epilogue.line.011a",
       "speakerId": "legacy.speaker.bkqdo1",
       "speakerName": "シャハル",
       "mode": "dialogue",
-      "text": "柿落としの出演届を、出しました。演目「古竜通過日——空の祭り、三分間限定」。……振替便は、ありません。"
+      "text": "柿落としの出演届を、出しました。"
     },
     {
       "type": "line",
-      "id": "shahar.epilogue.node.line.012",
-      "lineId": "shahar.epilogue.line.012",
+      "id": "shahar.epilogue.node.line.011b",
+      "lineId": "shahar.epilogue.line.011b",
+      "speakerId": "legacy.speaker.bkqdo1",
+      "speakerName": "シャハル",
+      "mode": "dialogue",
+      "text": "演目は「古竜通過日——空の祭り、三分間限定」に決めた。……振替便は、ありません。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.epilogue.node.line.012a",
+      "lineId": "shahar.epilogue.line.012a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "着地(比喩。実際は屋上に鱗だけ降りる)のあと、私の髪の銀の留め飾りが、夕陽を小さく反射した。四百年の人の今週の気分は、今日も私の前髪の横にいる。次の三分限定が、もう楽しみだった。",
+      "text": "着地(比喩。実際は屋上に鱗だけ降りる)のあと、髪の銀の留め飾りが夕陽を小さく反射した。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.epilogue.node.line.012b",
+      "lineId": "shahar.epilogue.line.012b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "四百年の人の今週の気分は、今日も私の前髪の横にいる。次の三分限定が、もう楽しみだった。",
       "emotion": "tender"
     },
     {
@@ -183,7 +257,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 古竜通過日=傘の花畑の祭り(報酬CG準拠)。出演届=演目確定。銀の留め飾り回収。",
+    "authorNote": "語り口V2・二行枠で改稿。古竜通過日=傘の花畑の祭り(報酬CG準拠)。出演届=演目確定。銀の留め飾り回収。",
     "legacyGeneratedIds": false
   }
 }

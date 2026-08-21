@@ -59,11 +59,19 @@
     },
     {
       "type": "line",
-      "id": "minato.epilogue.node.line.001",
-      "lineId": "minato.epilogue.line.001",
+      "id": "minato.epilogue.node.line.001a",
+      "lineId": "minato.epilogue.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "最終大会のあとの、よく晴れた朝。テラスの一番日当たりのいい席で、ミナトが大きな地図を広げていた。"
+      "text": "最終大会のあとの、よく晴れた朝。"
+    },
+    {
+      "type": "line",
+      "id": "minato.epilogue.node.line.001b",
+      "lineId": "minato.epilogue.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "テラスの一番日当たりのいい席で、ミナトが大きな地図を広げていた。"
     },
     {
       "type": "direction",
@@ -75,16 +83,32 @@
     },
     {
       "type": "line",
-      "id": "minato.epilogue.node.line.002",
-      "lineId": "minato.epilogue.line.002",
+      "id": "minato.epilogue.node.line.002a",
+      "lineId": "minato.epilogue.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "旅の地図だ。四十七の戦場に、几帳面な印。でも私は知っている。この地図の行き先欄は、ずっと空欄だった。行き先は、いつも依頼人が決めてきたから。"
+      "text": "旅の地図だ。四十七の戦場に、几帳面な印。"
     },
     {
       "type": "line",
-      "id": "minato.epilogue.node.line.003",
-      "lineId": "minato.epilogue.line.003",
+      "id": "minato.epilogue.node.line.002b",
+      "lineId": "minato.epilogue.line.002b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "でも私は知ってる。この地図の行き先欄は、ずっと空欄だった。"
+    },
+    {
+      "type": "line",
+      "id": "minato.epilogue.node.line.002c",
+      "lineId": "minato.epilogue.line.002c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "行き先は、いつも依頼人が決めてきたから。"
+    },
+    {
+      "type": "line",
+      "id": "minato.epilogue.node.line.003a",
+      "lineId": "minato.epilogue.line.003a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -92,8 +116,8 @@
     },
     {
       "type": "line",
-      "id": "minato.epilogue.node.line.004",
-      "lineId": "minato.epilogue.line.004",
+      "id": "minato.epilogue.node.line.004a",
+      "lineId": "minato.epilogue.line.004a",
       "speakerId": "legacy.speaker.1vz3er0",
       "speakerName": "ミナト",
       "mode": "dialogue",
@@ -101,17 +125,33 @@
     },
     {
       "type": "line",
-      "id": "minato.epilogue.node.line.005",
-      "lineId": "minato.epilogue.line.005",
+      "id": "minato.epilogue.node.line.005a",
+      "lineId": "minato.epilogue.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "彼は赤鉛筆で、地図に最初の丸をつけた。魔王城でも、伝説の霊峰でもない。——この闘技場に。それから丸の横に、小さな字で書き添えた。「出発地点」。",
+      "text": "彼は赤鉛筆で、地図に最初の丸をつけた。"
+    },
+    {
+      "type": "line",
+      "id": "minato.epilogue.node.line.005b",
+      "lineId": "minato.epilogue.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "魔王城でも、伝説の霊峰でもない。——この闘技場に。"
+    },
+    {
+      "type": "line",
+      "id": "minato.epilogue.node.line.005c",
+      "lineId": "minato.epilogue.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "それから丸の横に、小さな字で書き添えた。「出発地点」",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "minato.epilogue.node.line.006",
-      "lineId": "minato.epilogue.line.006",
+      "id": "minato.epilogue.node.line.006a",
+      "lineId": "minato.epilogue.line.006a",
       "speakerId": "legacy.speaker.1vz3er0",
       "speakerName": "ミナト",
       "mode": "dialogue",
@@ -119,8 +159,8 @@
     },
     {
       "type": "line",
-      "id": "minato.epilogue.node.line.007",
-      "lineId": "minato.epilogue.line.007",
+      "id": "minato.epilogue.node.line.007a",
+      "lineId": "minato.epilogue.line.007a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -128,25 +168,25 @@
     },
     {
       "type": "line",
-      "id": "minato.epilogue.node.line.008",
-      "lineId": "minato.epilogue.line.008",
+      "id": "minato.epilogue.node.line.008a",
+      "lineId": "minato.epilogue.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "朝の風が地図をめくろうとして、彼は花柄の短剣を、そっと重しに置いた。神器の代わりに残った一本の、新しい仕事だった。",
-      "emotion": "tender"
-    },
-    {
-      "type": "direction",
-      "id": "minato.epilogue.node.direction.003",
-      "command": {
-        "type": "still",
-        "assetId": "minato.epilogue.asset.still.002"
-      }
+      "text": "朝の風が地図をめくろうとして、彼は花柄の短剣を、そっと重しに置いた。"
     },
     {
       "type": "line",
-      "id": "minato.epilogue.node.line.009",
-      "lineId": "minato.epilogue.line.009",
+      "id": "minato.epilogue.node.line.008b",
+      "lineId": "minato.epilogue.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "神器の代わりに残った一本の、新しい仕事だった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "line",
+      "id": "minato.epilogue.node.line.009a",
+      "lineId": "minato.epilogue.line.009a",
       "speakerId": "legacy.speaker.1vz3er0",
       "speakerName": "ミナト",
       "mode": "dialogue",
@@ -154,17 +194,25 @@
     },
     {
       "type": "line",
-      "id": "minato.epilogue.node.line.010",
-      "lineId": "minato.epilogue.line.010",
+      "id": "minato.epilogue.node.line.010a",
+      "lineId": "minato.epilogue.line.010a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "見に行くと、几帳面な字でこう書いてあった。演目「刃のない剣舞・四十七の物語」。備考「上演後の昼食は、誰も救わずに選びます」。その下に、食堂の職人さんたちの応援署名が、もう十七人ぶん並んでいた。",
+      "text": "演目「刃のない剣舞・四十七の物語」備考「上演後の昼食は、誰も救わずに選びます」"
+    },
+    {
+      "type": "line",
+      "id": "minato.epilogue.node.line.010b",
+      "lineId": "minato.epilogue.line.010b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "その下に、食堂の職人さんたちの応援署名が、もう十七人ぶん並んでいた。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "minato.epilogue.node.line.011",
-      "lineId": "minato.epilogue.line.011",
+      "id": "minato.epilogue.node.line.011a",
+      "lineId": "minato.epilogue.line.011a",
       "speakerId": "legacy.speaker.1vz3er0",
       "speakerName": "ミナト",
       "mode": "dialogue",
@@ -172,11 +220,27 @@
     },
     {
       "type": "line",
-      "id": "minato.epilogue.node.line.012",
-      "lineId": "minato.epilogue.line.012",
+      "id": "minato.epilogue.node.line.012a",
+      "lineId": "minato.epilogue.line.012a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "三十秒。自己新記録だ。私は「休憩中」の札を取りに走った。出発地点の朝ごはんは、二人で食べると決まっているのだ。誰が決めたかって、今、私が決めた。",
+      "text": "三十秒。自己新記録だ。私は「休憩中」の札を取りに走った。"
+    },
+    {
+      "type": "line",
+      "id": "minato.epilogue.node.line.012b",
+      "lineId": "minato.epilogue.line.012b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "出発地点の朝ごはんは、二人で食べると決まってる。"
+    },
+    {
+      "type": "line",
+      "id": "minato.epilogue.node.line.012c",
+      "lineId": "minato.epilogue.line.012c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "耳の奥が、あったかくなった。誰が決めたかって、今、私が決めた。",
       "emotion": "tender"
     },
     {
@@ -188,7 +252,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 出発地点の丸=クリア後の世界の続きを自分で書く(Q3)。新条文第五条。報酬CG接続維持。",
+    "authorNote": "語り口V2・二行枠で改稿。v2改稿: 出発地点の丸=クリア後の世界の続きを自分で書く(Q3)。新条文第五条。報酬CG接続維持。",
     "legacyGeneratedIds": false
   }
 }

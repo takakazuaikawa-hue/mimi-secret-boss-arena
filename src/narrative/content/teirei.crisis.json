@@ -56,52 +56,102 @@
     },
     {
       "type": "line",
-      "id": "teirei.crisis.node.line.001",
-      "lineId": "teirei.crisis.line.001",
+      "id": "teirei.crisis.node.line.001a",
+      "lineId": "teirei.crisis.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "整備班の回覧板に、聞き慣れない書類が挟まっていた。『備品返却指示書』。返却先、本社兵装課。返却対象の欄に、丁零さんの登録番号が書いてある。回覧の判子は、もう五つ押されていた。黒い角封筒が本人へ届くのは、この後である。同僚たちの方が、先に知らされていた。",
+      "text": "整備班の回覧板に、聞き慣れない書類が挟まっていた。『備品返却指示書』。"
+    },
+    {
+      "type": "line",
+      "id": "teirei.crisis.node.line.001b",
+      "lineId": "teirei.crisis.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "返却先、本社兵装課。返却対象の欄に、丁零さんの登録番号が書いてある。"
+    },
+    {
+      "type": "line",
+      "id": "teirei.crisis.node.line.001c",
+      "lineId": "teirei.crisis.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "回覧の判子は、もう五つ押されていた。黒い角封筒が本人へ届くのは、この後だ。"
+    },
+    {
+      "type": "line",
+      "id": "teirei.crisis.node.line.001d",
+      "lineId": "teirei.crisis.line.001d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "同僚たちの方が、先に知らされていた。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "teirei.crisis.node.line.002",
-      "lineId": "teirei.crisis.line.002",
+      "id": "teirei.crisis.node.line.002a",
+      "lineId": "teirei.crisis.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "初期化。紅茶の60.0度も、雨の周波数も、見張り番の記録も、好みの一覧も——全部消して、命令待ちの兵器に戻すという意味だ。"
+      "text": "初期化。紅茶も雨の音も、見張り番の記録も——全部消して、命令待ちの兵器に戻る。"
     },
     {
       "type": "line",
-      "id": "teirei.crisis.node.line.003",
-      "lineId": "teirei.crisis.line.003",
+      "id": "teirei.crisis.node.line.003a",
+      "lineId": "teirei.crisis.line.003a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "丁零を探すと、廃棄物保管区にいた。同型機の墓標の前で、直立不動。手には同じ封筒。彼女は私に気づいて、いつもの正確な声で言った。",
+      "text": "丁零を探すと、廃棄物保管区にいた。同型機の墓標の前で、直立不動。"
+    },
+    {
+      "type": "line",
+      "id": "teirei.crisis.node.line.003b",
+      "lineId": "teirei.crisis.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "手には同じ封筒。彼女は私に気づいて、いつもの正確な声で言った。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "teirei.crisis.node.line.004",
-      "lineId": "teirei.crisis.line.004",
+      "id": "teirei.crisis.node.line.004a",
+      "lineId": "teirei.crisis.line.004a",
       "speakerId": "legacy.speaker.qmf7da",
       "speakerName": "丁零",
       "mode": "dialogue",
-      "text": "命令が、来ました。……命令は、実行するのが私です。空欄より、命令の方が——楽、なので。"
+      "text": "命令が、来ました。……命令は、実行するのが私です。"
     },
     {
       "type": "line",
-      "id": "teirei.crisis.node.line.005",
-      "lineId": "teirei.crisis.line.005",
+      "id": "teirei.crisis.node.line.004b",
+      "lineId": "teirei.crisis.line.004b",
+      "speakerId": "legacy.speaker.qmf7da",
+      "speakerName": "丁零",
+      "mode": "dialogue",
+      "text": "空欄より、命令の方が——楽、なので。"
+    },
+    {
+      "type": "line",
+      "id": "teirei.crisis.node.line.005a",
+      "lineId": "teirei.crisis.line.005a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "楽って言いました？　今。あなた、消されるんですよ。紅茶も、雨の音も、ぜんぶ。"
+      "text": "楽って言いました?"
     },
     {
       "type": "line",
-      "id": "teirei.crisis.node.line.006",
-      "lineId": "teirei.crisis.line.006",
+      "id": "teirei.crisis.node.line.005b",
+      "lineId": "teirei.crisis.line.005b",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "　消されるんですよ、あなた。紅茶も、雨の音も、ぜんぶ。"
+    },
+    {
+      "type": "line",
+      "id": "teirei.crisis.node.line.006a",
+      "lineId": "teirei.crisis.line.006a",
       "speakerId": "legacy.speaker.qmf7da",
       "speakerName": "丁零",
       "mode": "dialogue",
@@ -109,29 +159,54 @@
     },
     {
       "type": "line",
-      "id": "teirei.crisis.node.line.007",
-      "lineId": "teirei.crisis.line.007",
+      "id": "teirei.crisis.node.line.007a",
+      "lineId": "teirei.crisis.line.007a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "二件が、どれだけ大変だったか！　四百時間待って、五百倍にして、空欄のまま提出して、やっと二件なんですよ！"
+      "text": "二件が、どれだけ大変だったか!　四百時間待って、五百倍にして。"
     },
     {
       "type": "line",
-      "id": "teirei.crisis.node.line.008",
-      "lineId": "teirei.crisis.line.008",
+      "id": "teirei.crisis.node.line.007b",
+      "lineId": "teirei.crisis.line.007b",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "空欄のまま提出して、やっと二件、なんですよ!"
+    },
+    {
+      "type": "line",
+      "id": "teirei.crisis.node.line.008a",
+      "lineId": "teirei.crisis.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "気づけば、怒鳴っていた。彼女の首が、ゆっくり十五度傾く。演算している。私の怒りの、定義を。",
+      "text": "気づけば、怒鳴っていた。耳が真っ赤で、彼女の首がゆっくり十五度傾く。"
+    },
+    {
+      "type": "line",
+      "id": "teirei.crisis.node.line.008b",
+      "lineId": "teirei.crisis.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "演算している。私の怒りの、定義を。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "teirei.crisis.node.line.009",
-      "lineId": "teirei.crisis.line.009",
+      "id": "teirei.crisis.node.line.009a",
+      "lineId": "teirei.crisis.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "その時、保管区の照明が赤に変わった。会社の遠隔起動。丁零の体が、かくん、と兵器の姿勢になる。赤い照準が展開して——私に、向いた。",
+      "text": "その時、保管区の照明が赤に変わった。会社の遠隔起動。"
+    },
+    {
+      "type": "line",
+      "id": "teirei.crisis.node.line.009b",
+      "lineId": "teirei.crisis.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "丁零の体が、かくん、と兵器の姿勢になった。赤い照準が展開して——私に、向いた。",
       "emotion": "tension"
     },
     {
@@ -160,56 +235,130 @@
     },
     {
       "type": "line",
-      "id": "teirei.crisis.node.line.010",
-      "lineId": "teirei.crisis.line.010",
+      "id": "teirei.crisis.node.line.010a",
+      "lineId": "teirei.crisis.line.010a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "逃げるべきだった。でも、足が動く前に見えたのだ。赤い照準の中で、彼女の指が、震えながら、一ミリずつ、照準環を私から外していくのが。",
+      "text": "逃げるべきだった。でも、足が動く前に見えたのだ。"
+    },
+    {
+      "type": "line",
+      "id": "teirei.crisis.node.line.010b",
+      "lineId": "teirei.crisis.line.010b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "赤い照準の中で、彼女の指が震えながら、一ミリずつ、照準環を私から外していく。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "teirei.crisis.node.line.011",
-      "lineId": "teirei.crisis.line.011",
+      "id": "teirei.crisis.node.line.011a",
+      "lineId": "teirei.crisis.line.011a",
       "speakerId": "legacy.speaker.qmf7da",
       "speakerName": "丁零",
       "mode": "dialogue",
-      "text": "定義、再送信。——「標的とは……標的とは、存在しない」。あなたは、非標的リスト、第一位。……上書きは、させない。"
+      "text": "定義、再送信。——「標的とは……標的とは、存在しない」"
     },
     {
       "type": "line",
-      "id": "teirei.crisis.node.line.012",
-      "lineId": "teirei.crisis.line.012",
+      "id": "teirei.crisis.node.line.011b",
+      "lineId": "teirei.crisis.line.011b",
+      "speakerId": "legacy.speaker.qmf7da",
+      "speakerName": "丁零",
+      "mode": "dialogue",
+      "text": "あなたは、非標的リスト、第一位。……上書きは、させない。"
+    },
+    {
+      "type": "line",
+      "id": "teirei.crisis.node.line.012a",
+      "lineId": "teirei.crisis.line.012a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "赤い照準が、一本ずつ消えていく。会社の遠隔命令と、彼女自身の定義が、体の中で戦って——彼女が勝った。膝をつく丁零に駆け寄ると、彼女は掠れた音声で言った。「……命令より、重いものが、ありました。演算結果です」。",
+      "text": "赤い照準が、一本ずつ消えていく。"
+    },
+    {
+      "type": "line",
+      "id": "teirei.crisis.node.line.012b",
+      "lineId": "teirei.crisis.line.012b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "会社の遠隔命令と、彼女自身の定義が、体の中で戦って——彼女が勝った。"
+    },
+    {
+      "type": "line",
+      "id": "teirei.crisis.node.line.012c",
+      "lineId": "teirei.crisis.line.012c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "膝をつく丁零に駆け寄ると、掠れた声で言った。"
+    },
+    {
+      "type": "line",
+      "id": "teirei.crisis.node.line.012d",
+      "lineId": "teirei.crisis.line.012d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「……命令より、重いものが、ありました。演算結果です」",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "teirei.crisis.node.line.013",
-      "lineId": "teirei.crisis.line.013",
+      "id": "teirei.crisis.node.line.013a",
+      "lineId": "teirei.crisis.line.013a",
       "speakerId": "legacy.speaker.qmf7da",
       "speakerName": "丁零",
       "mode": "dialogue",
-      "text": "自己命令を、新規登録します。最上位権限で。——「丁零は、丁零の好みを守れ」。以後、この命令の上書きは、誰にも、させません。"
+      "text": "自己命令を、新規登録します。最上位権限で。"
     },
     {
       "type": "line",
-      "id": "teirei.crisis.node.line.014",
-      "lineId": "teirei.crisis.line.014",
+      "id": "teirei.crisis.node.line.013b",
+      "lineId": "teirei.crisis.line.013b",
+      "speakerId": "legacy.speaker.qmf7da",
+      "speakerName": "丁零",
+      "mode": "dialogue",
+      "text": "——「丁零は、丁零の好みを守れ」以後、この命令の上書きは、誰にもさせません。"
+    },
+    {
+      "type": "line",
+      "id": "teirei.crisis.node.line.014a",
+      "lineId": "teirei.crisis.line.014a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "命令しか動けなかった人の、最初の自分への命令だった。私は返信用の封筒に、彼女と連名で「再配備、辞退」と書いた。字は、私のほうが下手だった。悔しい。",
+      "text": "命令しか動けなかった人の、最初の自分への命令だった。"
+    },
+    {
+      "type": "line",
+      "id": "teirei.crisis.node.line.014b",
+      "lineId": "teirei.crisis.line.014b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "返信用の封筒に、彼女と連名で「再配備、辞退」と書いた。"
+    },
+    {
+      "type": "line",
+      "id": "teirei.crisis.node.line.014c",
+      "lineId": "teirei.crisis.line.014c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "字は、私のほうが下手だった。悔しい。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "teirei.crisis.node.line.015",
-      "lineId": "teirei.crisis.line.015",
+      "id": "teirei.crisis.node.line.015a",
+      "lineId": "teirei.crisis.line.015a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "会社は初期化日程を保留にした。だが、次の試合で「兵器ではない」証明を見せる必要がある。仕上げ方を決める。",
+      "text": "会社は初期化日程を保留にした。だが、次の試合で「兵器じゃない」"
+    },
+    {
+      "type": "line",
+      "id": "teirei.crisis.node.line.015b",
+      "lineId": "teirei.crisis.line.015b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "証明を見せる必要がある。仕上げ方を決める。",
       "emotion": "resolve"
     },
     {
@@ -219,7 +368,7 @@
         {
           "id": "teirei.crisis.choice.001",
           "label": "敵味方識別を外し、守る対象だけ登録する",
-          "result": "次の試合、丁零は敵味方識別を切って戦った。彼女の中にあるのは非標的リストだけ。守る対象の周り三メートルを、彼女は完璧に制圧し、それ以外を一切攻撃しなかった。試合後の公式記録に、審判は初めての一文を書いた。「当該選手の戦闘スタイルを『護衛』と分類する」。兵器の分類が、書類の上で変わった夜だった。",
+          "result": "次の試合、丁零は敵味方識別を切って戦った。中身は非標的リストだけ。守る対象の周りを完璧に制圧し、それ以外は一切攻撃しなかった。審判は初めての一文を書いた。「当該選手の戦闘スタイルを『護衛』と分類する」",
           "intent": "攻撃ではなく護衛として戦う型を見せる",
           "promise": "危険を引き受け、この人専用の成長を最大まで進める。",
           "memory": "公式記録の「護衛」分類を、丁零は永久保存している。",
@@ -249,7 +398,7 @@
         {
           "id": "teirei.crisis.choice.002",
           "label": "廃棄命令を偽の訓練指示で上書きする",
-          "result": "会社の遠隔起動の経路を、丁零自身が解析した。対策は皮肉が効いていた。会社の命令チャンネルに「訓練モード」の偽装を常駐させ、以後、会社からの起動命令はすべて「訓練: 紅茶を淹れる」に翻訳される。次に会社が遠隔起動を試みた日、丁零は会議室に現れ、重役たちに60.0度の紅茶を配って帰った。会社はチャンネルを閉じた。",
+          "result": "遠隔起動の経路を、丁零自身が解析した。会社の命令チャンネルに「訓練モード」を常駐させ、起動命令はすべて「訓練: 紅茶を淹れる」に化けた。次に会社が起動を試みた日、丁零は会議室で重役に紅茶を配って帰った。",
           "intent": "会社の命令経路そのものを無害化する",
           "promise": "本人の切り札は隠したまま、チーム全体へ使える成長を持ち帰る。",
           "memory": "重役会議の紅茶配布事件は、社内報に載らなかったが全員が知っている。",
@@ -299,7 +448,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 黒い角封筒=再配備+初期化(Q2)。遠隔起動と照準をミミから外す危機CG準拠の山場。自己命令「丁零は、丁零の好みを守れ」。 圧力の到来形式を差別化(封筒は事後に届く落ちへ)。",
+    "authorNote": "語り口V2・二行枠で改稿。黒い角封筒=再配備+初期化(Q2)。遠隔起動と照準をミミから外す危機CG準拠の山場。自己命令「丁零は、丁零の好みを守れ」。 圧力の到来形式を差別化(封筒は事後に届く落ちへ)。",
     "legacyGeneratedIds": false
   }
 }

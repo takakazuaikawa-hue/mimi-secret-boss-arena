@@ -10,9 +10,18 @@
     "stage": "bond"
   },
   "trigger": {
-    "actions": ["rest", "play"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "rest",
+      "play"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 400,
     "weight": 1
   },
@@ -24,6 +33,42 @@
         "kind": "background",
         "path": "/assets/story/bg-employee-cafeteria-day-v1.png",
         "alt": "日中の従業員食堂の背景"
+      },
+      {
+        "id": "peony.bond.asset.sprite.character",
+        "kind": "sprite",
+        "path": "/assets/battle/fighters/peony-v1.png",
+        "alt": "巨人の守護者ピオニー"
+      },
+      {
+        "id": "peony.bond.asset.outcome.001",
+        "kind": "still",
+        "path": "/assets/story/events/peony-bond-outcome-noisy-monster-v1.png",
+        "alt": "夕方の食堂で、笑う大きな怪獣を並んで描くピオニーとミミ",
+        "focusX": 50,
+        "focusY": 42,
+        "gallery": {
+          "title": "困り顔じゃない怪獣",
+          "chapter": "ピオニー 第三段階 / 世界一静かな怪獣役",
+          "caption": "大きな自分を、初めて楽しそうに描いた。画用紙の怪獣も、隣のピオニーも笑っている。",
+          "unlock": "on-choice",
+          "choiceId": "peony.bond.choice.001"
+        }
+      },
+      {
+        "id": "peony.bond.asset.outcome.002",
+        "kind": "still",
+        "path": "/assets/story/events/peony-bond-outcome-castle-play-v1.png",
+        "alt": "練習場で、動く城壁になったピオニーの背から城壁へ跳ぶミミ",
+        "focusX": 50,
+        "focusY": 40,
+        "gallery": {
+          "title": "連携・お城ごっこ",
+          "chapter": "ピオニー 第三段階 / 世界一静かな怪獣役",
+          "caption": "守られてきた城壁が、今度は味方を空へ送る。命名会議は、満場一致で三十秒だった。",
+          "unlock": "on-choice",
+          "choiceId": "peony.bond.choice.002"
+        }
       }
     ]
   },
@@ -31,97 +76,220 @@
     {
       "type": "direction",
       "id": "peony.bond.node.direction.001",
-      "command": { "type": "background", "assetId": "peony.bond.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "peony.bond.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "peony.bond.node.direction.character.001",
+      "command": {
+        "type": "show",
+        "assetId": "peony.bond.asset.sprite.character",
+        "actorId": "peony",
+        "slot": "right",
+        "scale": "standard"
+      }
     },
     {
       "type": "line",
-      "id": "peony.bond.node.line.001",
-      "lineId": "peony.bond.line.001",
+      "id": "peony.bond.node.line.001a",
+      "lineId": "peony.bond.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "風の強い午後、外遊びが中止になった。迷子案内所の子ども向けに、紙芝居を作ることになった。作・ミミ、画・ピオニー。題名「かみのかんむりと、やさしいかいじゅう」。実話をもとにしたフィクションである。"
+      "text": "風の強い午後、外遊びが中止になった。"
     },
     {
       "type": "line",
-      "id": "peony.bond.node.line.002",
-      "lineId": "peony.bond.line.002",
+      "id": "peony.bond.node.line.001b",
+      "lineId": "peony.bond.line.001b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ピオニーの絵は、意外なほど繊細だった。特大クレヨンで描かれる怪獣は、どれも困り顔で、どこか本人に似ている。「かいじゅうは、こわい顔が、にがてなの」とのこと。作者の実感である。",
+      "text": "迷子案内所の子ども向けに、紙芝居を作ることになった。作・ミミ、画・ピオニー。"
+    },
+    {
+      "type": "line",
+      "id": "peony.bond.node.line.001c",
+      "lineId": "peony.bond.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "題名は「かみのかんむりと、やさしいかいじゅう」実話をもとにした、フィクションだ。"
+    },
+    {
+      "type": "line",
+      "id": "peony.bond.node.line.002a",
+      "lineId": "peony.bond.line.002a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ピオニーの絵は、意外なほど繊細だった。"
+    },
+    {
+      "type": "line",
+      "id": "peony.bond.node.line.002b",
+      "lineId": "peony.bond.line.002b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "特大クレヨンの怪獣は、どれも困り顔で、どこか本人に似ている。"
+    },
+    {
+      "type": "line",
+      "id": "peony.bond.node.line.002c",
+      "lineId": "peony.bond.line.002c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「かいじゅうは、こわい顔が、にがてなの」——作者の実感。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "peony.bond.node.line.003",
-      "lineId": "peony.bond.line.003",
+      "id": "peony.bond.node.line.003a",
+      "lineId": "peony.bond.line.003a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "問題は、リハーサルで起きた。怪獣の登場シーンで、ピオニーが張り切って効果音の足踏みをしたのだ。ずしん。",
+      "text": "問題は、リハーサルで起きた。"
+    },
+    {
+      "type": "line",
+      "id": "peony.bond.node.line.003b",
+      "lineId": "peony.bond.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "怪獣の登場シーンで、ピオニーが張り切って足踏みをした。ずしん。",
       "emotion": "comic"
     },
     {
       "type": "direction",
       "id": "peony.bond.node.direction.002",
-      "command": { "type": "effect", "effectId": "shake" }
+      "command": {
+        "type": "effect",
+        "effectId": "shake"
+      }
     },
     {
       "type": "line",
-      "id": "peony.bond.node.line.004",
-      "lineId": "peony.bond.line.004",
+      "id": "peony.bond.node.line.004a",
+      "lineId": "peony.bond.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "食堂の食器棚が総立ちになり、館内に「地震ではありません。繰り返します、地震ではありません」の放送が流れた。効果音として、リアルすぎた。",
+      "text": "館内放送は「地震ではありません。繰り返します」"
+    },
+    {
+      "type": "line",
+      "id": "peony.bond.node.line.004b",
+      "lineId": "peony.bond.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "効果音というより、耳の奥まで、リアルすぎた。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "peony.bond.node.line.005",
-      "lineId": "peony.bond.line.005",
+      "id": "peony.bond.node.line.005a",
+      "lineId": "peony.bond.line.005a",
       "speakerId": "legacy.speaker.1e9iq7o",
       "speakerName": "ピオニー",
       "mode": "dialogue",
-      "text": "……こうかおん、きんし？"
+      "text": "……こうかおん、きんし?"
     },
     {
       "type": "line",
-      "id": "peony.bond.node.line.006",
-      "lineId": "peony.bond.line.006",
+      "id": "peony.bond.node.line.006a",
+      "lineId": "peony.bond.line.006a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "禁止じゃないです。工夫です。……そうだ。逆にしましょう。あなたの怪獣は「世界一静かな怪獣」です。"
+      "text": "禁止じゃないです。工夫です。……そうだ。"
     },
     {
       "type": "line",
-      "id": "peony.bond.node.line.007",
-      "lineId": "peony.bond.line.007",
+      "id": "peony.bond.node.line.006b",
+      "lineId": "peony.bond.line.006b",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "逆にしましょう。あなたの怪獣は「世界一静かな怪獣」です。"
+    },
+    {
+      "type": "line",
+      "id": "peony.bond.node.line.007a",
+      "lineId": "peony.bond.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "台本を書き直した。怪獣は、足音を立てない。街のみんなを起こさないように、爪先立ちで歩く。くしゃみを我慢して、雲の陰に隠れる。——ピオニーは台本を三回読んで、小さな声で言った。「この怪獣、しってる」。",
+      "text": "台本を書き直した。怪獣は、足音を立てない。"
+    },
+    {
+      "type": "line",
+      "id": "peony.bond.node.line.007b",
+      "lineId": "peony.bond.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "街のみんなを起こさないよう、爪先立ちで歩く。くしゃみを我慢して、雲の陰に隠れる。"
+    },
+    {
+      "type": "line",
+      "id": "peony.bond.node.line.007c",
+      "lineId": "peony.bond.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ピオニーは台本を三回読んで、小さく言った。「この怪獣、しってる」",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "peony.bond.node.line.008",
-      "lineId": "peony.bond.line.008",
+      "id": "peony.bond.node.line.008a",
+      "lineId": "peony.bond.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "本番は、風の強い午後の案内所。満員(子ども八人)。ピオニーの怪獣役は、迫真だった。爪先立ちの震え、くしゃみの我慢、紙の冠をそっと直す指先。全部、演技じゃないから強い。",
+      "text": "本番は、風の強い午後の案内所。満員（子ども八人）。"
+    },
+    {
+      "type": "line",
+      "id": "peony.bond.node.line.008b",
+      "lineId": "peony.bond.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ピオニーの怪獣役は、迫真だった。"
+    },
+    {
+      "type": "line",
+      "id": "peony.bond.node.line.008c",
+      "lineId": "peony.bond.line.008c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "爪先立ちの震え、くしゃみの我慢、紙の冠を直す指先。全部、演技じゃないから強い。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "peony.bond.node.line.009",
-      "lineId": "peony.bond.line.009",
+      "id": "peony.bond.node.line.009a",
+      "lineId": "peony.bond.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "物語の最後、静かな怪獣は、街の子に紙の冠をもらう。読み手の私がその行を読んだ時、観客の女の子が立ち上がって、本物のピオニーの角に、自分の紙冠を掛けに行った。台本にない、最高の結末だった。",
+      "text": "物語の最後、静かな怪獣は、街の子に紙の冠をもらう。"
+    },
+    {
+      "type": "line",
+      "id": "peony.bond.node.line.009b",
+      "lineId": "peony.bond.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "その行を読んだ時、観客の女の子が立ち上がった。"
+    },
+    {
+      "type": "line",
+      "id": "peony.bond.node.line.009c",
+      "lineId": "peony.bond.line.009c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "本物のピオニーの角に、自分の紙冠を掛けに行く。台本にない、最高の結末だった。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "peony.bond.node.line.010",
-      "lineId": "peony.bond.line.010",
+      "id": "peony.bond.node.line.010a",
+      "lineId": "peony.bond.line.010a",
       "speakerId": "legacy.speaker.1e9iq7o",
       "speakerName": "ピオニー",
       "mode": "dialogue",
@@ -129,17 +297,26 @@
     },
     {
       "type": "line",
-      "id": "peony.bond.node.line.011",
-      "lineId": "peony.bond.line.011",
+      "id": "peony.bond.node.line.011a",
+      "lineId": "peony.bond.line.011a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "はい。今日の拍手、聞きました？　あれ、半分はあなたの足踏み待ちでしたよ。次回作は「うるさい怪獣」でいきましょう。"
+      "text": "はい。今日の拍手、聞きました?　あれ、半分はあなたの足踏み待ちでしたよ。"
     },
     {
       "type": "line",
-      "id": "peony.bond.node.line.012",
-      "lineId": "peony.bond.line.012",
+      "id": "peony.bond.node.line.011b",
+      "lineId": "peony.bond.line.011b",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "次回作は「うるさい怪獣」でいきましょう。"
+    },
+    {
+      "type": "line",
+      "id": "peony.bond.node.line.012a",
+      "lineId": "peony.bond.line.012a",
       "speakerId": "narrator",
       "mode": "thought",
       "text": "終演後の片付けで、残りの午後の使い方を決める。",
@@ -152,28 +329,58 @@
         {
           "id": "peony.bond.choice.001",
           "label": "子ども向けの紙芝居を、ピオニーと作る",
-          "result": "次回作「うるさいかいじゅう、はじめてのおまつり」の制作会議は、夕方まで続いた。今度の怪獣は、我慢しない。足踏みで太鼓の代わりをして、くしゃみで花火の風を送る。ピオニーはクレヨンを握って、初めて「大きい自分」を楽しそうに描いた。困り顔じゃない怪獣が、画用紙の上で笑っていた。",
+          "result": "次回作「うるさいかいじゅう、はじめてのおまつり」の会議は、夕方まで続いた。今度の怪獣は我慢しない。足踏みは太鼓、くしゃみは花火の風。ピオニーは初めて「大きい自分」を楽しそうに描いた。困り顔じゃない怪獣が、画用紙の上で笑っていた。",
           "intent": "我慢しない側の物語も、一緒に作る",
           "promise": "読みにくい成長になる代わりに、この人だけの成長を大きく進める。",
           "memory": "困り顔じゃない怪獣の絵を、案内所に飾ってある。",
+          "outcomeAssetId": "peony.bond.asset.outcome.001",
           "tone": "wild",
           "effects": [
-            { "type": "relationship", "target": { "type": "fighter", "fighterId": "peony" }, "mode": "add", "trust": 9, "ownership": -2 },
-            { "type": "fighterPoints", "target": { "type": "fighter", "fighterId": "peony" }, "amount": 3 }
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "peony"
+              },
+              "mode": "add",
+              "trust": 9,
+              "ownership": -2
+            },
+            {
+              "type": "fighterPoints",
+              "target": {
+                "type": "fighter",
+                "fighterId": "peony"
+              },
+              "amount": 3
+            }
           ],
           "goto": "peony.bond.node.effect.001"
         },
         {
           "id": "peony.bond.choice.002",
           "label": "味方を背に乗せ、城壁を越える連携を試す",
-          "result": "午後は練習場で新連携を試した。ピオニーが四つん這いで「動く城壁」になり、味方が背を駆け上がって高所を取る型だ。彼女は「ふまれるの、へいき。むしろ、とくい」と胸を張った。守られてきた城壁の記憶が、今度は味方の足場になる。連携の名前は、満場一致で「お城ごっこ」になった。",
+          "result": "午後は練習場で新連携を試した。ピオニーが四つん這いで「動く城壁」になり、味方が背を駆け上がる型だ。「ふまれるの、へいき。むしろ、とくい」と胸を張った。守られてきた城壁が、今度は足場になる。連携名は満場一致で「お城ごっこ」に決まった。",
           "intent": "大きさを、チームの地形として使う",
           "promise": "紙芝居の続きは後日になるが、全員へ配れる成長ポイントを得る。",
           "memory": "連携「お城ごっこ」の命名会議は三十秒で終わった。",
+          "outcomeAssetId": "peony.bond.asset.outcome.002",
           "tone": "pragmatic",
           "effects": [
-            { "type": "relationship", "target": { "type": "fighter", "fighterId": "peony" }, "mode": "add", "trust": 1, "ownership": 7 },
-            { "type": "sharedPoints", "amount": 3 }
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "peony"
+              },
+              "mode": "add",
+              "trust": 1,
+              "ownership": 7
+            },
+            {
+              "type": "sharedPoints",
+              "amount": 3
+            }
           ],
           "goto": "peony.bond.node.effect.001"
         }
@@ -183,7 +390,11 @@
       "type": "effect",
       "id": "peony.bond.node.effect.001",
       "effects": [
-        { "type": "setStoryStage", "fighterId": "peony", "stage": 3 }
+        {
+          "type": "setStoryStage",
+          "fighterId": "peony",
+          "stage": 3
+        }
       ]
     },
     {
@@ -195,7 +406,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 紙芝居と地震警報。世界一静かな怪獣=本人。台本にない紙冠の結末。",
+    "authorNote": "語り口V2・二行枠で改稿。紙芝居と地震警報。世界一静かな怪獣=本人。台本にない紙冠の結末。",
     "legacyGeneratedIds": false
   }
 }

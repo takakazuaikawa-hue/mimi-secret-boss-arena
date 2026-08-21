@@ -47,25 +47,49 @@
   "nodes": [
     {
       "type": "line",
-      "id": "amara.liberation.node.line.001",
-      "lineId": "amara.liberation.line.001",
+      "id": "amara.liberation.node.line.001a",
+      "lineId": "amara.liberation.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "回収通告の騒動が終わり、最終大会が近い。アマラの契約を終わらせる条件が、全部そろった。夜のカフェで、私は解除届を鞄から出せずにいた。"
+      "text": "回収通告の騒動が終わり、最終大会が近い。"
     },
     {
       "type": "line",
-      "id": "amara.liberation.node.line.002",
-      "lineId": "amara.liberation.line.002",
+      "id": "amara.liberation.node.line.001b",
+      "lineId": "amara.liberation.line.001b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "この紙を渡せば、この人を呼び止める権利はなくなる。最初から持つべきじゃなかった権利なのに、指が紙を離したがらない。",
+      "text": "アマラさんの契約を終わらせる条件が、全部そろった。"
+    },
+    {
+      "type": "line",
+      "id": "amara.liberation.node.line.001c",
+      "lineId": "amara.liberation.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "夜のカフェで、解除届を鞄から出せずにいた。"
+    },
+    {
+      "type": "line",
+      "id": "amara.liberation.node.line.002a",
+      "lineId": "amara.liberation.line.002a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "この紙を渡せば、この人を呼び止める権利がなくなる。"
+    },
+    {
+      "type": "line",
+      "id": "amara.liberation.node.line.002b",
+      "lineId": "amara.liberation.line.002b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "最初から持つべきじゃなかった権利なのに、指が離したがらない。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "amara.liberation.node.line.003",
-      "lineId": "amara.liberation.line.003",
+      "id": "amara.liberation.node.line.003a",
+      "lineId": "amara.liberation.line.003a",
       "speakerId": "legacy.speaker.14shtqw",
       "speakerName": "アマラ",
       "mode": "dialogue",
@@ -73,20 +97,28 @@
     },
     {
       "type": "line",
-      "id": "amara.liberation.node.line.004",
-      "lineId": "amara.liberation.line.004",
+      "id": "amara.liberation.node.line.004a",
+      "lineId": "amara.liberation.line.004a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "隠滅してません！　ちょっと、心の準備を……"
+      "text": "隠滅してません!　ちょっと、心の準備を……"
     },
     {
       "type": "line",
-      "id": "amara.liberation.node.line.005",
-      "lineId": "amara.liberation.line.005",
+      "id": "amara.liberation.node.line.005a",
+      "lineId": "amara.liberation.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "観念して机に置いた。受け取る側のはずのアマラが、宣言した。「開廷します。本日の被告——この解除届の、適法性」。自由になる書類ほど、細かく読むらしい。",
+      "text": "観念して机に置いた。受け取る側のはずのアマラさんが、宣言した。"
+    },
+    {
+      "type": "line",
+      "id": "amara.liberation.node.line.005b",
+      "lineId": "amara.liberation.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「開廷します。本日の被告、この解除届の適法性」自由になる書類ほど、細かく読むらしい。",
       "emotion": "comic"
     },
     {
@@ -108,26 +140,35 @@
     },
     {
       "type": "line",
-      "id": "amara.liberation.node.line.006",
-      "lineId": "amara.liberation.line.006",
+      "id": "amara.liberation.node.line.006a",
+      "lineId": "amara.liberation.line.006a",
       "speakerId": "legacy.speaker.14shtqw",
       "speakerName": "アマラ",
       "mode": "dialogue",
-      "text": "第二条、誤字。第五条、押印が三度傾いている。……やり直しを要求します。"
+      "text": "第二条、誤字。第五条、押印が三度傾いている。"
     },
     {
       "type": "line",
-      "id": "amara.liberation.node.line.007",
-      "lineId": "amara.liberation.line.007",
+      "id": "amara.liberation.node.line.006b",
+      "lineId": "amara.liberation.line.006b",
+      "speakerId": "legacy.speaker.14shtqw",
+      "speakerName": "アマラ",
+      "mode": "dialogue",
+      "text": "……やり直しを要求します。"
+    },
+    {
+      "type": "line",
+      "id": "amara.liberation.node.line.007a",
+      "lineId": "amara.liberation.line.007a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "自由になる書類を、そんなに厳しく審査するんですか！？"
+      "text": "自由になる書類を、そんなに厳しく審査するんですか!?"
     },
     {
       "type": "line",
-      "id": "amara.liberation.node.line.008",
-      "lineId": "amara.liberation.line.008",
+      "id": "amara.liberation.node.line.008a",
+      "lineId": "amara.liberation.line.008a",
       "speakerId": "legacy.speaker.14shtqw",
       "speakerName": "アマラ",
       "mode": "dialogue",
@@ -135,35 +176,68 @@
     },
     {
       "type": "line",
-      "id": "amara.liberation.node.line.009",
-      "lineId": "amara.liberation.line.009",
+      "id": "amara.liberation.node.line.009a",
+      "lineId": "amara.liberation.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "その言い方で分かってしまった。この人は今、うれしいのだ。判決文の顔のまま、たぶんずっと。",
+      "text": "その言い方で、分かってしまった。この人、今うれしいんだ。"
+    },
+    {
+      "type": "line",
+      "id": "amara.liberation.node.line.009b",
+      "lineId": "amara.liberation.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "判決文の顔のまま、たぶんずっと。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "amara.liberation.node.line.010",
-      "lineId": "amara.liberation.line.010",
+      "id": "amara.liberation.node.line.010a",
+      "lineId": "amara.liberation.line.010a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "アマラは両方の手袋を、指先から順に外した。「素手の判は、嘘がつけないので」。素手率が上がるたび、こっちの心拍数も上がる。判が押される。契約印が消える。関係まで消える音は、しなかった。",
+      "text": "アマラさんは両方の手袋を、指先から順に外した。「素手の判は、嘘がつけないので」"
+    },
+    {
+      "type": "line",
+      "id": "amara.liberation.node.line.010b",
+      "lineId": "amara.liberation.line.010b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "素手率が上がるたび、耳と心拍数がそろって上がる。"
+    },
+    {
+      "type": "line",
+      "id": "amara.liberation.node.line.010c",
+      "lineId": "amara.liberation.line.010c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "判が押される。契約印が消えても、関係が消える音はしなかった。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "amara.liberation.node.line.011",
-      "lineId": "amara.liberation.line.011",
+      "id": "amara.liberation.node.line.011a",
+      "lineId": "amara.liberation.line.011a",
       "speakerId": "legacy.speaker.14shtqw",
       "speakerName": "アマラ",
       "mode": "dialogue",
-      "text": "この届出で、私の契約は終わりました。——だが、あなたの契約は、まだ被告席へ来ていない。"
+      "text": "この届出で、私の契約は終わりました。"
     },
     {
       "type": "line",
-      "id": "amara.liberation.node.line.012",
-      "lineId": "amara.liberation.line.012",
+      "id": "amara.liberation.node.line.011b",
+      "lineId": "amara.liberation.line.011b",
+      "speakerId": "legacy.speaker.14shtqw",
+      "speakerName": "アマラ",
+      "mode": "dialogue",
+      "text": "——だが、あなたの契約は、まだ被告席へ来ていない。"
+    },
+    {
+      "type": "line",
+      "id": "amara.liberation.node.line.012a",
+      "lineId": "amara.liberation.line.012a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -171,12 +245,21 @@
     },
     {
       "type": "line",
-      "id": "amara.liberation.node.line.013",
-      "lineId": "amara.liberation.line.013",
+      "id": "amara.liberation.node.line.013a",
+      "lineId": "amara.liberation.line.013a",
       "speakerId": "legacy.speaker.14shtqw",
       "speakerName": "アマラ",
       "mode": "dialogue",
-      "text": "弁護人ですから。訴状は、書き直してあります。——原告欄を、共同原告へ変更しました。"
+      "text": "弁護人ですから。訴状は、書き直してあります。"
+    },
+    {
+      "type": "line",
+      "id": "amara.liberation.node.line.013b",
+      "lineId": "amara.liberation.line.013b",
+      "speakerId": "legacy.speaker.14shtqw",
+      "speakerName": "アマラ",
+      "mode": "dialogue",
+      "text": "——原告欄を、共同原告へ変更しました。"
     },
     {
       "type": "direction",
@@ -188,17 +271,25 @@
     },
     {
       "type": "line",
-      "id": "amara.liberation.node.line.014",
-      "lineId": "amara.liberation.line.014",
+      "id": "amara.liberation.node.line.014a",
+      "lineId": "amara.liberation.line.014a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "差し出された訴状の原告欄。アマラの名前の隣に、私の名前のぶんだけ場所が空けてあった。上下じゃなくて、隣に。",
+      "text": "差し出された訴状の原告欄。アマラさんの名前の隣に、私の名前のぶんだけ場所が空けてあった。"
+    },
+    {
+      "type": "line",
+      "id": "amara.liberation.node.line.014b",
+      "lineId": "amara.liberation.line.014b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "上下じゃなくて、隣に。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "amara.liberation.node.line.015",
-      "lineId": "amara.liberation.line.015",
+      "id": "amara.liberation.node.line.015a",
+      "lineId": "amara.liberation.line.015a",
       "speakerId": "narrator",
       "mode": "thought",
       "text": "帰り支度の前に、箸袋を返そうとした。第一号から第五号まで、全部。",
@@ -206,17 +297,26 @@
     },
     {
       "type": "line",
-      "id": "amara.liberation.node.line.016",
-      "lineId": "amara.liberation.line.016",
+      "id": "amara.liberation.node.line.016a",
+      "lineId": "amara.liberation.line.016a",
       "speakerId": "legacy.speaker.14shtqw",
       "speakerName": "アマラ",
       "mode": "dialogue",
-      "text": "受け取りません。預けたのではない。——次に会う場所の、印です。"
+      "text": "受け取りません。預けたのではない。"
     },
     {
       "type": "line",
-      "id": "amara.liberation.node.line.017",
-      "lineId": "amara.liberation.line.017",
+      "id": "amara.liberation.node.line.016b",
+      "lineId": "amara.liberation.line.016b",
+      "speakerId": "legacy.speaker.14shtqw",
+      "speakerName": "アマラ",
+      "mode": "dialogue",
+      "text": "——次に会う場所の、印です。"
+    },
+    {
+      "type": "line",
+      "id": "amara.liberation.node.line.017a",
+      "lineId": "amara.liberation.line.017a",
       "speakerId": "narrator",
       "mode": "thought",
       "text": "ペンは、私の手の中にある。原告欄の空白が、返事を待っていた。",
@@ -229,7 +329,7 @@
         {
           "id": "amara.liberation.choice.001",
           "label": "共同原告の欄へ、自分の名前を署名する",
-          "result": "上下ではなく隣に並んだ二つの署名が、最初の判決になった。アマラは押印の角度を三度確かめ、初めて一度で納得した。その夜の箸袋、第六号。「本日の解除届に、異議なし。——記録上、初めての『異議なし』である」。",
+          "result": "上下でなく隣に並んだ二つの署名が、最初の判決になった。アマラさんは押印の角度を三度確かめ、初めて一度で納得した。箸袋、第六号「本日の解除届に、異議なし。記録上、初めての異議なし」",
           "intent": "所有ではなく、隣に並ぶ形を選ぶ",
           "promise": "所有者名を消し、本人が自分の名で次の試合を選べるようにする。",
           "memory": "隣に並んだ署名を、二人とも最初の判決と呼んでいる。",
@@ -256,7 +356,7 @@
         {
           "id": "amara.liberation.choice.002",
           "label": "署名の代わりに、次の試合の法務担当を依頼する",
-          "result": "依頼書には、断る欄も作った。アマラはそこを赤線で囲み、その上で「受任」へ丸をつけた。「依頼なら、断れる。断れる仕事は、命令より引き受けやすい」。その夜の箸袋、第六号。「本日の依頼に、異議なし」。",
+          "result": "依頼書には断る欄も作った。アマラさんはそこを赤線で囲み「受任」に丸をつけた。「依頼なら断れる。断れる仕事は、命令より引き受けやすい」箸袋、第六号「本日の依頼に、異議なし」",
           "intent": "自由な相手へ、改めて協力を頼む",
           "promise": "断る権利を返したうえで、決勝を一緒に戦う新しい約束を結ぶ。",
           "memory": "頼まれたからではなく、頼みを聞いたから残った。その違いを二人が覚えている。",
@@ -325,7 +425,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md",
-    "authorNote": "v2改稿: 解除届の適法性審理。共同原告への変更。箸袋第六号=初めての「異議なし」。",
+    "authorNote": "語り口V2・二行枠で改稿。v2改稿: 解除届の適法性審理。共同原告への変更。箸袋第六号=初めての「異議なし」。",
     "legacyGeneratedIds": false
   }
 }

@@ -10,9 +10,18 @@
     "stage": "meet"
   },
   "trigger": {
-    "actions": ["rest", "work"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "rest",
+      "work"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 500,
     "weight": 1
   },
@@ -37,83 +46,183 @@
     {
       "type": "direction",
       "id": "marian.meet.node.direction.001",
-      "command": { "type": "background", "assetId": "marian.meet.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "marian.meet.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "line",
-      "id": "marian.meet.node.line.001",
-      "lineId": "marian.meet.line.001",
+      "id": "marian.meet.node.line.001a",
+      "lineId": "marian.meet.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "伝票の紙で、指を切った。深さ一ミリ。絆創膏で十分の傷だが、絆創膏の在庫が切れていたので、初めて救護室へ行った。それが、間違いというか、正解というか、事件の始まりだった。"
+      "text": "伝票の紙で、うっかり指を切った。深さ一ミリ。"
     },
     {
       "type": "line",
-      "id": "marian.meet.node.line.002",
-      "lineId": "marian.meet.line.002",
+      "id": "marian.meet.node.line.001b",
+      "lineId": "marian.meet.line.001b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "救護室の主は、金糸の治癒陣を編む、静かな人だった。マリアンと名乗った彼女は、私の指を一目見て、手のひらをかざした。淡い光。三秒。",
+      "text": "絆創膏で十分な傷だけど、在庫切れ。初めて、救護室へ行った。"
+    },
+    {
+      "type": "line",
+      "id": "marian.meet.node.line.001c",
+      "lineId": "marian.meet.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "それが、間違いというか、正解というか、事件の始まりだった。"
+    },
+    {
+      "type": "line",
+      "id": "marian.meet.node.line.002a",
+      "lineId": "marian.meet.line.002a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "救護室の主は、金糸の治癒陣を編む、静かな人だった。"
+    },
+    {
+      "type": "line",
+      "id": "marian.meet.node.line.002b",
+      "lineId": "marian.meet.line.002b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "マリアンと名乗った彼女は、私の指を一目見て、手のひらをかざした。"
+    },
+    {
+      "type": "line",
+      "id": "marian.meet.node.line.002c",
+      "lineId": "marian.meet.line.002c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "耳が、思わずぴんと立つ。淡い光。三秒。",
       "emotion": "tension"
     },
     {
       "type": "direction",
       "id": "marian.meet.node.direction.002",
-      "command": { "type": "still", "assetId": "marian.meet.asset.still.001" }
+      "command": {
+        "type": "still",
+        "assetId": "marian.meet.asset.still.001"
+      }
     },
     {
       "type": "direction",
       "id": "marian.meet.node.direction.003",
-      "command": { "type": "effect", "effectId": "pulse" }
+      "command": {
+        "type": "effect",
+        "effectId": "pulse"
+      }
     },
     {
       "type": "line",
-      "id": "marian.meet.node.line.003",
-      "lineId": "marian.meet.line.003",
+      "id": "marian.meet.node.line.003a",
+      "lineId": "marian.meet.line.003a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "指の傷が消えた。ついでに、三年前の火傷の痕と、昨日からの肩こりと、今朝どうしても直らなかった癖毛まで、消えた。……癖毛まで？",
+      "text": "指の傷が、消えた。ついでに、三年前の火傷の痕と、昨日からの肩こりまで消えた。"
+    },
+    {
+      "type": "line",
+      "id": "marian.meet.node.line.003b",
+      "lineId": "marian.meet.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "今朝どうしても直らなかった癖毛まで。……癖毛まで?",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "marian.meet.node.line.004",
-      "lineId": "marian.meet.line.004",
+      "id": "marian.meet.node.line.004a",
+      "lineId": "marian.meet.line.004a",
       "speakerId": "legacy.speaker.quc8xa",
       "speakerName": "マリアン",
       "mode": "dialogue",
-      "text": "……申し訳ありません。また、効きすぎました。範囲の設定が、その、大きすぎるのです。生まれつき。"
+      "text": "……申し訳ありません。また、効きすぎました。"
     },
     {
       "type": "line",
-      "id": "marian.meet.node.line.005",
-      "lineId": "marian.meet.line.005",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "見れば、待合の患者さんたちも次々と完治していた。骨折のお客様が三十秒でギプスを外し、風邪の清掃係さんが鼻歌で帰っていく。効きすぎる救護室。うちの施設で一番ありがたく、一番謎の部屋だ。"
+      "id": "marian.meet.node.line.004b",
+      "lineId": "marian.meet.line.004b",
+      "speakerId": "legacy.speaker.quc8xa",
+      "speakerName": "マリアン",
+      "mode": "dialogue",
+      "text": "範囲の設定が、その、大きすぎるのです。生まれつき。"
     },
     {
       "type": "line",
-      "id": "marian.meet.node.line.006",
-      "lineId": "marian.meet.line.006",
+      "id": "marian.meet.node.line.005a",
+      "lineId": "marian.meet.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "そして、事件が起きた。私の鞄から、お土産の袋が覗いていた。中身は、途中で割ってしまったクッキー。マリアンの視線がそこを通った瞬間——ぴき、と小さな音がして、クッキーの割れ目が、消えた。",
+      "text": "見れば、待合の患者さんたちも、次々と完治していた。"
+    },
+    {
+      "type": "line",
+      "id": "marian.meet.node.line.005b",
+      "lineId": "marian.meet.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "骨折のお客様が三十秒でギプスを外し、風邪の清掃係さんが鼻歌で帰っていく。"
+    },
+    {
+      "type": "line",
+      "id": "marian.meet.node.line.005c",
+      "lineId": "marian.meet.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "効きすぎる救護室。うちの施設で、一番ありがたく、一番謎の部屋。"
+    },
+    {
+      "type": "line",
+      "id": "marian.meet.node.line.006a",
+      "lineId": "marian.meet.line.006a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "そして、事件が起きた。私の鞄から、お土産の袋が覗いていた。"
+    },
+    {
+      "type": "line",
+      "id": "marian.meet.node.line.006b",
+      "lineId": "marian.meet.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "中身は、途中でうっかり割ってしまったクッキー。"
+    },
+    {
+      "type": "line",
+      "id": "marian.meet.node.line.006c",
+      "lineId": "marian.meet.line.006c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "マリアンの視線がそこを通った瞬間——ぴき、と音がして、割れ目が消えた。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "marian.meet.node.line.007",
-      "lineId": "marian.meet.line.007",
+      "id": "marian.meet.node.line.007a",
+      "lineId": "marian.meet.line.007a",
       "speakerId": "legacy.speaker.quc8xa",
       "speakerName": "マリアン",
       "mode": "dialogue",
-      "text": "……菓子まで、治してしまった。……すみません。壊れているものを見ると、手が、勝手に。"
+      "text": "……菓子まで、治してしまった。"
     },
     {
       "type": "line",
-      "id": "marian.meet.node.line.008",
-      "lineId": "marian.meet.line.008",
+      "id": "marian.meet.node.line.007b",
+      "lineId": "marian.meet.line.007b",
+      "speakerId": "legacy.speaker.quc8xa",
+      "speakerName": "マリアン",
+      "mode": "dialogue",
+      "text": "……すみません。壊れているものを見ると、手が、勝手に。"
+    },
+    {
+      "type": "line",
+      "id": "marian.meet.node.line.008a",
+      "lineId": "marian.meet.line.008a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -121,47 +230,97 @@
     },
     {
       "type": "line",
-      "id": "marian.meet.node.line.009",
-      "lineId": "marian.meet.line.009",
+      "id": "marian.meet.node.line.009a",
+      "lineId": "marian.meet.line.009a",
       "speakerId": "legacy.speaker.quc8xa",
       "speakerName": "マリアン",
       "mode": "dialogue",
-      "text": "……治すことは、いつも正しいとは、限らないので。割れたクッキーには、割れた時の思い出ごと食べる食べ方が、あったかもしれません。"
+      "text": "……治すことは、いつも正しいとは、限らないので。"
     },
     {
       "type": "line",
-      "id": "marian.meet.node.line.010",
-      "lineId": "marian.meet.line.010",
+      "id": "marian.meet.node.line.009b",
+      "lineId": "marian.meet.line.009b",
+      "speakerId": "legacy.speaker.quc8xa",
+      "speakerName": "マリアン",
+      "mode": "dialogue",
+      "text": "割れたクッキーには、割れた時の思い出ごと食べる食べ方が、あったかもしれません。"
+    },
+    {
+      "type": "line",
+      "id": "marian.meet.node.line.010a",
+      "lineId": "marian.meet.line.010a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "何でも治せる人が、治すことを怖がっている。その横顔の理由を、私はまだ知らない。ただ、帰り際に見えた。救護室の一番奥、使われていないベッドが一台、今朝も丁寧に整えられていた。枕元の棚には、死者用の白い包帯が、几帳面に畳まれて。",
+      "text": "何でも治せる人が、治すことを怖がっている。その横顔の理由を、私はまだ、何も知らない。"
+    },
+    {
+      "type": "line",
+      "id": "marian.meet.node.line.010b",
+      "lineId": "marian.meet.line.010b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ただ、帰り際に見えた。救護室の一番奥、使われていないベッドが一台。"
+    },
+    {
+      "type": "line",
+      "id": "marian.meet.node.line.010c",
+      "lineId": "marian.meet.line.010c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "今朝も丁寧に整えられ、枕元には死者用の白い包帯が、几帳面に畳まれていた。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "marian.meet.node.line.011",
-      "lineId": "marian.meet.line.011",
+      "id": "marian.meet.node.line.011a",
+      "lineId": "marian.meet.line.011a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "誰も来ないベッドを、毎朝整える人の手つきは、治癒陣より雄弁だった。私は割れ目の消えたクッキーを一枚、そっと診察台に置いた。",
+      "text": "誰も来ないベッドを、毎朝整える人の手つきは、治癒陣より雄弁だった。"
+    },
+    {
+      "type": "line",
+      "id": "marian.meet.node.line.011b",
+      "lineId": "marian.meet.line.011b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私は割れ目の消えたクッキーを一枚、そっと診察台に置いた。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "marian.meet.node.line.012",
-      "lineId": "marian.meet.line.012",
+      "id": "marian.meet.node.line.012a",
+      "lineId": "marian.meet.line.012a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "これ、お礼です。治療費、取ってくれないみたいなので。……ちなみに、治ってても割って食べられますよ。クッキーは。"
+      "text": "これ、お礼です。治療費、取ってくれないみたいなので。"
     },
     {
       "type": "line",
-      "id": "marian.meet.node.line.013",
-      "lineId": "marian.meet.line.013",
+      "id": "marian.meet.node.line.012b",
+      "lineId": "marian.meet.line.012b",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "……ちなみに、治ってても割って食べられますよ。クッキーは。"
+    },
+    {
+      "type": "line",
+      "id": "marian.meet.node.line.013a",
+      "lineId": "marian.meet.line.013a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "マリアンは、少しだけ目を見開いて、それから今日初めて、ちゃんと笑った。割ればいい。治っても、また割ればいい。その単純な答えが、この人には新しかったらしい。",
+      "text": "マリアンは、少しだけ目を見開いて、それから今日初めて、ちゃんと笑った。割ればいい。"
+    },
+    {
+      "type": "line",
+      "id": "marian.meet.node.line.013b",
+      "lineId": "marian.meet.line.013b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "治っても、また割ればいいだけ。その単純な答えが、この人には新しかったらしい。",
       "emotion": "tender"
     },
     {
@@ -171,20 +330,29 @@
         {
           "id": "marian.meet.choice.001",
           "label": "包帯を畳みながら効きすぎる話を聞く",
-          "result": "閉室まで、包帯を畳むのを手伝いながら話を聞いた。範囲が大きすぎて、治したくないものまで治ってしまうこと。だから人混みが苦手なこと。畳み終わった白い包帯の山を見て、彼女は言った。「手伝いを頼んだのは、初めてです。……手が二人分あると、治さない時間が、できるのですね」。治さない時間。その言葉を、私は覚えて帰った。",
+          "result": "閉室まで、包帯を畳みながら話を聞いた。範囲が大きすぎて治したくないものまで治ること。だから人混みが苦手なこと。畳み終えた山を見て、彼女は言った。「治さない時間が、できるのですね」その言葉を、私は覚えて帰った。",
           "intent": "力の話を、本人の速度で聞く",
           "promise": "目先の報酬は得ない代わりに、この人が何を恐れているかを知る。",
           "memory": "包帯を一緒に畳んだ夕方を、マリアンは覚えている。",
           "tone": "tender",
           "effects": [
-            { "type": "relationship", "target": { "type": "fighter", "fighterId": "marian" }, "mode": "add", "trust": 7, "ownership": -2 }
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "marian"
+              },
+              "mode": "add",
+              "trust": 7,
+              "ownership": -2
+            }
           ],
           "goto": "marian.meet.node.effect.001"
         },
         {
           "id": "marian.meet.choice.002",
           "label": "今日はマリアンを誘わず、用事へ戻る",
-          "result": "仕事に戻ると、フロアの同僚たちが騒いでいた。「肌つやが良くなってない？」「あんた癖毛どうしたの」。救護室帰りは、隠せないらしい。翌日、救護室の前に小さな貼り紙が出た。「治したくない箇所がある方は、受付時にお申し出ください」。あの人の丁寧さは、貼り紙にも効いている。",
+          "result": "仕事に戻ると、同僚たちが騒いでいた。「肌つやが良くなってない？」救護室帰りは隠せないらしい。翌日、貼り紙が出た。「治したくない箇所がある方は、お申し出ください」あの人の丁寧さは、貼り紙にも効いている。",
           "intent": "今日は業務へ戻る",
           "promise": "所属選手にはならないが、後の出来事で再会できる。",
           "memory": "クッキーを置いていった店員のことを、マリアンは覚えている。",
@@ -198,8 +366,16 @@
       "type": "effect",
       "id": "marian.meet.node.effect.001",
       "effects": [
-        { "type": "markEncountered", "fighterId": "marian", "encountered": true },
-        { "type": "setStoryStage", "fighterId": "marian", "stage": 1 }
+        {
+          "type": "markEncountered",
+          "fighterId": "marian",
+          "encountered": true
+        },
+        {
+          "type": "setStoryStage",
+          "fighterId": "marian",
+          "stage": 1
+        }
       ]
     },
     {
@@ -211,7 +387,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿(シリアス枠): 効きすぎる治癒(癖毛・クッキーまで)の規模コメディと、治す怖さの静かな核心。空のベッドと死者用包帯の伏線。",
+    "authorNote": "語り口V2・二行枠で改稿。v2改稿(シリアス枠): 効きすぎる治癒(癖毛・クッキーまで)の規模コメディと、治す怖さの静かな核心。空のベッドと死者用包帯の伏線。",
     "legacyGeneratedIds": false
   }
 }

@@ -50,55 +50,115 @@
     },
     {
       "type": "line",
-      "id": "room-seventeen.crisis.node.line.001",
-      "lineId": "room-seventeen.crisis.line.001",
+      "id": "room-seventeen.crisis.node.line.001a",
+      "lineId": "room-seventeen.crisis.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "十七号室の正面扉に、工事のお知らせが貼られていた。『常設アトラクション化工事・出口撤去のご案内』。採寸に来た業者が、巻尺で扉の幅を測っている。当の部屋は、その業者にお茶を出していた。黒い角封筒は、湯呑みの隣に置かれていた。",
+      "text": "黒い角封筒は、湯呑みの隣にあった。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "room-seventeen.crisis.node.line.002",
-      "lineId": "room-seventeen.crisis.line.002",
+      "id": "room-seventeen.crisis.node.line.002a",
+      "lineId": "room-seventeen.crisis.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "出口ゼロ。お客を、帰さない施設。——それは、あの誤出口の頃の彼の一番の恐怖を、会社が「仕様」として書き直したものだった。"
+      "text": "出口ゼロ。お客を、帰さない施設。それは、あの誤出口の頃の、彼の一番の恐怖。"
     },
     {
       "type": "line",
-      "id": "room-seventeen.crisis.node.line.003",
-      "lineId": "room-seventeen.crisis.line.003",
+      "id": "room-seventeen.crisis.node.line.002b",
+      "lineId": "room-seventeen.crisis.line.002b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "会社が「仕様」として、書き直したものだった。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.crisis.node.line.003a",
+      "lineId": "room-seventeen.crisis.line.003a",
       "speakerId": "legacy.speaker.zzyjm6",
       "speakerName": "十七号室",
       "mode": "dialogue",
-      "text": "……白状します。この通告を読んだ夜、少しだけ、思ってしまったのです。出口がなければ、誰も、帰らない。「また来るよ」に、二度と、待ちぼうけを食わされない——と。"
+      "text": "……白状します。この通告を読んだ夜、少しだけ、思ってしまったのです。"
     },
     {
       "type": "line",
-      "id": "room-seventeen.crisis.node.line.004",
-      "lineId": "room-seventeen.crisis.line.004",
+      "id": "room-seventeen.crisis.node.line.003b",
+      "lineId": "room-seventeen.crisis.line.003b",
+      "speakerId": "legacy.speaker.zzyjm6",
+      "speakerName": "十七号室",
+      "mode": "dialogue",
+      "text": "出口がなければ、誰も、帰らない。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.crisis.node.line.003c",
+      "lineId": "room-seventeen.crisis.line.003c",
+      "speakerId": "legacy.speaker.zzyjm6",
+      "speakerName": "十七号室",
+      "mode": "dialogue",
+      "text": "「また来るよ」に、二度と、待ちぼうけを食わされない——と。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.crisis.node.line.004a",
+      "lineId": "room-seventeen.crisis.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "正直な建築だった。会社の通告は、彼の古い傷の、一番柔らかいところを正確に突いている。物語資産管理部は、資産の弱みの台帳でも持っているのだろうか。",
+      "text": "正直な建築だった。会社の通告は、彼の古い傷の、一番柔らかいところを正確に突いている。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.crisis.node.line.004b",
+      "lineId": "room-seventeen.crisis.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "物語資産管理部は、弱みの台帳でも持ってるんだろうか。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "room-seventeen.crisis.node.line.005",
-      "lineId": "room-seventeen.crisis.line.005",
+      "id": "room-seventeen.crisis.node.line.005a",
+      "lineId": "room-seventeen.crisis.line.005a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "十七号室さん。ひとつ、思い出してください。閉じ込めたお客さんの顔と、「また来ます」って言って本当に来たお客さんの顔。あなたが見たいのは、どっちですか。"
+      "text": "十七号室さん。ひとつ、思い出してください。"
     },
     {
       "type": "line",
-      "id": "room-seventeen.crisis.node.line.006",
-      "lineId": "room-seventeen.crisis.line.006",
+      "id": "room-seventeen.crisis.node.line.005b",
+      "lineId": "room-seventeen.crisis.line.005b",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "閉じ込めたお客さんの顔と、「また来ます」って言って本当に来たお客さんの顔。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.crisis.node.line.005c",
+      "lineId": "room-seventeen.crisis.line.005c",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "あなたが見たいのは、どっちですか。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.crisis.node.line.006a",
+      "lineId": "room-seventeen.crisis.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "沈黙。それから、部屋中の扉が、一斉に、静かに開いた。百二十階の全フロアの、全部の出口が。彼の答えは、言葉ではなく、建築で来た。",
+      "text": "沈黙の間、耳だけが、やけに澄んでいた。それから、部屋中の扉が一斉に、静かに開いた。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.crisis.node.line.006b",
+      "lineId": "room-seventeen.crisis.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "百二十階の全フロア、全部の出口が。彼の答えは、言葉ではなく建築で来た。",
       "emotion": "revelation"
     },
     {
@@ -111,29 +171,71 @@
     },
     {
       "type": "line",
-      "id": "room-seventeen.crisis.node.line.007",
-      "lineId": "room-seventeen.crisis.line.007",
+      "id": "room-seventeen.crisis.node.line.007a",
+      "lineId": "room-seventeen.crisis.line.007a",
       "speakerId": "legacy.speaker.zzyjm6",
       "speakerName": "十七号室",
       "mode": "dialogue",
-      "text": "回答書を、お願いします。「当室は、出口を増やします。帰れる部屋にしか、また来たいお客様は、いらっしゃらないので」。……あなたの、受け売りですが。"
+      "text": "回答書を、お願いします。"
     },
     {
       "type": "line",
-      "id": "room-seventeen.crisis.node.line.008",
-      "lineId": "room-seventeen.crisis.line.008",
+      "id": "room-seventeen.crisis.node.line.007b",
+      "lineId": "room-seventeen.crisis.line.007b",
+      "speakerId": "legacy.speaker.zzyjm6",
+      "speakerName": "十七号室",
+      "mode": "dialogue",
+      "text": "「当室は、出口を増やします。帰れる部屋にしか、また来たいお客様は、いらっしゃらないので」"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.crisis.node.line.007c",
+      "lineId": "room-seventeen.crisis.line.007c",
+      "speakerId": "legacy.speaker.zzyjm6",
+      "speakerName": "十七号室",
+      "mode": "dialogue",
+      "text": "……あなたの、受け売りですが。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.crisis.node.line.008a",
+      "lineId": "room-seventeen.crisis.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "受け売り上等である。私は回答書を清書し、ついでに一枚、証拠資料を添えた。彼の予約台帳だ。会議室予約、休憩の常連、チームの帰り部屋。——リピーターの一覧。帰れる部屋に、人はちゃんと、戻ってきている。",
+      "text": "受け売り、上等。回答書を清書して、証拠資料を一枚添えた。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.crisis.node.line.008b",
+      "lineId": "room-seventeen.crisis.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "彼の予約台帳。会議室予約、休憩の常連、チームの帰り部屋。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.crisis.node.line.008c",
+      "lineId": "room-seventeen.crisis.line.008c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "リピーターの一覧。帰れる部屋に、人はちゃんと、戻ってきている。",
       "emotion": "resolve"
     },
     {
       "type": "line",
-      "id": "room-seventeen.crisis.node.line.009",
-      "lineId": "room-seventeen.crisis.line.009",
+      "id": "room-seventeen.crisis.node.line.009a",
+      "lineId": "room-seventeen.crisis.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "会社は「収益性の再検討」を持ち出してくるだろう。こちらは、満室で答える。次の試合、出口が全部開いたままの迷宮に、お客が何人残るか——数えてもらおう。",
+      "text": "会社は「収益性の再検討」を持ち出してくるだろう。こちらは、満室で答える。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.crisis.node.line.009b",
+      "lineId": "room-seventeen.crisis.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "出口が全部開いたままの迷宮に、お客が何人残るか。数えてもらおう。",
       "emotion": "resolve"
     },
     {
@@ -143,7 +245,7 @@
         {
           "id": "room-seventeen.crisis.choice.001",
           "label": "観客席へ避難用の出口を増やす",
-          "result": "次の試合、相手の広範囲攻撃が観客席へ逸れた瞬間、会場の壁に一斉に扉が咲いた。「非常口です。どうぞ！」。観客二百人が、三十秒で安全な通路へ抜けた。史上最速の避難記録として、闘技場の防災マニュアルに載った。「出口の多い建築は、儲からないかもしれないが、人を守る」。回答書の追伸は、事実で証明された。",
+          "result": "次の試合、観客席へ攻撃が逸れた瞬間、壁に一斉に扉が咲いた。「非常口です、どうぞ！」観客二百人が三十秒で抜けた。史上最速の避難記録として、防災マニュアルに載った。回答書の追伸は、事実で証明された。",
           "intent": "出口の価値を、満員の会場で証明する",
           "promise": "危険を引き受け、この人専用の成長を最大まで進める。",
           "memory": "三十秒の避難記録を、防災マニュアルが永久に覚えている。",
@@ -173,7 +275,7 @@
         {
           "id": "room-seventeen.crisis.choice.002",
           "label": "敵陣だけを迷宮の十七階へつなぐ",
-          "result": "試合では、型「ご案内」を初披露した。敵陣の床にだけ扉が開き、相手チームは十七階(無限に続く順路の階)へ丁重にご案内される。出口は常に明示されている——ただし、順路が長い。相手が順路を歩き切って戻った頃、試合は終わっていた。閉じ込めていないのに勝つ。出口のある迷宮の、意地の見せ方だった。",
+          "result": "試合では、型「ご案内」を初披露。敵陣の床に扉が開き、相手は十七階(無限に続く順路)へ丁重にご案内される。出口は常に明示、ただし順路が長い。歩き切って戻った頃、試合は終わっていた。閉じ込めずに勝つ、意地の見せ方。",
           "intent": "出口を残したまま、迷宮の強さを見せる",
           "promise": "本人の全開放は温存し、チーム全体へ使える成長を持ち帰る。",
           "memory": "十七階の順路の長さを、対戦相手だけが正確に知っている。",
@@ -223,7 +325,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 黒い角封筒=出口の廃止(Q2)。古傷(待ちぼうけ)への誘惑と、全出口一斉開放の回答。 圧力の到来形式を差別化(封筒は事後に届く落ちへ)。",
+    "authorNote": "語り口V2・二行枠で改稿。v2改稿: 黒い角封筒=出口の廃止(Q2)。古傷(待ちぼうけ)への誘惑と、全出口一斉開放の回答。 圧力の到来形式を差別化(封筒は事後に届く落ちへ)。",
     "legacyGeneratedIds": false
   }
 }

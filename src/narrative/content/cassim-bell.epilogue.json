@@ -65,19 +65,43 @@
     },
     {
       "type": "line",
-      "id": "cassim-bell.epilogue.node.line.001",
-      "lineId": "cassim-bell.epilogue.line.001",
+      "id": "cassim-bell.epilogue.node.line.001a",
+      "lineId": "cassim-bell.epilogue.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "最終大会のあと、保管庫には新しい貼り紙がある。「毎日十五時、十五分休止(七世界共通)」。あの休止札が、ほこりをかぶる暇のない毎日になった。"
+      "text": "「毎日十五時、十五分休止(七世界共通)」"
     },
     {
       "type": "line",
-      "id": "cassim-bell.epilogue.node.line.002",
-      "lineId": "cassim-bell.epilogue.line.002",
+      "id": "cassim-bell.epilogue.node.line.001b",
+      "lineId": "cassim-bell.epilogue.line.001b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ただし、うちの十五分休止には、名物がある。休止札を立てた瞬間、七世界の落とし物たちが「今だ」とばかりに休憩室へ詰めかけてくるのだ。竜の長靴、月の傘、海底王の冠、三つの時計。全員、カシムのそばで休みたいらしい。",
+      "text": "あの休止札が、ほこりをかぶる暇のない毎日になった。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.epilogue.node.line.002a",
+      "lineId": "cassim-bell.epilogue.line.002a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ただし、うちの十五分休止には、名物がある。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.epilogue.node.line.002b",
+      "lineId": "cassim-bell.epilogue.line.002b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "休止札を立てた瞬間、落とし物たちが「今だ」と休憩室へ詰めかけてくる。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.epilogue.node.line.002c",
+      "lineId": "cassim-bell.epilogue.line.002c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "竜の長靴、月の傘、海底王の冠、三つの時計。全員、カシムさんのそばで休みたいらしい。",
       "emotion": "comic"
     },
     {
@@ -98,8 +122,8 @@
     },
     {
       "type": "line",
-      "id": "cassim-bell.epilogue.node.line.003",
-      "lineId": "cassim-bell.epilogue.line.003",
+      "id": "cassim-bell.epilogue.node.line.003a",
+      "lineId": "cassim-bell.epilogue.line.003a",
       "speakerId": "legacy.speaker.1wuvexi",
       "speakerName": "カシム・ベル",
       "mode": "dialogue",
@@ -107,20 +131,28 @@
     },
     {
       "type": "line",
-      "id": "cassim-bell.epilogue.node.line.004",
-      "lineId": "cassim-bell.epilogue.line.004",
+      "id": "cassim-bell.epilogue.node.line.004a",
+      "lineId": "cassim-bell.epilogue.line.004a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "人望です。物望？　……とにかく、慕われてる証拠です。"
+      "text": "人望です。物望?　……とにかく、慕われてる証拠です。"
     },
     {
       "type": "line",
-      "id": "cassim-bell.epilogue.node.line.005",
-      "lineId": "cassim-bell.epilogue.line.005",
+      "id": "cassim-bell.epilogue.node.line.005a",
+      "lineId": "cassim-bell.epilogue.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "騒がしい休憩室の中央で、私たちは今日も紅茶を飲む。砂時計は十四分ぶんが落ちた。カシムが、ふと立ち上がって、部屋の奥の七つの扉に金の鎖をかけ、受付ベルに、そっと布をかぶせた。",
+      "text": "騒がしい休憩室の中央で、今日も紅茶を飲む。砂時計は十四分ぶんが落ちた。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.epilogue.node.line.005b",
+      "lineId": "cassim-bell.epilogue.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "カシムさんが立ち上がって、七つの扉に金の鎖をかけた。受付ベルに、そっと布をかぶせた。",
       "emotion": "tender"
     },
     {
@@ -141,8 +173,8 @@
     },
     {
       "type": "line",
-      "id": "cassim-bell.epilogue.node.line.006",
-      "lineId": "cassim-bell.epilogue.line.006",
+      "id": "cassim-bell.epilogue.node.line.006a",
+      "lineId": "cassim-bell.epilogue.line.006a",
       "speakerId": "legacy.speaker.1wuvexi",
       "speakerName": "カシム・ベル",
       "mode": "dialogue",
@@ -150,17 +182,33 @@
     },
     {
       "type": "line",
-      "id": "cassim-bell.epilogue.node.line.007",
-      "lineId": "cassim-bell.epilogue.line.007",
+      "id": "cassim-bell.epilogue.node.line.007a",
+      "lineId": "cassim-bell.epilogue.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "最後の一分は、いつも二人だけの時間だ。ベルは鳴らない。扉は開かない。落とし物たちも、心得た顔で静かになる。無限の受付ができる人が、その全部を止めて守る、たった一分。",
+      "text": "最後の一分は、いつも二人だけの時間。ベルは鳴らない。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.epilogue.node.line.007b",
+      "lineId": "cassim-bell.epilogue.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "扉は開かない。落とし物たちも、心得た顔で静かになる。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.epilogue.node.line.007c",
+      "lineId": "cassim-bell.epilogue.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "無限の受付ができる人が、その全部を止めて守る、たった一分。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "cassim-bell.epilogue.node.line.008",
-      "lineId": "cassim-bell.epilogue.line.008",
+      "id": "cassim-bell.epilogue.node.line.008a",
+      "lineId": "cassim-bell.epilogue.line.008a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -168,29 +216,62 @@
     },
     {
       "type": "line",
-      "id": "cassim-bell.epilogue.node.line.009",
-      "lineId": "cassim-bell.epilogue.line.009",
+      "id": "cassim-bell.epilogue.node.line.009a",
+      "lineId": "cassim-bell.epilogue.line.009a",
       "speakerId": "legacy.speaker.1wuvexi",
       "speakerName": "カシム・ベル",
       "mode": "dialogue",
-      "text": "怖いですよ、今でも。……ですが、この一分の砂の音を聞くと、思い出すのです。私が止まっても、世界は待っていてくれると。——あなたが、証明してくれた分だけ。"
+      "text": "怖いですよ、今でも。……ですが、この一分の砂の音を聞くと、思い出すのです。"
     },
     {
       "type": "line",
-      "id": "cassim-bell.epilogue.node.line.010",
-      "lineId": "cassim-bell.epilogue.line.010",
+      "id": "cassim-bell.epilogue.node.line.009b",
+      "lineId": "cassim-bell.epilogue.line.009b",
+      "speakerId": "legacy.speaker.1wuvexi",
+      "speakerName": "カシム・ベル",
+      "mode": "dialogue",
+      "text": "私が止まっても、世界は待っていてくれると。——あなたが、証明してくれた分だけ。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.epilogue.node.line.010a",
+      "lineId": "cassim-bell.epilogue.line.010a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "柿落としの出演届は、先週出した。演目「公開・十五分休止(七世界のお客様、立ち会い歓迎)」。備考欄が、彼らしかった。「残り一分は、非公開です」。",
+      "text": "柿落としの出演届は、先週出した。演目「公開・十五分休止(七世界のお客様、立ち会い歓迎)」"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.epilogue.node.line.010b",
+      "lineId": "cassim-bell.epilogue.line.010b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "備考欄が、彼らしかった。「残り一分は、非公開です」",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "cassim-bell.epilogue.node.line.011",
-      "lineId": "cassim-bell.epilogue.line.011",
+      "id": "cassim-bell.epilogue.node.line.011a",
+      "lineId": "cassim-bell.epilogue.line.011a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "砂時計の最後のひと粒が落ちる。彼は布を外し、鎖を解き、受付の顔に戻る。「次のお客様、どうぞ」。その声が七世界で一番良い声をしていることを、非公開の一分を知っている私だけが、知っている。",
+      "text": "砂時計の最後のひと粒が落ちる。彼は布を外し、鎖を解き、受付の顔に戻る。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.epilogue.node.line.011b",
+      "lineId": "cassim-bell.epilogue.line.011b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「次のお客様、どうぞ」その声が、七世界で一番良い声をしてる。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.epilogue.node.line.011c",
+      "lineId": "cassim-bell.epilogue.line.011c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "非公開の一分を知っている私だけが、耳の熱さで知っている。",
       "emotion": "tender"
     },
     {
@@ -202,7 +283,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 休憩室大混雑(報酬CG1)と最後の一分(報酬CG2)。出演届=公開・十五分休止。「残り一分は、非公開です」。",
+    "authorNote": "語り口V2・二行枠で改稿。v2改稿: 休憩室大混雑(報酬CG1)と最後の一分(報酬CG2)。出演届=公開・十五分休止。「残り一分は、非公開です」。",
     "legacyGeneratedIds": false
   }
 }

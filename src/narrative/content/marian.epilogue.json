@@ -10,9 +10,17 @@
     "stage": "epilogue"
   },
   "trigger": {
-    "actions": ["rest"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "rest"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 400,
     "weight": 1
   },
@@ -43,43 +51,90 @@
     {
       "type": "direction",
       "id": "marian.epilogue.node.direction.001",
-      "command": { "type": "background", "assetId": "marian.epilogue.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "marian.epilogue.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "line",
-      "id": "marian.epilogue.node.line.001",
-      "lineId": "marian.epilogue.line.001",
+      "id": "marian.epilogue.node.line.001a",
+      "lineId": "marian.epilogue.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "最終大会のあと、新しい救護室に、月に一度の特別な札が掛かるようになった。「本日——第一回・治さない相談日。治療は、緊急の方のみ。それ以外は、お話を伺います」。"
+      "text": "最終大会のあと、新しい救護室に、月に一度の特別な札が掛かるようになった。"
+    },
+    {
+      "type": "line",
+      "id": "marian.epilogue.node.line.001b",
+      "lineId": "marian.epilogue.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「本日——第一回・治さない相談日。治療は、緊急の方のみ。それ以外は、お話を伺います」"
     },
     {
       "type": "direction",
       "id": "marian.epilogue.node.direction.002",
-      "command": { "type": "still", "assetId": "marian.epilogue.asset.still.001" }
+      "command": {
+        "type": "still",
+        "assetId": "marian.epilogue.asset.still.001"
+      }
     },
     {
       "type": "line",
-      "id": "marian.epilogue.node.line.002",
-      "lineId": "marian.epilogue.line.002",
+      "id": "marian.epilogue.node.line.002a",
+      "lineId": "marian.epilogue.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "初日は、盛況だった。癖毛のおじいさんは奥さんの話をしに来た。膝の古傷の元選手は「これは勲章だから治すな」と自慢しに来た。受付票の束が、治療記録ではなく、思い出の記録で埋まっていく。",
+      "text": "初日は、盛況だった。癖毛のおじいさんは奥さんの話をしに来た。"
+    },
+    {
+      "type": "line",
+      "id": "marian.epilogue.node.line.002b",
+      "lineId": "marian.epilogue.line.002b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "膝の古傷の元選手は「これは勲章だから治すな」と自慢しに来た。"
+    },
+    {
+      "type": "line",
+      "id": "marian.epilogue.node.line.002c",
+      "lineId": "marian.epilogue.line.002c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "受付票の束が、治療記録でなく、思い出の記録で埋まっていく。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "marian.epilogue.node.line.003",
-      "lineId": "marian.epilogue.line.003",
+      "id": "marian.epilogue.node.line.003a",
+      "lineId": "marian.epilogue.line.003a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "受付票の綴りの一番奥には、今も一枚だけ、死者用の受付票がある。空のベッドの人の分だ。彼女はそれを隠さなくなった。「間に合わなかった一人も、私の患者名簿にいます。……いていいと、思えるようになったので」。",
+      "text": "受付票の綴りの一番奥には、今も一枚だけ、死者用の受付票がある。"
+    },
+    {
+      "type": "line",
+      "id": "marian.epilogue.node.line.003b",
+      "lineId": "marian.epilogue.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "空のベッドの人の分。彼女はそれを、隠さなくなった。"
+    },
+    {
+      "type": "line",
+      "id": "marian.epilogue.node.line.003c",
+      "lineId": "marian.epilogue.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「間に合わなかった一人も、私の患者名簿にいます。……いていいと、思えるようになったので」",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "marian.epilogue.node.line.004",
-      "lineId": "marian.epilogue.line.004",
+      "id": "marian.epilogue.node.line.004a",
+      "lineId": "marian.epilogue.line.004a",
       "speakerId": "legacy.speaker.quc8xa",
       "speakerName": "マリアン",
       "mode": "dialogue",
@@ -87,25 +142,56 @@
     },
     {
       "type": "line",
-      "id": "marian.epilogue.node.line.005",
-      "lineId": "marian.epilogue.line.005",
+      "id": "marian.epilogue.node.line.005a",
+      "lineId": "marian.epilogue.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "閉室間際、最後の相談者は、私だった。相談内容は、大したことじゃない。今週の疲れの話と、来週の楽しみの話。彼女は治さず、脈も測らず、ただ聞いて、時々「痛かったですね」と言った。満点の相槌である。師匠は私だが、もう抜かれている。",
-      "emotion": "comic"
+      "text": "閉室間際、その日、最後の相談者は、私だった。相談内容は、大したことじゃない。"
     },
     {
       "type": "line",
-      "id": "marian.epilogue.node.line.006",
-      "lineId": "marian.epilogue.line.006",
+      "id": "marian.epilogue.node.line.005b",
+      "lineId": "marian.epilogue.line.005b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "相談の締めに、私は例のものを出した。お土産のクッキー。今度のは、割れていない、綺麗な一枚。"
+      "text": "今週の疲れの話と、来週の楽しみの話。"
     },
     {
       "type": "line",
-      "id": "marian.epilogue.node.line.007",
-      "lineId": "marian.epilogue.line.007",
+      "id": "marian.epilogue.node.line.005c",
+      "lineId": "marian.epilogue.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "彼女は治さず、脈も測らず、ただ聞いて、時々「痛かったですね」と言った。満点の相槌。"
+    },
+    {
+      "type": "line",
+      "id": "marian.epilogue.node.line.005d",
+      "lineId": "marian.epilogue.line.005d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "師匠は私だが、もう抜かれている。耳が、ちょっとだけ、悔しそうに、動いた気がした。"
+    },
+    {
+      "type": "line",
+      "id": "marian.epilogue.node.line.006a",
+      "lineId": "marian.epilogue.line.006a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "相談の締めに、私は、例のものをそっと出した。お土産のクッキー。"
+    },
+    {
+      "type": "line",
+      "id": "marian.epilogue.node.line.006b",
+      "lineId": "marian.epilogue.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "今度のは、割れていない、綺麗な一枚。"
+    },
+    {
+      "type": "line",
+      "id": "marian.epilogue.node.line.007a",
+      "lineId": "marian.epilogue.line.007a",
       "speakerId": "legacy.speaker.quc8xa",
       "speakerName": "マリアン",
       "mode": "dialogue",
@@ -114,38 +200,78 @@
     {
       "type": "direction",
       "id": "marian.epilogue.node.direction.003",
-      "command": { "type": "still", "assetId": "marian.epilogue.asset.still.002" }
+      "command": {
+        "type": "still",
+        "assetId": "marian.epilogue.asset.still.002"
+      }
     },
     {
       "type": "direction",
       "id": "marian.epilogue.node.direction.004",
-      "command": { "type": "effect", "effectId": "pulse" }
+      "command": {
+        "type": "effect",
+        "effectId": "pulse"
+      }
     },
     {
       "type": "line",
-      "id": "marian.epilogue.node.line.008",
-      "lineId": "marian.epilogue.line.008",
+      "id": "marian.epilogue.node.line.008a",
+      "lineId": "marian.epilogue.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ぱき、と乾いた音。クッキーは、見事に不揃いな二片に割れた。大きい方が、私の手に押しつけられる。金糸の治癒陣は編まれず、割れ目は割れ目のまま、二杯のお茶の隣にある。世界で一番、治されなかったクッキーだ。",
+      "text": "ぱき、と乾いた音。クッキーは、見事に不揃いな二片に割れた。"
+    },
+    {
+      "type": "line",
+      "id": "marian.epilogue.node.line.008b",
+      "lineId": "marian.epilogue.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "大きい方が、そっと私の手に押しつけられる。"
+    },
+    {
+      "type": "line",
+      "id": "marian.epilogue.node.line.008c",
+      "lineId": "marian.epilogue.line.008c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "金糸の治癒陣は編まれず、割れ目のまま、二杯のお茶の隣に。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "marian.epilogue.node.line.009",
-      "lineId": "marian.epilogue.line.009",
+      "id": "marian.epilogue.node.line.009a",
+      "lineId": "marian.epilogue.line.009a",
       "speakerId": "legacy.speaker.quc8xa",
       "speakerName": "マリアン",
       "mode": "dialogue",
-      "text": "柿落としの出演届、出しました。演目「救護席は舞台袖に」。……出番がないことが、演目です。私の腕の見せ所は、誰も倒れない一日を、舞台袖から見届けることなので。"
+      "text": "柿落としの出演届、出しました。演目「救護席は舞台袖に」"
     },
     {
       "type": "line",
-      "id": "marian.epilogue.node.line.010",
-      "lineId": "marian.epilogue.line.010",
+      "id": "marian.epilogue.node.line.009b",
+      "lineId": "marian.epilogue.line.009b",
+      "speakerId": "legacy.speaker.quc8xa",
+      "speakerName": "マリアン",
+      "mode": "dialogue",
+      "text": "……出番がないことが、演目です。"
+    },
+    {
+      "type": "line",
+      "id": "marian.epilogue.node.line.009c",
+      "lineId": "marian.epilogue.line.009c",
+      "speakerId": "legacy.speaker.quc8xa",
+      "speakerName": "マリアン",
+      "mode": "dialogue",
+      "text": "私の腕の見せ所は、誰も倒れない一日を、舞台袖から見届けることなので。"
+    },
+    {
+      "type": "line",
+      "id": "marian.epilogue.node.line.010a",
+      "lineId": "marian.epilogue.line.010a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私用予定欄のある新しい手帳に、彼女は来月の相談日の日付を書き込んだ。それから、その隣の休日の欄に、小さく「クッキーを買いに行く」。治す人の私用予定が、初めて、治すことと無関係だった。良い予定だと思う。",
+      "text": "良い予定だと思う。",
       "emotion": "tender"
     },
     {
@@ -157,7 +283,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 承認済み後日談(治さない相談日・死者用受付票・割れたクッキー・私用予定欄)の骨格を保持しLN文体へ。報酬CG=不揃いな二片と二杯に一致。",
+    "authorNote": "語り口V2・二行枠で改稿。v2改稿: 承認済み後日談(治さない相談日・死者用受付票・割れたクッキー・私用予定欄)の骨格を保持しLN文体へ。報酬CG=不揃いな二片と二杯に一致。",
     "legacyGeneratedIds": false
   }
 }

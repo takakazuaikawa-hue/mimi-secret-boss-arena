@@ -60,25 +60,49 @@
     },
     {
       "type": "line",
-      "id": "cassim-bell.bond.node.line.001",
-      "lineId": "cassim-bell.bond.line.001",
+      "id": "cassim-bell.bond.node.line.001a",
+      "lineId": "cassim-bell.bond.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "雨の休日。カシム・ベルが「見せたい場所があります」と言うので、保管庫の奥へついて行った。第七十七棚区画。通称、持ち主不明の谷。"
+      "text": "雨の休日。カシムさんが「見せたい場所があります」と言った。"
     },
     {
       "type": "line",
-      "id": "cassim-bell.bond.node.line.002",
-      "lineId": "cassim-bell.bond.line.002",
+      "id": "cassim-bell.bond.node.line.001b",
+      "lineId": "cassim-bell.bond.line.001b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "そこは、七世界の落とし物の山だった。巨大竜の長靴、海底王の冠、小国騎士の盾、月の傘が三本。全部、百年以上も持ち主が現れない品々らしい。",
+      "text": "保管庫の奥へ、ついて行った。第七十七棚区画、通称は持ち主不明の谷。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.bond.node.line.002a",
+      "lineId": "cassim-bell.bond.line.002a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "そこは、七世界の落とし物の山だった。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.bond.node.line.002b",
+      "lineId": "cassim-bell.bond.line.002b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "巨大竜の長靴、海底王の冠、小国騎士の盾、月の傘が三本。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.bond.node.line.002c",
+      "lineId": "cassim-bell.bond.line.002c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "全部、百年以上も持ち主が現れない品々らしい。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "cassim-bell.bond.node.line.003",
-      "lineId": "cassim-bell.bond.line.003",
+      "id": "cassim-bell.bond.node.line.003a",
+      "lineId": "cassim-bell.bond.line.003a",
       "speakerId": "legacy.speaker.1wuvexi",
       "speakerName": "カシム・ベル",
       "mode": "dialogue",
@@ -86,8 +110,8 @@
     },
     {
       "type": "line",
-      "id": "cassim-bell.bond.node.line.004",
-      "lineId": "cassim-bell.bond.line.004",
+      "id": "cassim-bell.bond.node.line.004a",
+      "lineId": "cassim-bell.bond.line.004a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -95,25 +119,53 @@
     },
     {
       "type": "line",
-      "id": "cassim-bell.bond.node.line.005",
-      "lineId": "cassim-bell.bond.line.005",
+      "id": "cassim-bell.bond.node.line.005a",
+      "lineId": "cassim-bell.bond.line.005a",
       "speakerId": "legacy.speaker.1wuvexi",
       "speakerName": "カシム・ベル",
       "mode": "dialogue",
-      "text": "求人票第二条。「休憩は業務」。……業務は、真面目にやる主義です。"
+      "text": "求人票第二条。「休憩は業務」"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.bond.node.line.005b",
+      "lineId": "cassim-bell.bond.line.005b",
+      "speakerId": "legacy.speaker.1wuvexi",
+      "speakerName": "カシム・ベル",
+      "mode": "dialogue",
+      "text": "……業務は、真面目にやる主義です。"
     },
     {
       "type": "direction",
       "id": "cassim-bell.bond.node.direction.003",
-      "command": { "type": "still", "assetId": "cassim-bell.bond.asset.still.001" }
+      "command": {
+        "type": "still",
+        "assetId": "cassim-bell.bond.asset.still.001"
+      }
     },
     {
       "type": "line",
-      "id": "cassim-bell.bond.node.line.006",
-      "lineId": "cassim-bell.bond.line.006",
+      "id": "cassim-bell.bond.node.line.006a",
+      "lineId": "cassim-bell.bond.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "屁理屈の使い方が、いい方向に壊れてきた。私たちは巨大竜の長靴(毛布つき)を椅子にして、月の傘を屋根にして、雨音の中でお茶会を始めた。世界で一番ぜいたくな雨宿りだと思う。",
+      "text": "屁理屈の使い方が、いい方向に壊れてきた。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.bond.node.line.006b",
+      "lineId": "cassim-bell.bond.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "巨大竜の長靴(毛布つき)を椅子に、月の傘を屋根にした。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.bond.node.line.006c",
+      "lineId": "cassim-bell.bond.line.006c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "雨音の中でお茶会を始めた。世界で一番ぜいたくな雨宿りだと思う。",
       "emotion": "tender"
     },
     {
@@ -126,17 +178,33 @@
     },
     {
       "type": "line",
-      "id": "cassim-bell.bond.node.line.007",
-      "lineId": "cassim-bell.bond.line.007",
+      "id": "cassim-bell.bond.node.line.007a",
+      "lineId": "cassim-bell.bond.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "カシムの淹れる紅茶は、受付仕込みの正確さだった。砂時計で蒸らし時間を計り、黒手袋で注ぎ、カップの取っ手を必ずこちらへ向けて出す。所作の一つずつが、七十二時間働く手と同じ手とは思えないほど、静かだ。",
+      "text": "カシムさんの淹れる紅茶は、受付仕込みの正確さだった。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.bond.node.line.007b",
+      "lineId": "cassim-bell.bond.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "砂時計で蒸らし時間を計り、黒手袋で注ぎ、取っ手を必ずこちらへ向けて出す。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.bond.node.line.007c",
+      "lineId": "cassim-bell.bond.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "所作の一つずつが、七十二時間働く手と同じとは思えないほど静かだ。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "cassim-bell.bond.node.line.008",
-      "lineId": "cassim-bell.bond.line.008",
+      "id": "cassim-bell.bond.node.line.008a",
+      "lineId": "cassim-bell.bond.line.008a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -145,12 +213,15 @@
     {
       "type": "direction",
       "id": "cassim-bell.bond.node.direction.004",
-      "command": { "type": "still", "assetId": "cassim-bell.bond.asset.still.002" }
+      "command": {
+        "type": "still",
+        "assetId": "cassim-bell.bond.asset.still.002"
+      }
     },
     {
       "type": "line",
-      "id": "cassim-bell.bond.node.line.009",
-      "lineId": "cassim-bell.bond.line.009",
+      "id": "cassim-bell.bond.node.line.009a",
+      "lineId": "cassim-bell.bond.line.009a",
       "speakerId": "legacy.speaker.1wuvexi",
       "speakerName": "カシム・ベル",
       "mode": "dialogue",
@@ -158,35 +229,68 @@
     },
     {
       "type": "line",
-      "id": "cassim-bell.bond.node.line.010",
-      "lineId": "cassim-bell.bond.line.010",
+      "id": "cassim-bell.bond.node.line.010a",
+      "lineId": "cassim-bell.bond.line.010a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "言われて気づいた。接客中の私の耳は、いつも音を拾って立っている。今は、雨音の方へ、くたっと倒れていた。接客者同士にしか見えない休みの形が、お互いの頭の上にあった。",
+      "text": "言われて気づいた。接客中の私の耳は、いつも音を拾って立ってる。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.bond.node.line.010b",
+      "lineId": "cassim-bell.bond.line.010b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "今は、雨音の方へ、くたっと倒れていた。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.bond.node.line.010c",
+      "lineId": "cassim-bell.bond.line.010c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "接客者同士にしか見えない休みの形が、お互いの頭の上にあった。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "cassim-bell.bond.node.line.011",
-      "lineId": "cassim-bell.bond.line.011",
+      "id": "cassim-bell.bond.node.line.011a",
+      "lineId": "cassim-bell.bond.line.011a",
       "speakerId": "legacy.speaker.1wuvexi",
       "speakerName": "カシム・ベル",
       "mode": "dialogue",
-      "text": "この谷の品は、私が受付した子たちです。持ち主は、もう現れないかもしれない。それでも、埃を払って、雨漏りから守って——待つのが、私の仕事でした。"
+      "text": "この谷の品は、私が受付した子たちです。持ち主は、もう現れないかもしれない。"
     },
     {
       "type": "line",
-      "id": "cassim-bell.bond.node.line.012",
-      "lineId": "cassim-bell.bond.line.012",
+      "id": "cassim-bell.bond.node.line.011b",
+      "lineId": "cassim-bell.bond.line.011b",
+      "speakerId": "legacy.speaker.1wuvexi",
+      "speakerName": "カシム・ベル",
+      "mode": "dialogue",
+      "text": "それでも、埃を払って、雨漏りから守って——待つのが、私の仕事でした。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.bond.node.line.012a",
+      "lineId": "cassim-bell.bond.line.012a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "七世界の落とし物の谷は、つまり、この人が誰にも頼まれずに守ってきた、待合室だった。終わった物語の持ち物たちの。",
+      "text": "七世界の落とし物の谷は、つまり、この人が誰にも頼まれずに守ってきた待合室。"
+    },
+    {
+      "type": "line",
+      "id": "cassim-bell.bond.node.line.012b",
+      "lineId": "cassim-bell.bond.line.012b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "終わった物語の、持ち物たちの。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "cassim-bell.bond.node.line.013",
-      "lineId": "cassim-bell.bond.line.013",
+      "id": "cassim-bell.bond.node.line.013a",
+      "lineId": "cassim-bell.bond.line.013a",
       "speakerId": "narrator",
       "mode": "thought",
       "text": "お茶のおかわりの前に、午後の過ごし方を決めることにした。",
@@ -199,7 +303,7 @@
         {
           "id": "cassim-bell.bond.choice.001",
           "label": "倉庫から持ち主不明の弁当箱を探す",
-          "result": "「そういえば、持ち主不明の弁当箱が三百年もの含めて六個あります」。午後は二人で弁当箱の捜索になった。見つけた六個は、洗って、干して、「本日の茶会用」の札をつけた。持ち主が現れたら返す。現れないうちは、茶会で現役。「保管より、使われる方が、道具は幸せです」とカシムは言った。受付係の哲学が、少し変わった午後だった。",
+          "result": "「持ち主不明の弁当箱が、三百年ものも含めて六個」午後は二人で捜索、見つけた六個は洗って干して「本日の茶会用」持ち主が現れるまでは、茶会で現役。「使われる方が道具は幸せです」とカシムさん",
           "intent": "待つだけの品に、今日の出番を作る",
           "promise": "読みにくい作戦になる代わりに、この人だけの成長を大きく進める。",
           "memory": "茶会用の六個の弁当箱を、二人は「現役組」と呼んでいる。",
@@ -229,7 +333,7 @@
         {
           "id": "cassim-bell.bond.choice.002",
           "label": "味方の大技を一度預かり、使う順番を変える",
-          "result": "午後は作戦会議になった。カシムの受付能力は、実は戦術に使える。「味方の大技を、一時的に私が『お預かり』できます。お返しする瞬間を、私が選べる」。技の発動タイミングを受付係が管理するチームが、ここに誕生した。整理券方式の連携技は、リハーサルで新人くんの計測器を今週も煙にした。",
+          "result": "午後は作戦会議になった。カシムさんの受付能力は、実は戦術に使える。「味方の大技を、一時的に私が預かれます。返す瞬間も、私が選べる」技の発動を受付係が管理するチームが誕生。新人くんの計測器はまた煙",
           "intent": "受付の力を、チームの新戦術にする",
           "promise": "茶会は短くなるが、全員へ配れる成長ポイントを得る。",
           "memory": "整理券方式の連携技を、チームは「番号札」と呼んでいる。",
@@ -274,7 +378,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 持ち主不明の谷のお茶会(報酬CGの小道具を先行配置)。兎耳が休んでいる指摘の相互ドキドキ。Q1=終わった物語の持ち物の待合室。",
+    "authorNote": "語り口V2・二行枠で改稿。v2改稿: 持ち主不明の谷のお茶会(報酬CGの小道具を先行配置)。兎耳が休んでいる指摘の相互ドキドキ。Q1=終わった物語の持ち物の待合室。",
     "legacyGeneratedIds": false
   }
 }

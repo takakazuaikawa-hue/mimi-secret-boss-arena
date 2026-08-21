@@ -10,9 +10,18 @@
     "stage": "join"
   },
   "trigger": {
-    "actions": ["work", "play"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 400,
     "weight": 1
   },
@@ -22,8 +31,14 @@
       {
         "id": "wolf-nine.join.asset.background.001",
         "kind": "background",
-        "path": "/assets/story/bg-employee-entrance.png",
+        "path": "/assets/story/bg-arena-practice-court-day-v1.png",
         "alt": "練習場の背景"
+      },
+      {
+        "id": "wolf-nine.join.asset.sprite.character",
+        "kind": "sprite",
+        "path": "/assets/battle/fighters/wolf-nine-v1.png",
+        "alt": "九度目の決闘者ヴォルフ・ナイン"
       }
     ]
   },
@@ -31,101 +46,233 @@
     {
       "type": "direction",
       "id": "wolf-nine.join.node.direction.001",
-      "command": { "type": "background", "assetId": "wolf-nine.join.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "wolf-nine.join.asset.background.001",
+        "transition": "dissolve"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "wolf-nine.join.node.direction.character.001",
+      "command": {
+        "type": "show",
+        "assetId": "wolf-nine.join.asset.sprite.character",
+        "actorId": "wolf-nine",
+        "slot": "right",
+        "scale": "standard"
+      }
     },
     {
       "type": "line",
-      "id": "wolf-nine.join.node.line.001",
-      "lineId": "wolf-nine.join.line.001",
+      "id": "wolf-nine.join.node.line.001a",
+      "lineId": "wolf-nine.join.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ヴォルフ・ナインをチームに誘いに、練習場へ行った。九戦目の宛先候補として、うちの公式戦を提案するつもりだった。だが、口を開いたのは彼が先だった。"
+      "text": "ヴォルフ・ナインを誘いに、練習場へ行った。"
     },
     {
       "type": "line",
-      "id": "wolf-nine.join.node.line.002",
-      "lineId": "wolf-nine.join.line.002",
+      "id": "wolf-nine.join.node.line.001b",
+      "lineId": "wolf-nine.join.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "九戦目の宛先候補として、公式戦を提案するつもりだった。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.join.node.line.001c",
+      "lineId": "wolf-nine.join.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "だが、口を開いたのは、彼が先だった。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.join.node.line.002a",
+      "lineId": "wolf-nine.join.line.002a",
       "speakerId": "legacy.speaker.1vj9fme",
       "speakerName": "ヴォルフ・ナイン",
       "mode": "dialogue",
-      "text": "スカウトだろう。話は耳が拾った。——だが、順番が違う。俺が入るに値するチームか、まず試験だ。"
+      "text": "スカウトだろう。話は耳が拾った。"
     },
     {
       "type": "line",
-      "id": "wolf-nine.join.node.line.003",
-      "lineId": "wolf-nine.join.line.003",
+      "id": "wolf-nine.join.node.line.002b",
+      "lineId": "wolf-nine.join.line.002b",
+      "speakerId": "legacy.speaker.1vj9fme",
+      "speakerName": "ヴォルフ・ナイン",
+      "mode": "dialogue",
+      "text": "——だが、順番が違う。俺が入るに値するチームか、まず試験だ。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.join.node.line.003a",
+      "lineId": "wolf-nine.join.line.003a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "スカウトされる側が、試験を出すんですか！？"
+      "text": "スカウトされる側が、試験を出すんですか!?"
     },
     {
       "type": "line",
-      "id": "wolf-nine.join.node.line.004",
-      "lineId": "wolf-nine.join.line.004",
+      "id": "wolf-nine.join.node.line.004a",
+      "lineId": "wolf-nine.join.line.004a",
       "speakerId": "legacy.speaker.1vj9fme",
       "speakerName": "ヴォルフ・ナイン",
       "mode": "dialogue",
-      "text": "当然だ。真剣勝負を預けるチームだぞ。監督の力量を、この目で確かめる。種目は——「席取り」だ。"
+      "text": "当然だ。真剣勝負を預けるチームだぞ。"
     },
     {
       "type": "line",
-      "id": "wolf-nine.join.node.line.005",
-      "lineId": "wolf-nine.join.line.005",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "ルールは単純。昼休みの従業員食堂で、いちばん良い席(窓際・給湯器近く・通路広め)を、正攻法で確保した方が勝ち。ただし走るの禁止、割り込み禁止、札置き禁止。つまり、読みと段取りだけの勝負である。",
-      "emotion": "comic"
-    },
-    {
-      "type": "line",
-      "id": "wolf-nine.join.node.line.006",
-      "lineId": "wolf-nine.join.line.006",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "正午の鐘と同時に、勝負が始まった。彼は狼の脚で最短経路を歩く。私は接客歴半年の知識で搦め手を打つ。配膳が遅いカレーの列をあえて選び、席が空く波を読み、常連さんに挨拶しながら自然に窓際へ流れる。",
-      "emotion": "comic"
-    },
-    {
-      "type": "line",
-      "id": "wolf-nine.join.node.line.007",
-      "lineId": "wolf-nine.join.line.007",
-      "speakerId": "narrator",
-      "mode": "thought",
-      "text": "結果——同着だった。良い席の両端に、同時に着席。彼は目を見開いて、それから食堂中に響く声で笑った。",
-      "emotion": "comic"
-    },
-    {
-      "type": "line",
-      "id": "wolf-nine.join.node.line.008",
-      "lineId": "wolf-nine.join.line.008",
+      "id": "wolf-nine.join.node.line.004b",
+      "lineId": "wolf-nine.join.line.004b",
       "speakerId": "legacy.speaker.1vj9fme",
       "speakerName": "ヴォルフ・ナイン",
       "mode": "dialogue",
-      "text": "見事！　波を読んだな、あんた！　挨拶で進路を作るのは反則すれすれの妙手だ！　……合格だ。いや、俺が合格をもらう側か。どっちでもいい、合格！"
+      "text": "監督の力量を、この目で確かめる。種目は——「席取り」だ。"
     },
     {
       "type": "line",
-      "id": "wolf-nine.join.node.line.009",
-      "lineId": "wolf-nine.join.line.009",
+      "id": "wolf-nine.join.node.line.005a",
+      "lineId": "wolf-nine.join.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "勝負のあとの彼は、負けても同着でも、とにかく機嫌がいい。真剣に競えたこと自体が、この人へのごちそうなのだ。八敗の記録が、急に別の色で見えた。八回、全力で競えた記録でもあるのだ。",
+      "text": "ルールは単純。昼休みの食堂で、いちばん良い席を、正攻法で確保した方が勝ち。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.join.node.line.005b",
+      "lineId": "wolf-nine.join.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "窓際、給湯器の近く、通路は広め。ただし走る禁止、割り込み禁止、札置き禁止。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.join.node.line.005c",
+      "lineId": "wolf-nine.join.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "つまり、読みと段取りだけの勝負だ。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.join.node.line.006a",
+      "lineId": "wolf-nine.join.line.006a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "正午の鐘と同時に、勝負が始まった。彼は狼の脚で、最短距離を歩く。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.join.node.line.006b",
+      "lineId": "wolf-nine.join.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私は接客歴半年の知恵で搦め手を打つ。カレーの遅い列を、あえて選ぶ。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.join.node.line.006c",
+      "lineId": "wolf-nine.join.line.006c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "席が空く波を読み、常連さんに挨拶しながら、窓際へ流れる。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.join.node.line.007a",
+      "lineId": "wolf-nine.join.line.007a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "結果——同着だった。良い席の両端に、同時に着席。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.join.node.line.007b",
+      "lineId": "wolf-nine.join.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "彼は目を見開いて、それから食堂中に響く声で笑った。",
+      "emotion": "comic"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.join.node.line.008a",
+      "lineId": "wolf-nine.join.line.008a",
+      "speakerId": "legacy.speaker.1vj9fme",
+      "speakerName": "ヴォルフ・ナイン",
+      "mode": "dialogue",
+      "text": "見事!　波を読んだな、あんた!"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.join.node.line.008b",
+      "lineId": "wolf-nine.join.line.008b",
+      "speakerId": "legacy.speaker.1vj9fme",
+      "speakerName": "ヴォルフ・ナイン",
+      "mode": "dialogue",
+      "text": "挨拶で進路を作るのは反則すれすれの妙手だ!　……合格だ。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.join.node.line.008c",
+      "lineId": "wolf-nine.join.line.008c",
+      "speakerId": "legacy.speaker.1vj9fme",
+      "speakerName": "ヴォルフ・ナイン",
+      "mode": "dialogue",
+      "text": "いや、俺が合格をもらう側か。どっちでもいい、合格!"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.join.node.line.009a",
+      "lineId": "wolf-nine.join.line.009a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "勝負のあとの彼は、負けても同着でも、機嫌がいい。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.join.node.line.009b",
+      "lineId": "wolf-nine.join.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "真剣に競えたことが、この人へのごちそうだった。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.join.node.line.009c",
+      "lineId": "wolf-nine.join.line.009c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "八敗の記録が、急に別の色で見えた。全力で競えた記録でもある。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "wolf-nine.join.node.line.010",
-      "lineId": "wolf-nine.join.line.010",
+      "id": "wolf-nine.join.node.line.010a",
+      "lineId": "wolf-nine.join.line.010a",
       "speakerId": "legacy.speaker.1vj9fme",
       "speakerName": "ヴォルフ・ナイン",
       "mode": "dialogue",
-      "text": "それで、契約の形だが。俺は書式にはうるさいぞ。決闘の作法で頼む。"
+      "text": "それで、契約の形だが。俺は書式にはうるさいぞ。"
     },
     {
       "type": "line",
-      "id": "wolf-nine.join.node.line.011",
-      "lineId": "wolf-nine.join.line.011",
+      "id": "wolf-nine.join.node.line.010b",
+      "lineId": "wolf-nine.join.line.010b",
+      "speakerId": "legacy.speaker.1vj9fme",
+      "speakerName": "ヴォルフ・ナイン",
+      "mode": "dialogue",
+      "text": "決闘の作法で頼む。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.join.node.line.011a",
+      "lineId": "wolf-nine.join.line.011a",
       "speakerId": "narrator",
       "mode": "thought",
       "text": "決闘の作法の契約。締め方を選ぶ番だった。",
@@ -138,43 +285,83 @@
         {
           "id": "wolf-nine.join.choice.001",
           "label": "八通分の挑戦状へ、一通ずつ返事を書く",
-          "result": "契約書の代わりに、私は「果たし状」の書式で勧誘状を書いた。便箋は彼と選び(三十分の真剣勝負)、封蝋は彼の私物を借りた。「ミミより、ヴォルフ・ナイン殿へ。我がチームとの真剣勝負の日々を、正式に申し込む」。彼は封を丁寧に開けて、読んで、雄叫びを一つ上げて、参加を受諾した。受取所に、初めて「宛先に届いた」彼宛ての手紙だった。",
+          "result": "果たし状の書式で、勧誘状を書いた。便箋は彼と選び、封蝋は彼の私物を借りた。「真剣勝負の日々を、正式に申し込む」彼は雄叫びを上げて受諾した。初めて宛先に届いた、彼宛ての手紙だった。",
           "intent": "彼の作法で、正式に申し込む",
           "promise": "登録は少し遅れるが、この人専用の成長ポイントを得る。",
           "memory": "初めて宛先に届いた果たし状を、ヴォルフは額装している。",
           "tone": "tender",
           "effects": [
-            { "type": "relationship", "target": { "type": "fighter", "fighterId": "wolf-nine" }, "mode": "add", "trust": 8, "ownership": -3 },
-            { "type": "fighterPoints", "target": { "type": "fighter", "fighterId": "wolf-nine" }, "amount": 2 },
-            { "type": "recruitmentDecision", "fighterId": "wolf-nine", "decision": "join" }
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "wolf-nine"
+              },
+              "mode": "add",
+              "trust": 8,
+              "ownership": -3
+            },
+            {
+              "type": "fighterPoints",
+              "target": {
+                "type": "fighter",
+                "fighterId": "wolf-nine"
+              },
+              "amount": 2
+            },
+            {
+              "type": "recruitmentDecision",
+              "fighterId": "wolf-nine",
+              "decision": "join"
+            }
           ],
           "goto": "wolf-nine.join.node.end.001"
         },
         {
           "id": "wolf-nine.join.choice.002",
           "label": "次の公式戦を、九戦目の決闘として登録する",
-          "result": "「九戦目の相手は、次の公式戦の対戦チームでどうですか」。彼は三秒考えて、首を振った。「いや。九戦目は、まだ取っておく。九戦目ってのは、人生で一番大事な勝負に使う番号だ」。代わりに公式戦は「番外戦・全部」として登録された。番外戦を全力で戦う男の、九戦目の使い道は、まだ決まっていない。",
+          "result": "「九戦目は、次の公式戦でどうですか」彼は三秒考え、首を振った。「まだ取っておく。人生で一番大事な勝負に使う番号だ」公式戦は「番外戦・全部」として登録された。九戦目の使い道は、まだ決まっていない。",
           "intent": "九戦目の意味を、本人に決めさせる",
           "promise": "本人の切り札番号は温存し、誰にでも使える成長ポイントを得る。",
           "memory": "「九戦目は取っておく」の宣言を、チームの全員が聞いた。",
           "tone": "pragmatic",
           "effects": [
-            { "type": "relationship", "target": { "type": "fighter", "fighterId": "wolf-nine" }, "mode": "add", "trust": 0, "ownership": 8 },
-            { "type": "sharedPoints", "amount": 2 },
-            { "type": "recruitmentDecision", "fighterId": "wolf-nine", "decision": "join" }
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "wolf-nine"
+              },
+              "mode": "add",
+              "trust": 0,
+              "ownership": 8
+            },
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            },
+            {
+              "type": "recruitmentDecision",
+              "fighterId": "wolf-nine",
+              "decision": "join"
+            }
           ],
           "goto": "wolf-nine.join.node.end.001"
         },
         {
           "id": "wolf-nine.join.choice.003",
           "label": "今回はヴォルフ・ナインを誘わず、別の機会を待つ",
-          "result": "「今回は見送ります」と伝えると、彼はうなずいて、握手の代わりに封蝋を一つくれた。「気が変わったら、これで手紙を寄越せ。あんたの手紙なら、俺はどこにいても受け取りに走る」。宛先不明を八年続けた人の「受け取りに走る」は、重い約束である。",
+          "result": "「今回は見送ります」彼はうなずき、握手の代わりに封蝋をくれた。「気が変わったら、これで手紙を寄越せ。俺はどこにいても、受け取りに走る」八年、宛先不明を続けた人の「受け取りに走る」は、重い約束だった。",
           "intent": "今回はチームへ誘わない",
           "promise": "今回の所属は見送るが、人物の物語と再会の可能性は失わない。",
           "memory": "もらった封蝋を、私は机の引き出しの一番手前に入れている。",
           "tone": "pragmatic",
           "effects": [
-            { "type": "recruitmentDecision", "fighterId": "wolf-nine", "decision": "decline" }
+            {
+              "type": "recruitmentDecision",
+              "fighterId": "wolf-nine",
+              "decision": "decline"
+            }
           ],
           "goto": "wolf-nine.join.node.end.001"
         }
@@ -189,7 +376,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 逆入団試験(席取りゲーム)と同着。果たし状書式の勧誘状=初めて宛先に届く手紙。",
+    "authorNote": "語り口V2・二行枠で改稿。v2改稿: 逆入団試験(席取りゲーム)と同着。果たし状書式の勧誘状=初めて宛先に届く手紙。",
     "legacyGeneratedIds": false
   }
 }

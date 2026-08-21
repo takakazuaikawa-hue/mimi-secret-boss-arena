@@ -10,9 +10,17 @@
     "stage": "power"
   },
   "trigger": {
-    "actions": ["search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 400,
     "weight": 1
   },
@@ -43,20 +51,40 @@
     {
       "type": "direction",
       "id": "ushiro.power.node.direction.001",
-      "command": { "type": "background", "assetId": "ushiro.power.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "ushiro.power.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "line",
-      "id": "ushiro.power.node.line.001",
-      "lineId": "ushiro.power.line.001",
+      "id": "ushiro.power.node.line.001a",
+      "lineId": "ushiro.power.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "闘技場の地下には「鏡のない部屋」がある。反射物を全部取り払った訓練室で、うしろが唯一、全力を出せる場所らしい。鏡や窓があると、写り込みを気にして力が散るのだという。"
+      "text": "闘技場の地下には「鏡のない部屋」がある。"
     },
     {
       "type": "line",
-      "id": "ushiro.power.node.line.002",
-      "lineId": "ushiro.power.line.002",
+      "id": "ushiro.power.node.line.001b",
+      "lineId": "ushiro.power.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "反射物を全部取り払った訓練室で、うしろが唯一、全力を出せる場所らしい。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.power.node.line.001c",
+      "lineId": "ushiro.power.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "鏡や窓があると、写り込みを気にして力が散るのだという。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.power.node.line.002a",
+      "lineId": "ushiro.power.line.002a",
       "speakerId": "legacy.speaker.1ddw3j9",
       "speakerName": "うしろ",
       "mode": "dialogue",
@@ -65,67 +93,125 @@
     {
       "type": "direction",
       "id": "ushiro.power.node.direction.002",
-      "command": { "type": "effect", "effectId": "flash" }
+      "command": {
+        "type": "effect",
+        "effectId": "flash"
+      }
     },
     {
       "type": "direction",
       "id": "ushiro.power.node.direction.003",
-      "command": { "type": "still", "assetId": "ushiro.power.asset.still.001" }
+      "command": {
+        "type": "still",
+        "assetId": "ushiro.power.asset.still.001"
+      }
     },
     {
       "type": "line",
-      "id": "ushiro.power.node.line.003",
-      "lineId": "ushiro.power.line.003",
+      "id": "ushiro.power.node.line.003a",
+      "lineId": "ushiro.power.line.003a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "部屋の照明が揺れて、影が咲いた。壁に、床に、天井に、百二十七人の黒金の影。全員が同じ姿勢で立ち、全員が別々の方向を見ている。部屋のどこにも「背後」が存在しない。全方位が、彼の正面だった。",
+      "text": "部屋の照明が揺れて、影が咲いた。壁に、床に、天井に、百二十七人の黒金の影。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.power.node.line.003b",
+      "lineId": "ushiro.power.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "全員が同じ姿勢で立ち、全員が別々の方向を見ている。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.power.node.line.003c",
+      "lineId": "ushiro.power.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "部屋のどこにも「背後」が存在しない。全方位が、彼の正面だった。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "ushiro.power.node.line.004",
-      "lineId": "ushiro.power.line.004",
+      "id": "ushiro.power.node.line.004a",
+      "lineId": "ushiro.power.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "戦闘では、これが決定打になる。敵の背後は、常に彼の間合いだ。振り向いても振り向いても、そこに彼がいる。相手にしてみれば、世界中が背後になる悪夢である。",
+      "text": "戦闘では、これが決定打になる。敵の背後は、常に彼の間合いだ。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.power.node.line.004b",
+      "lineId": "ushiro.power.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "振り向いても振り向いても、そこに彼がいる。相手にしてみれば、世界中が背後になる悪夢だ。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "ushiro.power.node.line.005",
-      "lineId": "ushiro.power.line.005",
+      "id": "ushiro.power.node.line.005a",
+      "lineId": "ushiro.power.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "新人くんは百二十七人に囲まれて、記録板に「ぜんぶ、うしろ。」と書いた。今日も試合結果より正確な記録である。",
+      "text": "新人くんは百二十七人に囲まれて、記録板に「ぜんぶ、うしろ。」と書いた。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.power.node.line.005b",
+      "lineId": "ushiro.power.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "今日も正確な記録だ。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "ushiro.power.node.line.006",
-      "lineId": "ushiro.power.line.006",
+      "id": "ushiro.power.node.line.006a",
+      "lineId": "ushiro.power.line.006a",
       "speakerId": "legacy.speaker.1ddw3j9",
       "speakerName": "うしろ",
       "mode": "dialogue",
-      "text": "……ところで。この中の、どれが本体か。分かりますか。分かった人は、今まで、いないのですが。"
+      "text": "……ところで。この中の、どれが本体か。"
     },
     {
       "type": "line",
-      "id": "ushiro.power.node.line.007",
-      "lineId": "ushiro.power.line.007",
+      "id": "ushiro.power.node.line.006b",
+      "lineId": "ushiro.power.line.006b",
+      "speakerId": "legacy.speaker.1ddw3j9",
+      "speakerName": "うしろ",
+      "mode": "dialogue",
+      "text": "分かりますか。分かった人は、今まで、いないのですが。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.power.node.line.007a",
+      "lineId": "ushiro.power.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "百二十七人は、完全に同じ見た目だった。姿勢も、影の濃さも、ピースの角度も。私は部屋を一周して、二周目の途中で、足を止めた。",
+      "text": "百二十七人は、完全に同じ見た目だった。姿勢も、影の濃さも、ピースの角度も。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.power.node.line.007b",
+      "lineId": "ushiro.power.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私は部屋を一周して、耳まで澄ませながら、二周目の途中で、足を止めた。",
       "emotion": "tension"
     },
     {
       "type": "direction",
       "id": "ushiro.power.node.direction.004",
-      "command": { "type": "still", "assetId": "ushiro.power.asset.still.002" }
+      "command": {
+        "type": "still",
+        "assetId": "ushiro.power.asset.still.002"
+      }
     },
     {
       "type": "line",
-      "id": "ushiro.power.node.line.008",
-      "lineId": "ushiro.power.line.008",
+      "id": "ushiro.power.node.line.008a",
+      "lineId": "ushiro.power.line.008a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -133,17 +219,26 @@
     },
     {
       "type": "line",
-      "id": "ushiro.power.node.line.009",
-      "lineId": "ushiro.power.line.009",
+      "id": "ushiro.power.node.line.009a",
+      "lineId": "ushiro.power.line.009a",
       "speakerId": "legacy.speaker.1ddw3j9",
       "speakerName": "うしろ",
       "mode": "dialogue",
-      "text": "…………なぜ。今まで、誰にも。……なぜ、分かったのですか。"
+      "text": "…………なぜ。今まで、誰にも。"
     },
     {
       "type": "line",
-      "id": "ushiro.power.node.line.010",
-      "lineId": "ushiro.power.line.010",
+      "id": "ushiro.power.node.line.009b",
+      "lineId": "ushiro.power.line.009b",
+      "speakerId": "legacy.speaker.1ddw3j9",
+      "speakerName": "うしろ",
+      "mode": "dialogue",
+      "text": "……なぜ、分かったのですか。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.power.node.line.010a",
+      "lineId": "ushiro.power.line.010a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -151,35 +246,52 @@
     },
     {
       "type": "line",
-      "id": "ushiro.power.node.line.011",
-      "lineId": "ushiro.power.line.011",
+      "id": "ushiro.power.node.line.011a",
+      "lineId": "ushiro.power.line.011a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "百二十六人の影は完璧に同じだった。本体だけが、無意識に、私の足元の心配をしていた。観察者の癖は、隠せない。観察する側なら、なおさら分かる。",
+      "text": "百二十六人の影は完璧に同じだった。本体だけが、無意識に、私の足元の心配をしていた。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.power.node.line.011b",
+      "lineId": "ushiro.power.line.011b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "観察者の癖は、隠せない。観察する側なら、なおさら分かる。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "ushiro.power.node.line.012",
-      "lineId": "ushiro.power.line.012",
+      "id": "ushiro.power.node.line.012a",
+      "lineId": "ushiro.power.line.012a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "百二十七人が、いっせいにざわめいた。動揺すると全員が動揺するらしい。壮観な照れ方だった。観察する人が観察された時の顔を、百二十七方向から同時に見られる贅沢は、たぶん世界で私だけのものだ。",
+      "text": "観察する人が観察された時の顔を、百二十七方向から同時に見られる贅沢は、たぶん世界で私だけのものだ。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "ushiro.power.node.line.013",
-      "lineId": "ushiro.power.line.013",
+      "id": "ushiro.power.node.line.013a",
+      "lineId": "ushiro.power.line.013a",
       "speakerId": "legacy.speaker.1ddw3j9",
       "speakerName": "うしろ",
       "mode": "dialogue",
-      "text": "……見つかるのは、こわいと、思っていました。……見つけてもらうのは、その、……悪くない、ですね。"
+      "text": "……見つかるのは、こわいと、思っていました。"
     },
     {
       "type": "line",
-      "id": "ushiro.power.node.line.014",
-      "lineId": "ushiro.power.line.014",
+      "id": "ushiro.power.node.line.013b",
+      "lineId": "ushiro.power.line.013b",
+      "speakerId": "legacy.speaker.1ddw3j9",
+      "speakerName": "うしろ",
+      "mode": "dialogue",
+      "text": "……見つけてもらうのは、その、……悪くない、ですね。"
+    },
+    {
+      "type": "line",
+      "id": "ushiro.power.node.line.014a",
+      "lineId": "ushiro.power.line.014a",
       "speakerId": "narrator",
       "mode": "thought",
       "text": "この力の、試合での使い方を決める。",
@@ -192,28 +304,56 @@
         {
           "id": "ushiro.power.choice.001",
           "label": "誰も見ないまま、存在できる場所を作る",
-          "result": "型の名前は「観客席」。試合中、百二十六人の影は何もしない。ただ会場中に立って、相手を「見る」だけだ。全方位から観察される重圧で、相手の動きは硬くなり、フェイントは全部読まれる。本体は最後まで手を出さないことすらある。「見るだけで勝てるのが、一番平和です」と本人は満足げだった。",
+          "result": "型は「観客席」百二十六人の影は何もせず、会場中で相手を「見る」だけ。全方位の重圧で相手の動きは硬くなり、フェイントは全部読まれる。「見るだけで勝てるのが、一番平和です」",
           "intent": "観察を、そのまま強さにする",
           "promise": "失敗時の危険を引き受け、この人専用の成長を最大まで進める。",
           "memory": "型「観客席」の相手はみんな、試合後に「視線が痛かった」と言う。",
           "tone": "heroic",
           "effects": [
-            { "type": "relationship", "target": { "type": "fighter", "fighterId": "ushiro" }, "mode": "add", "trust": 10, "ownership": -4 },
-            { "type": "fighterPoints", "target": { "type": "fighter", "fighterId": "ushiro" }, "amount": 5 }
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "ushiro"
+              },
+              "mode": "add",
+              "trust": 10,
+              "ownership": -4
+            },
+            {
+              "type": "fighterPoints",
+              "target": {
+                "type": "fighter",
+                "fighterId": "ushiro"
+              },
+              "amount": 5
+            }
           ],
           "goto": "ushiro.power.node.effect.001"
         },
         {
           "id": "ushiro.power.choice.002",
           "label": "鏡を並べ、味方だけが位置を読めるようにする",
-          "result": "逆転の発想で、会場に小さな鏡を仕込む練習をした。彼の影は鏡に「写り込む」ので、鏡の角度を知っている味方だけが、全部の位置を読める。敵には百二十七人、味方には現在地つきの百二十七人。情報戦の主導権は、写り込みの癖ごと、うちのものになった。",
+          "result": "会場に小さな鏡を仕込んだ。彼の影は鏡に「写り込む」ので、角度を知る味方だけが全部の位置を読める。敵には百二十七人、味方には現在地つきの百二十七人。情報戦の主導権は、うちのものになった。",
           "intent": "写り込みの癖を、味方の地図に変える",
           "promise": "本来の全展開は温存し、チーム全体の成長へ成果を持ち帰る。",
           "memory": "鏡の角度表は、チームの新しい共有財産になった。",
           "tone": "pragmatic",
           "effects": [
-            { "type": "relationship", "target": { "type": "fighter", "fighterId": "ushiro" }, "mode": "add", "trust": 0, "ownership": 9 },
-            { "type": "sharedPoints", "amount": 5 }
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "ushiro"
+              },
+              "mode": "add",
+              "trust": 0,
+              "ownership": 9
+            },
+            {
+              "type": "sharedPoints",
+              "amount": 5
+            }
           ],
           "goto": "ushiro.power.node.effect.001"
         }
@@ -223,7 +363,11 @@
       "type": "effect",
       "id": "ushiro.power.node.effect.001",
       "effects": [
-        { "type": "setStoryStage", "fighterId": "ushiro", "stage": 4 }
+        {
+          "type": "setStoryStage",
+          "fighterId": "ushiro",
+          "stage": 4
+        }
       ]
     },
     {
@@ -235,7 +379,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 127人全展開と本体当て。「あなただけ、優しい姿勢」。見つけてもらう、の発見。",
+    "authorNote": "語り口V2・二行枠で改稿。127人全展開と本体当て。「あなただけ、優しい姿勢」。見つけてもらう、の発見。",
     "legacyGeneratedIds": false
   }
 }

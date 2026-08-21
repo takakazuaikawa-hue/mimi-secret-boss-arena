@@ -56,16 +56,24 @@
     },
     {
       "type": "line",
-      "id": "sazanami.liberation.node.line.001",
-      "lineId": "sazanami.liberation.line.001",
+      "id": "sazanami.liberation.node.line.001a",
+      "lineId": "sazanami.liberation.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "契約を終わらせる夜。貯水槽の縁に、解除届と、携帯水槽と、黄色い胴長を並べた。この三つが、私とさざなみの一年だった。"
+      "text": "契約を終わらせる、夜。貯水槽の縁に、解除届と、携帯水槽と、黄色い胴長を並べた。"
     },
     {
       "type": "line",
-      "id": "sazanami.liberation.node.line.002",
-      "lineId": "sazanami.liberation.line.002",
+      "id": "sazanami.liberation.node.line.001b",
+      "lineId": "sazanami.liberation.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "この三つが、私とさざなみの一年だった。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.liberation.node.line.002a",
+      "lineId": "sazanami.liberation.line.002a",
       "speakerId": "legacy.speaker.we7zqt",
       "speakerName": "さざなみ",
       "mode": "dialogue",
@@ -73,8 +81,8 @@
     },
     {
       "type": "line",
-      "id": "sazanami.liberation.node.line.003",
-      "lineId": "sazanami.liberation.line.003",
+      "id": "sazanami.liberation.node.line.003a",
+      "lineId": "sazanami.liberation.line.003a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -82,8 +90,8 @@
     },
     {
       "type": "line",
-      "id": "sazanami.liberation.node.line.004",
-      "lineId": "sazanami.liberation.line.004",
+      "id": "sazanami.liberation.node.line.004a",
+      "lineId": "sazanami.liberation.line.004a",
       "speakerId": "legacy.speaker.we7zqt",
       "speakerName": "さざなみ",
       "mode": "dialogue",
@@ -107,47 +115,104 @@
     },
     {
       "type": "line",
-      "id": "sazanami.liberation.node.line.005",
-      "lineId": "sazanami.liberation.line.005",
+      "id": "sazanami.liberation.node.line.005a",
+      "lineId": "sazanami.liberation.line.005a",
       "speakerId": "legacy.speaker.we7zqt",
       "speakerName": "さざなみ",
       "mode": "dialogue",
-      "text": "雨は、私。水道の水も、元をたどれば、私。あなたの朝の一杯の水も、涙も、たどれば海へ帰る。——海は、どこでも隣。水槽は、ただの窓口だった。"
+      "text": "雨は、私。水道の水も、元をたどれば、私。あなたの朝の一杯の水も、涙も、たどれば海へ帰る。"
     },
     {
       "type": "line",
-      "id": "sazanami.liberation.node.line.006",
-      "lineId": "sazanami.liberation.line.006",
+      "id": "sazanami.liberation.node.line.005b",
+      "lineId": "sazanami.liberation.line.005b",
+      "speakerId": "legacy.speaker.we7zqt",
+      "speakerName": "さざなみ",
+      "mode": "dialogue",
+      "text": "——海は、どこでも隣。水槽は、ただの窓口だった。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.liberation.node.line.006a",
+      "lineId": "sazanami.liberation.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "スケールの大きい「いつでも会える」だった。ロマンチックなのか怖いのか判定に迷って、心臓は跳ねる方を選んだ。雨のたびに思い出す人がいるのは、悪くない。",
+      "text": "スケールの大きい「いつでも会える」だった。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.liberation.node.line.006b",
+      "lineId": "sazanami.liberation.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ロマンチックなのか怖いのか迷って、心臓は跳ねる方を選んだ。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.liberation.node.line.006c",
+      "lineId": "sazanami.liberation.line.006c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "雨のたびに思い出す人がいるのは、悪くない。耳が、じんわり熱い。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "sazanami.liberation.node.line.007",
-      "lineId": "sazanami.liberation.line.007",
+      "id": "sazanami.liberation.node.line.007a",
+      "lineId": "sazanami.liberation.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "判を押す。水槽の所有印が消える。影は光の粒になって、配管を通り、雨樋を抜けて、海へ帰っていった。貯水槽の水面が、最後に一度だけ、手を振るみたいに波立った。",
+      "text": "判を押す。水槽の所有印が消える。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.liberation.node.line.007b",
+      "lineId": "sazanami.liberation.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "影は光の粒になって、配管を通り、雨樋を抜けて、海へ帰っていった。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.liberation.node.line.007c",
+      "lineId": "sazanami.liberation.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "貯水槽の水面が、最後に一度、手を振るみたいに波立った。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "sazanami.liberation.node.line.008",
-      "lineId": "sazanami.liberation.line.008",
+      "id": "sazanami.liberation.node.line.008a",
+      "lineId": "sazanami.liberation.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "静かになった水面に、泡文字がひとつ、ゆっくり浮かんで消えた。「契約——採点対象外。友人に、点は、つけない」。",
+      "text": "静かになった水面に、泡文字がひとつ、ゆっくり浮かんで消えた。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.liberation.node.line.008b",
+      "lineId": "sazanami.liberation.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「契約——採点対象外。友人に、点は、つけない」と、そこにあった。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "sazanami.liberation.node.line.009",
-      "lineId": "sazanami.liberation.line.009",
+      "id": "sazanami.liberation.node.line.009a",
+      "lineId": "sazanami.liberation.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "採点の人が、採点をやめる相手。それが答案用紙の外の関係ということだ。胴長を抱えて、私は帰り道の形を考えた。",
+      "text": "採点の人が、採点をやめる相手。それが、答案用紙の外の関係。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.liberation.node.line.009b",
+      "lineId": "sazanami.liberation.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "胴長を抱えて、帰り道を考えた。",
       "emotion": "resolve"
     },
     {
@@ -157,7 +222,7 @@
         {
           "id": "sazanami.liberation.choice.001",
           "label": "水槽の所有印を消し、影を海へつなぎ直す",
-          "result": "帰り道、雨が降り始めた。傘を差そうとして、やめた。雨粒が兎耳に当たるたび、泡の声が小さく聞こえる。「濡れる。傘——マイナス五十点」。差しました。差しましたよ。海はどこでも隣で、どこでも過保護だった。",
+          "result": "帰り道、雨が降り始めた。傘を差そうとして、やめた。雨粒が兎耳に当たるたび、泡の声が小さく聞こえる。「濡れる。傘——マイナス五十点」と聞こえた。差しました。差しましたよ。海はどこでも隣で、どこでも過保護だった。",
           "intent": "海を、海の広さのまま自由にする",
           "promise": "所有者名を消し、本人が自分の名で次の試合を選べるようにする。",
           "memory": "雨の日の泡の声を、私はもう寂しいと思わない。",
@@ -184,7 +249,7 @@
         {
           "id": "sazanami.liberation.choice.002",
           "label": "契約を解き、次戦の潮時だけ本人へ尋ねる",
-          "result": "「次の試合、出ますか」と聞くと、長い間があった。海の返事は、翌朝、館内水槽に届いていた。泡文字で「潮見表」が貼り出され、私の出勤時間だけ、大潮の印がついている。出るという意味だと、受付のノノさんが翻訳してくれた。ノノさん、いつの間に海と話せるようになったの。",
+          "result": "「次の試合、出ますか」と聞くと、長い間があった。翌朝、館内水槽に泡文字で「潮見表」が貼り出され、私の出勤時間だけ大潮の印がついていた。出るという意味だと、ノノさんが翻訳してくれた。",
           "intent": "自由な海へ、改めて隣を頼む",
           "promise": "断る権利を返したうえで、決勝を一緒に戦う新しい約束を結ぶ。",
           "memory": "潮見表の大潮の印の意味を、チームの全員が知っている。",
@@ -253,7 +318,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 「海はどこでも隣」の解放。「友人に、点は、つけない」。採点モチーフの卒業。",
+    "authorNote": "語り口V2・二行枠で改稿。「海はどこでも隣」の解放。「友人に、点は、つけない」。採点モチーフの卒業。",
     "legacyGeneratedIds": false
   }
 }

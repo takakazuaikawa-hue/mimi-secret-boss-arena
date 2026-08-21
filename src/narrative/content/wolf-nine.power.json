@@ -10,9 +10,18 @@
     "stage": "power"
   },
   "trigger": {
-    "actions": ["search", "play"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "search",
+      "play"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 400,
     "weight": 1
   },
@@ -37,102 +46,220 @@
     {
       "type": "direction",
       "id": "wolf-nine.power.node.direction.001",
-      "command": { "type": "background", "assetId": "wolf-nine.power.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "wolf-nine.power.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "line",
-      "id": "wolf-nine.power.node.line.001",
-      "lineId": "wolf-nine.power.line.001",
+      "id": "wolf-nine.power.node.line.001a",
+      "lineId": "wolf-nine.power.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "夜、無人の決闘場に呼ばれた。ヴォルフ・ナインの「本気」を見る日だ。彼は九本の旗を場内に立てて回った。八本には、それぞれ別の紋章。九本目は——真っ白だった。"
+      "text": "夜、無人の決闘場に呼ばれた。ヴォルフ・ナインの「本気」を見る日だ。"
     },
     {
       "type": "line",
-      "id": "wolf-nine.power.node.line.002",
-      "lineId": "wolf-nine.power.line.002",
+      "id": "wolf-nine.power.node.line.001b",
+      "lineId": "wolf-nine.power.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "彼は九本の旗を、場内に立てて回った。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.power.node.line.001c",
+      "lineId": "wolf-nine.power.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "八本には、それぞれ別の紋章。九本目は——真っ白だった。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.power.node.line.002a",
+      "lineId": "wolf-nine.power.line.002a",
       "speakerId": "legacy.speaker.1vj9fme",
       "speakerName": "ヴォルフ・ナイン",
       "mode": "dialogue",
-      "text": "俺の本気は、八つの型だ。八敗から、ひとつずつ持ち帰った。全部見せる。——第一の型から、行くぞ。"
+      "text": "俺の本気は、八つの型だ。八敗から、ひとつずつ持ち帰った。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.power.node.line.002b",
+      "lineId": "wolf-nine.power.line.002b",
+      "speakerId": "legacy.speaker.1vj9fme",
+      "speakerName": "ヴォルフ・ナイン",
+      "mode": "dialogue",
+      "text": "全部見せる。——第一の型から、行くぞ。"
     },
     {
       "type": "direction",
       "id": "wolf-nine.power.node.direction.002",
-      "command": { "type": "effect", "effectId": "flash" }
+      "command": {
+        "type": "effect",
+        "effectId": "flash"
+      }
     },
     {
       "type": "line",
-      "id": "wolf-nine.power.node.line.003",
-      "lineId": "wolf-nine.power.line.003",
+      "id": "wolf-nine.power.node.line.003a",
+      "lineId": "wolf-nine.power.line.003a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "第一の型は、大剣使いの間合い。第二は、双剣の連撃を受け流す足。第三は、魔導士の詠唱を潰す初速。……八つの型は、八人の強敵の得意技への、八つの回答だった。負けるたび、相手の一番強いところを、体で覚えて帰ってきたのだ。",
+      "text": "第一の型は、大剣の間合い。第二は、双剣の連撃を受け流す足。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.power.node.line.003b",
+      "lineId": "wolf-nine.power.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "第三は、魔導士の詠唱を潰す初速。……八つの型は、八人の強敵への、八つの回答だった。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.power.node.line.003c",
+      "lineId": "wolf-nine.power.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "負けるたび、相手の一番強いところを、体で覚えて帰ってきた。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "wolf-nine.power.node.line.004",
-      "lineId": "wolf-nine.power.line.004",
+      "id": "wolf-nine.power.node.line.004a",
+      "lineId": "wolf-nine.power.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "新人くんは第五の型のあたりで計測器を諦め、記録板に「まけて、つよい。」と書いた。彼の五・七・五は完成に近づいている。",
+      "text": "新人くんは、第五の型のあたりで計測器を諦めた。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.power.node.line.004b",
+      "lineId": "wolf-nine.power.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "記録板に「まけて、つよい。」彼の五・七・五は、完成に近い。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "wolf-nine.power.node.line.005",
-      "lineId": "wolf-nine.power.line.005",
+      "id": "wolf-nine.power.node.line.005a",
+      "lineId": "wolf-nine.power.line.005a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "……九本目の旗は？　真っ白ですけど。"
+      "text": "……九本目の旗は?　真っ白ですけど。"
     },
     {
       "type": "line",
-      "id": "wolf-nine.power.node.line.006",
-      "lineId": "wolf-nine.power.line.006",
+      "id": "wolf-nine.power.node.line.006a",
+      "lineId": "wolf-nine.power.line.006a",
       "speakerId": "legacy.speaker.1vj9fme",
       "speakerName": "ヴォルフ・ナイン",
       "mode": "dialogue",
-      "text": "九つ目の型の旗だ。……まだ、無い型だ。九戦目の相手から持ち帰る型のために、空けてある。"
+      "text": "九つ目の型の旗だ。……まだ、無い型だ。"
     },
     {
       "type": "line",
-      "id": "wolf-nine.power.node.line.007",
-      "lineId": "wolf-nine.power.line.007",
+      "id": "wolf-nine.power.node.line.006b",
+      "lineId": "wolf-nine.power.line.006b",
+      "speakerId": "legacy.speaker.1vj9fme",
+      "speakerName": "ヴォルフ・ナイン",
+      "mode": "dialogue",
+      "text": "九戦目の相手から持ち帰る型のために、空けてある。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.power.node.line.007a",
+      "lineId": "wolf-nine.power.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "八年間、白いままの旗。彼の強さの一番深いところは、この空白だった。決闘とは、二人で作るもの。型とは、相手からの贈り物。だから九つ目は、一人では永遠に作れない。",
+      "text": "八年間、白いままの旗。彼の強さの一番深いところは、この空白だった。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.power.node.line.007b",
+      "lineId": "wolf-nine.power.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "決闘とは、二人で作るもの。型とは、相手からの贈り物。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.power.node.line.007c",
+      "lineId": "wolf-nine.power.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "耳が、思わず、傾いた。だから九つ目は、一人では作れない。",
       "emotion": "revelation"
     },
     {
       "type": "direction",
       "id": "wolf-nine.power.node.direction.003",
-      "command": { "type": "still", "assetId": "wolf-nine.power.asset.still.001" }
+      "command": {
+        "type": "still",
+        "assetId": "wolf-nine.power.asset.still.001"
+      }
     },
     {
       "type": "line",
-      "id": "wolf-nine.power.node.line.008",
-      "lineId": "wolf-nine.power.line.008",
+      "id": "wolf-nine.power.node.line.008a",
+      "lineId": "wolf-nine.power.line.008a",
       "speakerId": "legacy.speaker.1vj9fme",
       "speakerName": "ヴォルフ・ナイン",
       "mode": "dialogue",
-      "text": "正直に言うとな、ミミ。最近、困っている。……あんたらと居ると、九戦目が、惜しくなくなってくる。九つ目の型が空白のままでも、毎日が悪くない。——それが、困る。"
+      "text": "正直に言うとな、ミミ。最近、困っている。"
     },
     {
       "type": "line",
-      "id": "wolf-nine.power.node.line.009",
-      "lineId": "wolf-nine.power.line.009",
+      "id": "wolf-nine.power.node.line.008b",
+      "lineId": "wolf-nine.power.line.008b",
+      "speakerId": "legacy.speaker.1vj9fme",
+      "speakerName": "ヴォルフ・ナイン",
+      "mode": "dialogue",
+      "text": "……あんたらと居ると、九戦目が、惜しくなくなってくる。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.power.node.line.008c",
+      "lineId": "wolf-nine.power.line.008c",
+      "speakerId": "legacy.speaker.1vj9fme",
+      "speakerName": "ヴォルフ・ナイン",
+      "mode": "dialogue",
+      "text": "九つ目の型が空白のままでも、毎日が悪くない。——それが、困る。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.power.node.line.009a",
+      "lineId": "wolf-nine.power.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "八年間の執念が、朝食九種目に溶かされかけている。それを「困る」と言う顔が、ちっとも困っていなかった。夜の決闘場で、白い旗が緩く揺れる。急がなくていい空白も、あるのだと思う。",
+      "text": "八年間の執念が、朝食九種目に溶かされかけている。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.power.node.line.009b",
+      "lineId": "wolf-nine.power.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「困る」と言う顔が、ちっとも困っていなかった。"
+    },
+    {
+      "type": "line",
+      "id": "wolf-nine.power.node.line.009c",
+      "lineId": "wolf-nine.power.line.009c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "夜の決闘場で、白い旗が、緩く揺れる。急がなくていい空白も、ある。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "wolf-nine.power.node.line.010",
-      "lineId": "wolf-nine.power.line.010",
+      "id": "wolf-nine.power.node.line.010a",
+      "lineId": "wolf-nine.power.line.010a",
       "speakerId": "narrator",
       "mode": "thought",
       "text": "八つの型を、試合でどう出すか。仕上げを決める。",
@@ -145,28 +272,56 @@
         {
           "id": "wolf-nine.power.choice.001",
           "label": "九戦目だけに使う、一度限りの型を開く",
-          "result": "「九つ目の型の、下書きをしよう」と提案した。相手はいなくても、素振りはできる。彼は白い旗の前で、八つの型を全部混ぜた「まだ名前のない動き」を初めて舞った。完成度は本人いわく三割。「残りの七割は、九戦目の相手が埋める」。未完成のまま強い型を、私はこの夜、初めて見た。",
+          "result": "「下書きをしよう」と提案した。彼は白い旗の前で、八つの型を混ぜた「名前のない動き」を舞った。完成度は三割。「残りは、九戦目の相手が埋める」未完成のまま強い型を、初めて見た。",
           "intent": "空白の型の、最初の一筆を入れる",
           "promise": "失敗時の危険を引き受け、この人専用の成長を最大まで進める。",
           "memory": "名前のない動きの下書きを、二人だけが見ている。",
           "tone": "heroic",
           "effects": [
-            { "type": "relationship", "target": { "type": "fighter", "fighterId": "wolf-nine" }, "mode": "add", "trust": 10, "ownership": -4 },
-            { "type": "fighterPoints", "target": { "type": "fighter", "fighterId": "wolf-nine" }, "amount": 5 }
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "wolf-nine"
+              },
+              "mode": "add",
+              "trust": 10,
+              "ownership": -4
+            },
+            {
+              "type": "fighterPoints",
+              "target": {
+                "type": "fighter",
+                "fighterId": "wolf-nine"
+              },
+              "amount": 5
+            }
           ],
           "goto": "wolf-nine.power.node.effect.001"
         },
         {
           "id": "wolf-nine.power.choice.002",
           "label": "八つの敗北を、味方が使える基本動作へ分ける",
-          "result": "八つの型を、チーム用に分解した。大剣の間合いは前衛へ、受け流しの足は後衛へ。「八敗流・初伝」と名付けられた稽古は、うちのチームの朝練の定番になった。彼は師範として、負けた話を胸を張って教える。「いいか、俺はここで、こう負けた！　だからお前らは、こう動け！」。世界一誇らしい敗北の授業である。",
+          "result": "八つの型を、チーム用に分解した。大剣の間合いは前衛へ、受け流しの足は後衛へ。「八敗流・初伝」は朝練の定番になった。「俺はここで、こう負けた！　だからこう動け！」世界一誇らしい敗北の授業だった。",
           "intent": "八敗を、チームの流派にする",
           "promise": "本人の型は薄まるが、チーム全体の成長へ成果を持ち帰る。",
           "memory": "「八敗流・初伝」の朝練は、見学者が増え続けている。",
           "tone": "pragmatic",
           "effects": [
-            { "type": "relationship", "target": { "type": "fighter", "fighterId": "wolf-nine" }, "mode": "add", "trust": 0, "ownership": 9 },
-            { "type": "sharedPoints", "amount": 5 }
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "wolf-nine"
+              },
+              "mode": "add",
+              "trust": 0,
+              "ownership": 9
+            },
+            {
+              "type": "sharedPoints",
+              "amount": 5
+            }
           ],
           "goto": "wolf-nine.power.node.effect.001"
         }
@@ -176,7 +331,11 @@
       "type": "effect",
       "id": "wolf-nine.power.node.effect.001",
       "effects": [
-        { "type": "setStoryStage", "fighterId": "wolf-nine", "stage": 4 }
+        {
+          "type": "setStoryStage",
+          "fighterId": "wolf-nine",
+          "stage": 4
+        }
       ]
     },
     {
@@ -188,7 +347,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 八つの型=八敗からの持ち帰り。九本目の白い旗。「九戦目が惜しくなくなって、困る」。",
+    "authorNote": "語り口V2・二行枠で改稿。v2改稿: 八つの型=八敗からの持ち帰り。九本目の白い旗。「九戦目が惜しくなくなって、困る」。",
     "legacyGeneratedIds": false
   }
 }

@@ -10,9 +10,17 @@
     "stage": "epilogue"
   },
   "trigger": {
-    "actions": ["rest"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "rest"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 400,
     "weight": 1
   },
@@ -37,75 +45,119 @@
     {
       "type": "direction",
       "id": "teirei.epilogue.node.direction.001",
-      "command": { "type": "background", "assetId": "teirei.epilogue.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "teirei.epilogue.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "line",
-      "id": "teirei.epilogue.node.line.001",
-      "lineId": "teirei.epilogue.line.001",
+      "id": "teirei.epilogue.node.line.001a",
+      "lineId": "teirei.epilogue.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "最終大会のあと、搬入口には小さな看板が出た。「修理受付・丁零。直せないもの: 今のところ、なし」。看板に偽りなしで、彼女は連日、街の壊れものを軍事精度で直している。ただし営業時間は、きっちり定時まで。"
+      "text": "ただし営業時間は、きっちり定時まで。"
     },
     {
       "type": "line",
-      "id": "teirei.epilogue.node.line.002",
-      "lineId": "teirei.epilogue.line.002",
+      "id": "teirei.epilogue.node.line.002a",
+      "lineId": "teirei.epilogue.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "夕方、マグを二つ持って受付をのぞくと、彼女は今日の最後の作業をしていた。修理では、ない。廃材の歯車と配線で、何かを組んでいる。",
+      "text": "夕方、マグを二つ持って受付をのぞくと、彼女は今日の最後の作業をしていた。"
+    },
+    {
+      "type": "line",
+      "id": "teirei.epilogue.node.line.002b",
+      "lineId": "teirei.epilogue.line.002b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "修理じゃ、ない。廃材の歯車と配線で、何かを組んでいる。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "teirei.epilogue.node.line.003",
-      "lineId": "teirei.epilogue.line.003",
+      "id": "teirei.epilogue.node.line.003a",
+      "lineId": "teirei.epilogue.line.003a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "それ、何の修理ですか？"
+      "text": "それ、何の修理ですか?"
     },
     {
       "type": "line",
-      "id": "teirei.epilogue.node.line.004",
-      "lineId": "teirei.epilogue.line.004",
+      "id": "teirei.epilogue.node.line.004a",
+      "lineId": "teirei.epilogue.line.004a",
       "speakerId": "legacy.speaker.qmf7da",
       "speakerName": "丁零",
       "mode": "dialogue",
-      "text": "修理では、ありません。……製作です。用途は、ありません。効率も、ありません。強いて言えば——好みです。"
+      "text": "修理では、ありません。……製作です。"
+    },
+    {
+      "type": "line",
+      "id": "teirei.epilogue.node.line.004b",
+      "lineId": "teirei.epilogue.line.004b",
+      "speakerId": "legacy.speaker.qmf7da",
+      "speakerName": "丁零",
+      "mode": "dialogue",
+      "text": "用途も効率もありません。強いて言えば——好みです。"
     },
     {
       "type": "direction",
       "id": "teirei.epilogue.node.direction.002",
-      "command": { "type": "still", "assetId": "teirei.epilogue.asset.still.001" }
+      "command": {
+        "type": "still",
+        "assetId": "teirei.epilogue.asset.still.001"
+      }
     },
     {
       "type": "direction",
       "id": "teirei.epilogue.node.direction.003",
-      "command": { "type": "effect", "effectId": "pulse" }
+      "command": {
+        "type": "effect",
+        "effectId": "pulse"
+      }
     },
     {
       "type": "line",
-      "id": "teirei.epilogue.node.line.005",
-      "lineId": "teirei.epilogue.line.005",
+      "id": "teirei.epilogue.node.line.005a",
+      "lineId": "teirei.epilogue.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "完成したのは、機械の花だった。歯車の花びら、配線の茎、そして中心に、琥珀色の小さな灯。夕暮れの受付台で、それは何の役にも立たず、ただ、きれいに灯っていた。",
+      "text": "完成したのは、機械の花だった。歯車の花びら、配線の茎、そして中心に、琥珀色の小さな灯。"
+    },
+    {
+      "type": "line",
+      "id": "teirei.epilogue.node.line.005b",
+      "lineId": "teirei.epilogue.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "夕暮れの受付台で、それは何の役にも立たず、ただ、きれいに灯っていた。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "teirei.epilogue.node.line.006",
-      "lineId": "teirei.epilogue.line.006",
+      "id": "teirei.epilogue.node.line.006a",
+      "lineId": "teirei.epilogue.line.006a",
       "speakerId": "legacy.speaker.qmf7da",
       "speakerName": "丁零",
       "mode": "dialogue",
-      "text": "兵器だった頃の私は、必要なものしか、作れませんでした。……これは、私が作った、最初の「必要のないもの」です。"
+      "text": "兵器だった頃の私は、必要なものしか、作れませんでした。"
     },
     {
       "type": "line",
-      "id": "teirei.epilogue.node.line.007",
-      "lineId": "teirei.epilogue.line.007",
+      "id": "teirei.epilogue.node.line.006b",
+      "lineId": "teirei.epilogue.line.006b",
+      "speakerId": "legacy.speaker.qmf7da",
+      "speakerName": "丁零",
+      "mode": "dialogue",
+      "text": "……これは、私が作った、最初の「必要のないもの」です。"
+    },
+    {
+      "type": "line",
+      "id": "teirei.epilogue.node.line.007a",
+      "lineId": "teirei.epilogue.line.007a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -113,29 +165,70 @@
     },
     {
       "type": "line",
-      "id": "teirei.epilogue.node.line.008",
-      "lineId": "teirei.epilogue.line.008",
+      "id": "teirei.epilogue.node.line.008a",
+      "lineId": "teirei.epilogue.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "マグを二つ、受付台に置く。60.0度が二つ。機械花の琥珀灯を挟んで、夕方の定時後が、ゆっくり流れる。彼女の首が、満足の十五度に傾いた。",
+      "text": "マグを二つ、受付台に置く。60.0度が二つ。"
+    },
+    {
+      "type": "line",
+      "id": "teirei.epilogue.node.line.008b",
+      "lineId": "teirei.epilogue.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "機械花の琥珀灯を挟んで、夕方の定時後が、ゆっくり流れる。"
+    },
+    {
+      "type": "line",
+      "id": "teirei.epilogue.node.line.008c",
+      "lineId": "teirei.epilogue.line.008c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "彼女の首が、満足の十五度に傾いた。私の耳も、つられて、へにゃっと下がる。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "teirei.epilogue.node.line.009",
-      "lineId": "teirei.epilogue.line.009",
+      "id": "teirei.epilogue.node.line.009a",
+      "lineId": "teirei.epilogue.line.009a",
       "speakerId": "legacy.speaker.qmf7da",
       "speakerName": "丁零",
       "mode": "dialogue",
-      "text": "柿落としの出演届を、提出済みです。演目「機械花の点灯式(実用性、ゼロ)」。備考——「照準は、花にだけ合わせます」。"
+      "text": "柿落としの出演届を、提出済みです。演目「機械花の点灯式(実用性、ゼロ)」"
     },
     {
       "type": "line",
-      "id": "teirei.epilogue.node.line.010",
-      "lineId": "teirei.epilogue.line.010",
+      "id": "teirei.epilogue.node.line.009b",
+      "lineId": "teirei.epilogue.line.009b",
+      "speakerId": "legacy.speaker.qmf7da",
+      "speakerName": "丁零",
+      "mode": "dialogue",
+      "text": "備考——「照準は、花にだけ合わせます」"
+    },
+    {
+      "type": "line",
+      "id": "teirei.epilogue.node.line.010a",
+      "lineId": "teirei.epilogue.line.010a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "実用性ゼロを、堂々と演目にする元兵器。好みの一覧は、今日で何号まで増えただろう。理由欄は、きっと全部、空欄のまま提出されている。それでいい。それがいい。",
+      "text": "実用性ゼロを、堂々と演目にする元兵器。好みの一覧は、今日で何号まで増えただろう。"
+    },
+    {
+      "type": "line",
+      "id": "teirei.epilogue.node.line.010b",
+      "lineId": "teirei.epilogue.line.010b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "理由欄は、きっと全部、空欄のまま提出されている。それでいい。"
+    },
+    {
+      "type": "line",
+      "id": "teirei.epilogue.node.line.010c",
+      "lineId": "teirei.epilogue.line.010c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "それがいい。",
       "emotion": "tender"
     },
     {
@@ -147,7 +240,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 機械花の琥珀灯(報酬CG準拠)。最初の「必要のないもの」。出演届=機械花の点灯式。",
+    "authorNote": "語り口V2・二行枠で改稿。機械花の琥珀灯(報酬CG準拠)。最初の「必要のないもの」。出演届=機械花の点灯式。",
     "legacyGeneratedIds": false
   }
 }

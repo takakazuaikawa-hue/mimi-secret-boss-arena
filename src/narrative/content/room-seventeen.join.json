@@ -10,9 +10,18 @@
     "stage": "join"
   },
   "trigger": {
-    "actions": ["work", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 400,
     "weight": 1
   },
@@ -31,74 +40,145 @@
     {
       "type": "direction",
       "id": "room-seventeen.join.node.direction.001",
-      "command": { "type": "background", "assetId": "room-seventeen.join.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "room-seventeen.join.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "line",
-      "id": "room-seventeen.join.node.line.001",
-      "lineId": "room-seventeen.join.line.001",
+      "id": "room-seventeen.join.node.line.001a",
+      "lineId": "room-seventeen.join.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "十七号室を選手として登録する。言葉にすると簡単だが、問題は根本的だった。本体が建築物のお客様は、会場に「来られない」。歩けないのだ。扉なので。"
+      "text": "十七号室を選手として登録する。"
     },
     {
       "type": "line",
-      "id": "room-seventeen.join.node.line.002",
-      "lineId": "room-seventeen.join.line.002",
+      "id": "room-seventeen.join.node.line.001b",
+      "lineId": "room-seventeen.join.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "言うのは簡単だけど……本体が建物のお客様は、会場に来られない。歩けない。扉だから、当然。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.join.node.line.002a",
+      "lineId": "room-seventeen.join.line.002a",
       "speakerId": "legacy.speaker.zzyjm6",
       "speakerName": "十七号室",
       "mode": "dialogue",
-      "text": "ご心配なく。私、扉一枚ぶんなら、どこにでも生えられます。会場の壁に、当日、生えます。"
+      "text": "ご心配なく。私、扉一枚ぶんなら、どこにでも生えられます。"
     },
     {
       "type": "line",
-      "id": "room-seventeen.join.node.line.003",
-      "lineId": "room-seventeen.join.line.003",
+      "id": "room-seventeen.join.node.line.002b",
+      "lineId": "room-seventeen.join.line.002b",
+      "speakerId": "legacy.speaker.zzyjm6",
+      "speakerName": "十七号室",
+      "mode": "dialogue",
+      "text": "会場の壁に、当日、生えます。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.join.node.line.003a",
+      "lineId": "room-seventeen.join.line.003a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "生える選手、うちが初です。……とりあえず登録しましょう。端末をここに置いて、と。"
+      "text": "生える選手、うちが初です。"
     },
     {
       "type": "line",
-      "id": "room-seventeen.join.node.line.004",
-      "lineId": "room-seventeen.join.line.004",
+      "id": "room-seventeen.join.node.line.003b",
+      "lineId": "room-seventeen.join.line.003b",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "……とりあえず登録しましょう。端末をここに置いて、と。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.join.node.line.004a",
+      "lineId": "room-seventeen.join.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "端末をロビーの机に置いた瞬間、床がもてなしの反射で動いた。「お客様のお荷物、お預かりします」。登録端末は、クロークへ丁重に飲み込まれた。返してもらうのに十分かかった。もてなしにも、事故はある。",
+      "text": "端末をロビーの机に置いた瞬間、床が反射で動いた。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.join.node.line.004b",
+      "lineId": "room-seventeen.join.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「お客様のお荷物、お預かりします」登録端末が、クロークへ丁重に飲み込まれた。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.join.node.line.004c",
+      "lineId": "room-seventeen.join.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "返してもらうのに、十分かかった。もてなしにも事故はある。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "room-seventeen.join.node.line.005",
-      "lineId": "room-seventeen.join.line.005",
+      "id": "room-seventeen.join.node.line.005a",
+      "lineId": "room-seventeen.join.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "登録項目も、難物揃いだった。身長欄「百二十階」。体重欄は計測不能。得意技の欄に、部屋は少し考えて、こう申告した。「お迎え」。",
+      "text": "登録項目も、難物ぞろいだった。身長欄は「百二十階」"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.join.node.line.005b",
+      "lineId": "room-seventeen.join.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "、体重欄は計測不能。得意技の欄に、部屋は少し考えて申告した。「お迎え」",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "room-seventeen.join.node.line.006",
-      "lineId": "room-seventeen.join.line.006",
+      "id": "room-seventeen.join.node.line.006a",
+      "lineId": "room-seventeen.join.line.006a",
       "speakerId": "legacy.speaker.zzyjm6",
       "speakerName": "十七号室",
       "mode": "dialogue",
-      "text": "相手選手を、お迎えするのです。私の中へ。……お迎えした方の戦意は、三階の温泉で、だいたい、ゆるみます。"
+      "text": "相手選手を、お迎えするのです。"
     },
     {
       "type": "line",
-      "id": "room-seventeen.join.node.line.007",
-      "lineId": "room-seventeen.join.line.007",
+      "id": "room-seventeen.join.node.line.006b",
+      "lineId": "room-seventeen.join.line.006b",
+      "speakerId": "legacy.speaker.zzyjm6",
+      "speakerName": "十七号室",
+      "mode": "dialogue",
+      "text": "私の中へ。……お迎えした方の戦意は、三階の温泉で、だいたい、ゆるみます。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.join.node.line.007a",
+      "lineId": "room-seventeen.join.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "接待で無力化する戦法だった。恐ろしいことに、有効そうである。審判への説明は、私の宿題になった。",
+      "text": "接待で無力化する戦法と聞いて、耳がぴくっと動いた。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.join.node.line.007b",
+      "lineId": "room-seventeen.join.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "恐ろしいことに、有効そう。審判への説明は、私の宿題になった。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "room-seventeen.join.node.line.008",
-      "lineId": "room-seventeen.join.line.008",
+      "id": "room-seventeen.join.node.line.008a",
+      "lineId": "room-seventeen.join.line.008a",
       "speakerId": "legacy.speaker.zzyjm6",
       "speakerName": "十七号室",
       "mode": "dialogue",
@@ -106,29 +186,54 @@
     },
     {
       "type": "line",
-      "id": "room-seventeen.join.node.line.009",
-      "lineId": "room-seventeen.join.line.009",
+      "id": "room-seventeen.join.node.line.009a",
+      "lineId": "room-seventeen.join.line.009a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "違います。チームは、お迎えしなくても、勝手に入ってきて、勝手にくつろいで、勝手にまた来ます。もてなし、不要です。"
+      "text": "違います。チームは、お迎えしなくても、勝手に入ってきます。"
     },
     {
       "type": "line",
-      "id": "room-seventeen.join.node.line.010",
-      "lineId": "room-seventeen.join.line.010",
+      "id": "room-seventeen.join.node.line.009b",
+      "lineId": "room-seventeen.join.line.009b",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "勝手にくつろいで、勝手にまた来ます。もてなし、不要です。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.join.node.line.010a",
+      "lineId": "room-seventeen.join.line.010a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "もてなし不要。その概念に、部屋全体が静止した。シャンデリアの揺れが止まるほどの衝撃だったらしい。客しか知らない建築に、身内という区分が、初めてできようとしていた。",
+      "text": "もてなし不要。その概念に、部屋全体が静止した。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.join.node.line.010b",
+      "lineId": "room-seventeen.join.line.010b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "シャンデリアの揺れが止まるほどの衝撃だったらしい。"
+    },
+    {
+      "type": "line",
+      "id": "room-seventeen.join.node.line.010c",
+      "lineId": "room-seventeen.join.line.010c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "客しか知らない建築に、身内という区分が生まれかけてる。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "room-seventeen.join.node.line.011",
-      "lineId": "room-seventeen.join.line.011",
+      "id": "room-seventeen.join.node.line.011a",
+      "lineId": "room-seventeen.join.line.011a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "最後の欄の埋め方は、扉の前で決める。ノックの作法と、同じである。",
+      "text": "最後の欄の埋め方は、扉の前で決める。ノックの作法と、同じ感じで。",
       "emotion": "resolve"
     },
     {
@@ -138,43 +243,83 @@
         {
           "id": "room-seventeen.join.choice.001",
           "label": "会議室として一時間予約し、内部を見学する",
-          "result": "契約の仕上げに、一時間の見学予約を取った。案内された階は、観光名所級の温泉でも図書館でもなく、「何もない小さな部屋」だった。「あなたは、こういう部屋で休む顔をするので」。客の顔から欲しいものを読む建築が、初めて「もてなさない部屋」を作った。契約書には、その部屋で署名した。世界一静かな調印式だった。",
+          "result": "契約の仕上げに、一時間の見学予約。案内されたのは温泉でも図書館でもなく「何もない小さな部屋」だった。「あなたは、こういう部屋で休む顔をするので」初めての「もてなさない部屋」で契約書に署名。世界一静かな調印式。",
           "intent": "もてなし以外の部屋を、一緒に見つける",
           "promise": "登録は少し遅れるが、この人専用の成長ポイントを得る。",
           "memory": "何もない小さな部屋の存在を、二人だけが知っている。",
           "tone": "tender",
           "effects": [
-            { "type": "relationship", "target": { "type": "fighter", "fighterId": "room-seventeen" }, "mode": "add", "trust": 8, "ownership": -3 },
-            { "type": "fighterPoints", "target": { "type": "fighter", "fighterId": "room-seventeen" }, "amount": 2 },
-            { "type": "recruitmentDecision", "fighterId": "room-seventeen", "decision": "join" }
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "room-seventeen"
+              },
+              "mode": "add",
+              "trust": 8,
+              "ownership": -3
+            },
+            {
+              "type": "fighterPoints",
+              "target": {
+                "type": "fighter",
+                "fighterId": "room-seventeen"
+              },
+              "amount": 2
+            },
+            {
+              "type": "recruitmentDecision",
+              "fighterId": "room-seventeen",
+              "decision": "join"
+            }
           ],
           "goto": "room-seventeen.join.node.end.001"
         },
         {
           "id": "room-seventeen.join.choice.002",
           "label": "扉そのものを、背番号十七で登録する",
-          "result": "登録区分は結局、シンプルに落ち着いた。「選手・扉(一枚)」。背番号は本人の希望で十七。ユニフォームの代わりに、真鍮のプレートを磨いた。初練習の日、会場の壁に生えた扉を見て、審判が言った。「……ノックするべきか?」。したほうがいい。礼儀として。",
+          "result": "登録区分は「選手・扉(一枚)」、背番号は本人希望で十七。真鍮のプレートを、ユニフォーム代わりに磨いた。初練習、壁に生えた扉に審判が「……ノックするべきか?」したほうがいい、礼儀として。",
           "intent": "規定に収まる形で確実に登録する",
           "promise": "本人のもてなし論は後回しになるが、誰にでも使える成長ポイントを得る。",
           "memory": "背番号十七の真鍮プレートは、毎朝誰かが磨いている。",
           "tone": "pragmatic",
           "effects": [
-            { "type": "relationship", "target": { "type": "fighter", "fighterId": "room-seventeen" }, "mode": "add", "trust": 0, "ownership": 8 },
-            { "type": "sharedPoints", "amount": 2 },
-            { "type": "recruitmentDecision", "fighterId": "room-seventeen", "decision": "join" }
+            {
+              "type": "relationship",
+              "target": {
+                "type": "fighter",
+                "fighterId": "room-seventeen"
+              },
+              "mode": "add",
+              "trust": 0,
+              "ownership": 8
+            },
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            },
+            {
+              "type": "recruitmentDecision",
+              "fighterId": "room-seventeen",
+              "decision": "join"
+            }
           ],
           "goto": "room-seventeen.join.node.end.001"
         },
         {
           "id": "room-seventeen.join.choice.003",
           "label": "今回は十七号室を誘わず、別の機会を待つ",
-          "result": "「今回は、見送りましょう」。部屋は残念そうにシャンデリアを一段暗くして、それでも、覚えたてのお見送りを丁寧にやり切った。「お帰りは、こちらです。……またの、お越しを」。出口は一発で通路に出た。成長は、本物である。",
+          "result": "今回は見送ることにした。部屋はシャンデリアを一段暗くして、それでも覚えたてのお見送りを丁寧にやり切った。「お帰りは、こちらです。……またの、お越しを」出口は一発で通路に出た。成長は本物。",
           "intent": "今回はチームへ誘わない",
           "promise": "今回の所属は見送るが、人物の物語と再会の可能性は失わない。",
           "memory": "一発で成功したお見送りを、部屋は静かに誇っている。",
           "tone": "pragmatic",
           "effects": [
-            { "type": "recruitmentDecision", "fighterId": "room-seventeen", "decision": "decline" }
+            {
+              "type": "recruitmentDecision",
+              "fighterId": "room-seventeen",
+              "decision": "decline"
+            }
           ],
           "goto": "room-seventeen.join.node.end.001"
         }
@@ -189,7 +334,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 生える選手の登録。得意技「お迎え」(接待戦法)。もてなし不要=身内という新区分。",
+    "authorNote": "語り口V2・二行枠で改稿。v2改稿: 生える選手の登録。得意技「お迎え」(接待戦法)。もてなし不要=身内という新区分。",
     "legacyGeneratedIds": false
   }
 }

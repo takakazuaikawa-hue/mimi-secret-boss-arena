@@ -54,45 +54,86 @@
     },
     {
       "type": "line",
-      "id": "shahar.meet.node.line.001",
-      "lineId": "shahar.meet.line.001",
+      "id": "shahar.meet.node.line.001a",
+      "lineId": "shahar.meet.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "昼休み。屋上庭園は私の避難所だ。今日の戦利品は、売店の限定傘。今週だけの限定色で、行列に二十分並んだ。後悔はない。"
+      "text": "昼休み。屋上庭園は、私の避難所。今日の戦利品は、売店の限定傘。"
     },
     {
       "type": "line",
-      "id": "shahar.meet.node.line.002",
-      "lineId": "shahar.meet.line.002",
+      "id": "shahar.meet.node.line.001b",
+      "lineId": "shahar.meet.line.001b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ベンチの隣に、見慣れない銀白の板が立てかけてあった。畳一枚ぶんはある。日光を浴びて、きらきらしている。誰かの忘れ物にしては、置き方が丁寧すぎた。"
+      "text": "今週だけの限定色で、行列に二十分並んだ。後悔はない。"
     },
     {
       "type": "line",
-      "id": "shahar.meet.node.line.003",
-      "lineId": "shahar.meet.line.003",
+      "id": "shahar.meet.node.line.002a",
+      "lineId": "shahar.meet.line.002a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ベンチの隣に、見慣れない銀白の板が立てかけてあった。畳一枚ぶんはある。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.meet.node.line.002b",
+      "lineId": "shahar.meet.line.002b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "日光を浴びて、きらきらしてる。誰かの忘れ物にしては、置き方が丁寧すぎた。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.meet.node.line.003a",
+      "lineId": "shahar.meet.line.003a",
       "speakerId": "legacy.speaker.bkqdo1",
       "speakerName": "シャハル",
       "mode": "dialogue",
-      "text": "それは板ではなく、私の鱗です。日光浴の途中なので、お手を触れずに——いえ。触れても、構いませんが。"
+      "text": "それは板ではなく、私の鱗です。"
     },
     {
       "type": "line",
-      "id": "shahar.meet.node.line.004",
-      "lineId": "shahar.meet.line.004",
+      "id": "shahar.meet.node.line.003b",
+      "lineId": "shahar.meet.line.003b",
+      "speakerId": "legacy.speaker.bkqdo1",
+      "speakerName": "シャハル",
+      "mode": "dialogue",
+      "text": "日光浴の途中なので、お手を触れずに——いえ。触れても、構いませんが。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.meet.node.line.004a",
+      "lineId": "shahar.meet.line.004a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "声が空から降ってくるんですけど！？"
+      "text": "声が空から降ってくるんですけど!?"
     },
     {
       "type": "line",
-      "id": "shahar.meet.node.line.005",
-      "lineId": "shahar.meet.line.005",
+      "id": "shahar.meet.node.line.005a",
+      "lineId": "shahar.meet.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "見上げて、理解した。今日の雲、雲じゃない。屋上の空を覆っているあの銀白の霞は、ぜんぶ一頭ぶんだ。都市より大きい何かが、雲の高さで寝そべっている。",
+      "text": "見上げて、はっとした。耳が、ぴんと立った。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.meet.node.line.005b",
+      "lineId": "shahar.meet.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "今日の雲、雲じゃない。屋上の空を覆う、あの銀白の霞——ぜんぶ一頭ぶん。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.meet.node.line.005c",
+      "lineId": "shahar.meet.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "都市より大きい何かが、雲の高さで寝そべってる。",
       "emotion": "tension"
     },
     {
@@ -113,35 +154,53 @@
     },
     {
       "type": "line",
-      "id": "shahar.meet.node.line.006",
-      "lineId": "shahar.meet.line.006",
+      "id": "shahar.meet.node.line.006a",
+      "lineId": "shahar.meet.line.006a",
       "speakerId": "legacy.speaker.bkqdo1",
       "speakerName": "シャハル",
       "mode": "dialogue",
-      "text": "古竜シャハル。体はこの街に入らないので、鱗を一枚だけ、下ろしています。……ところで、その傘。"
+      "text": "古竜シャハル。体はこの街に入らないので、鱗を一枚だけ、下ろしています。"
     },
     {
       "type": "line",
-      "id": "shahar.meet.node.line.007",
-      "lineId": "shahar.meet.line.007",
+      "id": "shahar.meet.node.line.006b",
+      "lineId": "shahar.meet.line.006b",
+      "speakerId": "legacy.speaker.bkqdo1",
+      "speakerName": "シャハル",
+      "mode": "dialogue",
+      "text": "……ところで、その傘。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.meet.node.line.007a",
+      "lineId": "shahar.meet.line.007a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "こ、これですか？　今週限定の、限定色で……"
+      "text": "こ、これですか?　今週限定の、限定色で……"
     },
     {
       "type": "line",
-      "id": "shahar.meet.node.line.008",
-      "lineId": "shahar.meet.line.008",
+      "id": "shahar.meet.node.line.008a",
+      "lineId": "shahar.meet.line.008a",
       "speakerId": "legacy.speaker.bkqdo1",
       "speakerName": "シャハル",
       "mode": "dialogue",
-      "text": "存じています。売店の行列を、三日前から上空より観測していました。……その色は、何年もちますか。"
+      "text": "存じています。売店の行列を、三日前から上空より観測していました。"
     },
     {
       "type": "line",
-      "id": "shahar.meet.node.line.009",
-      "lineId": "shahar.meet.line.009",
+      "id": "shahar.meet.node.line.008b",
+      "lineId": "shahar.meet.line.008b",
+      "speakerId": "legacy.speaker.bkqdo1",
+      "speakerName": "シャハル",
+      "mode": "dialogue",
+      "text": "……その色は、何年もちますか。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.meet.node.line.009a",
+      "lineId": "shahar.meet.line.009a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -149,35 +208,69 @@
     },
     {
       "type": "line",
-      "id": "shahar.meet.node.line.010",
-      "lineId": "shahar.meet.line.010",
+      "id": "shahar.meet.node.line.010a",
+      "lineId": "shahar.meet.line.010a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "空の気配が、す、と冷めた。「今週で終わり」の一言で、興味の火が消される音がした。三日も観測してたくせに。",
+      "text": "空の気配が、すっと冷めた。「今週で終わり」の一言で、興味の火が消える音がした。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.meet.node.line.010b",
+      "lineId": "shahar.meet.line.010b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "三日も観測してたくせに。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "shahar.meet.node.line.011",
-      "lineId": "shahar.meet.line.011",
+      "id": "shahar.meet.node.line.011a",
+      "lineId": "shahar.meet.line.011a",
       "speakerId": "legacy.speaker.bkqdo1",
       "speakerName": "シャハル",
       "mode": "dialogue",
-      "text": "では、見送ります。私は長いので。どうせ終わるものに本気になると、あとが長いのです。……勇者の来訪も、流行も、私の物語も。全部、先に終わりました。"
+      "text": "では、見送ります。私は長いので。"
     },
     {
       "type": "line",
-      "id": "shahar.meet.node.line.012",
-      "lineId": "shahar.meet.line.012",
+      "id": "shahar.meet.node.line.011b",
+      "lineId": "shahar.meet.line.011b",
+      "speakerId": "legacy.speaker.bkqdo1",
+      "speakerName": "シャハル",
+      "mode": "dialogue",
+      "text": "どうせ終わるものに本気になると、あとが長いのです。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.meet.node.line.011c",
+      "lineId": "shahar.meet.line.011c",
+      "speakerId": "legacy.speaker.bkqdo1",
+      "speakerName": "シャハル",
+      "mode": "dialogue",
+      "text": "……勇者の来訪も、流行も、私の物語も。全部、先に終わりました。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.meet.node.line.012a",
+      "lineId": "shahar.meet.line.012a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "長生きの言い分は、寂しさの正装だった。私の物語も先に終わった——聞き流せない一言が、雲の上から降ってきた。",
+      "text": "長生きの言い分は、寂しさの正装だった。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.meet.node.line.012b",
+      "lineId": "shahar.meet.line.012b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私の物語も先に終わった——聞き流せない一言が、雲の上から降ってきた。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "shahar.meet.node.line.013",
-      "lineId": "shahar.meet.line.013",
+      "id": "shahar.meet.node.line.013a",
+      "lineId": "shahar.meet.line.013a",
       "speakerId": "narrator",
       "mode": "thought",
       "text": "私は考える前に、限定傘を開いて、鱗の隣に差した。銀白の鱗に、限定色がよく映えた。",
@@ -185,47 +278,97 @@
     },
     {
       "type": "line",
-      "id": "shahar.meet.node.line.014",
-      "lineId": "shahar.meet.line.014",
+      "id": "shahar.meet.node.line.014a",
+      "lineId": "shahar.meet.line.014a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "終わる前に見るのと、終わってから聞くのって、ぜんぜん違いますよ。ほら、今週限定の色です。今、見ないと。"
+      "text": "終わる前に見るのと、終わってから聞くのって、ぜんぜん違いますよ。"
     },
     {
       "type": "line",
-      "id": "shahar.meet.node.line.015",
-      "lineId": "shahar.meet.line.015",
+      "id": "shahar.meet.node.line.014b",
+      "lineId": "shahar.meet.line.014b",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "ほら、今週限定の色です。今、見ないと。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.meet.node.line.015a",
+      "lineId": "shahar.meet.line.015a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "空が、身じろぎした。ゴ、と遠雷みたいな音がして、屋上の風向きが変わる。あとで知ったが、この瞬間、三県の天気予報が訂正された。",
+      "text": "空が、身じろぎした。ゴ、と遠雷みたいな音がした。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.meet.node.line.015b",
+      "lineId": "shahar.meet.line.015b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "屋上の風向きが変わる。この瞬間、三県の天気予報が訂正された。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "shahar.meet.node.line.016",
-      "lineId": "shahar.meet.line.016",
+      "id": "shahar.meet.node.line.016a",
+      "lineId": "shahar.meet.line.016a",
       "speakerId": "legacy.speaker.bkqdo1",
       "speakerName": "シャハル",
       "mode": "dialogue",
-      "text": "…………いい色です。記録します。「本日、いい色を見た」と。"
+      "text": "…………いい色です。"
     },
     {
       "type": "line",
-      "id": "shahar.meet.node.line.017",
-      "lineId": "shahar.meet.line.017",
+      "id": "shahar.meet.node.line.016b",
+      "lineId": "shahar.meet.line.016b",
+      "speakerId": "legacy.speaker.bkqdo1",
+      "speakerName": "シャハル",
+      "mode": "dialogue",
+      "text": "記録します。「本日、いい色を見た」と。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.meet.node.line.017a",
+      "lineId": "shahar.meet.line.017a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "そのとき、私の手のひらに、小さな雲がひとつ降りてきた。綿あめくらいの、ちゃんと冷たい本物の雲。「挨拶です」と空が言う。握手の代わりらしい。",
+      "text": "そのとき、手のひらに、小さな雲がひとつ降りてきた。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.meet.node.line.017b",
+      "lineId": "shahar.meet.line.017b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "綿あめくらいの、ちゃんと冷たい本物の雲。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.meet.node.line.017c",
+      "lineId": "shahar.meet.line.017c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「挨拶です」と空が言う。握手の代わりだそう。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "shahar.meet.node.line.018",
-      "lineId": "shahar.meet.line.018",
+      "id": "shahar.meet.node.line.018a",
+      "lineId": "shahar.meet.line.018a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "手のひらの雲は、ひんやりして、少しだけ心拍を上げた。昼休みは、あと十分。この十分を、どう使うかだ。",
+      "text": "手のひらの雲は、ひんやりして、少しだけ心拍を上げた。"
+    },
+    {
+      "type": "line",
+      "id": "shahar.meet.node.line.018b",
+      "lineId": "shahar.meet.line.018b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "昼休みは、あと十分。この十分を、どう使うかだ。",
       "emotion": "resolve"
     },
     {
@@ -235,7 +378,7 @@
         {
           "id": "shahar.meet.choice.001",
           "label": "鱗を屋上の一席として扱う",
-          "result": "私は鱗の隣に「予約席」の札を立てた。「屋上庭園・古竜様御一行(鱗一枚)」。空が笑った気がして、屋上の花が一斉に揺れた。以後、昼休みの屋上には、銀白の鱗と限定傘が並んで立っている。天気は、なぜかいつも晴れる。",
+          "result": "私は鱗の隣に「予約席」の札を立てた。「屋上庭園・古竜様御一行(鱗一枚)」と書いた。空が笑った気がして、屋上の花が一斉に揺れた。以後、昼休みの屋上には、銀白の鱗と限定傘が並んで立っている。",
           "intent": "規格外のお客様に、ちゃんと席を用意する",
           "promise": "目先の報酬は得ない代わりに、この人が何を見送ってきたかを知る。",
           "memory": "鱗に席を用意した店員として、シャハルは私を覚えている。",
@@ -292,7 +435,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 鱗一枚と限定傘の事件。身じろぎで三県の天気が変わる規模の落差。手のひらの雲のドキドキ。Q1=私の物語も先に終わった。",
+    "authorNote": "語り口V2・二行枠で改稿。鱗一枚と限定傘の事件。身じろぎで三県の天気が変わる規模の落差。手のひらの雲のドキドキ。Q1=私の物語も先に終わった。",
     "legacyGeneratedIds": false
   }
 }

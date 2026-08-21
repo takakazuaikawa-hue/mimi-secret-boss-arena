@@ -10,9 +10,17 @@
     "stage": "epilogue"
   },
   "trigger": {
-    "actions": ["rest"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "rest"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 400,
     "weight": 1
   },
@@ -22,7 +30,7 @@
       {
         "id": "peony.epilogue.asset.background.001",
         "kind": "background",
-        "path": "/assets/story/bg-casino-cafe-morning.png",
+        "path": "/assets/story/bg-employee-cafeteria-day-v1.png",
         "alt": "朝の従業員食堂の背景"
       },
       {
@@ -37,29 +45,65 @@
     {
       "type": "direction",
       "id": "peony.epilogue.node.direction.001",
-      "command": { "type": "background", "assetId": "peony.epilogue.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "peony.epilogue.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "line",
-      "id": "peony.epilogue.node.line.001",
-      "lineId": "peony.epilogue.line.001",
+      "id": "peony.epilogue.node.line.001a",
+      "lineId": "peony.epilogue.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "最終大会のあと、食堂に極秘プロジェクトが進行していた。名称「P計画」。内容——ピオニーが全体重を預けても壊れない、巨大専用椅子の製作である。設計と施工は整備班の精鋭が名乗りを上げ、材料は解体式典の廃材を再利用した。"
+      "text": "最終大会のあと、食堂に極秘プロジェクトが進行していた。名称は「ピー計画」"
     },
     {
       "type": "line",
-      "id": "peony.epilogue.node.line.002",
-      "lineId": "peony.epilogue.line.002",
+      "id": "peony.epilogue.node.line.001b",
+      "lineId": "peony.epilogue.line.001b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "そして今日が、椅子耐久試験の日。食堂には技術者たち(一応避難位置)、案内所の子どもたち(紙冠で正装)、うちのチーム全員が集まった。世界一真剣な、着席のための式典である。",
+      "text": "内容——ピオニーが体重を預けても壊れない、巨大専用椅子の製作。"
+    },
+    {
+      "type": "line",
+      "id": "peony.epilogue.node.line.001c",
+      "lineId": "peony.epilogue.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "設計と施工は整備班が名乗りを上げ、材料は解体式典の廃材を再利用した。"
+    },
+    {
+      "type": "line",
+      "id": "peony.epilogue.node.line.002a",
+      "lineId": "peony.epilogue.line.002a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "そして今日が、椅子耐久試験の日。"
+    },
+    {
+      "type": "line",
+      "id": "peony.epilogue.node.line.002b",
+      "lineId": "peony.epilogue.line.002b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "食堂には技術者たち（一応避難位置）、紙冠で正装した子どもたち。"
+    },
+    {
+      "type": "line",
+      "id": "peony.epilogue.node.line.002c",
+      "lineId": "peony.epilogue.line.002c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "うちのチーム全員が集まった。世界一真剣な、着席のための式典。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "peony.epilogue.node.line.003",
-      "lineId": "peony.epilogue.line.003",
+      "id": "peony.epilogue.node.line.003a",
+      "lineId": "peony.epilogue.line.003a",
       "speakerId": "legacy.speaker.1e9iq7o",
       "speakerName": "ピオニー",
       "mode": "dialogue",
@@ -67,63 +111,134 @@
     },
     {
       "type": "line",
-      "id": "peony.epilogue.node.line.004",
-      "lineId": "peony.epilogue.line.004",
+      "id": "peony.epilogue.node.line.004a",
+      "lineId": "peony.epilogue.line.004a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "三十七脚ぶんの雪辱戦です。いけます。設計値は完璧、施工は整備班の職人技。あとは、堂々と座るだけ！"
+      "text": "三十七脚ぶんの雪辱戦です。いけます。設計値は完璧、施工は整備班の職人技。"
+    },
+    {
+      "type": "line",
+      "id": "peony.epilogue.node.line.004b",
+      "lineId": "peony.epilogue.line.004b",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "あとは、堂々と座るだけ!"
     },
     {
       "type": "direction",
       "id": "peony.epilogue.node.direction.002",
-      "command": { "type": "still", "assetId": "peony.epilogue.asset.still.001" }
+      "command": {
+        "type": "still",
+        "assetId": "peony.epilogue.asset.still.001"
+      }
     },
     {
       "type": "direction",
       "id": "peony.epilogue.node.direction.003",
-      "command": { "type": "effect", "effectId": "pulse" }
+      "command": {
+        "type": "effect",
+        "effectId": "pulse"
+      }
     },
     {
       "type": "line",
-      "id": "peony.epilogue.node.line.005",
-      "lineId": "peony.epilogue.line.005",
+      "id": "peony.epilogue.node.line.005a",
+      "lineId": "peony.epilogue.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "着席。——静寂。椅子は、軋みひとつ立てなかった。微動だにしない巨大専用椅子。隣の普通椅子が気圧されて横滑りしただけで、床も沈まない。子どもたちの「すわれたー！」の大歓声。技術者の男泣き。私は兎耳を押さえて、拍手の音量に備えた。",
+      "text": "着席。——静寂。椅子は、軋みひとつ立てなかった。"
+    },
+    {
+      "type": "line",
+      "id": "peony.epilogue.node.line.005b",
+      "lineId": "peony.epilogue.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "微動だにしない巨大専用椅子。隣の椅子が気圧されて横滑りしただけ。"
+    },
+    {
+      "type": "line",
+      "id": "peony.epilogue.node.line.005c",
+      "lineId": "peony.epilogue.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "子どもたちの「すわれたー!」の大歓声。技術者は男泣き。"
+    },
+    {
+      "type": "line",
+      "id": "peony.epilogue.node.line.005d",
+      "lineId": "peony.epilogue.line.005d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私は耳を押さえて、拍手の音量に備えた。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "peony.epilogue.node.line.006",
-      "lineId": "peony.epilogue.line.006",
+      "id": "peony.epilogue.node.line.006a",
+      "lineId": "peony.epilogue.line.006a",
       "speakerId": "legacy.speaker.1e9iq7o",
       "speakerName": "ピオニー",
       "mode": "dialogue",
-      "text": "……すわれた。……わたし、ふつうに、すわれた……！"
+      "text": "……すわれた。……わたし、ふつうに、すわれた……!"
     },
     {
       "type": "line",
-      "id": "peony.epilogue.node.line.007",
-      "lineId": "peony.epilogue.line.007",
+      "id": "peony.epilogue.node.line.007a",
+      "lineId": "peony.epilogue.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「座れた」だけの出来事を、最終決戦の勝利みたいに全員で祝う。よその人には意味不明だろう。でも、この食堂の全員が知っている。彼女がどれだけ「そーっと」の人生を歩いてきたか。今日から彼女は、この席で、どすんと座って昼を食べられる。",
+      "text": "「座れた」だけの出来事を、最終決戦の勝利みたいに全員で祝う。"
+    },
+    {
+      "type": "line",
+      "id": "peony.epilogue.node.line.007b",
+      "lineId": "peony.epilogue.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "よその人には意味不明だろう。でも、この食堂の全員は知っている。"
+    },
+    {
+      "type": "line",
+      "id": "peony.epilogue.node.line.007c",
+      "lineId": "peony.epilogue.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "彼女がどれだけ「そーっと」の人生を歩いてきたか。"
+    },
+    {
+      "type": "line",
+      "id": "peony.epilogue.node.line.007d",
+      "lineId": "peony.epilogue.line.007d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "今日から彼女は、どすんと座って昼を食べられる。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "peony.epilogue.node.line.008",
-      "lineId": "peony.epilogue.line.008",
+      "id": "peony.epilogue.node.line.008a",
+      "lineId": "peony.epilogue.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "式典の締めに、彼女は柿落としの出演届を読み上げた。演目「巨大専用椅子、着席式」。備考——「拍手は、ご自由に」。",
+      "text": "式典の締めに、彼女は柿落としの出演届を読み上げた。"
+    },
+    {
+      "type": "line",
+      "id": "peony.epilogue.node.line.008b",
+      "lineId": "peony.epilogue.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "演目は「巨大専用椅子、着席式」——備考「拍手は、ご自由に」",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "peony.epilogue.node.line.009",
-      "lineId": "peony.epilogue.line.009",
+      "id": "peony.epilogue.node.line.009a",
+      "lineId": "peony.epilogue.line.009a",
       "speakerId": "legacy.speaker.1e9iq7o",
       "speakerName": "ピオニー",
       "mode": "dialogue",
@@ -131,11 +246,27 @@
     },
     {
       "type": "line",
-      "id": "peony.epilogue.node.line.010",
-      "lineId": "peony.epilogue.line.010",
+      "id": "peony.epilogue.node.line.010a",
+      "lineId": "peony.epilogue.line.010a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "昼食の時間になる。彼女の専用席の周りに、いつの間にか案内所の子たちが集まって、紙の冠の城下町ができていた。守る城を失くした巨人の周りに、小さな城が、また増えていく。",
+      "text": "昼食の時間になる。"
+    },
+    {
+      "type": "line",
+      "id": "peony.epilogue.node.line.010b",
+      "lineId": "peony.epilogue.line.010b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "彼女の専用席の周りに、案内所の子たちが集まって、紙の冠の城下町ができていた。"
+    },
+    {
+      "type": "line",
+      "id": "peony.epilogue.node.line.010c",
+      "lineId": "peony.epilogue.line.010c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "守る城を失くした巨人の周りに、小さな城が、また増えていく。",
       "emotion": "tender"
     },
     {
@@ -147,7 +278,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 椅子耐久試験(報酬CG準拠: 微動だにしない専用椅子・横滑りする普通椅子・兎耳を押さえるミミ・紙冠の子ども)。出演届=着席式。",
+    "authorNote": "語り口V2・二行枠で改稿。椅子耐久試験(報酬CG準拠: 微動だにしない専用椅子・横滑りする普通椅子・兎耳を押さえるミミ・紙冠の子ども)。出演届=着席式。",
     "legacyGeneratedIds": false
   }
 }

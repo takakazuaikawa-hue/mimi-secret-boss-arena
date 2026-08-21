@@ -54,19 +54,51 @@
     },
     {
       "type": "line",
-      "id": "sazanami.meet.node.line.001",
-      "lineId": "sazanami.meet.line.001",
+      "id": "sazanami.meet.node.line.001a",
+      "lineId": "sazanami.meet.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "残業明けの夜九時。館内水槽の前のベンチは、遅い夕食の特等席だ。今日の夕食は、売店の見切り品弁当。値引きシール二枚重ね。それでも、思い出の味に似ているから、私はこれをよく買う。"
+      "text": "残業明けの、夜九時。お腹が、ぐうと鳴った。"
     },
     {
       "type": "line",
-      "id": "sazanami.meet.node.line.002",
-      "lineId": "sazanami.meet.line.002",
+      "id": "sazanami.meet.node.line.001b",
+      "lineId": "sazanami.meet.line.001b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ふたを開けた瞬間、水槽の照明が、す、と暗くなった。ガラスの向こうに——目。巨大な、単眼。水槽の端から端まで、瞳だけで埋まっている。",
+      "text": "館内水槽前のベンチが、遅い夕食の特等席。今日は見切り品弁当。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.meet.node.line.001c",
+      "lineId": "sazanami.meet.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "値引きシール、二枚重ね。それでも、思い出の味に似てるから、つい買っちゃう。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.meet.node.line.002a",
+      "lineId": "sazanami.meet.line.002a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ふたを開けた瞬間、水槽の照明が、すっと暗くなった。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.meet.node.line.002b",
+      "lineId": "sazanami.meet.line.002b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ガラスの向こう——目。巨大な、単眼。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.meet.node.line.002c",
+      "lineId": "sazanami.meet.line.002c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "端から端まで、瞳だけで埋まってる。耳が、ぴんと立った。",
       "emotion": "tension"
     },
     {
@@ -87,44 +119,77 @@
     },
     {
       "type": "line",
-      "id": "sazanami.meet.node.line.003",
-      "lineId": "sazanami.meet.line.003",
+      "id": "sazanami.meet.node.line.003a",
+      "lineId": "sazanami.meet.line.003a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "悲鳴を上げる前に、水槽の内側に泡が並んだ。泡は、文字になった。「その青のり——四十二点」。",
+      "text": "悲鳴を上げる前に、水槽の中に泡が並んだ。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.meet.node.line.003b",
+      "lineId": "sazanami.meet.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "泡は文字になった。「その青のり——四十二点」",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "sazanami.meet.node.line.004",
-      "lineId": "sazanami.meet.line.004",
+      "id": "sazanami.meet.node.line.004a",
+      "lineId": "sazanami.meet.line.004a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "よ、四十二点！？　人の夕食に、いきなり採点！？"
+      "text": "よ、四十二点!?　人の夕食に、いきなり採点!?"
     },
     {
       "type": "line",
-      "id": "sazanami.meet.node.line.005",
-      "lineId": "sazanami.meet.line.005",
+      "id": "sazanami.meet.node.line.005a",
+      "lineId": "sazanami.meet.line.005a",
       "speakerId": "legacy.speaker.we7zqt",
       "speakerName": "さざなみ",
       "mode": "dialogue",
-      "text": "……乾いている。磯の香りが、飛んでいる。海への、礼を失した青のり。……四十二点。"
+      "text": "……乾いている。磯の香りが、飛んでいる。"
     },
     {
       "type": "line",
-      "id": "sazanami.meet.node.line.006",
-      "lineId": "sazanami.meet.line.006",
+      "id": "sazanami.meet.node.line.005b",
+      "lineId": "sazanami.meet.line.005b",
+      "speakerId": "legacy.speaker.we7zqt",
+      "speakerName": "さざなみ",
+      "mode": "dialogue",
+      "text": "海への、礼を失した青のり。……四十二点。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.meet.node.line.006a",
+      "lineId": "sazanami.meet.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "声は水を通ったみたいに深く響いた。名乗りによると「さざなみ」。海溝より大きい海流の異形で、この水槽にいるのは影の一部だけらしい。本体の寝返りひとつで、沿岸三県の潮位が変わるという。",
+      "text": "声は、水を通ったみたいに深く響いた。名乗りは「さざなみ」"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.meet.node.line.006b",
+      "lineId": "sazanami.meet.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "、海溝より大きい海流の異形。水槽にいるのは、影のほんの一部だけ。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.meet.node.line.006c",
+      "lineId": "sazanami.meet.line.006c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "本体の寝返り一つで、沿岸三県の潮位が変わるそう。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "sazanami.meet.node.line.007",
-      "lineId": "sazanami.meet.line.007",
+      "id": "sazanami.meet.node.line.007a",
+      "lineId": "sazanami.meet.line.007a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -132,29 +197,63 @@
     },
     {
       "type": "line",
-      "id": "sazanami.meet.node.line.008",
-      "lineId": "sazanami.meet.line.008",
+      "id": "sazanami.meet.node.line.008a",
+      "lineId": "sazanami.meet.line.008a",
       "speakerId": "legacy.speaker.we7zqt",
       "speakerName": "さざなみ",
       "mode": "dialogue",
-      "text": "海のものが、雑に扱われるのを見過ごせない。……それだけ。大きさは、関係ない。"
+      "text": "海のものが、雑に扱われるのを見過ごせない。"
     },
     {
       "type": "line",
-      "id": "sazanami.meet.node.line.009",
-      "lineId": "sazanami.meet.line.009",
+      "id": "sazanami.meet.node.line.008b",
+      "lineId": "sazanami.meet.line.008b",
+      "speakerId": "legacy.speaker.we7zqt",
+      "speakerName": "さざなみ",
+      "mode": "dialogue",
+      "text": "……それだけ。大きさは、関係ない。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.meet.node.line.009a",
+      "lineId": "sazanami.meet.line.009a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "……この弁当、味は四十二点かもですけど。私にとっては、思い出の味に一番似てるんです。だから、勝手に減点しないでください。"
+      "text": "……この弁当、味は四十二点かもですけど。"
     },
     {
       "type": "line",
-      "id": "sazanami.meet.node.line.010",
-      "lineId": "sazanami.meet.line.010",
+      "id": "sazanami.meet.node.line.009b",
+      "lineId": "sazanami.meet.line.009b",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "私にとっては、思い出の味に一番似てるんです。だから、勝手に減点しないでください。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.meet.node.line.010a",
+      "lineId": "sazanami.meet.line.010a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "言ってから、水槽の巨眼と正面から睨み合っていることに気づいた。単眼が、ゆっくり瞬きした。その瞬間——館内放送が鳴った。「沿岸三県に、波浪注意報が発表されました」。",
+      "text": "言ってから、はっとした。巨眼と、正面から睨み合ってる。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.meet.node.line.010b",
+      "lineId": "sazanami.meet.line.010b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "単眼が、ゆっくり瞬きした。その瞬間——館内放送。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.meet.node.line.010c",
+      "lineId": "sazanami.meet.line.010c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「沿岸三県に、波浪注意報」と流れた。",
       "emotion": "tension"
     },
     {
@@ -167,8 +266,8 @@
     },
     {
       "type": "line",
-      "id": "sazanami.meet.node.line.011",
-      "lineId": "sazanami.meet.line.011",
+      "id": "sazanami.meet.node.line.011a",
+      "lineId": "sazanami.meet.line.011a",
       "speakerId": "legacy.speaker.we7zqt",
       "speakerName": "さざなみ",
       "mode": "dialogue",
@@ -176,47 +275,88 @@
     },
     {
       "type": "line",
-      "id": "sazanami.meet.node.line.012",
-      "lineId": "sazanami.meet.line.012",
+      "id": "sazanami.meet.node.line.012a",
+      "lineId": "sazanami.meet.line.012a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "驚くと三県が揺れる人だった。そして巨眼は、水槽の隅へ、ゆっくり小さくなっていく。怒られた金魚みたいに。……この人、悪気が一グラムもない。",
+      "text": "驚くと三県が揺れる人だった。巨眼は、水槽の隅へ、ゆっくり小さくなってく。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.meet.node.line.012b",
+      "lineId": "sazanami.meet.line.012b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "怒られた金魚みたいに。この人、悪気が一グラムもない。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "sazanami.meet.node.line.013",
-      "lineId": "sazanami.meet.line.013",
+      "id": "sazanami.meet.node.line.013a",
+      "lineId": "sazanami.meet.line.013a",
       "speakerId": "legacy.speaker.we7zqt",
       "speakerName": "さざなみ",
       "mode": "dialogue",
-      "text": "思い出の味を、減点した。……海として、恥じる。詫びに、その青のりの一番良い食べ方を、教えたい。"
+      "text": "思い出の味を、減点した。……海として、恥じる。"
     },
     {
       "type": "line",
-      "id": "sazanami.meet.node.line.014",
-      "lineId": "sazanami.meet.line.014",
+      "id": "sazanami.meet.node.line.013b",
+      "lineId": "sazanami.meet.line.013b",
+      "speakerId": "legacy.speaker.we7zqt",
+      "speakerName": "さざなみ",
+      "mode": "dialogue",
+      "text": "詫びに、その青のりの一番良い食べ方を、教えたい。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.meet.node.line.014a",
+      "lineId": "sazanami.meet.line.014a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私はガラスに手のひらを当てた。向こう側で、小さな渦がひとつ、手のひらの形に合わせて生まれる。冷たいガラス越しの、たぶんこれが、海の握手。",
+      "text": "私は、ガラスに手のひらを当てた。向こうで、小さな渦がひとつ。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.meet.node.line.014b",
+      "lineId": "sazanami.meet.line.014b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "手のひらの形に合わせて生まれる。"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.meet.node.line.014c",
+      "lineId": "sazanami.meet.line.014c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "冷たいガラス越し。たぶん、これが海の握手。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "sazanami.meet.node.line.015",
-      "lineId": "sazanami.meet.line.015",
+      "id": "sazanami.meet.node.line.015a",
+      "lineId": "sazanami.meet.line.015a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "泡文字が、最後にひとつ浮かんだ。「あなたの反論——九十八点」。減点の二点は何なのか、気になって夜も眠れない。",
+      "text": "泡文字が、最後にひとつ浮かんだ。「あなたの反論——九十八点」"
+    },
+    {
+      "type": "line",
+      "id": "sazanami.meet.node.line.015b",
+      "lineId": "sazanami.meet.line.015b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "二点の減点、気になって眠れない。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "sazanami.meet.node.line.016",
-      "lineId": "sazanami.meet.line.016",
+      "id": "sazanami.meet.node.line.016a",
+      "lineId": "sazanami.meet.line.016a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "弁当は、まだ半分残っている。食べ方を教わるか、今日はもう帰るか。",
+      "text": "弁当は、まだ半分残ってる。教わるか、今日は帰るか。",
       "emotion": "resolve"
     },
     {
@@ -226,7 +366,7 @@
         {
           "id": "sazanami.meet.choice.001",
           "label": "水槽越しに寝返りの話を聞く",
-          "result": "青のりは、ふたの裏の水滴で三秒しめらせてから食べる——教わった通りにすると、確かに磯の香りが戻った。そのまま閉館後の水槽前で、寝返りの話を聞いた。「海が広すぎて、どこで寝ても、誰かの岸を揺らす」。大きさに困っている人の話を、私は弁当を食べながら、最後まで聞いた。翌朝、泡文字の採点表が水槽に残っていた。「本日の夜食の時間——百点」。",
+          "result": "青のりは水滴で三秒しめらせてから食べる。教わった通り、確かに磯の香りが戻った。そのまま水槽前で、寝返りの話を聞いた。「海が広すぎて、誰かの岸を揺らす」と話す声を、最後まで聞いた。翌朝、泡文字の採点表に「本日の夜食の時間——百点」とあった。",
           "intent": "採点の奥にある事情を聞く",
           "promise": "目先の報酬は得ない代わりに、この人が何に困っているかを知る。",
           "memory": "思い出の弁当を守った夜のことを、さざなみは覚えている。",
@@ -248,7 +388,7 @@
         {
           "id": "sazanami.meet.choice.002",
           "label": "今日はさざなみを誘わず、用事へ戻る",
-          "result": "弁当を食べ終えて、私は帰り支度をした。翌日、館内水槽の前に小さな貼り紙が出ていた。「当水槽は、夜間、食事の採点を行う場合があります。ご了承ください」。総務の仕事の早さと、諦めの早さを同時に感じる貼り紙だった。",
+          "result": "弁当を食べ終えて、帰り支度をした。翌日、水槽の前に小さな貼り紙が出ていた。「当水槽は、夜間、食事の採点を行う場合があります」とあった。総務の仕事の早さと、諦めの早さを同時に感じる貼り紙だった。",
           "intent": "今日は遅い夕食を優先する",
           "promise": "所属選手にはならないが、後の出来事で再会できる。",
           "memory": "九十八点の反論をした店員のことを、さざなみは覚えている。",
@@ -283,7 +423,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/NARRATIVE_REBOOT_PLAN.md / docs/WORLD_CONTINUITY.md",
-    "authorNote": "v2改稿: 泡文字の採点と波浪注意報。単眼を人間化せず主役に(監査方針)。ガラス越しの渦の握手。Q1=海が広すぎてどこで寝ても誰かの岸を揺らす。",
+    "authorNote": "語り口V2・二行枠で改稿。泡文字の採点と波浪注意報。単眼を人間化せず主役に(監査方針)。ガラス越しの渦の握手。Q1=海が広すぎてどこで寝ても誰かの岸を揺らす。",
     "legacyGeneratedIds": false
   }
 }
