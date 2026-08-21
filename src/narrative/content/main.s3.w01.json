@@ -243,7 +243,7 @@
       "lineId": "main.s3.w01.line.005b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「ミミさん、今年の目標、何にします?」。……え。無い。"
+      "text": "「ミミさん、今年の目標、何にします?」。……え。無い。正直に言うと、無い。"
     },
     {
       "type": "line",
@@ -320,7 +320,7 @@
       "lineId": "main.s3.w01.line.007b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "……まあ、いいか。覚えているほうが、覚えていれば。"
+      "text": "……まあ、いいか! 覚えているほうが、覚えていれば。それに、今年はまた新しく知ってもらえる。"
     },
     {
       "type": "line",
@@ -378,7 +378,15 @@
       "lineId": "main.s3.w01.line.009c",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "——今年の目標、向こうから来たかも。",
+      "text": "——今年の目標、向こうから来たかも。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w01.node.line.009d",
+      "lineId": "main.s3.w01.line.009d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……わくわくしてるの、顔に出てますか。出てますね。はい。",
       "emotion": "resolve"
     },
     {
