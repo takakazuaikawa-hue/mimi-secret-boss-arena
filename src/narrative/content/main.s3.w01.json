@@ -8,9 +8,20 @@
     "arcId": "main.stage3"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -22,6 +33,48 @@
         "kind": "background",
         "path": "/assets/story/bg-fountain-plaza-day-v1.png",
         "alt": "噴水広場の背景"
+      },
+      {
+        "id": "main.s3.w01.asset.outcome.001",
+        "kind": "still",
+        "path": "/assets/story/events/main-s3-w01-outcome-proclaim-v1.png",
+        "alt": "紙吹雪の噴水広場で、黒封蝋の告示を掲げて観客へ呼びかける赤い興行制服のミミ",
+        "focusX": 50,
+        "focusY": 44,
+        "gallery": {
+          "title": "本日の新演目、棚卸し",
+          "chapter": "記録外の第1週 / 三度目の、第一週",
+          "caption": "四百年目の告示を掲げると、脅しは祭りの新演目へ変わった。",
+          "unlock": "on-choice",
+          "choiceId": "main.s3.w01.choice.001"
+        }
+      },
+      {
+        "id": "main.s3.w01.asset.outcome.002",
+        "kind": "still",
+        "path": "/assets/story/events/main-s3-w01-outcome-investigate-v1.png",
+        "alt": "夜の記録室で、最古の台帳と黒封蝋の告示を照合する屋内勤務服のミミ",
+        "focusX": 50,
+        "focusY": 44,
+        "gallery": {
+          "title": "台帳のいちばん最初",
+          "chapter": "記録外の第1週 / 三度目の、第一週",
+          "caption": "祭りの灯りが残る夜、四百年前の判が最古の頁から浮かび上がった。",
+          "unlock": "on-choice",
+          "choiceId": "main.s3.w01.choice.002"
+        }
+      },
+      {
+        "id": "main.s3.w01.asset.sprite.mimi.tsukkomi",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-tsukkomi-v1.png",
+        "alt": "驚いてツッコミを入れるミミ"
+      },
+      {
+        "id": "main.s3.w01.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
       }
     ]
   },
@@ -29,91 +82,287 @@
     {
       "type": "direction",
       "id": "main.s3.w01.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s3.w01.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s3.w01.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "direction",
       "id": "main.s3.w01.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.w01.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s3.w01.asset.sprite.mimi.tsukkomi",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
-      "id": "main.s3.w01.node.line.001",
-      "lineId": "main.s3.w01.line.001",
+      "id": "main.s3.w01.node.line.001a",
+      "lineId": "main.s3.w01.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "太鼓の音で目が覚めて、広場に出たら紙吹雪だった。首筋に入って、ちくちくする。垂れ幕いわく、「祝・闘技場開き」。三年前の初日の祭りを、街がまたやっている。はい——三度目の、第一週である。",
+      "text": "太鼓の音で目が覚めて、広場に出たら紙吹雪だった。首筋に入って、ちくちくする。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w01.node.line.001b",
+      "lineId": "main.s3.w01.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "垂れ幕いわく、「祝・闘技場開き」。三年前の初日の祭りを、街がまたやっている。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w01.node.line.001c",
+      "lineId": "main.s3.w01.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "はい——三度目の、第一週である。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s3.w01.node.line.002",
-      "lineId": "main.s3.w01.line.002",
+      "id": "main.s3.w01.node.line.002a",
+      "lineId": "main.s3.w01.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "手帳の暦の欄が、また新しくなっていた。「記録外勤務週・第一週」。あいかわらず、誰が付けたのか役所くさい名前である。要するに、三年目が始まったのだ。優勝も赤線も、頁の中では昨日のまま。驚きの手順は省略して、朝ごはんが先だ。"
+      "text": "手帳の暦の欄が、また新しくなっていた。「記録外勤務週・第一週」。"
     },
     {
       "type": "line",
-      "id": "main.s3.w01.node.line.003",
-      "lineId": "main.s3.w01.line.003",
+      "id": "main.s3.w01.node.line.002b",
+      "lineId": "main.s3.w01.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "うちの点呼は、屋台の列で済んだ。「今年も全員、覚えてまーす」。はい、よろしい。慌てる者は一人もいない。それより焼き餅の列が長いことのほうが、今年最初の議題になった。",
+      "text": "あいかわらず、誰が付けたのか役所くさい名前である。要するに、三年目が始まったのだ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w01.node.line.002c",
+      "lineId": "main.s3.w01.line.002c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "優勝も赤線も、頁の中では昨日のまま。驚きの手順は省略して、朝ごはんが先だ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w01.node.line.003a",
+      "lineId": "main.s3.w01.line.003a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "うちの点呼は、屋台の列で済んだ。「今年も全員、覚えてまーす」。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w01.node.line.003b",
+      "lineId": "main.s3.w01.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "はい、よろしい。慌てる者は一人もいない。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w01.node.line.003c",
+      "lineId": "main.s3.w01.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "それより焼き餅の列が長いことのほうが、今年最初の議題になった。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s3.w01.node.line.004",
-      "lineId": "main.s3.w01.line.004",
+      "id": "main.s3.w01.node.line.004a",
+      "lineId": "main.s3.w01.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "闘技場開きのお祭りは、一昨年も去年も、寸分違わず同じ進行だった——のだが、今年は違う。巻き戻った人は三年前と同じ動きをする。でも、覚えている人は、もう同じには動かないのだ。先頭が二組に増えたパレードに、観客が「どっちが本物か」の賭けを立てる。口上を忘れた係の代わりは、三回聞いて覚えた八百屋のおばちゃん。名調子で、本職より拍手をもらっていた。",
+      "text": "闘技場開きのお祭りは、一昨年も去年も、寸分違わず同じ進行だった——のだが、今年は違う。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w01.node.line.004b",
+      "lineId": "main.s3.w01.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "巻き戻った人は三年前と同じ動きをする。でも、覚えている人は、もう同じには動かないのだ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w01.node.line.004c",
+      "lineId": "main.s3.w01.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "先頭が二組に増えたパレードに、観客が「どっちが本物か」の賭けを立てる。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w01.node.line.004d",
+      "lineId": "main.s3.w01.line.004d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "口上を忘れた係の代わりは、三回聞いて覚えた八百屋のおばちゃん。名調子で、本職より拍手をもらっていた。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s3.w01.node.line.005",
-      "lineId": "main.s3.w01.line.005",
+      "id": "main.s3.w01.node.line.005a",
+      "lineId": "main.s3.w01.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "困りごとは、ひとつだけあった。焼き餅を齧りながら、仲間が言うのだ。「ミミさん、今年の目標、何にします?」。……無いのである。優勝は二回した。壊す規則は、去年ぜんぶ壊した。目標リストが、白紙。",
+      "text": "困りごとは、ひとつだけあった。焼き餅を齧りながら、仲間が言うのだ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w01.node.line.005b",
+      "lineId": "main.s3.w01.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「ミミさん、今年の目標、何にします?」。……無いのである。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w01.node.line.005c",
+      "lineId": "main.s3.w01.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "優勝は二回した。壊す規則は、去年ぜんぶ壊した。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w01.node.line.005d",
+      "lineId": "main.s3.w01.line.005d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "目標リストが、白紙。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s3.w01.node.line.006",
-      "lineId": "main.s3.w01.line.006",
+      "id": "main.s3.w01.node.line.006a",
+      "lineId": "main.s3.w01.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "それなら挨拶だ、とアルデバラン社に乗り込んだ。「今年も正々堂々、興行で勝負しましょう!」。振り向いたのは、あの室長——去年の決勝で、監督席を並べ合った人だ。その目が、まっさらだった。「……どちらさまですか」。ずっこけた。一年争った仲でしょう!? 礼まで交わしたのに!?",
-      "emotion": "comic"
+      "text": "それなら挨拶だ、とアルデバラン社に乗り込んだ。「今年も正々堂々、興行で勝負しましょう!」。"
     },
     {
       "type": "line",
-      "id": "main.s3.w01.node.line.007",
-      "lineId": "main.s3.w01.line.007",
+      "id": "main.s3.w01.node.line.006b",
+      "lineId": "main.s3.w01.line.006b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "社屋を出て、少しだけ、足が遅くなった。あの一年は、どうやら、こちら側にしか残っていない。……まあ、いい。覚えているほうが、覚えていればいい。私たちは、そういうのにはもう慣れている。",
+      "text": "振り向いたのは、あの室長——去年の決勝で、監督席を並べ合った人だ。その目が、まっさらだった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w01.node.line.006c",
+      "lineId": "main.s3.w01.line.006c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「……どちらさまですか」。ずっこけた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w01.node.line.006d",
+      "lineId": "main.s3.w01.line.006d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "一年争った仲でしょう!?礼まで交わしたのに!?",
+      "emotion": "comic"
+    },
+    {
+      "type": "direction",
+      "id": "main.s3.w01.node.direction.mimi.shift.001",
+      "command": {
+        "type": "show",
+        "assetId": "main.s3.w01.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w01.node.line.007a",
+      "lineId": "main.s3.w01.line.007a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "社屋を出て、少しだけ、足が遅くなった。あの一年は、どうやら、こちら側にしか残っていない。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w01.node.line.007b",
+      "lineId": "main.s3.w01.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……まあ、いい。覚えているほうが、覚えていればいい。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w01.node.line.007c",
+      "lineId": "main.s3.w01.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私たちは、そういうのにはもう慣れている。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s3.w01.node.line.008",
-      "lineId": "main.s3.w01.line.008",
+      "id": "main.s3.w01.node.line.008a",
+      "lineId": "main.s3.w01.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "帰りぎわ、掲示板の隅で足が止まった。祭りの貼り紙に紛れて、一枚だけ、黒い封蝋の貼り紙がある。「本闘技場および付属資産一式につき、四百年目の総棚卸しを執り行う」。読み下すと、こうだ。うちの持ち物ぜんぶを、お店の在庫みたいに、数えに来る。",
+      "text": "帰りぎわ、掲示板の隅で足が止まった。祭りの貼り紙に紛れて、一枚だけ、黒い封蝋の貼り紙がある。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w01.node.line.008b",
+      "lineId": "main.s3.w01.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「本闘技場および付属資産一式につき、四百年目の総棚卸しを執り行う」。読み下すと、こうだ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w01.node.line.008c",
+      "lineId": "main.s3.w01.line.008c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "うちの持ち物ぜんぶを、お店の在庫みたいに、数えに来る。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s3.w01.node.line.009",
-      "lineId": "main.s3.w01.line.009",
+      "id": "main.s3.w01.node.line.009a",
+      "lineId": "main.s3.w01.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "しかも、四百年ぶりに。誰が? 何の権利で? 判は、聞いたことのない役所の名前だった。仲間と顔を見合わせて、ほぼ同時に、同じ顔になる。——今年の目標、向こうから来たかもしれない。",
+      "text": "しかも、四百年ぶりに。誰が?何の権利で?"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w01.node.line.009b",
+      "lineId": "main.s3.w01.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "判は、聞いたことのない役所の名前だった。仲間と顔を見合わせて、ほぼ同時に、同じ顔になる。"
+    },
+    {
+      "type": "line",
+      "id": "main.s3.w01.node.line.009c",
+      "lineId": "main.s3.w01.line.009c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "——今年の目標、向こうから来たかもしれない。",
       "emotion": "resolve"
     },
     {
@@ -127,19 +376,31 @@
           "intent": "新しい相手も、祭りの真ん中で迎える",
           "promise": "街が最初から輪に入る代わりに、こちらの動きも筒抜けになる",
           "memory": "祭りの舞台で読み上げた、黒封蝋の告示",
+          "outcomeAssetId": "main.s3.w01.asset.outcome.001",
           "tone": "heroic",
-          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
           "goto": "main.s3.w01.node.end.001"
         },
         {
           "id": "main.s3.w01.choice.002",
           "label": "告示は懐へ。祭りの後で、静かに調べる",
-          "result": "祭りの空気に、お役所の紙は似合わない。そっと剥がして、懐に畳んだ。夜、記録室に寄って、司書さんに判の写しを見せる。梯子の上から、声が降ってきた。「この判子……うんと古い名前ですよ。台帳のいちばん最初のあたりでしか、見たことがありません」。古い紙の匂いと一緒に、四百年という数字が、もう一度出てくる。祭りの太鼓は、遠くでまだ鳴っていた。",
+          "result": "祭りの空気に、お役所の紙は似合わない。そっと剥がして、懐に畳んだ。祭りが終わると、赤い上着を更衣室へ返して黒い接客服に戻る。夜、記録室に寄って、司書さんに判の写しを見せた。梯子の上から、声が降ってくる。「この判子……うんと古い名前ですよ。台帳のいちばん最初のあたりでしか、見たことがありません」。古い紙の匂いと一緒に、四百年という数字が、もう一度出てくる。祭りの太鼓は、遠くでまだ鳴っていた。",
           "intent": "祭りは祭りのまま。調べは静かな場所で",
           "promise": "敵の輪郭を先に掴める代わりに、街への周知は一歩遅れる",
           "memory": "懐に畳んだ、黒封蝋の告示",
+          "outcomeAssetId": "main.s3.w01.asset.outcome.002",
           "tone": "pragmatic",
-          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
           "goto": "main.s3.w01.node.end.001"
         }
       ]
