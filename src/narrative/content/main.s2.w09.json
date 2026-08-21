@@ -8,9 +8,20 @@
     "arcId": "main.stage2"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -20,8 +31,26 @@
       {
         "id": "main.s2.w09.asset.background.001",
         "kind": "background",
-        "path": "/assets/story/bg-observation-deck-night.png",
-        "alt": "夜の海辺と花火の背景"
+        "path": "/assets/story/bg-seven-worlds-fireworks-beach-night-v1.png",
+        "alt": "二年目の海の花火大会で賑わう夜の浜辺"
+      },
+      {
+        "id": "main.s2.w09.asset.sprite.mimi.tsukkomi",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-tsukkomi-v1.png",
+        "alt": "驚いてツッコミを入れるミミ"
+      },
+      {
+        "id": "main.s2.w09.asset.sprite.mimi.smile",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-smile-v1.png",
+        "alt": "笑顔のミミ"
+      },
+      {
+        "id": "main.s2.w09.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
       }
     ]
   },
@@ -29,97 +58,293 @@
     {
       "type": "direction",
       "id": "main.s2.w09.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s2.w09.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s2.w09.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "direction",
       "id": "main.s2.w09.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.w09.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s2.w09.asset.sprite.mimi.tsukkomi",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
-      "id": "main.s2.w09.node.line.001",
-      "lineId": "main.s2.w09.line.001",
+      "id": "main.s2.w09.node.line.001a",
+      "lineId": "main.s2.w09.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "第九戦のあと、あの規定は、もう立っていられなかった。書き直された挑戦状。満員の賭け札。場内が見てしまった、台本に無い死闘。——理由は、三つもあれば十分だった。",
+      "text": "第九戦のあと、あの規定は、もう立っていられなかった。書き直された挑戦状。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w09.node.line.001b",
+      "lineId": "main.s2.w09.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "満員の賭け札。場内が見てしまった、台本に無い死闘。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w09.node.line.001c",
+      "lineId": "main.s2.w09.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "——理由は、三つもあれば十分だった。",
       "emotion": "resolve"
     },
     {
       "type": "line",
-      "id": "main.s2.w09.node.line.002",
-      "lineId": "main.s2.w09.line.002",
+      "id": "main.s2.w09.node.line.002a",
+      "lineId": "main.s2.w09.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "週明けの受付で、儀式をした。規定集の当該の巻を開き、「台本試合規定」の条文に——赤いインクで、まっすぐ一本。私の手で引いた。事務員の線引きは、狂わない。"
+      "text": "週明けの受付で、儀式をした。"
     },
     {
       "type": "line",
-      "id": "main.s2.w09.node.line.003",
-      "lineId": "main.s2.w09.line.003",
+      "id": "main.s2.w09.node.line.002b",
+      "lineId": "main.s2.w09.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ノノさんが、受付の掲示板に正式の紙を貼った。「当該規定、運用停止のお知らせ」。貼り終えて、彼女は小さく拍手をした。「規定が正しく死ぬところ、初めて見ました」。正式が、いちばん強いのだ。",
+      "text": "規定集の当該の巻を開き、「台本試合規定」の条文に——赤いインクで、まっすぐ一本。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w09.node.line.002c",
+      "lineId": "main.s2.w09.line.002c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "私の手で引いた。事務員の線引きは、狂わない。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w09.node.line.003a",
+      "lineId": "main.s2.w09.line.003a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ノノさんが、受付の掲示板に正式の紙を貼った。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w09.node.line.003b",
+      "lineId": "main.s2.w09.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「当該規定、運用停止のお知らせ」貼り終えて、彼女は小さく拍手をした。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w09.node.line.003c",
+      "lineId": "main.s2.w09.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「規定が正しく死ぬところ、初めて見ました」"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w09.node.line.003d",
+      "lineId": "main.s2.w09.line.003d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……正式が、いちばん強いんだなあ。耳が、ちょっと得意げに立った。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s2.w09.node.line.004",
-      "lineId": "main.s2.w09.line.004",
+      "id": "main.s2.w09.node.line.004a",
+      "lineId": "main.s2.w09.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "街は、その赤線一本を、さっそく祭りの口実にした。折よく海の花火大会の週である。「赤線記念!」と屋台が勝手に銘打ち、意味の分からない祝祭の熱が浜へ流れ込んだ。この街の祝い方は、いつも理屈が後から来る。",
+      "text": "街は、その赤線一本を、さっそく祭りの口実にした。折よく、海の花火大会の週だった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w09.node.line.004b",
+      "lineId": "main.s2.w09.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「赤線記念!」と屋台が勝手に銘打ち、意味の分からない祝祭の熱が浜へ流れ込んだ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w09.node.line.004c",
+      "lineId": "main.s2.w09.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "この街の祝い方は、いつも理屈が後から来る。",
       "emotion": "comic"
     },
     {
+      "type": "direction",
+      "id": "main.s2.w09.node.direction.mimi.shift.001",
+      "command": {
+        "type": "show",
+        "assetId": "main.s2.w09.asset.sprite.mimi.smile",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
+    },
+    {
       "type": "line",
-      "id": "main.s2.w09.node.line.005",
-      "lineId": "main.s2.w09.line.005",
+      "id": "main.s2.w09.node.line.005a",
+      "lineId": "main.s2.w09.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "浜は、去年と同じで、去年と違った。人魚の花火は今年も海の中で開き、音のない花火は今年も音を想像させた。花火師の口上だけ、一言増えていた。「今年は一輪多いよ! めでたい理由が、ひとつ多いんでね!」",
+      "text": "浜は、去年と同じで、去年と違った。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w09.node.line.005b",
+      "lineId": "main.s2.w09.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "人魚の花火は今年も海の中で開き、音のない花火は今年も音を想像させた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w09.node.line.005c",
+      "lineId": "main.s2.w09.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "花火師の口上だけ、一言増えていた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w09.node.line.005d",
+      "lineId": "main.s2.w09.line.005d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「今年は一輪多いよ! めでたい理由が、ひとつ多いんでね!」",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s2.w09.node.line.006",
-      "lineId": "main.s2.w09.line.006",
+      "id": "main.s2.w09.node.line.006a",
+      "lineId": "main.s2.w09.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "人混みの向こうに、狼の目の人がいた。焼きとうもろこしを片手に、空を見上げている。初めて「結果を知らない九戦目」を終えた人の顔は、祭りの灯りの下で、ずいぶん若く見えた。目が合って、互いに、小さく会釈だけした。",
+      "text": "人混みの向こうに、狼の目の人がいた。焼きとうもろこしを片手に、空を見上げている。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w09.node.line.006b",
+      "lineId": "main.s2.w09.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "初めて「結果を知らない九戦目」を終えた人の顔は、祭りの灯りの下でずいぶん若く見えた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w09.node.line.006c",
+      "lineId": "main.s2.w09.line.006c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "目が合って、互いに、小さく会釈だけした。",
       "emotion": "tender"
     },
     {
+      "type": "direction",
+      "id": "main.s2.w09.node.direction.mimi.shift.002",
+      "command": {
+        "type": "show",
+        "assetId": "main.s2.w09.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
+    },
+    {
       "type": "line",
-      "id": "main.s2.w09.node.line.007",
-      "lineId": "main.s2.w09.line.007",
+      "id": "main.s2.w09.node.line.007a",
+      "lineId": "main.s2.w09.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "——浜の端に、無粋な一角があった。三脚と、収録機材と、白い手袋。再演企画室が、花火を録っている。祭りの歓声も、花火師の口上も、機材は等しく吸い込んでいく。",
+      "text": "——浜の端に、無粋な一角があった。三脚と、収録機材と、白い手袋。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w09.node.line.007b",
+      "lineId": "main.s2.w09.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "再演企画室が、花火を録っている。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w09.node.line.007c",
+      "lineId": "main.s2.w09.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "祭りの歓声も、花火師の口上も、機材は等しく吸い込んでいく。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s2.w09.node.line.008",
-      "lineId": "main.s2.w09.line.008",
+      "id": "main.s2.w09.node.line.008a",
+      "lineId": "main.s2.w09.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "係員の手元の台帳が、ちらりと見えた。「素材: 祝祭(使用予定: 新企画)」。……新企画。祭りまで素材にする会社の、次の企画とは何だろう。",
+      "text": "係員の手元の台帳が、ちらりと見えた。「素材: 祝祭(使用予定: 新企画)」"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w09.node.line.008b",
+      "lineId": "main.s2.w09.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……新企画。祭りまで素材にする会社の、次の企画とは何だろう。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s2.w09.node.line.009",
-      "lineId": "main.s2.w09.line.009",
+      "id": "main.s2.w09.node.line.009a",
+      "lineId": "main.s2.w09.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "大玉が上がる。歓声の中で、私は懐の規定集の写しに触れた。赤線、一本。残り、五本。——祭りの夜に数える線の本数は、悪くない酔い方をする。",
+      "text": "大玉が上がる。歓声の中で、懐の規定集の写しに触れた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w09.node.line.009b",
+      "lineId": "main.s2.w09.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "赤線、一本。残り、五本。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w09.node.line.009c",
+      "lineId": "main.s2.w09.line.009c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "——祭りの夜に数える線の本数は、悪くない酔い方をする。",
       "emotion": "resolve"
     },
     {
       "type": "effect",
       "id": "main.s2.w09.node.effect.001",
-      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+      "effects": [
+        {
+          "type": "sharedPoints",
+          "amount": 2
+        }
+      ]
     },
     {
       "type": "end",
@@ -130,7 +355,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "2周目・週9(9行・選択肢なし)。赤線一本目の儀式(勝敗ロバスト: 挑戦状+賭け札+死闘の露見の三点で成立)。祭事=花火二年目の差分。引き=「素材: 祝祭(新企画)」→週10発表会へ。",
+    "authorNote": "語り口V2・二行枠で改稿。2周目・週9(9行・選択肢なし)。赤線一本目の儀式(勝敗ロバスト: 挑戦状+賭け札+死闘の露見の三点で成立)。祭事=花火二年目の差分。引き=「素材: 祝祭(新企画)」→週10発表会へ。",
     "legacyGeneratedIds": false
   }
 }

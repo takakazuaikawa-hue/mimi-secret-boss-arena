@@ -8,9 +8,20 @@
     "arcId": "main.stage2"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -22,6 +33,12 @@
         "kind": "background",
         "path": "/assets/arena-daylight.png",
         "alt": "契約者リーグ当日の闘技場の背景"
+      },
+      {
+        "id": "main.s2.w12.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
       }
     ]
   },
@@ -29,83 +46,229 @@
     {
       "type": "direction",
       "id": "main.s2.w12.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s2.w12.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s2.w12.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "direction",
       "id": "main.s2.w12.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.w12.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s2.w12.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
-      "id": "main.s2.w12.node.line.001",
-      "lineId": "main.s2.w12.line.001",
+      "id": "main.s2.w12.node.line.001a",
+      "lineId": "main.s2.w12.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "契約者リーグの朝。今年も会場は審理仕立てで、小槌の置かれた本部席が組まれている。相手は——救護の聖女、マリアンさんの隊。街で知らない者のない、完璧な救護のチームである。",
+      "text": "契約者リーグの朝。会場は、今年も審理仕立て。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w12.node.line.001b",
+      "lineId": "main.s2.w12.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "小槌の置かれた、本部席が組まれている。相手は——救護の聖女、マリアンさんの隊。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w12.node.line.001c",
+      "lineId": "main.s2.w12.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "街で知らない者のない、完璧な救護のチームだった。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s2.w12.node.line.002",
-      "lineId": "main.s2.w12.line.002",
+      "id": "main.s2.w12.node.line.002a",
+      "lineId": "main.s2.w12.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "会場に入って、まず目を疑った。試合前だというのに、相手方の救護テントに行列ができている。会場じゅうの怪我と疲れが、吸い寄せられるように集まっていく。対戦相手であるうちの選手の古傷まで、診ようとしてくれる。"
+      "text": "会場に入って、まず目を疑った。試合前なのに、救護テントに、もう行列。"
     },
     {
       "type": "line",
-      "id": "main.s2.w12.node.line.003",
-      "lineId": "main.s2.w12.line.003",
+      "id": "main.s2.w12.node.line.002b",
+      "lineId": "main.s2.w12.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ノノさんが、調べてくれた規定を差し出した。「常時稼働条項」——救護に区分された資産は、興行の間、無休で稼働する。……受付には、休止札がある。あの立派な「休止中」の札が。救護には、無い。最初から、作られていない。",
+      "text": "会場じゅうの怪我と疲れが、吸い寄せられていく。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w12.node.line.002c",
+      "lineId": "main.s2.w12.line.002c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "対戦相手の、うちの選手の古傷まで診ようとしてくれる。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w12.node.line.003a",
+      "lineId": "main.s2.w12.line.003a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ノノさんが、調べた規定を差し出した。「常時稼働条項」"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w12.node.line.003b",
+      "lineId": "main.s2.w12.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "——救護の資産は、興行の間、無休で稼働する。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w12.node.line.003c",
+      "lineId": "main.s2.w12.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……受付には、休止札がある。あの立派な「休止中」の札が。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w12.node.line.003d",
+      "lineId": "main.s2.w12.line.003d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "救護には、無い。最初から、作られていない。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s2.w12.node.line.004",
-      "lineId": "main.s2.w12.line.004",
+      "id": "main.s2.w12.node.line.004a",
+      "lineId": "main.s2.w12.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "審理の冒頭で、私は質問を立てた。「救護に休みが無いのは、規定ですか。それとも、ご本人の希望ですか」。会社側の代理人は、間を置かず答えた。「規定です」。——即答できてしまうことが、答えだった。誰も、本人に聞いていない。",
+      "text": "審理の冒頭で、質問を立てた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w12.node.line.004b",
+      "lineId": "main.s2.w12.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「救護に休みが無いのは、規定ですか。ご本人の希望ですか」代理人は、間を置かず答えた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w12.node.line.004c",
+      "lineId": "main.s2.w12.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「規定です」"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w12.node.line.004d",
+      "lineId": "main.s2.w12.line.004d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……即答できてしまうことが、答えだった。誰も、聞いていない。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s2.w12.node.line.005",
-      "lineId": "main.s2.w12.line.005",
+      "id": "main.s2.w12.node.line.005a",
+      "lineId": "main.s2.w12.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "聖女の側は、静かに立っていた。疲れなど、見せない。完璧に。ただ、掲示された選手名鑑の「私用予定」の欄だけが——真っ白だった。仕事の予定で埋まった一年の中に、本人の予定が、一つも無い。",
+      "text": "聖女の側は、静かに立っていた。疲れなど、見せない。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w12.node.line.005b",
+      "lineId": "main.s2.w12.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ただ、選手名鑑の「私用予定」の欄だけが——真っ白。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w12.node.line.005c",
+      "lineId": "main.s2.w12.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "仕事で埋まった一年に、本人の予定が、一つも無い。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s2.w12.node.line.006",
-      "lineId": "main.s2.w12.line.006",
+      "id": "main.s2.w12.node.line.006a",
+      "lineId": "main.s2.w12.line.006a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "この試合、勝って——「休む権利」を、審理台に載せます。受付に休止札があるなら、救護にも要るはずです。",
+      "text": "この試合、勝って——「休む権利」を、審理台に載せます。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w12.node.line.006b",
+      "lineId": "main.s2.w12.line.006b",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "受付に休止札があるなら、救護にも要るはずです。",
       "emotion": "resolve"
     },
     {
       "type": "line",
-      "id": "main.s2.w12.node.line.007",
-      "lineId": "main.s2.w12.line.007",
+      "id": "main.s2.w12.node.line.007a",
+      "lineId": "main.s2.w12.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "宣言を聞いた聖女が、初めてこちらを向いた。慈愛の笑顔のまま、彼女は言った。「お手柔らかに、とは申しません。——全力の方が、診断が、楽しいので」。……この人、完璧なだけの人ではないらしい。良かった。戦いがいがある。",
+      "text": "宣言を聞いた聖女が、初めてこちらを向いた。慈愛の笑顔のまま、彼女は言った。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w12.node.line.007b",
+      "lineId": "main.s2.w12.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「お手柔らかに、とは申しません。全力の方が、診断が楽しいので」耳が、ぴんと立った。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w12.node.line.007c",
+      "lineId": "main.s2.w12.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……戦いがいが、ある。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s2.w12.node.line.008",
-      "lineId": "main.s2.w12.line.008",
+      "id": "main.s2.w12.node.line.008a",
+      "lineId": "main.s2.w12.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "小槌が鳴る。入場口の札が裏返る。赤線の三本目——ではない、まだ二本目を懸けた審理が、始まる。",
+      "text": "小槌が鳴る。入場口の札が、裏返る。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w12.node.line.008b",
+      "lineId": "main.s2.w12.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "赤線の三本目ではない、まだ二本目を懸けた審理が始まる。",
       "emotion": "tension"
     },
     {
@@ -115,23 +278,33 @@
         {
           "id": "main.s2.w12.choice.001",
           "label": "全力で戦って、全力で診てもらう",
-          "result": "「うちは全力でやります。終わったら、全力で診てください」。聖女の目が、きらりと光った。「その注文、初めてです」。完璧な救護に一番効く反対運動は、遠慮ではなく、診断しがいのある全力だ。審理の記録係が首をかしげながら書き取った。「双方、戦意ではなく診療意欲が高揚」。この裁判、方向は変だが、熱だけは本物である。",
+          "result": "「うちは全力でやります。終わったら、全力で診てください」。聖女の目が、きらりと光った。「その注文、初めてです」。記録係が首をかしげて書いた。「双方、診療意欲が高揚」。方向は変だけど、熱だけは本物。",
           "intent": "相手の流儀に、真正面から乗る",
           "promise": "最高の試合になる代わりに、手加減の余地は消える",
           "memory": "「その注文、初めてです」の一言が審理記録に残った",
           "tone": "wild",
-          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
           "goto": "main.s2.w12.node.end.001"
         },
         {
           "id": "main.s2.w12.choice.002",
           "label": "本人の希望を聞くことを、審理に要求する",
-          "result": "「審理の前に、一つだけ。規定の当事者に、希望を聞いてください。記録に残る形で」。本部席がざわめいた。規定の審理で本人の希望を聞く——前例が無いらしい。前例が無いことは、禁止されていないことだ。うちの規定集読破隊が調べ上げた三十八巻の中に、それを禁じる条文は無い。小槌が、二回鳴った。「……認めます」。小さな前例が、いま一つ、できた。",
+          "result": "「審理の前に、一つだけ。規定の当事者に、希望を聞いてください」。本部席がざわめいた。前例が無いらしい。でも、禁じる条文も無い。三十八巻、うちの規定集読破隊が調べ上げた。小槌が二回。「……認めます」。小さな前例が、また一つ。",
           "intent": "規定より先に、本人の声を記録させる",
           "promise": "審理の土俵が変わる代わりに、会社側の警戒も一段上がる",
           "memory": "「本人の希望を聞く」前例が審理記録に生まれた",
           "tone": "defiant",
-          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
           "goto": "main.s2.w12.node.end.001"
         }
       ]
@@ -145,7 +318,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "2周目・週12大会週(8行+選択)。ルール=常時稼働条項。マリアンの登記(診断が効きすぎ・私用予定欄)は公開範囲。受付の休止札(カシム登記)との対比で悪を立たせる。「即答できることが答え」。",
+    "authorNote": "語り口V2・二行枠で改稿。2周目・週12大会週(8行+選択)。ルール=常時稼働条項。マリアンの登記(診断が効きすぎ・私用予定欄)は公開範囲。受付の休止札(カシム登記)との対比で悪を立たせる。「即答できることが答え」。",
     "legacyGeneratedIds": false
   }
 }

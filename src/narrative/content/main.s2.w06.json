@@ -8,9 +8,20 @@
     "arcId": "main.stage2"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -22,6 +33,18 @@
         "kind": "background",
         "path": "/assets/arena-daylight.png",
         "alt": "特設舞台になった闘技場の背景"
+      },
+      {
+        "id": "main.s2.w06.asset.sprite.mimi.tsukkomi",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-tsukkomi-v1.png",
+        "alt": "驚いてツッコミを入れるミミ"
+      },
+      {
+        "id": "main.s2.w06.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
       }
     ]
   },
@@ -29,91 +52,247 @@
     {
       "type": "direction",
       "id": "main.s2.w06.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s2.w06.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s2.w06.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "direction",
       "id": "main.s2.w06.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.w06.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s2.w06.asset.sprite.mimi.tsukkomi",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
-      "id": "main.s2.w06.node.line.001",
-      "lineId": "main.s2.w06.line.001",
+      "id": "main.s2.w06.node.line.001a",
+      "lineId": "main.s2.w06.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "リバイバル公演の初日は、大入りだった。演目「先付け、四十二点」——去年の、うちの初戦。自分たちの再演を自分たちで観に行くという、妙な座組でうちは客席に並んだ。",
+      "text": "リバイバル公演の初日は、拍子抜けするほど大入りだった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w06.node.line.001b",
+      "lineId": "main.s2.w06.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "演目「先付け、四十二点」——去年の、うちの初戦。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w06.node.line.001c",
+      "lineId": "main.s2.w06.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "自分たちの再演を、自分たちで観に行く。妙な座組で、客席に並んだ。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s2.w06.node.line.002",
-      "lineId": "main.s2.w06.line.002",
+      "id": "main.s2.w06.node.line.002a",
+      "lineId": "main.s2.w06.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "幕が開いて、役者の「ミミ」が出てきた。衣装が完璧だった。兎の耳の角度まで完璧だった。私は自分の耳を、思わず触った。"
+      "text": "幕が開いて、役者さん演じる「ミミ」が出てきた。衣装が完璧だった。"
     },
     {
       "type": "line",
-      "id": "main.s2.w06.node.line.003",
-      "lineId": "main.s2.w06.line.003",
+      "id": "main.s2.w06.node.line.002b",
+      "lineId": "main.s2.w06.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "偽ミミが見得を切る。「初心者です。監督が。」——場内、爆笑。本人の隣で。うちの面々は変な声を出して笑い、私は笑いながら、座席に深く沈んだ。自分の名場面は、正面から観るものではない。",
+      "text": "兎の耳の角度まで、完璧だった。……思わず、自分の耳を触った。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w06.node.line.003a",
+      "lineId": "main.s2.w06.line.003a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "偽ミミが見得を切る。「初心者です。監督が」"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w06.node.line.003b",
+      "lineId": "main.s2.w06.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "——場内、爆笑。本人の隣で。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w06.node.line.003c",
+      "lineId": "main.s2.w06.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "仲間たちが変な声で笑い、私も笑いながら、座席に深く沈んだ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w06.node.line.003d",
+      "lineId": "main.s2.w06.line.003d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……自分の名場面は、正面から観るものじゃない。",
       "emotion": "comic"
     },
     {
+      "type": "direction",
+      "id": "main.s2.w06.node.direction.mimi.shift.001",
+      "command": {
+        "type": "show",
+        "assetId": "main.s2.w06.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
+    },
+    {
       "type": "line",
-      "id": "main.s2.w06.node.line.004",
-      "lineId": "main.s2.w06.line.004",
+      "id": "main.s2.w06.node.line.004a",
+      "lineId": "main.s2.w06.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "笑って観ていた。途中までは。役者さんたちは、上手い。上手いのに——どこか、手順をなぞる目をしている。去年あの砂の上にあった「次がどうなるか誰も知らない」が、板の上には、無い。",
+      "text": "笑って観ていた。途中までは。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w06.node.line.004b",
+      "lineId": "main.s2.w06.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "役者さんたちは、上手い。上手いのに——どこか手順をなぞる目をしてる。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w06.node.line.004c",
+      "lineId": "main.s2.w06.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "去年あの砂の上にあった「次がどうなるか誰も知らない」が、板の上には、無い。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s2.w06.node.line.005",
-      "lineId": "main.s2.w06.line.005",
+      "id": "main.s2.w06.node.line.005a",
+      "lineId": "main.s2.w06.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "波の大道具が、仕掛けの泡文字を掲げた。「せんつけ 42てん」。客席から拍手。……本物のあの泡は、生きて、選んで、点を付けていたのだけれど。作り物の泡は、毎晩同じ点を掲げるのだろう。",
+      "text": "波の大道具が、仕掛けの泡文字を掲げた。「せんつけ 42てん」客席から拍手。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w06.node.line.005b",
+      "lineId": "main.s2.w06.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……本物のあの泡は、生きて、選んで、点を付けてたのに。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w06.node.line.005c",
+      "lineId": "main.s2.w06.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "作り物の泡は、毎晩同じ点を掲げるんだろう。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s2.w06.node.line.006",
-      "lineId": "main.s2.w06.line.006",
+      "id": "main.s2.w06.node.line.006a",
+      "lineId": "main.s2.w06.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "幕間、隣の席の剣士さんが、ぽつりと言った。「よく出来とる。……出来すぎとって、寂しいのう」。同じことを感じている人が、隣にいた。",
+      "text": "幕間、隣の席の剣士さんが、ぽつりと言った。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w06.node.line.006b",
+      "lineId": "main.s2.w06.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「よく出来とる。……出来すぎとって、寂しいのう」同じことを感じてる人が、隣にいた。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s2.w06.node.line.007",
-      "lineId": "main.s2.w06.line.007",
+      "id": "main.s2.w06.node.line.007a",
+      "lineId": "main.s2.w06.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "終演後、楽屋へ見舞いに行った。役者さんに罪はない。むしろ立派な仕事だ。役者の「ミミ」さんは、目を輝かせて喜んだ。「ご本人に観ていただけるなんて! 明日から、もっと寄せます!」。寄せなくていいです。今ので満点です。",
+      "text": "終演後、楽屋へ見舞いに行った。役者さんに罪はない。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w06.node.line.007b",
+      "lineId": "main.s2.w06.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "むしろ立派な仕事だ。役者の「ミミ」さんが、目を輝かせて喜んだ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w06.node.line.007c",
+      "lineId": "main.s2.w06.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「ご本人に観ていただけるなんて! 明日から、もっと寄せます!」"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w06.node.line.007d",
+      "lineId": "main.s2.w06.line.007d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……寄せなくていいです。今ので満点です。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s2.w06.node.line.008",
-      "lineId": "main.s2.w06.line.008",
+      "id": "main.s2.w06.node.line.008a",
+      "lineId": "main.s2.w06.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "——その楽屋の、衣装棚の上。見てしまった。黒い、角封筒。赤い封蝋。宛名は「座長殿」。役者さんたちは、まだ誰も気づいていない。",
+      "text": "——その楽屋の、衣装棚の上。見てしまった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w06.node.line.008b",
+      "lineId": "main.s2.w06.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "黒い、角封筒。赤い封蝋。宛名は「座長殿」役者さんたちは、まだ誰も気づいていない。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s2.w06.node.line.009",
-      "lineId": "main.s2.w06.line.009",
+      "id": "main.s2.w06.node.line.009a",
+      "lineId": "main.s2.w06.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "帰り道は、静かだった。会社は、自分で立ち上げた再演の座組にすら、あの封筒を出す。……この公演の裏で、何が数えられているんだろう。",
+      "text": "帰り道は、静かだった。会社は、自分で立ち上げた再演の座組にすら、あの封筒を出す。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w06.node.line.009b",
+      "lineId": "main.s2.w06.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……この公演の裏で、何が数えられてるんだろう。",
       "emotion": "tension"
     },
     {
@@ -123,23 +302,33 @@
         {
           "id": "main.s2.w06.choice.001",
           "label": "翌朝、座長に封筒のことを伝えに行く",
-          "result": "見て見ぬふりは、性に合わない。翌朝、座長さんを訪ねて、見たままを伝えた。座長さんは封筒を確かめ、長く息を吐いた。「……うちの一座にも、来ましたか」。来ましたか、という言い方だった。この街の興行の世界で、あの封筒はよく知られた不幸の形らしい。「ご忠告、痛み入ります。困ったときは——おたくの受付に、相談に行っても?」。どうぞ。うちの受付は、この街でいちばん正式です。",
+          "result": "見て見ぬふりは、性に合わない。翌朝、座長さんに伝えた。「……うちの一座にも、来ましたか」封筒は、この街でよく知られた不幸の形らしい。「困ったときは、おたくの受付に?」どうぞ。うちが、この街でいちばん正式です。",
           "intent": "見てしまった不幸を、放置しない",
           "promise": "一座との縁ができる代わりに、会社の内情に一歩踏み込む",
           "memory": "座長の「うちの一座にも、来ましたか」が手帳に残る",
           "tone": "heroic",
-          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
           "goto": "main.s2.w06.node.end.001"
         },
         {
           "id": "main.s2.w06.choice.002",
           "label": "まず、封筒の宛先の意味を調べる",
-          "result": "動く前に、知る。ノノさんと二人、興行側へ出る封筒の前例を洗った。分かったこと——座組への封筒は、大抵「演目の差し替え」か「上演権の回収」。つまりあの一座は近々、演目か、一座そのものを、会社に動かされる。差し替え先の演目名はまだ分からない。分からないが、嫌な予感の形は、もう知っている。「世界滅亡ショー」。……考えすぎであってほしい。",
+          "result": "動く前に、知る。ノノさんと洗った、座組封筒の前例。大抵「演目の差し替え」か「上演権の回収」だ。差し替え先はまだ分からない。ただ、嫌な予感の形はもう知ってる。「世界滅亡ショー」の四文字が浮かぶ。……考えすぎであってほしい。",
           "intent": "善意で動く前に、事実を揃える",
           "promise": "先が読める代わりに、動き出しは一歩遅れる",
           "memory": "座組封筒の前例(差し替え/回収)の控えが増えた",
           "tone": "pragmatic",
-          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
           "goto": "main.s2.w06.node.end.001"
         }
       ]
@@ -153,7 +342,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "2周目・週6(9行+選択)。再演の質感(上手いのに「次を知らない」が無い)=この周の主題の実感化。黒角封筒は座長宛の遠景(キャラ個別の書式と共通)。選択Bが週10の滅亡ショー発表の予感線。",
+    "authorNote": "語り口V2・二行枠で改稿。2周目・週6(9行+選択)。再演の質感(上手いのに「次を知らない」が無い)=この周の主題の実感化。黒角封筒は座長宛の遠景(キャラ個別の書式と共通)。選択Bが週10の滅亡ショー発表の予感線。",
     "legacyGeneratedIds": false
   }
 }

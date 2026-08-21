@@ -8,9 +8,20 @@
     "arcId": "main.stage2"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -41,12 +52,18 @@
     {
       "type": "direction",
       "id": "main.s2.w19.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s2.w19.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s2.w19.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "direction",
       "id": "main.s2.w19.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
     },
     {
       "type": "direction",
@@ -61,20 +78,36 @@
     },
     {
       "type": "line",
-      "id": "main.s2.w19.node.line.001",
-      "lineId": "main.s2.w19.line.001",
+      "id": "main.s2.w19.node.line.001a",
+      "lineId": "main.s2.w19.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "決勝の相手の欄は、今朝もまだ「調整中」。なら、こちらは支度を進めるだけだ。決戦準備の週は、掃除から始めた。験担ぎである。正面玄関の趣意書の額を、ノノさんと二人で外して、硝子を磨く。「当場は、物語を終えた者たちが、続きを生きるための場所である」。何度読んでも、いい一行だ。",
+      "text": "「当場は、物語を終えた者たちが、続きを生きるための場所である」何度読んでも、いい一行だと思う。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s2.w19.node.line.002",
-      "lineId": "main.s2.w19.line.002",
+      "id": "main.s2.w19.node.line.002a",
+      "lineId": "main.s2.w19.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "額を外した壁を見て、ノノさんが「あら」と言った。趣意書の掛かっていた場所の隣に——もう一つ、四角い日焼け跡がある。同じ大きさの跡。ここには昔、もう一枚、何かが並んで掛かっていた。"
+      "text": "額を外した壁を見て、ノノさんが「あら」と言った。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w19.node.line.002b",
+      "lineId": "main.s2.w19.line.002b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "隣に、もう一つ、四角い日焼け跡。同じ大きさだった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w19.node.line.002c",
+      "lineId": "main.s2.w19.line.002c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……ここには昔、何かが並んで掛かっていたらしい。"
     },
     {
       "type": "direction",
@@ -89,53 +122,146 @@
     },
     {
       "type": "line",
-      "id": "main.s2.w19.node.line.003",
-      "lineId": "main.s2.w19.line.003",
+      "id": "main.s2.w19.node.line.003a",
+      "lineId": "main.s2.w19.line.003a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "記録室の司書さんに聞いた。彼女は台帳を三往復して、首を振った。「記録に、ありません。台帳にも」。それから、少しだけ声を落とした。「……台帳に無いものが、この街には、いくつかあるんです。あなたの控えと。この跡と」。",
+      "text": "記録室の司書さんに聞いた。台帳を、三往復してくれた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w19.node.line.003b",
+      "lineId": "main.s2.w19.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "首を振って、「記録に、ありません。台帳にも」それから、少しだけ声を落として言った。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w19.node.line.003c",
+      "lineId": "main.s2.w19.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「台帳に無いものが、この街には、いくつかあるんです」「あなたの控えと。この跡と」"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w19.node.line.003d",
+      "lineId": "main.s2.w19.line.003d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……え。耳が、ぴくっと立つ。台帳に無いもの、私も、その一つ。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s2.w19.node.line.004",
-      "lineId": "main.s2.w19.line.004",
+      "id": "main.s2.w19.node.line.004a",
+      "lineId": "main.s2.w19.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "深追いは、今週はしない。決勝前である。それでも事務員の癖で、跡の寸法だけ測って控えた。縦横、趣意書と同寸。掛け直した額の隣の空白は、心なしか、何かを待っている顔をしていた。",
+      "text": "深追いは、今週はしない。決勝前だ。それでも事務員の癖で、跡の寸法だけ測って控えた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w19.node.line.004b",
+      "lineId": "main.s2.w19.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "縦横、趣意書とぴったり同じ。……几帳面、直らない。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w19.node.line.004c",
+      "lineId": "main.s2.w19.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "掛け直した額の隣の空白は、何かを待つ顔をしていた。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s2.w19.node.line.005",
-      "lineId": "main.s2.w19.line.005",
+      "id": "main.s2.w19.node.line.005a",
+      "lineId": "main.s2.w19.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "準備は、順調だった。特訓は仕上げに入り、装備は磨かれ、まかないは験担ぎの献立表を組み始めた。赤線は三本。残る条文は、出口廃止、名入れ販売——そして、条文の無い六つ目。",
+      "text": "準備は、順調だった。特訓は仕上げ、装備は磨かれ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w19.node.line.005b",
+      "lineId": "main.s2.w19.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "まかないは、験担ぎの献立表を組み始めていた。赤線は三本。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w19.node.line.005c",
+      "lineId": "main.s2.w19.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "残る条文は、出口廃止と名入れ販売。それと——条文の無い、六つ目。",
       "emotion": "resolve"
     },
     {
       "type": "line",
-      "id": "main.s2.w19.node.line.006",
-      "lineId": "main.s2.w19.line.006",
+      "id": "main.s2.w19.node.line.006a",
+      "lineId": "main.s2.w19.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "掲示板には、所有者グランプリの告知が出た。会場の欄を読んで、受付が静まった。「本日の会場: **第十七号室**」。——会場が、部屋。部屋の中で、試合をするらしい。",
+      "text": "掲示板に、所有者グランプリの告知が出た。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w19.node.line.006b",
+      "lineId": "main.s2.w19.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "会場の欄を読んで、受付が、すっと静まる。「本日の会場: 第十七号室」"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w19.node.line.006c",
+      "lineId": "main.s2.w19.line.006c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……会場が、部屋?部屋の中で、試合をするらしい。変な話だ。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s2.w19.node.line.007",
-      "lineId": "main.s2.w19.line.007",
+      "id": "main.s2.w19.node.line.007a",
+      "lineId": "main.s2.w19.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "夜、帰りぎわに振り返ると、正面玄関の灯りの下、誰かが立って、額の隣の日焼け跡をじっと見上げていた。背中しか、見えなかった。声は、かけなかった。",
+      "text": "夜、帰りぎわに振り返った。正面玄関の灯りの下。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w19.node.line.007b",
+      "lineId": "main.s2.w19.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "誰かが立って、日焼け跡をじっと見上げていた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w19.node.line.007c",
+      "lineId": "main.s2.w19.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "背中しか、見えなかった。声は、かけなかった。",
       "emotion": "tension"
     },
     {
       "type": "effect",
       "id": "main.s2.w19.node.effect.001",
-      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+      "effects": [
+        {
+          "type": "sharedPoints",
+          "amount": 2
+        }
+      ]
     },
     {
       "type": "end",
@@ -146,7 +272,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "2周目・週19(7行・選択肢なし)。3周目への遠い糸=額の隣の日焼け跡(説明しない)。台帳の外のものの列挙(控え・跡)。引き=会場「第十七号室」+跡を見上げる背中(誰かは書かない)。",
+    "authorNote": "語り口V2・二行枠で改稿。2周目・週19(7行→30ノード・選択肢なし)。3周目への遠い糸=額の隣の日焼け跡(説明しない)。台帳の外のものの列挙(控え・跡)。引き=会場「第十七号室」+跡を見上げる背中(誰かは書かない)。",
     "legacyGeneratedIds": false
   }
 }

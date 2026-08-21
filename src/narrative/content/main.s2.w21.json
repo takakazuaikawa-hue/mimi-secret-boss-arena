@@ -8,9 +8,20 @@
     "arcId": "main.stage2"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -22,6 +33,18 @@
         "kind": "background",
         "path": "/assets/story/bg-arena-reception.png",
         "alt": "闘技場の正面受付の背景"
+      },
+      {
+        "id": "main.s2.w21.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
+      },
+      {
+        "id": "main.s2.w21.asset.sprite.mimi.smile",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-smile-v1.png",
+        "alt": "笑顔のミミ"
       }
     ]
   },
@@ -29,88 +52,276 @@
     {
       "type": "direction",
       "id": "main.s2.w21.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s2.w21.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s2.w21.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "direction",
       "id": "main.s2.w21.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.w21.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s2.w21.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
-      "id": "main.s2.w21.node.line.001",
-      "lineId": "main.s2.w21.line.001",
+      "id": "main.s2.w21.node.line.001a",
+      "lineId": "main.s2.w21.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "赤線の四本目は、震える手で引いた。出口廃止条項。十七号室の一戦と、部屋に浮かんだ扉と、満員の証人。あの条文はもう、誰も守れない。儀式のあと、部屋への約束どおり、大工さんと出口の相談も始めた。",
+      "text": "赤線の四本目は、震える手で引いた。出口廃止条項。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w21.node.line.001b",
+      "lineId": "main.s2.w21.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "十七号室の一戦と、浮かんだ扉と、満員の証人。あの条文は、もう誰も守れない。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w21.node.line.001c",
+      "lineId": "main.s2.w21.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "儀式のあと、約束どおり大工さんと出口の相談も始めた。",
       "emotion": "resolve"
     },
     {
       "type": "line",
-      "id": "main.s2.w21.node.line.002",
-      "lineId": "main.s2.w21.line.002",
+      "id": "main.s2.w21.node.line.002a",
+      "lineId": "main.s2.w21.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "——その夜に、来た。黒ではない。白でもない。灰色の封筒。「通告: 貴殿の監督資格を、緊急規定により停止する。事由: 興行秩序の毀損」。……興行秩序。人の自由を四つ返したことの、会社の呼び名である。"
+      "text": "——その夜に、来た。黒でも白でもない、灰色の封筒。"
     },
     {
       "type": "line",
-      "id": "main.s2.w21.node.line.003",
-      "lineId": "main.s2.w21.line.003",
+      "id": "main.s2.w21.node.line.002b",
+      "lineId": "main.s2.w21.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "資格停止。つまり、監督席に座れない。決勝の指揮を、執れない。付記があった。「なお、チームの決勝出場は、正規任命の監督着任を条件とする」。——うちに、会社の監督を挿げ替える気だ。打倒まであと二本、というところで、頭を取りに来た。",
+      "text": "「通告: 貴殿の監督資格を、緊急規定により停止する」事由は、「興行秩序の毀損」"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w21.node.line.002c",
+      "lineId": "main.s2.w21.line.002c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……興行秩序?人の自由を四つ返したことの、会社の呼び名らしい。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w21.node.line.003a",
+      "lineId": "main.s2.w21.line.003a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "資格停止。つまり、監督席に座れない。決勝の指揮も執れない。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w21.node.line.003b",
+      "lineId": "main.s2.w21.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "付記もあった。「決勝出場は、正規任命の監督着任が条件」"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w21.node.line.003c",
+      "lineId": "main.s2.w21.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "——うちに、会社の監督を挿げ替える気だ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w21.node.line.003d",
+      "lineId": "main.s2.w21.line.003d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "打倒まであと二本、というところで、頭を取りに来た。",
       "emotion": "tension"
     },
     {
+      "type": "direction",
+      "id": "main.s2.w21.node.direction.mimi.shift.001",
+      "command": {
+        "type": "show",
+        "assetId": "main.s2.w21.asset.sprite.mimi.smile",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
+    },
+    {
       "type": "line",
-      "id": "main.s2.w21.node.line.004",
-      "lineId": "main.s2.w21.line.004",
+      "id": "main.s2.w21.node.line.004a",
+      "lineId": "main.s2.w21.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "翌朝、監督席のない一週間が始まった。練習場の柵の外から、特訓を見る。声は、届く。届くが、柵の内と外は、こんなに違う。四百年ぶりに辞められなくなった女は、二年目に、座る席を奪われた。",
+      "text": "翌朝、監督席のない一週間が始まった。練習場の柵の外から、特訓を見る。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w21.node.line.004b",
+      "lineId": "main.s2.w21.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "声は、届く。届くが、柵の内と外は、こんなに違う。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w21.node.line.004c",
+      "lineId": "main.s2.w21.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "四百年ぶりに辞められなくなった女は、二年目に席を奪われた。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s2.w21.node.line.005",
-      "lineId": "main.s2.w21.line.005",
+      "id": "main.s2.w21.node.line.005a",
+      "lineId": "main.s2.w21.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "うちの面々は、静かだった。静かなまま、練習の質が一段上がった。柵の外の私に、誰かが言った。「ミミさん。柵は、規定ですか」。規定です。「なら——次の赤線で、消しましょう」。……この人たちは、もう、戦い方を知っている。",
-      "emotion": "tender"
+      "text": "うちの面々は、静かだった。静かなまま、練習の質が一段上がった。"
     },
     {
       "type": "line",
-      "id": "main.s2.w21.node.line.006",
-      "lineId": "main.s2.w21.line.006",
+      "id": "main.s2.w21.node.line.005b",
+      "lineId": "main.s2.w21.line.005b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "街も、静かではなかった。練習場の柵の外に、人が集まり始めたのだ。休止札を掲げた救護の人たち。外れ札を額に入れた胴元。九通の挑戦状の写しを旗にした誰か。——壊したルールの数だけ、柵の外に、味方が立っている。",
+      "text": "柵の外の私に、誰かが言った。「ミミさん。柵は、規定ですか」規定です。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w21.node.line.005c",
+      "lineId": "main.s2.w21.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「なら——次の赤線で、消しましょう」"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w21.node.line.005d",
+      "lineId": "main.s2.w21.line.005d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……この人たちは、もう、戦い方を知っている。耳が、少し熱い。",
+      "emotion": "tender"
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.w21.node.direction.mimi.shift.002",
+      "command": {
+        "type": "show",
+        "assetId": "main.s2.w21.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w21.node.line.006a",
+      "lineId": "main.s2.w21.line.006a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "街も、静かではなかった。柵の外に、人が集まり始めた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w21.node.line.006b",
+      "lineId": "main.s2.w21.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "休止札を掲げた救護の人たち。外れ札を額に入れた胴元。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w21.node.line.006c",
+      "lineId": "main.s2.w21.line.006c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "九通の挑戦状の写しを、旗にした誰か。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w21.node.line.006d",
+      "lineId": "main.s2.w21.line.006d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "——壊したルールの数だけ、柵の外に味方が立っている。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s2.w21.node.line.007",
-      "lineId": "main.s2.w21.line.007",
+      "id": "main.s2.w21.node.line.007a",
+      "lineId": "main.s2.w21.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ノノさんが、受付から書式の束を抱えてきた。目が、据わっていた。「資格停止への異議申立。申立人の欄は——**何枚あっても、いいんです**」。",
+      "text": "ノノさんが、受付から書式の束を抱えてきた。目が据わっていた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w21.node.line.007b",
+      "lineId": "main.s2.w21.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「資格停止への異議申立。申立人の欄は——何枚あっても、いいんです」",
       "emotion": "resolve"
     },
     {
       "type": "line",
-      "id": "main.s2.w21.node.line.008",
-      "lineId": "main.s2.w21.line.008",
+      "id": "main.s2.w21.node.line.008a",
+      "lineId": "main.s2.w21.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "何枚あっても、いい。柵の外の人だかりを見る。書式の束を見る。……なるほど。この勝負、署名の数で殴り合う流れらしい。事務員の喧嘩としては、望むところである。",
+      "text": "何枚あっても、いい。柵の外の人だかりを見る。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w21.node.line.008b",
+      "lineId": "main.s2.w21.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "書式の束を見る。……なるほど。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w21.node.line.008c",
+      "lineId": "main.s2.w21.line.008c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "この勝負、署名の数で殴り合う流れらしい。事務員の喧嘩として、望むところです!",
       "emotion": "resolve"
     },
     {
       "type": "effect",
       "id": "main.s2.w21.node.effect.001",
-      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+      "effects": [
+        {
+          "type": "sharedPoints",
+          "amount": 2
+        }
+      ]
     },
     {
       "type": "end",
@@ -121,7 +332,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "2周目・週21どん底(8行・選択肢なし)。赤線四本目(勝敗ロバスト)→灰色の封筒=資格停止+監督挿げ替え。柵の内外の画。壊したルールの数だけ味方が立つ=週22署名の壁への助走。",
+    "authorNote": "語り口V2・二行枠で改稿。2周目・週21どん底(8行→29ノード・選択肢なし)。赤線四本目(勝敗ロバスト)→灰色の封筒=資格停止+監督挿げ替え。柵の内外の画。壊したルールの数だけ味方が立つ=週22署名の壁への助走。",
     "legacyGeneratedIds": false
   }
 }

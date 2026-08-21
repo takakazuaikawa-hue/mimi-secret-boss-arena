@@ -8,9 +8,20 @@
     "arcId": "main.stage2"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -22,6 +33,48 @@
         "kind": "background",
         "path": "/assets/story/bg-arena-reception.png",
         "alt": "闘技場の正面受付の背景"
+      },
+      {
+        "id": "main.s2.w01.asset.outcome.001",
+        "kind": "still",
+        "path": "/assets/story/events/main-s2-w01-outcome-banner-v1.png",
+        "alt": "夜の控室で、大きな目標の紙を掲示して振り返る屋内勤務服のミミ",
+        "focusX": 43,
+        "focusY": 43,
+        "gallery": {
+          "title": "二年目の旗",
+          "chapter": "更新後の第1週 / 二年目、開幕",
+          "caption": "太い一筆を掲げると、二年目の控室に最初の旗が立った。",
+          "unlock": "on-choice",
+          "choiceId": "main.s2.w01.choice.001"
+        }
+      },
+      {
+        "id": "main.s2.w01.asset.outcome.002",
+        "kind": "still",
+        "path": "/assets/story/events/main-s2-w01-outcome-investigate-v2.png",
+        "alt": "夜の記録室で、薄い調査書類をこちらへ差し出す屋内勤務服のミミ",
+        "focusX": 52,
+        "focusY": 43,
+        "gallery": {
+          "title": "薄い名刺の向こう側",
+          "chapter": "更新後の第1週 / 二年目、開幕",
+          "caption": "青い闘技場を背に、ミミは最初の調査書類をこちらへ差し出した。",
+          "unlock": "on-choice",
+          "choiceId": "main.s2.w01.choice.002"
+        }
+      },
+      {
+        "id": "main.s2.w01.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
+      },
+      {
+        "id": "main.s2.w01.asset.sprite.mimi.tsukkomi",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-tsukkomi-v1.png",
+        "alt": "驚いてツッコミを入れるミミ"
       }
     ]
   },
@@ -29,92 +82,244 @@
     {
       "type": "direction",
       "id": "main.s2.w01.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s2.w01.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s2.w01.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "direction",
       "id": "main.s2.w01.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.w01.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s2.w01.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
-      "id": "main.s2.w01.node.line.001",
-      "lineId": "main.s2.w01.line.001",
+      "id": "main.s2.w01.node.line.001a",
+      "lineId": "main.s2.w01.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "契約更新の朝が来た。手帳の新しい頁に、新しい暦。「更新後の勤務週・第一週」。——うちの、二年目である。",
+      "text": "契約更新の朝。「更新後の勤務週・第一週」耳が、ぴんと立つ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w01.node.line.001b",
+      "lineId": "main.s2.w01.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "二年目、始まった。",
       "emotion": "resolve"
     },
     {
       "type": "line",
-      "id": "main.s2.w01.node.line.002",
-      "lineId": "main.s2.w01.line.002",
+      "id": "main.s2.w01.node.line.002a",
+      "lineId": "main.s2.w01.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "街の暦は第一週から数え直しで、掲示板も去年の初日の顔ぶれに戻っている。妙といえば妙だが、この街のシーズンはそういう暦らしい。控えを一枚だけ取って、仕事にかかる。二年目の朝は、忙しいのだ。"
+      "text": "掲示板が、去年の顔ぶれのまま。……あれ?街の暦は、第一週からやり直すものらしい。"
     },
     {
       "type": "line",
-      "id": "main.s2.w01.node.line.003",
-      "lineId": "main.s2.w01.line.003",
+      "id": "main.s2.w01.node.line.002b",
+      "lineId": "main.s2.w01.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "朝礼で、二年目の目標会議をした。去年の決勝の続きを、今年はどうする。「連覇」「全員の契約の解放」「新しい仲間」。うちの面々は去年をぜんぶ覚えていて、話が早い。会議は三分で白熱し、三十分で脱線した。いつも通りである。",
+      "text": "妙といえば妙だけど、控えを取って仕事にかかる。二年目の朝は、忙しい。"
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.w01.node.direction.mimi.shift.001",
+      "command": {
+        "type": "show",
+        "assetId": "main.s2.w01.asset.sprite.mimi.tsukkomi",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w01.node.line.003a",
+      "lineId": "main.s2.w01.line.003a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "朝礼は、二年目の目標会議になった。「連覇」"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w01.node.line.003b",
+      "lineId": "main.s2.w01.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「全員の契約の解放」「新しい仲間」みんな、去年をぜんぶ覚えてた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w01.node.line.003c",
+      "lineId": "main.s2.w01.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "話が早い。会議は三分で白熱、三十分で脱線。……いつも通りだ。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s2.w01.node.line.004",
-      "lineId": "main.s2.w01.line.004",
+      "id": "main.s2.w01.node.line.004a",
+      "lineId": "main.s2.w01.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "窓口に、白ひげの剣士さんが来た。「世界を三度すくった者だが」「ポイント五倍は、今日です」「——ほう。話が早いのう」。判を押すと、彼はじっと私を見た。「……あんた、二年目の顔をしとるな」。良い顔ということにしておく。",
+      "text": "窓口に、白ひげの剣士さんが来た。「世界を三度すくった者だが」"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w01.node.line.004b",
+      "lineId": "main.s2.w01.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「ポイント五倍は、今日です」「——ほう。話が早いのう」判を押すと、じっと見られた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w01.node.line.004c",
+      "lineId": "main.s2.w01.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「……あんた、二年目の顔をしとるな」"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w01.node.line.004d",
+      "lineId": "main.s2.w01.line.004d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……良い顔ってことにしておこう。耳が、ちょっとこそばゆい。",
       "emotion": "comic"
     },
     {
+      "type": "direction",
+      "id": "main.s2.w01.node.direction.mimi.shift.002",
+      "command": {
+        "type": "show",
+        "assetId": "main.s2.w01.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
+    },
+    {
       "type": "line",
-      "id": "main.s2.w01.node.line.005",
-      "lineId": "main.s2.w01.line.005",
+      "id": "main.s2.w01.node.line.005a",
+      "lineId": "main.s2.w01.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "そして、闘技場の正面に——新しい垂れ幕が掛かっていた。「アルデバラン社・再演企画室」。去年の決勝のあとに名前を変えたあの部署が、今年の興行の元締めの席に座ったのだ。",
+      "text": "闘技場の正面に、見慣れない垂れ幕。「アルデバラン社・再演企画室」去年の、あの部署だ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w01.node.line.005b",
+      "lineId": "main.s2.w01.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "名前を変えて、今年の元締めの席に座った。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s2.w01.node.line.006",
-      "lineId": "main.s2.w01.line.006",
+      "id": "main.s2.w01.node.line.006a",
+      "lineId": "main.s2.w01.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "その初仕事が、受付の掲示板に貼ってあった。「近日開演——名場面リバイバル公演(主催: 再演企画室)」。演目の欄は、まだ白い。名場面。……誰の名場面を、誰の許しで演るつもりだろう。",
+      "text": "初仕事の貼り紙が、受付にあった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w01.node.line.006b",
+      "lineId": "main.s2.w01.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「近日開演——名場面リバイバル公演(主催: 再演企画室)」演目の欄は、まだ白い。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w01.node.line.006c",
+      "lineId": "main.s2.w01.line.006c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……誰の名場面を、誰の許しで?",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s2.w01.node.line.007",
-      "lineId": "main.s2.w01.line.007",
+      "id": "main.s2.w01.node.line.007a",
+      "lineId": "main.s2.w01.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "去年、うちは会社に「管理」されかけて、それを撥ね返した。今年は向こうが、興行で来る。なら、受けて立つ場所は決まっている。砂の上と、客席の数だ。",
+      "text": "去年、会社に「管理」されかけて、撥ね返した。今年は、興行で来た。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w01.node.line.007b",
+      "lineId": "main.s2.w01.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "なら、受けて立つ場所は決まってる。砂の上と、客席の数だ。",
       "emotion": "resolve"
     },
     {
       "type": "line",
-      "id": "main.s2.w01.node.line.008",
-      "lineId": "main.s2.w01.line.008",
+      "id": "main.s2.w01.node.line.008a",
+      "lineId": "main.s2.w01.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "手帳の一頁目に、二年目の目標を書いた。「連覇。そして——会社のやり方と、決着をつける」。書き終えた頁は、去年より少しだけ、字が太くなった。",
+      "text": "「連覇。そして——会社のやり方と、決着をつける」書き終えた字は、去年より少しだけ太くなってた。",
       "emotion": "resolve"
     },
     {
       "type": "line",
-      "id": "main.s2.w01.node.line.009",
-      "lineId": "main.s2.w01.line.009",
+      "id": "main.s2.w01.node.line.009a",
+      "lineId": "main.s2.w01.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "帰りぎわ、経理課から封筒が届いた。「契約更新のお知らせ——受理済み」。……受理済み。私、申請した覚えが無いのだが。まあいい。控えだけ取って、今日は寝る。二年目は、長いのだ。",
+      "text": "閉場の鐘が鳴る。赤い受付の上着を返した。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w01.node.line.009b",
+      "lineId": "main.s2.w01.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "黒い接客服に戻ると、肩が少し軽い。今日も、飲み物を出す手だけは止めなかった。",
       "emotion": "tension"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w01.node.line.010a",
+      "lineId": "main.s2.w01.line.010a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "経理課から「契約更新——受理済み」の控え。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w01.node.line.010b",
+      "lineId": "main.s2.w01.line.010b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……申請した覚え、ないんですけど。二年目の最初の一手、今夜決めよう。",
+      "emotion": "resolve"
     },
     {
       "type": "choice",
@@ -123,23 +328,35 @@
         {
           "id": "main.s2.w01.choice.001",
           "label": "目標を、控室に大きく貼り出す",
-          "result": "「連覇。そして、会社のやり方と決着をつける」。半紙に太筆で書いて、控室のいちばん見える壁に貼った。全員が順番に眺めて、それぞれの流儀で頷いた。目標は、貼ると強くなる。カジノの壁の「本日の大当たり」と同じ理屈である。……ノノさんが横にもう一枚、小さく貼り足した。「今年も、安全第一」。それも大事。",
+          "result": "半紙に太筆で書いて、控室のいちばん見える壁に貼った。目標は、貼ると強くなる。カジノの「本日の大当たり」と同じ理屈だ。ノノさんが横に、小さく貼り足す。「今年も、安全第一」",
           "intent": "二年目の旗を、最初に高く揚げる",
           "promise": "チームの向きが揃う代わりに、会社にもこちらの本気が伝わる",
           "memory": "太筆の目標が、控室の壁で一年を見下ろす",
+          "outcomeAssetId": "main.s2.w01.asset.outcome.001",
           "tone": "heroic",
-          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
           "goto": "main.s2.w01.node.end.001"
         },
         {
           "id": "main.s2.w01.choice.002",
           "label": "まず、会社の新体制を調べる",
-          "result": "旗より先に、敵を知る。ノノさんと手分けして、再演企画室の輪郭を洗った。前身は物語資産管理部。室長は昨年末に就任。所管は「終了済み興行の再活用」——つまり、終わった物語の商売である。調べのメモは薄い束になった。薄いが、敵の名刺としては十分だ。強い相手ほど、名刺は薄い。",
+          "result": "旗より先に、敵を知る。ノノさんと手分けして、再演企画室の輪郭を洗った。前身は物語資産管理部、室長は昨年末に就任。所管は「終了済み興行の再活用」——つまり、終わった物語の商売だ。メモは薄い束。強い相手ほど、名刺は薄い。",
           "intent": "戦う前に、相手の輪郭を測る",
           "promise": "敵情が手に入る代わりに、旗揚げは一歩あとになる",
           "memory": "再演企画室の調べのメモが、帳場の引き出しに入った",
+          "outcomeAssetId": "main.s2.w01.asset.outcome.002",
           "tone": "pragmatic",
-          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
           "goto": "main.s2.w01.node.end.001"
         }
       ]
@@ -153,7 +370,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "2周目・週1全面改稿(2026-08-15ユーザー指摘: 違和感ごり押しをやめ打倒の本筋で開幕)。暦の巻き戻りは2行の事実+控え一枚で処理。主役=再演企画室の登場と二年目の目標。仲間は事実を言い(覚えている=暦の外)、世界を疑うのはミミだけ、の線引き。",
+    "authorNote": "語り口V2・二行枠で改稿。2周目・週1全面改稿(2026-08-15ユーザー指摘: 違和感ごり押しをやめ打倒の本筋で開幕)。暦の巻き戻りは2行の事実+控え一枚で処理。主役=再演企画室の登場と二年目の目標。仲間は事実を言い(覚えている=暦の外)、世界を疑うのはミミだけ、の線引き。",
     "legacyGeneratedIds": false
   }
 }

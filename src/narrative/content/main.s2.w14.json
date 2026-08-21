@@ -8,9 +8,20 @@
     "arcId": "main.stage2"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -22,6 +33,18 @@
         "kind": "background",
         "path": "/assets/story/bg-arena-reception.png",
         "alt": "闘技場の正面受付の背景"
+      },
+      {
+        "id": "main.s2.w14.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
+      },
+      {
+        "id": "main.s2.w14.asset.sprite.mimi.smile",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-smile-v1.png",
+        "alt": "笑顔のミミ"
       }
     ]
   },
@@ -29,88 +52,252 @@
     {
       "type": "direction",
       "id": "main.s2.w14.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s2.w14.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s2.w14.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "direction",
       "id": "main.s2.w14.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.w14.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s2.w14.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
-      "id": "main.s2.w14.node.line.001",
-      "lineId": "main.s2.w14.line.001",
+      "id": "main.s2.w14.node.line.001a",
+      "lineId": "main.s2.w14.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "会社から、事務便が届いた。契約更新の付属書類一式——去年ぶんの写しも、まとめて。分厚い束を、帳場で一枚ずつ検める。事務便に善意は期待しないが、情報は期待していい。",
+      "text": "会社から、事務便が届いた。契約更新の付属書類一式——去年ぶんの写しも、まとめて。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w14.node.line.001b",
+      "lineId": "main.s2.w14.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "分厚い束を、帳場で一枚ずつ検める。事務便に善意は期待しないが、情報は期待していい。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s2.w14.node.line.002",
-      "lineId": "main.s2.w14.line.002",
+      "id": "main.s2.w14.node.line.002a",
+      "lineId": "main.s2.w14.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "めくっていて、手が止まった。去年の申請書の裏。——私の判が、並んでいる。一行ズレた最初の判。訂正申請の判。取り下げの、まっすぐな判。"
+      "text": "めくっていて、手が止まった。去年の申請書の裏。"
     },
     {
       "type": "line",
-      "id": "main.s2.w14.node.line.003",
-      "lineId": "main.s2.w14.line.003",
+      "id": "main.s2.w14.node.line.002b",
+      "lineId": "main.s2.w14.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "会社の書類は冷たい。なのに、自分の判の並びだけ、妙にあたたかく見えた。縛られながら、それでも一つずつ選んできた列だからだと思う。去年の私から、今年の私への、引き継ぎ書類である。",
+      "text": "——私の判が、並んでいる。一行ズレた最初の判。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w14.node.line.002c",
+      "lineId": "main.s2.w14.line.002c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "訂正申請の判。取り下げの、まっすぐな判。"
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.w14.node.direction.mimi.shift.001",
+      "command": {
+        "type": "show",
+        "assetId": "main.s2.w14.asset.sprite.mimi.smile",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w14.node.line.003a",
+      "lineId": "main.s2.w14.line.003a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "会社の書類は冷たい。なのに、自分の判の並びだけ、妙にあたたかく見えた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w14.node.line.003b",
+      "lineId": "main.s2.w14.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "縛られながら、それでも一つずつ選んできた列だから。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w14.node.line.003c",
+      "lineId": "main.s2.w14.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "去年の私から、今年の私への、引き継ぎ書類だった。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s2.w14.node.line.004",
-      "lineId": "main.s2.w14.line.004",
+      "id": "main.s2.w14.node.line.004a",
+      "lineId": "main.s2.w14.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ノノさんが横から覗いて、しみじみ言った。「会社の控えの中にも、ミミさんの歴史があるんですね」。ありますとも。敵の帳簿の中にだって、私の判は私のものだ。",
+      "text": "ノノさんが横から覗いて、しみじみ言った。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w14.node.line.004b",
+      "lineId": "main.s2.w14.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「会社の控えの中にも、ミミさんの歴史があるんですね」ありますとも。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w14.node.line.004c",
+      "lineId": "main.s2.w14.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "耳が、ちょっとあたたかい。敵の帳簿の中にだって、私の判は私のもの。",
       "emotion": "tender"
     },
     {
+      "type": "direction",
+      "id": "main.s2.w14.node.direction.mimi.shift.002",
+      "command": {
+        "type": "show",
+        "assetId": "main.s2.w14.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
+    },
+    {
       "type": "line",
-      "id": "main.s2.w14.node.line.005",
-      "lineId": "main.s2.w14.line.005",
+      "id": "main.s2.w14.node.line.005a",
+      "lineId": "main.s2.w14.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "感傷は、そこまで。更新条項の末尾に、小さな変更を見つけた。「異議申立への対応窓口: 再演企画室へ一本化」。……こちらの武器(正式な異議)への、防衛工事だ。会社も、学んでいる。",
+      "text": "感傷は、そこまで。更新条項の末尾に、変更を見つけた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w14.node.line.005b",
+      "lineId": "main.s2.w14.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「異議申立への対応窓口: 再演企画室へ一本化」"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w14.node.line.005c",
+      "lineId": "main.s2.w14.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……こちらの武器(正式な異議)への、防衛工事だ。会社も、学んでいる。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s2.w14.node.line.006",
-      "lineId": "main.s2.w14.line.006",
+      "id": "main.s2.w14.node.line.006a",
+      "lineId": "main.s2.w14.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "街では、新しい刷り物が出回り始めていた。会社の売店に平積みの『的中率百パーセント予想』。次の勝敗が、印刷されて売られている。当たるから、賭けの意味が死ぬ。——一覧の三条目が、店頭に並んだ形だ。",
+      "text": "街で、新しい刷り物が出回り始めていた。会社の売店に平積みの『的中率百パーセント予想』。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w14.node.line.006b",
+      "lineId": "main.s2.w14.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "次の勝敗が、印刷されて売られている。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w14.node.line.006c",
+      "lineId": "main.s2.w14.line.006c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "当たるから、賭けの意味が死ぬ。一覧の三条目が、店頭に並んだ形だ。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s2.w14.node.line.007",
-      "lineId": "main.s2.w14.line.007",
+      "id": "main.s2.w14.node.line.007a",
+      "lineId": "main.s2.w14.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "その一面を見て、うちの控室が静まった。「次回・黄金ジャックポット杯 勝者: ミミのチーム(的中率100%)」。——当たると言われて、こんなに嬉しくない予言があるだろうか。",
+      "text": "その一面を見て、うちの控室が静まった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w14.node.line.007b",
+      "lineId": "main.s2.w14.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「次回・黄金ジャックポット杯 勝者: ミミのチーム(的中率100%)」"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w14.node.line.007c",
+      "lineId": "main.s2.w14.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……当たると言われて、こんなに嬉しくない予言があるとは。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s2.w14.node.line.008",
-      "lineId": "main.s2.w14.line.008",
+      "id": "main.s2.w14.node.line.008a",
+      "lineId": "main.s2.w14.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "予言どおりに勝てば、予想紙の宣伝になる。負ければ、赤線が遠のく。どちらへ転んでも会社の得、に見える盤面。——見える、だけのはずだ。カジノ育ちは知っている。胴元が笑っている台ほど、抜け道の探しがいがある。",
+      "text": "予言どおりに勝てば、予想紙の宣伝になる。負ければ、赤線が遠のく。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w14.node.line.008b",
+      "lineId": "main.s2.w14.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "どちらへ転んでも会社の得に見える盤面。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w14.node.line.008c",
+      "lineId": "main.s2.w14.line.008c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……見える、だけのはず。胴元が笑っている台ほど、抜け道の探しがいがある。",
       "emotion": "resolve"
     },
     {
       "type": "effect",
       "id": "main.s2.w14.node.effect.001",
-      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+      "effects": [
+        {
+          "type": "sharedPoints",
+          "amount": 2
+        }
+      ]
     },
     {
       "type": "end",
@@ -121,7 +308,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "2周目・週14(8行・選択肢なし)。去年の判=縛られながら選んだ列の感傷を一拍。会社の防衛工事(異議窓口の一本化=週20報復の種)。予想紙=週16への引き(的中固定の盤面)。予想紙はリンネ個人ではなく会社の商品として描き、個別の危機を先食いしない。",
+    "authorNote": "語り口V2・二行枠で改稿。2周目・週14(8行・選択肢なし)。去年の判=縛られながら選んだ列の感傷を一拍。会社の防衛工事(異議窓口の一本化=週20報復の種)。予想紙=週16への引き(的中固定の盤面)。予想紙はリンネ個人ではなく会社の商品として描き、個別の危機を先食いしない。",
     "legacyGeneratedIds": false
   }
 }

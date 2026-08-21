@@ -8,9 +8,20 @@
     "arcId": "main.stage2"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -22,6 +33,18 @@
         "kind": "background",
         "path": "/assets/story/bg-arena-reception.png",
         "alt": "闘技場の正面受付の背景"
+      },
+      {
+        "id": "main.s2.w03.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
+      },
+      {
+        "id": "main.s2.w03.asset.sprite.mimi.smile",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-smile-v1.png",
+        "alt": "笑顔のミミ"
       }
     ]
   },
@@ -29,82 +52,257 @@
     {
       "type": "direction",
       "id": "main.s2.w03.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s2.w03.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s2.w03.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "direction",
       "id": "main.s2.w03.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.w03.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s2.w03.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
-      "id": "main.s2.w03.node.line.001",
-      "lineId": "main.s2.w03.line.001",
+      "id": "main.s2.w03.node.line.001a",
+      "lineId": "main.s2.w03.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "今週の予定は、挨拶回りにした。去年、砂の上で向かい合った五人——海、闇、法廷、窓口、空。あの人たちに、二年目の挨拶をして、それから、思い切って誘うつもりでいる。",
+      "text": "今週の予定は、挨拶回りにした。去年、砂の上で向かい合った五人——海、闇、法廷、窓口、空。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w03.node.line.001b",
+      "lineId": "main.s2.w03.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "二年目の挨拶をして、それから、思い切って誘うつもりでいる。",
       "emotion": "resolve"
     },
     {
       "type": "line",
-      "id": "main.s2.w03.node.line.002",
-      "lineId": "main.s2.w03.line.002",
+      "id": "main.s2.w03.node.line.002a",
+      "lineId": "main.s2.w03.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "名簿の頁を開いて、気づいてしまった。私は、あの五人のことを——何も知らない。採点の癖は知っている。小槌の音も、翼の影も、進行の完璧さも知っている。全部、対戦相手としての知識だ。"
+      "text": "名簿の頁を開いて、初めて気づいてしまった。私は、あの五人のことを——何も知らない。"
     },
     {
       "type": "line",
-      "id": "main.s2.w03.node.line.003",
-      "lineId": "main.s2.w03.line.003",
+      "id": "main.s2.w03.node.line.002b",
+      "lineId": "main.s2.w03.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "好きな食べ物、一つ知らない。休みの日に何をする人かも、知らない。うちの帳簿には、五人ぶんの「強さ」だけが、几帳面に溜まっている。……去年のうちの帳簿は、希望欄が自慢だったのに。",
+      "text": "採点の癖、小槌の音、翼の影、進行の完璧さ。知ってるのは、それだけ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w03.node.line.002c",
+      "lineId": "main.s2.w03.line.002c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "全部、対戦相手として溜めた知識にすぎない。"
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.w03.node.direction.mimi.shift.001",
+      "command": {
+        "type": "show",
+        "assetId": "main.s2.w03.asset.sprite.mimi.smile",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w03.node.line.003a",
+      "lineId": "main.s2.w03.line.003a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "好きな食べ物、一つ知らない。休みの日に何をする人かも、知らない。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w03.node.line.003b",
+      "lineId": "main.s2.w03.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "うちの帳簿には、五人ぶんの「強さ」だけが几帳面に溜まってる。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w03.node.line.003c",
+      "lineId": "main.s2.w03.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……去年のうちの帳簿は、希望欄が自慢だったのに。耳が、少ししゅんとした。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s2.w03.node.line.004",
-      "lineId": "main.s2.w03.line.004",
+      "id": "main.s2.w03.node.line.004a",
+      "lineId": "main.s2.w03.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ノノさんに、選手登録票の束を五冊、用意してもらった。真ん中の「本人署名」の欄は、今年も変わらず、そこにある。ノノさんは束を渡しながら、にっこり言った。「口説くなら——まず、知り合うところから、ですね」。",
+      "text": "ノノさんに、選手登録票の束を五冊、用意してもらった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w03.node.line.004b",
+      "lineId": "main.s2.w03.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "真ん中の「本人署名」の欄は、今年も変わらず、そこにある。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w03.node.line.004c",
+      "lineId": "main.s2.w03.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ノノさんが束を渡しながら、にっこり言った。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w03.node.line.004d",
+      "lineId": "main.s2.w03.line.004d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「口説くなら——まず、知り合うところから、ですね」",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s2.w03.node.line.005",
-      "lineId": "main.s2.w03.line.005",
+      "id": "main.s2.w03.node.line.005a",
+      "lineId": "main.s2.w03.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "そのとおりである。砂の上では、向かい合った。世界の危機では、隣で戦いさえした。でも、人としては——まだ、一度も出会っていない。今週は、**出会い直しの週**にする。",
+      "text": "……たしかに。砂の上では、向かい合った。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w03.node.line.005b",
+      "lineId": "main.s2.w03.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "世界の危機では、隣に並んで戦いさえした。でも、人としては——まだ、一度も出会っていない。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w03.node.line.005c",
+      "lineId": "main.s2.w03.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "今週は、**出会い直しの週**にする、と決めた。",
       "emotion": "revelation"
     },
     {
+      "type": "direction",
+      "id": "main.s2.w03.node.direction.mimi.shift.002",
+      "command": {
+        "type": "show",
+        "assetId": "main.s2.w03.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
+    },
+    {
       "type": "line",
-      "id": "main.s2.w03.node.line.006",
-      "lineId": "main.s2.w03.line.006",
+      "id": "main.s2.w03.node.line.006a",
+      "lineId": "main.s2.w03.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "気になる遠景も、一つある。今年、会社の視察席で、あの五人の姿を見ない。去年は看板として管理されていた人たちが、今年は——どこで、何をしているのだろう。それも、会って確かめればいい。",
+      "text": "気になる遠景も、一つある。今年、会社の視察席で、あの五人の姿を見ない。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w03.node.line.006b",
+      "lineId": "main.s2.w03.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "去年は看板として管理されてた人たちが、今年は——どこで、何をしてるんだろう。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w03.node.line.006c",
+      "lineId": "main.s2.w03.line.006c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "それも、会って自分の目で確かめればいい。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s2.w03.node.line.007",
-      "lineId": "main.s2.w03.line.007",
+      "id": "main.s2.w03.node.line.007a",
+      "lineId": "main.s2.w03.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "掲示板には、例のリバイバル公演の演目一覧が正式に貼り出されていた。第一幕の題を読んで、手が冷たくなった。——「先付け、四十二点」。うちの去年が、演目になっている。……この件も、あとで必ず。今週は、まず人からだ。",
+      "text": "掲示板に、例のリバイバル公演の演目一覧が貼り出されてた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w03.node.line.007b",
+      "lineId": "main.s2.w03.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "第一幕の題を読んで、指先が急に冷たくなった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w03.node.line.007c",
+      "lineId": "main.s2.w03.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "——「先付け、四十二点」とある。うちの去年が、演目になっている。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w03.node.line.007d",
+      "lineId": "main.s2.w03.line.007d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……この件も、あとで必ず。今週は、まず人からだ。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s2.w03.node.line.008",
-      "lineId": "main.s2.w03.line.008",
+      "id": "main.s2.w03.node.line.008a",
+      "lineId": "main.s2.w03.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "名簿と、登録票の束と、差し入れの大福を鞄に詰めた。館内の見回りのついでに、会えたところから、順番に。——さあ、出会い直しに行こう。",
+      "text": "名簿と、登録票の束と、差し入れの大福を鞄に詰めた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w03.node.line.008b",
+      "lineId": "main.s2.w03.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "館内の見回りのついでに、会えたところから、順番に。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w03.node.line.008c",
+      "lineId": "main.s2.w03.line.008c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "——さあ、出会い直しに、鞄を抱えて行こう。",
       "emotion": "resolve"
     },
     {
@@ -114,23 +312,33 @@
         {
           "id": "main.s2.w03.choice.001",
           "label": "誘う言葉は「今年は、うちで戦いませんか」に決める",
-          "result": "口説き文句は、まっすぐな一本に決めた。「今年は、うちで戦いませんか」。飾りは無し。理由も付けない。去年の砂の上を知っている相手には、それで全部通じるはずだ。鞄の中の登録票の束を、一度だけ叩いて気合いを入れる。返事がどうなるかは——会ってからの、お楽しみである。",
+          "result": "口説き文句は、まっすぐな一本に決めた。「今年は、うちで戦いませんか」飾りは無し、理由も無し。登録票の束を一度叩いて、気合いを入れる。返事は——会ってからのお楽しみだ。",
           "intent": "去年の因縁ごと、一本の誘い文句に賭ける",
           "promise": "話が早い代わりに、断られたときの二の矢は無い",
           "memory": "「今年は、うちで戦いませんか」が今週の合言葉になった",
           "tone": "heroic",
-          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
           "goto": "main.s2.w03.node.end.001"
         },
         {
           "id": "main.s2.w03.choice.002",
           "label": "誘う前に、去年のお礼を言うと決める",
-          "result": "順番を決めた。誘うのは、二番目。一番目は、去年のお礼だ。滅亡のあの日、避難命令を無視して残ってくれた人たちである。契約の話より先に、言うべきことがある。お礼の言葉を、一人ぶんずつ、心の中で用意した。五人とも、違う言葉になった。当然だ。五人とも、違う残り方をしてくれたのだから。",
+          "result": "順番を決めた。誘うのは二番目、一番目は去年のお礼。避難命令を無視して残ってくれた人たちだから。お礼の言葉を、一人ぶんずつ心の中で用意した。五人とも、違う言葉になった。当然だ。",
           "intent": "契約より先に、去年の借りを言葉で返す",
           "promise": "信頼から始まる代わりに、勧誘の話は少し先になる",
           "memory": "五人ぶん、別々のお礼の言葉が用意された",
           "tone": "tender",
-          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
           "goto": "main.s2.w03.node.end.001"
         }
       ]
@@ -144,7 +352,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "2周目・週3(8行+選択)全面改稿(2026-08-15ユーザー指摘)。出会いは個別meetの専有——メインは「出会い直しに行く決意」までで手を止め、五人は登場・発話させない。「対戦相手としての知識/人としての無知」の対比が個別meetへの送り出し。演目一覧の引きは維持。",
+    "authorNote": "語り口V2・二行枠で改稿。2周目・週3(8行+選択)全面改稿(2026-08-15ユーザー指摘)。出会いは個別meetの専有——メインは「出会い直しに行く決意」までで手を止め、五人は登場・発話させない。「対戦相手としての知識/人としての無知」の対比が個別meetへの送り出し。演目一覧の引きは維持。",
     "legacyGeneratedIds": false
   }
 }

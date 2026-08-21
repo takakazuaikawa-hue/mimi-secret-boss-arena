@@ -8,9 +8,20 @@
     "arcId": "main.stage2"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -22,6 +33,18 @@
         "kind": "background",
         "path": "/assets/arena-daylight.png",
         "alt": "九種目仕様の闘技場の背景"
+      },
+      {
+        "id": "main.s2.w08.asset.sprite.mimi.tsukkomi",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-tsukkomi-v1.png",
+        "alt": "驚いてツッコミを入れるミミ"
+      },
+      {
+        "id": "main.s2.w08.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
       }
     ]
   },
@@ -29,101 +52,258 @@
     {
       "type": "direction",
       "id": "main.s2.w08.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s2.w08.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s2.w08.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "direction",
       "id": "main.s2.w08.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.w08.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s2.w08.asset.sprite.mimi.tsukkomi",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
-      "id": "main.s2.w08.node.line.001",
-      "lineId": "main.s2.w08.line.001",
+      "id": "main.s2.w08.node.line.001a",
+      "lineId": "main.s2.w08.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "大会の朝の会場は、見たことのない支度になっていた。砂場の隅に綱引きの綱。本部席の横に早食いの膳。照明の下に、にらめっこ用の向かい合わせの台。——九種目仕様である。",
+      "text": "大会の朝の会場は、見たことのない支度になっていた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w08.node.line.001b",
+      "lineId": "main.s2.w08.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "耳が、思わずぴんと立った。砂場の隅に綱引きの綱、本部席の横に早食いの膳。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w08.node.line.001c",
+      "lineId": "main.s2.w08.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "照明の下に、にらめっこ用の向かい合わせの台。九種目仕様、ということらしい。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s2.w08.node.line.002",
-      "lineId": "main.s2.w08.line.002",
+      "id": "main.s2.w08.node.line.002a",
+      "lineId": "main.s2.w08.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "段取りは、八つの前座種目と、九つ目の本戦。台本の原本は帳場の金庫に、写しは私の懐にある。今日は、書いてある結果を、砂の上で破りに来た。"
+      "text": "段取りは、八つの前座種目と、九つ目の本戦。台本の原本は帳場の金庫に、写しは私の懐にある。"
     },
     {
       "type": "line",
-      "id": "main.s2.w08.node.line.003",
-      "lineId": "main.s2.w08.line.003",
+      "id": "main.s2.w08.node.line.002b",
+      "lineId": "main.s2.w08.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "前座は、朝から祭りだった。綱引きは会場の半分を巻き込んで引き分け、早食いはうちの誰かが屋台三つ分を空にし、にらめっこは観客まで参加して場内が変な顔だらけになった。挑んできた側は、全種目、本気で楽しそうだった。",
+      "text": "今日は、書いてある結果を、砂の上で破りに来た。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w08.node.line.003a",
+      "lineId": "main.s2.w08.line.003a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "前座は、朝から祭りだった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w08.node.line.003b",
+      "lineId": "main.s2.w08.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "綱引きは会場の半分を巻き込んで引き分け、早食いは誰かが屋台三つ分を空にした。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w08.node.line.003c",
+      "lineId": "main.s2.w08.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "にらめっこは観客まで参加して、場内が変な顔だらけになった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w08.node.line.003d",
+      "lineId": "main.s2.w08.line.003d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "挑んできた側は、全種目、本気で楽しそうだった。",
       "emotion": "comic"
     },
     {
+      "type": "direction",
+      "id": "main.s2.w08.node.direction.mimi.shift.001",
+      "command": {
+        "type": "show",
+        "assetId": "main.s2.w08.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
+    },
+    {
       "type": "line",
-      "id": "main.s2.w08.node.line.004",
-      "lineId": "main.s2.w08.line.004",
+      "id": "main.s2.w08.node.line.004a",
+      "lineId": "main.s2.w08.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "九戦目の前、相手方の主が、うちの控室に来た。狼の目をした人だった。彼は挨拶の代わりに、静かに言った。「九つ目の勝負は——いつも、結果を先に知っているんだ」。",
+      "text": "九戦目の前、相手方の主が、うちの控室に来た。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w08.node.line.004b",
+      "lineId": "main.s2.w08.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "狼の目をした人だった。彼は挨拶の代わりに、静かに言った。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w08.node.line.004c",
+      "lineId": "main.s2.w08.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「九つ目の勝負は——いつも、結果を先に知っているんだ」",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s2.w08.node.line.005",
-      "lineId": "main.s2.w08.line.005",
+      "id": "main.s2.w08.node.line.005a",
+      "lineId": "main.s2.w08.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "知っているのだ、この人も。自分の九戦目が、いつも台本で終わることを。八つの種目をあんなに本気で遊ぶのは——九つ目だけ、遊べないからだ。",
+      "text": "……知ってるんだ、この人も。自分の九戦目が、いつも台本で終わることを。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w08.node.line.005b",
+      "lineId": "main.s2.w08.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "八つの種目をあんなに本気で遊ぶのは——九つ目だけ、遊べないからだ。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s2.w08.node.line.006",
-      "lineId": "main.s2.w08.line.006",
+      "id": "main.s2.w08.node.line.006a",
+      "lineId": "main.s2.w08.line.006a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "この台本、うちが試合で破ります。あなたの九戦目を——賭けても、結果の分からない試合にします。",
+      "text": "この台本、うちが試合で破ります。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w08.node.line.006b",
+      "lineId": "main.s2.w08.line.006b",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "あなたの九戦目を——賭けても、結果の分からない試合にします。",
       "emotion": "resolve"
     },
     {
       "type": "line",
-      "id": "main.s2.w08.node.line.007",
-      "lineId": "main.s2.w08.line.007",
+      "id": "main.s2.w08.node.line.007a",
+      "lineId": "main.s2.w08.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "懐の写しを見せた。狼の目が、ゆっくり見開かれて——それから、笑った。彼はその場で紙を借り、新しい挑戦状を書いた。九通目の書き直し。末尾の一行——「勝敗: **未定**」。",
+      "text": "懐の写しを見せた。狼の目が、ゆっくり見開かれて——それから、笑った。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w08.node.line.007b",
+      "lineId": "main.s2.w08.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "彼はその場で紙を借り、新しい挑戦状を書いた。九通目の書き直し。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w08.node.line.007c",
+      "lineId": "main.s2.w08.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "末尾の一行——「勝敗: **未定**」",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s2.w08.node.line.008",
-      "lineId": "main.s2.w08.line.008",
+      "id": "main.s2.w08.node.line.008a",
+      "lineId": "main.s2.w08.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "本部席で、再演企画室の係員が進行台本を掲げて何か言っている。だが、その声はもう届かない。書き直された挑戦状が場内に掲示された瞬間、客席が沸騰したからだ。ガヤ氏が叫ぶ。「第九戦——結果は、誰も知りませんッ!」",
+      "text": "本部席で、再演企画室の係員が進行台本を掲げて何か言っている。だが、その声はもう届かない。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w08.node.line.008b",
+      "lineId": "main.s2.w08.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "書き直された挑戦状が場内に掲示された瞬間、客席が沸騰したからだ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w08.node.line.008c",
+      "lineId": "main.s2.w08.line.008c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ガヤ氏が叫ぶ。「第九戦——結果は、誰も知りませんッ!」",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s2.w08.node.line.009",
-      "lineId": "main.s2.w08.line.009",
+      "id": "main.s2.w08.node.line.009a",
+      "lineId": "main.s2.w08.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "券売のおじさんの窓口に、行列ができていく。結果の分からない試合にしか、賭けは成立しない。この行列こそが、台本興行への一番の反対票である。",
+      "text": "券売のおじさんの窓口に、行列ができていく。結果の分からない試合にしか、賭けは成立しない。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w08.node.line.009b",
+      "lineId": "main.s2.w08.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "この行列こそが、台本興行への一番の反対票だ。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s2.w08.node.line.010",
-      "lineId": "main.s2.w08.line.010",
+      "id": "main.s2.w08.node.line.010a",
+      "lineId": "main.s2.w08.line.010a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "入場口の札が裏返る。懐の写しを、一度だけ強く押さえた。——さあ、破りに行こう。",
+      "text": "入場口の札が裏返る。懐の写しを、一度だけ強く押さえた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w08.node.line.010b",
+      "lineId": "main.s2.w08.line.010b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "——さあ、破りに行こう。",
       "emotion": "resolve"
     },
     {
@@ -133,23 +313,33 @@
         {
           "id": "main.s2.w08.choice.001",
           "label": "台本の存在を、場内に公表して戦う",
-          "result": "「みなさんにお知らせします。この試合には——会社の進行台本が、ありました」。写しを頭上に掲げた。場内が一拍静まり、それから、地鳴りが来た。怒りと、笑いと、「見せてみろ!」の大合唱。ガヤ氏が写しを読み上げるたび、ブーイングと爆笑が交互に起きる。台本は、公開された時点でもう台本ではない。ただの、恥ずかしい紙である。会社の観覧席が、静かに空いていった。",
+          "result": "「みなさんに、お知らせします。会社の進行台本が、ありました」写しを頭上に掲げた。場内に地鳴りが来る。「見せてみろ!」の大合唱。台本は、公開された時点でもう台本じゃない。ただの、恥ずかしい紙だ。会社の観覧席が、静かに空いていった。",
           "intent": "悪事を、隠さず白日の下で壊す",
           "promise": "世論が完全に味方する代わりに、会社との全面戦争が始まる",
           "memory": "写しを掲げたミミの姿が、街の語り草になった",
           "tone": "defiant",
-          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
           "goto": "main.s2.w08.node.end.001"
         },
         {
           "id": "main.s2.w08.choice.002",
           "label": "黙って、ただ勝ちに行く",
-          "result": "公表はしない。証拠は、使いどきを選ぶ武器だ。かわりに、今日の試合そのもので語る。台本に無い攻めを、台本に無い順番で、台本に無い熱で。観客は理由を知らないまま「今日は何かが違う」とざわめき、再演企画室の係員だけが、進行表と砂の上を見比べて青くなっていく。恥ずかしい紙は、金庫で眠らせておく。決勝までの、切り札として。",
+          "result": "公表はしない。証拠は、使いどきを選ぶ武器だ。台本に無い攻めを、台本に無い順番と熱で語る。観客は「今日は何かが違う」とざわめき、係員だけが青くなっていく。紙は金庫で眠らせておく。決勝までの、切り札として。",
           "intent": "証拠を温存し、試合の中身で規定を殺す",
           "promise": "切り札が残る代わりに、世論の爆発は先送りになる",
           "memory": "金庫の台本が、決勝への切り札として眠っている",
           "tone": "pragmatic",
-          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
           "goto": "main.s2.w08.node.end.001"
         }
       ]
@@ -163,7 +353,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "2周目・週8大会週(10行+選択)。打倒アーク第一戦。ヴォルフの登記モチーフ(挑戦状・全種目化)公開範囲のみ、個別の危機(九戦目の台本興行の封筒)は先食いせず「台本で終わる九戦目」の事実まで。赤線の儀式は週9冒頭で回収(勝敗ロバスト規則)。",
+    "authorNote": "語り口V2・二行枠で改稿。2周目・週8大会週(10行+選択)。打倒アーク第一戦。ヴォルフの登記モチーフ(挑戦状・全種目化)公開範囲のみ、個別の危機(九戦目の台本興行の封筒)は先食いせず「台本で終わる九戦目」の事実まで。赤線の儀式は週9冒頭で回収(勝敗ロバスト規則)。",
     "legacyGeneratedIds": false
   }
 }

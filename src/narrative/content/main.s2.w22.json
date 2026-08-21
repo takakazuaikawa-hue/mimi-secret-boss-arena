@@ -8,9 +8,20 @@
     "arcId": "main.stage2"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -22,6 +33,18 @@
         "kind": "background",
         "path": "/assets/story/bg-arena-reception.png",
         "alt": "臨時申立窓口になった受付の背景"
+      },
+      {
+        "id": "main.s2.w22.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
+      },
+      {
+        "id": "main.s2.w22.asset.sprite.mimi.smile",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-smile-v1.png",
+        "alt": "笑顔のミミ"
       }
     ]
   },
@@ -29,91 +52,290 @@
     {
       "type": "direction",
       "id": "main.s2.w22.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s2.w22.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s2.w22.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "direction",
       "id": "main.s2.w22.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.w22.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s2.w22.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
-      "id": "main.s2.w22.node.line.001",
-      "lineId": "main.s2.w22.line.001",
+      "id": "main.s2.w22.node.line.001a",
+      "lineId": "main.s2.w22.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "臨時の申立窓口は、開けた瞬間から行列だった。ノノさんが徹夜で刷った書式の束が、午前中に尽きて、二度刷り増した。「監督資格停止への異議申立」。申立人の欄は——何枚あっても、いい。",
+      "text": "臨時の申立窓口は、開けた瞬間から行列だった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w22.node.line.001b",
+      "lineId": "main.s2.w22.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ノノさんが徹夜で刷った書式の束が、午前中に尽きた。二度、刷り増した。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w22.node.line.001c",
+      "lineId": "main.s2.w22.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「監督資格停止への異議申立」申立人の欄は——何枚あっても、いい。",
       "emotion": "resolve"
     },
     {
       "type": "line",
-      "id": "main.s2.w22.node.line.002",
-      "lineId": "main.s2.w22.line.002",
+      "id": "main.s2.w22.node.line.002a",
+      "lineId": "main.s2.w22.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "列の顔ぶれに、涙腺が仕事をしかけた。剣士さん。仲居さん。計測係くん。座長さんと一座の全員。休止札をそっと窓口に置いて署名する救護の人たち。外れ札に署名して出す胴元。マダムは三枚書いた(一枚は宝くじの裏だった)。"
+      "text": "列の顔ぶれに、涙腺が仕事をしかけた。剣士さん。仲居さん。"
     },
     {
       "type": "line",
-      "id": "main.s2.w22.node.line.003",
-      "lineId": "main.s2.w22.line.003",
+      "id": "main.s2.w22.node.line.002b",
+      "lineId": "main.s2.w22.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "狼の目の人は、挑戦状の様式で申立書を書いてきた(様式自由とはいえ、封蝋つきは初めてだ)。そして受付の外に、大きな板が一枚、立てかけられていた。——扉である。署名の代わりに、あの部屋が、自分の扉を一枚、提出してきたのだ。",
+      "text": "計測係くん。座長さんと一座の全員。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w22.node.line.002c",
+      "lineId": "main.s2.w22.line.002c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "休止札を置いて署名する救護の人たち。外れ札に署名する胴元。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w22.node.line.002d",
+      "lineId": "main.s2.w22.line.002d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "マダムは三枚書いた。一枚は、宝くじの裏だった。"
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.w22.node.direction.mimi.shift.001",
+      "command": {
+        "type": "show",
+        "assetId": "main.s2.w22.asset.sprite.mimi.smile",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w22.node.line.003a",
+      "lineId": "main.s2.w22.line.003a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "狼の目の人は、挑戦状の様式で申立書を書いてきた。様式自由とはいえ、封蝋つきは初めてだ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w22.node.line.003b",
+      "lineId": "main.s2.w22.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "受付の外に、大きな板が一枚、立てかけられていた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w22.node.line.003c",
+      "lineId": "main.s2.w22.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "——扉だ。あの部屋が、自分の扉を提出してきたのだ。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s2.w22.node.line.004",
-      "lineId": "main.s2.w22.line.004",
+      "id": "main.s2.w22.node.line.004a",
+      "lineId": "main.s2.w22.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "三日で、申立は千二百枚を超えた。台車二台ぶんの正式である。ノノさんは一枚ずつ受理印を押しながら、途中から声が震えていた。「こんなに美しい書類の山、受付人生で初めてです」。",
-      "emotion": "tender"
+      "text": "三日で、申立は千二百枚を超えた。台車二台ぶんだ。"
     },
     {
       "type": "line",
-      "id": "main.s2.w22.node.line.005",
-      "lineId": "main.s2.w22.line.005",
+      "id": "main.s2.w22.node.line.004b",
+      "lineId": "main.s2.w22.line.004b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "会社の返答は、四日目に来た。「資格停止を、撤回する」。短い通告文の末尾に、負け惜しみが一行、付いていた。「なお、決勝の対戦相手は、当社が指定する」。",
+      "text": "ノノさんは一枚ずつ受理印を押しながら、声が震えていた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w22.node.line.004c",
+      "lineId": "main.s2.w22.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「こんなに美しい書類の山、受付人生で初めてです」",
+      "emotion": "tender"
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.w22.node.direction.mimi.shift.002",
+      "command": {
+        "type": "show",
+        "assetId": "main.s2.w22.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w22.node.line.005a",
+      "lineId": "main.s2.w22.line.005a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "会社の返答は、四日目に来た。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w22.node.line.005b",
+      "lineId": "main.s2.w22.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「資格停止を、撤回する」短い通告文の末尾に、負け惜しみが一行。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w22.node.line.005c",
+      "lineId": "main.s2.w22.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "耳が、ぴくっと動いた。「なお、決勝の対戦相手は、当社が指定する」",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s2.w22.node.line.006",
-      "lineId": "main.s2.w22.line.006",
+      "id": "main.s2.w22.node.line.006a",
+      "lineId": "main.s2.w22.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "同日、掲示板の「調整中」が、貼り替えられた。決勝の相手——**「歴代王者選抜(台帳再現)」**。四百年の優勝者の中から選び抜かれた、全盛期の再現。そして監督の欄に、あの名前があった。再演企画室・**室長**。",
+      "text": "同日、掲示板の「調整中」が、「歴代王者選抜(台帳再現)」に貼り替えられた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w22.node.line.006b",
+      "lineId": "main.s2.w22.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "四百年の優勝者から選び抜かれた、全盛期の再現。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w22.node.line.006c",
+      "lineId": "main.s2.w22.line.006c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "監督の欄には、あの名前。再演企画室・室長。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s2.w22.node.line.007",
-      "lineId": "main.s2.w22.line.007",
+      "id": "main.s2.w22.node.line.007a",
+      "lineId": "main.s2.w22.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "控室が、静まった。それから誰かが、掠れた声で言った。「……観たい」。正直すぎる。だが、分かる。四百年の王者の全盛期が、一枚の砂場に並ぶのだ。観たいに、決まっている。——問題は、それと戦うのが、うちだということだ。",
+      "text": "控室が、静まった。誰かが、掠れた声で言った。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w22.node.line.007b",
+      "lineId": "main.s2.w22.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「……観たい」正直すぎる。でも、分かる。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w22.node.line.007c",
+      "lineId": "main.s2.w22.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "四百年の王者の全盛期が、一枚の砂場に並ぶのだ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w22.node.line.007d",
+      "lineId": "main.s2.w22.line.007d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "問題は——それと戦うのが、うちだということだ。",
       "emotion": "resolve"
     },
     {
       "type": "line",
-      "id": "main.s2.w22.node.line.008",
-      "lineId": "main.s2.w22.line.008",
+      "id": "main.s2.w22.node.line.008a",
+      "lineId": "main.s2.w22.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "会社の考えは、透けている。新作の頂点に、史上最強の再演をぶつける。うちが負ければ「再演は新作に勝る」の実証が完成し、歴代王者の凱旋興行が毎年の定番になる。——理屈は、いい理屈だ。理屈だけは。",
+      "text": "会社の考えは、透けている。新作の頂点に、史上最強の再演をぶつける気だ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w22.node.line.008b",
+      "lineId": "main.s2.w22.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "うちが負ければ「再演は新作に勝る」が実証される。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w22.node.line.008c",
+      "lineId": "main.s2.w22.line.008c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……理屈は、いい理屈だ。理屈だけは。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s2.w22.node.line.009",
-      "lineId": "main.s2.w22.line.009",
+      "id": "main.s2.w22.node.line.009a",
+      "lineId": "main.s2.w22.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "受付の窓口を閉めながら、ノノさんが言った。「相手が記録の再現なら——**記録の続きを知っているのは、こちらだけ**ですね」。……この人は、時々、審判より正確なことを言う。",
+      "text": "受付の窓口を閉めながら、ノノさんが言った。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w22.node.line.009b",
+      "lineId": "main.s2.w22.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「相手が記録の再現なら——記録の続きを知るのは、こちらだけですね」"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w22.node.line.009c",
+      "lineId": "main.s2.w22.line.009c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……この人は、時々、審判より正確なことを言う。",
       "emotion": "revelation"
     },
     {
@@ -123,23 +345,33 @@
         {
           "id": "main.s2.w22.choice.001",
           "label": "受けて立つ、と即日回答する",
-          "result": "回答書は一行にした。「対戦、お受けします。最高の興行にしましょう」。即答の速さは、こちらの覚悟の広告である。号外が「新星、歴代王者へ即答!」と刷り、賭け札の窓口には史上最長の行列ができた。四百年の憧れと、二年目の新星——どちらが強いかは、この街の全員が、本気で分からないらしい。最高の決勝の条件が、そろっていく。",
+          "result": "回答は一行、「対戦、お受けします」で終えた。号外が「新星、即答!」と刷り、賭け札の窓口に史上最長の列ができた。憧れと新星、どっちが強いか、街中まだ分からないらしい。",
           "intent": "動揺を見せず、興行として最高の形に乗る",
           "promise": "街の期待が最大化する代わりに、負ければ再演の勝利が実証される",
           "memory": "「対戦、お受けします」の一行回答が号外に載った",
           "tone": "heroic",
-          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
           "goto": "main.s2.w22.node.end.001"
         },
         {
           "id": "main.s2.w22.choice.002",
           "label": "再現できないものを、数え上げる",
-          "result": "夜、控室で全員と「記録に無くて、うちにあるもの」を数えた。この二年の続き。赤線、四本と、これから引く二本。柵の外に立ってくれた人たち。明日の朝ごはんの約束。——台帳は全盛期を再現できても、**続き**は再現できない。あちらの最強は、記録が止まった日の最強だ。うちの強さは、明日も伸びる。数え終えたとき、恐れは、どこにも残っていなかった。",
+          "result": "夜、全員で「記録に無くて、うちにあるもの」を数えた。この二年の続き、赤線、明日の約束。台帳は全盛期を再現できても、続きは再現できない。数え終えたら、恐れは消えていた。",
           "intent": "記録の再現との差分を、戦う前に言葉にする",
           "promise": "チームの軸が定まる代わりに、答え合わせは決勝の砂の上になる",
           "memory": "「記録に無くて、うちにあるもの」の一覧が控室に貼られた",
           "tone": "tender",
-          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
           "goto": "main.s2.w22.node.end.001"
         }
       ]
@@ -153,7 +385,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "2周目・週22反転(9行+選択)。署名の壁(壊したルールの数だけ味方が返ってくる回収。部屋は扉を提出)。決勝の相手=歴代王者選抜(台帳再現)・監督は室長、が判明。ノノさんの「記録の続きを知っているのはこちらだけ」が勝ち筋の種。",
+    "authorNote": "語り口V2・二行枠で改稿。2周目・週22反転(9行→32ノード+選択)。署名の壁(壊したルールの数だけ味方が返ってくる回収。部屋は扉を提出)。決勝の相手=歴代王者選抜(台帳再現)・監督は室長、が判明。ノノさんの「記録の続きを知っているのはこちらだけ」が勝ち筋の種。",
     "legacyGeneratedIds": false
   }
 }

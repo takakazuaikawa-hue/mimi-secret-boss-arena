@@ -8,9 +8,20 @@
     "arcId": "main.stage2"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -22,6 +33,18 @@
         "kind": "background",
         "path": "/assets/story/bg-hot-spring-ryokan.png",
         "alt": "温泉旅館の門前の背景"
+      },
+      {
+        "id": "main.s2.w05.asset.sprite.mimi.tsukkomi",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-tsukkomi-v1.png",
+        "alt": "驚いてツッコミを入れるミミ"
+      },
+      {
+        "id": "main.s2.w05.asset.sprite.mimi.smile",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-smile-v1.png",
+        "alt": "笑顔のミミ"
       }
     ]
   },
@@ -29,88 +52,241 @@
     {
       "type": "direction",
       "id": "main.s2.w05.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s2.w05.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s2.w05.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "direction",
       "id": "main.s2.w05.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.w05.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s2.w05.asset.sprite.mimi.tsukkomi",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
-      "id": "main.s2.w05.node.line.001",
-      "lineId": "main.s2.w05.line.001",
+      "id": "main.s2.w05.node.line.001a",
+      "lineId": "main.s2.w05.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "二度目の山道は、硫黄の匂いまで懐かしかった。大会明けの温泉行き。今年は速達に追いかけられない、静かな旅——のはずだった。",
+      "text": "二度目の山道は、硫黄の匂いまで懐かしかった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w05.node.line.001b",
+      "lineId": "main.s2.w05.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "大会明けの温泉行き。今年は静かな旅——のはずだった。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s2.w05.node.line.002",
-      "lineId": "main.s2.w05.line.002",
+      "id": "main.s2.w05.node.line.002a",
+      "lineId": "main.s2.w05.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "速達は、今年も来た。差出人、闘技場計測室。「貴チームのランク: 最上級(継続)。特記事項: 前年比、異常なし」。……異常なし、とわざわざ書かれると、逆に不安になるのはなぜだろう。"
+      "text": "速達は、今年も来た。差出人、闘技場計測室。"
     },
     {
       "type": "line",
-      "id": "main.s2.w05.node.line.003",
-      "lineId": "main.s2.w05.line.003",
+      "id": "main.s2.w05.node.line.002b",
+      "lineId": "main.s2.w05.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "更新版の選手証も同封されていた。金縁が、二重になっている。「二年目の線です」とノノさんの添え書き。年輪みたいな身分証である。ちょっと、気に入ってしまった。",
+      "text": "「貴チームのランク: 最上級(継続)。特記事項: 前年比、異常なし」"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w05.node.line.002c",
+      "lineId": "main.s2.w05.line.002c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……異常なし、とわざわざ書かれると、逆に不安になるのはなぜだろう。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w05.node.line.003a",
+      "lineId": "main.s2.w05.line.003a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "更新版の選手証も同封されていた。金縁が、二重になってる。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w05.node.line.003b",
+      "lineId": "main.s2.w05.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「二年目の線です」とノノさんの添え書き。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w05.node.line.003c",
+      "lineId": "main.s2.w05.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "年輪みたいな身分証だ。ちょっと、気に入ってしまった。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s2.w05.node.line.004",
-      "lineId": "main.s2.w05.line.004",
+      "id": "main.s2.w05.node.line.004a",
+      "lineId": "main.s2.w05.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "今年のバスは、去年より席が足りなかった。うちの所帯が、それだけ増えたということだ。通路まで詰まった顔ぶれを見渡して、監督は静かに満足した。定員オーバーは、いい悩みである。",
+      "text": "今年のバスは、去年より席が足りなかった。うちの所帯が、それだけ増えたということだ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w05.node.line.004b",
+      "lineId": "main.s2.w05.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "通路まで詰まった顔ぶれを見渡して、静かに満足した。定員オーバーは、いい悩みだ。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s2.w05.node.line.005",
-      "lineId": "main.s2.w05.line.005",
+      "id": "main.s2.w05.node.line.005a",
+      "lineId": "main.s2.w05.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "暖簾の前で、仲居さんが深々と頭を下げた。「お待ちしておりました——今年も」。今年も、が嬉しい宿である。効能書きの隅の小さな字も、今年も健在だった。「すべての疲れに効く(物忘れにも)」。効き目は、確かからしい。",
+      "text": "暖簾の前で、仲居さんが深々と頭を下げた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w05.node.line.005b",
+      "lineId": "main.s2.w05.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「お待ちしておりました——今年も」今年も、が嬉しい宿だ。効能書きの隅の字も、今年も健在。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w05.node.line.005c",
+      "lineId": "main.s2.w05.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「すべての疲れに効く(物忘れにも)」……効き目は、確からしい。",
+      "emotion": "comic"
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.w05.node.direction.mimi.shift.001",
+      "command": {
+        "type": "show",
+        "assetId": "main.s2.w05.asset.sprite.mimi.smile",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w05.node.line.007a",
+      "lineId": "main.s2.w05.line.007a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "宴会は、去年より静かに始まって、去年より大きく育った。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w05.node.line.007b",
+      "lineId": "main.s2.w05.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "今年は誰も「最上級」でははしゃがない。かわりに「連覇」の二文字で、全員がはしゃいだ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w05.node.line.007c",
+      "lineId": "main.s2.w05.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……成長といえば成長だ。方向はさておき。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s2.w05.node.line.007",
-      "lineId": "main.s2.w05.line.007",
+      "id": "main.s2.w05.node.line.008a",
+      "lineId": "main.s2.w05.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "宴会は、去年より静かに始まって、去年より大きく育った。今年は誰も「最上級」でははしゃがない。かわりに「連覇」の二文字で全員がはしゃいだ。成長といえば成長である。方向はさておき。",
-      "emotion": "comic"
+      "text": "宴の締めに、今年の目標を一言ずつ回した。連覇。契約の解放。"
     },
     {
       "type": "line",
-      "id": "main.s2.w05.node.line.008",
-      "lineId": "main.s2.w05.line.008",
+      "id": "main.s2.w05.node.line.008b",
+      "lineId": "main.s2.w05.line.008b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "宴の締めに、今年の目標を一言ずつ回した。連覇。契約の解放。新しい仲間。最後に私の番が来て、手短に言った。「今年も、いい一年にしましょう」。湯のせいか、拍手が去年より大きかった。",
+      "text": "新しい仲間。最後に私の番が来て、手短に言った。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w05.node.line.008c",
+      "lineId": "main.s2.w05.line.008c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「今年も、いい一年にしましょう」湯のせいか、拍手が去年より大きかった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w05.node.line.008d",
+      "lineId": "main.s2.w05.line.008d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "耳が、じんわり熱い。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s2.w05.node.line.009",
-      "lineId": "main.s2.w05.line.009",
+      "id": "main.s2.w05.node.line.009a",
+      "lineId": "main.s2.w05.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "帰りの荷物に、宿の売店の貼り紙が一枚紛れていた。「近日、街にてリバイバル公演。演目は名場面の数々!」——山の宿まで、あの宣伝が来ている。会社の本気の速さだけは、認めざるを得ない。",
+      "text": "帰りの荷物に、宿の売店の貼り紙が一枚紛れていた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w05.node.line.009b",
+      "lineId": "main.s2.w05.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「近日、街にてリバイバル公演。演目は名場面の数々!」"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w05.node.line.009c",
+      "lineId": "main.s2.w05.line.009c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "——山の宿まで、あの宣伝が来ている。会社の本気の速さだけは、認めざるを得ない。",
       "emotion": "tension"
     },
     {
       "type": "effect",
       "id": "main.s2.w05.node.effect.001",
-      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+      "effects": [
+        {
+          "type": "sharedPoints",
+          "amount": 2
+        }
+      ]
     },
     {
       "type": "end",
@@ -121,7 +297,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "2周目・週5(9行・選択肢なし)。祭事=温泉の二年目。仲居さん=覚えている側(湯が記憶を守る——効能書きのギャグで通過)。台帳の外の記録が二冊に(控え+宿帳)。宿の中の場面は既存イベントの領分のまま。",
+    "authorNote": "語り口V2・二行枠で改稿。2周目・週5(9行・選択肢なし)。祭事=温泉の二年目。仲居さん=覚えている側(湯が記憶を守る——効能書きのギャグで通過)。台帳の外の記録が二冊に(控え+宿帳)。宿の中の場面は既存イベントの領分のまま。",
     "legacyGeneratedIds": false
   }
 }

@@ -8,9 +8,20 @@
     "arcId": "main.stage2"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -35,12 +46,18 @@
     {
       "type": "direction",
       "id": "main.s2.w16.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s2.w16.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s2.w16.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "direction",
       "id": "main.s2.w16.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
     },
     {
       "type": "direction",
@@ -55,43 +72,99 @@
     },
     {
       "type": "line",
-      "id": "main.s2.w16.node.line.001",
-      "lineId": "main.s2.w16.line.001",
+      "id": "main.s2.w16.node.line.001a",
+      "lineId": "main.s2.w16.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "黄金ジャックポット杯の夜。去年は熱気で揚げ物の匂いまで濃かった賭場が——今年は、静かだった。券売の窓口に、行列が無い。",
+      "text": "黄金ジャックポット杯の夜。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w16.node.line.001b",
+      "lineId": "main.s2.w16.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "去年は熱気で、揚げ物の匂いまで濃かった賭場が——今年は、静かだった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w16.node.line.001c",
+      "lineId": "main.s2.w16.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "券売の窓口に、行列が無い。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s2.w16.node.line.002",
-      "lineId": "main.s2.w16.line.002",
+      "id": "main.s2.w16.node.line.002a",
+      "lineId": "main.s2.w16.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "券売のおじさんが、うちを見て、泣いた。「予想紙が当たり続けてよう……誰も、賭けてくれねえんだ」。答えの載った試験に、鉛筆を握る者はいない。当たる予想は、賭場を殺すのだ。"
+      "text": "当たる予想は、賭場を殺すのだ。"
     },
     {
       "type": "line",
-      "id": "main.s2.w16.node.line.003",
-      "lineId": "main.s2.w16.line.003",
+      "id": "main.s2.w16.node.line.003a",
+      "lineId": "main.s2.w16.line.003a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "会場に、予想の主の隊がいた。予想紙の題字にある名前——リンネさん。的中率百パーセントの人。彼女は倍率一・〇倍の掲示板を眺めて、世界でいちばん退屈そうな顔をしていた。当たり続ける人の顔は、勝ち続ける顔とは違う。あれは——飽きた人の顔だ。",
+      "text": "会場に、予想の主の隊がいた。予想紙の題字にある名前——リンネさん。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w16.node.line.003b",
+      "lineId": "main.s2.w16.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "的中率百パーセントの人。彼女は倍率一・〇倍の掲示板を眺めていた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w16.node.line.003c",
+      "lineId": "main.s2.w16.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "世界でいちばん退屈そうな顔。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w16.node.line.003d",
+      "lineId": "main.s2.w16.line.003d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "当たり続ける人の顔は、勝ち続ける顔とは違う。あれは——飽きた人の顔だ。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s2.w16.node.line.004",
-      "lineId": "main.s2.w16.line.004",
+      "id": "main.s2.w16.node.line.004a",
+      "lineId": "main.s2.w16.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "壊す条文は、決めてある。「胴元総取り・的中固定規定」。当たりを固定して売り、動いた金は会社が取る。賭けの心臓——分からないから面白い——を、抜き取る仕組みである。",
+      "text": "壊す条文は、決めてある。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w16.node.line.004b",
+      "lineId": "main.s2.w16.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「胴元総取り・的中固定規定」当たりを固定して売り、動いた金は会社が取る。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w16.node.line.004c",
+      "lineId": "main.s2.w16.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "賭けの心臓——分からないから面白い——を抜き取る仕組みだ。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s2.w16.node.line.005",
-      "lineId": "main.s2.w16.line.005",
+      "id": "main.s2.w16.node.line.005a",
+      "lineId": "main.s2.w16.line.005a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
@@ -100,29 +173,53 @@
     },
     {
       "type": "line",
-      "id": "main.s2.w16.node.line.006",
-      "lineId": "main.s2.w16.line.006",
+      "id": "main.s2.w16.node.line.006a",
+      "lineId": "main.s2.w16.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "場内が、二年連続で「両方勝ちとは何か」でざわめいた。予想の主が、初めてこちらを見た。「……両方勝ち? 予想の、書きようがないねえ、それ」。退屈の顔に、ひび割れみたいな笑みが差した。",
+      "text": "耳が、面白がって、ぴょこっと動いた。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s2.w16.node.line.007",
-      "lineId": "main.s2.w16.line.007",
+      "id": "main.s2.w16.node.line.007a",
+      "lineId": "main.s2.w16.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "券売のおじさんが、跳ね起きた。手書きの札を窓口に掲げる。「本日、予想紙対象外試合!」。——行列が、戻ってきた。分からない試合の前にだけ、人は並ぶ。去年、九戦目で見た行列と、同じ形の行列だった。",
+      "text": "券売のおじさんが、跳ね起きた。手書きの札を窓口に掲げる。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w16.node.line.007b",
+      "lineId": "main.s2.w16.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「本日、予想紙対象外試合!」……行列が、戻ってきた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w16.node.line.007c",
+      "lineId": "main.s2.w16.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "分からない試合の前にだけ、人は並ぶ。去年、九戦目で見た行列と、同じ形の行列だった。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s2.w16.node.line.008",
-      "lineId": "main.s2.w16.line.008",
+      "id": "main.s2.w16.node.line.008a",
+      "lineId": "main.s2.w16.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "入場口の札が裏返る。狙うは、赤線の三本目。予想紙に書けない試合を、場内ぜんぶに見てもらう。手帳の一覧の、ちょうど折り返しである。",
+      "text": "入場口の札が裏返る。狙うは、赤線の三本目。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w16.node.line.008b",
+      "lineId": "main.s2.w16.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "予想紙に書けない試合を、場内ぜんぶに見てもらう。手帳の一覧の、ちょうど折り返しだった。",
       "emotion": "resolve"
     },
     {
@@ -132,23 +229,33 @@
         {
           "id": "main.s2.w16.choice.001",
           "label": "予想紙の展開を、全部裏切ると宣言する",
-          "result": "「予想紙に書いてある展開、今夜は一つも起きません。予告します」。裏切りの予告という、矛盾した宣言である。だが賭場には、これがいちばん効く。予想紙を手にした客たちが、紙と砂場を見比べて、にやりとした。「じゃあ、何が起きるんだ?」——それを知らないのが、賭けです。窓口の行列が、二倍に伸びた。",
+          "result": "「予想紙の展開、今夜は一つも起きません。予告します」。矛盾した宣言だけど、賭場には一番効く。客たちが、紙と砂場を見比べて、にやり。「じゃあ、何が起きるんだ?」——それを知らないのが、賭けです。行列が、二倍に伸びた。",
           "intent": "予想そのものを、賭けの獲物にする",
           "promise": "賭場が最高に沸く代わりに、宣言どおり全部裏切る重さを背負う",
           "memory": "「裏切りの予告」が賭場の新しい名物になった",
           "tone": "wild",
-          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
           "goto": "main.s2.w16.node.end.001"
         },
         {
           "id": "main.s2.w16.choice.002",
           "label": "予想紙を買って、正々堂々研究する",
-          "result": "敵の予想は、最高の教材である。売店で予想紙を一部買い(会社に金を落とすのは癪だが、経費で落とす)、控室で全員と読み込んだ。的中率百パーセントの予想は、裏を返せば「うちの手の内の完全な写し」だ。つまり——ここに書かれていない手だけが、新しい手である。研究の結論を、一行で壁に貼った。「この紙に無いことを、やる」。",
+          "result": "敵の予想は、最高の教材。売店で予想紙を買い(経費で落とす)、控室で全員と読み込んだ。的中率百パーセントの予想は、裏を返せば「うちの手の内の完全な写し」。つまり——ここに書かれていない手だけが、新しい手。「この紙に無いことを、やる」",
           "intent": "敵の完璧な予想を、逆さに使う",
           "promise": "新しい手が見つかる代わりに、既存の型は今夜封印になる",
           "memory": "「この紙に無いことを、やる」の貼り紙が控室に残った",
           "tone": "pragmatic",
-          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
           "goto": "main.s2.w16.node.end.001"
         }
       ]
@@ -162,7 +269,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "2周目・週16大会週(8行+選択)。ルール=胴元総取り・的中固定。当たる予想が賭場を殺す、を胴元の涙で。リンネの描写は公開範囲(退屈の顔)のみ、危機の中身は先食いしない。行列=反対票の天丼(週8)。",
+    "authorNote": "語り口V2・二行枠で改稿。2周目・週16大会週(8行+選択)。ルール=胴元総取り・的中固定。当たる予想が賭場を殺す、を胴元の涙で。リンネの描写は公開範囲(退屈の顔)のみ、危機の中身は先食いしない。行列=反対票の天丼(週8)。",
     "legacyGeneratedIds": false
   }
 }

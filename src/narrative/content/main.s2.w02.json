@@ -8,9 +8,20 @@
     "arcId": "main.stage2"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -22,6 +33,18 @@
         "kind": "background",
         "path": "/assets/story/bg-arena-reception.png",
         "alt": "闘技場の正面受付の背景"
+      },
+      {
+        "id": "main.s2.w02.asset.sprite.mimi.tsukkomi",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-tsukkomi-v1.png",
+        "alt": "驚いてツッコミを入れるミミ"
+      },
+      {
+        "id": "main.s2.w02.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
       }
     ]
   },
@@ -29,88 +52,201 @@
     {
       "type": "direction",
       "id": "main.s2.w02.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s2.w02.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s2.w02.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "direction",
       "id": "main.s2.w02.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.w02.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s2.w02.asset.sprite.mimi.tsukkomi",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
-      "id": "main.s2.w02.node.line.001",
-      "lineId": "main.s2.w02.line.001",
+      "id": "main.s2.w02.node.line.001a",
+      "lineId": "main.s2.w02.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "二年目の第二週は、平和に始まった。去年この週にあった引継ぎ事故は、今年は起きない。名義はもう、正式に私のものだからだ。マダムが習慣で謝りに来かけて、「あら? 私、何を謝りに来たのかしら」と首をかしげて、大福だけ置いて帰った。",
+      "text": "それも、いつものマダムだ。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s2.w02.node.line.002",
-      "lineId": "main.s2.w02.line.002",
+      "id": "main.s2.w02.node.line.002a",
+      "lineId": "main.s2.w02.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "平和は、昼までだった。使いの帰り道、街角の稽古場から、聞き覚えのある声の調子が流れてきたのだ。役者さんたちの、台本の読み合わせ。表紙に「名場面選集・第一集(再演企画室・監修)」。"
+      "text": "平和は、昼までだった。使いの帰り道、稽古場から聞き覚えのある声が流れてきた。"
     },
     {
       "type": "line",
-      "id": "main.s2.w02.node.line.003",
-      "lineId": "main.s2.w02.line.003",
+      "id": "main.s2.w02.node.line.002b",
+      "lineId": "main.s2.w02.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "足を止めた、その瞬間だった。稽古の輪から、よく通る声がひとつ、飛んできた。——「初心者です。監督が。」",
+      "text": "役者さんたちの、台本の読み合わせ。表紙に「名場面選集・第一集(再演企画室・監修)」"
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.w02.node.direction.mimi.shift.001",
+      "command": {
+        "type": "show",
+        "assetId": "main.s2.w02.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w02.node.line.003a",
+      "lineId": "main.s2.w02.line.003a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "足を止めた、その瞬間だった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w02.node.line.003b",
+      "lineId": "main.s2.w02.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "稽古の輪から、よく通る声がひとつ、飛んできた。——「初心者です。監督が」",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s2.w02.node.line.004",
-      "lineId": "main.s2.w02.line.004",
+      "id": "main.s2.w02.node.line.004a",
+      "lineId": "main.s2.w02.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私の台詞だ。去年の、大会の朝の、私の台詞。他人の口から聞く自分の言葉は、他人の服を着た自分を鏡で見るのに似ている。似合っているかどうかより先に、聞きたいことがある。——それ、誰の許しで着ました?",
+      "text": "……私の台詞だ。去年の、大会の朝の。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w02.node.line.004b",
+      "lineId": "main.s2.w02.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "耳が、かっと熱くなった。他人の口から聞く自分の言葉は、変な感じがする。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w02.node.line.004c",
+      "lineId": "main.s2.w02.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "——それ、誰の許しで着ました?",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s2.w02.node.line.005",
-      "lineId": "main.s2.w02.line.005",
+      "id": "main.s2.w02.node.line.005a",
+      "lineId": "main.s2.w02.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "受付に戻って、ノノさんと規定を引いた。答えは、あった。資産条項の枝——「終了した興行の上演権は、会社に帰属する」。つまり、去年のうちの試合も、私の台詞も、**終わった瞬間に会社のもの**になっている。",
+      "text": "受付に戻って、ノノさんと規定を引いた。答えは、あった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w02.node.line.005b",
+      "lineId": "main.s2.w02.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "資産条項の枝——「終了した興行の上演権は、会社に帰属する」読み下すと、こうだ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w02.node.line.005c",
+      "lineId": "main.s2.w02.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "終わった試合も台詞も、**終わった瞬間に会社のもの**になる。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s2.w02.node.line.006",
-      "lineId": "main.s2.w02.line.006",
+      "id": "main.s2.w02.node.line.006a",
+      "lineId": "main.s2.w02.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "許可を求める必要すら、無いのだ。だからうちに一言も無く、演目にできる。……役者さんに罪は無い。台本を書いた側の、仕組みの問題だ。",
+      "text": "許可を求める必要すら、無い。だから一言も無く、演目にできる。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w02.node.line.006b",
+      "lineId": "main.s2.w02.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……役者さんに罪は無い。仕組みの問題だ。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s2.w02.node.line.007",
-      "lineId": "main.s2.w02.line.007",
+      "id": "main.s2.w02.node.line.007a",
+      "lineId": "main.s2.w02.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "去年、私たちは「選手の所有」と戦った。今年の敵は、その続きにいる。——**思い出の所有**。戦った日々そのものを、資産として持っていかれる仕組み。",
+      "text": "去年、私たちは「選手の所有」という仕組みと戦った。今年の敵は、その続きにいる。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w02.node.line.007b",
+      "lineId": "main.s2.w02.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "——**思い出の所有**。戦った日々そのものを、資産として持っていかれる仕組みだ。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s2.w02.node.line.008",
-      "lineId": "main.s2.w02.line.008",
+      "id": "main.s2.w02.node.line.008a",
+      "lineId": "main.s2.w02.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "手帳に、今年最初の敵の名前を書いた。「上演権(資産条項の枝)」。字の横に、鉛筆で小さく印を付ける。赤線は、壊すと決めてから引くものだ。——決めるのは、たぶん、そう遠くない。",
+      "text": "手帳に、今年最初の敵の名前を書いた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w02.node.line.008b",
+      "lineId": "main.s2.w02.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「上演権(資産条項の枝)」字の横に、鉛筆で小さく、印を付けておく。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w02.node.line.008c",
+      "lineId": "main.s2.w02.line.008c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "赤線は、壊すと決めてから引くもの。——決めるのは、たぶん、そう遠くない。",
       "emotion": "resolve"
     },
     {
       "type": "effect",
       "id": "main.s2.w02.node.effect.001",
-      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+      "effects": [
+        {
+          "type": "sharedPoints",
+          "amount": 2
+        }
+      ]
     },
     {
       "type": "end",
@@ -121,7 +257,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "2周目・週2全面改稿(違和感ドリブン→権利ドリブン)。「私の台詞は誰のもの」=上演権の発見として敵を立てる。事故が起きない件とマダムは1行ギャグに圧縮。湯気の記憶の説明は削除。",
+    "authorNote": "語り口V2・二行枠で改稿。2周目・週2全面改稿(違和感ドリブン→権利ドリブン)。「私の台詞は誰のもの」=上演権の発見として敵を立てる。事故が起きない件とマダムは1行ギャグに圧縮。湯気の記憶の説明は削除。",
     "legacyGeneratedIds": false
   }
 }

@@ -8,9 +8,20 @@
     "arcId": "main.stage2"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -41,12 +52,18 @@
     {
       "type": "direction",
       "id": "main.s2.w25.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s2.w25.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s2.w25.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "direction",
       "id": "main.s2.w25.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
     },
     {
       "type": "direction",
@@ -61,20 +78,60 @@
     },
     {
       "type": "line",
-      "id": "main.s2.w25.node.line.001",
-      "lineId": "main.s2.w25.line.001",
+      "id": "main.s2.w25.node.line.001a",
+      "lineId": "main.s2.w25.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "決勝の前夜祭は、去年より一回り大きな祭りになった。提灯と屋台と、あちこちで聞こえる明日の話。私は宴の輪を少し外れて、手帳を開いた。明日のことを、一度ぜんぶ、並べておきたかったのだ。",
+      "text": "決勝の前夜祭は、去年より一回り大きな祭りになった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w25.node.line.001b",
+      "lineId": "main.s2.w25.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "提灯と屋台と、あちこちで聞こえる明日の話。宴の輪を少し外れて、手帳を開いた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w25.node.line.001c",
+      "lineId": "main.s2.w25.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "明日を、一度ぜんぶ並べておきたかった。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s2.w25.node.line.002",
-      "lineId": "main.s2.w25.line.002",
+      "id": "main.s2.w25.node.line.002a",
+      "lineId": "main.s2.w25.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "書き出すと、こうなる。相手は、歴代王者選抜——四百年の優勝者たちの、全盛期の再現。監督席には、あの室長が自ら座る。同じ時刻に、街の反対側では「世界滅亡ショー」が開演し、客の取り合いになる。勝てば、最後の赤線。負ければ——それは、書かない。書かないが、覚悟だけは、しておく。"
+      "text": "書き出すと、こうなる。相手は歴代王者選抜——四百年の優勝者の、全盛期の再現。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w25.node.line.002b",
+      "lineId": "main.s2.w25.line.002b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "監督席には、あの室長が自ら座る。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w25.node.line.002c",
+      "lineId": "main.s2.w25.line.002c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "同時刻、街の反対側では滅亡ショーが開演する。勝てば、最後の赤線。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w25.node.line.002d",
+      "lineId": "main.s2.w25.line.002d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "負ければ——それは、書かない。覚悟だけは、しておく。"
     },
     {
       "type": "direction",
@@ -89,20 +146,60 @@
     },
     {
       "type": "line",
-      "id": "main.s2.w25.node.line.003",
-      "lineId": "main.s2.w25.line.003",
+      "id": "main.s2.w25.node.line.003a",
+      "lineId": "main.s2.w25.line.003a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "赤線は、いま五本。五本目は、抜かない剣の一戦と、人の名前が消えた賞品欄を見てしまった場内の声とで、引けた線だ。台本試合、常時稼働、胴元総取り、出口廃止、名入れ販売——壊すたび、街の空気が軽くなった条文たち。残るは六つ目、「台帳による再演の強制」。ただしこれには、条文が無い。無いものに、どう線を引くか。答えは明日、砂の上で出す。",
+      "text": "赤線は、いま五本。五本目は、抜かない剣の一戦で引けた線だ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w25.node.line.003b",
+      "lineId": "main.s2.w25.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "台本試合、常時稼働、胴元総取り、出口廃止、名入れ販売。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w25.node.line.003c",
+      "lineId": "main.s2.w25.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "壊すたび、街の空気が軽くなった条文たち。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w25.node.line.003d",
+      "lineId": "main.s2.w25.line.003d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "残るは六つ目、「台帳による再演の強制」条文の無いそれに、明日、線を引く。",
       "emotion": "resolve"
     },
     {
       "type": "line",
-      "id": "main.s2.w25.node.line.004",
-      "lineId": "main.s2.w25.line.004",
+      "id": "main.s2.w25.node.line.004a",
+      "lineId": "main.s2.w25.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "手帳を閉じて、夜風に当たりに歩いた。誰もいないはずの、闘技場の砂場——に、灯りがひとつ。誰かが、型の練習をしている。見たことのない、古い、美しい型。優美で、力強くて、まるで教科書がひとりでに動いているようだった。",
+      "text": "手帳を閉じて、夜風に当たりに歩いた。誰もいないはずの砂場に——灯りがひとつ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w25.node.line.004b",
+      "lineId": "main.s2.w25.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "誰かが、型の練習をしている。見たことのない、古い型。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w25.node.line.004c",
+      "lineId": "main.s2.w25.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "まるで、教科書が動いているようだった。",
       "emotion": "tension"
     },
     {
@@ -118,62 +215,139 @@
     },
     {
       "type": "line",
-      "id": "main.s2.w25.node.line.005",
-      "lineId": "main.s2.w25.line.005",
+      "id": "main.s2.w25.node.line.005a",
+      "lineId": "main.s2.w25.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "決勝の相手——歴代王者の再現体の、一人だった。開演を明日に控えた夜、たった一人で、誰も観ていない砂場で、型を繰り返している。いつの間にか隣に、うちの仲間が一人、立っていた。何も言わずに、二人で、それを見た。",
+      "text": "決勝の相手——歴代王者の再現体の、一人だった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w25.node.line.005b",
+      "lineId": "main.s2.w25.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "開演を明日に控えた夜、たった一人で型を繰り返している。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w25.node.line.005c",
+      "lineId": "main.s2.w25.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "隣にうちの仲間が立っていた。何も言わず、二人でそれを見た。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s2.w25.node.line.006",
-      "lineId": "main.s2.w25.line.006",
+      "id": "main.s2.w25.node.line.006a",
+      "lineId": "main.s2.w25.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "気づけば、声をかけていた。「こんばんは」。再現体は、こちらを向いて——四百年前の、優勝の口上を述べた。朗々と、完璧に、場違いに。……こんばんは、は、記録に無いらしい。",
+      "text": "気づけば、声をかけていた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w25.node.line.006b",
+      "lineId": "main.s2.w25.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「こんばんは」再現体はこちらを向いて、四百年前の優勝の口上を述べた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w25.node.line.006c",
+      "lineId": "main.s2.w25.line.006c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "朗々と、場違いに。……こんばんは、は記録に無いらしい。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s2.w25.node.line.007",
-      "lineId": "main.s2.w25.line.007",
+      "id": "main.s2.w25.node.line.007a",
+      "lineId": "main.s2.w25.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "記録は、ぜんぶある。型も、口上も、栄光の一部始終も。でも、今夜の夜風に何を思うかは——どこにも、記録されていない。台帳の再現とは、そういうものだ。",
+      "text": "記録は、ぜんぶある。型も口上も、栄光の一部始終も。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w25.node.line.007b",
+      "lineId": "main.s2.w25.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "でも、今夜の夜風に何を思うかは、記録されていない。耳の奥が、じんとした。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s2.w25.node.line.008",
-      "lineId": "main.s2.w25.line.008",
+      "id": "main.s2.w25.node.line.008a",
+      "lineId": "main.s2.w25.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "仲間が、静かに言った。「本物のあの人は——勝った夜、いつも屋台で笑っていた。豪快で、少し下手な笑い方だった。……その笑い方は、台帳に、載っていないんだな」。共に戦った者だけが知っている部分は——記録の外に、あったのだ。",
+      "text": "「豪快で、少し下手な笑い方だった。……台帳に載っていないんだな」共に戦った者だけが知っている部分は、記録の外にあった。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s2.w25.node.line.009",
-      "lineId": "main.s2.w25.line.009",
+      "id": "main.s2.w25.node.line.009a",
+      "lineId": "main.s2.w25.line.009a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "決めた。明日の決勝の意味が、今夜、はっきりした。明日、勝つ。勝って、再演の強制を終わらせる。四百年の伝説たちを、資産ではなく——ただの、大切な思い出に返す。**明日は、この街の憧れを、取り戻しに行く日だ。**",
+      "text": "決めた。明日の決勝の意味が、今夜、はっきりした。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w25.node.line.009b",
+      "lineId": "main.s2.w25.line.009b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "明日、勝つ。四百年の伝説たちを、資産じゃなく思い出に返す。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w25.node.line.009c",
+      "lineId": "main.s2.w25.line.009c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "明日は、この街の憧れを、取り戻しに行く日だ。",
       "emotion": "resolve"
     },
     {
       "type": "line",
-      "id": "main.s2.w25.node.line.010",
-      "lineId": "main.s2.w25.line.010",
+      "id": "main.s2.w25.node.line.010a",
+      "lineId": "main.s2.w25.line.010a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "宴へ戻って、明日の話をひとつだけした。「決勝の朝、全員で朝ごはんを食べましょう。まかないの、いつもの席で」。二年目も、この約束から始める。大一番の前夜に要るのは、いつも通りが続くという約束だ。",
+      "text": "宴へ戻って、明日の話をひとつだけした。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w25.node.line.010b",
+      "lineId": "main.s2.w25.line.010b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「決勝の朝、全員で朝ごはんを。まかないの、いつもの席で」二年目も、この約束から始める。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w25.node.line.010c",
+      "lineId": "main.s2.w25.line.010c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "いつも通りが続く約束だ。",
       "emotion": "tender"
     },
     {
       "type": "effect",
       "id": "main.s2.w25.node.effect.001",
-      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+      "effects": [
+        {
+          "type": "sharedPoints",
+          "amount": 2
+        }
+      ]
     },
     {
       "type": "end",
@@ -184,7 +358,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "2周目・週25(10行・選択肢なし)。手帳ブリーフ=プレイヤー向けの明日の全整理(相手=歴代王者選抜/同時刻の滅亡ショー/勝敗の意味/赤線5本の復習)。伝説の再現体との邂逅+剣士さんの「その笑い方は台帳に載っとらん」で決勝の意味を確定(街の憧れを取り戻す)。本命選択(区分2版)はシステム拡張後にこの後へ連鎖。",
+    "authorNote": "語り口V2・二行枠で改稿。2周目・週25(10行→30ノード・選択肢なし)。手帳ブリーフ=プレイヤー向けの明日の全整理(相手=歴代王者選抜/同時刻の滅亡ショー/勝敗の意味/赤線5本の復習)。伝説の再現体との邂逅+剣士さんの「その笑い方は台帳に載っとらん」で決勝の意味を確定(街の憧れを取り戻す)。本命選択(区分2版)はシステム拡張後にこの後へ連鎖。",
     "legacyGeneratedIds": false
   }
 }

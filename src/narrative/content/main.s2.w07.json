@@ -8,9 +8,20 @@
     "arcId": "main.stage2"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -22,6 +33,18 @@
         "kind": "background",
         "path": "/assets/story/bg-arena-reception.png",
         "alt": "闘技場の正面受付の背景"
+      },
+      {
+        "id": "main.s2.w07.asset.sprite.mimi.tsukkomi",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-tsukkomi-v1.png",
+        "alt": "驚いてツッコミを入れるミミ"
+      },
+      {
+        "id": "main.s2.w07.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
       }
     ]
   },
@@ -29,107 +52,269 @@
     {
       "type": "direction",
       "id": "main.s2.w07.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s2.w07.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s2.w07.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "direction",
       "id": "main.s2.w07.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.w07.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s2.w07.asset.sprite.mimi.tsukkomi",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
-      "id": "main.s2.w07.node.line.001",
-      "lineId": "main.s2.w07.line.001",
+      "id": "main.s2.w07.node.line.001a",
+      "lineId": "main.s2.w07.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "朝の受付に、封筒が積んであった。八通。全部うち宛て。全部、同じ差出人。——来週の対戦相手からの、挑戦状である。",
+      "text": "朝の受付に、封筒が山と積んであった。八通。全部うち宛て、全部、同じ差出人からだった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w07.node.line.001b",
+      "lineId": "main.s2.w07.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "——来週の対戦相手からの、挑戦状だった。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s2.w07.node.line.002",
-      "lineId": "main.s2.w07.line.002",
+      "id": "main.s2.w07.node.line.002a",
+      "lineId": "main.s2.w07.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "一通目「綱引きで勝負」。二通目「早食いで勝負」。三通目「にらめっこで勝負」。……八通目まで、全部種目が違う。差出人の署名は、ヴォルフ・ナイン。すべてを種目化して挑んでくる人らしい。うちの控室は、返事の割り振りで朝から盛り上がった。"
+      "text": "一通目「綱引きで勝負」、二通目「早食いで勝負」三通目「にらめっこで勝負」"
     },
     {
       "type": "line",
-      "id": "main.s2.w07.node.line.003",
-      "lineId": "main.s2.w07.line.003",
+      "id": "main.s2.w07.node.line.002b",
+      "lineId": "main.s2.w07.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「にらめっこは私が出る」「早食いは譲らん」「綱引きは全員でいいのでは?」。挑戦状というものは、受け取る側をこんなに元気にするものなのか。八通の便箋は、どれも楽しそうな字で書いてあった。",
+      "text": "——八通目まで、全部、種目が違う。差出人の署名は、ヴォルフ・ナイン。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w07.node.line.002c",
+      "lineId": "main.s2.w07.line.002c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "すべてを種目化して挑む人らしい。うちの控室は、返事の割り振りで朝から盛り上がった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w07.node.line.003a",
+      "lineId": "main.s2.w07.line.003a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「にらめっこは私が出る」「早食いは譲らん」"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w07.node.line.003b",
+      "lineId": "main.s2.w07.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「綱引きは全員でいいのでは?」と誰かが言った。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w07.node.line.003c",
+      "lineId": "main.s2.w07.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "挑戦状は、受け取る側をこんなに元気にするものなのか。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w07.node.line.003d",
+      "lineId": "main.s2.w07.line.003d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "八通の便箋は、どれも楽しそうな字だった。",
       "emotion": "comic"
     },
     {
+      "type": "direction",
+      "id": "main.s2.w07.node.direction.mimi.shift.001",
+      "command": {
+        "type": "show",
+        "assetId": "main.s2.w07.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
+    },
+    {
       "type": "line",
-      "id": "main.s2.w07.node.line.004",
-      "lineId": "main.s2.w07.line.004",
+      "id": "main.s2.w07.node.line.004a",
+      "lineId": "main.s2.w07.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "夕方、九通目が届いた。同じ宛先。だが——封蝋が、違った。赤い、会社の社印。挑戦状の束に、一通だけ紛れ込んだ、事務の匂いのする封筒。",
+      "text": "夕方になって、九通目が届いた。同じ宛先。だが——封蝋が、違った。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w07.node.line.004b",
+      "lineId": "main.s2.w07.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "赤い、会社の社印。挑戦状の束に、一通だけ紛れ込んだ、事務の匂いの封筒。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s2.w07.node.line.005",
-      "lineId": "main.s2.w07.line.005",
+      "id": "main.s2.w07.node.line.005a",
+      "lineId": "main.s2.w07.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "中身は、書類だった。表題——「第九戦 進行台本(関係者外秘)」。頁をめくる。試合の流れが、台詞つきで書いてある。見せ場の位置。盛り上がりの秒数。そして、最後の頁。",
+      "text": "中身は、書類だった。表題——「第九戦 進行台本(関係者外秘)」頁をめくる。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w07.node.line.005b",
+      "lineId": "main.s2.w07.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "試合の流れが、台詞つきで書いてある。見せ場の位置、盛り上がりの秒数——そして、最後の頁。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s2.w07.node.line.006",
-      "lineId": "main.s2.w07.line.006",
+      "id": "main.s2.w07.node.line.006a",
+      "lineId": "main.s2.w07.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "「結果: 挑戦者チームの敗北(興行都合)」。——勝敗が、先に、書いてある。うちが負けることが、試合の一週間前に、決まっている。",
+      "text": "「結果: 挑戦者チームの敗北(興行都合)」"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w07.node.line.006b",
+      "lineId": "main.s2.w07.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "——勝敗は、もう先に書いてしまってある。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w07.node.line.006c",
+      "lineId": "main.s2.w07.line.006c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "うちが負けることが、試合の一週間前に、決まっている。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s2.w07.node.line.007",
-      "lineId": "main.s2.w07.line.007",
+      "id": "main.s2.w07.node.line.007a",
+      "lineId": "main.s2.w07.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "手が、冷たくなった。怒りというものは、熱くなる前に一度冷たくなるらしい。初めて知った。八通の楽しい挑戦状と、一通の台本。同じ「第九戦」を、挑む側は本気で楽しみにしていて、会社は先に終わらせている。",
+      "text": "手が、冷たくなった。怒りは、熱くなる前に一度冷たくなるらしい。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w07.node.line.007b",
+      "lineId": "main.s2.w07.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "初めて知った。八通の楽しい挑戦状と、一通の台本。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w07.node.line.007c",
+      "lineId": "main.s2.w07.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "同じ「第九戦」を、挑む側は本気で楽しみにしてるのに、会社は先に終わらせてる。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s2.w07.node.line.008",
-      "lineId": "main.s2.w07.line.008",
+      "id": "main.s2.w07.node.line.008a",
+      "lineId": "main.s2.w07.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "控室に台本を置いた。全員が、順番に読んだ。読み終えた顔が、全員、同じだった。静かで、冷たくて——それから、ゆっくり熱くなる顔。誰かが言った。「ミミさん。これは、破っていい台本か」。",
+      "text": "控室に台本を置いた。全員が、順番に読んだ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w07.node.line.008b",
+      "lineId": "main.s2.w07.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "読み終えた顔が、全員、同じだった。耳まで、ぴんと張ってる人もいた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w07.node.line.008c",
+      "lineId": "main.s2.w07.line.008c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "誰かが言った。「ミミさん。これは、破っていい台本か」",
       "emotion": "resolve"
     },
     {
       "type": "line",
-      "id": "main.s2.w07.node.line.009",
-      "lineId": "main.s2.w07.line.009",
+      "id": "main.s2.w07.node.line.009a",
+      "lineId": "main.s2.w07.line.009a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "破りましょう。ただし紙は破りません——**試合で**破ります。証拠は、綴じて取っておくものなので。",
+      "text": "破りましょう。ただし紙は破りません——**試合で**破ります。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w07.node.line.009b",
+      "lineId": "main.s2.w07.line.009b",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "証拠は、綴じてきちんと取っておくものなので。",
       "emotion": "resolve"
     },
     {
       "type": "line",
-      "id": "main.s2.w07.node.line.010",
-      "lineId": "main.s2.w07.line.010",
+      "id": "main.s2.w07.node.line.010a",
+      "lineId": "main.s2.w07.line.010a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "台本は控えを取って、原本は帳場の金庫へ。八通の挑戦状は、控室の壁に貼った。来週、うちは九つの勝負を全部受ける。九つ目だけは——書いてある結果と、逆の方を。",
+      "text": "台本は控えを取って、原本は帳場の金庫へ。八通の挑戦状は、控室の壁に貼った。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w07.node.line.010b",
+      "lineId": "main.s2.w07.line.010b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "来週、うちはその九つの勝負を全部受ける。九つ目だけは——書いてある結果と、逆の方を。",
       "emotion": "resolve"
     },
     {
       "type": "effect",
       "id": "main.s2.w07.node.effect.001",
-      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+      "effects": [
+        {
+          "type": "sharedPoints",
+          "amount": 2
+        }
+      ]
     },
     {
       "type": "end",
@@ -140,7 +325,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "2周目・週7(10行・選択肢なし)。組織打倒アークの起点=台本試合の物証。ヴォルフの登記モチーフ(挑戦状八通+九通目・全種目化)を公開範囲で使用。「破っていい台本か」「試合で破ります」が週8の宣言。",
+    "authorNote": "語り口V2・二行枠で改稿。2周目・週7(10行・選択肢なし)。組織打倒アークの起点=台本試合の物証。ヴォルフの登記モチーフ(挑戦状八通+九通目・全種目化)を公開範囲で使用。「破っていい台本か」「試合で破ります」が週8の宣言。",
     "legacyGeneratedIds": false
   }
 }

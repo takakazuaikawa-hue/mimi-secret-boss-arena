@@ -8,9 +8,20 @@
     "arcId": "main.stage2"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -22,6 +33,12 @@
         "kind": "background",
         "path": "/assets/story/bg-employee-corridor-seventeenth-door-v1.png",
         "alt": "十七番目の扉のある廊下の背景"
+      },
+      {
+        "id": "main.s2.w20.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
       }
     ]
   },
@@ -29,83 +46,221 @@
     {
       "type": "direction",
       "id": "main.s2.w20.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s2.w20.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s2.w20.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "direction",
       "id": "main.s2.w20.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.w20.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s2.w20.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
-      "id": "main.s2.w20.node.line.001",
-      "lineId": "main.s2.w20.line.001",
+      "id": "main.s2.w20.node.line.001a",
+      "lineId": "main.s2.w20.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "所有者グランプリの会場は、廊下の先にあった。従業員通路の、十七番目の扉。開けると、中は闘技場一つぶんの広さの「部屋」だった。天井にシャンデリア、壁に壁紙、床に砂場。——会場そのものが、今日の相手である。",
+      "text": "所有者グランプリの会場は、廊下の先だった。従業員通路、十七番目の扉。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w20.node.line.001b",
+      "lineId": "main.s2.w20.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "開けると、中は「部屋」だった。闘技場一つぶんの広さ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w20.node.line.001c",
+      "lineId": "main.s2.w20.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "天井にシャンデリア、壁に壁紙、床に砂場。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w20.node.line.001d",
+      "lineId": "main.s2.w20.line.001d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……会場そのものが、今日の相手らしい。変な話だ。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s2.w20.node.line.002",
-      "lineId": "main.s2.w20.line.002",
+      "id": "main.s2.w20.node.line.002a",
+      "lineId": "main.s2.w20.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "第十七号室。入った者を出さない部屋、と街では恐れられている。だが、規定集読破隊は知っている。出口が無いのは、部屋のせいではない。——「出口廃止条項」。規定が、この部屋から出口を取り上げたのだ。"
+      "text": "第十七号室は、入った者を出さない部屋と恐れられている。"
     },
     {
       "type": "line",
-      "id": "main.s2.w20.node.line.003",
-      "lineId": "main.s2.w20.line.003",
+      "id": "main.s2.w20.node.line.002b",
+      "lineId": "main.s2.w20.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "そして、条文の枝葉を辿って、私たちはもう一つの答えに行き当たっていた。1年目のあの規定——「最上級在籍中の名義変更は認められません」。あれも、この条項の枝だ。**出口が無いのは、この部屋だけじゃない。うちは全員、ずっと、出口の無い建物にいた。**",
+      "text": "でも、規定集読破隊は知っていた。出口が無いのは、部屋のせいじゃない。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w20.node.line.002c",
+      "lineId": "main.s2.w20.line.002c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "——出口廃止条項。規定が、出口を取り上げたのだ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w20.node.line.003a",
+      "lineId": "main.s2.w20.line.003a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "条文の枝葉を辿って、もう一つの答えに行き当たった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w20.node.line.003b",
+      "lineId": "main.s2.w20.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "一年目のあの規定——「在籍中の名義変更は認められません」も、同じ枝だった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w20.node.line.003c",
+      "lineId": "main.s2.w20.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "出口が無いのは、この部屋だけじゃない。うちは全員、ずっと、出口の無い建物にいた。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s2.w20.node.line.004",
-      "lineId": "main.s2.w20.line.004",
+      "id": "main.s2.w20.node.line.004a",
+      "lineId": "main.s2.w20.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私が辞められなかったのも。選手が移れなかったのも。座長さんが断れなかったのも。全部、同じ根から生えた枝だった。今日は——その根を、抜きに来た。",
+      "text": "私が辞められなかったのも、選手が移れなかったのも。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w20.node.line.004b",
+      "lineId": "main.s2.w20.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "座長さんが断れなかったのも。全部、同じ根から生えていた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w20.node.line.004c",
+      "lineId": "main.s2.w20.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "今日は——その根を、抜きに来た。もう、迷わない。",
       "emotion": "resolve"
     },
     {
       "type": "line",
-      "id": "main.s2.w20.node.line.005",
-      "lineId": "main.s2.w20.line.005",
+      "id": "main.s2.w20.node.line.005a",
+      "lineId": "main.s2.w20.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "部屋の中の観客席は、満員だった。出口の無い会場に、自分から入ってきた客たち。この街の観客は、いつも肝が据わっている。ガヤ氏の実況席には非常食が積まれていた。備えの方向が、少しおかしい。",
+      "text": "部屋の中の観客席は満員——出口の無い会場に、自分から入ってきた客たち。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w20.node.line.005b",
+      "lineId": "main.s2.w20.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "この街の観客は、いつも肝が据わっている。ガヤ氏の実況席には、非常食が積まれていた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w20.node.line.005c",
+      "lineId": "main.s2.w20.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……備えの方向が、少しおかしい。さすが、うちの常連さん。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s2.w20.node.line.006",
-      "lineId": "main.s2.w20.line.006",
+      "id": "main.s2.w20.node.line.006a",
+      "lineId": "main.s2.w20.line.006a",
       "speakerId": "mimi",
       "speakerName": "ミミ",
       "mode": "dialogue",
-      "text": "今日の一戦に勝って——この街に、出口を返します。誰でも、いつでも、出て行ける。出て行けるから、帰ってこられるんです。",
+      "text": "今日の一戦に勝って——この街に、出口を返します。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w20.node.line.006b",
+      "lineId": "main.s2.w20.line.006b",
+      "speakerId": "mimi",
+      "speakerName": "ミミ",
+      "mode": "dialogue",
+      "text": "誰でも、いつでも、出て行ける。出て行けるから、帰ってこられるんです。",
       "emotion": "resolve"
     },
     {
       "type": "line",
-      "id": "main.s2.w20.node.line.007",
-      "lineId": "main.s2.w20.line.007",
+      "id": "main.s2.w20.node.line.007a",
+      "lineId": "main.s2.w20.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "宣言の瞬間、部屋が——応えた。シャンデリアの灯りがゆらりと揺れ、壁の一角に、遠慮がちな輪郭で、扉が一枚、浮かび上がったのだ。すぐに消えた。消えたが、見えた。……この部屋も、出口が、欲しいのだ。",
+      "text": "宣言の瞬間、部屋が——応えた。シャンデリアの灯りが、ゆらりと揺れる。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w20.node.line.007b",
+      "lineId": "main.s2.w20.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "壁の一角に、遠慮がちな輪郭で、扉が一枚浮かんで、すぐに消えた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w20.node.line.007c",
+      "lineId": "main.s2.w20.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "消えたが、たしかに見えた。……この部屋も、出口が、欲しいのだ。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s2.w20.node.line.008",
-      "lineId": "main.s2.w20.line.008",
+      "id": "main.s2.w20.node.line.008a",
+      "lineId": "main.s2.w20.line.008a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "銅鑼の代わりに、呼び鈴が鳴った。部屋の中の砂場へ、うちの面々が歩き出す。壁も、床も、天井も相手の懐——こんな異常な一戦、台本には決して書けない。だから、勝ちがいがある。",
+      "text": "銅鑼の代わりに呼び鈴が鳴り、うちの面々が砂場へ歩き出す。壁も、床も、天井も、相手の懐。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w20.node.line.008b",
+      "lineId": "main.s2.w20.line.008b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "台本には書けない一戦だ。……だから、勝ちがいがある。",
       "emotion": "tension"
     },
     {
@@ -115,23 +270,33 @@
         {
           "id": "main.s2.w20.choice.001",
           "label": "勝ったら最初に、この部屋の出口を作ると約束する",
-          "result": "「勝ったら、最初の出口は、この部屋のために作ります」。会場中に聞こえる声で、部屋そのものに約束した。壁紙の模様が、さざ波みたいに揺れた。観客席の誰かが泣き笑いの声を上げる。「会場に塩を送ってどうする!」。塩ではない。約束である。出口の無い者同士、順番に外へ出るときの、先の順番を譲っただけだ。",
+          "result": "「勝ったら、最初の出口は、この部屋のために」と宣言すると、壁紙がさざ波みたいに揺れた。「会場に塩を送ってどうする」と、観客席が泣き笑う。塩じゃない、順番を譲っただけだ。耳が、ちょっと熱い。",
           "intent": "戦う相手にも、同じ自由を約束する",
           "promise": "部屋の信頼を得る代わりに、勝てなかったときの約束の重さも増す",
           "memory": "「最初の出口はこの部屋のために」の約束が会場に残った",
           "tone": "tender",
-          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
           "goto": "main.s2.w20.node.end.001"
         },
         {
           "id": "main.s2.w20.choice.002",
           "label": "条文番号を読み上げて、宣戦布告する",
-          "result": "懐から規定集の写しを出し、条文番号から読み上げた。「興行規定・第——出口廃止条項。本日の一戦をもって、この条文に赤線を引きます」。事務員の宣戦布告は、条文番号から始まる。観客席で規定集(いつの間にか売店で売られている)を開く音が、ぱらぱらと続いた。全員で条文を確認してから始まる決闘というのも、この街らしくていい。",
+          "result": "懐から規定集を出し、条文番号を読み上げた。「出口廃止条項。本日の一戦で、赤線を引きます」と告げると、観客席でも規定集をめくる音が続いた。全員で確認してから始まる決闘、この街らしい。",
           "intent": "壊す対象を、正式に名指しする",
           "promise": "街全体が条文を覚える代わりに、会社への通告にもなる",
           "memory": "売店に規定集(縮刷版)が並ぶようになった",
           "tone": "defiant",
-          "effects": [{ "type": "sharedPoints", "amount": 2 }],
+          "effects": [
+            {
+              "type": "sharedPoints",
+              "amount": 2
+            }
+          ],
           "goto": "main.s2.w20.node.end.001"
         }
       ]
@@ -145,7 +310,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "2周目・週20大会週(8行+選択)。ルール=出口廃止条項(1周目の「辞められない」の根)。十七号室の描写は公開範囲(扉の増える廊下・部屋の照れ)のみ。報復(資格停止)は週21冒頭で受ける。",
+    "authorNote": "語り口V2・二行枠で改稿。2周目・週20大会週(8行→25ノード+選択)。ルール=出口廃止条項(1周目の「辞められない」の根)。十七号室の描写は公開範囲(扉の増える廊下・部屋の照れ)のみ。報復(資格停止)は週21冒頭で受ける。",
     "legacyGeneratedIds": false
   }
 }

@@ -8,9 +8,20 @@
     "arcId": "main.stage2"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -22,6 +33,18 @@
         "kind": "background",
         "path": "/assets/story/bg-casino-cafe-rain.png",
         "alt": "雨のカジノカフェの背景"
+      },
+      {
+        "id": "main.s2.w15.asset.sprite.mimi.smile",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-smile-v1.png",
+        "alt": "笑顔のミミ"
+      },
+      {
+        "id": "main.s2.w15.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
       }
     ]
   },
@@ -29,79 +52,216 @@
     {
       "type": "direction",
       "id": "main.s2.w15.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s2.w15.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s2.w15.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "direction",
       "id": "main.s2.w15.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.w15.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s2.w15.asset.sprite.mimi.smile",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
-      "id": "main.s2.w15.node.line.001",
-      "lineId": "main.s2.w15.line.001",
+      "id": "main.s2.w15.node.line.001a",
+      "lineId": "main.s2.w15.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "朝から太い雨で、掲示板に「本日、全興行休止」。倍率を洗い流す雨の日は、傘の下の足が、自然とあの店へ向かう。",
+      "text": "朝から、太い雨。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w15.node.line.001b",
+      "lineId": "main.s2.w15.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "掲示板に「本日、全興行休止」倍率を洗い流す雨の日は、傘の下の足が、自然とあの店へ向かう。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w15.node.line.001c",
+      "lineId": "main.s2.w15.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "耳の先が、雨で少し重い。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s2.w15.node.line.002",
-      "lineId": "main.s2.w15.line.002",
+      "id": "main.s2.w15.node.line.002a",
+      "lineId": "main.s2.w15.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "閉店後のカジノカフェ。窓際の定席で、白ひげの剣士さんが茶を前にしていた。「去年も、この席だったのう」。そうでしたね、とだけ返して、向かいに座る。二年目の雨は、会話が短くて済む。"
+      "text": "閉店後のカジノカフェ。窓際の定席に、剣士さん。"
     },
     {
       "type": "line",
-      "id": "main.s2.w15.node.line.003",
-      "lineId": "main.s2.w15.line.003",
+      "id": "main.s2.w15.node.line.002b",
+      "lineId": "main.s2.w15.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "店の中は、いつになく賑やかだった。常連たちが、赤線の一覧の写しを囲んでいる。「次はどの条文か」を茶請けに、倍率のつかない賭けをしているのだ。雨の日の賭場の民は、賭けにならない賭けでも楽しめる。",
+      "text": "「去年も、この席だったのう」そうでしたね、とだけ返して、向かいに座る。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w15.node.line.002c",
+      "lineId": "main.s2.w15.line.002c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "二年目の雨は、会話が短くて済む。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w15.node.line.003a",
+      "lineId": "main.s2.w15.line.003a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "店の中は、いつになく賑やか。常連たちが、赤線の一覧の写しを囲んでいる。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w15.node.line.003b",
+      "lineId": "main.s2.w15.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「次はどの条文か」を茶請けに、倍率のつかない賭け。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w15.node.line.003c",
+      "lineId": "main.s2.w15.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "雨の日の賭場の民は、賭けにならない賭けでも楽しめる。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s2.w15.node.line.004",
-      "lineId": "main.s2.w15.line.004",
+      "id": "main.s2.w15.node.line.004a",
+      "lineId": "main.s2.w15.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "券売のおじさんが、しみじみ言った。「赤線が増えるたびよ、窓口の空気が軽くなるんだ」。台本の無い試合。休める救護。……壊した条文の跡に、良い空気が育っている。中間報告としては、上々である。",
-      "emotion": "tender"
+      "text": "券売のおじさんが、しみじみ言った。"
     },
     {
       "type": "line",
-      "id": "main.s2.w15.node.line.005",
-      "lineId": "main.s2.w15.line.005",
+      "id": "main.s2.w15.node.line.004b",
+      "lineId": "main.s2.w15.line.004b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "湯気の向こうで、ふと、自分でも不思議になった。終わった者でもない私が、なぜ去年を覚えているのだろう。——考えは、雨の音に流した。今日は、その話の日ではない。",
+      "text": "「赤線が増えるたびよ、窓口の空気が軽くなるんだ」台本の無い試合。休める救護。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w15.node.line.004c",
+      "lineId": "main.s2.w15.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……壊した条文の跡に、良い空気が育っている。中間報告としては、上々だった。",
+      "emotion": "tender"
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.w15.node.direction.mimi.shift.001",
+      "command": {
+        "type": "show",
+        "assetId": "main.s2.w15.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w15.node.line.005a",
+      "lineId": "main.s2.w15.line.005a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "湯気の向こうで、ふと、自分でも不思議になった。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w15.node.line.005b",
+      "lineId": "main.s2.w15.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "終わった者でもない私が、なぜ去年を覚えているのだろう。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w15.node.line.005c",
+      "lineId": "main.s2.w15.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……考えは、雨の音に流した。今日は、その話の日じゃない。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s2.w15.node.line.006",
-      "lineId": "main.s2.w15.line.006",
+      "id": "main.s2.w15.node.line.006a",
+      "lineId": "main.s2.w15.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "私は手帳を開いて、次の一手の整理を始めた。三本目の標的は、胴元総取り・的中固定。あの予想紙を、どう破るか。倍率の無い日は、頭がよく回る。剣士さんが茶のお代わりを頼んで、私の書き物を黙って見守った。",
+      "text": "手帳を開いて、次の一手の整理を始めた。三本目の標的は、胴元総取り・的中固定。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w15.node.line.006b",
+      "lineId": "main.s2.w15.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "あの予想紙を、どう破るか。倍率の無い日は、頭がよく回る。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w15.node.line.006c",
+      "lineId": "main.s2.w15.line.006c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "剣士さんが茶のお代わりを頼んで、書き物を黙って見守った。",
       "emotion": "resolve"
     },
     {
       "type": "line",
-      "id": "main.s2.w15.node.line.007",
-      "lineId": "main.s2.w15.line.007",
+      "id": "main.s2.w15.node.line.007a",
+      "lineId": "main.s2.w15.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "帰り道、掲示板の予想紙が雨に濡れて、「的中率100%」の字が滲んでいた。——滲んだ予想は、当たるのだろうか。次の大会で、確かめることにする。",
+      "text": "帰り道、掲示板の予想紙が雨に濡れていた。「的中率100%」の字が、滲んでいる。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w15.node.line.007b",
+      "lineId": "main.s2.w15.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "……滲んだ予想は、当たるのだろうか。次の大会で、確かめる。",
       "emotion": "tension"
     },
     {
       "type": "effect",
       "id": "main.s2.w15.node.effect.001",
-      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+      "effects": [
+        {
+          "type": "sharedPoints",
+          "amount": 2
+        }
+      ]
     },
     {
       "type": "end",
@@ -112,7 +272,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "2周目・週15改稿(違和感中心→打倒の中間報告と作戦の週)。「暦の外」理論の露出は削除、3周目種(なぜじゃろうなあ)は一拍だけ残す。赤線の効果=空気が軽くなる、で打倒の意義を里の声で。",
+    "authorNote": "語り口V2・二行枠で改稿。2周目・週15改稿(違和感中心→打倒の中間報告と作戦の週)。「暦の外」理論の露出は削除、3周目種(なぜじゃろうなあ)は一拍だけ残す。赤線の効果=空気が軽くなる、で打倒の意義を里の声で。",
     "legacyGeneratedIds": false
   }
 }

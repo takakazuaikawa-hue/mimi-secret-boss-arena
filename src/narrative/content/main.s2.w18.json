@@ -8,9 +8,20 @@
     "arcId": "main.stage2"
   },
   "trigger": {
-    "actions": ["work", "play", "rest", "search"],
-    "when": { "all": [], "any": [], "none": [] },
-    "repeat": { "mode": "once-per-run" },
+    "actions": [
+      "work",
+      "play",
+      "rest",
+      "search"
+    ],
+    "when": {
+      "all": [],
+      "any": [],
+      "none": []
+    },
+    "repeat": {
+      "mode": "once-per-run"
+    },
     "priority": 900,
     "weight": 1
   },
@@ -22,6 +33,12 @@
         "kind": "background",
         "path": "/assets/story/bg-arena-reception.png",
         "alt": "闘技場の正面受付の背景"
+      },
+      {
+        "id": "main.s2.w18.asset.sprite.mimi.serious",
+        "kind": "sprite",
+        "path": "/assets/story/sprites/mimi-serious-v1.png",
+        "alt": "真剣な表情のミミ"
       }
     ]
   },
@@ -29,79 +46,221 @@
     {
       "type": "direction",
       "id": "main.s2.w18.node.direction.001",
-      "command": { "type": "background", "assetId": "main.s2.w18.asset.background.001", "transition": "dissolve" }
+      "command": {
+        "type": "background",
+        "assetId": "main.s2.w18.asset.background.001",
+        "transition": "dissolve"
+      }
     },
     {
       "type": "direction",
       "id": "main.s2.w18.node.direction.002",
-      "command": { "type": "clearSprites" }
+      "command": {
+        "type": "clearSprites"
+      }
+    },
+    {
+      "type": "direction",
+      "id": "main.s2.w18.node.direction.mimi.opening",
+      "command": {
+        "type": "show",
+        "assetId": "main.s2.w18.asset.sprite.mimi.serious",
+        "actorId": "mimi",
+        "slot": "left",
+        "scale": "tall"
+      }
     },
     {
       "type": "line",
-      "id": "main.s2.w18.node.line.001",
-      "lineId": "main.s2.w18.line.001",
+      "id": "main.s2.w18.node.line.001a",
+      "lineId": "main.s2.w18.line.001a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "号外が、朝の街に舞った。「世界滅亡ショー、初日決定——最終週」。日付を三度読んだ。うちの決勝と、同じ日。同じ、時刻。",
+      "text": "号外が、朝の街に、ばさばさと何枚も舞った。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w18.node.line.001b",
+      "lineId": "main.s2.w18.line.001b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "見出しは「世界滅亡ショー、初日決定——最終週」日付を、三度読んだ。うちの決勝と、同じ日。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w18.node.line.001c",
+      "lineId": "main.s2.w18.line.001c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "同じ、時刻。耳が、ぴんと立った。",
       "emotion": "tension"
     },
     {
       "type": "line",
-      "id": "main.s2.w18.node.line.002",
-      "lineId": "main.s2.w18.line.002",
+      "id": "main.s2.w18.node.line.002a",
+      "lineId": "main.s2.w18.line.002a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "酔いの本音は、当たっていた。会社は目玉の再演を、うちの新作の真上に落としてきた。狙いは露骨だ。客の取り合い。決勝の客席を、空にするための日付である。"
+      "text": "酔いの本音は、当たってた。ぞわり、と鳥肌が立つ。"
     },
     {
       "type": "line",
-      "id": "main.s2.w18.node.line.003",
-      "lineId": "main.s2.w18.line.003",
+      "id": "main.s2.w18.node.line.002b",
+      "lineId": "main.s2.w18.line.002b",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "街は、悲鳴を上げた。両方観たい人の悲鳴である。「体は一つなんだぞ!」と誰かが叫び、ガヤ氏が号外の前で頭を抱えていた。実況の体も、一つしかない。",
+      "text": "会社は、目玉の再演を、うちの新作の真上に落としてきた。狙いは、誰の目にも丸見え。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w18.node.line.002c",
+      "lineId": "main.s2.w18.line.002c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "客の取り合い。決勝の客席を、まるごと空にするための日付。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w18.node.line.003a",
+      "lineId": "main.s2.w18.line.003a",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "街は、悲鳴を上げた。両方観たい人の悲鳴。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w18.node.line.003b",
+      "lineId": "main.s2.w18.line.003b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「体は一つなんだぞ!」と、雑踏の中で誰かが叫んだ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w18.node.line.003c",
+      "lineId": "main.s2.w18.line.003c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "ガヤ氏が、号外の前で頭を抱えてうずくまった。実況の体も、一つしかないのに。",
       "emotion": "comic"
     },
     {
       "type": "line",
-      "id": "main.s2.w18.node.line.004",
-      "lineId": "main.s2.w18.line.004",
+      "id": "main.s2.w18.node.line.004a",
+      "lineId": "main.s2.w18.line.004a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "控室の空気は、怒りではなかった。むしろ、火が入った。「客の取り合いなら、興行の正面勝負じゃないか」「面白くなってきた」。うちの面々は、こういう時に頼もしすぎる。",
+      "text": "控室の空気は、怒りじゃなかった。むしろ、火が入った。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w18.node.line.004b",
+      "lineId": "main.s2.w18.line.004b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「客の取り合いなら、興行の正面勝負じゃないか」"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w18.node.line.004c",
+      "lineId": "main.s2.w18.line.004c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「面白くなってきた」と、誰かが楽しそうに笑った。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w18.node.line.004d",
+      "lineId": "main.s2.w18.line.004d",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "うちの面々は、こういう時に頼もしすぎる。",
       "emotion": "resolve"
     },
     {
       "type": "line",
-      "id": "main.s2.w18.node.line.005",
-      "lineId": "main.s2.w18.line.005",
+      "id": "main.s2.w18.node.line.005a",
+      "lineId": "main.s2.w18.line.005a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "冷静に読めば、これは会社の白状でもある。わざわざ同日にぶつけるのは——うちの決勝を、放っておけない脅威と認めたからだ。恐れられているなら、上等である。",
+      "text": "冷静に、頭だけで読めば、これは会社の白状だ。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w18.node.line.005b",
+      "lineId": "main.s2.w18.line.005b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "わざわざ同日にぶつけるのは、うちの決勝を、放っておけない脅威と認めたから。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w18.node.line.005c",
+      "lineId": "main.s2.w18.line.005c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "恐れられてるなら、上等。",
       "emotion": "revelation"
     },
     {
       "type": "line",
-      "id": "main.s2.w18.node.line.006",
-      "lineId": "main.s2.w18.line.006",
+      "id": "main.s2.w18.node.line.006a",
+      "lineId": "main.s2.w18.line.006a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "夕方の受付に、先約の列ができた。先頭は、白ひげの剣士さん。「決勝の席を、いま予約できんかの」。当日券のみです、と答えると、彼は頷いた。「なら、当日、いちばんに並ぶ」。——列は、閉店まで途切れなかった。",
+      "text": "夕方の受付には、もう長い先約の列ができていた。先頭は、白ひげの剣士さん。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w18.node.line.006b",
+      "lineId": "main.s2.w18.line.006b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「決勝の席を、いま予約できんかの」当日券のみです、と答えると、彼は頷いた。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w18.node.line.006c",
+      "lineId": "main.s2.w18.line.006c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「なら、当日、いちばんに並ぶ」列は、閉店まで途切れなかった。",
       "emotion": "tender"
     },
     {
       "type": "line",
-      "id": "main.s2.w18.node.line.007",
-      "lineId": "main.s2.w18.line.007",
+      "id": "main.s2.w18.node.line.007a",
+      "lineId": "main.s2.w18.line.007a",
       "speakerId": "narrator",
       "mode": "thought",
-      "text": "ただ、一つだけ、不気味なことがある。決勝の対戦カードが、まだ発表されない。掲示板の相手の欄には、ただ一言——「調整中」。……会社が調整する決勝の相手とは、誰だ。",
+      "text": "ただ、一つだけ、どうにも、不気味なことがある。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w18.node.line.007b",
+      "lineId": "main.s2.w18.line.007b",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "決勝の対戦カードだけが、いまだに発表されない。掲示板の相手欄には、ただ一言。"
+    },
+    {
+      "type": "line",
+      "id": "main.s2.w18.node.line.007c",
+      "lineId": "main.s2.w18.line.007c",
+      "speakerId": "narrator",
+      "mode": "thought",
+      "text": "「調整中」……会社が調整する決勝の相手って、誰。",
       "emotion": "tension"
     },
     {
       "type": "effect",
       "id": "main.s2.w18.node.effect.001",
-      "effects": [{ "type": "sharedPoints", "amount": 2 }]
+      "effects": [
+        {
+          "type": "sharedPoints",
+          "amount": 2
+        }
+      ]
     },
     {
       "type": "end",
@@ -112,7 +271,7 @@
   "debug": {
     "status": "review",
     "sourceDocument": "docs/MAIN_STORY_SCRIPT.md",
-    "authorNote": "2周目・週18(7行・選択肢なし)。新作対再演の全面対決が確定。同日=会社の白状(脅威の承認)。先約の列=街の答え。引き=決勝の相手「調整中」(週26の鏡写しへの不気味な糸)。",
+    "authorNote": "語り口V2・二行枠で改稿。2周目・週18(7行→28ノード・選択肢なし)。新作対再演の全面対決が確定。同日=会社の白状(脅威の承認)。先約の列=街の答え。引き=決勝の相手「調整中」(週26の鏡写しへの不気味な糸)。",
     "legacyGeneratedIds": false
   }
 }
